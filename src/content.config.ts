@@ -66,6 +66,25 @@ const postCollection = defineCollection({
   }),
 });
 
+const productCollection = defineCollection({
+  loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/product' }),
+  schema: z.object({
+    title: z.string(),
+    excerpt: z.string().optional(),
+
+    category: z.enum(['circular', 'straight', 'serrated', 'shear', 'granulator', 'custom']),
+    bladeMaterial: z.string().optional(),
+    hardness: z.string().optional(),
+    applications: z.array(z.string()).optional(),
+
+    image: z.string().nullable().optional(),
+    draft: z.boolean().optional(),
+
+    metadata: metadataDefinition(),
+  }),
+});
+
 export const collections = {
   post: postCollection,
+  product: productCollection,
 };
