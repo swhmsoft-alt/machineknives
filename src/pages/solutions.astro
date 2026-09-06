@@ -1,0 +1,127 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Industry Solutions',
+  description:
+    'Precision machine knives tailored to printing, packaging, paper converting, food processing, plastics recycling and metalworking lines.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Industry Solutions"
+    title="Blades Engineered for Your Production Line"
+    subtitle="From printed reels to recycled pellets, our knives are specified to the cutting geometry, material grade and tolerance your process demands."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Discuss Your Application',
+        href: '/contact',
+      },
+      { text: 'Browse Products', href: '/products' },
+    ]}
+  />
+
+  <Features
+    id="industries"
+    tagline="Industries Served"
+    title="Six Core Sectors, One Trusted Manufacturer"
+    subtitle="Each industry carries its own cutting mechanics — web tension, abrasive wear, hygiene grade, throughput. We tune the blade geometry and steel grade to match."
+    items={[
+      {
+        title: 'Printing & Packaging',
+        description:
+          'Slitting, sheeting and rewinding blades for paper, film, foil and laminate. Tight burr control protects printed surfaces and clean edges.',
+      },
+      {
+        title: 'Paper & Tissue',
+        description:
+          'Long-life bed knives and top blades for tissue converting lines. Optimised cutting angles reduce dust and extend service intervals.',
+      },
+      {
+        title: 'Food Processing',
+        description:
+          'Stainless and tool-steel blades for slicing, dicing and portioning. Designed for washdown environments and food-contact compliance.',
+      },
+      {
+        title: 'Plastics Recycling',
+        description:
+          'Granulator and shredder rotor / stator knives engineered to cut through contamination, glass fibre and reinforced polymers.',
+      },
+      {
+        title: 'Converting',
+        description:
+          'Trim and score blades for pouch-making, label stock and adhesive tape lines. Repeatable edge profile across production shifts.',
+      },
+      {
+        title: 'Metalworking',
+        description:
+          'Shear blades for guillotine and swing-beam cutting of mild steel, stainless and aluminium plate up to 12mm.',
+      },
+    ]}
+  />
+
+  <Steps
+    id="materials"
+    tagline="Material Guide"
+    title="Six Steel Families, Six Edge Behaviours"
+    subtitle="Material selection drives edge retention, corrosion behaviour and total cost per cut. We specify deliberately rather than by default."
+    items={[
+      {
+        title: 'D2 Tool Steel (1.2379)',
+        description:
+          'High-chromium cold-work steel. Hardened to HRC 58–62, used for paper, film and general industrial cutting where wear resistance matters more than impact toughness.',
+      },
+      {
+        title: 'M2 High Speed Steel (1.3343)',
+        description:
+          'Tungsten-molybdenum HSS with red-hardness up to 600 °C. Selected for high-speed slitting, granulator rotors and applications where heat builds up at the cutting edge.',
+      },
+      {
+        title: 'SKD11 / DC53',
+        description:
+          'Japanese cold-work grades with finer carbide distribution than D2. DC53 offers higher toughness for thin blades that would otherwise chip.',
+      },
+      {
+        title: 'Tungsten Carbide',
+        description:
+          'Cemented carbide tipped or solid. Used for abrasive composites, fibre-reinforced materials, and any cut where downtime for re-sharpening is the dominant cost.',
+      },
+      {
+        title: '420 / 440C Stainless',
+        description:
+          'Martensitic stainless grades for food processing, pharmaceutical and washdown environments. Hardened to HRC 50–58 with good corrosion resistance.',
+      },
+      {
+        title: 'Coatings: TiN, TiCN, CrN, DLC',
+        description:
+          'PVD coatings reduce friction, repel adhesive build-up and extend interval between sharpening by 2–4× depending on substrate and cut.',
+      },
+    ]}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Send Us a Drawing',
+        href: '/contact',
+      },
+      { text: 'Email Engineering', href: 'mailto:[email protected]' },
+    ]}
+  >
+    <Fragment slot="title">
+      Have a sample, drawing or worn blade to discuss?
+    </Fragment>
+    <Fragment slot="subtitle">
+      Send us the part, the application notes, or just the symptoms. We will respond with a specification, a quote and
+      a lead time — typically within one business day.
+    </Fragment>
+  </CallToAction>
+</Layout>

@@ -1,22 +1,22 @@
 site:
-  name: EdgeTech Industrial Blades
-  site: 'https://www.edgetech-blades.com'
+  name: KAIPU Industrial Blades
+  site: 'https://www.machine-knives.net'
   base: '/'
-  trailingSlash: false
+  trailingSlash: true
 
   googleSiteVerificationId: ''
 
 # Default SEO metadata
 metadata:
   title:
-    default: EdgeTech Industrial Blades — Precision Engineered Machine Knives
-    template: '%s — EdgeTech Industrial Blades'
+    default: KAIPU Industrial Blades — Precision Engineered Machine Knives
+    template: '%s — KAIPU Industrial Blades'
   description: "Manufacturer of industrial machine knives for printing, packaging, converting, food processing and recycling. OEM and custom solutions. Engineering-grade D2, HSS and carbide blades."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: EdgeTech Industrial Blades
+    site_name: KAIPU Industrial Blades
     images:
       - url: '~/assets/images/default.png'
         width: 1200

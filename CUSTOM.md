@@ -1,10 +1,10 @@
-﻿# EdgeTech Industrial Blades — 项目开发规则
+﻿# KAIPU Industrial Blades — 项目开发规则
 
 > Cline / AI Agent 必须遵守。本文件是项目级硬约束，优先级高于通用编程习惯。
 
 ## 项目基本信息
 
-- **项目名**：EdgeTech Industrial Blades（工业刀片/刀具 B2B 官网）
+- **项目名**：KAIPU Industrial Blades（工业刀片/刀具 B2B 官网）
 - **技术栈**：Astro v7 + Tailwind CSS v4 + TypeScript
 - **部署目标**：Cloudflare Pages（静态站点）
 - **语言**：英文站（面向欧美出口市场）

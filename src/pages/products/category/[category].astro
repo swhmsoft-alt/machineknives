@@ -1,0 +1,90 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { Icon } from 'astro-icon/components';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+export const prerender = true;
+
+const VALID_CATEGORIES = ['circular', 'straight', 'serrated', 'shear', 'granulator', 'custom'] as const;
+type Category = (typeof VALID_CATEGORIES)[number];
+
+const CATEGORY_META: Record<Category, { title: string; description: string; icon: string }> = {
+  circular: { title: 'Circular Blades', description: 'Slitting and cutting circular knives for paper, film, foil and tape.', icon: 'tabler:circle' },
+  straight: { title: 'Straight Blades', description: 'Top blades for slitting, sheeting and converting lines.', icon: 'tabler:rectangle' },
+  serrated: { title: 'Serrated Blades', description: 'Toothed blades for tear-strips and perforations.', icon: 'tabler:wave-saw-tool' },
+  shear: { title: 'Shear Blades', description: 'Industrial shear blades for guillotine and swing-beam cutting.', icon: 'tabler:scissors' },
+  granulator: { title: 'Granulator Knives', description: 'Rotor and stator knives for plastics granulators.', icon: 'tabler:rotate' },
+  custom: { title: 'Custom Blades', description: 'Reverse-engineered from your sample or drawing.', icon: 'tabler:tool' },
+};
+
+export async function getStaticPaths() {
+  return (['circular', 'straight', 'serrated', 'shear', 'granulator', 'custom'] as const).map((category) => ({
+    params: { category },
+  }));
+}
+
+const { category } = Astro.params as { category: string };
+if (!(VALID_CATEGORIES as readonly string[]).includes(category)) return Astro.redirect('/404');
+const meta = CATEGORY_META[category as Category];
+const allProducts = await getCollection('product');
+const products = allProducts
+  .filter((p) => p.data.category === category && !p.data.draft)
+  .sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+const metadata = { title: `${meta.title} — KAIPU`, description: meta.description };
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline={meta.title}
+    title={`${meta.title} for Industrial Cutting`}
+    subtitle={meta.description}
+    actions={[
+      { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:clipboard-text' },
+      { text: 'All Categories', href: '/products' },
+    ]}
+  />
+
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 py-12 md:py-16">
+    <div class="mb-8 flex items-center gap-3 text-secondary dark:text-blue-200 font-bold uppercase tracking-wide text-sm">
+      <Icon name={meta.icon} class="w-5 h-5" />
+      <span>Standard SKUs in this category</span>
+    </div>
+    {
+      products.length === 0 ? (
+        <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 p-8 text-center">
+          <Icon name="tabler:package-off" class="mx-auto w-12 h-12 text-muted dark:text-slate-500 mb-4" />
+          <h3 class="text-xl font-bold mb-2 dark:text-white">No published SKUs in this category yet</h3>
+          <p class="text-muted dark:text-slate-400 mb-4">We are in the process of publishing standard SKUs. Send us a drawing or a worn sample and we will quote against your application directly.</p>
+          <a href="/contact" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-md bg-primary text-white hover:bg-secondary">Request a Quote</a>
+        </div>
+      ) : (
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {products.map((product: CollectionEntry<'product'>) => (
+            <a href={`/products/${product.id}`} class="group block rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 p-6 hover:border-primary dark:hover:border-primary transition-colors">
+              <h3 class="text-lg font-bold mb-2 dark:text-white group-hover:text-primary transition-colors">{product.data.title}</h3>
+              <p class="text-sm text-muted dark:text-slate-400 mb-4">{product.data.excerpt}</p>
+              <dl class="grid grid-cols-2 gap-2 text-xs">
+                {product.data.bladeMaterial && (<div><dt class="text-muted dark:text-slate-500 uppercase tracking-wide">Material</dt><dd class="font-medium dark:text-slate-300">{product.data.bladeMaterial}</dd></div>)}
+                {product.data.hardness && (<div><dt class="text-muted dark:text-slate-500 uppercase tracking-wide">Hardness</dt><dd class="font-medium dark:text-slate-300">{product.data.hardness}</dd></div>)}
+              </dl>
+              <span class="mt-4 inline-flex items-center text-sm text-primary group-hover:underline">View specifications<Icon name="tabler:arrow-right" class="ml-1 w-4 h-4" /></span>
+            </a>
+          ))}
+        </div>
+      )
+    }
+  </section>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:clipboard-text' },
+      { text: 'View All Categories', href: '/products' },
+    ]}
+  >
+    <Fragment slot="title">Don't see the size or grade you need?</Fragment>
+    <Fragment slot="subtitle">Every product on this page is also available in custom geometry, hardness and tolerance. Send a drawing or sample and we will quote against your application.</Fragment>
+  </CallToAction>
+</Layout>

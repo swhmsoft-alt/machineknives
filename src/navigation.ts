@@ -92,6 +92,6 @@ export const footerData = {
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
   footNote: `
-    EdgeTech Industrial Blades · Manufacturer of precision machine knives for industrial converting, packaging and processing lines.
+    KAIPU Industrial Blades · Manufacturer of precision machine knives for industrial converting, packaging and processing lines.
   `,
 };

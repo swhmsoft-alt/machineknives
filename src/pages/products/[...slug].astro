@@ -1,0 +1,77 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { Icon } from 'astro-icon/components';
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+
+export const prerender = true;
+
+const CATEGORY_LABEL: Record<string, string> = {
+  circular: 'Circular Blade', straight: 'Straight Blade', serrated: 'Serrated Blade',
+  shear: 'Shear Blade', granulator: 'Granulator Knife', custom: 'Custom Blade',
+};
+
+export async function getStaticPaths() {
+  const products = await getCollection('product');
+  return products.map((product) => ({ params: { slug: product.id }, props: { product } }));
+}
+
+type Props = { product: CollectionEntry<'product'> };
+const { product } = Astro.props;
+const { Content } = await render(product);
+const categoryLabel = CATEGORY_LABEL[product.data.category] ?? product.data.category;
+---
+
+<Layout metadata={{ title: `${product.data.title} — KAIPU`, description: product.data.excerpt ?? '' }}>
+  <Hero
+    tagline={categoryLabel}
+    title={product.data.title}
+    subtitle={product.data.excerpt ?? ''}
+    actions={[
+      { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:clipboard-text' },
+      { text: 'Back to Catalog', href: '/products' },
+    ]}
+  />
+
+  <section class="mx-auto max-w-5xl px-4 sm:px-6 py-12 md:py-16">
+    <dl class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 p-6 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900">
+      {product.data.bladeMaterial && (<div><dt class="text-xs uppercase tracking-wide text-muted dark:text-slate-500">Material</dt><dd class="text-base font-medium dark:text-slate-200">{product.data.bladeMaterial}</dd></div>)}
+      {product.data.hardness && (<div><dt class="text-xs uppercase tracking-wide text-muted dark:text-slate-500">Hardness</dt><dd class="text-base font-medium dark:text-slate-200">{product.data.hardness}</dd></div>)}
+      {product.data.applications && product.data.applications.length > 0 && (
+        <div class="sm:col-span-2">
+          <dt class="text-xs uppercase tracking-wide text-muted dark:text-slate-500">Typical Applications</dt>
+          <dd class="mt-2 flex flex-wrap gap-2">
+            {product.data.applications.map((app) => (<span class="inline-flex items-center px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary dark:bg-blue-900/30 dark:text-blue-200">{app}</span>))}
+          </dd>
+        </div>
+      )}
+    </dl>
+
+    <div class="prose dark:prose-invert max-w-none"><Content /></div>
+
+    <div class="mt-12 p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-slate-50 dark:bg-slate-800/50">
+      <div class="flex items-start gap-3">
+        <Icon name="tabler:info-circle" class="w-5 h-5 text-secondary dark:text-blue-200 mt-0.5" />
+        <p class="text-sm text-muted dark:text-slate-400">The specifications on this page are typical for the product family. Final dimensions, tolerances and hardness are confirmed in the engineering quotation. Contact us for a drawing or a quote against your application.</p>
+      </div>
+    </div>
+
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a href={`/products/category/${product.data.category}`} class="inline-flex items-center px-4 py-2 text-sm rounded-md border border-gray-300 dark:border-gray-600 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
+        <Icon name="tabler:arrow-left" class="w-4 h-4 mr-2" />More {categoryLabel}s
+      </a>
+      <a href="/products" class="inline-flex items-center px-4 py-2 text-sm rounded-md border border-gray-300 dark:border-gray-600 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">All Categories</a>
+    </div>
+  </section>
+
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:clipboard-text' },
+      { text: 'Email Engineering', href: 'mailto:[email protected]' },
+    ]}
+  >
+    <Fragment slot="title">Ready to order or need a custom version?</Fragment>
+    <Fragment slot="subtitle">Send your drawing, your worn blade, or a written spec. We will respond within one business day.</Fragment>
+  </CallToAction>
+</Layout>
