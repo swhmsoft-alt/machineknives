@@ -73,6 +73,12 @@ const productCollection = defineCollection({
     excerpt: z.string().optional(),
 
     category: z.enum(['circular', 'straight', 'serrated', 'shear', 'granulator', 'custom']),
+    /**
+     * Optional subcategory path under the top-level `category`, up to three
+     * levels deep. Used to build nested URLs like
+     * /products/{category}/{sub1}/{sub2}/{sub3}/{productId}/.
+     */
+    subcategories: z.array(z.string()).max(3).optional(),
     bladeMaterial: z.string().optional(),
     hardness: z.string().optional(),
     applications: z.array(z.string()).optional(),

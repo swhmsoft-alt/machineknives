@@ -5,6 +5,8 @@ import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+import { buildCategoryHref } from '~/utils/products';
+
 const metadata = {
   title: 'Products',
   description:
@@ -33,37 +35,37 @@ const metadata = {
         title: 'Circular Blades',
         description:
           'Slitting and cutting circular knives for paper, film, foil and tape. OD range 60–600 mm.',
-        callToAction: { text: 'View Circular', href: '/products/category/circular', variant: 'link' },
+        callToAction: { text: 'View Circular', href: buildCategoryHref('circular'), variant: 'link' },
       },
       {
         title: 'Straight Blades',
         description:
           'Top blades for slitting, sheeting and converting lines. Length range 100–3000 mm.',
-        callToAction: { text: 'View Straight', href: '/products/category/straight', variant: 'link' },
+        callToAction: { text: 'View Straight', href: buildCategoryHref('straight'), variant: 'link' },
       },
       {
         title: 'Serrated Blades',
         description:
           'Toothed blades for tear-strips, perforations and cut-to-length on film, foil and paper.',
-        callToAction: { text: 'View Serrated', href: '/products/category/serrated', variant: 'link' },
+        callToAction: { text: 'View Serrated', href: buildCategoryHref('serrated'), variant: 'link' },
       },
       {
         title: 'Shear Blades',
         description:
           'Industrial shear blades for guillotine, swing-beam and scrap shear cutting of metal plate.',
-        callToAction: { text: 'View Shear', href: '/products/category/shear', variant: 'link' },
+        callToAction: { text: 'View Shear', href: buildCategoryHref('shear'), variant: 'link' },
       },
       {
         title: 'Granulator Knives',
         description:
           'Rotor / stator knives for plastics granulators and shredders in recycling and compounding.',
-        callToAction: { text: 'View Granulator', href: '/products/category/granulator', variant: 'link' },
+        callToAction: { text: 'View Granulator', href: buildCategoryHref('granulator'), variant: 'link' },
       },
       {
         title: 'Custom Blades',
         description:
           'Reverse-engineered from your sample or drawing. We co-design the geometry, material and tolerance.',
-        callToAction: { text: 'Discuss Custom', href: '/products/category/custom', variant: 'link' },
+        callToAction: { text: 'Discuss Custom', href: buildCategoryHref('custom'), variant: 'link' },
       },
     ]}
   />

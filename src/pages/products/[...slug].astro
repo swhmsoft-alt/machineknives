@@ -5,73 +5,332 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import { Icon } from 'astro-icon/components';
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 
+import {
+  CATEGORIES,
+  LEVEL1_CATEGORIES,
+  buildCategoryHref,
+  buildProductHrefFromEntry,
+  humanizeSlugSegment,
+  type Level1Category,
+} from '~/utils/products';
+
 export const prerender = true;
 
-const CATEGORY_LABEL: Record<string, string> = {
-  circular: 'Circular Blade', straight: 'Straight Blade', serrated: 'Serrated Blade',
-  shear: 'Shear Blade', granulator: 'Granulator Knife', custom: 'Custom Blade',
-};
+interface CategoryPathProps {
+  kind: 'category';
+  level1: Level1Category;
+  subcategories: string[];
+}
+
+interface ProductPathProps {
+  kind: 'product';
+  product: CollectionEntry<'product'>;
+  subcategories: string[];
+}
+
+type PathProps = CategoryPathProps | ProductPathProps;
 
 export async function getStaticPaths() {
   const products = await getCollection('product');
-  return products.map((product) => ({ params: { slug: product.id }, props: { product } }));
+
+  const seenCategoryPaths = new Set<string>();
+  const paths: Array<{ params: { slug: string }; props: PathProps }> = [];
+
+  const slugForCategory = (level1: Level1Category, subs: readonly string[]) =>
+    [level1, ...subs].join('/');
+
+  // 1. Level-1 category pages — always present, even if no products exist yet.
+  for (const level1 of LEVEL1_CATEGORIES) {
+    const slug = slugForCategory(level1, []);
+    seenCategoryPaths.add(slug);
+    paths.push({
+      params: { slug },
+      props: { kind: 'category', level1, subcategories: [] },
+    });
+  }
+
+  // 2. Subcategory pages (level 2 / 3) and product pages — derived from products.
+  for (const product of products) {
+    const subs = product.data.subcategories ?? [];
+
+    // Subcategory landing pages at every depth the product occupies.
+    for (let depth = 1; depth <= subs.length; depth++) {
+      const subPath = subs.slice(0, depth);
+      const slug = slugForCategory(product.data.category, subPath);
+      if (seenCategoryPaths.has(slug)) continue;
+      seenCategoryPaths.add(slug);
+      paths.push({
+        params: { slug },
+        props: {
+          kind: 'category',
+          level1: product.data.category,
+          subcategories: subPath,
+        },
+      });
+    }
+
+    // Product detail page.
+    paths.push({
+      params: { slug: slugForCategory(product.data.category, [...subs, product.id]) },
+      props: { kind: 'product', product, subcategories: subs },
+    });
+  }
+
+  return paths;
 }
 
-type Props = { product: CollectionEntry<'product'> };
-const { product } = Astro.props;
-const { Content } = await render(product);
-const categoryLabel = CATEGORY_LABEL[product.data.category] ?? product.data.category;
+const props = Astro.props as PathProps;
+
+// Aggregated state for either view. Declared up-front so the template can
+// reference them without `var` hoisting tricks.
+let productContent: Awaited<ReturnType<typeof render>>['Content'] | null = null;
+let productEntry: CollectionEntry<'product'> | null = null;
+let productSubcategories: string[] = [];
+
+let categoryLevel1: Level1Category | null = null;
+let categorySubs: string[] = [];
+let categoryDirectProducts: CollectionEntry<'product'>[] = [];
+let categorySubcategoryChildren: Array<{ slug: string; count: number }> = [];
+let categoryPageTitle = '';
+let categoryPageSubtitle = '';
+let categoryPageTagline = '';
+let categoryPageIcon = '';
+let categoryBreadcrumb: Array<{ text: string; href: string }> = [];
+
+if (props.kind === 'product') {
+  const rendered = await render(props.product);
+  productContent = rendered.Content;
+  productEntry = props.product;
+  productSubcategories = props.subcategories;
+} else {
+  const allProducts = await getCollection('product');
+  const l1: Level1Category = props.level1;
+  const subs: string[] = props.subcategories;
+  const isLevel1 = subs.length === 0;
+  const meta = CATEGORIES[l1];
+
+  categoryLevel1 = l1;
+  categorySubs = subs;
+
+  categoryDirectProducts = allProducts
+    .filter(
+      (p) =>
+        !p.data.draft &&
+        p.data.category === l1 &&
+        (p.data.subcategories ?? []).length === subs.length &&
+        (p.data.subcategories ?? []).every((s, i) => s === subs[i])
+    )
+    .sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+  // Collect immediate child subcategory names at the next depth.
+  const buckets = new Map<string, number>();
+  const depth = isLevel1 ? 0 : subs.length;
+  for (const p of allProducts) {
+    if (p.data.draft) continue;
+    if (p.data.category !== l1) continue;
+    const pSubs = p.data.subcategories ?? [];
+    if (pSubs.length <= depth) continue;
+    if (!isLevel1 && !pSubs.slice(0, depth).every((s, i) => s === subs[i])) continue;
+    const childSlug = pSubs[depth];
+    buckets.set(childSlug, (buckets.get(childSlug) ?? 0) + 1);
+  }
+  categorySubcategoryChildren = [...buckets.entries()]
+    .map(([slug, count]) => ({ slug, count }))
+    .sort((a, b) => a.slug.localeCompare(b.slug));
+
+  if (isLevel1) {
+    categoryPageTitle = meta.title;
+    categoryPageSubtitle = meta.description;
+    categoryPageTagline = meta.title;
+    categoryPageIcon = meta.icon;
+  } else {
+    const leaf = subs[subs.length - 1];
+    categoryPageTitle = humanizeSlugSegment(leaf);
+    categoryPageSubtitle = `Browse ${categoryPageTitle.toLowerCase()} in ${meta.title}.`;
+    categoryPageTagline = meta.title;
+    categoryPageIcon = meta.icon;
+  }
+
+  categoryBreadcrumb = [
+    { text: meta.title, href: buildCategoryHref(l1) },
+    ...subs.map((s, i) => ({
+      text: humanizeSlugSegment(s),
+      href: buildCategoryHref(l1, subs.slice(0, i + 1)),
+    })),
+  ];
+}
 ---
 
-<Layout metadata={{ title: `${product.data.title} — KAIPU`, description: product.data.excerpt ?? '' }}>
+{props.kind === 'category' && categoryLevel1 ? (
+  <Layout metadata={{ title: `${categoryPageTitle} — KAIPU`, description: categoryPageSubtitle }}>
   <Hero
-    tagline={categoryLabel}
-    title={product.data.title}
-    subtitle={product.data.excerpt ?? ''}
+    tagline={categoryPageTagline}
+    title={`${categoryPageTitle} for Industrial Cutting`}
+    subtitle={categoryPageSubtitle}
     actions={[
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:clipboard-text' },
-      { text: 'Back to Catalog', href: '/products' },
+      { text: 'All Categories', href: '/products' },
     ]}
   />
 
-  <section class="mx-auto max-w-5xl px-4 sm:px-6 py-12 md:py-16">
-    <dl class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 p-6 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900">
-      {product.data.bladeMaterial && (<div><dt class="text-xs uppercase tracking-wide text-muted dark:text-slate-500">Material</dt><dd class="text-base font-medium dark:text-slate-200">{product.data.bladeMaterial}</dd></div>)}
-      {product.data.hardness && (<div><dt class="text-xs uppercase tracking-wide text-muted dark:text-slate-500">Hardness</dt><dd class="text-base font-medium dark:text-slate-200">{product.data.hardness}</dd></div>)}
-      {product.data.applications && product.data.applications.length > 0 && (
-        <div class="sm:col-span-2">
-          <dt class="text-xs uppercase tracking-wide text-muted dark:text-slate-500">Typical Applications</dt>
-          <dd class="mt-2 flex flex-wrap gap-2">
-            {product.data.applications.map((app) => (<span class="inline-flex items-center px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary dark:bg-blue-900/30 dark:text-blue-200">{app}</span>))}
-          </dd>
+  {categoryBreadcrumb.length > 1 && (
+    <nav class="mx-auto max-w-7xl px-4 sm:px-6 pt-6" aria-label="Breadcrumb">
+      <ol class="flex flex-wrap items-center gap-2 text-sm text-muted dark:text-slate-400">
+        {categoryBreadcrumb.map((item, idx) => (
+          <li class="flex items-center gap-2">
+            {idx > 0 && <Icon name="tabler:chevron-right" class="w-4 h-4 opacity-60" />}
+            {idx === categoryBreadcrumb.length - 1 ? (
+              <span class="font-medium text-slate-700 dark:text-slate-200">{item.text}</span>
+            ) : (
+              <a href={item.href} class="hover:text-primary">{item.text}</a>
+            )}
+          </li>
+        ))}
+      </ol>
+    </nav>
+  )}
+
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 py-12 md:py-16">
+    {categorySubcategoryChildren.length > 0 && categoryLevel1 && (
+      <div class="mb-10">
+        <div class="mb-4 flex items-center gap-3 text-secondary dark:text-blue-200 font-bold uppercase tracking-wide text-sm">
+          <Icon name={categoryPageIcon} class="w-5 h-5" />
+          <span>Subcategories</span>
         </div>
-      )}
-    </dl>
-
-    <div class="prose dark:prose-invert max-w-none"><Content /></div>
-
-    <div class="mt-12 p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-slate-50 dark:bg-slate-800/50">
-      <div class="flex items-start gap-3">
-        <Icon name="tabler:info-circle" class="w-5 h-5 text-secondary dark:text-blue-200 mt-0.5" />
-        <p class="text-sm text-muted dark:text-slate-400">The specifications on this page are typical for the product family. Final dimensions, tolerances and hardness are confirmed in the engineering quotation. Contact us for a drawing or a quote against your application.</p>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {categorySubcategoryChildren.map((sub) => {
+            const childSubs = [...categorySubs, sub.slug];
+            return (
+              <a
+                href={buildCategoryHref(categoryLevel1, childSubs)}
+                class="group flex items-center justify-between gap-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 p-5 hover:border-primary dark:hover:border-primary transition-colors"
+              >
+                <div>
+                  <h3 class="text-base font-bold dark:text-white group-hover:text-primary transition-colors">{humanizeSlugSegment(sub.slug)}</h3>
+                  <p class="text-xs text-muted dark:text-slate-400 mt-1">{sub.count} SKU{sub.count === 1 ? '' : 's'}</p>
+                </div>
+                <Icon name="tabler:arrow-right" class="w-5 h-5 text-primary" />
+              </a>
+            );
+          })}
+        </div>
       </div>
+    )}
+
+    <div class="mb-6 flex items-center gap-3 text-secondary dark:text-blue-200 font-bold uppercase tracking-wide text-sm">
+      <Icon name={categoryPageIcon} class="w-5 h-5" />
+      <span>Standard SKUs in this category</span>
     </div>
 
-    <div class="mt-8 flex flex-wrap gap-4">
-      <a href={`/products/category/${product.data.category}`} class="inline-flex items-center px-4 py-2 text-sm rounded-md border border-gray-300 dark:border-gray-600 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
-        <Icon name="tabler:arrow-left" class="w-4 h-4 mr-2" />More {categoryLabel}s
-      </a>
-      <a href="/products" class="inline-flex items-center px-4 py-2 text-sm rounded-md border border-gray-300 dark:border-gray-600 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">All Categories</a>
-    </div>
+    {categoryDirectProducts.length === 0 ? (
+      <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 p-8 text-center">
+        <Icon name="tabler:package-off" class="mx-auto w-12 h-12 text-muted dark:text-slate-500 mb-4" />
+        <h3 class="text-xl font-bold mb-2 dark:text-white">
+          {categorySubcategoryChildren.length > 0 ? 'No direct SKUs in this branch' : 'No published SKUs in this category yet'}
+        </h3>
+        <p class="text-muted dark:text-slate-400 mb-4">
+          {categorySubcategoryChildren.length > 0
+            ? 'Browse the subcategories above, or send us a drawing for a custom build.'
+            : 'We are in the process of publishing standard SKUs. Send us a drawing or a worn sample and we will quote against your application directly.'}
+        </p>
+        <a href="/contact" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-md bg-primary text-white hover:bg-secondary">Request a Quote</a>
+      </div>
+    ) : (
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {categoryDirectProducts.map((p) => (
+          <a href={buildProductHrefFromEntry(p)} class="group block rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 p-6 hover:border-primary dark:hover:border-primary transition-colors">
+            <h3 class="text-lg font-bold mb-2 dark:text-white group-hover:text-primary transition-colors">{p.data.title}</h3>
+            <p class="text-sm text-muted dark:text-slate-400 mb-4">{p.data.excerpt}</p>
+            <dl class="grid grid-cols-2 gap-2 text-xs">
+              {p.data.bladeMaterial && (<div><dt class="text-muted dark:text-slate-500 uppercase tracking-wide">Material</dt><dd class="font-medium dark:text-slate-300">{p.data.bladeMaterial}</dd></div>)}
+              {p.data.hardness && (<div><dt class="text-muted dark:text-slate-500 uppercase tracking-wide">Hardness</dt><dd class="font-medium dark:text-slate-300">{p.data.hardness}</dd></div>)}
+            </dl>
+            <span class="mt-4 inline-flex items-center text-sm text-primary group-hover:underline">View specifications<Icon name="tabler:arrow-right" class="ml-1 w-4 h-4" /></span>
+          </a>
+        ))}
+      </div>
+    )}
   </section>
 
   <CallToAction
     actions={[
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:clipboard-text' },
-      { text: 'Email Engineering', href: 'mailto:[email protected]' },
+      { text: 'View All Categories', href: '/products' },
     ]}
   >
-    <Fragment slot="title">Ready to order or need a custom version?</Fragment>
-    <Fragment slot="subtitle">Send your drawing, your worn blade, or a written spec. We will respond within one business day.</Fragment>
+    <Fragment slot="title">Don't see the size or grade you need?</Fragment>
+    <Fragment slot="subtitle">Every product on this page is also available in custom geometry, hardness and tolerance. Send a drawing or sample and we will quote against your application.</Fragment>
   </CallToAction>
-</Layout>
+  </Layout>
+) : props.kind === 'product' && productEntry && productContent ? (
+  <Layout metadata={{ title: `${productEntry.data.title} — KAIPU`, description: productEntry.data.excerpt ?? '' }}>
+    <Hero
+      tagline={CATEGORIES[productEntry.data.category].label}
+      title={productEntry.data.title}
+      subtitle={productEntry.data.excerpt ?? ''}
+      actions={[
+        { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:clipboard-text' },
+        { text: 'Back to Catalog', href: '/products' },
+      ]}
+    />
+
+    <nav class="mx-auto max-w-5xl px-4 sm:px-6 pt-6" aria-label="Breadcrumb">
+      <ol class="flex flex-wrap items-center gap-2 text-sm text-muted dark:text-slate-400">
+        <li class="flex items-center gap-2">
+          <a href="/products" class="hover:text-primary">Products</a>
+          <Icon name="tabler:chevron-right" class="w-4 h-4 opacity-60" />
+        </li>
+        <li class="flex items-center gap-2">
+          <a href={buildCategoryHref(productEntry.data.category)} class="hover:text-primary">{CATEGORIES[productEntry.data.category].title}</a>
+          {productSubcategories.map((sub, idx) => (
+            <span class="flex items-center gap-2">
+              <Icon name="tabler:chevron-right" class="w-4 h-4 opacity-60" />
+              <a href={buildCategoryHref(productEntry.data.category, productSubcategories.slice(0, idx + 1))} class="hover:text-primary">{humanizeSlugSegment(sub)}</a>
+            </span>
+          ))}
+        </li>
+      </ol>
+    </nav>
+
+    <section class="mx-auto max-w-5xl px-4 sm:px-6 py-12 md:py-16">
+      <dl class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 p-6 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900">
+        {productEntry.data.bladeMaterial && (<div><dt class="text-xs uppercase tracking-wide text-muted dark:text-slate-500">Material</dt><dd class="text-base font-medium dark:text-slate-200">{productEntry.data.bladeMaterial}</dd></div>)}
+        {productEntry.data.hardness && (<div><dt class="text-xs uppercase tracking-wide text-muted dark:text-slate-500">Hardness</dt><dd class="text-base font-medium dark:text-slate-200">{productEntry.data.hardness}</dd></div>)}
+        {productEntry.data.applications && productEntry.data.applications.length > 0 && (
+          <div class="sm:col-span-2">
+            <dt class="text-xs uppercase tracking-wide text-muted dark:text-slate-500">Typical Applications</dt>
+            <dd class="mt-2 flex flex-wrap gap-2">
+              {productEntry.data.applications.map((app) => (<span class="inline-flex items-center px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary dark:bg-blue-900/30 dark:text-blue-200">{app}</span>))}
+            </dd>
+          </div>
+        )}
+      </dl>
+
+      <div class="prose dark:prose-invert max-w-none"><productContent /></div>
+
+      <div class="mt-12 p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-slate-50 dark:bg-slate-800/50">
+        <div class="flex items-start gap-3">
+          <Icon name="tabler:info-circle" class="w-5 h-5 text-secondary dark:text-blue-200 mt-0.5" />
+          <p class="text-sm text-muted dark:text-slate-400">The specifications on this page are typical for the product family. Final dimensions, tolerances and hardness are confirmed in the engineering quotation. Contact us for a drawing or a quote against your application.</p>
+        </div>
+      </div>
+
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href={buildCategoryHref(productEntry.data.category, productSubcategories)} class="inline-flex items-center px-4 py-2 text-sm rounded-md border border-gray-300 dark:border-gray-600 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
+          <Icon name="tabler:arrow-left" class="w-4 h-4 mr-2" />More {CATEGORIES[productEntry.data.category].label}s
+        </a>
+        <a href="/products" class="inline-flex items-center px-4 py-2 text-sm rounded-md border border-gray-300 dark:border-gray-600 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">All Categories</a>
+      </div>
+    </section>
+
+    <CallToAction
+      actions={[
+        { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:clipboard-text' },
+        { text: 'Email Engineering', href: 'mailto:[email protected]' },
+      ]}
+    >
+      <Fragment slot="title">Ready to order or need a custom version?</Fragment>
+      <Fragment slot="subtitle">Send your drawing, your worn blade, or a written spec. We will respond within one business day.</Fragment>
+    </CallToAction>
+  </Layout>
+) : null}

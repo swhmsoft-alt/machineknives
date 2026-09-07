@@ -1,16 +1,18 @@
 import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { buildCategoryHref } from './utils/products';
 
 export const headerData = {
   links: [
     {
       text: 'Products',
+      href: getPermalink('/products'),
       links: [
-        { text: 'Circular Blades', href: getPermalink('/products/category/circular') },
-        { text: 'Straight Blades', href: getPermalink('/products/category/straight') },
-        { text: 'Serrated Blades', href: getPermalink('/products/category/serrated') },
-        { text: 'Shear Blades', href: getPermalink('/products/category/shear') },
-        { text: 'Granulator Blades', href: getPermalink('/products/category/granulator') },
-        { text: 'Custom Blades', href: getPermalink('/products/category/custom') },
+        { text: 'Circular Blades', href: buildCategoryHref('circular') },
+        { text: 'Straight Blades', href: buildCategoryHref('straight') },
+        { text: 'Serrated Blades', href: buildCategoryHref('serrated') },
+        { text: 'Shear Blades', href: buildCategoryHref('shear') },
+        { text: 'Granulator Blades', href: buildCategoryHref('granulator') },
+        { text: 'Custom Blades', href: buildCategoryHref('custom') },
       ],
     },
     {
@@ -42,12 +44,12 @@ export const footerData = {
     {
       title: 'Products',
       links: [
-        { text: 'Circular Blades', href: getPermalink('/products/category/circular') },
-        { text: 'Straight Blades', href: getPermalink('/products/category/straight') },
-        { text: 'Serrated Blades', href: getPermalink('/products/category/serrated') },
-        { text: 'Shear Blades', href: getPermalink('/products/category/shear') },
-        { text: 'Granulator Blades', href: getPermalink('/products/category/granulator') },
-        { text: 'Custom Blades', href: getPermalink('/products/category/custom') },
+        { text: 'Circular Blades', href: buildCategoryHref('circular') },
+        { text: 'Straight Blades', href: buildCategoryHref('straight') },
+        { text: 'Serrated Blades', href: buildCategoryHref('serrated') },
+        { text: 'Shear Blades', href: buildCategoryHref('shear') },
+        { text: 'Granulator Blades', href: buildCategoryHref('granulator') },
+        { text: 'Custom Blades', href: buildCategoryHref('custom') },
       ],
     },
     {
