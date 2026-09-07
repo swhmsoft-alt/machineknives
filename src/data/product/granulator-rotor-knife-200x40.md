@@ -1,20 +1,19 @@
 ---
-title: 'Granulator Rotor Knife — 200 × 40 × 20 mm'
-excerpt: 'Rotor knife for plastics granulators, M2 HSS, hardened to HRC 60–64, bevel re-grindable.'
+title: 'Granulator Rotor Knife – 200 × 40 × 20 mm'
+excerpt: 'Rotor knife for plastics granulators, M2 HSS, hardened to HRC 60±4, bevel re-grindable.'
 category: granulator
-bladeMaterial: 'M2 HSS (1.3343) — alt: D2, tungsten carbide tipped'
-hardness: 'HRC 60–64'
+bladeMaterial: 'M2 HSS (1.3343) – alt: D2, tungsten carbide tipped'
+hardness: 'HRC 60±4'
 applications:
   - 'Plastics granulators'
   - 'Shredder rotor / stator'
   - 'Recycling lines'
 image: null
-draft: true
 ---
 
-# Granulator Rotor Knife — 200 × 40 × 20 mm
+# Granulator Rotor Knife – 200 × 40 × 20 mm
 
-A standard rotor knife for plastics granulators and shredders. Manufactured from M2 high-speed steel, vacuum heat-treated to HRC 60–64, with a four-edge reversible bevel for repeated re-grinding.
+A standard rotor knife for plastics granulators and shredders. Manufactured from M2 high-speed steel, vacuum heat-treated to HRC 60±4, with a four-edge reversible bevel for repeated re-grinding.
 
 ## Typical Specifications
 
@@ -24,7 +23,7 @@ A standard rotor knife for plastics granulators and shredders. Manufactured from
 | Width           | 40 mm (range 25–80 mm)      |
 | Thickness       | 20 mm (range 12–30 mm)      |
 | Bevel angle     | 30° / 35° / 40° (× 4 edges) |
-| Hardness        | HRC 60–64                   |
+| Hardness        | HRC 60±4                   |
 | Surface finish  | Ra ≤ 0.4 µm                 |
 | Flatness        | ≤ 0.02 mm                   |
 

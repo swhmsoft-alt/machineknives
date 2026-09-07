@@ -6,10 +6,9 @@ import { Icon } from 'astro-icon/components';
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 
 import {
-  CATEGORIES,
-  LEVEL1_CATEGORIES,
   buildCategoryHref,
   buildProductHrefFromEntry,
+  getCategoryMeta,
   humanizeSlugSegment,
   type Level1Category,
 } from '~/utils/products';
@@ -39,9 +38,16 @@ export async function getStaticPaths() {
   const slugForCategory = (level1: Level1Category, subs: readonly string[]) =>
     [level1, ...subs].join('/');
 
-  // 1. Level-1 category pages — always present, even if no products exist yet.
-  for (const level1 of LEVEL1_CATEGORIES) {
+  // 1. Level-1 category pages — derived from products. A category is only
+  //    exposed when at least one non-draft product exists for it.
+  const level1Set = new Set<Level1Category>();
+  for (const product of products) {
+    if (product.data.draft) continue;
+    level1Set.add(product.data.category as Level1Category);
+  }
+  for (const level1 of level1Set) {
     const slug = slugForCategory(level1, []);
+    if (seenCategoryPaths.has(slug)) continue;
     seenCategoryPaths.add(slug);
     paths.push({
       params: { slug },
@@ -52,18 +58,19 @@ export async function getStaticPaths() {
   // 2. Subcategory pages (level 2 / 3) and product pages — derived from products.
   for (const product of products) {
     const subs = product.data.subcategories ?? [];
+    const productLevel1 = product.data.category as Level1Category;
 
     // Subcategory landing pages at every depth the product occupies.
     for (let depth = 1; depth <= subs.length; depth++) {
       const subPath = subs.slice(0, depth);
-      const slug = slugForCategory(product.data.category, subPath);
+      const slug = slugForCategory(productLevel1, subPath);
       if (seenCategoryPaths.has(slug)) continue;
       seenCategoryPaths.add(slug);
       paths.push({
         params: { slug },
         props: {
           kind: 'category',
-          level1: product.data.category,
+          level1: productLevel1,
           subcategories: subPath,
         },
       });
@@ -71,7 +78,7 @@ export async function getStaticPaths() {
 
     // Product detail page.
     paths.push({
-      params: { slug: slugForCategory(product.data.category, [...subs, product.id]) },
+      params: { slug: slugForCategory(productLevel1, [...subs, product.id]) },
       props: { kind: 'product', product, subcategories: subs },
     });
   }
@@ -107,7 +114,7 @@ if (props.kind === 'product') {
   const l1: Level1Category = props.level1;
   const subs: string[] = props.subcategories;
   const isLevel1 = subs.length === 0;
-  const meta = CATEGORIES[l1];
+  const meta = getCategoryMeta(l1);
 
   categoryLevel1 = l1;
   categorySubs = subs;
@@ -115,7 +122,6 @@ if (props.kind === 'product') {
   categoryDirectProducts = allProducts
     .filter(
       (p) =>
-        !p.data.draft &&
         p.data.category === l1 &&
         (p.data.subcategories ?? []).length === subs.length &&
         (p.data.subcategories ?? []).every((s, i) => s === subs[i])
@@ -126,7 +132,6 @@ if (props.kind === 'product') {
   const buckets = new Map<string, number>();
   const depth = isLevel1 ? 0 : subs.length;
   for (const p of allProducts) {
-    if (p.data.draft) continue;
     if (p.data.category !== l1) continue;
     const pSubs = p.data.subcategories ?? [];
     if (pSubs.length <= depth) continue;
@@ -265,7 +270,7 @@ if (props.kind === 'product') {
 ) : props.kind === 'product' && productEntry && productContent ? (
   <Layout metadata={{ title: `${productEntry.data.title} — KAIPU`, description: productEntry.data.excerpt ?? '' }}>
     <Hero
-      tagline={CATEGORIES[productEntry.data.category].label}
+      tagline={getCategoryMeta(productEntry.data.category).label}
       title={productEntry.data.title}
       subtitle={productEntry.data.excerpt ?? ''}
       actions={[
@@ -281,7 +286,7 @@ if (props.kind === 'product') {
           <Icon name="tabler:chevron-right" class="w-4 h-4 opacity-60" />
         </li>
         <li class="flex items-center gap-2">
-          <a href={buildCategoryHref(productEntry.data.category)} class="hover:text-primary">{CATEGORIES[productEntry.data.category].title}</a>
+          <a href={buildCategoryHref(productEntry.data.category)} class="hover:text-primary">{getCategoryMeta(productEntry.data.category).title}</a>
           {productSubcategories.map((sub, idx) => (
             <span class="flex items-center gap-2">
               <Icon name="tabler:chevron-right" class="w-4 h-4 opacity-60" />
@@ -317,7 +322,7 @@ if (props.kind === 'product') {
 
       <div class="mt-8 flex flex-wrap gap-4">
         <a href={buildCategoryHref(productEntry.data.category, productSubcategories)} class="inline-flex items-center px-4 py-2 text-sm rounded-md border border-gray-300 dark:border-gray-600 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
-          <Icon name="tabler:arrow-left" class="w-4 h-4 mr-2" />More {CATEGORIES[productEntry.data.category].label}s
+          <Icon name="tabler:arrow-left" class="w-4 h-4 mr-2" />More {getCategoryMeta(productEntry.data.category).label}s
         </a>
         <a href="/products" class="inline-flex items-center px-4 py-2 text-sm rounded-md border border-gray-300 dark:border-gray-600 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">All Categories</a>
       </div>

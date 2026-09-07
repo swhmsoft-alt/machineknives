@@ -1,18 +1,17 @@
 ---
-title: 'Serrated Blade — Cut-to-Length 6–32 TPI'
+title: 'Serrated Blade – Cut-to-Length 6–12 TPI'
 excerpt: 'Serrated industrial blade for film, foil and paper, tooth profile selectable, hardened tool steel.'
 category: serrated
-bladeMaterial: 'D2 (1.2379) — alt: SKD11, M2 HSS'
-hardness: 'HRC 58–62'
+bladeMaterial: 'D2 (1.2379) – alt: SKD11, M2 HSS'
+hardness: 'HRC 58±2'
 applications:
   - 'Film perforating'
   - 'Foil tear lines'
   - 'Tear strips'
 image: null
-draft: true
 ---
 
-# Serrated Blade — 6–32 TPI
+# Serrated Blade – 6–12 TPI
 
 Serrated industrial blade for tear-strip, perforation and cut-to-length applications on film, foil, paper and laminate. Tooth profile, pitch and bevel selectable per process.
 

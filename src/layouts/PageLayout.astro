@@ -4,7 +4,10 @@ import Header from '~/components/widgets/Header.astro';
 import Footer from '~/components/widgets/Footer.astro';
 // import Announcement from '~/components/widgets/Announcement.astro';
 
+import { getCollection } from 'astro:content';
+
 import { headerData, footerData } from '~/navigation';
+import { getCategoriesWithProducts } from '~/utils/products';
 
 import type { MetaData } from '~/types';
 
@@ -13,6 +16,60 @@ export interface Props {
 }
 
 const { metadata } = Astro.props;
+
+// Filter out links that point at a level-1 product category with no
+// products, so empty categories never appear in the front-end nav.
+const products = await getCollection('product');
+const availableCategories = getCategoriesWithProducts(products);
+
+interface NavLink {
+  text?: string;
+  href?: string;
+  ariaLabel?: string;
+  icon?: string;
+}
+
+interface HeaderMenuLink extends NavLink {
+  links?: Array<HeaderMenuLink>;
+}
+
+interface FooterLinksGroup {
+  title?: string;
+  links: Array<NavLink>;
+}
+
+const isEmptyCategoryHref = (href: string | undefined): boolean => {
+  if (!href) return false;
+  // Match only top-level category pages like /products/{slug}/ — not
+  // /products/ (index) and not deeper subcategory or product pages.
+  const match = /^\/products\/([^\/]+)\/?$/.exec(href);
+  if (!match) return false;
+  return !availableCategories.has(match[1]);
+};
+
+const filterLinkArray = (links: ReadonlyArray<NavLink>): NavLink[] =>
+  links.filter((link) => !isEmptyCategoryHref(link.href));
+
+const filterHeaderLinks = (links: ReadonlyArray<HeaderMenuLink>): HeaderMenuLink[] =>
+  links.map((item) => {
+    if (Array.isArray(item.links)) {
+      return { ...item, links: filterHeaderLinks(item.links) };
+    }
+    return item;
+  });
+
+const filterFooterLinks = (links: ReadonlyArray<FooterLinksGroup>): FooterLinksGroup[] =>
+  links.map((group) => ({ ...group, links: filterLinkArray(group.links) }));
+
+const filteredHeaderData = {
+  ...headerData,
+  links: filterHeaderLinks((headerData.links ?? []) as HeaderMenuLink[]),
+};
+
+const filteredFooterData = {
+  ...footerData,
+  links: filterFooterLinks((footerData.links ?? []) as FooterLinksGroup[]),
+};
 ---
 
 <Layout metadata={metadata}>
@@ -20,12 +77,12 @@ const { metadata } = Astro.props;
     {/* <Announcement /> */}
   </slot>
   <slot name="header">
-    <Header {...headerData} isSticky showRssFeed showToggleTheme />
+    <Header {...filteredHeaderData} isSticky showRssFeed showToggleTheme />
   </slot>
   <main>
     <slot />
   </main>
   <slot name="footer">
-    <Footer {...footerData} />
+    <Footer {...filteredFooterData} />
   </slot>
 </Layout>

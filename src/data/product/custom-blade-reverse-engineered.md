@@ -1,18 +1,17 @@
 ---
-title: 'Custom Blade — Reverse-Engineered from Sample'
+title: 'Custom Blade – Reverse-Engineered from Sample'
 excerpt: 'Custom industrial blade reverse-engineered from your worn sample or drawing, with material and hardness tuned to the application.'
 category: custom
-bladeMaterial: 'Specified per application — D2, SKD11, DC53, M2 HSS, H13, carbide'
-hardness: 'Specified per application — HRC 50–64'
+bladeMaterial: 'Specified per application – D2, SKD11, DC53, M2 HSS, H13, carbide'
+hardness: 'Specified per application – HRC 50–64'
 applications:
   - 'Reverse-engineered from sample'
   - 'Drawing-to-part'
   - 'Co-developed geometry'
 image: null
-draft: true
 ---
 
-# Custom Blade — Reverse-Engineered from Sample
+# Custom Blade – Reverse-Engineered from Sample
 
 If your blade is obsolete, vendor-locked, or simply worn beyond recognition, we can reverse-engineer a replacement from the worn part. Send us the part (or a 3D scan / drawing), tell us what is failing on it, and our engineering team will design a replacement that fits — often with an upgraded material grade or geometry.
 

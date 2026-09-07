@@ -12,7 +12,7 @@ export interface CategoryMeta {
   icon: string;
 }
 
-export const CATEGORIES: Record<Level1Category, CategoryMeta> = {
+export const CATEGORIES: Record<string, CategoryMeta> = {
   circular: {
     title: 'Circular Blades',
     label: 'Circular Blade',
@@ -51,8 +51,42 @@ export const CATEGORIES: Record<Level1Category, CategoryMeta> = {
   },
 };
 
+/**
+ * Look up registered metadata for a level-1 category. Falls back to a
+ * generic humanized entry when the slug is not pre-registered (e.g. a
+ * future category introduced via a product frontmatter without an
+ * accompanying CATEGORIES entry).
+ */
+export function getCategoryMeta(slug: string): CategoryMeta {
+  const meta = CATEGORIES[slug];
+  if (meta) return meta;
+  const label = humanizeSlugSegment(slug);
+  return {
+    title: label,
+    label,
+    description: '',
+    icon: 'tabler:package',
+  };
+}
+
 export function isLevel1Category(value: string): value is Level1Category {
   return (LEVEL1_CATEGORIES as readonly string[]).includes(value);
+}
+
+/**
+ * Return the set of level-1 category slugs that have at least one
+ * non-draft product. Used to filter navigation and index-page listings
+ * so that empty categories are not exposed in the front-end.
+ */
+export function getCategoriesWithProducts(
+  products: ReadonlyArray<CollectionEntry<'product'>>
+): Set<string> {
+  const set = new Set<string>();
+  for (const p of products) {
+    if (p.data.draft) continue;
+    set.add(p.data.category);
+  }
+  return set;
 }
 
 /** Build a category page URL: /products/{level1}[/{sub1}[/{sub2}[/{sub3}]]]/ */

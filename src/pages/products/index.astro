@@ -5,70 +5,68 @@ import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
-import { buildCategoryHref } from '~/utils/products';
+import { getCollection } from 'astro:content';
+
+import { buildCategoryHref, getCategoryMeta, getCategoriesWithProducts } from '~/utils/products';
 
 const metadata = {
   title: 'Products',
   description:
     'Circular, straight, serrated, shear and granulator blades, plus custom reverse-engineered industrial knives. D2, SKD11, M2 HSS, tungsten carbide.',
 };
+
+const products = await getCollection('product');
+const categoriesWithProducts = getCategoriesWithProducts(products);
+
+const categoryItems = [...categoriesWithProducts]
+  .map((slug) => {
+    const meta = getCategoryMeta(slug);
+    return {
+      slug,
+      title: meta.title,
+      description:
+        meta.description ||
+        `Browse ${meta.title.toLowerCase()} manufactured in-house with custom geometry, material and tolerance.`,
+      href: buildCategoryHref(slug),
+    };
+  })
+  .sort((a, b) => a.title.localeCompare(b.title));
+
+const familyCount = categoryItems.length;
+const familyWord = familyCount === 1 ? 'Family' : 'Families';
+const subtitle = familyCount > 0
+  ? 'Click into a category to see standard SKUs, or send us a drawing for a custom build.'
+  : 'No product categories have been published yet. Send us a drawing or a worn sample for a custom quote.';
 ---
 
 <Layout metadata={metadata}>
   <Hero
     tagline="Product Catalog"
     title="Industrial Blades by Category"
-    subtitle="Six core product families covering the most common industrial cutting applications. All items are manufactured in-house and available with custom geometry, material and tolerance."
+    subtitle={`${familyCount} product ${familyWord.toLowerCase()} covering the most common industrial cutting applications. All items are manufactured in-house and available with custom geometry, material and tolerance.`}
     actions={[
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:clipboard-text' },
       { text: 'View Services', href: '/services' },
     ]}
   />
 
-  <Features
-    id="categories"
-    tagline="Categories"
-    title="Six Blade Families"
-    subtitle="Click into a category to see standard SKUs, or send us a drawing for a custom build."
-    items={[
-      {
-        title: 'Circular Blades',
-        description:
-          'Slitting and cutting circular knives for paper, film, foil and tape. OD range 60–600 mm.',
-        callToAction: { text: 'View Circular', href: buildCategoryHref('circular'), variant: 'link' },
-      },
-      {
-        title: 'Straight Blades',
-        description:
-          'Top blades for slitting, sheeting and converting lines. Length range 100–3000 mm.',
-        callToAction: { text: 'View Straight', href: buildCategoryHref('straight'), variant: 'link' },
-      },
-      {
-        title: 'Serrated Blades',
-        description:
-          'Toothed blades for tear-strips, perforations and cut-to-length on film, foil and paper.',
-        callToAction: { text: 'View Serrated', href: buildCategoryHref('serrated'), variant: 'link' },
-      },
-      {
-        title: 'Shear Blades',
-        description:
-          'Industrial shear blades for guillotine, swing-beam and scrap shear cutting of metal plate.',
-        callToAction: { text: 'View Shear', href: buildCategoryHref('shear'), variant: 'link' },
-      },
-      {
-        title: 'Granulator Knives',
-        description:
-          'Rotor / stator knives for plastics granulators and shredders in recycling and compounding.',
-        callToAction: { text: 'View Granulator', href: buildCategoryHref('granulator'), variant: 'link' },
-      },
-      {
-        title: 'Custom Blades',
-        description:
-          'Reverse-engineered from your sample or drawing. We co-design the geometry, material and tolerance.',
-        callToAction: { text: 'Discuss Custom', href: buildCategoryHref('custom'), variant: 'link' },
-      },
-    ]}
-  />
+  {categoryItems.length > 0 && (
+    <Features
+      id="categories"
+      tagline="Categories"
+      title={`${familyCount} Blade ${familyWord}`}
+      subtitle={subtitle}
+      items={categoryItems.map((cat) => ({
+        title: cat.title,
+        description: cat.description,
+        callToAction: {
+          text: `View ${cat.title.replace(/ Blades$| Knives$/, '')}`,
+          href: cat.href,
+          variant: 'link',
+        },
+      }))}
+    />
+  )}
 
   <CallToAction
     actions={[

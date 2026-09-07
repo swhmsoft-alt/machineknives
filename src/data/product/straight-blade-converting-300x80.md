@@ -1,18 +1,17 @@
 ---
-title: 'Straight Converting Blade — 300 × 80 mm'
+title: 'Straight Converting Blade – 300 × 80 mm'
 excerpt: 'Top blade for pouch-making and label stock converting, hardened tool steel, sharpened to specification.'
 category: straight
-bladeMaterial: 'D2 (1.2379) — alt: SKD11, M2 HSS'
-hardness: 'HRC 58–62'
+bladeMaterial: 'D2 (1.2379) – alt: SKD11, M2 HSS'
+hardness: 'HRC 58±2'
 applications:
   - 'Pouch-making lines'
   - 'Label stock slitting'
   - 'Adhesive tape converting'
 image: null
-draft: true
 ---
 
-# Straight Converting Blade — 300 × 80 mm
+# Straight Converting Blade – 300 × 80 mm
 
 A standard straight top blade for pouch-making, label stock and adhesive tape converting lines. Manufactured from hardened tool steel, edge geometry tuned per application.
 
@@ -20,8 +19,8 @@ A standard straight top blade for pouch-making, label stock and adhesive tape co
 
 | Parameter       | Value                       |
 | --------------- | --------------------------- |
-| Length          | 300 mm (range 100–600 mm)   |
-| Width           | 80 mm (range 30–150 mm)     |
+| Length          | 300 mm (range 100–700 mm)   |
+| Width           | 80 mm (range 30–250 mm)     |
 | Thickness       | 2 / 3 / 4 / 5 mm            |
 | Edge angle       | 18° / 22° / 25° / 30°       |
 | Surface finish  | Ra ≤ 0.4 µm                 |

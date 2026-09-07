@@ -1,18 +1,17 @@
 ---
-title: 'Shear Blade — Guillotine 300 × 60 mm'
+title: 'Shear Blade – Guillotine 300 × 60 mm'
 excerpt: 'Industrial shear blade for guillotine and swing-beam cutting of mild and stainless plate up to 12 mm.'
 category: shear
-bladeMaterial: 'D2 (1.2379) — alt: SKD11, 6CrW2Si, H13'
+bladeMaterial: 'D2 (1.2379) – alt: SKD11, 6CrW2Si, H13'
 hardness: 'HRC 55–60'
 applications:
   - 'Plate guillotine cutting'
   - 'Swing-beam shearing'
   - 'Scrap shear'
 image: null
-draft: true
 ---
 
-# Shear Blade — Guillotine 300 × 60 mm
+# Shear Blade – Guillotine 300 × 60 mm
 
 Industrial shear blade for guillotine and swing-beam cutting of mild steel, stainless steel and aluminium plate up to 12 mm thickness. Manufactured from shock-resistant tool steel, ground to a flatness suitable for plate-edge quality.
 
@@ -20,7 +19,7 @@ Industrial shear blade for guillotine and swing-beam cutting of mild steel, stai
 
 | Parameter       | Value                       |
 | --------------- | --------------------------- |
-| Length          | 300 mm (range 100–3000 mm)  |
+| Length          | 300 mm (range 100–1000 mm)  |
 | Width           | 60 mm (range 30–200 mm)     |
 | Thickness       | 25 / 30 / 40 mm             |
 | Bevel angle     | 1.5° / 2° / 3°              |

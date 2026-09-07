@@ -1,20 +1,19 @@
 ---
-title: 'Circular Slitting Blade — 250 mm'
-excerpt: 'D2 tool steel circular knife for paper and film slitting, 250 mm OD, hardened HRC 58–62.'
+title: 'Circular Slitting Blade – 250 mm'
+excerpt: 'D2 tool steel circular knife for paper and film slitting, 250 mm OD, hardened HRC 58±2.'
 category: circular
-bladeMaterial: 'D2 (1.2379) — alt: SKD11, M2 HSS'
-hardness: 'HRC 58–62'
+bladeMaterial: 'D2 (1.2379) – alt: SKD11, M2 HSS'
+hardness: 'HRC 58±2'
 applications:
   - 'Paper slitting'
   - 'Film & foil slitting'
   - 'Tape slitting'
 image: null
-draft: true
 ---
 
-# Circular Slitting Blade — 250 mm OD
+# Circular Slitting Blade – 250 mm OD
 
-A standard circular slitting knife for paper, film and foil slitting lines. Manufactured from D2 tool steel, vacuum heat-treated to HRC 58–62, double-side ground to a parallel-tolerance of ≤ 0.01 mm.
+A standard circular slitting knife for paper, film and foil slitting lines. Manufactured from D2 tool steel, vacuum heat-treated to HRC 58±2, double-side ground to a parallel-tolerance of ≤ 0.01 mm.
 
 ## Typical Specifications
 
