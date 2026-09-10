@@ -1,0 +1,27 @@
+# CLINERULES — KAIPU Industrial Blades
+
+## 1. 全站背景颜色统一唯一（硬规则）
+
+**禁止**在任何页面/组件/section/card 自定义背景颜色（无论亮模式还是暗模式）。
+
+- **禁止使用** `bg-default`、`bg-slate-*`、`bg-gray-*`、`bg-blue-*`、`bg-green-*` 等任何具体色 utility
+- **禁止使用** `dark:bg-slate-*`、`dark:bg-gray-*`、`dark:bg-blue-*` 等暗模式具体色
+- **禁止**创建 `bg-default` 这类名字暗示"默认背景"实际指向文字色 token 的 utility（之前已踩坑：Tailwind v4 会从 `--color-default` 自动生成 `bg-default` utility，导致 `bg-default` 被映射到 `--aw-color-text-default` 深色，造成深底深字不可见）
+- **允许**的唯一背景 utility：`bg-page`（token 控制，亮/暗模式自动切换）
+- **允许**特殊例外：模板自带的 `Note` 组件（`bg-blue-50`）作为窄条提示框保留；其他位置一律不准
+- **section 区块**：不写任何背景类（透明继承 body 的 `bg-page`），让全站真正只有一种背景色
+- **card/article**：不写任何背景类，靠 `border border-slate-200 dark:border-slate-700` + `shadow` 区分边界
+
+**为什么**：全站视觉一致性是设计纪律，不是个例优化。任何"我觉得这里换个背景更好看"的自定义都是越权。
+
+---
+
+## 2. 增加新组件/页面的纪律
+
+用户让我**增加**组件/页面时：
+1. **必须**先读取 `.agents/skills/styling.md` 和 `AGENTS.md` 了解模板约束
+2. **禁止**自行决定背景色、容器色、卡片色
+3. **优先**复用 AstroWind 既有 widget（如 `Features`、`Steps`、`FAQs`、`Stats`、`CallToAction`），通过 props 适配
+4. 只有模板 widget 无法满足需求时，才新增自定义 section
+5. 新增 section 时，section 和 card 都不写背景类，遵循规则 §1
+6. 修改后必须 `npm run build` 通过验证
