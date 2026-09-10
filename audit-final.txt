@@ -1,0 +1,17 @@
+===Schema===
+      2 BreadcrumbList
+      1 CollectionPage
+      1 FAQPage
+      7 HowTo
+      1 ItemList
+      2 Organization
+      2 WebSite
+
+===HTML patterns===
+tables: 1
+BEST FOR: 6
+ordered lists: 1
+bullet lists: 1
+freshnessDate: 1
+external authority domains: 4
+FAQs Q/A count: 1

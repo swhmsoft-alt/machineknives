@@ -3,20 +3,41 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+import { Icon } from 'astro-icon/components';
 import { getCollection } from 'astro:content';
 
-import { buildCategoryHref, getCategoryMeta, getCategoriesWithProducts } from '~/utils/products';
+import { buildCategoryHref, getActiveProductCount, getCategoriesWithProducts, getCategoryMeta } from '~/utils/products';
+
+import {
+  BEST_FOR_PATTERN,
+  COMPARISON,
+  MATERIAL_MATRIX,
+  OVERVIEW_FAQS,
+  OVERVIEW_STATS,
+  PAIN_POINTS,
+  PAGE_LAST_REVIEWED,
+  PROPRIETARY_FRAME,
+  STANDARDS_REFERENCED,
+} from '~/data/_products-overview';
+
+const SITE_URL = 'https://www.machine-knives.net';
+const PAGE_URL = `${SITE_URL}/products/`;
 
 const metadata = {
-  title: 'Products',
+  title: 'Industrial Blades by Category',
   description:
-    'Circular, straight, serrated, shear and granulator blades, plus custom reverse-engineered industrial knives. D2, SKD11, M2 HSS, tungsten carbide.',
+    'Six product families of industrial machine knives — circular, straight, serrated, shear, granulator and custom reverse-engineered blades. D2, SKD11, M2 HSS and tungsten carbide. ISO 9001 manufacturer.',
 };
 
 const products = await getCollection('product');
 const categoriesWithProducts = getCategoriesWithProducts(products);
+const activeProductCount = getActiveProductCount(products);
 
 const categoryItems = [...categoriesWithProducts]
   .map((slug) => {
@@ -34,39 +55,434 @@ const categoryItems = [...categoriesWithProducts]
 
 const familyCount = categoryItems.length;
 const familyWord = familyCount === 1 ? 'Family' : 'Families';
-const subtitle = familyCount > 0
-  ? 'Click into a category to see standard SKUs, or send us a drawing for a custom build.'
-  : 'No product categories have been published yet. Send us a drawing or a worn sample for a custom quote.';
+const subtitle =
+  familyCount > 0
+    ? 'Click into a category to see standard SKUs, or send us a drawing for a custom build.'
+    : 'No product categories have been published yet. Send us a drawing or a worn sample for a custom quote.';
+
+/** Steps for the HowTo schema and the visible Steps widget. */
+const HOWTO_STEPS = [
+  {
+    title: 'Send your drawing or sample',
+    description: 'A 2D / 3D drawing (STEP / IGES / DXF) or a worn sample is the fastest path to a firm quote.',
+  },
+  {
+    title: 'Engineering review',
+    description: 'We confirm material grade, hardness, dimensional tolerance and quantity within one business day.',
+  },
+  {
+    title: 'Written quotation',
+    description: 'Material, hardness, tolerance, lead time and tooling cost — all on one page, no hidden extras.',
+  },
+  {
+    title: 'Drawing approval',
+    description: 'For custom parts we issue a 2D / 3D drawing for your written sign-off before any steel is ordered.',
+  },
+  {
+    title: 'Manufacture',
+    description: 'CNC roughing, vacuum heat treatment, CNC grinding, optional PVD coating — every step calibrated.',
+  },
+  {
+    title: 'Inspection and dispatch',
+    description: 'CMM dimensional report, hardness record and surface finish shipped with the parts.',
+  },
+];
+
+/** JSON-LD graph for the entire page. Rendered as a single inline script. */
+const jsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${SITE_URL}#organization`,
+      name: 'KAIPU Industrial Blades',
+      url: SITE_URL,
+      foundingDate: '1998',
+      description:
+        'Manufacturer of industrial machine knives for printing, packaging, converting, food processing and recycling. OEM and custom solutions. Engineering-grade D2, HSS and carbide blades.',
+      knowsAbout: ['AMS 6478', 'ASTM A681', 'ISO 4957', 'VDI 3198', 'Tool steel', 'PVD coating'],
+      areaServed: 'Worldwide',
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE_URL}#website`,
+      url: SITE_URL,
+      name: 'KAIPU Industrial Blades',
+      publisher: { '@id': `${SITE_URL}#organization` },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL + '/' },
+        { '@type': 'ListItem', position: 2, name: 'Products', item: PAGE_URL },
+      ],
+    },
+    {
+      '@type': 'CollectionPage',
+      '@id': PAGE_URL + '#webpage',
+      url: PAGE_URL,
+      name: 'Industrial Blades by Category',
+      description: metadata.description,
+      dateModified: PAGE_LAST_REVIEWED,
+      isPartOf: { '@id': `${SITE_URL}#website` },
+      about: [
+        { '@type': 'Product', name: 'Industrial circular blades' },
+        { '@type': 'Product', name: 'Industrial straight blades' },
+        { '@type': 'Product', name: 'Industrial serrated blades' },
+        { '@type': 'Product', name: 'Industrial shear blades' },
+        { '@type': 'Product', name: 'Granulator knives' },
+        { '@type': 'Product', name: 'Custom reverse-engineered blades' },
+      ],
+      provider: { '@id': `${SITE_URL}#organization` },
+    },
+    {
+      '@type': 'ItemList',
+      name: 'Industrial Blade Categories',
+      numberOfItems: familyCount,
+      itemListElement: categoryItems.map((cat, idx) => ({
+        '@type': 'ListItem',
+        position: idx + 1,
+        name: cat.title,
+        url: SITE_URL + cat.href,
+        item: {
+          '@type': 'Product',
+          name: cat.title,
+          category: cat.title,
+          description: cat.description,
+          manufacturer: { '@id': `${SITE_URL}#organization` },
+        },
+      })),
+    },
+    {
+      '@type': 'HowTo',
+      name: 'How to order a custom industrial blade from KAIPU',
+      totalTime: 'P25D',
+      description:
+        'Six-step process to take a custom industrial blade from drawing or worn sample through to dispatch, with engineering review, written quotation, drawing approval, manufacture and final inspection.',
+      step: HOWTO_STEPS.map((s, idx) => ({
+        '@type': 'HowToStep',
+        position: idx + 1,
+        name: s.title,
+        text: s.description,
+      })),
+    },
+  ],
+});
 ---
 
 <Layout metadata={metadata}>
+  <!-- Breadcrumb (visible + structured data) -->
+  <nav aria-label="Breadcrumb" class="mx-auto max-w-7xl px-4 md:px-6 pt-6">
+    <ol class="flex flex-wrap items-center gap-2 text-sm text-muted">
+      <li><a href="/" class="hover:text-primary">Home</a></li>
+      <li class="flex items-center gap-2">
+        <Icon name="tabler:chevron-right" class="w-4 h-4 opacity-60" />
+        <span aria-current="page" class="font-medium">Products</span>
+      </li>
+    </ol>
+  </nav>
+
   <Hero
     tagline="Product Catalog"
     title="Industrial Blades by Category"
-    subtitle={`${familyCount} product ${familyWord.toLowerCase()} covering the most common industrial cutting applications. All items are manufactured in-house and available with custom geometry, material and tolerance.`}
+    subtitle={`${familyCount} product ${familyWord.toLowerCase()} covering the most common industrial cutting applications. All items are manufactured in-house and available with custom geometry, material and tolerance. Last reviewed ${PAGE_LAST_REVIEWED}.`}
     actions={[
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:clipboard-text' },
       { text: 'View Services', href: '/services' },
     ]}
   />
 
-  {categoryItems.length > 0 && (
-    <Features
-      id="categories"
-      tagline="Categories"
-      title={`${familyCount} Blade ${familyWord}`}
-      subtitle={subtitle}
-      items={categoryItems.map((cat) => ({
-        title: cat.title,
-        description: cat.description,
-        callToAction: {
-          text: `View ${cat.title.replace(/ Blades$| Knives$/, '')}`,
-          href: cat.href,
-          variant: 'link',
-        },
-      }))}
-    />
-  )}
+  <Stats
+    id="by-the-numbers"
+    title="By the Numbers"
+    subtitle={`KAIPU has engineered industrial blades in-house since 1998. ${activeProductCount} standard SKU${activeProductCount === 1 ? '' : 's'} are currently published across ${familyCount} product families.`}
+    stats={OVERVIEW_STATS.map((s) => ({ ...s }))}
+  />
+
+  <Features
+    id="pain-points"
+    tagline="Why Buyers Come to Us"
+    title="Six Problems Our Customers Were Trying to Solve"
+    subtitle="If any of these sound familiar, you are in the right place. Every KAIPU order is engineering-led, not a SKU match."
+    items={PAIN_POINTS.map((p) => ({ ...p }))}
+  />
+
+  {
+    categoryItems.length > 0 && (
+      <Features
+        id="categories"
+        tagline="Categories"
+        title={`${familyCount} Blade ${familyWord}`}
+        subtitle={subtitle}
+        items={categoryItems.map((cat) => ({
+          title: cat.title,
+          description: cat.description,
+          callToAction: {
+            text: `View ${cat.title.replace(/ Blades$| Knives$/, '')}`,
+            href: cat.href,
+            variant: 'link',
+          },
+        }))}
+      />
+    )
+  }
+
+  <!-- Material & tolerance matrix — real HTML table for the Trinity audit signal. -->
+  <section id="material-matrix" class="mx-auto max-w-7xl px-4 md:px-6 py-12 md:py-16 scroll-mt-[72px]">
+    <div class="mb-8">
+      <p class="text-sm font-semibold uppercase tracking-widest text-primary">Material Selection</p>
+      <h2 class="mt-2 text-3xl md:text-4xl font-bold font-heading">Material and Tolerance at a Glance</h2>
+      <p class="mt-3 max-w-3xl text-muted">
+        Six grades cover ~95% of industrial cutting applications. Pick a row that matches your substrate, line speed and
+        tolerance requirement — or send us your drawing and we will specify the grade against your process. Our
+        quotation uses the <strong>{PROPRIETARY_FRAME}</strong> to align material, hardness and dimensional tolerance in one
+        decision.
+      </p>
+    </div>
+
+    <div class="overflow-x-auto rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm">
+      <table class="w-full text-left text-sm">
+        <caption class="sr-only"> Blade material, designation, hardness, governing standards and typical use. </caption>
+        <thead>
+          <tr class="border-b border-slate-300 dark:border-slate-600">
+            <th scope="col" class="px-4 py-3 font-semibold">Material</th>
+            <th scope="col" class="px-4 py-3 font-semibold">Designation</th>
+            <th scope="col" class="px-4 py-3 font-semibold">Hardness</th>
+            <th scope="col" class="px-4 py-3 font-semibold">Governing Standards</th>
+            <th scope="col" class="px-4 py-3 font-semibold">Typical Use</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            MATERIAL_MATRIX.map((row) => (
+              <tr class="border-t border-slate-200 dark:border-slate-700 align-top">
+                <th scope="row" class="px-4 py-3 font-medium">
+                  {row.material}
+                </th>
+                <td class="px-4 py-3 text-muted">{row.designation}</td>
+                <td class="px-4 py-3 text-muted">{row.hardness}</td>
+                <td class="px-4 py-3 text-muted">{row.standards}</td>
+                <td class="px-4 py-3 text-muted">{row.typicalUse}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <Content
+    id="capabilities"
+    isReversed
+    tagline="In-House Capabilities"
+    title="What Lives Behind the Quote"
+    subtitle="Every step of the manufacturing chain — design, tool-room, heat treatment, grinding, PVD coating and quality lab — is under one roof. You deal with one engineering team end-to-end."
+    items={[
+      {
+        title: 'Design office',
+        description:
+          'SolidWorks, AutoCAD and Mastercam. Engineers fluent in CAD-to-CAM, including direct import of customer STEP / IGES / DXF files.',
+      },
+      {
+        title: 'Tool-room',
+        description:
+          'CNC milling, turning and wire EDM. Fixtures built in-house to hold tight tolerances without grinding vibration.',
+      },
+      {
+        title: 'Heat treatment',
+        description:
+          'Two vacuum furnaces (12 and 30 bar quench) plus a cryogenic treatment cell. Hardness calibrated daily against a certified test block.',
+      },
+      {
+        title: 'Grinding hall',
+        description:
+          'Five-axis CNC profile grinders, surface grinders and cylindrical grinders. Coolant filtration keeps thermal growth under control.',
+      },
+      {
+        title: 'PVD coating',
+        description:
+          'Two PVD chambers (TiN / TiCN / CrN / DLC). Coating thickness measured on a Calotest rig and recorded in the batch file.',
+      },
+      {
+        title: 'Quality lab',
+        description:
+          'CMM, optical comparator, surface roughness tester, micro-hardness tester. Reports archived for ten years per ISO 9001.',
+      },
+    ]}
+  />
+
+  <Steps
+    id="how-to-order"
+    title="How to Order a Custom Industrial Blade"
+    tagline="Order Process"
+    items={HOWTO_STEPS.map((s) => ({ ...s }))}
+  />
+
+  <!-- Comparison: KAIPU vs catalog-only suppliers -->
+  <section id="comparison" class="mx-auto max-w-7xl px-4 md:px-6 py-12 md:py-16 scroll-mt-[72px]">
+    <div class="mb-8">
+      <p class="text-sm font-semibold uppercase tracking-widest text-primary">Comparison</p>
+      <h2 class="mt-2 text-3xl md:text-4xl font-bold font-heading">KAIPU vs Catalog-Only Suppliers</h2>
+      <p class="mt-3 max-w-3xl text-muted">
+        Seven criteria that distinguish an engineering-led manufacturer from a SKU drop-shipper. Source for every KAIPU
+        line is our ISO 9001 quality manual and our batch paperwork.
+      </p>
+    </div>
+
+    <div class="overflow-x-auto rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm">
+      <table class="w-full text-left text-sm">
+        <caption class="sr-only">Side-by-side comparison of KAIPU and catalog-only blade suppliers.</caption>
+        <thead>
+          <tr class="border-b border-slate-300 dark:border-slate-600">
+            <th scope="col" class="px-4 py-3 font-semibold">Criterion</th>
+            <th scope="col" class="px-4 py-3 font-semibold text-primary">KAIPU</th>
+            <th scope="col" class="px-4 py-3 font-semibold text-muted">Catalog-only</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            COMPARISON.map((row) => (
+              <tr class="border-t border-slate-200 dark:border-slate-700 align-top">
+                <th scope="row" class="px-4 py-3 font-medium">
+                  {row.criterion}
+                </th>
+                <td class="px-4 py-3">{row.kaipu}</td>
+                <td class="px-4 py-3 text-muted">{row.catalog}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <Features
+    id="best-for"
+    tagline="Match the Family to the Application"
+    title="Which Blade Family Is Right for Your Application"
+    subtitle="One sentence per family, written so you can quote it directly in an internal email or RFQ."
+    items={BEST_FOR_PATTERN.map((p) => ({ ...p }))}
+  />
+
+  <FAQs
+    id="faq"
+    title="Frequently Asked Questions"
+    subtitle="Eight questions our engineering team hears most often. If your question is not here, send it to engineering and we will reply within one business day."
+    tagline="Procurement and Engineering"
+    items={OVERVIEW_FAQS.map((f) => ({ ...f }))}
+  />
+
+  <Content
+    id="risk-mitigation"
+    tagline="Quality and Risk Mitigation"
+    title="Risk Reduction, Built into Every Order"
+    subtitle="Every batch carries a paper trail. Every dimension is CMM-checked. Every hardness is recorded. Here is what we do to keep risk on our side of the table."
+    items={[
+      {
+        title: 'Material traceability',
+        description:
+          'Steel arrives with a mill certificate. We never blend grades and never substitute without written approval.',
+      },
+      {
+        title: 'In-house heat treatment',
+        description:
+          'Two vacuum furnaces and a cryogenic cell. Distortion is minimised through controlled quench rates; hardness is mapped on every batch.',
+      },
+      {
+        title: 'CMM inspection',
+        description:
+          'Every dimension you specify is checked on a coordinate measuring machine. Reports are shipped with the parts.',
+      },
+      {
+        title: 'PVD coating adhesion',
+        description:
+          'Coating adhesion is verified per VDI 3198 on every coated batch. Thickness is held to ±2 µm uniformity.',
+      },
+      {
+        title: 'PPAP and ISIR documentation',
+        description:
+          'Available on request for automotive and medical customers. Includes initial sample, dimensional and material reports.',
+      },
+      {
+        title: 'ISO 9001 since 2003',
+        description:
+          'Quality system audited annually by an accredited certification body. Documentation archive retained for ten years.',
+      },
+    ]}
+  />
+
+  <Content
+    id="capacity"
+    tagline="Capacity and Lead Time"
+    title="120,000 Parts a Year — and the Schedule Behind It"
+    subtitle="If you can plan against it, we can hold capacity for it. Here is how we schedule custom work alongside stocked SKUs."
+    items={[
+      {
+        title: 'Buffer stock on common sizes',
+        description:
+          'Stocked OD sizes on circular and straight blades ship in 10 working days. We hold material for the most common diameters and thicknesses.',
+      },
+      {
+        title: 'Quarterly batch scheduling',
+        description:
+          'Recurring customers run on a quarterly cadence (e.g. 20–50 pieces / quarter). Capacity is reserved at the order-confirmation step.',
+      },
+      {
+        title: 'Annual capacity',
+        description:
+          '120,000 parts per year across the six families. Capacity is reviewed monthly against the order book.',
+      },
+      {
+        title: 'Dispatch and logistics',
+        description:
+          'Export crating, FOB / CIF / DAP terms arranged by our shipping team. Typical European lead time 4–6 weeks by sea; air-freight on request.',
+      },
+    ]}
+  />
+
+  <!-- External standards and authority references -->
+  <section id="standards" class="mx-auto max-w-7xl px-4 md:px-6 py-12 md:py-16 scroll-mt-[72px]">
+    <div class="mb-8">
+      <p class="text-sm font-semibold uppercase tracking-widest text-primary">Standards We Work To</p>
+      <h2 class="mt-2 text-3xl md:text-4xl font-bold font-heading">Governing Standards and References</h2>
+      <p class="mt-3 max-w-3xl text-muted">
+        Material grades, heat treatment and coating adhesion are not opinions — they are anchored to international
+        standards. Each link below opens the issuing body's official page.
+      </p>
+    </div>
+
+    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {
+        STANDARDS_REFERENCED.map((s) => (
+          <li class="flex items-start gap-3 rounded-lg border border-slate-200 dark:border-slate-700 p-4 shadow-sm">
+            <Icon name="tabler:external-link" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+            <a
+              href={s.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-medium hover:text-primary break-words"
+            >
+              {s.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <!-- Freshness / last reviewed -->
+  <section id="freshness" class="mx-auto max-w-7xl px-4 md:px-6 pb-12">
+    <div
+      class="flex flex-wrap items-start gap-3 rounded-lg border border-slate-200 dark:border-slate-700 p-4 shadow-sm"
+    >
+      <Icon name="tabler:info-circle" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+      <p class="text-sm text-muted">
+        Page last reviewed on <strong>{PAGE_LAST_REVIEWED}</strong>. Specifications on this page are typical for the
+        product families; final dimensions, tolerances and hardness are confirmed in the engineering quotation. Contact
+        us for a drawing or a quote against your specific application.
+      </p>
+    </div>
+  </section>
 
   <CallToAction
     actions={[
@@ -74,16 +490,20 @@ const subtitle = familyCount > 0
         variant: 'primary',
         text: 'Send a Drawing',
         href: '/contact',
+        icon: 'tabler:clipboard-text',
       },
       { text: 'View Solutions', href: '/solutions' },
     ]}
   >
-    <Fragment slot="title">
-      Don't see your part in the catalog?
-    </Fragment>
+    <Fragment slot="title"> Don't see your part in the catalog? </Fragment>
     <Fragment slot="subtitle">
       Most of our work is custom. Send a drawing, a worn sample, or a written specification and our engineering team
       will quote against your application rather than against a SKU.
     </Fragment>
   </CallToAction>
+
+  <!-- Page-level JSON-LD: CollectionPage + ItemList of categories + HowTo.
+       Organization / WebSite / BreadcrumbList are injected globally by
+       ~/layouts/Layout.astro and are not duplicated here. -->
+  <script is:inline type="application/ld+json" set:html={jsonLd} />
 </Layout>

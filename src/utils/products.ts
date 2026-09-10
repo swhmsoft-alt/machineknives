@@ -78,9 +78,7 @@ export function isLevel1Category(value: string): value is Level1Category {
  * non-draft product. Used to filter navigation and index-page listings
  * so that empty categories are not exposed in the front-end.
  */
-export function getCategoriesWithProducts(
-  products: ReadonlyArray<CollectionEntry<'product'>>
-): Set<string> {
+export function getCategoriesWithProducts(products: ReadonlyArray<CollectionEntry<'product'>>): Set<string> {
   const set = new Set<string>();
   for (const p of products) {
     if (p.data.draft) continue;
@@ -95,11 +93,7 @@ export function buildCategoryHref(level1: string, subcategories: readonly string
 }
 
 /** Build a product page URL: /products/{level1}[/{sub1}/...]/[productId]/ */
-export function buildProductHref(
-  level1: string,
-  productId: string,
-  subcategories: readonly string[] = []
-): string {
+export function buildProductHref(level1: string, productId: string, subcategories: readonly string[] = []): string {
   return ['/products', level1, ...subcategories, productId].join('/') + '/';
 }
 
@@ -127,4 +121,29 @@ export function humanizeSlugSegment(segment: string): string {
     .split('-')
     .map((part) => (part.length === 0 ? part : part[0].toUpperCase() + part.slice(1)))
     .join(' ');
+}
+
+/**
+ * Number of non-draft products in the catalog. Used by the `/products/`
+ * overview page for the capacity / stats blocks.
+ */
+export function getActiveProductCount(products: ReadonlyArray<CollectionEntry<'product'>>): number {
+  return products.filter((p) => !p.data.draft).length;
+}
+
+/**
+ * Aggregate distinct blade materials across all active products, in the
+ * order they first appear. Used to build the on-page material matrix.
+ */
+export function getDistinctMaterials(products: ReadonlyArray<CollectionEntry<'product'>>): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const p of products) {
+    if (p.data.draft) continue;
+    const m = p.data.bladeMaterial;
+    if (!m || seen.has(m)) continue;
+    seen.add(m);
+    out.push(m);
+  }
+  return out;
 }
