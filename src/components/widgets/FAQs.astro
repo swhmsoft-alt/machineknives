@@ -58,4 +58,26 @@ const columnsClass =
       </div>
     )
   }
+  {
+    items.length > 0 && (
+      <script
+        type="application/ld+json"
+        set:html={JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: items.map(({ title: t, description }) => ({
+            '@type': 'Question',
+            name: t,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text:
+                typeof description === 'string'
+                  ? description.replace(/<[^>]*>/g, '')
+                  : '',
+            },
+          })),
+        })}
+      />
+    )
+  }
 </WidgetWrapper>

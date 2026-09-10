@@ -42,7 +42,7 @@ const isEmptyCategoryHref = (href: string | undefined): boolean => {
   if (!href) return false;
   // Match only top-level category pages like /products/{slug}/ — not
   // /products/ (index) and not deeper subcategory or product pages.
-  const match = /^\/products\/([^\/]+)\/?$/.exec(href);
+  const match = /^\/products\/([^/]+)\/?$/.exec(href);
   if (!match) return false;
   return !availableCategories.has(match[1]);
 };

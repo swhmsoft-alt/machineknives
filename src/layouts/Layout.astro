@@ -25,6 +25,60 @@ export interface Props {
 
 const { metadata = {} } = Astro.props;
 const { language, textDirection } = I18N;
+
+// ─── Global JSON-LD (Organization + WebSite + BreadcrumbList + Service on home) ──
+const siteUrl = String(Astro.site ?? 'https://www.machine-knives.net').replace(/\/$/, '');
+const pathSegments = Astro.url.pathname.split('/').filter(Boolean);
+const breadcrumbItems = [
+  { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl + '/' },
+  ...pathSegments.map((seg, i) => ({
+    '@type': 'ListItem',
+    position: i + 2,
+    name: seg.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()),
+    item: siteUrl + '/' + pathSegments.slice(0, i + 1).join('/'),
+  })),
+];
+const organizationLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'KAIPU Industrial Blades',
+  url: siteUrl + '/',
+  description:
+    'Manufacturer of industrial machine knives for printing, packaging, converting, food processing and recycling.',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'sales',
+    areaServed: 'Worldwide',
+    availableLanguage: ['English'],
+  },
+};
+const websiteLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'KAIPU Industrial Blades',
+  url: siteUrl + '/',
+};
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: breadcrumbItems,
+};
+const isHome = Astro.url.pathname === '/' || Astro.url.pathname === '';
+const serviceLd = isHome
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      serviceType: 'Custom industrial blade manufacturing',
+      provider: {
+        '@type': 'Organization',
+        name: 'KAIPU Industrial Blades',
+        url: siteUrl + '/',
+      },
+      areaServed: 'Worldwide',
+      description:
+        'Design, manufacture and re-sharpening of precision industrial machine knives: circular, straight, serrated, shear and granulator blades.',
+    }
+  : null;
 ---
 
 <!doctype html>
@@ -36,6 +90,16 @@ const { language, textDirection } = I18N;
     <CustomStyles />
     <ApplyColorMode />
     <Metadata {...metadata} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(organizationLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(websiteLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+    {
+      serviceLd && (
+        <script type="application/ld+json" set:html={JSON.stringify(serviceLd)} />
+      )
+    }
+
     <SiteVerification />
     <Analytics />
 

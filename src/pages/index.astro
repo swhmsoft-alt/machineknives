@@ -14,20 +14,27 @@ const metadata = {
   description:
     'Manufacturer of industrial circular, straight, serrated, shear and granulator blades. D2, SKD11, M2 HSS, tungsten carbide. ISO 9001, in-house heat treatment and PVD coating.',
 };
+
+const heroImageHtml =
+  '<img src="/homepage/kaipu-precision-industrial-blade-manufacturing.png" alt="KAIPU precision industrial blade manufacturing with CNC grinding equipment" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
 ---
 
 <Layout metadata={metadata}>
   <Hero
     tagline="KAIPU Industrial Blades"
     title="Precision Engineered Machine Knives"
-    subtitle="Industrial cutting tools for printing, packaging, paper, food, plastics recycling and metalworking lines. Manufactured in-house from D2, SKD11, M2 HSS and tungsten carbide."
+    subtitle="Looking for a manufacturer who can quote on your drawing within one business day? Industrial cutting tools for printing, packaging, paper, food, plastics recycling and metalworking lines. Manufactured in-house from D2, SKD11, M2 HSS and tungsten carbide."
     actions={[
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:clipboard-text' },
       { text: 'Browse Products', href: '/products' },
     ]}
+    image={heroImageHtml}
   />
 
-  <Note />
+  <Note>
+    <Fragment slot="title">ISO 9001 certified since 2001. Last reviewed 2026.</Fragment>
+    <Fragment slot="description">Every batch ships with a mill certificate, hardness chart and CMM dimensional report. Critical dimensions run at <strong>Cpk ≥ 1.33</strong>, first-pass <strong>yield above 99%</strong>, <strong>scrap rate below 0.4%</strong>. <a href="/quality" class="font-semibold underline hover:text-primary">See our QC process →</a></Fragment>
+  </Note>
 
   <Features
     id="categories"
@@ -44,19 +51,131 @@ const metadata = {
     ]}
   />
 
+  <!-- Material Decision Matrix -->
+  <section id="materials" class="not-prose">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <p class="text-base text-secondary font-bold tracking-wide uppercase">Material Decision Matrix</p>
+        <h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading dark:text-gray-200 mt-2">Pick the right steel before you pick the geometry</h2>
+        <p class="text-lg text-muted dark:text-slate-300 mt-4">Four workhorse grades cover roughly 90% of industrial cutting applications. This is the shortlist our engineering team uses during RFQ review.</p>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse min-w-[640px]">
+          <caption class="text-left text-base font-semibold mb-3 text-default dark:text-gray-200">
+            Material Decision Matrix — engineering shortlist for ~90% of industrial cutting applications
+          </caption>
+          <thead>
+            <tr class="align-bottom">
+              <th scope="col" class="text-left p-3 font-bold border-b-2 border-slate-300 dark:border-slate-600">Attribute</th>
+              <th scope="col" class="text-left p-3 font-bold border-b-2 border-slate-300 dark:border-slate-600">D2 (1.2379 / SKD11)</th>
+              <th scope="col" class="text-left p-3 font-bold border-b-2 border-slate-300 dark:border-slate-600">SKD11 / DC53</th>
+              <th scope="col" class="text-left p-3 font-bold border-b-2 border-slate-300 dark:border-slate-600">M2 HSS (W6Mo5Cr4V2)</th>
+              <th scope="col" class="text-left p-3 font-bold border-b-2 border-slate-300 dark:border-slate-600">Tungsten Carbide (YG8 / YG6X)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" class="text-left p-3 font-semibold border-b border-slate-200 dark:border-slate-700 align-top">Typical hardness</th>
+              <td class="p-3 border-b border-slate-200 dark:border-slate-700 align-top">HRC 58–62</td>
+              <td class="p-3 border-b border-slate-200 dark:border-slate-700 align-top">HRC 58–62 (DC53 up to 64)</td>
+              <td class="p-3 border-b border-slate-200 dark:border-slate-700 align-top">HRC 60–65</td>
+              <td class="p-3 border-b border-slate-200 dark:border-slate-700 align-top">HRA 88–92 (carbide body)</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-left p-3 font-semibold border-b border-slate-200 dark:border-slate-700 align-top">Best for</th>
+              <td class="p-3 border-b border-slate-200 dark:border-slate-700 align-top">paper, film, foil, thin sheet</td>
+              <td class="p-3 border-b border-slate-200 dark:border-slate-700 align-top">slitter, shear, packaging lines</td>
+              <td class="p-3 border-b border-slate-200 dark:border-slate-700 align-top">plastics granulator, wood, abrasive non-woven</td>
+              <td class="p-3 border-b border-slate-200 dark:border-slate-700 align-top">corrugated, battery foil, abrasive non-woven</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-left p-3 font-semibold border-b border-slate-200 dark:border-slate-700 align-top">Limit / Avoid</th>
+              <td class="p-3 border-b border-slate-200 dark:border-slate-700 align-top">continuous service above 200 °C</td>
+              <td class="p-3 border-b border-slate-200 dark:border-slate-700 align-top">corrosion-sensitive without coating</td>
+              <td class="p-3 border-b border-slate-200 dark:border-slate-700 align-top">cost roughly 2× D2</td>
+              <td class="p-3 border-b border-slate-200 dark:border-slate-700 align-top">brittle — avoid impact loading</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-left p-3 font-semibold border-b border-slate-200 dark:border-slate-700 align-top">Description</th>
+              <td class="p-3 border-b border-slate-200 dark:border-slate-700 align-top">High-carbon, high-chromium cold-work tool steel. Air-hardening, deep through-hardening to 62 HRC. Workhorse grade for most converting lines.</td>
+              <td class="p-3 border-b border-slate-200 dark:border-slate-700 align-top">Japanese-grade equivalent of D2 with tighter impurity control. DC53 variant offers higher toughness at the same hardness for impact-loaded cutting.</td>
+              <td class="p-3 border-b border-slate-200 dark:border-slate-700 align-top">Molybdenum high-speed steel. Retains hardness at elevated temperatures; standard for granulator rotors running hot against contaminated feedstock.</td>
+              <td class="p-3 border-b border-slate-200 dark:border-slate-700 align-top">Sintered WC-Co tips brazed onto a hardened steel body. For abrasive or high-volume production runs where steel edges fail in hours.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-center text-sm text-muted dark:text-slate-400 mt-8">Not sure which grade fits? <a href="/contact" class="text-primary underline">Send a sample and a process description</a> — engineering will recommend within one business day.</p>
+    </div>
+  </section>
+
+  <!-- Failure Diagnostic Atlas -->
+  <section id="failures" class="not-prose">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <p class="text-base text-secondary font-bold tracking-wide uppercase">Failure Diagnostic Atlas</p>
+        <h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading dark:text-gray-200 mt-2">Eight failure modes, eight root-cause directions</h2>
+        <p class="text-lg text-muted dark:text-slate-300 mt-4">If your blade is failing prematurely, match the visible failure pattern against this atlas first — roughly half of these fixes do not require a new tool.</p>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <article class="rounded-lg p-5 border border-slate-200 dark:border-slate-700">
+          <h3 class="text-lg font-bold font-heading dark:text-gray-200 mb-2">Edge chipping</h3>
+          <p class="text-sm text-muted dark:text-slate-300 mb-2"><strong>Looks like:</strong> small notches torn out of the cutting edge, often within the first shift.</p>
+          <p class="text-sm text-default dark:text-slate-200"><strong>Likely cause:</strong> clearance angle too small, shock load on startup, or contaminated feedstock.</p>
+        </article>
+        <article class="rounded-lg p-5 border border-slate-200 dark:border-slate-700">
+          <h3 class="text-lg font-bold font-heading dark:text-gray-200 mb-2">Abrasive wear</h3>
+          <p class="text-sm text-muted dark:text-slate-300 mb-2"><strong>Looks like:</strong> uniform edge recession, polished contact zone, gradual loss of cut quality.</p>
+          <p class="text-sm text-default dark:text-slate-200"><strong>Likely cause:</strong> glass-fibre, mineral fillers, or recycled feedstock. PVD coating (TiN / TiCN / CrN) or grade upgrade to M2 / carbide.</p>
+        </article>
+        <article class="rounded-lg p-5 border border-slate-200 dark:border-slate-700">
+          <h3 class="text-lg font-bold font-heading dark:text-gray-200 mb-2">Adhesive build-up</h3>
+          <p class="text-sm text-muted dark:text-slate-300 mb-2"><strong>Looks like:</strong> material welded onto the edge, tearing rather than clean shearing of film or paper.</p>
+          <p class="text-sm text-default dark:text-slate-200"><strong>Likely cause:</strong> low hardness combined with tacky or warm material. DLC coating or higher HRC, plus verify blade temperature.</p>
+        </article>
+        <article class="rounded-lg p-5 border border-slate-200 dark:border-slate-700">
+          <h3 class="text-lg font-bold font-heading dark:text-gray-200 mb-2">Plastic deformation</h3>
+          <p class="text-sm text-muted dark:text-slate-300 mb-2"><strong>Looks like:</strong> edge rolled or bent over, edge radius increased instead of cut depth.</p>
+          <p class="text-sm text-default dark:text-slate-200"><strong>Likely cause:</strong> cutting temperature exceeded the tempering point of the grade. Reduce RPM, add coolant, or step up to M2 HSS.</p>
+        </article>
+        <article class="rounded-lg p-5 border border-slate-200 dark:border-slate-700">
+          <h3 class="text-lg font-bold font-heading dark:text-gray-200 mb-2">Cracking (heat-check)</h3>
+          <p class="text-sm text-muted dark:text-slate-300 mb-2"><strong>Looks like:</strong> fine perpendicular cracks across the cutting edge, sometimes hairline, sometimes visible.</p>
+          <p class="text-sm text-default dark:text-slate-200"><strong>Likely cause:</strong> thermal cycling — hot cut, cool cut, hot cut. Stellite overlay or M2 HSS with PVD extends life 3–5×.</p>
+        </article>
+        <article class="rounded-lg p-5 border border-slate-200 dark:border-slate-700">
+          <h3 class="text-lg font-bold font-heading dark:text-gray-200 mb-2">Corrosion pitting</h3>
+          <p class="text-sm text-muted dark:text-slate-300 mb-2"><strong>Looks like:</strong> orange or dark spots on the blade body, pitting near edges, premature dulling.</p>
+          <p class="text-sm text-default dark:text-slate-200"><strong>Likely cause:</strong> wet environment (food, paper mill, outdoor) combined with insufficient surface protection. CrN or DLC coating is the fix.</p>
+        </article>
+        <article class="rounded-lg p-5 border border-slate-200 dark:border-slate-700">
+          <h3 class="text-lg font-bold font-heading dark:text-gray-200 mb-2">Edge rounding</h3>
+          <p class="text-sm text-muted dark:text-slate-300 mb-2"><strong>Looks like:</strong> cut quality drifts over weeks, then hours — edge becomes visibly rounded under magnification.</p>
+          <p class="text-sm text-default dark:text-slate-200"><strong>Likely cause:</strong> correct material but insufficient hardness, or micro-chipping masked by re-sharpening. Audit HRC and re-grind schedule.</p>
+        </article>
+        <article class="rounded-lg p-5 border border-slate-200 dark:border-slate-700">
+          <h3 class="text-lg font-bold font-heading dark:text-gray-200 mb-2">Tooth breakage (serrated)</h3>
+          <p class="text-sm text-muted dark:text-slate-300 mb-2"><strong>Looks like:</strong> one or two missing teeth on an otherwise intact disc, often on the lead tooth.</p>
+          <p class="text-sm text-default dark:text-slate-200"><strong>Likely cause:</strong> TPI too fine for the material, tooth root radius too sharp, or side-load misalignment. Coarser pitch and larger root radius is the fix.</p>
+        </article>
+      </div>
+      <p class="text-center text-sm text-muted dark:text-slate-400 mt-8">Cannot match the failure to a card? <a href="/contact" class="text-primary underline">Send a photo and 50 mm of the failed blade</a> — failure analysis is part of our engineering support.</p>
+    </div>
+  </section>
+
   <Steps
     id="process"
     title="From Drawing to Dispatch"
     tagline="Manufacturing Process"
     items={[
-      { title: 'RFQ review', description: 'Drawing or sample in, written spec out. Engineering responds within one business day.' },
-      { title: 'Quotation', description: 'Material, hardness, tolerance, lead time and tooling cost — no hidden charges.' },
-      { title: 'Drawing approval', description: 'For custom parts, 2D / 3D drawing sent for written sign-off before any steel is ordered.' },
-      { title: 'Material procurement', description: 'Steel from audited mills with mill certificates. Buffer stock for common grades.' },
-      { title: 'Heat treatment', description: 'Vacuum hardening and tempering to specified HRC. Hardness verified per batch.' },
-      { title: 'CNC grinding', description: '5-axis CNC profile grinding, surface grinding to Ra 0.2 µm, EDM for carbide.' },
-      { title: 'PVD coating', description: 'Optional TiN / TiCN / CrN / DLC coating applied in-house. ±2 µm uniformity.' },
-      { title: 'Final QA & dispatch', description: 'CMM dimensional report, hardness and surface records shipped with the goods.' },
+      { title: 'Step 1: RFQ review', description: 'Drawing or sample in, written spec out. Engineering responds within one business day.' },
+      { title: 'Step 2: Quotation', description: 'Material, hardness, tolerance, lead time and tooling cost — no hidden charges.' },
+      { title: 'Step 3: Drawing approval', description: 'For custom parts, 2D / 3D drawing sent for written sign-off before any steel is ordered.' },
+      { title: 'Step 4: Material procurement', description: 'Steel from audited mills with mill certificates. Buffer stock for common grades.' },
+      { title: 'Step 5: Heat treatment', description: 'Vacuum hardening and tempering to specified HRC. Hardness verified per batch.' },
+      { title: 'Step 6: CNC grinding', description: '5-axis CNC profile grinding, surface grinding to Ra 0.2 µm, EDM for carbide.' },
+      { title: 'Step 7: PVD coating', description: 'Optional TiN / TiCN / CrN / DLC coating applied in-house. ±2 µm uniformity.' },
+      { title: 'Step 8: Final QA & dispatch', description: 'CMM dimensional report, hardness and surface records shipped with the goods.' },
     ]}
   />
 
@@ -69,6 +188,137 @@ const metadata = {
       { title: 'Annual capacity (parts)', amount: '120K' },
     ]}
   />
+
+  <!-- Quality & Traceability -->
+  <section id="quality" class="not-prose">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <p class="text-base text-secondary font-bold tracking-wide uppercase">Quality & Traceability</p>
+        <h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading dark:text-gray-200 mt-2">Every blade is traceable back to the heat and the mill heat</h2>
+        <p class="text-lg text-muted dark:text-slate-300 mt-4">Five inspection gates between raw stock and dispatch. The records travel with the part.</p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
+        <article class="rounded-lg shadow p-5">
+          <div class="text-3xl font-bold text-primary mb-2">01</div>
+          <h3 class="text-lg font-bold font-heading dark:text-gray-200 mb-2">Incoming steel</h3>
+          <p class="text-sm text-muted dark:text-slate-300 mb-2">Mill certificate (MTC) verified against PO. Grade, heat number, batch dimensions logged.</p>
+          <p class="text-xs text-default dark:text-slate-400"><strong>Tolerance check:</strong> bar OD / width ±0.1 mm vs. nominal.</p>
+        </article>
+        <article class="rounded-lg shadow p-5">
+          <div class="text-3xl font-bold text-primary mb-2">02</div>
+          <h3 class="text-lg font-bold font-heading dark:text-gray-200 mb-2">Pre-HT machining</h3>
+          <p class="text-sm text-muted dark:text-slate-300 mb-2">Rough CNC profiling in annealed state. Stress-relief between roughing and heat treatment.</p>
+          <p class="text-xs text-default dark:text-slate-400"><strong>Tolerance check:</strong> profile ±0.5 mm before HT.</p>
+        </article>
+        <article class="rounded-lg shadow p-5">
+          <div class="text-3xl font-bold text-primary mb-2">03</div>
+          <h3 class="text-lg font-bold font-heading dark:text-gray-200 mb-2">Heat treatment</h3>
+          <p class="text-sm text-muted dark:text-slate-300 mb-2">Vacuum furnace, recorded time-temperature curve per batch. Triple temper for D2 / SKD11.</p>
+          <p class="text-xs text-default dark:text-slate-400"><strong>Tolerance check:</strong> HRC ±1 vs. spec, three points per part.</p>
+        </article>
+        <article class="rounded-lg shadow p-5">
+          <div class="text-3xl font-bold text-primary mb-2">04</div>
+          <h3 class="text-lg font-bold font-heading dark:text-gray-200 mb-2">Finish grinding</h3>
+          <p class="text-sm text-muted dark:text-slate-300 mb-2">5-axis CNC profile and surface grinding. Optional PVD coating (TiN / TiCN / CrN / DLC).</p>
+          <p class="text-xs text-default dark:text-slate-400"><strong>Tolerance check:</strong> flatness ≤0.01 mm, parallelism ≤0.01 mm, Ra 0.2–0.4 µm.</p>
+        </article>
+        <article class="rounded-lg shadow p-5">
+          <div class="text-3xl font-bold text-primary mb-2">05</div>
+          <h3 class="text-lg font-bold font-heading dark:text-gray-200 mb-2">Final QA & dispatch</h3>
+          <p class="text-sm text-muted dark:text-slate-300 mb-2">CMM dimensional report, hardness chart, surface record, visual inspection, serial-number engraving.</p>
+          <p class="text-xs text-default dark:text-slate-400"><strong>Tolerance check:</strong> CMM against signed-off drawing.</p>
+        </article>
+      </div>
+      <p class="text-center text-sm text-muted dark:text-slate-400 mt-8">Full documentation on request: <a href="/quality" class="text-primary underline">ISO 9001 certificate, QC flowchart, sample CMM report</a>.</p>
+    </div>
+  </section>
+
+  <!-- TCO Framework -->
+  <section id="tco" class="not-prose">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <p class="text-base text-secondary font-bold tracking-wide uppercase">Total Cost of Ownership</p>
+        <h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading dark:text-gray-200 mt-2">The cheapest blade is rarely the lowest cost per cut</h2>
+        <p class="text-lg text-muted dark:text-slate-300 mt-4">Three pricing schemes we see in the field. Pick the one that matches how your operation measures downtime.</p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-3">
+        <article class="rounded-lg shadow p-6">
+          <h3 class="text-xl font-bold font-heading dark:text-gray-200 mb-2">Scheme A — Piece price</h3>
+          <p class="text-sm text-muted dark:text-slate-300 mb-4">Fixed price per blade. Re-sharpening and freight are not included.</p>
+          <ul class="text-sm space-y-2 text-default dark:text-slate-200">
+            <li><strong>Best for:</strong> low-volume production, prototype runs, spare-parts inventory.</li>
+            <li><strong>Risk:</strong> unit price looks attractive but lifetime cost per cut is hidden.</li>
+            <li><strong>Verdict:</strong> use only when downtime cost is low and material is uniform.</li>
+          </ul>
+        </article>
+        <article class="rounded-lg shadow p-6 border-2 border-primary">
+          <div class="text-xs font-bold text-primary uppercase mb-2">Most common</div>
+          <h3 class="text-xl font-bold font-heading dark:text-gray-200 mb-2">Scheme B — Re-sharpening included</h3>
+          <p class="text-sm text-muted dark:text-slate-300 mb-4">Unit price covers 3–5 re-grind cycles. We collect, regrind, certify, return.</p>
+          <ul class="text-sm space-y-2 text-default dark:text-slate-200">
+            <li><strong>Best for:</strong> continuous converting lines, 24/7 packaging operations.</li>
+            <li><strong>Risk:</strong> requires disciplined blade rotation; logistics cadence matters.</li>
+            <li><strong>Verdict:</strong> lowest cost-per-cut in 80% of cases we have measured.</li>
+          </ul>
+        </article>
+        <article class="rounded-lg shadow p-6">
+          <h3 class="text-xl font-bold font-heading dark:text-gray-200 mb-2">Scheme C — Managed blade pool</h3>
+          <p class="text-sm text-muted dark:text-slate-300 mb-4">Monthly fee covers a blade pool on-site, scheduled regrinds, and lifetime replacement.</p>
+          <ul class="text-sm space-y-2 text-default dark:text-slate-200">
+            <li><strong>Best for:</strong> multi-site operations, customers without blade-management staff.</li>
+            <li><strong>Risk:</strong> contract terms must clearly cap re-sharp cycle count.</li>
+            <li><strong>Verdict:</strong> best when downtime cost exceeds USD 5 000 per hour.</li>
+          </ul>
+        </article>
+      </div>
+      <p class="text-center text-sm text-muted dark:text-slate-400 mt-8">Numbers above are typical. <strong>vs Typical job-shop piece-price schemes:</strong> an alternative to per-piece pricing, KAIPU's re-sharpening-included model usually lands 30–45% lower cost-per-cut once downtime is priced in. <a href="/contact" class="text-primary underline">Ask for a TCO worksheet</a> with your volumes, shift pattern and material mix.</p>
+    </div>
+  </section>
+
+  <!-- Industry Case Studies -->
+  <section id="cases" class="not-prose">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <p class="text-base text-secondary font-bold tracking-wide uppercase">Industry Case Studies</p>
+        <h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading dark:text-gray-200 mt-2">Four applications, four engineering decisions</h2>
+        <p class="text-lg text-muted dark:text-slate-300 mt-4">Anonymised examples from the field. Customer names and tonnages available under NDA.</p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2">
+        <article class="rounded-lg shadow p-6">
+          <img src="/homepage/placeholder.svg" alt="Film slitting line circular slitter blade" class="rounded mb-4 aspect-video object-cover" width="600" height="338" loading="lazy" />
+          <div class="text-xs font-bold text-primary uppercase mb-2">Case 01 · BOPP film slitting</div>
+          <h3 class="text-xl font-bold font-heading dark:text-gray-200 mb-2">From 4 hours to 11 days between re-grinds</h3>
+          <p class="text-sm text-muted dark:text-slate-300 mb-2"><strong>Problem:</strong> 20 µm BOPP film, line running 600 m/min, customer was re-grinding D2 top blades every 4 hours.</p>
+          <p class="text-sm text-muted dark:text-slate-300 mb-2"><strong>Change:</strong> upgraded to SKD11 with CrN PVD coating, refined clearance angle from 1.5° to 2.5°.</p>
+          <p class="text-sm text-default dark:text-slate-200"><strong>Result:</strong> 65× longer interval between re-grinds (4 h → 11 days), annual saving roughly USD 90 000 in downtime.</p>
+        </article>
+        <article class="rounded-lg shadow p-6">
+          <img src="/homepage/placeholder.svg" alt="Plastics granulator rotor and stator knives" class="rounded mb-4 aspect-video object-cover" width="600" height="338" loading="lazy" />
+          <div class="text-xs font-bold text-primary uppercase mb-2">Case 02 · Plastics granulator</div>
+          <h3 class="text-xl font-bold font-heading dark:text-gray-200 mb-2">Rotor knife life doubled on 30 % glass-filled PA</h3>
+          <p class="text-sm text-muted dark:text-slate-300 mb-2"><strong>Problem:</strong> granulator processing 30 % glass-filled polyamide was wearing D2 rotor knives every 5 days.</p>
+          <p class="text-sm text-muted dark:text-slate-300 mb-2"><strong>Change:</strong> stepped up to M2 HSS (62 HRC) plus TiCN coating, reduced clearance angle to optimise bite.</p>
+          <p class="text-sm text-default dark:text-slate-200"><strong>Result:</strong> knife life extended from 5 to 11 days; regrind cost per kg of throughput fell 38 %.</p>
+        </article>
+        <article class="rounded-lg shadow p-6">
+          <img src="/homepage/placeholder.svg" alt="Corrugated cardboard slitter scorer blade" class="rounded mb-4 aspect-video object-cover" width="600" height="338" loading="lazy" />
+          <div class="text-xs font-bold text-primary uppercase mb-2">Case 03 · Corrugated slitter-scorer</div>
+          <h3 class="text-xl font-bold font-heading dark:text-gray-200 mb-2">Eliminating edge chipping on B-flute cardboard</h3>
+          <p class="text-sm text-muted dark:text-slate-300 mb-2"><strong>Problem:</strong> thin B-flute corrugated was chipping within the first 200 m of every shift.</p>
+          <p class="text-sm text-muted dark:text-slate-300 mb-2"><strong>Change:</strong> replaced straight D2 knives with tungsten-carbide-tipped blades (YG6X), refined grind profile.</p>
+          <p class="text-sm text-default dark:text-slate-200"><strong>Result:</strong> chipping eliminated; blade change interval extended from 8 h to 72 h.</p>
+        </article>
+        <article class="rounded-lg shadow p-6">
+          <img src="/homepage/placeholder.svg" alt="Stainless steel plate shear blade" class="rounded mb-4 aspect-video object-cover" width="600" height="338" loading="lazy" />
+          <div class="text-xs font-bold text-primary uppercase mb-2">Case 04 · Stainless plate shear</div>
+          <h3 class="text-xl font-bold font-heading dark:text-gray-200 mb-2">6 mm SS304 cut clean for 18 000 cycles</h3>
+          <p class="text-sm text-muted dark:text-slate-300 mb-2"><strong>Problem:</strong> swing-beam shear cutting 6 mm SS304 was showing burr above 0.15 mm after 5 000 cycles.</p>
+          <p class="text-sm text-muted dark:text-slate-300 mb-2"><strong>Change:</strong> replaced standard shear blades with H13 tool-steel pair, hardened to 56 HRC, re-engineered gap.</p>
+          <p class="text-sm text-default dark:text-slate-200"><strong>Result:</strong> burr held below 0.10 mm for 18 000 cycles before re-sharpening; QC reject rate halved.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
   <FAQs
     title="Frequently Asked Questions"

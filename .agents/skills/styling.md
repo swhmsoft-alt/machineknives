@@ -62,6 +62,30 @@ Edit `src/components/CustomStyles.astro`:
 }
 ```
 
+## Background Color Discipline (HARD RULE)
+
+**Full-site background is unique and unified.** No component, section, or card may define its own background color.
+
+### Allowed
+
+- `bg-page` — the single permitted background utility. Token-controlled, switches automatically in dark mode via `.dark` class.
+- No background class on `<section>` — let it inherit the body's `bg-page`.
+- No background class on `<article>` / cards — rely on `border border-slate-200 dark:border-slate-700` + `shadow` for separation.
+
+### Forbidden
+
+- `bg-default`, `bg-slate-*`, `bg-gray-*`, `bg-blue-*`, `bg-green-*`, etc. — any literal color utility.
+- `dark:bg-slate-*`, `dark:bg-gray-*`, etc. — any literal dark-mode color.
+- **Never** create a `bg-default` utility that maps to a non-background token. Tailwind v4 auto-generates `bg-*` / `text-*` / `border-*` from every `--color-*` variable, so `--color-default` (which maps to text color) would silently create a misleading `bg-default` class.
+
+### One exception
+
+- The `Note` widget (`src/components/widgets/Note.astro`) keeps its `bg-blue-50 dark:bg-slate-800` because it is a single-line accent strip, not a section background. This is **the only** allowed exception.
+
+### Why
+
+Visual consistency is a design rule, not a per-component optimization. Custom backgrounds break the unified rhythm and frequently cause contrast bugs (e.g. dark text on dark background).
+
 ## Changing Fonts
 
 1. Install the font: `npm install @fontsource-variable/your-font`

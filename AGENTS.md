@@ -116,3 +116,8 @@ After changes, always verify:
 1. `npm run build` succeeds
 2. `npm run check` passes (astro check + ESLint + Prettier)
 3. Visual check in browser: homepage, blog, dark mode, mobile menu
+
+## Hard Rules
+
+- **Background color**: full-site background is unique and unified. No section/card may define its own background. Only `bg-page` is permitted. Details in `.agents/skills/styling.md` § "Background Color Discipline".
+- **Adding components**: read `.agents/skills/styling.md` and `.clinerules` first. Reuse existing widgets when possible. Never invent custom backgrounds.
