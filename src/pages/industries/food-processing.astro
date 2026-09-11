@@ -1,0 +1,82 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Food Processing Blades — Stainless & Tool Steel for Slicing, Dicing and Portioning',
+  description:
+    'Stainless and tool-steel blades for food slicing, dicing and portioning lines. Washdown-rated surface finish, full material traceability per ISO 9001:2015 §8.5, food-contact compliance documentation supplied.',
+};
+
+const features = [
+  {
+    title: 'Material grades',
+    description:
+      'Martensitic stainless 1.4116 (AISI 440B) and 1.4034 (AISI 420) for direct food-contact applications. D2 (1.2379) where the cut is indirect or upstream of the contact zone. Hardness HRC 54–58 stainless, HRC 58–62 D2.',
+    icon: 'tabler:certificate',
+  },
+  {
+    title: 'Washdown-rated finish',
+    description:
+      'Surface roughness ≤ Ra 0.4 µm ground, ≤ Ra 0.2 µm optional polish, no crevices at the grind transition. Knife geometry designed to shed water — no horizontal pockets that trap product residue through CIP cycles.',
+    icon: 'tabler:droplet',
+  },
+  {
+    title: 'Traceability and compliance',
+    description:
+      'Mill certificate, heat-treatment chart and dimensional report shipped with every knife. Material traceability documented per ISO 9001:2015 §8.5. Lot number laser-marked on each blade for recall traceability.',
+    icon: 'tabler:file-check',
+  },
+  {
+    title: 'Typical applications',
+    description:
+      'Meat and poultry slicing, cheese portioning and shredding, vegetable dicing, bakery cutting, frozen-food portioning. Straight and circular geometries; serrated variants for crusty or fibrous product where a clean slice would smear.',
+    icon: 'tabler:apple',
+  },
+  {
+    title: 'Edge geometry',
+    description:
+      'Honed edge 10–25 µm for clean slicing, scalloped / serrated for crusty product, micro-honed 30–50 µm for frozen product. Bevel angle selected per substrate — typically 15°–22° on slicing blades, 30°–45° on portioning tools.',
+    icon: 'tabler:blade',
+  },
+  {
+    title: 'Hygienic design notes',
+    description:
+      'No threaded fasteners in the food zone. Where fixing is required, hex-drive or captive fasteners with FDA-grade lubricant. Handles and backers supplied in food-grade polymer or 304/316 stainless to match the line.',
+    icon: 'tabler:shield-check',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Food Processing"
+    title="Stainless and Tool-Steel Blades for Slicing, Dicing and Portioning"
+    subtitle="Designed for washdown environments and food-contact compliance. Material traceability documented per ISO 9001:2015 §8.5, mill certificates and CMM reports shipped with every knife."
+    actions={[
+      { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:mail' },
+      { text: 'View Custom Blades', href: '/products/custom/' },
+    ]}
+  />
+
+  <Features
+    id="capabilities"
+    tagline="Engineering scope"
+    title="Six specification levers for food processing"
+    subtitle="Food-grade blades live or die on surface finish, traceability and edge geometry. Each lever below is documented, measured and reported — not assumed."
+    items={features}
+    columns={3}
+    defaultIcon="tabler:leaf"
+  />
+
+  <CallToAction
+    title="Sourcing food-grade cutting tools?"
+    subtitle="Tell us the product (meat, cheese, vegetable, bakery, frozen), line configuration and current failure mode. We will return a written quote with material grade, surface finish and edge geometry within one business day."
+    actions={[
+      { variant: 'primary', text: 'Submit a drawing', href: '/contact', icon: 'tabler:clipboard-text' },
+      { text: 'Browse Solutions', href: '/solutions' },
+    ]}
+  />
+</Layout>

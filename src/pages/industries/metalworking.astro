@@ -1,0 +1,82 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Metalworking Blades — Shear Knives for Guillotine and Swing-Beam Cutting',
+  description:
+    'Shear blades for guillotine and swing-beam cutting of mild steel, stainless and aluminium plate up to 12 mm. HRC 58–62 working hardness, ground and polished to ≤ Ra 0.4 µm. 4-edge indexable designs available.',
+};
+
+const features = [
+  {
+    title: 'Shear machine types',
+    description:
+      'Guillotine shears (hydraulic and mechanical), swing-beam shears, plate shears, scrap metal shears, and crop-and-square shears for billet. Blade geometry, clearance and rake angle selected per machine class and material being cut.',
+    icon: 'tabler:tool',
+  },
+  {
+    title: 'Plate thickness envelope',
+    description:
+      'Production-validated on mild steel up to 12 mm, stainless steel up to 8 mm, aluminium up to 12 mm. Heavier gauges (> 12 mm) supplied as custom build against drawing. Shear clearance per OEM recommendation, typically 5–10 % of plate thickness.',
+    icon: 'tabler:ruler-measure',
+  },
+  {
+    title: 'Material grades',
+    description:
+      'Cold-work tool steel D2 (DIN 1.2379, JIS SKD11), 1.2379 modified grades, and high-chromium tool steel (1.2080, 1.2436) for abrasive cutting. Hardness HRC 58–62 working, tempered and stress-relieved for plate-thickness application.',
+    icon: 'tabler:certificate',
+  },
+  {
+    title: 'Edge geometry',
+    description:
+      'Single-bevel and four-edge indexable designs. Bevel angle 1°–3° on lower blade, 1°–2° on upper blade. Cutting edge flatness ≤ 0.02 mm across the blade length, edge radius 0.05–0.20 mm depending on material and burr-tolerance target.',
+    icon: 'tabler:blade',
+  },
+  {
+    title: 'Surface finish',
+    description:
+      'Ground and polished to ≤ Ra 0.4 µm on the cutting edge, ≤ Ra 0.8 µm on the body. Lower-friction finish options available for sticky stainless or coated plate. Surface integrity verified on profilometer before dispatch.',
+    icon: 'tabler:gauge',
+  },
+  {
+    title: 'Regrind and indexing',
+    description:
+      'Four-edge indexable blades supplied with up to 4 regrinds before geometry falls below OEM clearance. Single-use lower blades typically reground 2–3 times. Regrind service available in-house with optical comparator verification.',
+    icon: 'tabler:refresh',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Metalworking"
+    title="Shear Blades for Guillotine and Swing-Beam Cutting"
+    subtitle="Mild steel, stainless and aluminium plate up to 12 mm. HRC 58–62 working hardness, ground and polished to ≤ Ra 0.4 µm. 4-edge indexable designs available to maximise cutting length per blade."
+    actions={[
+      { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:mail' },
+      { text: 'View Shear Blades', href: '/products/shear/' },
+    ]}
+  />
+
+  <Features
+    id="capabilities"
+    tagline="Engineering scope"
+    title="Six specification levers for metalworking shears"
+    subtitle="A shear blade is a wear part with a precision edge. The variables below determine burr, twist and edge life — each specified against an international standard, not a guess."
+    items={features}
+    columns={3}
+    defaultIcon="tabler:tool"
+  />
+
+  <CallToAction
+    title="Need shear blades for plate or billet cutting?"
+    subtitle="Send the OEM machine, plate thickness range, material mix (mild / stainless / aluminium) and target edge life. We will return a written quote with steel grade, hardness, bevel geometry and regrind plan within one business day."
+    actions={[
+      { variant: 'primary', text: 'Submit a drawing', href: '/contact', icon: 'tabler:clipboard-text' },
+      { text: 'Browse Solutions', href: '/solutions' },
+    ]}
+  />
+</Layout>

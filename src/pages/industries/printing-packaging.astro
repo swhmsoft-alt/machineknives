@@ -1,0 +1,82 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Printing & Packaging Blades — Slitting, Sheeting and Rewinding Knives',
+  description:
+    'Precision slitting, sheeting and rewinding blades for printing and packaging lines. Paper 40–400 gsm, BOPP/PET film 12–200 µm, alu-foil 6–50 µm. D2 / SKD11 per ASTM A681 / JIS G4404. Tight burr control protects printed surfaces.',
+};
+
+const features = [
+  {
+    title: 'Substrate range',
+    description:
+      'Paper 40–400 gsm, BOPP / PET / PE film 12–200 µm, alu-foil 6–50 µm, and common laminate structures (PET/PE, BOPP/CPP, paper/film/foil). Edge geometry tuned to substrate to control dust, burring and stretch on unwind.',
+    icon: 'tabler:stack',
+  },
+  {
+    title: 'Edge preparation',
+    description:
+      'Sharp edge < 5 µm for film and printed surfaces, light hone 5–25 µm for substrate edges, micro-hone 25–75 µm for abrasive or recycled-content stocks. Edge prep specified as a numeric radius, not "slightly honed".',
+    icon: 'tabler:blade',
+  },
+  {
+    title: 'Material grades',
+    description:
+      'D2 (DIN 1.2379) per ASTM A681 and JIS SKD11 (G4404). Hardness HRC 58–62 for general slitting and sheeting. Optional PVD coatings (TiN, TiCN, CrN) per ISO 14574 to extend service interval on adhesive or coated substrates.',
+    icon: 'tabler:certificate',
+  },
+  {
+    title: 'Blade geometries',
+    description:
+      'Top and bottom circular slitters, shear plates, score blades, perforating rules and cut-to-length knives. Standard Ø 110 – Ø 350 mm blanks; flat stock to 80 × 2,000 mm. Run-out controlled to ≤ 0.01 mm on Ø 250 mm blanks.',
+    icon: 'tabler:layout-grid',
+  },
+  {
+    title: 'Tolerances and finish',
+    description:
+      'Standard ± 0.01 mm on critical dimensions (OD, ID, thickness at bevel), ± 0.05 mm on non-critical. Surface roughness ≤ Ra 0.4 µm ground, ≤ Ra 0.2 µm optional. CMM-traceable inspection reports shipped with the parts.',
+    icon: 'tabler:ruler-measure',
+  },
+  {
+    title: 'Typical line speeds',
+    description:
+      'Validated from 80 m/min on heavy board to 800 m/min on thin film and foil. Web tension and wrap angle supplied with the inquiry allow us to flag clearance and bevel-angle corrections before steel is ordered.',
+    icon: 'tabler:player-track-next',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Printing & Packaging"
+    title="Slitting, Sheeting and Rewinding Blades"
+    subtitle="Tight burr control protects printed surfaces and clean edges on slitter-rewinder, sheeter and cut-to-length lines. Materials specified per ASTM A681 (D2) and JIS SKD11, hardness HRC 58–62."
+    actions={[
+      { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:mail' },
+      { text: 'View Circular Blades', href: '/products/circular/' },
+    ]}
+  />
+
+  <Features
+    id="capabilities"
+    tagline="Engineering scope"
+    title="Six specification levers, not six part numbers"
+    subtitle="Each application is defined by substrate, geometry, hardness, edge prep, tolerance and surface finish. Pick the lever that drives your cut quality — we will quote the steel grade that falls out."
+    items={features}
+    columns={3}
+    defaultIcon="tabler:printer"
+  />
+
+  <CallToAction
+    title="Have a printing or packaging cut that needs a knife?"
+    subtitle="Send a drawing (DXF / STEP / PDF) or a worn sample. We will confirm material grade, hardness, tolerance and lead time within one business day."
+    actions={[
+      { variant: 'primary', text: 'Submit a drawing', href: '/contact', icon: 'tabler:clipboard-text' },
+      { text: 'Browse Solutions', href: '/solutions' },
+    ]}
+  />
+</Layout>

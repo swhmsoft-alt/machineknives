@@ -1,0 +1,82 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Plastics Recycling Blades — Granulator and Shredder Rotor / Stator Knives',
+  description:
+    'Granulator and shredder rotor / stator knives for plastics recycling. D2, SKD11 and M2 HSS grades, optional TiN / CrN PVD coating to extend service interval 2–4× on glass-fibre and contaminated feedstock.',
+};
+
+const features = [
+  {
+    title: 'Substrate range',
+    description:
+      'PET, HDPE, LDPE, PP, PA66 and other engineering polymers, including glass-fibre reinforced grades up to 50 % GF, mineral-filled compounds, and post-consumer feedstock with contamination (paper labels, metal specks, abrasive fines).',
+    icon: 'tabler:recycle',
+  },
+  {
+    title: 'Rotor / stator configurations',
+    description:
+      'Standard 3- and 5-blade rotor sets with matching bed knives. Open-rotor (cut-and-throw) and closed-rotor (scissor-cut) geometries. V-cut and claw profiles for shredders. Knife seat and slot dimensions to OEM specification.',
+    icon: 'tabler:settings',
+  },
+  {
+    title: 'Material grades',
+    description:
+      'D2 (1.2379 / SKD11) for general-purpose cutting, M2 high-speed steel (1.3343) for impact-loaded rotors. Hardness HRC 58–62 D2, HRC 60–64 M2. Vacuum heat-treatment with double-temper for dimensional stability.',
+    icon: 'tabler:certificate',
+  },
+  {
+    title: 'PVD coating options',
+    description:
+      'TiN, TiCN and CrN coatings per ISO 14574 extend service interval 2–4× on glass-fibre and mineral-filled feedstock. CrN preferred for high-temperature reclaim lines. Coating thickness 2–4 µm, applied after final grind.',
+    icon: 'tabler:shield',
+  },
+  {
+    title: 'Hook and clearance angles',
+    description:
+      'Hook angle 8°–15° for general-purpose, 18°–22° for high-throughput reclaim. Clearance angle 2°–4° rotor, 3°–5° bed knife. Aggressive angles on contaminated feedstock; conservative angles on glass-fibre to limit chipping.',
+    icon: 'tabler:blade',
+  },
+  {
+    title: 'Tolerances and regrind',
+    description:
+      'Standard ± 0.01 mm thickness, ± 0.02 mm length, parallelism 0.02 mm across the cutting edge. Up to 4 regrinds permitted on standard D2 knives before the cutting edge falls below OEM geometry. Regrind service available in-house.',
+    icon: 'tabler:ruler-measure',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Plastics Recycling"
+    title="Granulator and Shredder Rotor / Stator Knives"
+    subtitle="Engineered to cut through contamination, glass fibre and reinforced polymers. D2 and M2 HSS options, with optional TiN or CrN PVD coating to extend service interval by 2–4× on the same line."
+    actions={[
+      { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:mail' },
+      { text: 'View Granulator Blades', href: '/products/granulator/' },
+    ]}
+  />
+
+  <Features
+    id="capabilities"
+    tagline="Engineering scope"
+    title="Six specification levers for plastics recycling"
+    subtitle="Recycling lines are abrasive, impact-loaded and inconsistent. Each variable below is selected against substrate, throughput and contamination class — not against the cheapest steel on the shelf."
+    items={features}
+    columns={3}
+    defaultIcon="tabler:recycle"
+  />
+
+  <CallToAction
+    title="Specifying granulator or shredder knives?"
+    subtitle="Send the OEM model, rotor diameter, current knife grade and the typical feedstock mix. We will return a written quote with material, hardness, coating option and expected service interval within one business day."
+    actions={[
+      { variant: 'primary', text: 'Submit a drawing', href: '/contact', icon: 'tabler:clipboard-text' },
+      { text: 'Browse Solutions', href: '/solutions' },
+    ]}
+  />
+</Layout>

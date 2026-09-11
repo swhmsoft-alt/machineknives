@@ -1,0 +1,114 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Industries Served — Printing, Packaging, Paper, Food, Recycling, Converting, Metal',
+  description:
+    'KAIPU Industrial Blades serves six core industries with precision machine knives since 1998. ISO 9001:2015 certified, materials per ASTM A681 / DIN 1.2379 / JIS SKD11, in-house heat treatment and PVD coating.',
+};
+
+const SITE_URL = 'https://www.machine-knives.net';
+const PAGE_URL = `${SITE_URL}/industries/`;
+
+const itemListLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Industries served by KAIPU Industrial Blades",
+  "url": PAGE_URL,
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Printing & Packaging", "url": `${PAGE_URL}printing-packaging/` },
+    { "@type": "ListItem", "position": 2, "name": "Paper & Tissue",      "url": `${PAGE_URL}paper-tissue/` },
+    { "@type": "ListItem", "position": 3, "name": "Food Processing",     "url": `${PAGE_URL}food-processing/` },
+    { "@type": "ListItem", "position": 4, "name": "Plastics Recycling",  "url": `${PAGE_URL}plastics-recycling/` },
+    { "@type": "ListItem", "position": 5, "name": "Converting",          "url": `${PAGE_URL}converting/` },
+    { "@type": "ListItem", "position": 6, "name": "Metalworking",        "url": `${PAGE_URL}metalworking/` },
+  ],
+};
+
+const industries = [
+  {
+    title: 'Printing & Packaging',
+    href: '/industries/printing-packaging/',
+    description:
+      'Slitting, sheeting and rewinding blades for paper, film, foil and laminate. Tight burr control protects printed surfaces and clean edges. Materials specified per ASTM A681 (D2) and JIS SKD11.',
+    icon: 'tabler:printer',
+  },
+  {
+    title: 'Paper & Tissue',
+    href: '/industries/paper-tissue/',
+    description:
+      'Long-life bed knives and top blades for tissue converting lines. Optimised cutting angles reduce dust and extend service intervals. Compatible with 600–2,400 m/min tissue lines.',
+    icon: 'tabler:roll-paper',
+  },
+  {
+    title: 'Food Processing',
+    href: '/industries/food-processing/',
+    description:
+      'Stainless and tool-steel blades for slicing, dicing and portioning. Designed for washdown environments and food-contact compliance. Material traceability documented per ISO 9001:2015 §8.5.',
+    icon: 'tabler:leaf',
+  },
+  {
+    title: 'Plastics Recycling',
+    href: '/industries/plastics-recycling/',
+    description:
+      'Granulator and shredder rotor / stator knives engineered to cut through contamination, glass fibre and reinforced polymers. D2 and M2 HSS options, with optional TiN or CrN coating to extend interval by 2–4×.',
+    icon: 'tabler:recycle',
+  },
+  {
+    title: 'Converting',
+    href: '/industries/converting/',
+    description:
+      'Trim and score blades for pouch-making, label stock and adhesive tape lines. Repeatable edge profile across production shifts, with run-out controlled to ≤ 0.01 mm on Ø 250 mm blanks.',
+    icon: 'tabler:layout',
+  },
+  {
+    title: 'Metalworking',
+    href: '/industries/metalworking/',
+    description:
+      'Shear blades for guillotine and swing-beam cutting of mild steel, stainless and aluminium plate up to 12 mm. HRC 58–62 working hardness, ground and polished to ≤ Ra 0.4 µm.',
+    icon: 'tabler:tool',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(itemListLd)} />
+  </Fragment>
+
+  <Hero
+    tagline="Industries Served"
+    title="Precision Blades for Six Core Sectors"
+    subtitle="Each industry carries its own cutting mechanics — web tension, abrasive wear, hygiene grade, throughput. We tune blade geometry and steel grade to match. KAIPU has supplied converters, recyclers and OEMs across four continents since 1998."
+    actions={[
+      { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:mail' },
+      { text: 'View Products', href: '/products' },
+    ]}
+  />
+
+  <Features
+    id="industries"
+    tagline="Browse by sector"
+    title="Pick the industry closest to your line"
+    subtitle="Each page documents substrate ranges, material grades, edge preparation and tolerance windows our engineering team has validated in production. If you do not see your cut listed, send us a drawing."
+    items={industries.map(({ title, description, icon, href }) => ({
+      title,
+      description: `${description} <a href="${href}" class="text-primary hover:underline font-semibold">Read more →</a>`,
+      icon,
+    }))}
+    columns={3}
+    defaultIcon="tabler:building-factory"
+  />
+
+  <CallToAction
+    title="Not sure which sector fits your cut?"
+    subtitle="Send a drawing or a worn sample and our engineering team will classify the application and recommend the steel grade, edge preparation and tolerance window within one business day."
+    actions={[
+      { variant: 'primary', text: 'Submit a drawing', href: '/contact', icon: 'tabler:clipboard-text' },
+      { text: 'View Solutions', href: '/solutions' },
+    ]}
+  />
+</Layout>

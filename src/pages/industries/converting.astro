@@ -1,0 +1,82 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Converting Blades — Trim and Score Knives for Pouch, Label and Tape Lines',
+  description:
+    'Trim and score blades for pouch-making, label-stock and adhesive-tape converting lines. Repeatable edge profile with run-out controlled to ≤ 0.01 mm on Ø 250 mm blanks. M2 HSS and tungsten carbide available.',
+};
+
+const features = [
+  {
+    title: 'Line applications',
+    description:
+      'Stand-up pouch (SUP), flat-bottom pouch, label-stock sheeting, adhesive-tape cut-to-length, lidding film, medical pouch, and personal-care product converting. Trim, score and perforating geometries supplied as matched sets.',
+    icon: 'tabler:layout',
+  },
+  {
+    title: 'Score geometry',
+    description:
+      'Score depth 0.05 – 0.50 mm controlled to ± 0.01 mm, score angle 30°–60°, score width 0.2 – 1.5 mm. Perforating rule teeth-per-inch 4–32 TPI, manufactured to OEM pattern. Edge profile verified on optical comparator before dispatch.',
+    icon: 'tabler:ruler',
+  },
+  {
+    title: 'Run-out control',
+    description:
+      'Run-out (TIR) controlled to ≤ 0.01 mm on Ø 250 mm blanks. This is the tolerance that drives clean trim edges on multi-lane label lines and prevents web wander at the score station on high-speed pouch lines.',
+    icon: 'tabler:rotate-clockwise',
+  },
+  {
+    title: 'Material grades',
+    description:
+      'M2 high-speed steel (1.3343) for high-volume trim and score; D2 (1.2379) for general-purpose cut-to-length. Tungsten carbide grades available for abrasive adhesive or coated substrates where steel wears too quickly.',
+    icon: 'tabler:certificate',
+  },
+  {
+    title: 'Tolerances and finish',
+    description:
+      'OD ± 0.005 mm, ID H6 or H7 fit, thickness ± 0.005 mm. Surface roughness ≤ Ra 0.2 µm on the cutting edge, ≤ Ra 0.4 µm on the body. Dynamic balance to G2.5 at operating RPM supplied for high-speed rotors.',
+    icon: 'tabler:ruler-measure',
+  },
+  {
+    title: 'Regrind and repeatability',
+    description:
+      'Multi-index knives supplied with up to 4 cutting edges per blade. Edge profile repeatable to within ± 0.005 mm across all indexes, so a blade swap does not require re-tensioning of the web or re-calibration of the score depth.',
+    icon: 'tabler:refresh',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Converting"
+    title="Trim and Score Blades for Pouch, Label and Tape Lines"
+    subtitle="Repeatable edge profile across production shifts, with run-out controlled to ≤ 0.01 mm on Ø 250 mm blanks. M2 HSS, D2 and tungsten carbide grades available; matched sets shipped with optical comparator reports."
+    actions={[
+      { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:mail' },
+      { text: 'View Serrated Blades', href: '/products/serrated/' },
+    ]}
+  />
+
+  <Features
+    id="capabilities"
+    tagline="Engineering scope"
+    title="Six specification levers for converting lines"
+    subtitle="Converting tooling is judged by the second hour of the shift, not the first minute. Each variable below is selected for run-to-run consistency, not point-of-sale price."
+    items={features}
+    columns={3}
+    defaultIcon="tabler:layout"
+  />
+
+  <CallToAction
+    title="Specifying trim or score tooling?"
+    subtitle="Send the OEM machine model, current knife grade, target line speed and the substrate mix (film, foil, laminate, paper). We will return a written quote with material, tolerance and regrind plan within one business day."
+    actions={[
+      { variant: 'primary', text: 'Submit a drawing', href: '/contact', icon: 'tabler:clipboard-text' },
+      { text: 'Browse Solutions', href: '/solutions' },
+    ]}
+  />
+</Layout>

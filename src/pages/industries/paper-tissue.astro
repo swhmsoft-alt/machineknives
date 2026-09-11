@@ -1,0 +1,82 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Paper & Tissue Blades — Bed Knives and Top Blades for Tissue Converting',
+  description:
+    'Long-life bed knives and top blades for tissue converting lines at 600–2,400 m/min. D2 / M2 HSS / SKD11 with optimised cutting angles to reduce dust and extend service interval. Validated with major OEMs.',
+};
+
+const features = [
+  {
+    title: 'Tissue grammage range',
+    description:
+      'Validated on 1-ply, 2-ply and 3-ply tissue at 13–40 gsm per ply, including through-air-dried (TAD) and conventional pressed sheets. Bed-knife / top-blade pair geometry tuned to ply count and bonding pattern.',
+    icon: 'tabler:stack-2',
+  },
+  {
+    title: 'Line speed envelope',
+    description:
+      'Production-validated on tissue lines running 600 – 2,400 m/min. Higher speeds require tighter angular control on the bed-knife seat and stricter flatness on the top blade — both verified on the CMM before dispatch.',
+    icon: 'tabler:player-track-next',
+  },
+  {
+    title: 'Cutting angle optimisation',
+    description:
+      'Bed-knife shear angle and top-blade clearance optimised per OEM (typically 20°–24° shear, 0.5°–1.5° clearance). Correct angles reduce dust generation and extend regrind interval by 30–60 % versus generic tooling.',
+    icon: 'tabler:blade',
+  },
+  {
+    title: 'Material grades',
+    description:
+      'D2 (1.2379) and SKD11 for bed knives; M2 high-speed steel (1.3343) for top blades where impact loading is high. Hardness HRC 58–62 bed, HRC 60–64 top. Optional TiN or CrN PVD coating on abrasive furnish.',
+    icon: 'tabler:certificate',
+  },
+  {
+    title: 'Tolerances and flatness',
+    description:
+      'Bed-knife flatness ≤ 0.02 mm across the full cutting length (typically 2,000 – 4,200 mm). Top-blade thickness ± 0.005 mm, parallel within 0.01 mm. CMM reports available with every shipment.',
+    icon: 'tabler:ruler-measure',
+  },
+  {
+    title: 'Service interval extension',
+    description:
+      'Common service interval on premium uncoated D2 bed knives is 8–14 weeks on 2-ply tissue. PVD-coated sets typically run 14–22 weeks on the same lines. Intervals quoted against a reference substrate and shift count.',
+    icon: 'tabler:clock',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Paper & Tissue"
+    title="Bed Knives and Top Blades for Tissue Converting"
+    subtitle="Long-life tooling for tissue converting lines running 600–2,400 m/min. Optimised cutting angles reduce dust and extend service intervals — typically 8–14 weeks uncoated, 14–22 weeks PVD-coated on 2-ply stock."
+    actions={[
+      { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:mail' },
+      { text: 'View Straight Blades', href: '/products/straight/' },
+    ]}
+  />
+
+  <Features
+    id="capabilities"
+    tagline="Engineering scope"
+    title="Six specification levers for tissue converting"
+    subtitle="Tissue lines punish generic knives. Each variable below is specified as a number against an international standard, then verified on the part before it leaves the shop."
+    items={features}
+    columns={3}
+    defaultIcon="tabler:roll-paper"
+  />
+
+  <CallToAction
+    title="Need tissue bed-knife or top-blade tooling?"
+    subtitle="Send the OEM machine model, current knife geometry and target service interval. We will return a written quotation with material grade, hardness, tolerance and lead time within one business day."
+    actions={[
+      { variant: 'primary', text: 'Submit a drawing', href: '/contact', icon: 'tabler:clipboard-text' },
+      { text: 'Browse Solutions', href: '/solutions' },
+    ]}
+  />
+</Layout>
