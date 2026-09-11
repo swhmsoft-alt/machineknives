@@ -24,6 +24,18 @@ export const headerData = {
       href: getPermalink('/services'),
     },
     {
+      text: 'Industries',
+      href: getPermalink('/solutions'),
+      links: [
+        { text: 'Printing & Packaging', href: getPermalink('/solutions#printing-packaging') },
+        { text: 'Paper & Tissue', href: getPermalink('/solutions#paper-tissue') },
+        { text: 'Food Processing', href: getPermalink('/solutions#food-processing') },
+        { text: 'Plastics Recycling', href: getPermalink('/solutions#plastics-recycling') },
+        { text: 'Converting', href: getPermalink('/solutions#converting') },
+        { text: 'Metalworking', href: getPermalink('/solutions#metalworking') },
+      ],
+    },
+    {
       text: 'About',
       href: getPermalink('/about'),
     },
