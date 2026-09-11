@@ -43,9 +43,55 @@ const metadata = merge(
   },
   { ...(post?.metadata ? { ...post.metadata, canonical: post.metadata?.canonical || url } : {}) }
 ) as MetaData;
+
+// ─── BlogPosting JSON-LD ──────────────────────────────────────────────
+// Emits schema.org BlogPosting so AI crawlers (Google AI Overviews,
+// Perplexity, ChatGPT browse) and search engines can cite the article.
+const siteUrl = String(Astro.site ?? 'https://www.machine-knives.net').replace(/\/$/, '');
+const blogPostingLd: Record<string, unknown> = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.title,
+  description: post.excerpt,
+  datePublished: post.publishDate ? new Date(post.publishDate).toISOString() : undefined,
+  dateModified: post.updateDate
+    ? new Date(post.updateDate).toISOString()
+    : post.publishDate
+      ? new Date(post.publishDate).toISOString()
+      : undefined,
+  author: {
+    '@type': 'Organization',
+    name: post.author || 'KAIPU Engineering',
+    url: siteUrl + '/about/',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'KAIPU Industrial Blades',
+    url: siteUrl + '/',
+    logo: {
+      '@type': 'ImageObject',
+      url: siteUrl + '/favicon.svg',
+    },
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': String(url),
+  },
+  url: String(url),
+  ...(post.category ? { articleSection: post.category.title || String(post.category) } : {}),
+  ...(Array.isArray(post.tags) && post.tags.length > 0
+    ? { keywords: post.tags.map((t: unknown) => (typeof t === 'string' ? t : (t as { title?: string })?.title ?? '')).filter(Boolean).join(', ') }
+    : {}),
+};
+if (image) {
+  blogPostingLd.image = typeof image === 'string' ? image : (image as ImageMetadata).src;
+}
 ---
 
 <Layout metadata={metadata}>
+  {/* ── BlogPosting structured data for AI citation and rich results ── */}
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(blogPostingLd)} />
+
   <SinglePost post={{ ...post, image: image }} url={url}>
     {post.Content && <post.Content />}
   </SinglePost>
