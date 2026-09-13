@@ -53,9 +53,14 @@ function auditOne(slug) {
     const comp = m[1];
     const rawPath = m[2];
     let resolved;
-    if (rawPath.startsWith('.')) {
+    if (rawPath.startsWith('~/')) {
+      // `~/` is the project alias for `src/` (Astro/Vite convention).
+      // Resolve to absolute so fs.existsSync can find the file.
+      resolved = path.resolve('src', rawPath.slice(2)).replace(/\\/g, '/');
+    } else if (rawPath.startsWith('.')) {
       resolved = path.resolve(pageDir, rawPath).replace(/\\/g, '/');
     } else {
+      // bare specifier (npm package) — only resolvable if it lives under src/
       resolved = 'src/' + rawPath;
     }
     const fullPath = resolved.endsWith('.astro') ? resolved : resolved + '.astro';
@@ -130,10 +135,10 @@ function auditOne(slug) {
     schemaOrg:        /<script\s+type="application\/ld\+json"/.test(allContent),
     faqSchema:        /FAQPage/.test(allContent),
     breadcrumbSchema: /itemListElement|BreadcrumbList/.test(allContent),
-    productSchema:    /"@type":\s*"(Product|Service)"|@type:\s*['"]Service['"]|@type:\s*['"]Product['"]/i.test(allContent),
-    articleSchema:    /"@type":\s*"(Article|BlogPosting|NewsArticle)"/.test(allContent),
+    productSchema:    /["']@type["']\s*:\s*["'](Product|Service)["']/i.test(allContent),
+    articleSchema:    /["']@type["']\s*:\s*["'](Article|BlogPosting|NewsArticle)["']/i.test(allContent),
     howToSchema:      /HowTo/.test(allContent),
-    faqHtmlPattern:   /<details>|"@type":\s*"Question"/i.test(allContent),
+    faqHtmlPattern:   /<details>|["']@type["']\s*:\s*["'](Question|FAQPage)["']/i.test(allContent),
     realTableElement: /<table[^>]*>/.test(allContent),
     bestForPattern:   /Best for[:\s]|Not for[:\s]|Ideal for|Not suitable for/i.test(allContent),
     headingNumbered:   /Step\s+\d+:|^##\s+\d+\.|^###\s+\d+\./m.test(content),

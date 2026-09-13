@@ -121,6 +121,24 @@ const howToLd = {
     }
   ]
 };
+
+// Page-level JSON-LD: BlogPosting cross-link. The "KAIPU 5-Factor Selection
+// Method" rendered as a Steps widget below is the inline summary of this
+// engineering notebook article; the schema lets AI crawlers and Google cite
+// the hub page as related to the long-form piece.
+const blogPostingLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline":
+    "The KAIPU 5-Factor Blade Selection Framework — How to Specify the Right Industrial Knife in 30 Minutes",
+  "url": "https://www.machine-knives.net/kaipu-5-factor-blade-selection-framework/",
+  "datePublished": "2026-09-11",
+  "dateModified": "2026-09-11",
+  "author": { "@type": "Organization", "name": "KAIPU Engineering" },
+  "publisher": { "@type": "Organization", "name": "KAIPU Industrial Blades" },
+  "description":
+    "A structured method our engineers use to match substrate, geometry, hardness target, edge preparation and operating speed to a production line — without second-guessing the steel grade.",
+};
 ---
 
 <Layout metadata={metadata}>
@@ -128,6 +146,8 @@ const howToLd = {
   <script type="application/ld+json" is:inline set:html={JSON.stringify(serviceLd)} />
   {/* ── Page-level HowTo JSON-LD ────────────────────────────────────── */}
   <script type="application/ld+json" is:inline set:html={JSON.stringify(howToLd)} />
+  {/* ── Page-level BlogPosting JSON-LD (cross-link to engineering notebook) */}
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(blogPostingLd)} />
 
   <Hero
     tagline="Industry Solutions"

@@ -1,7 +1,7 @@
-# Trinity Audit: solutions
+# Trinity Audit: industries
 
-**Type**: unknown
-**File**: src/pages/solutions.astro
+**Type**: industry
+**File**: src/pages/industries/index.astro
 **Score**: 100/100  (Buyer 100 | EEAT 100 | AI 100)
 
 ## 1. Buyer Decision Chain (100/100)
@@ -27,7 +27,7 @@
 |---|---|
 | experienceSignal | ✅ |
 | yearsInBusiness | ✅ |
-| specificMetrics | ✅ 33 |
+| specificMetrics | ✅ 34 |
 | specificExamples | ✅ |
 | standardCitation | ✅ |
 | certification | ✅ |
