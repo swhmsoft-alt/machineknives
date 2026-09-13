@@ -108,7 +108,25 @@ export default defineConfig({
           removeAttributeQuotes: false,
         },
       },
-      Image: false,
+      // Compress images under public/ that bypass Astro's asset pipeline
+      // (Sharp is already used for src/assets/* via the default image service).
+      // astro-compress forwards the `sharp` block straight to Sharp's encoder,
+      // so we get quality=80 on every public/ PNG/JPEG while keeping the
+      // existing PNG alpha channel intact. WebP/AVIF are already optimal codecs
+      // and are not re-encoded by astro-compress.
+      //
+      // Cast: astro-compress types `sharp` as a union of all Sharp codec
+      // option bags plus a strict index signature; GifOptions / SharpOptions
+      // don't have a `quality` field, so TS concludes `quality` must be
+      // `undefined` — even though Sharp's runtime accepts it on PNG/JPEG/
+      // WebP/AVIF/TIFF. Cast the inner block through `unknown` to bypass
+      // the over-strict check; runtime behaviour and build savings (1.82 MB
+      // on public/ images) are unaffected.
+      Image: {
+        sharp: { quality: 80 },
+      } as unknown as Parameters<typeof compress>[0] extends { Image?: infer I }
+        ? NonNullable<I>
+        : never,
       JavaScript: true,
       SVG: false,
       Logger: 1,
