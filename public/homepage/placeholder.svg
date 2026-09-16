@@ -1,0 +1,22 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 338" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Case study image placeholder">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0H0V30" fill="none" stroke="#334155" stroke-width="0.5" opacity="0.4"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="338" fill="url(#g)"/>
+  <rect width="600" height="338" fill="url(#grid)"/>
+  <g transform="translate(300 169)" fill="none" stroke="#64748b" stroke-width="1.5" stroke-linecap="round" opacity="0.7">
+    <circle r="34"/>
+    <path d="M-30 0 L30 0 M0 -30 L0 30"/>
+    <circle r="14" fill="#1e293b"/>
+  </g>
+  <g font-family="ui-sans-serif,system-ui,Inter,sans-serif" text-anchor="middle" fill="#94a3b8">
+    <text x="300" y="240" font-size="14" letter-spacing="2" font-weight="600">KAIPU INDUSTRIAL BLADES</text>
+    <text x="300" y="262" font-size="11" letter-spacing="1" opacity="0.7">Case study image &#x2014; engineering documentation</text>
+  </g>
+</svg>
