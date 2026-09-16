@@ -1,0 +1,145 @@
+# ============================================================
+# source_type & reliability Taxonomy (V1.0)
+# ============================================================
+# 这是受控字典. 任何 source_type / reliability 取值必须在此注册.
+# ============================================================
+
+source_type:
+  # --- L1: 官方 / 第一方 Search Data ---
+  gsc:
+    label: 'Google Search Console'
+    reliability: actual
+    tier: L1
+    tier_label: 'First-party Search'
+    capture_method: 'human_export_csv'
+  gkp:
+    label: 'Google Keyword Planner'
+    reliability: search_data
+    tier: L1
+    tier_label: 'Official Search Data'
+    capture_method: 'human_export_csv'
+
+  # --- L2: SERP / AI Search 观察 ---
+  serp_autocomplete:
+    label: 'Google Autocomplete'
+    reliability: observed
+    tier: L2
+    tier_label: 'SERP Observed'
+    capture_method: 'browser_manual'
+  serp_paa:
+    label: 'Google People Also Ask'
+    reliability: observed
+    tier: L2
+    tier_label: 'SERP Observed'
+    capture_method: 'browser_manual'
+  serp_related:
+    label: 'Google Related Searches'
+    reliability: observed
+    tier: L2
+    tier_label: 'SERP Observed'
+    capture_method: 'browser_manual'
+  ai_mode:
+    label: 'Google AI Mode'
+    reliability: observed
+    tier: L2
+    tier_label: 'AI Search Observed'
+    capture_method: 'browser_manual'
+
+  # --- L3: LLM 生成 / Fan-Out ---
+  chatgpt:
+    label: 'ChatGPT'
+    reliability: generated
+    tier: L3
+    tier_label: 'LLM Generated'
+    capture_method: 'conversation_log'
+  gemini:
+    label: 'Google Gemini'
+    reliability: generated
+    tier: L3
+    tier_label: 'LLM Generated'
+    capture_method: 'conversation_log'
+  perplexity:
+    label: 'Perplexity'
+    reliability: generated
+    tier: L3
+    tier_label: 'LLM Generated'
+    capture_method: 'conversation_log'
+  llm_fanout:
+    label: 'LLM Query Fan-Out'
+    reliability: generated
+    tier: L3
+    tier_label: 'LLM Generated'
+    capture_method: 'role_based_prompt'
+  internal_guess:
+    label: 'Internal Hypothesis'
+    reliability: generated
+    tier: L3
+    tier_label: 'LLM Generated'
+    capture_method: 'human_hypothesis'
+
+  # --- L4: 真实买家 ---
+  rfq:
+    label: 'RFQ / Quotation Request'
+    reliability: buyer_evidence
+    tier: L4
+    tier_label: 'First-party Buyer'
+    capture_method: 'sales_archive'
+  sales_inquiry:
+    label: 'Sales Inquiry'
+    reliability: buyer_evidence
+    tier: L4
+    tier_label: 'First-party Buyer'
+    capture_method: 'sales_archive'
+  linkedin_dm:
+    label: 'LinkedIn DM'
+    reliability: buyer_evidence
+    tier: L4
+    tier_label: 'First-party Buyer'
+    capture_method: 'sales_archive'
+  forum:
+    label: 'Reddit / Forum / Community'
+    reliability: buyer_evidence
+    tier: L4
+    tier_label: 'Community Evidence'
+    capture_method: 'browser_manual'
+
+  # --- L5: 行业 / 竞品 ---
+  competitor:
+    label: 'Competitor Content'
+    reliability: competitive
+    tier: L5
+    tier_label: 'Competitive'
+    capture_method: 'manual_compare'
+  standards_doc:
+    label: 'Standards / Technical Docs'
+    reliability: domain_evidence
+    tier: L5
+    tier_label: 'Domain Evidence'
+    capture_method: 'manual_compare'
+
+# ============================================================
+# reliability 取值受控字典
+# ============================================================
+reliability:
+  actual:
+    label: 'Actual (GSC-verified)'
+    can_cite: true
+  search_data:
+    label: 'Search Data (GKP)'
+    can_cite: true
+  observed:
+    label: 'Observed (SERP/AI)'
+    can_cite: true
+  generated:
+    label: 'Generated (LLM)'
+    can_cite: false # ⚠️ AI 生成的 query 不可直接当作真实搜索数据
+    requires_flag: true # 必须 added_by = llm_fanout/chatgpt/gemini/perplexity
+  buyer_evidence:
+    label: 'Buyer Evidence (RFQ/Sales/Forum)'
+    can_cite: true
+  competitive:
+    label: 'Competitive (Competitor)'
+    can_cite: true
+  domain_evidence:
+    label: 'Domain Evidence (Standards)'
+    can_cite: true

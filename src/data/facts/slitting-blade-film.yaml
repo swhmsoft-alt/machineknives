@@ -1,0 +1,68 @@
+node:
+  id: slitting-blade-film
+material:
+  spec: M2 / tungsten carbide
+process:
+  bounds: blanking → rough grinding → heat treatment → finish grinding → micro-bevel
+cert:
+  scope: ISO 9001:2015
+info_gain:
+  material_constants:
+    - M2 is a tungsten-molybdenum high-speed steel; it retains hardness at elevated temperatures via secondary carbide precipitation
+    - Tungsten carbide (WC-Co) is a composite of tungsten-carbide grains in a cobalt binder; hardness is typically reported on the HRA scale
+    - M2 typical as-tempered hardness: HRC 62-65
+    - Tungsten carbide typical hardness: HRA 88-92 (depending on Co content and grain size)
+    - Density of M2 ≈ 8.1 g/cm³; density of WC-Co composites ≈ 14-15 g/cm³ (binder-dependent)
+    - Elastic modulus of WC-Co (≈ 500-600 GPa) is roughly 2.5× that of tool steel, supporting thin-slitting geometries without deflection
+    - Both M2 and tungsten carbide exhibit significantly higher wear resistance than plain cold-work tool steel, at the cost of being more brittle
+  process_controls:
+    - M2 heat treatment: austenitize ≈ 1190-1220 °C, oil or salt-bath quench, then double temper at ≈ 540-570 °C
+    - Tungsten carbide blanks require diamond-grit grinding (no conventional abrasive) due to hardness
+    - Braze-up or mechanical-clamp mounting geometry must be validated for runout; slitting blades with > 0.01 mm TIR cause web wandering
+    - Slitting-blade concentricity and parallel-side tolerance directly control slit-edge quality on film and foil webs
+    - Micro-bevel edge prep (typically 0.05-0.20 mm land) reduces edge chipping on thin-gauge substrate
+    - Inter-process datum: post-grind dimensional inspection at the inner bore and OD establishes the geometric reference for balance / runout
+    - Edge cleanliness (absence of burr > 50 µm) is a controlled parameter where printed or coated film is slit
+  compliance_controls:
+    - ISO 9001:2015 §8.5.2 requires identification of outputs throughout production to enable traceability
+    - M2 mill certificates (chemical composition including W, Mo, V, Cr) must be retained per incoming lot
+    - Tungsten carbide grade must be traceable to the powder-batch or blank supplier for grade verification
+    - Heat-treatment batch records for M2 must be retained as objective evidence
+    - Dimensional inspection at finish must reference back to the material batch for full lot traceability
+forbidden:
+  materials_not_in_input:
+    - D2 / SKD11 cold-work tool steel (not selected for this node)
+    - H13 hot-work tool steel
+    - A2 / O1 / S7 / W1 cold-work tool steels
+    - Powder-metallurgy tool steels (ASP2060, CPM10V, K340)
+    - Stellite / Tribaloy
+    - Inconel, titanium, beryllium copper
+    - 440C / 52100 bearing stainless
+    - Ceramic (alumina, silicon nitride, zirconia)
+    - CBN / polycrystalline diamond (PCD)
+  standards_not_in_input:
+    - ASTM A600 (M2 specification)
+    - DIN 1.3343 (M2 European designation)
+    - ISO 513 (cutting-tool classification)
+    - GB/T 9943 (Chinese high-speed-steel standard)
+    - ISO 3685 (machinability testing)
+  surface_treatments_not_in_input:
+    - PVD coatings (TiN, TiCN, TiAlN, AlCrN, CrN, DLC)
+    - Plasma / gas nitriding (for M2 only — not in INPUT_DATA)
+    - Black oxide / steam-temper oxide
+    - Hard chrome plating
+    - Electroless nickel
+  equipment_brands_not_in_input:
+    - CNC: Mazak, Okuma, DMG MORI, Haas, Makino
+    - Grinders: Studer, Walter, Jung, Okamoto
+    - Diamond grinders for carbide: ANCA, Rollomatic, Walter, Ewag
+    - Heat treatment: Ipsen, Seco/Warwick, Bodycote
+    - Metrology: Zeiss, Mitutoyo, Renishaw
+  applications_not_in_node:
+    - This node is film / foil slitting; converting, paper-tissue, food-processing, plastics-recycling, and metalworking applications are out of scope for this specific blade geometry
+  fabrications_prohibited:
+    - Specific monthly or annual production capacity
+    - Named customers, OEMs, or end-users
+    - Geographic shipment volume beyond "four continents"
+    - "Years in business" figures beyond "since 1998"
+    - Awards, listings, or third-party endorsements not cited in INPUT_DATA

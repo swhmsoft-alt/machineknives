@@ -1,0 +1,9 @@
+# ============================================================
+# KAIPU Citation Log (V1.0 — Empty)
+# ============================================================
+# V1.0 占位空表. 待 Step 4 (Test) 在 4 个 AI 通道人工跑分后回填.
+# 字段遵循 src/data/_templates/query-acquisition/schema.citation.yaml.
+# 校验: npm run query:audit -- --check=citations
+# ============================================================
+
+citations: []

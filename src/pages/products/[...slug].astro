@@ -13,6 +13,14 @@ import {
   type Level1Category,
 } from '~/utils/products';
 
+import {
+  generatePageSchema,
+  buildProductDetail,
+  buildBreadcrumb,
+  buildFaqPage,
+} from '~/lib/schema';
+import { getProductFaqs } from '~/data/_product-faqs';
+
 export const prerender = true;
 
 interface CategoryPathProps {
@@ -163,6 +171,46 @@ if (props.kind === 'product') {
       href: buildCategoryHref(l1, subs.slice(0, i + 1)),
     })),
   ];
+}
+
+// ─── Schema.org JSON-LD for product detail pages ─────────────────────────
+// Generated only when we are rendering a product entry; category pages keep
+// their existing layout untouched. All schema entities pass through
+// generatePageSchema() which enforces the /products/ route whitelist.
+const SITE_URL = 'https://www.machine-knives.net';
+
+let productSchemaJson = '';
+
+if (productEntry) {
+  const entry = productEntry;
+  const categoryTitle = getCategoryMeta(entry.data.category as Level1Category).title;
+  const productUrl = `${SITE_URL}${buildProductHrefFromEntry(entry)}`;
+
+  const graph = generatePageSchema(
+    'product-detail',
+    `/products/${entry.id}/`,
+    () => {
+      const entities = [
+        buildProductDetail({
+          name: entry.data.title,
+          description: entry.data.excerpt ?? undefined,
+        }),
+        buildBreadcrumb([
+          { name: 'Home', url: `${SITE_URL}/` },
+          { name: 'Products', url: `${SITE_URL}/products/` },
+          { name: categoryTitle, url: `${SITE_URL}${buildCategoryHref(entry.data.category as Level1Category)}` },
+          { name: entry.data.title, url: productUrl },
+        ]),
+      ];
+      const faqs = getProductFaqs(entry.id);
+      if (faqs.length > 0) {
+        entities.push(buildFaqPage(faqs.map((f) => ({ q: f.q, a: f.a }))));
+      }
+      return entities;
+    },
+  );
+
+  productSchemaJson = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph });
 }
 ---
 
@@ -337,5 +385,9 @@ if (props.kind === 'product') {
       <Fragment slot="title">Ready to order or need a custom version?</Fragment>
       <Fragment slot="subtitle">Send your drawing, your worn blade, or a written spec. We will respond within one business day.</Fragment>
     </CallToAction>
+
+    {productSchemaJson && (
+      <script type="application/ld+json" set:html={productSchemaJson} />
+    )}
   </Layout>
 ) : null}

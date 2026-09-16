@@ -1,0 +1,62 @@
+# Node: bed-knife-tissue
+
+> D2 Bed Knife for Tissue Converting — HRC 60, 15 μm micro-hone, 18° clearance angle.
+> Canonical page: https://www.machine-knives.net/products/straight/bed-knife-tissue/
+> Facts source: src/data/facts/bed-knife-tissue.yaml
+
+## Material
+
+- D2 (high-carbon, high-chromium cold-work tool steel)
+- Hardness target: HRC 60 (within HRC 58-62 typical as-tempered window)
+- Secondary hardening near 500 °C tempering
+- Elastic modulus: approximately 200 GPa
+- Density: approximately 7.7 g/cm³
+- Thermal conductivity: approximately 20-25 W/(m·K) (low — contributes to edge-heat accumulation at high web speed)
+- Carbide type: M7C3 (chromium-rich, conferring abrasion resistance)
+
+## Process
+
+- Austenitization at 1000-1050 °C, followed by air or oil quench
+- Double temper (transformation of retained austenite)
+- Vacuum or controlled-atmosphere furnace prevents surface decarburization
+- Inter-process datum: post-temper hardness verification (Rockwell C, HRC 60) is mandatory before precision grinding
+- Distortion allowance: approximately 0.1-0.3 mm per side reserved in stock
+- Edge preparation: 15 μm micro-hone + 18° clearance angle
+
+## Operating Reference
+
+- Reference web speed: 1200 m/min on 4-ply tissue laminate
+- Reference edge temperature at that speed: approximately 180 °C
+- Burr control target: ≤ 50 µm
+- Documented service-life outcome: 11 days → 34 days at the same D2/HRC 60 grade, with edge preparation as the only changed variable
+
+## Failure Mode (Sharp Edge)
+
+- Sharp edge (micro-hone under 5 μm) at 1200 m/min is susceptible to thermal-fatigue micro-cracking at ~180 °C
+- Failure mode: sub-millimetre edge chipping, followed by accelerated burr formation
+- Resolution: 15 μm micro-hone + 18° clearance angle (no steel change required)
+
+## Compliance
+
+- ISO 9001:2015 §8.5.2 requires identification of outputs throughout production
+- Traceability chain: incoming steel heat → mill certificate → heat-treatment batch records → final dimensional and edge-prep inspection records
+- Service-life data on specific lines is engineering record evidence supporting process-control decisions
+
+## Out of Scope (Forbidden for This Node)
+
+- Materials: SKD11, M2, tungsten carbide, H13, A2, O1, S7, W1, powder-metallurgy tool steels, Stellite, Inconel, titanium, beryllium copper, 440C, 52100
+- Standards: ASTM A681, DIN 1.2379, JIS G4404, GB/T 1299, EN ISO 4957, TAPPI tissue-test methods
+- Surface treatments: PVD coatings (TiN, TiCN, TiAlN, AlCrN, CrN), nitriding, black oxide, hard chrome plating, electroless nickel
+- Equipment brands: Mazak, Okuma, DMG MORI, Haas, Makino, Studer, Walter, Jung, Okamoto, Ipsen, Seco/Warwick, Zeiss, Mitutoyo, Renishaw
+- Applications outside paper and tissue converting: film slitting, food processing, plastics recycling, metalworking, printing-packaging
+- Marketing copy (industry-leading, best-in-class, world-class, cutting-edge)
+- Specific production capacity, named customers, geographic shipment details beyond "four continents"
+
+## FAQ (6 questions)
+
+1. Why does a sharp D2 edge chip on a 1200 m/min tissue line?
+2. Does changing the steel grade fix edge-chipping on tissue converting lines?
+3. What clearance angle should a tissue bed knife have?
+4. What hardness should a D2 tissue bed knife be?
+5. How is the heat-treatment batch linked to the finished blade?
+6. Can burr height be controlled below 50 µm on tissue?

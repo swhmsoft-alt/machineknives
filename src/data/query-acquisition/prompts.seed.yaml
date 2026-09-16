@@ -1,0 +1,242 @@
+# ============================================================
+# KAIPU Prompt Seed (V1.0)
+# ============================================================
+# 14 条 prompt. 每个 query_id 只对应一条 prompt (V1.0 1:1).
+# 覆盖 5 个 buyer_role × 7 个 entity (代表性子集).
+# V1.0 状态: 占位, 待人工在 4 个 AI 通道跑分.
+# 校验: npm run query:audit
+# ============================================================
+#
+# NOTE: prompts use BLOCK style (not flow) because the `prompt` field
+# holds a multi-line block scalar `|` which is illegal inside a
+# flow mapping `{ ... }`. block style is the only safe YAML form here.
+
+prompts:
+  # --- Procurement (4) ---
+  - id: P001
+    query_id: Q001
+    buyer_role: procurement
+    scenario: 'tissue-bed-knife-material'
+    prompt: |
+      I'm sourcing tissue-cutting bed knives for a 1200 m/min converting line.
+      What blade material and edge geometry should I specify,
+      and what factors most affect blade service life?
+    expected_signals:
+      - 'D2 HRC 60'
+      - '15μm hone + 18° clearance'
+      - 'edge temperature ~180°C'
+      - 'service life quantification'
+    last_tested: null
+    tested_in: { chatgpt: null, gemini: null, perplexity: null, ai_mode: null }
+    notes: 'Forked from Q001. Highest commercial intent.'
+
+  - id: P002
+    query_id: Q006
+    buyer_role: procurement
+    scenario: 'D2-vs-SKD11-comparison'
+    prompt: |
+      I'm comparing D2 (AISI) vs SKD11 (JIS) granulator knives for plastic recycling.
+      Are these the same material? What naming/standard differences matter
+      when sourcing from a Chinese supplier?
+    expected_signals:
+      - 'D2 ≈ SKD11 ≈ DIN 1.2379'
+      - 'GB/T 1299 mapping'
+      - 'chemistry equivalence'
+    last_tested: null
+    tested_in: { chatgpt: null, gemini: null, perplexity: null, ai_mode: null }
+    notes: 'Forked from Q006. Standards-mapping query.'
+
+  - id: P003
+    query_id: Q016
+    buyer_role: procurement
+    scenario: 'carbide-vs-hss-slitting'
+    prompt: |
+      I'm choosing between tungsten carbide and M2 HSS for film slitting blades
+      running at 600 m/min on 12μm BOPP. Which is more cost-effective
+      over a 12-month production run?
+    expected_signals:
+      - 'WC vs M2 cost-per-cut'
+      - 'brittleness tradeoff'
+      - 'regrind economics'
+    last_tested: null
+    tested_in: { chatgpt: null, gemini: null, perplexity: null, ai_mode: null }
+    notes: 'Forked from Q016. Highest commercial value.'
+
+  - id: P004
+    query_id: Q025
+    buyer_role: procurement
+    scenario: 'find-chinese-oem-blade-supplier'
+    prompt: |
+      I'm a US-based converter looking for an OEM industrial knife supplier in China.
+      What certifications, audit history, and production capacity indicators
+      should I require before issuing an RFQ?
+    expected_signals:
+      - 'ISO 9001:2015'
+      - 'mill cert traceability'
+      - 'factory audit'
+      - 'years in business'
+    last_tested: null
+    tested_in: { chatgpt: null, gemini: null, perplexity: null, ai_mode: null }
+    notes: 'Forked from Q025. CRITICAL — protect.'
+
+  # --- Engineer (4) ---
+  - id: P005
+    query_id: Q002
+    buyer_role: engineer
+    scenario: 'tissue-edge-geometry-spec'
+    prompt: |
+      We're seeing thermal-fatigue micro-cracking on our D2 tissue bed knives
+      at 1200 m/min. The edge is currently sharp (<5μm).
+      What edge geometry change would extend service life?
+    expected_signals:
+      - '15μm micro-hone'
+      - '18° clearance angle'
+      - 'edge temperature ~180°C'
+      - 'secondary hardening'
+    last_tested: null
+    tested_in: { chatgpt: null, gemini: null, perplexity: null, ai_mode: null }
+    notes: 'Forked from Q002. Failure-mode diagnosis.'
+
+  - id: P006
+    query_id: Q007
+    buyer_role: engineer
+    scenario: 'granulator-edge-prep-impact'
+    prompt: |
+      Our plastic-recycling granulator knives chip after ~6 weeks on rotor impact.
+      Current edge prep is sharp. What chamfer land width and HRC target
+      would reduce chipping while keeping cut cleanliness?
+    expected_signals:
+      - '0.3-1.0mm chamfer land'
+      - 'HRC 58-62'
+      - 'chip resistance vs cut cleanliness tradeoff'
+    last_tested: null
+    tested_in: { chatgpt: null, gemini: null, perplexity: null, ai_mode: null }
+    notes: 'Forked from Q007.'
+
+  - id: P007
+    query_id: Q011
+    buyer_role: engineer
+    scenario: 'shear-blade-clearance-angle'
+    prompt: |
+      What clearance angle per side should I specify for a 3mm cold-rolled
+      stainless steel sheet shear blade? Shear length is 2500mm.
+    expected_signals:
+      - '1-3° per side for plate shear'
+      - 'work-hardening adjustment'
+      - 'parallelism <0.01mm'
+    last_tested: null
+    tested_in: { chatgpt: null, gemini: null, perplexity: null, ai_mode: null }
+    notes: 'Forked from Q011.'
+
+  - id: P008
+    query_id: Q017
+    buyer_role: engineer
+    scenario: 'film-slitting-runout'
+    prompt: |
+      Film web is wandering during slitting at 500 m/min on 23μm PET.
+      Blade TIR measures 0.012mm. Is this within spec, or do I need
+      to specify tighter concentricity?
+    expected_signals:
+      - '<0.01mm TIR required'
+      - 'web wandering threshold'
+      - 'balance class'
+    last_tested: null
+    tested_in: { chatgpt: null, gemini: null, perplexity: null, ai_mode: null }
+    notes: 'Forked from Q017.'
+
+  # --- QA (3) ---
+  - id: P009
+    query_id: Q010
+    buyer_role: qa
+    scenario: 'iso9001-traceability-audit'
+    prompt: |
+      I'm auditing a Chinese industrial blade supplier for ISO 9001:2015 §8.5
+      traceability compliance. What records and process controls
+      must I see during the audit?
+    expected_signals:
+      - 'mill cert linkage'
+      - 'heat-treatment batch records'
+      - 'dimensional inspection records'
+      - 'heat number traceability'
+    last_tested: null
+    tested_in: { chatgpt: null, gemini: null, perplexity: null, ai_mode: null }
+    notes: 'Forked from Q010. Compliance audit.'
+
+  - id: P010
+    query_id: Q013
+    buyer_role: qa
+    scenario: 'shear-blade-qa-tolerance'
+    prompt: |
+      What parallelism tolerance across the shear length should I specify
+      in the incoming QA inspection for a 2500mm D2 shear blade?
+    expected_signals:
+      - '<0.01mm deviation'
+      - 'cut load distribution effect'
+      - 'measurement method'
+    last_tested: null
+    tested_in: { chatgpt: null, gemini: null, perplexity: null, ai_mode: null }
+    notes: 'Forked from Q013.'
+
+  - id: P011
+    query_id: Q004
+    buyer_role: qa
+    scenario: 'tissue-burr-qa-acceptance'
+    prompt: |
+      What burr height acceptance criterion should I set for incoming tissue bed knives
+      intended for 4-ply tissue at 1200 m/min?
+    expected_signals:
+      - '≤50μm burr target'
+      - 'edge prep relationship'
+      - 'slit-edge quality'
+    last_tested: null
+    tested_in: { chatgpt: null, gemini: null, perplexity: null, ai_mode: null }
+    notes: 'Forked from Q004.'
+
+  # --- Operations (2) ---
+  - id: P012
+    query_id: Q003
+    buyer_role: operations
+    scenario: 'tissue-blade-replacement-prediction'
+    prompt: |
+      Our tissue bed knives currently last 11 days at 1200 m/min on 4-ply tissue.
+      The supplier claims 34 days is achievable with the same D2 HRC 60 grade.
+      What process change is responsible for the 3x life extension?
+    expected_signals:
+      - '15μm micro-hone'
+      - '18° clearance angle'
+      - 'edge temperature control'
+    last_tested: null
+    tested_in: { chatgpt: null, gemini: null, perplexity: null, ai_mode: null }
+    notes: 'Forked from Q003. 11d→34d quantified case study.'
+
+  - id: P013
+    query_id: Q008
+    buyer_role: operations
+    scenario: 'granulator-blade-life-estimate'
+    prompt: |
+      How long should D2/SKD11 granulator knives last in a 200kg/hr
+      plastic recycling line processing mixed PE/PP with paper contamination?
+    expected_signals:
+      - 'contamination effect'
+      - 'throughput-to-life ratio'
+      - 'regrind frequency'
+    last_tested: null
+    tested_in: { chatgpt: null, gemini: null, perplexity: null, ai_mode: null }
+    notes: 'Forked from Q008.'
+
+  # --- Designer (1) ---
+  - id: P014
+    query_id: Q023
+    buyer_role: designer
+    scenario: 'material-vs-substrate-matrix'
+    prompt: |
+      I'm designing a custom slitting blade for a new film substrate
+      (50μm metallized PET). Should I specify M2 HSS or tungsten carbide,
+      and what edge geometry would you recommend?
+    expected_signals:
+      - 'material vs gauge matrix'
+      - 'metallized film considerations'
+      - 'edge geometry by substrate'
+    last_tested: null
+    tested_in: { chatgpt: null, gemini: null, perplexity: null, ai_mode: null }
+    notes: 'Forked from Q023. Designer perspective.'

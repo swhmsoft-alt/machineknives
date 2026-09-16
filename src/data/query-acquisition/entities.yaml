@@ -1,0 +1,119 @@
+# ============================================================
+# KAIPU Entities (V1.0 Seed)
+# ============================================================
+# 7 个 Entity. ID 与 src/data/facts/*.yaml 的 node.id 严格对齐.
+# 禁止孤儿 query: 每条 query 必须挂载一个 entity_id.
+# ============================================================
+
+entities:
+  # --- 1: Tissue Bed Knife (与 facts/bed-knife-tissue.yaml 对齐) ---
+  - id: bed-knife-tissue
+    label: Bed Knife (Tissue Converting)
+    type: product_line
+    url_slug: /products/bed-knife-tissue/
+    industry_segment: [tissue_converting, paper_converting]
+    primary_materials: [D2, HRC 60]
+    certifications: [ISO 9001:2015]
+    seed_queries:
+      - 'best blade material for tissue cutting'
+      - 'bed knife edge geometry tissue'
+      - 'tissue converting blade life'
+      - 'D2 HRC 60 tissue cutting'
+      - 'tissue slitting burr control'
+    notes: 'Derived from src/data/facts/bed-knife-tissue.yaml. 1200 m/min, 4-ply tissue.'
+
+  # --- 2: Recycling Granulator Knife (与 facts/granulator-knife-recycling.yaml 对齐) ---
+  - id: granulator-knife-recycling
+    label: Granulator Knife (Plastic Recycling)
+    type: product_line
+    url_slug: /products/granulator-knife-recycling/
+    industry_segment: [plastic_recycling, size_reduction]
+    primary_materials: [D2, SKD11, HRC 58-62]
+    certifications: [ISO 9001:2015]
+    seed_queries:
+      - 'granulator knife material plastic recycling'
+      - 'D2 vs SKD11 granulator blade'
+      - 'chamfered edge granulator knife'
+      - 'rotor impact chipping blade'
+      - 'recycling granulator knife life'
+    notes: 'Derived from src/data/facts/granulator-knife-recycling.yaml. Rotor impact load.'
+
+  # --- 3: Metalworking Shear Blade (与 facts/shear-blade-metalworking.yaml 对齐) ---
+  - id: shear-blade-metalworking
+    label: Shear Blade (Metal Sheet Shearing)
+    type: product_line
+    url_slug: /products/shear-blade-metalworking/
+    industry_segment: [metalworking, sheet_metal]
+    primary_materials: [D2, SKD11, HRC 58-62]
+    certifications: [ISO 9001:2015]
+    seed_queries:
+      - 'shear blade clearance angle sheet metal'
+      - 'D2 HRC shear blade stainless'
+      - 'plate shear blade parallelism'
+      - 'work hardening blade grade selection'
+      - 'shear blade edge life stainless steel'
+    notes: 'Derived from src/data/facts/shear-blade-metalworking.yaml. 1-3° per side clearance.'
+
+  # --- 4: Film Slitting Blade (与 facts/slitting-blade-film.yaml 对齐) ---
+  - id: slitting-blade-film
+    label: Slitting Blade (Film / Foil)
+    type: product_line
+    url_slug: /products/slitting-blade-film/
+    industry_segment: [film_converting, foil_slitting]
+    primary_materials: [M2, tungsten_carbide, HRC 62-65]
+    certifications: [ISO 9001:2015]
+    seed_queries:
+      - 'film slitting blade material'
+      - 'tungsten carbide slitting blade'
+      - 'M2 HSS film blade'
+      - 'slitting blade concentricity TIR'
+      - 'micro bevel film blade edge prep'
+    notes: 'Derived from src/data/facts/slitting-blade-film.yaml. <0.01mm TIR requirement.'
+
+  # --- 5: 5-Factor Blade Selection Framework (来自 blog post) ---
+  - id: blade-selection-framework
+    label: 5-Factor Blade Selection Framework
+    type: capability
+    url_slug: /blog/kaipu-5-factor-blade-selection-framework/
+    industry_segment: [cross_industry]
+    primary_materials: [D2, HSS, carbide]
+    certifications: [ISO 9001:2015]
+    seed_queries:
+      - 'how to select industrial blade'
+      - 'blade selection framework'
+      - '5 factors choosing machine knife'
+      - 'blade material vs substrate'
+      - 'machine knife selection guide'
+    notes: 'Derived from src/data/post/kaipu-5-factor-blade-selection-framework.md.'
+
+  # --- 6: Industrial Knife Supplier (Generic / Cross-product) ---
+  - id: industrial-knife-supplier
+    label: Industrial Knife Supplier (OEM / Custom)
+    type: supplier_role
+    url_slug: /supplier/
+    industry_segment: [cross_industry]
+    primary_materials: []
+    certifications: [ISO 9001:2015]
+    seed_queries:
+      - 'industrial knife manufacturer China'
+      - 'OEM machine knife supplier'
+      - 'custom industrial blade maker'
+      - 'machine knife supplier since 1998'
+      - 'industrial knife traceability supplier'
+    notes: 'Cross-product commercial intent queries. Highest RFQ conversion potential.'
+
+  # --- 7: Blade Material Tool Steel (Generic / Material Science) ---
+  - id: blade-material-tool-steel
+    label: Blade Material (D2 / HSS / Carbide)
+    type: material
+    url_slug: /materials/
+    industry_segment: [cross_industry]
+    primary_materials: [D2, M2, tungsten_carbide]
+    certifications: [ISO 9001:2015]
+    seed_queries:
+      - 'D2 tool steel properties'
+      - 'M2 vs D2 high speed steel'
+      - 'tungsten carbide vs tool steel'
+      - 'D2 HRC hardness range'
+      - 'M2 tungsten carbide slitting blade'
+    notes: 'Generic material-science queries. Drives top-of-funnel awareness.'

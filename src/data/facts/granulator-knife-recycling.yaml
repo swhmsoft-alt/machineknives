@@ -1,0 +1,63 @@
+node:
+  id: granulator-knife-recycling
+material:
+  spec: D2 / SKD11
+process:
+  bounds: forging → CNC rough machining → vacuum heat treatment → finish grinding → edge honing
+cert:
+  scope: ISO 9001:2015 (material traceability per §8.5)
+info_gain:
+  material_constants:
+    - D2 and SKD11 are high-carbon, high-chromium cold-work tool steels; their chemistry yields a high volume fraction of chromium-rich carbides (M7C3 type) that confer abrasion resistance
+    - Typical as-tempered hardness for D2/SKD11 falls in the HRC 58-62 band, with secondary hardening near 500 °C tempering due to fine carbide precipitation
+    - Density of D2/SKD11 is approximately 7.7 g/cm³
+    - Elastic modulus of D2/SKD11 is approximately 200 GPa
+    - Thermal conductivity of D2/SKD11 is low (≈ 20-25 W/(m·K)); frictional heat concentrates at the cutting edge
+    - Retained austenite is present after quench; double tempering is the standard metallurgical control to transform it
+  process_controls:
+    - Austenitization of D2/SKD11 is performed in the 1000-1050 °C range followed by air or oil quench
+    - Vacuum or controlled-atmosphere furnace prevents surface decarburization, which would soften the cutting edge and shorten wear life
+    - Forging window for D2/SKD11 is ≈ 900-1100 °C, followed by annealing to refine as-forged grain
+    - Inter-process datum: post-temper hardness verification (Rockwell C) is mandatory before finish grinding
+    - Heat-treatment distortion allowance (≈ 0.1-0.3 mm per side) is reserved in the finish-grinding stock
+    - Granulator-knife edge prep uses a chamfered or hone land (0.3-1.0 mm) to resist chipping under rotor impact load
+    - Edge preparation trades off between chip resistance (larger land, stronger edge) and cut cleanliness (sharper edge, finer cut)
+  compliance_controls:
+    - ISO 9001:2015 §8.5.2 requires identification of outputs throughout production to enable traceability
+    - Each incoming steel heat must be linked to its mill certificate (chemical composition, incoming hardness)
+    - Heat-treatment batch records must be retained as objective evidence that the metallurgical specification was met
+    - Final dimensional inspection records must reference back to the original material heat number for full lot traceability
+    - Nonconforming product per §8.7 must be segregated, identified, and disposed under documented authority
+forbidden:
+  materials_not_in_input:
+    - M2 high speed steel
+    - Tungsten carbide grades (YG6, YG6X, YG8)
+    - H13 hot-work tool steel
+    - A2 / O1 / S7 / W1 cold-work tool steels
+    - Powder-metallurgy tool steels (ASP2060, CPM10V, K340)
+    - Stellite / Tribaloy
+    - Inconel, titanium, beryllium copper
+    - 440C / 52100 bearing stainless
+  standards_not_in_input:
+    - ASTM A681 (D2 specification)
+    - DIN 1.2379 (D2 / SKD11 European designation)
+    - JIS G4404 (SKD11 specification)
+    - GB/T 1299 (Chinese tool-steel standard)
+    - EN ISO 4957
+  surface_treatments_not_in_input:
+    - PVD coatings (TiN, TiCN, TiAlN, AlCrN, CrN)
+    - Plasma / gas nitriding
+    - Black oxide / steam-temper oxide
+    - Hard chrome plating
+    - Electroless nickel
+  equipment_brands_not_in_input:
+    - CNC: Mazak, Okuma, DMG MORI, Haas, Makino, Doosan
+    - Grinders: Studer, Walter, Jung, Okamoto, Danobat
+    - Heat treatment: Ipsen, Seco/Warwick, AFC-Holcroft, Surface Combustion, Bodycote
+    - Metrology: Zeiss, Mitutoyo, Renishaw, Hexagon
+  fabrications_prohibited:
+    - Specific monthly or annual production capacity (units/month, tons/year)
+    - Named customers, OEMs, or end-users
+    - Geographic shipment volume beyond "four continents"
+    - "Years in business" figures beyond "since 1998"
+    - Awards, listings, or third-party endorsements not cited in INPUT_DATA

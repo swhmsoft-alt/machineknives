@@ -1,0 +1,69 @@
+node:
+  id: bed-knife-tissue
+material:
+  spec: D2 (HRC 60)
+process:
+  bounds: precision grinding → 15μm micro-hone → 18° clearance angle
+  reference_operating_speed: 1200 m/min on 4-ply tissue laminate
+  reference_edge_temperature: ≈ 180 °C
+cert:
+  scope: ISO 9001:2015 (material traceability per §8.5)
+info_gain:
+  material_constants:
+    - D2 is a high-carbon, high-chromium cold-work tool steel; its chemistry yields a high volume fraction of chromium-rich carbides (M7C3 type) that confer abrasion resistance
+    - Typical as-tempered hardness for D2 falls in the HRC 58-62 band; HRC 60 sits within this window
+    - Secondary hardening near 500 °C tempering due to fine carbide precipitation
+    - Density of D2 is approximately 7.7 g/cm³
+    - Elastic modulus of D2 is approximately 200 GPa
+    - Thermal conductivity of D2 is low (≈ 20-25 W/(m·K)), which is a contributing factor to edge-heat accumulation at high web speeds
+  process_controls:
+    - Austenitization of D2 is performed in the 1000-1050 °C range followed by air or oil quench, then double temper
+    - Vacuum or controlled-atmosphere furnace prevents surface decarburization, which would soften the cutting edge
+    - Inter-process datum: post-temper hardness verification (Rockwell C, target HRC 60) is mandatory before precision grinding
+    - Heat-treatment distortion allowance (≈ 0.1-0.3 mm per side) is reserved in the precision-grinding stock
+    - Edge preparation directly determines failure mode at high web speed: a sharp edge (< 5 μm) is susceptible to thermal-fatigue micro-cracking at ≈ 180 °C edge temperature on tissue
+    - 15 μm micro-hone combined with 18° clearance angle is documented to extend service life from 11 days to 34 days at 1200 m/min on 4-ply tissue (same D2 grade, same HRC 60, no steel change)
+    - Burr control target on tissue: ≤ 50 µm
+    - Bed-knife flatness and parallelism across the cutting length directly affect slit-edge quality and downstream converting tolerances
+  compliance_controls:
+    - ISO 9001:2015 §8.5.2 requires identification of outputs throughout production to enable traceability
+    - Each incoming steel heat must be linked to its mill certificate (chemical composition, incoming hardness)
+    - Heat-treatment batch records must be retained as objective evidence
+    - Final dimensional and edge-prep inspection records must reference back to the material heat number for full lot traceability
+    - Service-life data on specific lines (operating speed, substrate, days) is engineering record evidence supporting process-control decisions
+forbidden:
+  materials_not_in_input:
+    - M2 high speed steel
+    - Tungsten carbide grades (YG6, YG6X, YG8)
+    - SKD11 (alternative JIS designation, not selected for this node)
+    - H13 hot-work tool steel
+    - A2 / O1 / S7 / W1 cold-work tool steels
+    - Powder-metallurgy tool steels (ASP2060, CPM10V, K340)
+    - Stellite / Tribaloy
+    - Inconel, titanium, beryllium copper
+  standards_not_in_input:
+    - ASTM A681 (D2 specification)
+    - DIN 1.2379 (D2 European designation)
+    - JIS G4404 (SKD11 specification)
+    - GB/T 1299 (Chinese tool-steel standard)
+    - EN ISO 4957
+    - TAPPI tissue-test methods (specific T-numbered procedures)
+  surface_treatments_not_in_input:
+    - PVD coatings (TiN, TiCN, TiAlN, AlCrN, CrN)
+    - Plasma / gas nitriding
+    - Black oxide / steam-temper oxide
+    - Hard chrome plating
+    - Electroless nickel
+  equipment_brands_not_in_input:
+    - CNC: Mazak, Okuma, DMG MORI, Haas, Makino
+    - Grinders: Studer, Walter, Jung, Okamoto
+    - Heat treatment: Ipsen, Seco/Warwick, AFC-Holcroft, Bodycote
+    - Metrology: Zeiss, Mitutoyo, Renishaw
+  applications_not_in_node:
+    - This node is bed-knife-tissue (paper & tissue converting); film slitting, food-processing, plastics-recycling, metalworking, and printing-packaging applications are out of scope for this specific blade geometry
+  fabrications_prohibited:
+    - Specific monthly or annual production capacity
+    - Named customers, OEMs, or end-users
+    - Geographic shipment volume beyond "four continents"
+    - "Years in business" figures beyond "since 1998"
+    - Awards, listings, or third-party endorsements not cited in INPUT_DATA

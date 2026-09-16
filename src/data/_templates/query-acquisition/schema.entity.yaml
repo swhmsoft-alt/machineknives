@@ -1,0 +1,31 @@
+# ============================================================
+# Entity Schema (V1.0)
+# ============================================================
+# 字段总数: 8 个
+# 强制字段: 5 个
+#
+# Entity 是 query 的聚类锚点. 每条 query 必须挂在某个 entity 下.
+# ============================================================
+
+id: bed-knife-tissue # Entity ID (kebab-case, 与 src/data/facts/*.yaml 对齐)
+label: Bed Knife (Tissue Converting)
+type: product_line # product_line | capability | material | application | supplier_role
+url_slug: /products/bed-knife-tissue/
+
+# --- 业务元数据 ---
+industry_segment:
+  - 'tissue_converting'
+  - 'paper_converting'
+primary_materials:
+  - 'D2'
+  - 'HRC 60'
+certifications:
+  - 'ISO 9001:2015'
+
+# --- 种子 ---
+seed_queries: # 第一批必入库的 query, 直接进入 queries.seed.yaml
+  - 'best blade material for tissue cutting'
+  - 'bed knife edge geometry tissue'
+
+# --- 备注 ---
+notes: 'Derived from src/data/facts/bed-knife-tissue.yaml'

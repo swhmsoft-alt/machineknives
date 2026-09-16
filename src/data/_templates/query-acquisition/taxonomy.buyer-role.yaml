@@ -1,0 +1,64 @@
+# ============================================================
+# Buyer Role / Funnel / Intent / Evidence Type Taxonomy (V1.0)
+# ============================================================
+# 受控字典. 任何相关字段取值必须在此注册.
+# ============================================================
+
+buyer_role:
+  procurement:
+    label: 'Procurement Manager'
+    primary_intent: 'commercial'
+    typical_funnel: ['consideration', 'comparison', 'decision']
+  engineer:
+    label: 'Mechanical / Process Engineer'
+    primary_intent: 'informational'
+    typical_funnel: ['awareness', 'consideration']
+  qa:
+    label: 'Quality / QA Engineer'
+    primary_intent: 'informational'
+    typical_funnel: ['consideration', 'decision']
+  operations:
+    label: 'Operations / Line Manager'
+    primary_intent: 'commercial'
+    typical_funnel: ['consideration', 'post_purchase']
+  designer:
+    label: 'Product / Tool Designer'
+    primary_intent: 'informational'
+    typical_funnel: ['awareness', 'consideration']
+
+# ============================================================
+funnel_stage:
+  awareness: { label: 'Awareness (problem-aware)' }
+  consideration: { label: 'Consideration (solution-aware)' }
+  comparison: { label: 'Comparison (vendor-aware)' }
+  decision: { label: 'Decision (vendor-select)' }
+  post_purchase: { label: 'Post-purchase (usage / repeat)' }
+
+# ============================================================
+intent:
+  informational: { label: 'Informational (learn)' }
+  commercial: { label: 'Commercial (compare)' }
+  transactional: { label: 'Transactional (buy / RFQ)' }
+  navigational: { label: 'Navigational (find page)' }
+
+# ============================================================
+# evidence_type: AI 答案中我们期望 / 实际出现的证据类型
+# ============================================================
+evidence_type:
+  astm_din_standard: { label: 'ASTM / DIN / ISO / JIS standard' }
+  material_datasheet: { label: 'Material datasheet (mill cert)' }
+  case_study: { label: 'Quantified case study (imp/click/life)' }
+  third_party_test: { label: 'Third-party test report' }
+  iso_9001_evidence: { label: 'ISO 9001 §8.5 traceability evidence' }
+  peer_reviewed_paper: { label: 'Peer-reviewed paper' }
+  internal_hone_geometry: { label: 'Internal engineering geometry note' }
+
+# ============================================================
+# added_by: 谁录入的
+# ============================================================
+added_by:
+  human.seo: { label: 'SEO specialist (manual)' }
+  human.sales: { label: 'Sales / RFQ intake (manual)' }
+  human.engineer: { label: 'Engineering team (manual)' }
+  llm_fanout: { label: 'LLM Query Fan-Out (must pair with reliability=generated)' }
+  automation: { label: 'Future automation (V2.0+)' }

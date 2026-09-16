@@ -1,0 +1,60 @@
+# ============================================================
+# Query Schema (V1.0)
+# ============================================================
+# 字段总数: 22 个
+# 强制字段: 9 个 (id, entity_id, query, source, source_type,
+#                 reliability, added_by, captured_at, language)
+# 选填字段: 13 个
+#
+# 使用方式: 复制本文件 → queries.<your-domain>.yaml → 按需修改
+# 校验: npm run query:audit
+# ============================================================
+
+# --- 强制字段 ---
+id: Q001 # Query ID (全局唯一, kebab-case-friendly)
+entity_id: bed-knife-tissue # FK → schema.entity.yaml
+query: 'what is the best blade material for tissue cutting'
+source: gsc # 来源系统标识
+source_type: gsc # 受控字典 (taxonomy.source-type.yaml)
+reliability: actual # 受控字典 (taxonomy.source-type.yaml)
+added_by: human.seo # human.seo | human.sales | llm_fanout | automation
+captured_at: 2026-09-16 # ISO date
+language: en # en | zh | de | ja
+
+# --- 去重 key ---
+normalized_query: 'best blade material tissue cutting'
+
+# --- 证据链 ---
+source_url: 'https://search.google.com/search-console/...'
+
+# --- 商业标签 ---
+buyer_role: procurement # 受控字典 (taxonomy.buyer-role.yaml)
+funnel_stage: consideration # 受控字典 (taxonomy.buyer-role.yaml)
+intent: commercial # 受控字典 (taxonomy.buyer-role.yaml)
+
+# --- 任务与需求 ---
+task:
+  - 'compare blade materials'
+  - 'evaluate suppliers'
+information_requirement:
+  - 'specific material grades'
+  - 'tolerance capability'
+  - 'lead time'
+evidence_requirement:
+  - 'ASTM / DIN standard'
+  - 'case study'
+  - 'third-party test report'
+
+# --- 目标与监控 ---
+target_url: /products/bed-knife-tissue/
+competitor_urls:
+  - 'https://competitor.com/...'
+citation_status:
+  chatgpt: unknown # unknown | cited | not_cited | tested_unsupported
+  gemini: unknown
+  perplexity: unknown
+  ai_mode: unknown
+last_tested: null # ISO date 或 null
+
+# --- 备注 ---
+notes: 'Pulled from GSC Q3 2026, 240 imp / 12 clk / pos 8.2'

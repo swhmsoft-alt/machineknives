@@ -1,0 +1,35 @@
+# ============================================================
+# Prompt Schema (V1.0)
+# ============================================================
+# 字段总数: 11 个
+# 强制字段: 5 个
+#
+# 关系: 1 prompt → 1 query (query_id FK)
+# 测试结果落地到 schema.citation.yaml
+# ============================================================
+
+id: P001 # Prompt ID (全局唯一)
+query_id: Q001 # FK → schema.query.yaml
+prompt: |
+  I'm sourcing tissue-cutting bed knives for a 1200 m/min line.
+  What blade material and edge geometry should I specify,
+  and what factors affect service life?
+buyer_role: procurement # 必填: 受控字典
+scenario: 'tissue-bed-knife-spec' # 场景短代码
+
+# --- 期望产出 ---
+expected_signals:
+  - 'D2 / HRC 60 mention'
+  - 'edge geometry: 15μm hone + 18° clearance'
+  - 'operating speed vs edge temp tradeoff'
+
+# --- 监控 ---
+last_tested: null # ISO date
+tested_in:
+  chatgpt: null
+  gemini: null
+  perplexity: null
+  ai_mode: null
+
+# --- 备注 ---
+notes: "Forked from Q005 'what tolerances can be achieved in tissue cutting'"

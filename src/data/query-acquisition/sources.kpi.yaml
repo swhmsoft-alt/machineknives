@@ -1,0 +1,98 @@
+# ============================================================
+# KAIPU Source KPI / Configuration (V1.0)
+# ============================================================
+# 列出 KAIPU 实际可触达的数据源 + 配置点.
+# 字段反映"我们在哪里采集", 决定 source_type 取值的落地路径.
+# ============================================================
+
+sources:
+  # --- L1: First-party Search ---
+  - id: kaipu-gsc
+    type: gsc
+    label: 'KAIPU Google Search Console'
+    target_property: 'https://www.machine-knives.net'
+    status: 'available' # available | pending | blocked
+    capture_method: 'human_export_csv'
+    cadence: 'monthly'
+    last_capture: null # ISO date, 人工回填
+    notes: 'GSC 不开放 query 字符串 API, 仅 Performance Report 导出.'
+
+  - id: kaipu-gkp
+    type: gkp
+    label: 'Google Keyword Planner (paid ads account)'
+    target_seed: ['bed knife', 'granulator knife', 'shear blade', 'slitting blade', 'industrial knife']
+    status: 'available'
+    capture_method: 'human_export_csv'
+    cadence: 'quarterly'
+    notes: '需要活跃 Google Ads 账号. 无活跃账号时跳过.'
+
+  # --- L2: SERP / AI Mode ---
+  - id: serp-manual
+    type: serp_paa
+    label: 'Google SERP (PAA / Related / Autocomplete)'
+    target_locale: ['en-US', 'en-GB', 'de-DE']
+    status: 'available'
+    capture_method: 'browser_manual'
+    cadence: 'monthly_per_entity'
+    notes: '每个 entity 取 5-10 条 SERP 观察 query.'
+
+  - id: ai-mode-google
+    type: ai_mode
+    label: 'Google AI Mode (labs / SGE)'
+    status: 'available'
+    capture_method: 'browser_manual'
+    cadence: 'monthly'
+    notes: '仅记录 follow-up question, 不记录 AI 回答.'
+
+  # --- L3: LLM Fan-Out ---
+  - id: llm-fanout-multi-role
+    type: llm_fanout
+    label: 'LLM Query Fan-Out (multi-role)'
+    target_models: ['gpt-4o', 'claude-sonnet', 'gemini-2.0-flash']
+    role_set: [procurement, engineer, qa, operations, designer]
+    status: 'available'
+    capture_method: 'structured_prompt_template'
+    cadence: 'per_entity_at_seed'
+    notes: '每个 entity 跑 5 角色, 每个角色产生 5-8 条 query.'
+
+  # --- L4: First-party Buyer ---
+  - id: kaipu-rfq
+    type: rfq
+    label: 'KAIPU RFQ / Sales Inquiries'
+    intake_email: '[email protected]'
+    status: 'available'
+    capture_method: 'sales_archive_anonymized'
+    cadence: 'weekly'
+    notes: 'PII 脱敏后才入库. customer name / email / phone 必须删除.'
+
+  - id: kaipu-linkedin
+    type: linkedin_dm
+    label: 'KAIPU LinkedIn DMs'
+    status: 'available'
+    capture_method: 'sales_archive_anonymized'
+    cadence: 'monthly'
+
+  - id: industry-forums
+    type: forum
+    label: 'Industry Forums / Reddit / Quora'
+    target_venues: ['r/manufacturing', 'r/engineering', 'industry-specific forums']
+    status: 'available'
+    capture_method: 'browser_manual'
+    cadence: 'monthly'
+
+  # --- L5: Competitor / Standards ---
+  - id: competitor-content
+    type: competitor
+    label: 'Top 5 Competitor Content (titles/H2/FAQ)'
+    target_competitors: [] # 人工填充, 不入库未确认的域名
+    status: 'pending'
+    capture_method: 'manual_compare'
+    cadence: 'quarterly'
+
+  - id: standards-docs
+    type: standards_doc
+    label: 'ASTM / DIN / ISO / JIS Standards'
+    target_standards: ['ASTM A681', 'DIN 1.2379', 'JIS G4404', 'GB/T 1299', 'EN ISO 4957', 'ISO 9001:2015']
+    status: 'available'
+    capture_method: 'manual_compare'
+    cadence: 'on_entity_creation'

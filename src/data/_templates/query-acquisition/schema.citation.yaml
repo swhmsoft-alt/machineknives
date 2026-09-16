@@ -1,0 +1,40 @@
+# ============================================================
+# Citation Schema (V1.0)
+# ============================================================
+# 字段总数: 12 个
+# V1.0 状态: 占位空表, 人工填写
+#
+# 关系: 1 citation → 1 prompt (prompt_id FK) + 1 query (query_id FK)
+# ============================================================
+
+id: C001 # Citation ID
+prompt_id: P001 # FK → schema.prompt.yaml
+query_id: Q001 # FK → schema.query.yaml (冗余便于查询)
+
+ai_source: chatgpt # chatgpt | gemini | perplexity | ai_mode
+tested_at: 2026-09-16 # ISO date
+tested_by: human.seo # 谁跑的
+
+# --- 引用结果 ---
+our_url_cited: false # 我们自己的 URL 是否被引用
+cited_urls: # AI 实际引用的 URL (按 AI 答案里的出现顺序)
+  - url: 'https://competitor-a.com/article'
+    rank: 1
+    snippet: 'D2 HRC 60 is the standard choice...'
+  - url: 'https://competitor-b.com/blog/post-123'
+    rank: 2
+    snippet: '...'
+our_url: # 我们的 URL（如有被引）
+  url: null
+  rank: null
+  snippet: null
+
+# --- 引用证据类型 ---
+evidence_type: # AI 答案里实际出现的证据类型
+  - 'third_party_test'
+  - 'material_datasheet'
+  # 注: 完整字典见 taxonomy.buyer-role.yaml 的 evidence_type
+
+# --- 评分 ---
+quality_score: null # 1-5 人工打分
+notes: 'AI cited 2 competitors; we were not in top 5; missing: case study with quantified service life'

@@ -1,0 +1,69 @@
+node:
+  id: shear-blade-metalworking
+material:
+  spec: D2 / SKD11
+process:
+  bounds: forging → rough machining → heat treatment → surface grinding → blade angle set
+cert:
+  scope: ISO 9001:2015
+info_gain:
+  material_constants:
+    - D2 and SKD11 are high-carbon, high-chromium cold-work tool steels; their chemistry yields a high volume fraction of chromium-rich carbides (M7C3 type) that confer abrasion resistance under sliding metal-on-metal contact
+    - Typical as-tempered hardness for D2/SKD11 falls in the HRC 58-62 band
+    - Shear blades for work-hardening substrates (stainless, aluminium) require higher HRC targets within the D2/SKD11 range to resist plastic deformation of the cutting edge
+    - Density of D2/SKD11 is approximately 7.7 g/cm³
+    - Elastic modulus of D2/SKD11 is approximately 200 GPa
+    - Impact toughness of D2/SKD11 is moderate; high static edge load from plate shearing requires edge geometry (larger land or higher clearance angle) to avoid chipping
+  process_controls:
+    - Austenitization of D2/SKD11 is performed in the 1000-1050 °C range followed by air or oil quench
+    - Vacuum or controlled-atmosphere furnace prevents surface decarburization at the cutting edge
+    - Forging window for D2/SKD11 is ≈ 900-1100 °C, followed by annealing to refine the as-forged grain
+    - Inter-process datum: post-temper hardness verification (Rockwell C) is mandatory before surface grinding
+    - Heat-treatment distortion allowance (≈ 0.1-0.3 mm per side) is reserved in the surface-grinding stock
+    - Shear-blade clearance angle must be matched to sheet thickness and material; standard range for plate shear is 1°-3° per side, varying with shear length
+    - Edge-prep land width and rake angle directly determine cut quality, burr height, and edge life on cold-rolled vs work-hardening grades
+    - Blade parallelism across the shear length is a controlled geometric parameter; > 0.01 mm deviation causes uneven cut load distribution
+  compliance_controls:
+    - ISO 9001:2015 §8.5.2 requires identification of outputs throughout production to enable traceability
+    - Each incoming steel heat must be linked to its mill certificate (chemical composition, incoming hardness)
+    - Heat-treatment batch records must be retained as objective evidence
+    - Final dimensional inspection (parallelism, blade angle, hardness) must reference back to the material heat number for full lot traceability
+    - Nonconforming product per §8.7 must be segregated, identified, and disposed under documented authority
+forbidden:
+  materials_not_in_input:
+    - M2 high speed steel
+    - Tungsten carbide grades (YG6, YG6X, YG8)
+    - H13 hot-work tool steel
+    - A2 / O1 / S7 / W1 cold-work tool steels
+    - Powder-metallurgy tool steels (ASP2060, CPM10V, K340)
+    - Stellite / Tribaloy
+    - Inconel, titanium, beryllium copper
+    - 440C / 52100 bearing stainless
+  standards_not_in_input:
+    - ASTM A681 (D2 specification)
+    - DIN 1.2379 (D2 / SKD11 European designation)
+    - JIS G4404 (SKD11 specification)
+    - GB/T 1299 (Chinese tool-steel standard)
+    - EN ISO 4957
+    - Any specific metalworking tolerance standard (e.g., DIN 8580, ASTM A370)
+  surface_treatments_not_in_input:
+    - PVD coatings (TiN, TiCN, TiAlN, AlCrN, CrN)
+    - Plasma / gas nitriding
+    - Black oxide / steam-temper oxide
+    - Hard chrome plating
+    - Electroless nickel
+    - Induction surface hardening
+  equipment_brands_not_in_input:
+    - CNC: Mazak, Okuma, DMG MORI, Haas, Makino
+    - Grinders: Studer, Walter, Jung, Okamoto
+    - Heat treatment: Ipsen, Seco/Warwick, AFC-Holcroft, Bodycote
+    - Metrology: Zeiss, Mitutoyo, Renishaw
+    - Specific press / shear-line builders (any brand)
+  applications_not_in_node:
+    - This node is metal plate / sheet shear; film slitting, paper-tissue, food-processing, plastics-recycling, and converting applications are out of scope for this specific blade geometry
+  fabrications_prohibited:
+    - Specific monthly or annual production capacity
+    - Named customers, OEMs, or end-users
+    - Geographic shipment volume beyond "four continents"
+    - "Years in business" figures beyond "since 1998"
+    - Awards, listings, or third-party endorsements not cited in INPUT_DATA

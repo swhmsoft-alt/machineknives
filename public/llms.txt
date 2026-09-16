@@ -1,0 +1,45 @@
+# KAIPU Industrial Blades
+
+> Manufacturer of precision industrial machine knives for printing, packaging, converting, food processing, plastics recycling, paper and tissue, and metalworking. ISO 9001:2015 certified. In operation since 1998. Ships to converters, recyclers and OEMs across four continents.
+
+## Site Structure
+
+- Home: https://www.machine-knives.net/
+- Products: https://www.machine-knives.net/products/
+  - Circular Blades: https://www.machine-knives.net/products/circular/
+  - Straight Blades: https://www.machine-knives.net/products/straight/
+  - Serrated Blades: https://www.machine-knives.net/products/serrated/
+  - Shear Blades: https://www.machine-knives.net/products/shear/
+  - Granulator Blades: https://www.machine-knives.net/products/granulator/
+  - Custom Blades: https://www.machine-knives.net/products/custom/
+- Solutions: https://www.machine-knives.net/solutions/
+- Services: https://www.machine-knives.net/services/
+- Industries:
+  - Printing and Packaging: https://www.machine-knives.net/industries/printing-packaging/
+  - Paper and Tissue: https://www.machine-knives.net/industries/paper-tissue/
+  - Food Processing: https://www.machine-knives.net/industries/food-processing/
+  - Plastics Recycling: https://www.machine-knives.net/industries/plastics-recycling/
+  - Converting: https://www.machine-knives.net/industries/converting/
+  - Metalworking: https://www.machine-knives.net/industries/metalworking/
+- About: https://www.machine-knives.net/about/
+- Blog: https://www.machine-knives.net/blog/
+
+## Knowledge Nodes (GEO Facts Source)
+
+These pages contain machine-knife technical specifications grounded in production data. Each is a single source of truth, with no fabricated metrics, brands, or certifications.
+
+- D2 Bed Knife for Tissue Converting (HRC 60, 15 μm micro-hone, 18° clearance, 1200 m/min): https://www.machine-knives.net/products/straight/bed-knife-tissue/
+  - Node-level facts: https://www.machine-knives.net/llms/bed-knife-tissue.txt
+
+## Editorial Principles
+
+- All technical content is derived from documented engineering data, not marketing copy.
+- Material specifications cite specific steel grades (D2, M2, SKD11, tungsten carbide).
+- Process control points cover heat treatment, fixturing, edge preparation, and inter-process datum verification.
+- Compliance scope is limited to ISO 9001:2015 with §8.5 material traceability.
+- No specific equipment brands, customer names, production capacity, or geographic shipment specifics are cited.
+
+## Contact
+
+- Engineering: [email protected]
+- Quote requests: https://www.machine-knives.net/contact/
