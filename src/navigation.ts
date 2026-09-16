@@ -89,6 +89,7 @@ export const footerData = {
       title: 'Support',
       links: [
         { text: 'Technical Specs', href: getPermalink('/products') },
+        { text: 'Quality & Certifications', href: getPermalink('/quality') },
         { text: 'Request a Quote', href: getPermalink('/contact') },
         { text: 'Material Guide', href: getPermalink('/solutions#materials') },
         { text: 'Maintenance Guide', href: getPermalink('/services#maintenance') },
