@@ -2,20 +2,31 @@
 import Layout from '~/layouts/Layout.astro';
 import Header from '~/components/widgets/Header.astro';
 import Footer from '~/components/widgets/Footer.astro';
+import Breadcrumb from '~/components/widgets/Breadcrumb.astro';
 // import Announcement from '~/components/widgets/Announcement.astro';
 
 import { getCollection } from 'astro:content';
 
 import { headerData, footerData } from '~/navigation';
 import { getCategoriesWithProducts } from '~/utils/products';
+import { buildBreadcrumbItems, type BreadcrumbItem } from '~/utils/breadcrumb';
 
 import type { MetaData } from '~/types';
 
 export interface Props {
   metadata?: MetaData;
+  /**
+   * Override the auto-generated breadcrumb. Pass an array of `{ text, href? }`
+   * items to control the full chain, or pass `false` to suppress the
+   * breadcrumb entirely on this page (e.g. 404). Pages with a dynamic
+   * last-segment title (products, blog posts) should pre-build their items
+   * with `buildProductDetailBreadcrumb` / `buildBlogPostBreadcrumb` and pass
+   * them here.
+   */
+  breadcrumb?: ReadonlyArray<BreadcrumbItem> | false;
 }
 
-const { metadata } = Astro.props;
+const { metadata, breadcrumb } = Astro.props;
 
 // Filter out links that point at a level-1 product category with no
 // products, so empty categories never appear in the front-end nav.
@@ -70,6 +81,16 @@ const filteredFooterData = {
   ...footerData,
   links: filterFooterLinks((footerData.links ?? []) as FooterLinksGroup[]),
 };
+
+// ─── Breadcrumb resolution ─────────────────────────────────────────────────
+// `breadcrumb === false` → render nothing (explicit opt-out).
+// Otherwise build a default chain from the current pathname, then let the
+// page override via the `breadcrumb` prop (useful for products/blog posts
+// whose last segment is a dynamic value).
+const breadcrumbItems: ReadonlyArray<BreadcrumbItem> | null =
+  breadcrumb === false
+    ? null
+    : breadcrumb ?? buildBreadcrumbItems(Astro.url.pathname);
 ---
 
 <Layout metadata={metadata}>
@@ -78,6 +99,11 @@ const filteredFooterData = {
   </slot>
   <slot name="header">
     <Header {...filteredHeaderData} isSticky showRssFeed showToggleTheme />
+  </slot>
+  <slot name="breadcrumb">
+    {breadcrumbItems && breadcrumbItems.length > 0 && (
+      <Breadcrumb items={breadcrumbItems} />
+    )}
   </slot>
   <main>
     <slot />

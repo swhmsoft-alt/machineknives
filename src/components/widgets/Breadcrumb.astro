@@ -1,0 +1,84 @@
+---
+// src/components/widgets/Breadcrumb.astro
+// ─────────────────────────────────────────────────────────────────────────────
+// Accessible, JSON-LD-friendly breadcrumb nav. Pure UI — the caller passes a
+// fully-resolved chain of `{ text, href? }` items. The last item is rendered
+// as the current page (plain text, no link) regardless of whether `href` is
+// set; all earlier items are rendered as anchor links.
+//
+// Visual style intentionally matches the existing inline breadcrumb in
+// src/pages/products/[...slug].astro (chevron-right separator, muted text,
+// max-w-7xl container) so the new component slots in without visual seams.
+// No background colour is applied — `.agents/skills/styling.md` requires the
+// full site to share a single background.
+// ─────────────────────────────────────────────────────────────────────────────
+
+import { Icon } from 'astro-icon/components';
+import type { BreadcrumbItem } from '~/utils/breadcrumb';
+
+export interface Props {
+  /** Ordered chain. The last item is treated as the current page. */
+  items: ReadonlyArray<BreadcrumbItem>;
+  /** Optional override for the outer container class (advanced). */
+  class?: string;
+}
+
+const { items, class: className = '' } = Astro.props;
+
+// Hide entirely if there is nothing to show — keeps call-sites tidy.
+const visible = items.length > 0;
+---
+
+{
+  visible && (
+    <nav
+      aria-label="Breadcrumb"
+      class:list={['mx-auto max-w-7xl px-4 sm:px-6 pt-4 md:pt-6', className]}
+    >
+      <ol
+        itemscope
+        itemtype="https://schema.org/BreadcrumbList"
+        class="flex flex-wrap items-center gap-1.5 text-sm text-muted dark:text-slate-400"
+      >
+        {items.map((item, idx) => {
+          const isLast = idx === items.length - 1;
+          const position = idx + 1;
+          return (
+            <li
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/ListItem"
+              class="flex items-center gap-1.5"
+            >
+              {isLast ? (
+                <span
+                  itemprop="name"
+                  aria-current="page"
+                  class="font-medium text-slate-700 dark:text-slate-200"
+                >
+                  {item.text}
+                </span>
+              ) : (
+                <a
+                  itemprop="item"
+                  href={item.href ?? '#'}
+                  class="hover:text-primary"
+                >
+                  <span itemprop="name">{item.text}</span>
+                </a>
+              )}
+              <meta itemprop="position" content={String(position)} />
+              {!isLast && (
+                <Icon
+                  name="tabler:chevron-right"
+                  class="w-4 h-4 opacity-60"
+                  aria-hidden="true"
+                />
+              )}
+            </li>
+          );
+        })}
+      </ol>
+    </nav>
+  )
+}

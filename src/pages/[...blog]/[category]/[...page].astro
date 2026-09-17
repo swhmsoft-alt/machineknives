@@ -7,6 +7,8 @@ import BlogList from '~/components/blog/List.astro';
 import Headline from '~/components/blog/Headline.astro';
 import Pagination from '~/components/blog/Pagination.astro';
 
+import { buildBlogPostBreadcrumb } from '~/utils/breadcrumb';
+
 export const prerender = true;
 
 export const getStaticPaths = (async ({ paginate }) => {
@@ -19,6 +21,23 @@ const { page, category } = Astro.props as Props;
 
 const currentPage = page.currentPage ?? 1;
 
+// The category pages live at `/category/{slug}/`, not under `/blog/`, so
+// supply a breadcrumb explicitly to surface the Blog parent. The category
+// page is shown as the current page (no `href` on the tail item).
+const breadcrumbItems = buildBlogPostBreadcrumb(category.title);
+
+// Mirror the visible breadcrumb as JSON-LD so crawlers see the Blog parent.
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: breadcrumbItems.map((it, idx) => ({
+    '@type': 'ListItem',
+    position: idx + 1,
+    name: it.text,
+    item: it.href ? String(new URL(it.href, Astro.site ?? 'https://www.machine-knives.net')) : Astro.url.toString(),
+  })),
+};
+
 const metadata = {
   title: `Category '${category.title}' ${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
   robots: {
@@ -28,7 +47,8 @@ const metadata = {
 };
 ---
 
-<Layout metadata={metadata}>
+<Layout metadata={metadata} breadcrumb={breadcrumbItems}>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)} />
   <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
     <Headline>{category.title}</Headline>
     <BlogList posts={page.data} />

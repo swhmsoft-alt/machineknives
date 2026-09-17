@@ -12,6 +12,7 @@ import { getStaticPathsBlogPost, blogPostRobots } from '~/utils/blog';
 import { findImage } from '~/utils/images';
 import type { MetaData } from '~/types';
 import RelatedPosts from '~/components/blog/RelatedPosts.astro';
+import { buildBlogPostBreadcrumb } from '~/utils/breadcrumb';
 
 export const prerender = true;
 
@@ -86,11 +87,37 @@ const blogPostingLd: Record<string, unknown> = {
 if (image) {
   blogPostingLd.image = typeof image === 'string' ? image : (image as ImageMetadata).src;
 }
+
+// ─── Breadcrumb ──────────────────────────────────────────────────────────
+// Blog posts live at the root (`/%slug%/`) rather than under `/blog/`, so
+// the default path-based resolver would skip the Blog parent. Build the
+// chain explicitly here so both the visible breadcrumb AND the JSON-LD
+// BreadcrumbList show Home → Blog → Category → Title.
+const breadcrumbItems = buildBlogPostBreadcrumb(
+  post.title,
+  post.category?.title,
+  post.category?.slug,
+);
+
+// Mirror the visible breadcrumb as a JSON-LD BreadcrumbList so AI crawlers
+// see the same label set the user sees (the global Layout.astro emitter
+// can't infer "Blog" from a root-level URL like `/some-post/`).
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: breadcrumbItems.map((it, idx) => ({
+    '@type': 'ListItem',
+    position: idx + 1,
+    name: it.text,
+    item: it.href ? siteUrl + it.href : siteUrl + Astro.url.pathname,
+  })),
+};
 ---
 
-<Layout metadata={metadata}>
-  {/* ── BlogPosting structured data for AI citation and rich results ── */}
+<Layout metadata={metadata} breadcrumb={breadcrumbItems}>
+  {/* ── BlogPosting + BreadcrumbList structured data for AI citation ── */}
   <script type="application/ld+json" is:inline set:html={JSON.stringify(blogPostingLd)} />
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)} />
 
   <SinglePost post={{ ...post, image: image }} url={url}>
     {post.Content && <post.Content />}

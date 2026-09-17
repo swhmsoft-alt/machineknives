@@ -23,6 +23,32 @@ const currentPage = page.currentPage ?? 1;
 // const allCategories = await findCategories();
 // const allTags = await findTags();
 
+// Build the breadcrumb explicitly so paginated pages read "Home › Blog
+// › Page N" instead of the URL-default "Home › Blog › N".
+const breadcrumbItems =
+  currentPage === 1
+    ? [
+        { text: 'Home', href: '/' },
+        { text: 'Blog', href: '/blog/' },
+      ]
+    : [
+        { text: 'Home', href: '/' },
+        { text: 'Blog', href: '/blog/' },
+        { text: `Page ${currentPage}` },
+      ];
+
+// Mirror the visible breadcrumb as JSON-LD.
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: breadcrumbItems.map((it, idx) => ({
+    '@type': 'ListItem',
+    position: idx + 1,
+    name: it.text,
+    item: it.href ? String(new URL(it.href, Astro.site ?? 'https://www.machine-knives.net')) : Astro.url.toString(),
+  })),
+};
+
 const metadata = {
   title: `Blog${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
   robots: {
@@ -35,7 +61,8 @@ const metadata = {
 };
 ---
 
-<Layout metadata={metadata}>
+<Layout metadata={metadata} breadcrumb={breadcrumbItems}>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)} />
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
     <Headline
       subtitle="A statically generated blog example with news, tutorials, resources and other interesting content related to AstroWind"

@@ -12,6 +12,11 @@ import {
   humanizeSlugSegment,
   type Level1Category,
 } from '~/utils/products';
+import {
+  buildProductCategoryBreadcrumb,
+  buildProductDetailBreadcrumb,
+  type BreadcrumbItem,
+} from '~/utils/breadcrumb';
 
 import {
   generatePageSchema,
@@ -110,13 +115,19 @@ let categoryPageTitle = '';
 let categoryPageSubtitle = '';
 let categoryPageTagline = '';
 let categoryPageIcon = '';
-let categoryBreadcrumb: Array<{ text: string; href: string }> = [];
+let categoryBreadcrumb: BreadcrumbItem[] = [];
+let productBreadcrumb: BreadcrumbItem[] = [];
 
 if (props.kind === 'product') {
   const rendered = await render(props.product);
   productContent = rendered.Content;
   productEntry = props.product;
   productSubcategories = props.subcategories;
+  productBreadcrumb = buildProductDetailBreadcrumb(
+    productEntry.data.category as Level1Category,
+    productSubcategories,
+    productEntry.data.title,
+  );
 } else {
   const allProducts = await getCollection('product');
   const l1: Level1Category = props.level1;
@@ -164,13 +175,7 @@ if (props.kind === 'product') {
     categoryPageIcon = meta.icon;
   }
 
-  categoryBreadcrumb = [
-    { text: meta.title, href: buildCategoryHref(l1) },
-    ...subs.map((s, i) => ({
-      text: humanizeSlugSegment(s),
-      href: buildCategoryHref(l1, subs.slice(0, i + 1)),
-    })),
-  ];
+  categoryBreadcrumb = buildProductCategoryBreadcrumb(l1, subs);
 }
 
 // ─── Schema.org JSON-LD for product detail pages ─────────────────────────
@@ -183,7 +188,6 @@ let productSchemaJson = '';
 
 if (productEntry) {
   const entry = productEntry;
-  const categoryTitle = getCategoryMeta(entry.data.category as Level1Category).title;
   const productUrl = `${SITE_URL}${buildProductHrefFromEntry(entry)}`;
 
   const graph = generatePageSchema(
@@ -195,12 +199,15 @@ if (productEntry) {
           name: entry.data.title,
           description: entry.data.excerpt ?? undefined,
         }),
-        buildBreadcrumb([
-          { name: 'Home', url: `${SITE_URL}/` },
-          { name: 'Products', url: `${SITE_URL}/products/` },
-          { name: categoryTitle, url: `${SITE_URL}${buildCategoryHref(entry.data.category as Level1Category)}` },
-          { name: entry.data.title, url: productUrl },
-        ]),
+        // Mirror the visible breadcrumb chain so AI crawlers see the same
+        // label set the user sees. Subcategory segments are included when the
+        // product sits below a /products/{l1}/{sub1}[/{sub2}] path.
+        buildBreadcrumb(
+          productBreadcrumb.map((it) => ({
+            name: it.text,
+            url: it.href ? `${SITE_URL}${it.href}` : productUrl,
+          })),
+        ),
       ];
       const faqs = getProductFaqs(entry.id);
       if (faqs.length > 0) {
@@ -215,7 +222,7 @@ if (productEntry) {
 ---
 
 {props.kind === 'category' && categoryLevel1 ? (
-  <Layout metadata={{ title: `${categoryPageTitle} — KAIPU`, description: categoryPageSubtitle }}>
+  <Layout metadata={{ title: `${categoryPageTitle} — KAIPU`, description: categoryPageSubtitle }} breadcrumb={categoryBreadcrumb}>
   <Hero
     tagline={categoryPageTagline}
     title={`${categoryPageTitle} for Industrial Cutting`}
@@ -225,23 +232,6 @@ if (productEntry) {
       { text: 'All Categories', href: '/products' },
     ]}
   />
-
-  {categoryBreadcrumb.length > 1 && (
-    <nav class="mx-auto max-w-7xl px-4 sm:px-6 pt-6" aria-label="Breadcrumb">
-      <ol class="flex flex-wrap items-center gap-2 text-sm text-muted dark:text-slate-400">
-        {categoryBreadcrumb.map((item, idx) => (
-          <li class="flex items-center gap-2">
-            {idx > 0 && <Icon name="tabler:chevron-right" class="w-4 h-4 opacity-60" />}
-            {idx === categoryBreadcrumb.length - 1 ? (
-              <span class="font-medium text-slate-700 dark:text-slate-200">{item.text}</span>
-            ) : (
-              <a href={item.href} class="hover:text-primary">{item.text}</a>
-            )}
-          </li>
-        ))}
-      </ol>
-    </nav>
-  )}
 
   <section class="mx-auto max-w-7xl px-4 sm:px-6 py-12 md:py-16">
     {categorySubcategoryChildren.length > 0 && categoryLevel1 && (
@@ -316,7 +306,7 @@ if (productEntry) {
   </CallToAction>
   </Layout>
 ) : props.kind === 'product' && productEntry && productContent ? (
-  <Layout metadata={{ title: `${productEntry.data.title} — KAIPU`, description: productEntry.data.excerpt ?? '' }}>
+  <Layout metadata={{ title: `${productEntry.data.title} — KAIPU`, description: productEntry.data.excerpt ?? '' }} breadcrumb={productBreadcrumb}>
     <Hero
       tagline={getCategoryMeta(productEntry.data.category).label}
       title={productEntry.data.title}
@@ -326,19 +316,6 @@ if (productEntry) {
         { text: 'Back to Catalog', href: buildCategoryHref(productEntry.data.category) },
       ]}
     />
-
-    <!-- Breadcrumb -->
-    <nav class='mx-auto max-w-7xl px-4 sm:px-6 pt-6' aria-label='Breadcrumb'>
-      <ol class='flex flex-wrap items-center gap-2 text-sm text-muted dark:text-slate-400'>
-        <li class='flex items-center gap-2'>
-          <a href='/products' class='hover:text-primary'>Products</a>
-          <Icon name='tabler:chevron-right' class='w-4 h-4 opacity-60' />
-        </li>
-        <li class='flex items-center gap-2'>
-          <a href={buildCategoryHref(productEntry.data.category)} class='hover:text-primary'>{getCategoryMeta(productEntry.data.category).title}</a>
-        </li>
-      </ol>
-    </nav>
 
     <!-- ========== UPPER: Product overview (image + spec card + CTA) ========== -->
     <section class='mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-12'>
@@ -600,7 +577,7 @@ if (productEntry) {
     </CallToAction>
 
     {productSchemaJson && (
-      <script type='application/ld+json' set:html='{productSchemaJson}' />
+      <script type='application/ld+json' set:html={productSchemaJson} />
     )}
   </Layout>
 ) : null}
