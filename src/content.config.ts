@@ -81,6 +81,12 @@ const productCollection = defineCollection({
     subcategories: z.array(z.string()).max(3).optional(),
     bladeMaterial: z.string().optional(),
     hardness: z.string().optional(),
+    /**
+     * Optional surface coating (e.g. TiN, TiCN, CrN, DLC, Uncoated).
+     * Falls back to a default string in the product page hero when
+     * omitted, so existing product files do not need to be updated.
+     */
+    coating: z.string().optional(),
     applications: z.array(z.string()).optional(),
 
     image: z.string().nullable().optional(),
