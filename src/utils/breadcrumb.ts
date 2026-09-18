@@ -51,6 +51,11 @@ const STATIC_PAGE_LABELS: Record<string, string> = {
   contact: 'Contact',
   quality: 'Quality & Certifications',
   blog: 'Blog',
+  // /blog/topics/ — the standalone topic taxonomy index that lists all
+  // 9 blog topics. Resolved here so its breadcrumb reads "Home › Blog ›
+  // Topics" rather than the URL-default "Home › Blog › Topics" (which
+  // would still happen to read correctly, but only by coincidence).
+  topics: 'Topics',
 };
 
 const HOME_LABEL = 'Home';

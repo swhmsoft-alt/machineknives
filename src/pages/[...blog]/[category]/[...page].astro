@@ -1,5 +1,6 @@
 ---
 import type { InferGetStaticPropsType, GetStaticPaths } from 'astro';
+import { Icon } from 'astro-icon/components';
 import { blogCategoryRobots, getStaticPathsBlogCategory } from '~/utils/blog';
 
 import Layout from '~/layouts/PageLayout.astro';
@@ -8,6 +9,7 @@ import Headline from '~/components/blog/Headline.astro';
 import Pagination from '~/components/blog/Pagination.astro';
 
 import { buildBlogPostBreadcrumb } from '~/utils/breadcrumb';
+import { getTopic, topicsIndexHref } from '~/data/topics';
 
 export const prerender = true;
 
@@ -20,6 +22,11 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths> & { category: Record
 const { page, category } = Astro.props as Props;
 
 const currentPage = page.currentPage ?? 1;
+
+// Look up the topic definition (if any) for this category slug. Unknown
+// slugs (e.g. legacy posts filed under ad-hoc categories) fall back to
+// article-style rendering.
+const topic = getTopic(category.slug);
 
 // The category pages live at `/category/{slug}/`, not under `/blog/`, so
 // supply a breadcrumb explicitly to surface the Blog parent. The category
@@ -38,8 +45,19 @@ const breadcrumbLd = {
   })),
 };
 
+// Build a content-type-aware page description so AI crawlers can tell at a
+// glance what kind of content lives at this URL (long-form article vs.
+// glossary entry vs. comparison table).
+const pageDescription =
+  topic?.contentType === 'glossary'
+    ? `Reference entries in the ${topic.title} topic — concise, AI-citable definitions curated by KAIPU engineering.`
+    : topic?.contentType === 'comparison'
+      ? `${topic.title} — a side-by-side reference table for industrial blade specification. Curated and maintained by KAIPU engineering.`
+      : `Articles in the ${category.title} topic — engineering content for industrial blade selection, application and performance.`;
+
 const metadata = {
-  title: `Category '${category.title}' ${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+  title: `${category.title}${currentPage > 1 ? ` — Page ${currentPage}` : ''} | KAIPU Blog`,
+  description: pageDescription,
   robots: {
     index: blogCategoryRobots?.index,
     follow: blogCategoryRobots?.follow,
@@ -50,7 +68,34 @@ const metadata = {
 <Layout metadata={metadata} breadcrumb={breadcrumbItems}>
   <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)} />
   <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
-    <Headline>{category.title}</Headline>
+    <Headline>
+      {category.title}
+    </Headline>
+
+    {/*
+      Topic-aware intro strip. Surfaces the topic's icon, content-type
+      label, and (for comparison topics) a clear "single-page table" note
+      so users know what to expect before scrolling. Not rendered for
+      legacy/unknown categories.
+    */}
+    {topic && (
+      <div class="mb-8 md:mb-10 flex flex-wrap items-center justify-center gap-3 text-sm text-muted dark:text-slate-400">
+        <span class="inline-flex items-center gap-2">
+          <Icon name={topic.icon} class="w-5 h-5 text-primary" />
+          <span class="font-semibold uppercase tracking-wide text-secondary dark:text-blue-200">
+            {topic.contentType}
+          </span>
+        </span>
+        <span aria-hidden="true">·</span>
+        <span>Target: {topic.countLabel} {topic.targetCount === 1 ? 'entry' : 'posts'}</span>
+        <span aria-hidden="true">·</span>
+        <a class="inline-flex items-center text-primary hover:underline" href={topicsIndexHref()}>
+          All topics
+          <Icon name="tabler:arrow-right" class="w-4 h-4 ml-1" />
+        </a>
+      </div>
+    )}
+
     <BlogList posts={page.data} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
   </section>

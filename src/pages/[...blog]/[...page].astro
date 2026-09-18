@@ -5,9 +5,11 @@ import Layout from '~/layouts/PageLayout.astro';
 import BlogList from '~/components/blog/List.astro';
 import Headline from '~/components/blog/Headline.astro';
 import Pagination from '~/components/blog/Pagination.astro';
+import TopicGrid from '~/components/blog/TopicGrid.astro';
 // import PostTags from "~/components/blog/Tags.astro";
 
-import { blogListRobots, getStaticPathsBlogList } from '~/utils/blog';
+import { blogListRobots, fetchPosts, getStaticPathsBlogList } from '~/utils/blog';
+import { TOPICS } from '~/data/topics';
 
 export const prerender = true;
 
@@ -19,9 +21,6 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const { page } = Astro.props as Props;
 const currentPage = page.currentPage ?? 1;
-
-// const allCategories = await findCategories();
-// const allTags = await findTags();
 
 // Build the breadcrumb explicitly so paginated pages read "Home › Blog
 // › Page N" instead of the URL-default "Home › Blog › N".
@@ -49,6 +48,18 @@ const breadcrumbLd = {
   })),
 };
 
+// Live post count per topic (slug → count), computed at build time so the
+// topic grid always shows an accurate figure even as posts are added. The
+// TopicGrid component falls back to the static `countLabel` when a slug has
+// no entries yet.
+const allPosts = await fetchPosts();
+const postsByTopic: Map<string, number> = new Map(
+  TOPICS.map((t) => [
+    t.slug,
+    allPosts.filter((p) => p.category?.slug === t.slug).length,
+  ])
+);
+
 const metadata = {
   title: `Blog${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
   robots: {
@@ -63,12 +74,27 @@ const metadata = {
 
 <Layout metadata={metadata} breadcrumb={breadcrumbItems}>
   <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)} />
-  <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+  <section class="px-4 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
     <Headline
       subtitle="A statically generated blog example with news, tutorials, resources and other interesting content related to AstroWind"
     >
       The Blog
     </Headline>
+  </section>
+
+  {/*
+    Topic grid — 9-cell matrix wired to the centralized topic definitions
+    in src/data/topics.ts. Renders only on page 1 to avoid duplication on
+    paginated pages; subsequent pages still surface the breadcrumb and the
+    article list.
+  */}
+  {currentPage === 1 && (
+    <section class="px-4 sm:px-6 pb-12 sm:pb-16 mx-auto max-w-6xl">
+      <TopicGrid postsByTopic={postsByTopic} />
+    </section>
+  )}
+
+  <section class="px-4 sm:px-6 pb-12 sm:pb-16 lg:pb-20 mx-auto max-w-4xl">
     <BlogList posts={page.data} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
     <!--

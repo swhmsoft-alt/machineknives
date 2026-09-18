@@ -1,5 +1,6 @@
 import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 import { buildCategoryHref } from './utils/products';
+import { TOPICS, topicHrefFor, topicsIndexHref } from './data/topics';
 
 export const headerData = {
   links: [
@@ -42,6 +43,15 @@ export const headerData = {
     {
       text: 'Blog',
       href: getBlogPermalink(),
+      // 9-topic dropdown menu wired to the centralized topic registry.
+      // The first link is a high-level "All posts" entry; the second is the
+      // sitemap-style /blog/topics/ index; the rest go straight to the
+      // individual topic category pages.
+      links: [
+        { text: 'All Posts', href: getBlogPermalink() },
+        { text: 'Browse All Topics', href: topicsIndexHref() },
+        ...TOPICS.map((t) => ({ text: t.title, href: topicHrefFor(t) })),
+      ],
     },
     {
       text: 'Contact',

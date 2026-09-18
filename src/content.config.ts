@@ -62,6 +62,21 @@ const postCollection = defineCollection({
     tags: z.array(z.string()).optional(),
     author: z.string().optional(),
 
+    /**
+     * Content layout family. Drives both template styling and JSON-LD
+     * emissions downstream:
+     *  - `article`    (default) — standard blog post. Topics 1–5.
+     *  - `glossary`   — short reference entries (Materials Encyclopedia,
+     *                   Industry Glossary). Emits `DefinedTerm` schema.
+     *  - `comparison` — single-page table / matrix (Coatings Comparison,
+     *                   Material Grade Converter). Emits `Table` schema.
+     */
+    type: z.enum(['article', 'glossary', 'comparison']).default('article'),
+    /** Optional sub-key for `glossary` (e.g. `material`, `term`). */
+    entityType: z.string().optional(),
+    /** Optional sub-key for `comparison` (e.g. `coating`, `material-grade`). */
+    comparisonType: z.string().optional(),
+
     metadata: metadataDefinition(),
   }),
 });
