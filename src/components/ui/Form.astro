@@ -5,7 +5,14 @@ import Button from '~/components/ui/Button.astro';
 const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props;
 ---
 
-<form>
+<div
+  id="inquiry-form-status"
+  class="hidden mb-6 text-sm font-medium"
+  role="status"
+  aria-live="polite"
+></div>
+
+<form id="inquiry-form" method="post" action="/api/inquiry" novalidate>
   {
     inputs &&
       inputs.map(
@@ -85,3 +92,76 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
     )
   }
 </form>
+
+<script>
+  // Wire the contact-page form to the Cloudflare Pages Function at /api/inquiry.
+  // The form keeps a real action="/api/inquiry" so the JS path is a progressive
+  // enhancement — if the script is blocked, the browser still POSTs and the
+  // server returns the JSON, which the browser will render as plain text.
+  (() => {
+    const form = document.getElementById('inquiry-form') as HTMLFormElement | null;
+    const status = document.getElementById('inquiry-form-status');
+    if (!form || !status) return;
+
+    const submitButton = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+
+    const setStatus = (message: string, kind: 'success' | 'error') => {
+      status.textContent = message;
+      status.classList.remove('hidden', 'text-primary', 'text-red-700', 'dark:text-red-400');
+      if (kind === 'success') {
+        status.classList.add('text-primary');
+        status.setAttribute('role', 'status');
+      } else {
+        status.classList.add('text-red-700', 'dark:text-red-400');
+        status.setAttribute('role', 'alert');
+      }
+      status.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    };
+
+    const clearStatus = () => {
+      status.textContent = '';
+      status.classList.add('hidden');
+    };
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      clearStatus();
+
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.setAttribute('aria-busy', 'true');
+      }
+
+      try {
+        const response = await fetch('/api/inquiry', {
+          method: 'POST',
+          body: new FormData(form),
+        });
+
+        let payload: { success?: boolean; message?: string } = {};
+        try {
+          payload = (await response.json()) as { success?: boolean; message?: string };
+        } catch {
+          // Non-JSON response (e.g. unexpected proxy error). Fall through to
+          // status-code-based messaging below.
+        }
+
+        if (response.ok && payload.success) {
+          form.reset();
+          setStatus(payload.message ?? 'Inquiry submitted successfully.', 'success');
+        } else if (response.status === 400) {
+          setStatus(payload.message ?? 'Please complete the required fields.', 'error');
+        } else {
+          setStatus('Submission failed. Please try again later.', 'error');
+        }
+      } catch {
+        setStatus('Submission failed. Please try again later.', 'error');
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.removeAttribute('aria-busy');
+        }
+      }
+    });
+  })();
+</script>
