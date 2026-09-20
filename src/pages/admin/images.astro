@@ -1,0 +1,128 @@
+---
+/**
+ * /admin/images/ — internal visual index of every placeholder and
+ * approved image on the site. Reads from src/data/_images-catalog.json.
+ *
+ * This is an **internal tool**, not a customer-facing page:
+ *   - Excluded from sitemap and search engines (`robots: noindex`).
+ *   - Reads a JSON file directly (no blog/product collection, no i18n).
+ *   - Renders as a plain table with status badges; no filter UI yet.
+ *
+ * To replace a placeholder:
+ *   1. Drop the real photo as `<role>.<ext>` at the listed `path`
+ *      (keep the same filename — that is the whole convention).
+ *   2. Flip `status` to `approved` in src/data/_images-catalog.json.
+ *   3. `npm run build` to verify.
+ *
+ * See docs/image-catalog.md for the full convention.
+ */
+import Layout from '~/layouts/PageLayout.astro';
+import {
+  entries,
+  summary,
+  ROLE_LABEL,
+  STATUS_LABEL,
+  ROLE_ORDER,
+  type ImageRole,
+} from '~/utils/images-catalog';
+
+const stats = summary();
+
+const metadata = {
+  title: 'Image Catalog — Admin',
+  description: 'Internal image catalog: path, alt, role, status for every placeholder on the site.',
+  robots: { index: false, follow: false },
+};
+
+const roleGroups: Array<{ role: ImageRole; rows: typeof entries }> = ROLE_ORDER
+  .map((role) => ({ role, rows: entries.filter((e) => e.entry.o === role) }))
+  .filter((g) => g.rows.length > 0);
+---
+
+<Layout metadata={metadata}>
+  <section class="px-4 py-10 sm:px-6 mx-auto max-w-7xl">
+    <header class="mb-8">
+      <p class="text-sm font-semibold uppercase tracking-wide text-secondary dark:text-blue-200">Admin</p>
+      <h1 class="text-3xl md:text-4xl font-bold font-heading mt-2 mb-3">Image Catalog</h1>
+      <p class="text-muted">
+        {stats.total} entries total &middot; <strong>{stats.byStatus.placeholder}</strong> placeholder &middot; <strong>{stats.byStatus.approved}</strong> approved &middot; <strong>{stats.byStatus['needs-replacement']}</strong> needs replacement.
+      </p>
+      <p class="text-muted mt-2">
+        Replace a placeholder by overwriting the file at <code class="text-sm">path</code> with the same filename,
+        then flip <code class="text-sm">status</code> to <code class="text-sm">approved</code> in
+        <code class="text-sm">src/data/_images-catalog.json</code>.
+      </p>
+      <p class="text-sm text-muted mt-2">
+        Full instructions: <a href="/docs/image-catalog.md" class="text-primary hover:underline">docs/image-catalog.md</a>
+      </p>
+    </header>
+
+    <div class="overflow-x-auto rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b-2 border-slate-300 dark:border-slate-600">
+            <th class="text-left p-3 font-semibold w-32">Thumb</th>
+            <th class="text-left p-3 font-semibold">Key</th>
+            <th class="text-left p-3 font-semibold w-28">Role</th>
+            <th class="text-left p-3 font-semibold w-36">Ratio</th>
+            <th class="text-left p-3 font-semibold w-28">Size</th>
+            <th class="text-left p-3 font-semibold">Alt</th>
+            <th class="text-left p-3 font-semibold w-40">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {roleGroups.map(({ role, rows }) => (
+            <>
+              <tr class="border-b border-slate-300 dark:border-slate-600">
+                <td colspan="7" class="p-2 text-xs font-semibold uppercase tracking-wide text-muted">
+                  {ROLE_LABEL[role]} ({rows.length})
+                </td>
+              </tr>
+              {rows.map(({ key, entry }) => (
+                <tr class="border-b border-slate-100 dark:border-slate-800">
+                  <td class="p-3 align-top">
+                    <img
+                      src={entry.p}
+                      alt=""
+                      class="w-24 h-14 object-cover rounded border border-slate-200 dark:border-slate-700"
+                      loading="lazy"
+                      width="96"
+                      height="56"
+                    />
+                  </td>
+                  <td class="p-3 align-top font-mono text-xs break-all">{key}</td>
+                  <td class="p-3 align-top text-xs">{entry.o}</td>
+                  <td class="p-3 align-top text-xs">{entry.r}</td>
+                  <td class="p-3 align-top text-xs">{entry.s[0]}×{entry.s[1]}</td>
+                  <td class="p-3 align-top">
+                    <p class="text-sm mb-1">{entry.a}</p>
+                    <p class="font-mono text-xs text-muted break-all">{entry.p}</p>
+                    {entry.n && <p class="text-xs text-muted mt-1 italic">⚠ {entry.n}</p>}
+                  </td>
+                  <td class="p-3 align-top">
+                    <span
+                      class:list={[
+                        'inline-flex items-center rounded-md border px-2 py-0.5 text-xs font-medium',
+                        entry.t === 'approved'
+                          ? 'border-green-500 dark:border-green-700 text-green-700 dark:text-green-300'
+                          : entry.t === 'needs-replacement'
+                            ? 'border-amber-500 dark:border-amber-700 text-amber-700 dark:text-amber-300'
+                            : 'border-slate-300 dark:border-slate-700',
+                      ]}
+                    >
+                      {STATUS_LABEL[entry.t]}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-xs text-muted mt-6">
+      Generated from <code>src/data/_images-catalog.json</code>. Edit that file to change alt text or flip status.
+    </p>
+  </section>
+</Layout>
