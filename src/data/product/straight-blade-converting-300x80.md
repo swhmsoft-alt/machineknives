@@ -8,7 +8,7 @@ applications:
   - 'Pouch-making lines'
   - 'Label stock slitting'
   - 'Adhesive tape converting'
-image: null
+image: '/products/placeholder.svg'
 ---
 
 # Straight Converting Blade – 300 × 80 mm

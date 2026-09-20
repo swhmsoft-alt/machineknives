@@ -8,7 +8,7 @@ applications:
   - 'Reverse-engineered from sample'
   - 'Drawing-to-part'
   - 'Co-developed geometry'
-image: null
+image: '/products/placeholder.svg'
 ---
 
 # Custom Blade – Reverse-Engineered from Sample

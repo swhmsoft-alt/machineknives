@@ -8,7 +8,7 @@ applications:
   - 'Plastics granulators'
   - 'Shredder rotor / stator'
   - 'Recycling lines'
-image: null
+image: '/products/placeholder.svg'
 ---
 
 # Granulator Rotor Knife – 200 × 40 × 20 mm

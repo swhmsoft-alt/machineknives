@@ -11,7 +11,7 @@ applications:
   - BOPP / PET film slitting (12–200 μm)
   - Aluminium foil slitting (6–50 μm)
   - Tape and label stock slitting
-image: null
+image: '/products/placeholder.svg'
 draft: false
 metadata:
   title: 'Circular Slitting Blade — 250 mm OD | KAIPU Industrial Blades'

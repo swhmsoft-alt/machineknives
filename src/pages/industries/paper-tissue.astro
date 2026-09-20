@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
@@ -9,6 +10,12 @@ const metadata = {
   description:
     'Long-life bed knives and top blades for tissue converting lines at 600–2,400 m/min. D2 / M2 HSS / SKD11 with optimised cutting angles to reduce dust and extend service interval. Validated with major OEMs.',
 };
+
+const heroImageHtml =
+  '<img src="/industries/paper-tissue/hero.svg" alt="Bed knife and top blade pair on a tissue converting line (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+
+const processImageHtml =
+  '<img src="/industries/paper-tissue/process.svg" alt="Tissue bed-knife and top-blade cutting mechanics (placeholder)" class="mx-auto w-full rounded-lg shadow-lg" width="500" height="500" loading="lazy" />';
 
 const features = [
   {
@@ -59,6 +66,40 @@ const features = [
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:mail' },
       { text: 'View Straight Blades', href: '/products/straight/' },
     ]}
+    image={heroImageHtml}
+  />
+
+  <Content
+    id="cutting-mechanics"
+    tagline="Cutting mechanics"
+    title="How tissue lines cut 2-ply without dusting"
+    subtitle="At 1,800 m/min the cut is happening 30 times per second across the bed-knife length. Dust, edge wear and ply separation are symptoms of bed-knife geometry drifting out of spec."
+    content={`
+      <p>
+        Tissue cutting is a controlled shear between a stationary bed knife and a rotating top blade. The two blades meet at a precise angle, with a precise clearance, and the ply stack passes between them. The cut is so fast that any geometry drift shows up as dust within minutes, not shifts.
+      </p>
+      <p class="mt-4">
+        The two failure modes we see most often — dust generation and ply separation — both trace back to the same root cause: the bed-knife shear angle drifted outside the 20°–24° window, or the top-blade clearance drifted outside 0.5°–1.5°.
+      </p>
+    `}
+    items={[
+      {
+        title: 'Shear angle and clearance',
+        description: 'Bed-knife shear angle 20°–24°, top-blade clearance 0.5°–1.5° per OEM. Correct angles reduce dust generation by 30–60 % and extend regrind interval over generic tooling.',
+        icon: 'tabler:blade',
+      },
+      {
+        title: 'Bed-knife flatness',
+        description: 'Bed-knife flatness ≤ 0.02 mm across the full cutting length (typically 2,000 – 4,200 mm). Granite-plate-verified before dispatch.',
+        icon: 'tabler:ruler-measure',
+      },
+      {
+        title: 'Hardness pair for impact loading',
+        description: 'D2 / SKD11 bed knives at HRC 58–62; M2 HSS top blades at HRC 60–64 where impact loading is high. TiN or CrN PVD coating on abrasive furnish.',
+        icon: 'tabler:certificate',
+      },
+    ]}
+    image={processImageHtml}
   />
 
   <Features

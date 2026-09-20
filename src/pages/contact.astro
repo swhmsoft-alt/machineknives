@@ -9,6 +9,9 @@ const metadata = {
   description:
     'Send your blade specification, drawing or worn sample. Engineering responds with material grade, hardness, tolerance and lead time within one business day.',
 };
+
+const heroImageHtml =
+  '<img src="/contact/hero.svg" alt="KAIPU engineering team reviewing a customer drawing (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
 ---
 
 <Layout metadata={metadata}>
@@ -20,6 +23,7 @@ const metadata = {
       { text: 'Email Directly', href: 'mailto:[email protected]', icon: 'tabler:mail' },
       { text: 'View Products', href: '/products' },
     ]}
+    image={heroImageHtml}
   />
 
   <Contact

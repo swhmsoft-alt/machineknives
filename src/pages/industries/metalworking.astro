@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
@@ -9,6 +10,12 @@ const metadata = {
   description:
     'Shear blades for guillotine and swing-beam cutting of mild steel, stainless and aluminium plate up to 12 mm. HRC 58–62 working hardness, ground and polished to ≤ Ra 0.4 µm. 4-edge indexable designs available.',
 };
+
+const heroImageHtml =
+  '<img src="/industries/metalworking/hero.svg" alt="Shear blade pair in a guillotine cutting steel plate (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+
+const processImageHtml =
+  '<img src="/industries/metalworking/process.svg" alt="Shear blade pair cutting mechanics (placeholder)" class="mx-auto w-full rounded-lg shadow-lg" width="500" height="500" loading="lazy" />';
 
 const features = [
   {
@@ -59,6 +66,40 @@ const features = [
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:mail' },
       { text: 'View Shear Blades', href: '/products/shear/' },
     ]}
+    image={heroImageHtml}
+  />
+
+  <Content
+    id="cutting-mechanics"
+    tagline="Cutting mechanics"
+    title="How a shear blade cuts clean at 12 mm plate"
+    subtitle="Plate shearing is not a slicing action. The blade pair drives a controlled fracture through the plate thickness, and the fracture path is governed by clearance and rake angle."
+    content={`
+      <p>
+        A shear blade pair drives a fracture through the plate. The upper blade pushes the plate into the lower blade at an angle set by rake, and the gap between the two blades controls how the fracture travels through the remaining thickness. Too tight and the plate binds; too loose and the fracture deflects, leaving burr.
+      </p>
+      <p class="mt-4">
+        The two failure modes we see most often — chipping on the cutting edge and progressive burr growth — both trace back to the same root cause: clearance was specified for the wrong plate thickness, or the rake angle was outside the OEM window.
+      </p>
+    `}
+    items={[
+      {
+        title: 'Clearance as a percentage of thickness',
+        description: 'Clearance per OEM recommendation, typically 5–10 % of plate thickness. Tight clearance (5–7 %) for stainless to minimise burr; wider clearance (8–10 %) for mild to prevent binding.',
+        icon: 'tabler:ruler-measure',
+      },
+      {
+        title: 'Rake and bevel angle',
+        description: 'Bevel angle 1°–3° on lower blade, 1°–2° on upper blade. Four-edge indexable designs available to maximise cutting length per blade before re-sharpening.',
+        icon: 'tabler:blade',
+      },
+      {
+        title: 'Edge flatness across length',
+        description: 'Cutting edge flatness ≤ 0.02 mm across the blade length. Edge radius 0.05–0.20 mm depending on material and burr-tolerance target. Profilometer-verified before dispatch.',
+        icon: 'tabler:gauge',
+      },
+    ]}
+    image={processImageHtml}
   />
 
   <Features

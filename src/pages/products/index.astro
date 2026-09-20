@@ -35,6 +35,9 @@ const metadata = {
     'Six product families of industrial machine knives — circular, straight, serrated, shear, granulator and custom reverse-engineered blades. D2, SKD11, M2 HSS and tungsten carbide. ISO 9001 manufacturer.',
 };
 
+const heroImageHtml =
+  '<img src="/products/hero.svg" alt="Industrial blade families — six product categories (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+
 const products = await getCollection('product');
 const categoriesWithProducts = getCategoriesWithProducts(products);
 const activeProductCount = getActiveProductCount(products);
@@ -180,6 +183,7 @@ const jsonLd = JSON.stringify({
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:clipboard-text' },
       { text: 'View Services', href: '/services' },
     ]}
+    image={heroImageHtml}
   />
 
   <Stats

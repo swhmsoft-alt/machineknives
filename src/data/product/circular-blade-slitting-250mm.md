@@ -8,7 +8,7 @@ applications:
   - 'Paper slitting'
   - 'Film & foil slitting'
   - 'Tape slitting'
-image: null
+image: '/products/placeholder.svg'
 ---
 
 # Circular Slitting Blade – 250 mm OD

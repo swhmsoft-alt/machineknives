@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
@@ -9,6 +10,12 @@ const metadata = {
   description:
     'Trim and score blades for pouch-making, label-stock and adhesive-tape converting lines. Repeatable edge profile with run-out controlled to ≤ 0.01 mm on Ø 250 mm blanks. M2 HSS and tungsten carbide available.',
 };
+
+const heroImageHtml =
+  '<img src="/industries/converting/hero.svg" alt="Trim and score blades on a pouch converting line (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+
+const processImageHtml =
+  '<img src="/industries/converting/process.svg" alt="Trim and score geometry working principle (placeholder)" class="mx-auto w-full rounded-lg shadow-lg" width="500" height="500" loading="lazy" />';
 
 const features = [
   {
@@ -59,6 +66,40 @@ const features = [
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:mail' },
       { text: 'View Serrated Blades', href: '/products/serrated/' },
     ]}
+    image={heroImageHtml}
+  />
+
+  <Content
+    id="how-it-works"
+    tagline="Working principle"
+    title="How trim and score cuts clean at 800 m/min"
+    subtitle="Converting tooling is judged by the second hour of the shift, not the first minute. Geometry choice, score depth and registration are dictated by substrate, web tension and line speed."
+    content={`
+      <p>
+        Converting lines cut multi-layer substrates in a single pass. The blade pair has to separate paper from film from adhesive without lifting, tearing or leaving adhesive residue on the cut edge. Edge preparation controls this more than steel grade does.
+      </p>
+      <p class="mt-4">
+        The two failure modes we see most often — adhesive build-up on the edge and score-depth drift across the shift — both trace back to the same root cause: the score geometry was specified for the wrong substrate stack.
+      </p>
+    `}
+    items={[
+      {
+        title: 'Edge profile and burr control',
+        description: 'Edge radius selected per substrate: sharp < 5 µm for film, light hone 5–25 µm for paper, micro-hone 25–75 µm for abrasive stocks. Burr kept below 25 µm on the cut edge.',
+        icon: 'tabler:blade',
+      },
+      {
+        title: 'Run-out (TIR) on circular slitters',
+        description: 'Run-out held to ≤ 0.01 mm on Ø 250 mm blanks. This drives clean trim edges on multi-lane label lines and prevents web wander at the score station.',
+        icon: 'tabler:rotate-clockwise',
+      },
+      {
+        title: 'Registration and repeatability',
+        description: 'Multi-index knives carry identical geometry across all four indexes (± 0.005 mm), so a blade swap does not require re-tensioning of the web or re-calibration of the score depth.',
+        icon: 'tabler:layout-grid',
+      },
+    ]}
+    image={processImageHtml}
   />
 
   <Features

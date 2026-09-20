@@ -21,6 +21,15 @@ const metadata = {
     'KAIPU quality system: ISO 9001:2015 since 2001, 5-stage quality gate, HEXAGON Global S CMM, hardness mapping per Rockwell C, EN 10204 3.1 mill certificates, PPAP / ISIR on request, Cpk ≥ 1.33 audited quarterly.',
 };
 
+const heroImageHtml =
+  '<img src="/quality/hero.svg" alt="KAIPU CMM inspection lab and quality documentation (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+
+const inspectionLabImageHtml =
+  '<img src="/quality/inspection-lab.svg" alt="Inspection lab — CMM, optical comparator, hardness tester (placeholder)" class="mx-auto w-full rounded-lg shadow-lg" width="500" height="500" loading="lazy" />';
+
+const standardsImageHtml =
+  '<img src="/quality/standards.svg" alt="Standards referenced — ISO 9001, EN 10204 3.1, ASTM A681 (placeholder)" class="mx-auto w-full rounded-lg shadow-lg" width="500" height="500" loading="lazy" />';
+
 const publishedDate = '2026-01-20';
 const lastUpdated = '2026-09-12';
 const siteUrl = String(Astro.site ?? 'https://www.machine-knives.net').replace(/\/$/, '');
@@ -261,6 +270,7 @@ const faqLd = {
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:clipboard-text' },
       { text: 'View Services', href: '/services' },
     ]}
+    image={heroImageHtml}
   />
 
   <!-- 2. AWARENESS STRIP (yearsInBusiness / specificMetrics / uniqueDataPoint) -->
@@ -294,6 +304,40 @@ const faqLd = {
     items={standards}
   />
 
+  <Content
+    id="standards-detail"
+    isReversed
+    tagline="Standards referenced"
+    title="Six Standards That Govern Our Work"
+    subtitle="Every quote, every certificate and every inspection report maps to one of these published standards. We do not invent our own specification language."
+    content={`
+      <p>
+        Six published standards define how KAIPU specifies, inspects and certifies every blade. They are referenced on every quote and on every dispatch note — not as marketing language but as the actual numbers behind every claim.
+      </p>
+      <p class="mt-4">
+        Material grades cross-reference ASTM, DIN, JIS, GB and other national bodies. Surface finish and dimensional tolerances cite ISO 4287 / ISO 1101. Hardness testing follows ISO 6508. EN 10204 3.1 mill certificates ship with every production batch.
+      </p>
+    `}
+    items={[
+      {
+        title: 'ISO 9001:2015',
+        description: 'Quality management system certified since 2001. Surveillance audits every year. Last audit completed in 2026.',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'EN 10204 3.1',
+        description: 'Mill Test Certificate type 3.1 with steel heat number. Shipped with every production batch.',
+        icon: 'tabler:file-check',
+      },
+      {
+        title: 'ASTM A681 / DIN 1.2379 / JIS SKD11',
+        description: 'D2 cold-work tool steel specified per ASTM A681, equivalent to DIN 1.2379 and JIS SKD11. Cross-reference on every quote.',
+        icon: 'tabler:ruler-measure',
+      },
+    ]}
+    image={standardsImageHtml}
+  />
+
   <!-- 4. INSPECTION CAPABILITIES -->
   <Content
     id="inspection"
@@ -302,6 +346,7 @@ const faqLd = {
     title="Six Instruments, Calibrated Daily"
     subtitle="A short tour of the equipment that decides whether a blade ships or stays on the bench."
     items={inspectionItems}
+    image={inspectionLabImageHtml}
   />
 
   <!-- 5. 5-STAGE QUALITY GATE -->
@@ -465,22 +510,3 @@ const faqLd = {
       • Specific metrics: Cpk ≥ 1.33, ±0.003 mm, Ra 0.2 µm, 10 yr retention (specificMetrics)
   -->
 </Layout>
-      </div>
-    </div>
-  </section>
-    id="standards"
-    tagline="Standards referenced"
-    title="Six Standards That Govern Our Work"
-    subtitle="Every quote, every certificate and every inspection report maps to one of these published standards. We do not invent our own specification language."
-    items={standards}
-  />
-
-  <!-- 4. INSPECTION CAPABILITIES -->
-  <Content
-    id="inspection"
-    isReversed
-    tagline="Inspection lab"
-    title="Six Instruments, Calibrated Daily"
-    subtitle="A short tour of the equipment that decides whether a blade ships or stays on the bench."
-    items={inspectionItems}
-  />

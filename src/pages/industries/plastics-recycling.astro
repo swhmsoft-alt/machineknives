@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
@@ -9,6 +10,16 @@ const metadata = {
   description:
     'Granulator and shredder rotor / stator knives for plastics recycling. D2, SKD11 and M2 HSS grades, optional TiN / CrN PVD coating to extend service interval 2–4× on glass-fibre and contaminated feedstock.',
 };
+
+// Image html strings — same pattern as src/pages/index.astro `heroImageHtml`.
+// SVG placeholders live under `public/` and are referenced by absolute path.
+// Replace the `src` attribute (or replace the .svg file in place) to swap in
+// real artwork without touching this template.
+const heroImageHtml =
+  '<img src="/industries/plastics-recycling/hero.svg" alt="Granulator rotor knives in a plastics-recycling line (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+
+const rotorImageHtml =
+  '<img src="/industries/plastics-recycling/granulator-rotor.svg" alt="Granulator rotor principle diagram (placeholder)" class="mx-auto w-full rounded-lg shadow-lg" width="500" height="500" loading="lazy" />';
 
 const features = [
   {
@@ -59,6 +70,41 @@ const features = [
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:mail' },
       { text: 'View Granulator Blades', href: '/products/granulator/' },
     ]}
+    image={heroImageHtml}
+  />
+
+  <Content
+    id="rotor-principle"
+    tagline="Working principle"
+    title="How the rotor-stator shear cut works"
+    subtitle="Open-rotor and closed-rotor geometries cut by impact shear, not by slicing. The geometry choice, hook angle and clearance angle are dictated by substrate, throughput and contamination class."
+    content={`
+      <p>
+        A granulator rotor carries a ring of knives rotating past a stationary bed knife. Material enters the cutting gap and is sheared by impact, not by the kind of clean slicing a slitter performs.
+        Open-rotor (cut-and-throw) geometries push the cut product out of the cutting chamber with the same rotation; closed-rotor (scissor-cut) geometries rely on a downstream screen to size the output.
+      </p>
+      <p class="mt-4">
+        The two failure modes we see most often — micro-chipping on glass-fibre and progressive welding on sticky polymer — both trace back to the same root cause: edge preparation and clearance angle were specified for the wrong substrate family.
+      </p>
+    `}
+    items={[
+      {
+        title: 'Open rotor (cut-and-throw)',
+        description: '3 or 5 blades. Lower friction, higher throughput. Best for film, fibre, low-density feedstock.',
+        icon: 'tabler:circle-arrow-right',
+      },
+      {
+        title: 'Closed rotor (scissor-cut)',
+        description: '3 or 5 blades + matched bed. Cleaner cut, tighter granulate. Best for rigid plastic and engineering polymer.',
+        icon: 'tabler:cut',
+      },
+      {
+        title: 'V-cut / claw profile',
+        description: 'For shredders. Aggressive bite on bulky post-consumer parts and purgings.',
+        icon: 'tabler:bolt',
+      },
+    ]}
+    image={rotorImageHtml}
   />
 
   <Features

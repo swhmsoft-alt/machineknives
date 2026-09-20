@@ -99,6 +99,9 @@ export async function getStaticPaths() {
   return paths;
 }
 
+const categoryHeroImageHtml =
+  '<img src="/products/category-hero.svg" alt="Blade family — industrial cutting tools (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+
 const props = Astro.props as PathProps;
 
 // Aggregated state for either view. Declared up-front so the template can
@@ -231,6 +234,7 @@ if (productEntry) {
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:clipboard-text' },
       { text: 'All Categories', href: '/products' },
     ]}
+    image={categoryHeroImageHtml}
   />
 
   <section class="mx-auto max-w-7xl px-4 sm:px-6 py-12 md:py-16">

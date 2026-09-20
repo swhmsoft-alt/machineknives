@@ -8,7 +8,7 @@ applications:
   - 'Film perforating'
   - 'Foil tear lines'
   - 'Tear strips'
-image: null
+image: '/products/placeholder.svg'
 ---
 
 # Serrated Blade – 6–12 TPI

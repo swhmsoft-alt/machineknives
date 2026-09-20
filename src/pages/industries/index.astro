@@ -14,6 +14,9 @@ const metadata = {
     'KAIPU Industrial Blades has supplied precision machine knives to six core industries since 1998. ISO 9001:2015 certified, materials per ASTM A681 / DIN 1.2379 / JIS SKD11, in-house heat treatment and PVD coating. 5–8 weeks lead time on standard blade geometries.',
 };
 
+const heroImageHtml =
+  '<img src="/industries/index/hero.svg" alt="Industries served by KAIPU — six sectors (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+
 const SITE_URL = 'https://www.machine-knives.net';
 const PAGE_URL = `${SITE_URL}/industries/`;
 
@@ -236,6 +239,7 @@ const framework = {
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:mail' },
       { text: 'View Products', href: '/products' },
     ]}
+    image={heroImageHtml}
   />
 
   <Stats

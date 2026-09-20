@@ -8,7 +8,7 @@ applications:
   - 'Plate guillotine cutting'
   - 'Swing-beam shearing'
   - 'Scrap shear'
-image: null
+image: '/products/placeholder.svg'
 ---
 
 # Shear Blade – Guillotine 300 × 60 mm

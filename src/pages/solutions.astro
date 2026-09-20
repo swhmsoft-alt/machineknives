@@ -13,6 +13,15 @@ const metadata = {
     'KAIPU supplies precision machine knives to six core industries since 1998. ISO 9001 certified, D2 / M2 / SKD11 / carbide materials, ASTM A681 / DIN 1.2379 / JIS SKD11 grades, in-house heat treatment and PVD coating. Lead time typically 15–25 business days.',
 };
 
+const heroImageHtml =
+  '<img src="/solutions/hero.svg" alt="Six industry applications served by KAIPU (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+
+const stepsMaterialImageHtml =
+  '<img src="/solutions/steps-material.svg" alt="Six steel families for industrial cutting (placeholder)" class="w-full rounded-md shadow-lg" width="432" height="768" loading="lazy" />';
+
+const stepsProcessImageHtml =
+  '<img src="/solutions/steps-process.svg" alt="Engagement process — six documented stages from drawing to dispatch (placeholder)" class="w-full rounded-md shadow-lg" width="432" height="768" loading="lazy" />';
+
 // Page-level JSON-LD: Service schema (the global Layout only injects Service
 // schema on the home page). This fills the gap for /solutions so AI crawlers
 // and Google can cite the page as an offering rather than a generic article.
@@ -161,6 +170,7 @@ const blogPostingLd = {
       },
       { text: 'Browse Products', href: '/products' },
     ]}
+    image={heroImageHtml}
   />
 
   {/* ── Awareness: the problems buyers face before they reach for a supplier ── */}
@@ -359,6 +369,7 @@ const blogPostingLd = {
     tagline="Material Guide"
     title="Step-by-step: Six Steel Families, Six Edge Behaviours"
     subtitle="Material selection drives edge retention, corrosion behaviour and total cost per cut. We specify deliberately rather than by default."
+    image={stepsMaterialImageHtml}
     items={[
       {
         title: 'Step 1: D2 Tool Steel (1.2379)',
@@ -399,6 +410,7 @@ const blogPostingLd = {
     tagline="Engagement Process"
     title="Step-by-step: From Drawing to Dispatch"
     subtitle="Six documented stages. Every order carries an engineering review before any steel is cut, and a CMM-traceable inspection before any blade ships."
+    image={stepsProcessImageHtml}
     items={[
       {
         title: 'Step 1: Drawing or sample submission',

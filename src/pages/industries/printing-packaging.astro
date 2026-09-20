@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
@@ -9,6 +10,12 @@ const metadata = {
   description:
     'Precision slitting, sheeting and rewinding blades for printing and packaging lines. Paper 40–400 gsm, BOPP/PET film 12–200 µm, alu-foil 6–50 µm. D2 / SKD11 per ASTM A681 / JIS G4404. Tight burr control protects printed surfaces.',
 };
+
+const heroImageHtml =
+  '<img src="/industries/printing-packaging/hero.svg" alt="Slitter blades on a printing and packaging converting line (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+
+const processImageHtml =
+  '<img src="/industries/printing-packaging/process.svg" alt="Printing slitting edge prep science (placeholder)" class="mx-auto w-full rounded-lg shadow-lg" width="500" height="500" loading="lazy" />';
 
 const features = [
   {
@@ -59,6 +66,40 @@ const features = [
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:mail' },
       { text: 'View Circular Blades', href: '/products/circular/' },
     ]}
+    image={heroImageHtml}
+  />
+
+  <Content
+    id="slitting-science"
+    tagline="Slitting science"
+    title="How slitting blades protect printed surfaces"
+    subtitle="Slitting at 600 m/min separates 9 µm ink from 12 µm film without lifting, tearing or scuffing. Edge preparation and burr control drive quality more than steel grade does."
+    content={`
+      <p>
+        A printing slitter cuts the printed web to width. The cut edge has to be clean enough that the printed surface downstream is not damaged, and tight enough that the wound roll keeps its register. Edge preparation controls both — not steel grade.
+      </p>
+      <p class="mt-4">
+        The two failure modes we see most often — ink lifting at the cut edge and telescoping in the wound roll — both trace back to the same root cause: the edge radius was specified as a generic "sharp" rather than as a number tuned to the substrate stack.
+      </p>
+    `}
+    items={[
+      {
+        title: 'Edge prep as a numeric radius',
+        description: 'Sharp < 5 µm for film and printed surfaces; light hone 5–25 µm for paper edges; micro-hone 25–75 µm for abrasive or recycled-content stocks. Specified as a number, not "slightly honed".',
+        icon: 'tabler:blade',
+      },
+      {
+        title: 'Burr control on the cut edge',
+        description: 'Burr kept below 25 µm on the cut edge. Optical comparator verification before dispatch. Burr > 50 µm damages downstream rollers and unwinds unevenly.',
+        icon: 'tabler:ruler',
+      },
+      {
+        title: 'Run-out on Ø 250 mm blanks',
+        description: 'Run-out controlled to ≤ 0.01 mm on Ø 250 mm blanks. This drives clean trim edges on multi-lane label lines and prevents web wander at the slitter station.',
+        icon: 'tabler:rotate-clockwise',
+      },
+    ]}
+    image={processImageHtml}
   />
 
   <Features

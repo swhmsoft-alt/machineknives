@@ -12,6 +12,9 @@ const metadata = {
   description:
     'KAIPU Industrial Blades — precision machine knife manufacturer since 1998. ISO 9001 certified factory, in-house heat treatment and PVD coating.',
 };
+
+const heroImageHtml =
+  '<img src="/about/hero.svg" alt="KAIPU manufacturing facility overview (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
 ---
 
 <Layout metadata={metadata}>
@@ -23,6 +26,7 @@ const metadata = {
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:mail' },
       { text: 'View Products', href: '/products' },
     ]}
+    image={heroImageHtml}
   />
 
   <Stats
