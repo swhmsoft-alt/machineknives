@@ -10,17 +10,19 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build && node scripts/postbuild.js && node scripts/audit-schema-strict.mjs",
+    "build": "astro build && node scripts/postbuild.js && node scripts/audit-schema-strict.mjs && node scripts/check-unicode.mjs",
     "preview": "astro preview",
     "astro": "astro",
-    "check": "npm run check:astro && npm run check:eslint && npm run check:prettier",
+    "check": "npm run check:astro && npm run check:eslint && npm run check:prettier && node scripts/check-unicode.mjs",
     "check:astro": "astro check",
     "check:eslint": "eslint .",
     "check:prettier": "prettier --check .",
+    "check:unicode": "node scripts/check-unicode.mjs",
     "query:audit": "node scripts/audit-query-acquisition.mjs",
     "fix": "npm run fix:eslint && npm run fix:prettier",
     "fix:eslint": "eslint --fix .",
-    "fix:prettier": "prettier -w ."
+    "fix:prettier": "prettier -w .",
+    "fix:unicode": "node scripts/fix-unicode.mjs"
   },
   "dependencies": {
     "@astro-community/astro-embed-twitter": "^0.5.11",

@@ -54,15 +54,15 @@ If you can answer those five, the grade drops out. Below is the substrate-by-sub
 
 | Substrate | Thickness | Cut type | Recommended blade | Hardness | Hone |
 |---|---|---|---|---|---|
-| 304 / 316 strip | 0.10.5 mm | Slitting | M2 HSS top + D2 bottom | HRC 64 / 60 | 510 ¦Ìm |
-| 304 / 316 sheet | 0.52 mm | Slitting / cut-to-length | M2 HSS or carbide-tipped | HRC 64 | 510 ¦Ìm |
-| 304 / 316 plate | 24 mm | Shear | Carbide shear inserts | HRA 88+ | 0.050.10 mm |
-| 304 / 316 plate | 46 mm | Shear | Carbide shear inserts only | HRA 88+ | 0.10 mm |
-| 430 / 409 strip | 0.31 mm | Slitting | D2 or SKD11 | HRC 5860 | 5 ¦Ìm |
-| 430 / 409 sheet | 13 mm | Blanking / shear | D2 or HSS | HRC 60 | 510 ¦Ìm |
-| 420 / 410 plate | 14 mm | Shear | D2 or HSS | HRC 60 | 510 ¦Ìm |
-| 17-4PH plate | 16 mm | Shear / blanking | M2 HSS or carbide | HRC 6264 | 510 ¦Ìm |
-| 2205 duplex | 14 mm | Shear | M2 HSS or carbide | HRC 64 | 510 ¦Ìm |
+| 304 / 316 strip | 0.1â€“0.5 mm | Slitting | M2 HSS top + D2 bottom | HRC 64 / 60 | 5â€“10 Âµm |
+| 304 / 316 sheet | 0.5â€“2 mm | Slitting / cut-to-length | M2 HSS or carbide-tipped | HRC 64 | 5â€“10 Âµm |
+| 304 / 316 plate | 2â€“4 mm | Shear | Carbide shear inserts | HRA 88+ | 0.05â€“0.10 mm |
+| 304 / 316 plate | 4â€“6 mm | Shear | Carbide shear inserts only | HRA 88+ | 0.10 mm |
+| 430 / 409 strip | 0.3â€“1 mm | Slitting | D2 or SKD11 | HRC 58â€“60 | 5 Âµm |
+| 430 / 409 sheet | 1â€“3 mm | Blanking / shear | D2 or HSS | HRC 60 | 5â€“10 Âµm |
+| 420 / 410 plate | 1â€“4 mm | Shear | D2 or HSS | HRC 60 | 5â€“10 Âµm |
+| 17-4PH plate | 1â€“6 mm | Shear / blanking | M2 HSS or carbide | HRC 62â€“64 | 5â€“10 Âµm |
+| 2205 duplex | 1â€“4 mm | Shear | M2 HSS or carbide | HRC 64 | 5â€“10 Âµm |
 | 2507 super-duplex | 26 mm | Shear | Carbide shear inserts | HRA 88+ | 0.10 mm |
 
 The single biggest mistake is using a D2 knife on austenitic stainless at < HRC 60  the work-hardening layer (3540 HRC) lives just under the cut, and the D2 edge cannot cut through it cleanly. The result is burr, edge rollover and the customer's "D2 doesn't work on stainless" complaint. The fix is either a harder knife (M2 HSS at HRC 64) or a geometry change (carbide shear insert with a positive rake).

@@ -8,13 +8,15 @@ AstroWind is a free, open-source website template built with **Astro v7** and **
 
 ## Quick Reference
 
-| Command           | Purpose                             |
-| ----------------- | ----------------------------------- |
-| `npm run dev`     | Start dev server at localhost:4321  |
-| `npm run build`   | Production build to `./dist/`       |
-| `npm run preview` | Preview production build locally    |
-| `npm run check`   | Run astro check + ESLint + Prettier |
-| `npm run fix`     | Auto-fix ESLint + Prettier issues   |
+| Command             | Purpose                                                |
+| ------------------- | ------------------------------------------------------ |
+| `npm run dev`       | Start dev server at localhost:4321                    |
+| `npm run build`     | Production build to `./dist/` (incl. unicode lint)     |
+| `npm run preview`   | Preview production build locally                       |
+| `npm run check`     | astro check + ESLint + Prettier + Unicode lint         |
+| `npm run fix`       | Auto-fix ESLint + Prettier issues                      |
+| `npm run fix:unicode` | Repair Windows / PowerShell mojibake in data files   |
+| `npm run check:unicode` | Run only the unicode lint                        |
 
 **Node.js requirement:** >= 22.12.0
 
@@ -114,10 +116,22 @@ Astro's native CSP is intentionally **not** enabled in this version: it is incom
 After changes, always verify:
 
 1. `npm run build` succeeds
-2. `npm run check` passes (astro check + ESLint + Prettier)
+2. `npm run check` passes (astro check + ESLint + Prettier + Unicode lint)
 3. Visual check in browser: homepage, blog, dark mode, mobile menu
+
+## Unicode / Encoding Tooling
+
+The historical pipeline wrote content files through PowerShell on zh-CN Windows, which silently downgrades any character outside GBK to `�?` (U+FFFD + ASCII `?`). Two scripts guard against it:
+
+| Script                          | Purpose                                                                                                  |
+| ------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `scripts/check-unicode.mjs`     | CI lint. Scans `src/data/{product,post,glossary}/**/*` for `U+FFFD`, GBK mojibake (`鈥?` `碌` `脳` `鈥`), and digit-gap heuristics (e.g. `100?500`). Wired into `npm run check` and `npm run build`. |
+| `scripts/fix-unicode.mjs`       | Idempotent repair. Each rule is a context-anchored `[from, to]` pair (longest first to prevent prefix collisions). Run via `npm run fix:unicode`. The legacy `fix-unicode.cjs` at repo root only covered generator scripts and is now redundant — leave it alone for now. |
+
+When adding new product / post files, ensure they round-trip through `node -e "require('fs').writeFileSync(path, content, 'utf8')"` rather than `Out-File` or `>` so the file stays clean.
 
 ## Hard Rules
 
 - **Background color**: full-site background is unique and unified. No section/card may define its own background. Only `bg-page` is permitted. Details in `.agents/skills/styling.md` § "Background Color Discipline".
+- **UTF-8 only on Windows**: never write `.md` / `.astro` / `.ts` / `.json` files through PowerShell (`>`, `Out-File`, `Set-Content` without `-Encoding utf8`). On zh-CN Windows the default code page is CP936/GBK, and any character outside GBK's repertoire (`Ø`, `±`, `≤`, `≥`, `–`, `—`, `→`, `µ`, `×`, `°`) gets downgraded to `�?` (U+FFFD + ASCII `?`) and renders as garbage in production. Use Node.js `fs.writeFileSync(path, data, 'utf8')` or any editor that explicitly saves as UTF-8 (no BOM). The `scripts/check-unicode.mjs` lint fails `npm run check` / `npm run build` if any data file contains the signature; `npm run fix:unicode` repairs it.
 - **Adding components**: read `.agents/skills/styling.md` and `.clinerules` first. Reuse existing widgets when possible. Never invent custom backgrounds.
