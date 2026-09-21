@@ -12,6 +12,18 @@ import {
   humanizeSlugSegment,
   type Level1Category,
 } from '~/utils/products';
+
+// Per-category hero images. Filenames follow each category's human-friendly
+// title in kebab-case (e.g. 'Granulator Knives' -> 'granulator-knives.jpg').
+// Uploaded 2026-09-22; one image per level-1 category.
+const CATEGORY_HERO_IMAGES: Record<Level1Category, string> = {
+  circular: '/images/products/circular-blades.jpg',
+  straight: '/images/products/straight-blades.jpg',
+  serrated: '/images/products/serrated-blades.jpg',
+  shear: '/images/products/shear-blades.jpg',
+  granulator: '/images/products/granulator-knives.jpg',
+  custom: '/images/products/custom-blades.jpg',
+};
 import {
   buildProductCategoryBreadcrumb,
   buildProductDetailBreadcrumb,
@@ -99,8 +111,7 @@ export async function getStaticPaths() {
   return paths;
 }
 
-const categoryHeroImageHtml =
-  '<img src="/images/products/cover.svg" alt="Blade family — industrial cutting tools (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+let categoryHeroImageHtml = '';
 
 const props = Astro.props as PathProps;
 
@@ -177,6 +188,8 @@ if (props.kind === 'product') {
     categoryPageTagline = meta.title;
     categoryPageIcon = meta.icon;
   }
+
+  categoryHeroImageHtml = `<img src="${CATEGORY_HERO_IMAGES[l1]}" alt="${meta.title} — industrial cutting tools" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />`;
 
   categoryBreadcrumb = buildProductCategoryBreadcrumb(l1, subs);
 }

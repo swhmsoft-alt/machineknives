@@ -429,9 +429,20 @@ const RULES = [
    "| M2 HSS or carbide | \nHRC 64 | 5–10 µm |"],
   // ── Discovered 2026-09 via Cloudflare build failure ──────────────────────
   // PowerShell zh-CN replaced UTF-8 chars with these specific codepoints:
-  ["鈥?" (U+9225+U+003F), "—"],   // em dash
-  ["脳" (U+8133), "×"],            // multiplication sign
-  ["卤" (U+5364), "±"],            // plus-minus
+  ["鈥?", "—"],   // em dash
+  ["脳", "×"],            // multiplication sign
+  ["卤", "±"],            // plus-minus
+  // ── Discovered 2026-09-22 in slitter-blade.md ─────────────────────────────
+  // Six CJK fallback code points that PowerShell emits for symbols absent from
+  // GBK's repertoire. Each is a pure-ASCII-equivalent substitution; no
+  // context anchor needed because these characters never legitimately appear
+  // in English data files under src/data/{product,post,glossary}/.
+  ["脴", "Ø"],   // diameter sign
+  ["掳", "°"],   // degree sign
+  ["渭", "μ"],   // micro sign
+  ["鈮", "≥"],   // greater-than-or-equal
+  ["鈫", "→"],   // rightwards arrow
+  ["搂", "§"],   // section sign
 ].sort((a, b) => b[0].length - a[0].length);
 
 function walk(dir, out = []) {

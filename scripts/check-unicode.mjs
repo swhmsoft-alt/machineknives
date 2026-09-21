@@ -52,10 +52,12 @@ const PATTERNS = [
     re: /\uFFFD/g,
   },
   {
-    name: 'GBK mojibake (鈥 / 碌 / 脳)',
-    // These three are the most common survivors of GBK→UTF-8 mis-decoding;
-    // they show up as literal kanji in otherwise English content.
-    re: /[\u9275\u78B5\u8133\u9280\u9396\u9332\u92F8\u9251\u9214\u91D1]/g,
+    name: 'GBK mojibake (鈥 / 碌 / 脳 / 脴 / 掳 / 渭 / 鈮 / 鈫 / 搂)',
+    // These CJK code points survive GBK→UTF-8 mis-decoding as literal kanji
+    // in otherwise English content. Expanded 2026-09-22 after production
+    // mojibake in slitter-blade.md (Circular Slitting Blade 脴250 mm OD,
+    // 15掳 / 20掳 / 25掳, Ra 鈮?0.4 渭m, etc.).
+    re: /[\u9275\u78B5\u8133\u9280\u9396\u9332\u92F8\u9251\u9214\u91D1\u8120\u63B3\u6E2D\u922E\u928B\u63E1]/g,
   },
   {
     name: 'PowerShell downgrade "?" after Chinese/extended-Latin',

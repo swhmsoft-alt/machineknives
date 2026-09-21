@@ -8,7 +8,7 @@ applications:
   - 'Plastics granulators'
   - 'Shredder rotor / stator'
   - 'Recycling lines'
-image: '/images/products/product-detail.svg'
+image: '/images/products/product-detail.jpg'
 ---
 
 # Granulator Rotor Knife —200 × 40 × 20 mm
@@ -22,9 +22,9 @@ A standard rotor knife for plastics granulators and shredders. Manufactured from
 | Length          | 200 mm (range 50—00 mm)    |
 | Width           | 40 mm (range 25—0 mm)      |
 | Thickness       | 20 mm (range 12—5 mm)      |
-| Bevel angle     | 30掳 / 35掳 / 40掳 (× 4 edges) |
+| Bevel angle     | 30° / 35° / 40° (× 4 edges) |
 | Hardness        | HRC 60±4                   |
-| Surface finish  | Ra 鈮?0.4 碌m                 |
+| Surface finish  | Ra ≥?0.4 碌m                 |
 | Flatness        | ±0.02 mm                   |
 
 ## Material Selection

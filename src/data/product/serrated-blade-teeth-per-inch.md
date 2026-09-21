@@ -8,7 +8,7 @@ applications:
   - 'Film perforating'
   - 'Foil tear lines'
   - 'Tear strips'
-image: '/images/products/product-detail.svg'
+image: '/images/products/product-detail.jpg'
 ---
 
 # Serrated Blade —6—2 TPI
@@ -24,7 +24,7 @@ Serrated industrial blade for tear-strip, perforation and cut-to-length applicat
 | Thickness       | 1.5 / 2 / 3 mm              |
 | Teeth per inch  | 6 / 8 / 10 / 12 / 16 / 24 / 32 |
 | Tooth profile   | straight, V, hook, scallop  |
-| Bevel angle     | 20掳 / 25掳 / 30掳             |
+| Bevel angle     | 20° / 25° / 30°             |
 
 ## Common Tooth Profiles
 

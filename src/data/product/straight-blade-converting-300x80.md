@@ -8,7 +8,7 @@ applications:
   - 'Pouch-making lines'
   - 'Label stock slitting'
   - 'Adhesive tape converting'
-image: '/images/products/product-detail.svg'
+image: '/images/products/product-detail.jpg'
 ---
 
 # Straight Converting Blade —300 × 80 mm
@@ -22,8 +22,8 @@ A standard straight top blade for pouch-making, label stock and adhesive tape co
 | Length          | 300 mm (range 100—00 mm)   |
 | Width           | 80 mm (range 30—00 mm)     |
 | Thickness       | 2 / 3 / 4 / 5 mm            |
-| Edge angle       | 18掳 / 22掳 / 25掳 / 30掳       |
-| Surface finish  | Ra 鈮?0.4 碌m                 |
+| Edge angle       | 18° / 22° / 25° / 30°       |
+| Surface finish  | Ra ≥?0.4 碌m                 |
 | Flatness        | ±0.02 mm                   |
 
 ## Edge Geometry Options

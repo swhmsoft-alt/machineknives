@@ -8,7 +8,7 @@ applications:
   - 'Plate guillotine cutting'
   - 'Swing-beam shearing'
   - 'Scrap shear'
-image: '/images/products/product-detail.svg'
+image: '/images/products/product-detail.jpg'
 ---
 
 # Shear Blade —Guillotine 300 × 60 mm
@@ -22,8 +22,8 @@ Industrial shear blade for guillotine and swing-beam cutting of mild steel, stai
 | Length          | 300 mm (range 100—000 mm)  |
 | Width           | 60 mm (range 30—00 mm)     |
 | Thickness       | 25 / 30 / 40 mm             |
-| Bevel angle     | 1.5掳 / 2掳 / 3掳              |
-| Cutting capacity| 鈮?12 mm mild / 鈮?8 mm SS    |
+| Bevel angle     | 1.5° / 2° / 3°              |
+| Cutting capacity| ≥?12 mm mild / ≥?8 mm SS    |
 | Flatness        | ±0.02 mm                   |
 | Hardness        | HRC 55—0                   |
 

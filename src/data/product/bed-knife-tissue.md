@@ -1,6 +1,6 @@
 ﻿---
-title: 'D2 Bed Knife for Tissue Converting —HRC 60, 18掳 Clearance Angle'
-excerpt: 'D2 high-carbon high-chromium cold-work tool steel bed knife for paper and tissue converting lines. HRC 60, 15 渭m micro-hone, 18掳 clearance angle, ISO 9001:2015 material traceability. Documented 11 to 34-day service life at 1200 m/min on 4-ply tissue.'
+title: 'D2 Bed Knife for Tissue Converting —HRC 60, 18° Clearance Angle'
+excerpt: 'D2 high-carbon high-chromium cold-work tool steel bed knife for paper and tissue converting lines. HRC 60, 15 μm micro-hone, 18° clearance angle, ISO 9001:2015 material traceability. Documented 11 to 34-day service life at 1200 m/min on 4-ply tissue.'
 category: straight
 subcategories: []
 bladeMaterial: 'D2'
@@ -9,18 +9,18 @@ applications:
   - tissue converting
   - paper & tissue
   - high-speed web converting
-image: '/images/products/product-detail.svg'
+image: '/images/products/product-detail.jpg'
 draft: false
 metadata:
-  title: 'D2 Bed Knife for Tissue Converting —HRC 60, 18掳 Clearance | KAIPU'
-  description: 'D2 bed knife for tissue converting lines. HRC 60, 15 渭m micro-hone, 18掳 clearance angle. Documented 11 to 34-day service life at 1200 m/min on 4-ply tissue. ISO 9001:2015 traceability.'
+  title: 'D2 Bed Knife for Tissue Converting —HRC 60, 18° Clearance | KAIPU'
+  description: 'D2 bed knife for tissue converting lines. HRC 60, 15 μm micro-hone, 18° clearance angle. Documented 11 to 34-day service life at 1200 m/min on 4-ply tissue. ISO 9001:2015 traceability.'
 ---
 
 ## Material Specification: D2 (HRC 60)
 
 D2 is a high-carbon, high-chromium cold-work tool steel. Its chemistry yields a high volume fraction of chromium-rich carbides (M7C3 type) that confer abrasion resistance on abrasive tissue substrates.
 
-The typical as-tempered hardness for D2 falls in the HRC 58-62 band. HRC 60 sits within this window and is the target for this bed-knife grade. D2 exhibits secondary hardening near 500 掳C tempering due to fine carbide precipitation.
+The typical as-tempered hardness for D2 falls in the HRC 58-62 band. HRC 60 sits within this window and is the target for this bed-knife grade. D2 exhibits secondary hardening near 500 °C tempering due to fine carbide precipitation.
 
 | Property | Value |
 |---|---|
@@ -38,7 +38,7 @@ The bed-knife production sequence is anchored to precision grinding as the final
 
 ### Process sequence
 
-1. Austenitization at 1000-1050 掳C, followed by air or oil quench
+1. Austenitization at 1000-1050 °C, followed by air or oil quench
 2. Double temper (transformation of retained austenite)
 3. **Inter-process datum**: post-temper hardness verification at Rockwell C, target HRC 60, is mandatory before precision grinding
 4. Precision grinding with distortion allowance (approximately 0.1-0.3 mm per side) reserved in stock
@@ -51,21 +51,21 @@ The edge geometry —not the steel grade —is the dominant variable on high-spe
 
 ### Failure mode at sharp edge
 
-At 1200 m/min on 4-ply tissue, edge temperature reaches approximately 180 掳C. A sharp edge (micro-hone under 5 渭m) is susceptible to **thermal-fatigue micro-cracking** at this temperature. The failure mode is edge chipping on a sub-millimetre scale, after which burr accelerates. This is documented, not theoretical.
+At 1200 m/min on 4-ply tissue, edge temperature reaches approximately 180 °C. A sharp edge (micro-hone under 5 μm) is susceptible to **thermal-fatigue micro-cracking** at this temperature. The failure mode is edge chipping on a sub-millimetre scale, after which burr accelerates. This is documented, not theoretical.
 
 ### Geometry specification
 
 | Parameter | Value |
 |---|---|
-| Micro-hone | 15 渭m |
-| Clearance angle | 18掳 |
+| Micro-hone | 15 μm |
+| Clearance angle | 18° |
 | Reference web speed | 1200 m/min (4-ply tissue) |
-| Reference edge temperature | approximately 180 掳C |
-| Burr control target | 鈮?50 碌m |
+| Reference edge temperature | approximately 180 °C |
+| Burr control target | ≥?50 碌m |
 
 ### Documented outcome
 
-A 15 渭m micro-hone combined with an 18掳 clearance angle extended service life from **11 days to 34 days** at 1200 m/min on 4-ply tissue —with **no steel change and no price change**. The grade (D2, HRC 60) was never the problem; edge preparation was.
+A 15 μm micro-hone combined with an 18° clearance angle extended service life from **11 days to 34 days** at 1200 m/min on 4-ply tissue —with **no steel change and no price change**. The grade (D2, HRC 60) was never the problem; edge preparation was.
 
 ### Tolerance control
 
@@ -73,7 +73,7 @@ Bed-knife flatness and parallelism across the cutting length directly affect sli
 
 ## Quality and Traceability: ISO 9001:2015
 
-The bed-knife production operates under ISO 9001:2015 with material traceability per 搂8.5.
+The bed-knife production operates under ISO 9001:2015 with material traceability per §8.5.
 
 ### Traceability chain
 
@@ -88,19 +88,19 @@ Service-life data on specific lines (operating speed, substrate, days) is engine
 ## FAQ
 
 **Q: Why does a sharp D2 edge chip on a 1200 m/min tissue line?**
-A: At 1200 m/min on 4-ply tissue, edge temperature reaches approximately 180 掳C. A sharp edge (micro-hone under 5 渭m) is susceptible to thermal-fatigue micro-cracking. The failure mode is sub-millimetre edge chipping, followed by accelerated burr formation.
+A: At 1200 m/min on 4-ply tissue, edge temperature reaches approximately 180 °C. A sharp edge (micro-hone under 5 μm) is susceptible to thermal-fatigue micro-cracking. The failure mode is sub-millimetre edge chipping, followed by accelerated burr formation.
 
 **Q: Does changing the steel grade fix edge-chipping on tissue lines?**
-A: No. The 1200 m/min case study on 4-ply tissue showed that 15 渭m micro-hone plus 18掳 clearance angle (with D2 at HRC 60 unchanged) extended service life from 11 to 34 days. The steel grade was not the variable.
+A: No. The 1200 m/min case study on 4-ply tissue showed that 15 μm micro-hone plus 18° clearance angle (with D2 at HRC 60 unchanged) extended service life from 11 to 34 days. The steel grade was not the variable.
 
 **Q: What clearance angle should a tissue bed knife have?**
-A: For high web speed (1200 m/min) on tissue, 18掳 is the documented working clearance angle in our case data. The conventional 22掳 clearance on a sharp edge chatters and chips; 18掳 on a 15 渭m hone runs clean.
+A: For high web speed (1200 m/min) on tissue, 18° is the documented working clearance angle in our case data. The conventional 22° clearance on a sharp edge chatters and chips; 18° on a 15 μm hone runs clean.
 
 **Q: What hardness should a D2 tissue bed knife be?**
 A: HRC 60, which sits within the D2 typical as-tempered band of HRC 58-62. Hardness above this range risks chipping on a thin blade; below risks accelerated wear.
 
 **Q: How is the heat-treatment batch linked to the finished blade?**
-A: ISO 9001:2015 搂8.5.2 requires identification of outputs throughout production. Each finished blade's dimensional and edge-prep inspection record references back to the material heat number, the mill certificate, and the heat-treatment batch record.
+A: ISO 9001:2015 §8.5.2 requires identification of outputs throughout production. Each finished blade's dimensional and edge-prep inspection record references back to the material heat number, the mill certificate, and the heat-treatment batch record.
 
 **Q: Can burr height be controlled below 50 碌m on tissue?**
-A: Yes —`鈮?50 碌m` is the burr control target on tissue slitting, achieved by the 18掳 clearance angle and 15 渭m micro-hone combination. Exceeding this threshold indicates either edge wear (replace) or geometry drift (regrind or scrap).
+A: Yes —`≥?50 碌m` is the burr control target on tissue slitting, achieved by the 18° clearance angle and 15 μm micro-hone combination. Exceeding this threshold indicates either edge wear (replace) or geometry drift (regrind or scrap).
