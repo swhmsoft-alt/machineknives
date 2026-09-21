@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
@@ -6,34 +6,34 @@ import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Food Processing Blades — Stainless & Tool Steel for Slicing, Dicing and Portioning',
+  title: 'Food Processing Blades 鈥?Stainless & Tool Steel for Slicing, Dicing and Portioning',
   description:
-    'Stainless and tool-steel blades for food slicing, dicing and portioning lines. Washdown-rated surface finish, full material traceability per ISO 9001:2015 §8.5, food-contact compliance documentation supplied.',
+    'Stainless and tool-steel blades for food slicing, dicing and portioning lines. Washdown-rated surface finish, full material traceability per ISO 9001:2015 搂8.5, food-contact compliance documentation supplied.',
 };
 
 const heroImageHtml =
-  '<img src="/images/industries/food-processing/hero.svg" alt="Stainless steel food slicing blades on a portioning line (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+  '<img src="/images/industries/food-processing/hygienic-line-overview.svg" alt="Stainless steel food slicing blades on a portioning line (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
 
 const processImageHtml =
-  '<img src="/images/industries/food-processing/content.svg" alt="Hygienic food-grade blade design (placeholder)" class="mx-auto w-full rounded-lg shadow-lg" width="500" height="500" loading="lazy" />';
+  '<img src="/images/industries/food-processing/cip-system-diagram.svg" alt="Hygienic food-grade blade design (placeholder)" class="mx-auto w-full rounded-lg shadow-lg" width="500" height="500" loading="lazy" />';
 
 const features = [
   {
     title: 'Material grades',
     description:
-      'Martensitic stainless 1.4116 (AISI 440B) and 1.4034 (AISI 420) for direct food-contact applications. D2 (1.2379) where the cut is indirect or upstream of the contact zone. Hardness HRC 54–58 stainless, HRC 58–62 D2.',
+      'Martensitic stainless 1.4116 (AISI 440B) and 1.4034 (AISI 420) for direct food-contact applications. D2 (1.2379) where the cut is indirect or upstream of the contact zone. Hardness HRC 54鈥?8 stainless, HRC 58鈥?2 D2.',
     icon: 'tabler:certificate',
   },
   {
     title: 'Washdown-rated finish',
     description:
-      'Surface roughness ≤ Ra 0.4 µm ground, ≤ Ra 0.2 µm optional polish, no crevices at the grind transition. Knife geometry designed to shed water — no horizontal pockets that trap product residue through CIP cycles.',
+      'Surface roughness 鈮?Ra 0.4 碌m ground, 鈮?Ra 0.2 碌m optional polish, no crevices at the grind transition. Knife geometry designed to shed water 鈥?no horizontal pockets that trap product residue through CIP cycles.',
     icon: 'tabler:droplet',
   },
   {
     title: 'Traceability and compliance',
     description:
-      'Mill certificate, heat-treatment chart and dimensional report shipped with every knife. Material traceability documented per ISO 9001:2015 §8.5. Lot number laser-marked on each blade for recall traceability.',
+      'Mill certificate, heat-treatment chart and dimensional report shipped with every knife. Material traceability documented per ISO 9001:2015 搂8.5. Lot number laser-marked on each blade for recall traceability.',
     icon: 'tabler:file-check',
   },
   {
@@ -45,7 +45,7 @@ const features = [
   {
     title: 'Edge geometry',
     description:
-      'Honed edge 10–25 µm for clean slicing, scalloped / serrated for crusty product, micro-honed 30–50 µm for frozen product. Bevel angle selected per substrate — typically 15°–22° on slicing blades, 30°–45° on portioning tools.',
+      'Honed edge 10鈥?5 碌m for clean slicing, scalloped / serrated for crusty product, micro-honed 30鈥?0 碌m for frozen product. Bevel angle selected per substrate 鈥?typically 15掳鈥?2掳 on slicing blades, 30掳鈥?5掳 on portioning tools.',
     icon: 'tabler:blade',
   },
   {
@@ -61,7 +61,7 @@ const features = [
   <Hero
     tagline="Food Processing"
     title="Stainless and Tool-Steel Blades for Slicing, Dicing and Portioning"
-    subtitle="Designed for washdown environments and food-contact compliance. Material traceability documented per ISO 9001:2015 §8.5, mill certificates and CMM reports shipped with every knife."
+    subtitle="Designed for washdown environments and food-contact compliance. Material traceability documented per ISO 9001:2015 搂8.5, mill certificates and CMM reports shipped with every knife."
     actions={[
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:mail' },
       { text: 'View Custom Blades', href: '/products/custom/' },
@@ -76,21 +76,21 @@ const features = [
     subtitle="A food blade that survives CIP is one where water, residue and bacteria cannot hide. Geometry, surface finish and fastener selection all have to align."
     content={`
       <p>
-        Food lines are washed down 2–4 times per shift with chlorinated sanitiser at 60–80 °C. A blade that survives this has to shed water, drain cleanly and tolerate thermal cycling. Knives that trap product residue in horizontal pockets fail CIP and fail audit.
+        Food lines are washed down 2鈥? times per shift with chlorinated sanitiser at 60鈥?0 掳C. A blade that survives this has to shed water, drain cleanly and tolerate thermal cycling. Knives that trap product residue in horizontal pockets fail CIP and fail audit.
       </p>
       <p class="mt-4">
-        The two failure modes we see most often — edge passivation from residue build-up and corrosion pitting at the grind transition — both trace back to the same root cause: the surface finish was specified for cutting performance, not washdown compatibility.
+        The two failure modes we see most often 鈥?edge passivation from residue build-up and corrosion pitting at the grind transition 鈥?both trace back to the same root cause: the surface finish was specified for cutting performance, not washdown compatibility.
       </p>
     `}
     items={[
       {
         title: 'Surface finish and drainage',
-        description: 'Surface roughness ≤ Ra 0.4 µm ground, ≤ Ra 0.2 µm optional polish. No crevices at the grind transition — geometry designed to shed water and CIP chemicals.',
+        description: 'Surface roughness 鈮?Ra 0.4 碌m ground, 鈮?Ra 0.2 碌m optional polish. No crevices at the grind transition 鈥?geometry designed to shed water and CIP chemicals.',
         icon: 'tabler:droplet',
       },
       {
         title: 'Material traceability and lot marking',
-        description: 'Mill certificate, heat-treatment chart and dimensional report shipped with every knife. Lot number laser-marked on each blade for recall traceability per ISO 9001:2015 §8.5.',
+        description: 'Mill certificate, heat-treatment chart and dimensional report shipped with every knife. Lot number laser-marked on each blade for recall traceability per ISO 9001:2015 搂8.5.',
         icon: 'tabler:file-check',
       },
       {
@@ -106,7 +106,7 @@ const features = [
     id="capabilities"
     tagline="Engineering scope"
     title="Six specification levers for food processing"
-    subtitle="Food-grade blades live or die on surface finish, traceability and edge geometry. Each lever below is documented, measured and reported — not assumed."
+    subtitle="Food-grade blades live or die on surface finish, traceability and edge geometry. Each lever below is documented, measured and reported 鈥?not assumed."
     items={features}
     columns={3}
     defaultIcon="tabler:leaf"

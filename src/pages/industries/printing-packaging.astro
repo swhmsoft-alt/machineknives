@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
@@ -6,46 +6,46 @@ import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Printing & Packaging Blades — Slitting, Sheeting and Rewinding Knives',
+  title: 'Printing & Packaging Blades 鈥?Slitting, Sheeting and Rewinding Knives',
   description:
-    'Precision slitting, sheeting and rewinding blades for printing and packaging lines. Paper 40–400 gsm, BOPP/PET film 12–200 µm, alu-foil 6–50 µm. D2 / SKD11 per ASTM A681 / JIS G4404. Tight burr control protects printed surfaces.',
+    'Precision slitting, sheeting and rewinding blades for printing and packaging lines. Paper 40鈥?00 gsm, BOPP/PET film 12鈥?00 碌m, alu-foil 6鈥?0 碌m. D2 / SKD11 per ASTM A681 / JIS G4404. Tight burr control protects printed surfaces.',
 };
 
 const heroImageHtml =
-  '<img src="/images/industries/printing-packaging/hero.svg" alt="Slitter blades on a printing and packaging converting line (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+  '<img src="/images/industries/printing-packaging/slitter-line-overview.svg" alt="Slitter blades on a printing and packaging converting line (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
 
 const processImageHtml =
-  '<img src="/images/industries/printing-packaging/content.svg" alt="Printing slitting edge prep science (placeholder)" class="mx-auto w-full rounded-lg shadow-lg" width="500" height="500" loading="lazy" />';
+  '<img src="/images/industries/printing-packaging/edge-prep-detail.svg" alt="Printing slitting edge prep science (placeholder)" class="mx-auto w-full rounded-lg shadow-lg" width="500" height="500" loading="lazy" />';
 
 const features = [
   {
     title: 'Substrate range',
     description:
-      'Paper 40–400 gsm, BOPP / PET / PE film 12–200 µm, alu-foil 6–50 µm, and common laminate structures (PET/PE, BOPP/CPP, paper/film/foil). Edge geometry tuned to substrate to control dust, burring and stretch on unwind.',
+      'Paper 40鈥?00 gsm, BOPP / PET / PE film 12鈥?00 碌m, alu-foil 6鈥?0 碌m, and common laminate structures (PET/PE, BOPP/CPP, paper/film/foil). Edge geometry tuned to substrate to control dust, burring and stretch on unwind.',
     icon: 'tabler:stack',
   },
   {
     title: 'Edge preparation',
     description:
-      'Sharp edge < 5 µm for film and printed surfaces, light hone 5–25 µm for substrate edges, micro-hone 25–75 µm for abrasive or recycled-content stocks. Edge prep specified as a numeric radius, not "slightly honed".',
+      'Sharp edge < 5 碌m for film and printed surfaces, light hone 5鈥?5 碌m for substrate edges, micro-hone 25鈥?5 碌m for abrasive or recycled-content stocks. Edge prep specified as a numeric radius, not "slightly honed".',
     icon: 'tabler:blade',
   },
   {
     title: 'Material grades',
     description:
-      'D2 (DIN 1.2379) per ASTM A681 and JIS SKD11 (G4404). Hardness HRC 58–62 for general slitting and sheeting. Optional PVD coatings (TiN, TiCN, CrN) per ISO 14574 to extend service interval on adhesive or coated substrates.',
+      'D2 (DIN 1.2379) per ASTM A681 and JIS SKD11 (G4404). Hardness HRC 58鈥?2 for general slitting and sheeting. Optional PVD coatings (TiN, TiCN, CrN) per ISO 14574 to extend service interval on adhesive or coated substrates.',
     icon: 'tabler:certificate',
   },
   {
     title: 'Blade geometries',
     description:
-      'Top and bottom circular slitters, shear plates, score blades, perforating rules and cut-to-length knives. Standard Ø 110 – Ø 350 mm blanks; flat stock to 80 × 2,000 mm. Run-out controlled to ≤ 0.01 mm on Ø 250 mm blanks.',
+      'Top and bottom circular slitters, shear plates, score blades, perforating rules and cut-to-length knives. Standard 脴 110 鈥?脴 350 mm blanks; flat stock to 80 脳 2,000 mm. Run-out controlled to 鈮?0.01 mm on 脴 250 mm blanks.',
     icon: 'tabler:layout-grid',
   },
   {
     title: 'Tolerances and finish',
     description:
-      'Standard ± 0.01 mm on critical dimensions (OD, ID, thickness at bevel), ± 0.05 mm on non-critical. Surface roughness ≤ Ra 0.4 µm ground, ≤ Ra 0.2 µm optional. CMM-traceable inspection reports shipped with the parts.',
+      'Standard 卤 0.01 mm on critical dimensions (OD, ID, thickness at bevel), 卤 0.05 mm on non-critical. Surface roughness 鈮?Ra 0.4 碌m ground, 鈮?Ra 0.2 碌m optional. CMM-traceable inspection reports shipped with the parts.',
     icon: 'tabler:ruler-measure',
   },
   {
@@ -61,7 +61,7 @@ const features = [
   <Hero
     tagline="Printing & Packaging"
     title="Slitting, Sheeting and Rewinding Blades"
-    subtitle="Tight burr control protects printed surfaces and clean edges on slitter-rewinder, sheeter and cut-to-length lines. Materials specified per ASTM A681 (D2) and JIS SKD11, hardness HRC 58–62."
+    subtitle="Tight burr control protects printed surfaces and clean edges on slitter-rewinder, sheeter and cut-to-length lines. Materials specified per ASTM A681 (D2) and JIS SKD11, hardness HRC 58鈥?2."
     actions={[
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:mail' },
       { text: 'View Circular Blades', href: '/products/circular/' },
@@ -73,29 +73,29 @@ const features = [
     id="slitting-science"
     tagline="Slitting science"
     title="How slitting blades protect printed surfaces"
-    subtitle="Slitting at 600 m/min separates 9 µm ink from 12 µm film without lifting, tearing or scuffing. Edge preparation and burr control drive quality more than steel grade does."
+    subtitle="Slitting at 600 m/min separates 9 碌m ink from 12 碌m film without lifting, tearing or scuffing. Edge preparation and burr control drive quality more than steel grade does."
     content={`
       <p>
-        A printing slitter cuts the printed web to width. The cut edge has to be clean enough that the printed surface downstream is not damaged, and tight enough that the wound roll keeps its register. Edge preparation controls both — not steel grade.
+        A printing slitter cuts the printed web to width. The cut edge has to be clean enough that the printed surface downstream is not damaged, and tight enough that the wound roll keeps its register. Edge preparation controls both 鈥?not steel grade.
       </p>
       <p class="mt-4">
-        The two failure modes we see most often — ink lifting at the cut edge and telescoping in the wound roll — both trace back to the same root cause: the edge radius was specified as a generic "sharp" rather than as a number tuned to the substrate stack.
+        The two failure modes we see most often 鈥?ink lifting at the cut edge and telescoping in the wound roll 鈥?both trace back to the same root cause: the edge radius was specified as a generic "sharp" rather than as a number tuned to the substrate stack.
       </p>
     `}
     items={[
       {
         title: 'Edge prep as a numeric radius',
-        description: 'Sharp < 5 µm for film and printed surfaces; light hone 5–25 µm for paper edges; micro-hone 25–75 µm for abrasive or recycled-content stocks. Specified as a number, not "slightly honed".',
+        description: 'Sharp < 5 碌m for film and printed surfaces; light hone 5鈥?5 碌m for paper edges; micro-hone 25鈥?5 碌m for abrasive or recycled-content stocks. Specified as a number, not "slightly honed".',
         icon: 'tabler:blade',
       },
       {
         title: 'Burr control on the cut edge',
-        description: 'Burr kept below 25 µm on the cut edge. Optical comparator verification before dispatch. Burr > 50 µm damages downstream rollers and unwinds unevenly.',
+        description: 'Burr kept below 25 碌m on the cut edge. Optical comparator verification before dispatch. Burr > 50 碌m damages downstream rollers and unwinds unevenly.',
         icon: 'tabler:ruler',
       },
       {
-        title: 'Run-out on Ø 250 mm blanks',
-        description: 'Run-out controlled to ≤ 0.01 mm on Ø 250 mm blanks. This drives clean trim edges on multi-lane label lines and prevents web wander at the slitter station.',
+        title: 'Run-out on 脴 250 mm blanks',
+        description: 'Run-out controlled to 鈮?0.01 mm on 脴 250 mm blanks. This drives clean trim edges on multi-lane label lines and prevents web wander at the slitter station.',
         icon: 'tabler:rotate-clockwise',
       },
     ]}
@@ -106,7 +106,7 @@ const features = [
     id="capabilities"
     tagline="Engineering scope"
     title="Six specification levers, not six part numbers"
-    subtitle="Each application is defined by substrate, geometry, hardness, edge prep, tolerance and surface finish. Pick the lever that drives your cut quality — we will quote the steel grade that falls out."
+    subtitle="Each application is defined by substrate, geometry, hardness, edge prep, tolerance and surface finish. Pick the lever that drives your cut quality 鈥?we will quote the steel grade that falls out."
     items={features}
     columns={3}
     defaultIcon="tabler:printer"

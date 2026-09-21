@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
@@ -8,26 +8,26 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Industry Solutions — Machine Knives for Printing, Packaging, Food & Recycling',
+  title: 'Industry Solutions 鈥?Machine Knives for Printing, Packaging, Food & Recycling',
   description:
-    'KAIPU supplies precision machine knives to six core industries since 1998. ISO 9001 certified, D2 / M2 / SKD11 / carbide materials, ASTM A681 / DIN 1.2379 / JIS SKD11 grades, in-house heat treatment and PVD coating. Lead time typically 15–25 business days.',
+    'KAIPU supplies precision machine knives to six core industries since 1998. ISO 9001 certified, D2 / M2 / SKD11 / carbide materials, ASTM A681 / DIN 1.2379 / JIS SKD11 grades, in-house heat treatment and PVD coating. Lead time typically 15鈥?5 business days.',
 };
 
 const heroImageHtml =
-  '<img src="/images/solutions/hero.svg" alt="Six industry applications served by KAIPU (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+  '<img src="/images/solutions/industry-applications-overview.svg" alt="Six industry applications served by KAIPU (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
 
 const stepsMaterialImageHtml =
-  '<img src="/images/solutions/steps-1.svg" alt="Six steel families for industrial cutting (placeholder)" class="w-full rounded-md shadow-lg" width="432" height="768" loading="lazy" />';
+  '<img src="/images/solutions/material-families-overview.svg" alt="Six steel families for industrial cutting (placeholder)" class="w-full rounded-md shadow-lg" width="432" height="768" loading="lazy" />';
 
 const stepsProcessImageHtml =
-  '<img src="/images/solutions/steps-2.svg" alt="Engagement process — six documented stages from drawing to dispatch (placeholder)" class="w-full rounded-md shadow-lg" width="432" height="768" loading="lazy" />';
+  '<img src="/images/solutions/engagement-process-flow.svg" alt="Engagement process 鈥?six documented stages from drawing to dispatch (placeholder)" class="w-full rounded-md shadow-lg" width="432" height="768" loading="lazy" />';
 
 // Page-level JSON-LD: Service schema (the global Layout only injects Service
 // schema on the home page). This fills the gap for /solutions so AI crawlers
 // and Google can cite the page as an offering rather than a generic article.
 //
 // Keys are double-quoted so the literal pattern `"@type":"Service"` appears in
-// the .astro source — required by some validators that scan page source rather
+// the .astro source 鈥?required by some validators that scan page source rather
 // than rendered HTML.
 const siteUrl = String(Astro.site ?? 'https://www.machine-knives.net').replace(/\/$/, '');
 const serviceLd = {
@@ -96,7 +96,7 @@ const howToLd = {
       "@type": "HowToStep",
       "position": 1,
       "name": "Submit drawing or sample",
-      "text": "Send a 2D drawing (DXF, PDF, DWG), a 3D model (STEP, IGES, Parasolid, SolidWorks, CATIA, NX) or a worn sample. Partial information is acceptable — a hand sketch plus substrate and one operating parameter is enough to quote."
+      "text": "Send a 2D drawing (DXF, PDF, DWG), a 3D model (STEP, IGES, Parasolid, SolidWorks, CATIA, NX) or a worn sample. Partial information is acceptable 鈥?a hand sketch plus substrate and one operating parameter is enough to quote."
     },
     {
       "@type": "HowToStep",
@@ -126,7 +126,7 @@ const howToLd = {
       "@type": "HowToStep",
       "position": 6,
       "name": "Dispatch and after-sales support",
-      "text": "Standard lead time 15–25 business days from drawing confirmation. Express 7–10 days on selected materials. Re-sharpening, recoating and replacement service available throughout blade life."
+      "text": "Standard lead time 15鈥?5 business days from drawing confirmation. Express 7鈥?0 days on selected materials. Re-sharpening, recoating and replacement service available throughout blade life."
     }
   ]
 };
@@ -139,23 +139,23 @@ const blogPostingLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline":
-    "The KAIPU 5-Factor Blade Selection Framework — How to Specify the Right Industrial Knife in 30 Minutes",
+    "The KAIPU 5-Factor Blade Selection Framework 鈥?How to Specify the Right Industrial Knife in 30 Minutes",
   "url": "https://www.machine-knives.net/kaipu-5-factor-blade-selection-framework/",
   "datePublished": "2026-09-11",
   "dateModified": "2026-09-11",
   "author": { "@type": "Organization", "name": "KAIPU Engineering" },
   "publisher": { "@type": "Organization", "name": "KAIPU Industrial Blades" },
   "description":
-    "A structured method our engineers use to match substrate, geometry, hardness target, edge preparation and operating speed to a production line — without second-guessing the steel grade.",
+    "A structured method our engineers use to match substrate, geometry, hardness target, edge preparation and operating speed to a production line 鈥?without second-guessing the steel grade.",
 };
 ---
 
 <Layout metadata={metadata}>
-  {/* ── Page-level Service JSON-LD ─────────────────────────────────── */}
+  {/* 鈹€鈹€ Page-level Service JSON-LD 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */}
   <script type="application/ld+json" is:inline set:html={JSON.stringify(serviceLd)} />
-  {/* ── Page-level HowTo JSON-LD ────────────────────────────────────── */}
+  {/* 鈹€鈹€ Page-level HowTo JSON-LD 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */}
   <script type="application/ld+json" is:inline set:html={JSON.stringify(howToLd)} />
-  {/* ── Page-level BlogPosting JSON-LD (cross-link to engineering notebook) */}
+  {/* 鈹€鈹€ Page-level BlogPosting JSON-LD (cross-link to engineering notebook) */}
   <script type="application/ld+json" is:inline set:html={JSON.stringify(blogPostingLd)} />
 
   <Hero
@@ -173,7 +173,7 @@ const blogPostingLd = {
     image={heroImageHtml}
   />
 
-  {/* ── Awareness: the problems buyers face before they reach for a supplier ── */}
+  {/* 鈹€鈹€ Awareness: the problems buyers face before they reach for a supplier 鈹€鈹€ */}
   <section class="max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-16">
     <p class="text-sm uppercase tracking-wider text-primary font-semibold mb-3">Why lines stop</p>
     <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6">
@@ -183,7 +183,7 @@ const blogPostingLd = {
       <article class="border border-slate-200 dark:border-slate-700 rounded-lg p-6 shadow-sm">
         <h3 class="text-lg font-semibold mb-2">Premature edge wear</h3>
         <p class="text-muted">
-          Lines running abrasive composites, glass-filled polymers or recycled feedstock can lose 0.2–0.4 mm of edge
+          Lines running abrasive composites, glass-filled polymers or recycled feedstock can lose 0.2鈥?.4 mm of edge
           per shift. The root cause is almost always a mismatch between substrate and cutting geometry, not the
           hardness number alone.
         </p>
@@ -191,8 +191,8 @@ const blogPostingLd = {
       <article class="border border-slate-200 dark:border-slate-700 rounded-lg p-6 shadow-sm">
         <h3 class="text-lg font-semibold mb-2">Dust, burr and tear-out</h3>
         <p class="text-muted">
-          Tissue and paper converters measure reject rate in basis-weight points. A 50 µm burr change can lift reject
-          from 0.3 % to over 2 % — and most operators blame the steel when the real fault is the grind angle.
+          Tissue and paper converters measure reject rate in basis-weight points. A 50 碌m burr change can lift reject
+          from 0.3 % to over 2 % 鈥?and most operators blame the steel when the real fault is the grind angle.
         </p>
       </article>
       <article class="border border-slate-200 dark:border-slate-700 rounded-lg p-6 shadow-sm">
@@ -209,7 +209,7 @@ const blogPostingLd = {
     id="industries"
     tagline="Industries Served"
     title="Six Core Sectors, One Trusted Manufacturer"
-    subtitle="Each industry carries its own cutting mechanics — web tension, abrasive wear, hygiene grade, throughput. We tune the blade geometry and steel grade to match. KAIPU has supplied converters, recyclers and OEMs across four continents since 1998."
+    subtitle="Each industry carries its own cutting mechanics 鈥?web tension, abrasive wear, hygiene grade, throughput. We tune the blade geometry and steel grade to match. KAIPU has supplied converters, recyclers and OEMs across four continents since 1998."
     items={[
       {
         title: 'Printing & Packaging',
@@ -219,32 +219,32 @@ const blogPostingLd = {
       {
         title: 'Paper & Tissue',
         description:
-          '<span id="paper-tissue" class="block scroll-mt-24"></span>Long-life bed knives and top blades for tissue converting lines. Optimised cutting angles reduce dust and extend service intervals. Compatible with 600–2,400 m/min tissue lines.',
+          '<span id="paper-tissue" class="block scroll-mt-24"></span>Long-life bed knives and top blades for tissue converting lines. Optimised cutting angles reduce dust and extend service intervals. Compatible with 600鈥?,400 m/min tissue lines.',
       },
       {
         title: 'Food Processing',
         description:
-          '<span id="food-processing" class="block scroll-mt-24"></span>Stainless and tool-steel blades for slicing, dicing and portioning. Designed for washdown environments and food-contact compliance. Material traceability documented per ISO 9001:2015 §8.5.',
+          '<span id="food-processing" class="block scroll-mt-24"></span>Stainless and tool-steel blades for slicing, dicing and portioning. Designed for washdown environments and food-contact compliance. Material traceability documented per ISO 9001:2015 搂8.5.',
       },
       {
         title: 'Plastics Recycling',
         description:
-          '<span id="plastics-recycling" class="block scroll-mt-24"></span>Granulator and shredder rotor / stator knives engineered to cut through contamination, glass fibre and reinforced polymers. D2 and M2 HSS options, with optional TiN or CrN coating to extend interval by 2–4×.',
+          '<span id="plastics-recycling" class="block scroll-mt-24"></span>Granulator and shredder rotor / stator knives engineered to cut through contamination, glass fibre and reinforced polymers. D2 and M2 HSS options, with optional TiN or CrN coating to extend interval by 2鈥?脳.',
       },
       {
         title: 'Converting',
         description:
-          '<span id="converting" class="block scroll-mt-24"></span>Trim and score blades for pouch-making, label stock and adhesive tape lines. Repeatable edge profile across production shifts, with run-out controlled to ≤ 0.01 mm on Ø 250 mm blanks.',
+          '<span id="converting" class="block scroll-mt-24"></span>Trim and score blades for pouch-making, label stock and adhesive tape lines. Repeatable edge profile across production shifts, with run-out controlled to 鈮?0.01 mm on 脴 250 mm blanks.',
       },
       {
         title: 'Metalworking',
         description:
-          '<span id="metalworking" class="block scroll-mt-24"></span>Shear blades for guillotine and swing-beam cutting of mild steel, stainless and aluminium plate up to 12mm. HRC 58–62 working hardness, ground and polished to ≤ Ra 0.4 µm.',
+          '<span id="metalworking" class="block scroll-mt-24"></span>Shear blades for guillotine and swing-beam cutting of mild steel, stainless and aluminium plate up to 12mm. HRC 58鈥?2 working hardness, ground and polished to 鈮?Ra 0.4 碌m.',
       },
     ]}
   />
 
-  {/* ── Comparison table: material vs. application (audits "realTableElement") ── */}
+  {/* 鈹€鈹€ Comparison table: material vs. application (audits "realTableElement") 鈹€鈹€ */}
   <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
     <p class="text-sm uppercase tracking-wider text-primary font-semibold mb-3">Material selection</p>
     <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-3">
@@ -269,35 +269,35 @@ const blogPostingLd = {
           <tr class="border-b border-slate-200 dark:border-slate-700">
             <td class="px-4 py-3 font-medium">D2 (1.2379)</td>
             <td class="px-4 py-3">ASTM A681, DIN 1.2379, JIS SKD11</td>
-            <td class="px-4 py-3">58–62</td>
-            <td class="px-4 py-3">Paper, film, foil, laminate — general slitting and sheeting</td>
+            <td class="px-4 py-3">58鈥?2</td>
+            <td class="px-4 py-3">Paper, film, foil, laminate 鈥?general slitting and sheeting</td>
             <td class="px-4 py-3">High-impact shredding, thin blades under 1.5 mm</td>
           </tr>
           <tr class="border-b border-slate-200 dark:border-slate-700">
             <td class="px-4 py-3 font-medium">M2 HSS (1.3343)</td>
             <td class="px-4 py-3">ASTM A600, DIN 1.3343, JIS SKH51</td>
-            <td class="px-4 py-3">60–65</td>
+            <td class="px-4 py-3">60鈥?5</td>
             <td class="px-4 py-3">High-speed slitting, granulator rotors, heat at the edge</td>
             <td class="px-4 py-3">Corrosive washdown, food contact</td>
           </tr>
           <tr class="border-b border-slate-200 dark:border-slate-700">
             <td class="px-4 py-3 font-medium">SKD11 / DC53</td>
             <td class="px-4 py-3">JIS G4404, DIN 1.2379 modified</td>
-            <td class="px-4 py-3">58–62</td>
-            <td class="px-4 py-3">Thin blades ≤ 2 mm, fine carbide distribution, tighter tolerances</td>
+            <td class="px-4 py-3">58鈥?2</td>
+            <td class="px-4 py-3">Thin blades 鈮?2 mm, fine carbide distribution, tighter tolerances</td>
             <td class="px-4 py-3">Bulk abrasive shredding</td>
           </tr>
           <tr class="border-b border-slate-200 dark:border-slate-700">
             <td class="px-4 py-3 font-medium">Tungsten carbide</td>
-            <td class="px-4 py-3">ISO 513, K10–K20 grade</td>
-            <td class="px-4 py-3">HRA 89–92</td>
+            <td class="px-4 py-3">ISO 513, K10鈥揔20 grade</td>
+            <td class="px-4 py-3">HRA 89鈥?2</td>
             <td class="px-4 py-3">Abrasive composites, fibre-reinforced polymers, long intervals</td>
             <td class="px-4 py-3">Impact-loaded applications, low RPM</td>
           </tr>
           <tr class="border-b border-slate-200 dark:border-slate-700">
             <td class="px-4 py-3 font-medium">420 / 440C stainless</td>
             <td class="px-4 py-3">ASTM A276, EN 1.4125</td>
-            <td class="px-4 py-3">50–58</td>
+            <td class="px-4 py-3">50鈥?8</td>
             <td class="px-4 py-3">Food, pharma, washdown environments</td>
             <td class="px-4 py-3">High-volume abrasive cutting</td>
           </tr>
@@ -305,14 +305,14 @@ const blogPostingLd = {
             <td class="px-4 py-3 font-medium">PVD-coated (TiN, TiCN, CrN, DLC)</td>
             <td class="px-4 py-3">ISO 14574 (coating classification)</td>
             <td class="px-4 py-3">Substrate + coating</td>
-            <td class="px-4 py-3">Adhesive build-up, friction-sensitive cuts, interval extension 2–4×</td>
+            <td class="px-4 py-3">Adhesive build-up, friction-sensitive cuts, interval extension 2鈥?脳</td>
             <td class="px-4 py-3">Re-sharpening frequency too high to justify coating cost</td>
           </tr>
         </tbody>
       </table>
     </div>
     <p class="text-sm text-muted mt-4">
-      Standard tolerances: ± 0.01 mm on critical dimensions, ± 0.05 mm on non-critical, surface roughness ≤ Ra 0.4 µm
+      Standard tolerances: 卤 0.01 mm on critical dimensions, 卤 0.05 mm on non-critical, surface roughness 鈮?Ra 0.4 碌m
       unless otherwise specified. Material grades cited per
       <a href="https://www.astm.org/a0681_a0681m-20.html" class="text-primary hover:underline">ASTM A681</a>,
       <a href="https://www.iso.org/standard/62085.html" class="text-primary hover:underline">ISO 9001:2015</a>,
@@ -322,37 +322,37 @@ const blogPostingLd = {
     </p>
   </section>
 
-  {/* ── KAIPU 5-Factor Method (inline summary — full version in /kaipu-5-factor-...) ── */}
+  {/* 鈹€鈹€ KAIPU 5-Factor Method (inline summary 鈥?full version in /kaipu-5-factor-...) 鈹€鈹€ */}
   <Steps
     id="framework"
     tagline="Our Method"
-    title="The KAIPU 5-Factor Selection Method — Five Dimensions of Blade Specification"
-    subtitle="A proprietary 30-minute framework our engineering team runs on every inquiry, evaluating each application across five dimensions. We specify the cut, not the steel — the grade falls out of the first four dimensions. Full breakdown published in our engineering notebook."
+    title="The KAIPU 5-Factor Selection Method 鈥?Five Dimensions of Blade Specification"
+    subtitle="A proprietary 30-minute framework our engineering team runs on every inquiry, evaluating each application across five dimensions. We specify the cut, not the steel 鈥?the grade falls out of the first four dimensions. Full breakdown published in our engineering notebook."
     items={[
       {
-        title: 'Factor 1: Substrate — what is being cut',
+        title: 'Factor 1: Substrate 鈥?what is being cut',
         description:
-          'The substrate dictates the wear mechanism, the contamination tolerance and (in food or pharma) the regulatory class. We classify into six families: paper and tissue, film and foil, food and pharma, plastics, recycled feedstock, metal. We do not quote until substrate is pinned down — a D2 blade that lasts 90 days on paper will last 9 days on glass-filled PA66.',
+          'The substrate dictates the wear mechanism, the contamination tolerance and (in food or pharma) the regulatory class. We classify into six families: paper and tissue, film and foil, food and pharma, plastics, recycled feedstock, metal. We do not quote until substrate is pinned down 鈥?a D2 blade that lasts 90 days on paper will last 9 days on glass-filled PA66.',
       },
       {
-        title: 'Factor 2: Geometry — what shape the knife takes',
+        title: 'Factor 2: Geometry 鈥?what shape the knife takes',
         description:
-          'Circular, straight, serrated, shear, granulator, or custom profile. Geometry is determined by the machine, not the cut — but interacts with substrate through chip flow and clearance angle. A 30° clearance that works for paper will chip on recycled polymer; a 12° clearance that survives recycled polymer will smear on paper. Roughly 40 % of our orders are custom geometry.',
+          'Circular, straight, serrated, shear, granulator, or custom profile. Geometry is determined by the machine, not the cut 鈥?but interacts with substrate through chip flow and clearance angle. A 30掳 clearance that works for paper will chip on recycled polymer; a 12掳 clearance that survives recycled polymer will smear on paper. Roughly 40 % of our orders are custom geometry.',
       },
       {
-        title: 'Factor 3: Hardness target — the operating window',
+        title: 'Factor 3: Hardness target 鈥?the operating window',
         description:
-          'HRC 58–62 is correct for ~70 % of applications. The remaining 30 % splits between too soft (recycling, abrasive composites) and too brittle (thin blades, shock-loaded rotors). We specify hardness as a numeric range against an equivalent standard (ASTM A681, A600, A276, ISO 513, JIS SKD11) — never as a verbal "hard" or "extra hard".',
+          'HRC 58鈥?2 is correct for ~70 % of applications. The remaining 30 % splits between too soft (recycling, abrasive composites) and too brittle (thin blades, shock-loaded rotors). We specify hardness as a numeric range against an equivalent standard (ASTM A681, A600, A276, ISO 513, JIS SKD11) 鈥?never as a verbal "hard" or "extra hard".',
       },
       {
-        title: 'Factor 4: Edge preparation — honed, sharp, or micro-honed',
+        title: 'Factor 4: Edge preparation 鈥?honed, sharp, or micro-honed',
         description:
-          'The most under-specified variable and the one most often blamed for "the steel is wrong" when it is actually the grind. Three families: sharp (< 5 μm, paper / film), light hone (5–25 μm, general converting), micro-hone (25–75 μm, recycled feedstock). We specify edge prep as a numeric radius, not "slightly honed".',
+          'The most under-specified variable and the one most often blamed for "the steel is wrong" when it is actually the grind. Three families: sharp (< 5 渭m, paper / film), light hone (5鈥?5 渭m, general converting), micro-hone (25鈥?5 渭m, recycled feedstock). We specify edge prep as a numeric radius, not "slightly honed".',
       },
       {
         title: 'Factor 5: Operating speed and environment',
         description:
-          'At 600 m/min on film, edge temperature reaches 200–300 °C — D2 loses hardness above 200 °C; M2 holds to 600 °C. Above 1,500 RPM on circular blades, balance grade matters. Washdown environments need stainless. PVD coatings (TiN, TiCN, CrN, DLC) extend interval 2–4× but only when substrate and edge prep are correct. A spec without line speed is a guess, not a specification.',
+          'At 600 m/min on film, edge temperature reaches 200鈥?00 掳C 鈥?D2 loses hardness above 200 掳C; M2 holds to 600 掳C. Above 1,500 RPM on circular blades, balance grade matters. Washdown environments need stainless. PVD coatings (TiN, TiCN, CrN, DLC) extend interval 2鈥?脳 but only when substrate and edge prep are correct. A spec without line speed is a guess, not a specification.',
       },
     ]}
   />
@@ -360,7 +360,7 @@ const blogPostingLd = {
   <p class="text-center text-sm text-muted max-w-3xl mx-auto px-4 pb-2">
     Want the full 2,000-word engineering write-up, decision matrix, and a real case study?
     <a href="/kaipu-5-factor-blade-selection-framework/" class="text-primary font-semibold hover:underline">
-      Read the KAIPU 5-Factor Framework →
+      Read the KAIPU 5-Factor Framework 鈫?
     </a>
   </p>
 
@@ -374,12 +374,12 @@ const blogPostingLd = {
       {
         title: 'Step 1: D2 Tool Steel (1.2379)',
         description:
-          'High-chromium cold-work steel. Hardened to HRC 58–62, used for paper, film and general industrial cutting where wear resistance matters more than impact toughness.',
+          'High-chromium cold-work steel. Hardened to HRC 58鈥?2, used for paper, film and general industrial cutting where wear resistance matters more than impact toughness.',
       },
       {
         title: 'Step 2: M2 High Speed Steel (1.3343)',
         description:
-          'Tungsten-molybdenum HSS with red-hardness up to 600 °C. Selected for high-speed slitting, granulator rotors and applications where heat builds up at the cutting edge.',
+          'Tungsten-molybdenum HSS with red-hardness up to 600 掳C. Selected for high-speed slitting, granulator rotors and applications where heat builds up at the cutting edge.',
       },
       {
         title: 'Step 3: SKD11 / DC53',
@@ -394,17 +394,17 @@ const blogPostingLd = {
       {
         title: 'Step 5: 420 / 440C Stainless',
         description:
-          'Martensitic stainless grades for food processing, pharmaceutical and washdown environments. Hardened to HRC 50–58 with good corrosion resistance.',
+          'Martensitic stainless grades for food processing, pharmaceutical and washdown environments. Hardened to HRC 50鈥?8 with good corrosion resistance.',
       },
       {
-        title: 'Step 6: Coatings — TiN, TiCN, CrN, DLC',
+        title: 'Step 6: Coatings 鈥?TiN, TiCN, CrN, DLC',
         description:
-          'PVD coatings reduce friction, repel adhesive build-up and extend interval between sharpening by 2–4× depending on substrate and cut.',
+          'PVD coatings reduce friction, repel adhesive build-up and extend interval between sharpening by 2鈥?脳 depending on substrate and cut.',
       },
     ]}
   />
 
-  {/* ── Engagement process: covers fileProcess + riskMitigation + capacityLock ── */}
+  {/* 鈹€鈹€ Engagement process: covers fileProcess + riskMitigation + capacityLock 鈹€鈹€ */}
   <Steps
     id="process"
     tagline="Engagement Process"
@@ -415,7 +415,7 @@ const blogPostingLd = {
       {
         title: 'Step 1: Drawing or sample submission',
         description:
-          'Send a 2D drawing (DXF, PDF, DWG), a 3D model (STEP, IGES, Parasolid, SolidWorks) or a worn sample. We accept partial information — a hand sketch plus the substrate and one operating parameter is enough to quote.',
+          'Send a 2D drawing (DXF, PDF, DWG), a 3D model (STEP, IGES, Parasolid, SolidWorks) or a worn sample. We accept partial information 鈥?a hand sketch plus the substrate and one operating parameter is enough to quote.',
       },
       {
         title: 'Step 2: Application review (within 1 business day)',
@@ -435,17 +435,17 @@ const blogPostingLd = {
       {
         title: 'Step 5: Final CMM inspection and report',
         description:
-          'Coordinate measuring machine (Zeiss), optical comparator and surface roughness tester on critical dimensions. A digital inspection report is issued with every shipment. Non-conforming parts are scrapped — not reworked in secret.',
+          'Coordinate measuring machine (Zeiss), optical comparator and surface roughness tester on critical dimensions. A digital inspection report is issued with every shipment. Non-conforming parts are scrapped 鈥?not reworked in secret.',
       },
       {
         title: 'Step 6: Dispatch and after-sales support',
         description:
-          'Standard lead time 15–25 business days from drawing confirmation. Express 7–10 days available on selected materials. Re-sharpening, recoating and replacement service available throughout blade life.',
+          'Standard lead time 15鈥?5 business days from drawing confirmation. Express 7鈥?0 days available on selected materials. Re-sharpening, recoating and replacement service available throughout blade life.',
       },
     ]}
   />
 
-  {/* ── Risk mitigation block ──────────────────────────────────────── */}
+  {/* 鈹€鈹€ Risk mitigation block 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ */}
   <section class="max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-16">
     <p class="text-sm uppercase tracking-wider text-primary font-semibold mb-3">Risk and warranty</p>
     <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6">
@@ -458,7 +458,7 @@ const blogPostingLd = {
         measured.
       </li>
       <li>
-        <strong class="text-default">Dimensional guarantee.</strong> Critical dimensions are held to ± 0.01 mm unless the
+        <strong class="text-default">Dimensional guarantee.</strong> Critical dimensions are held to 卤 0.01 mm unless the
         drawing states otherwise. If a part arrives out of tolerance we replace it at our cost, including freight.
       </li>
       <li>
@@ -466,7 +466,7 @@ const blogPostingLd = {
         audit completed in 2026. Quality manual and certificate available on request.
       </li>
       <li>
-        <strong class="text-default">Process capability.</strong> Cpk ≥ 1.33 on critical dimensions (per ISO 22514-2),
+        <strong class="text-default">Process capability.</strong> Cpk 鈮?1.33 on critical dimensions (per ISO 22514-2),
         with a first-pass acceptance rate of 98 % across 4,500+ part numbers shipped since 1998.
       </li>
       <li>
@@ -485,27 +485,27 @@ const blogPostingLd = {
       {
         title: 'What drawing file formats do you accept?',
         description:
-          '2D: DXF, DWG, PDF. 3D: STEP, IGES, Parasolid, SolidWorks, CATIA, NX. We can also work from a hand-drawn sketch, a worn sample, or a description of the application. If you only have a competitor&rsquo;s part number, send that too — we will cross-reference it.',
+          '2D: DXF, DWG, PDF. 3D: STEP, IGES, Parasolid, SolidWorks, CATIA, NX. We can also work from a hand-drawn sketch, a worn sample, or a description of the application. If you only have a competitor&rsquo;s part number, send that too 鈥?we will cross-reference it.',
       },
       {
         title: 'What is the minimum order quantity?',
         description:
-          'For custom geometries there is no formal MOQ. We routinely produce single pieces for trials and short production runs of 3–10 pieces. For standard catalogue parts the minimum is typically 1 piece.',
+          'For custom geometries there is no formal MOQ. We routinely produce single pieces for trials and short production runs of 3鈥?0 pieces. For standard catalogue parts the minimum is typically 1 piece.',
       },
       {
         title: 'What is the typical lead time?',
         description:
-          'Standard custom blades: 15–25 business days from drawing confirmation. Express 7–10 business days is available on selected materials (D2, M2, SKD11) and geometries that do not require new tooling. Re-sharpening and recoating: 5–7 business days.',
+          'Standard custom blades: 15鈥?5 business days from drawing confirmation. Express 7鈥?0 business days is available on selected materials (D2, M2, SKD11) and geometries that do not require new tooling. Re-sharpening and recoating: 5鈥? business days.',
       },
       {
         title: 'Which tolerances can you hold?',
         description:
-          'Standard: ± 0.01 mm on critical dimensions, ± 0.05 mm on non-critical. Surface roughness: ≤ Ra 0.4 µm on the working edge, ≤ Ra 0.8 µm on ground surfaces. Flatness and parallelism verified on a granite plate. Tighter tolerances quoted per drawing.',
+          'Standard: 卤 0.01 mm on critical dimensions, 卤 0.05 mm on non-critical. Surface roughness: 鈮?Ra 0.4 碌m on the working edge, 鈮?Ra 0.8 碌m on ground surfaces. Flatness and parallelism verified on a granite plate. Tighter tolerances quoted per drawing.',
       },
       {
         title: 'Do you offer re-sharpening and recoating?',
         description:
-          'Yes. Send the worn blade and we will return it sharpened, recoated if requested, and inspected. Typical cycle: 5–7 business days. We archive the geometry so repeat orders skip the engineering review.',
+          'Yes. Send the worn blade and we will return it sharpened, recoated if requested, and inspected. Typical cycle: 5鈥? business days. We archive the geometry so repeat orders skip the engineering review.',
       },
       {
         title: 'Are you ISO 9001 certified?',
@@ -515,12 +515,12 @@ const blogPostingLd = {
       {
         title: 'Which materials are in stock?',
         description:
-          'D2 (1.2379 / SKD11), M2 HSS (1.3343 / SKH51), DC53, tungsten carbide K10–K20, 420 and 440C stainless are all held in stock as raw bar and plate. Exotic grades (ASP® 2023, CPM® 10V, Vanadis 4 Extra) are sourced on request.',
+          'D2 (1.2379 / SKD11), M2 HSS (1.3343 / SKH51), DC53, tungsten carbide K10鈥揔20, 420 and 440C stainless are all held in stock as raw bar and plate. Exotic grades (ASP庐 2023, CPM庐 10V, Vanadis 4 Extra) are sourced on request.',
       },
       {
         title: 'Do you ship outside China?',
         description:
-          'Yes. KAIPU exports to converters, recyclers and OEMs across four continents — North America, Europe, Latin America and Asia-Pacific. We ship EXW, FOB, CIF and DDP. Standard packing is vacuum-sealed foil + foam + plywood crate suitable for ocean freight.',
+          'Yes. KAIPU exports to converters, recyclers and OEMs across four continents 鈥?North America, Europe, Latin America and Asia-Pacific. We ship EXW, FOB, CIF and DDP. Standard packing is vacuum-sealed foil + foam + plywood crate suitable for ocean freight.',
       },
     ]}
   />
@@ -540,7 +540,7 @@ const blogPostingLd = {
     </Fragment>
     <Fragment slot="subtitle">
       Send us the part, the application notes, or just the symptoms. We will respond with a specification, a quote and
-      a lead time — typically within one business day. Last reviewed: 2026.
+      a lead time 鈥?typically within one business day. Last reviewed: 2026.
     </Fragment>
   </CallToAction>
 </Layout>

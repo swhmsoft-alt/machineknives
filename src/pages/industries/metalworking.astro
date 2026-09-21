@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
@@ -6,16 +6,16 @@ import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Metalworking Blades — Shear Knives for Guillotine and Swing-Beam Cutting',
+  title: 'Metalworking Blades 鈥?Shear Knives for Guillotine and Swing-Beam Cutting',
   description:
-    'Shear blades for guillotine and swing-beam cutting of mild steel, stainless and aluminium plate up to 12 mm. HRC 58–62 working hardness, ground and polished to ≤ Ra 0.4 µm. 4-edge indexable designs available.',
+    'Shear blades for guillotine and swing-beam cutting of mild steel, stainless and aluminium plate up to 12 mm. HRC 58鈥?2 working hardness, ground and polished to 鈮?Ra 0.4 碌m. 4-edge indexable designs available.',
 };
 
 const heroImageHtml =
-  '<img src="/images/industries/metalworking/hero.svg" alt="Shear blade pair in a guillotine cutting steel plate (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+  '<img src="/images/industries/metalworking/shear-blade-action.svg" alt="Shear blade pair in a guillotine cutting steel plate (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
 
 const processImageHtml =
-  '<img src="/images/industries/metalworking/content.svg" alt="Shear blade pair cutting mechanics (placeholder)" class="mx-auto w-full rounded-lg shadow-lg" width="500" height="500" loading="lazy" />';
+  '<img src="/images/industries/metalworking/clearance-fracture-diagram.svg" alt="Shear blade pair cutting mechanics (placeholder)" class="mx-auto w-full rounded-lg shadow-lg" width="500" height="500" loading="lazy" />';
 
 const features = [
   {
@@ -27,31 +27,31 @@ const features = [
   {
     title: 'Plate thickness envelope',
     description:
-      'Production-validated on mild steel up to 12 mm, stainless steel up to 8 mm, aluminium up to 12 mm. Heavier gauges (> 12 mm) supplied as custom build against drawing. Shear clearance per OEM recommendation, typically 5–10 % of plate thickness.',
+      'Production-validated on mild steel up to 12 mm, stainless steel up to 8 mm, aluminium up to 12 mm. Heavier gauges (> 12 mm) supplied as custom build against drawing. Shear clearance per OEM recommendation, typically 5鈥?0 % of plate thickness.',
     icon: 'tabler:ruler-measure',
   },
   {
     title: 'Material grades',
     description:
-      'Cold-work tool steel D2 (DIN 1.2379, JIS SKD11), 1.2379 modified grades, and high-chromium tool steel (1.2080, 1.2436) for abrasive cutting. Hardness HRC 58–62 working, tempered and stress-relieved for plate-thickness application.',
+      'Cold-work tool steel D2 (DIN 1.2379, JIS SKD11), 1.2379 modified grades, and high-chromium tool steel (1.2080, 1.2436) for abrasive cutting. Hardness HRC 58鈥?2 working, tempered and stress-relieved for plate-thickness application.',
     icon: 'tabler:certificate',
   },
   {
     title: 'Edge geometry',
     description:
-      'Single-bevel and four-edge indexable designs. Bevel angle 1°–3° on lower blade, 1°–2° on upper blade. Cutting edge flatness ≤ 0.02 mm across the blade length, edge radius 0.05–0.20 mm depending on material and burr-tolerance target.',
+      'Single-bevel and four-edge indexable designs. Bevel angle 1掳鈥?掳 on lower blade, 1掳鈥?掳 on upper blade. Cutting edge flatness 鈮?0.02 mm across the blade length, edge radius 0.05鈥?.20 mm depending on material and burr-tolerance target.',
     icon: 'tabler:blade',
   },
   {
     title: 'Surface finish',
     description:
-      'Ground and polished to ≤ Ra 0.4 µm on the cutting edge, ≤ Ra 0.8 µm on the body. Lower-friction finish options available for sticky stainless or coated plate. Surface integrity verified on profilometer before dispatch.',
+      'Ground and polished to 鈮?Ra 0.4 碌m on the cutting edge, 鈮?Ra 0.8 碌m on the body. Lower-friction finish options available for sticky stainless or coated plate. Surface integrity verified on profilometer before dispatch.',
     icon: 'tabler:gauge',
   },
   {
     title: 'Regrind and indexing',
     description:
-      'Four-edge indexable blades supplied with up to 4 regrinds before geometry falls below OEM clearance. Single-use lower blades typically reground 2–3 times. Regrind service available in-house with optical comparator verification.',
+      'Four-edge indexable blades supplied with up to 4 regrinds before geometry falls below OEM clearance. Single-use lower blades typically reground 2鈥? times. Regrind service available in-house with optical comparator verification.',
     icon: 'tabler:refresh',
   },
 ];
@@ -61,7 +61,7 @@ const features = [
   <Hero
     tagline="Metalworking"
     title="Shear Blades for Guillotine and Swing-Beam Cutting"
-    subtitle="Mild steel, stainless and aluminium plate up to 12 mm. HRC 58–62 working hardness, ground and polished to ≤ Ra 0.4 µm. 4-edge indexable designs available to maximise cutting length per blade."
+    subtitle="Mild steel, stainless and aluminium plate up to 12 mm. HRC 58鈥?2 working hardness, ground and polished to 鈮?Ra 0.4 碌m. 4-edge indexable designs available to maximise cutting length per blade."
     actions={[
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:mail' },
       { text: 'View Shear Blades', href: '/products/shear/' },
@@ -79,23 +79,23 @@ const features = [
         A shear blade pair drives a fracture through the plate. The upper blade pushes the plate into the lower blade at an angle set by rake, and the gap between the two blades controls how the fracture travels through the remaining thickness. Too tight and the plate binds; too loose and the fracture deflects, leaving burr.
       </p>
       <p class="mt-4">
-        The two failure modes we see most often — chipping on the cutting edge and progressive burr growth — both trace back to the same root cause: clearance was specified for the wrong plate thickness, or the rake angle was outside the OEM window.
+        The two failure modes we see most often 鈥?chipping on the cutting edge and progressive burr growth 鈥?both trace back to the same root cause: clearance was specified for the wrong plate thickness, or the rake angle was outside the OEM window.
       </p>
     `}
     items={[
       {
         title: 'Clearance as a percentage of thickness',
-        description: 'Clearance per OEM recommendation, typically 5–10 % of plate thickness. Tight clearance (5–7 %) for stainless to minimise burr; wider clearance (8–10 %) for mild to prevent binding.',
+        description: 'Clearance per OEM recommendation, typically 5鈥?0 % of plate thickness. Tight clearance (5鈥? %) for stainless to minimise burr; wider clearance (8鈥?0 %) for mild to prevent binding.',
         icon: 'tabler:ruler-measure',
       },
       {
         title: 'Rake and bevel angle',
-        description: 'Bevel angle 1°–3° on lower blade, 1°–2° on upper blade. Four-edge indexable designs available to maximise cutting length per blade before re-sharpening.',
+        description: 'Bevel angle 1掳鈥?掳 on lower blade, 1掳鈥?掳 on upper blade. Four-edge indexable designs available to maximise cutting length per blade before re-sharpening.',
         icon: 'tabler:blade',
       },
       {
         title: 'Edge flatness across length',
-        description: 'Cutting edge flatness ≤ 0.02 mm across the blade length. Edge radius 0.05–0.20 mm depending on material and burr-tolerance target. Profilometer-verified before dispatch.',
+        description: 'Cutting edge flatness 鈮?0.02 mm across the blade length. Edge radius 0.05鈥?.20 mm depending on material and burr-tolerance target. Profilometer-verified before dispatch.',
         icon: 'tabler:gauge',
       },
     ]}
@@ -106,7 +106,7 @@ const features = [
     id="capabilities"
     tagline="Engineering scope"
     title="Six specification levers for metalworking shears"
-    subtitle="A shear blade is a wear part with a precision edge. The variables below determine burr, twist and edge life — each specified against an international standard, not a guess."
+    subtitle="A shear blade is a wear part with a precision edge. The variables below determine burr, twist and edge life 鈥?each specified against an international standard, not a guess."
     items={features}
     columns={3}
     defaultIcon="tabler:tool"

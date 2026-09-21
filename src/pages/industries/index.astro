@@ -1,5 +1,5 @@
----
-// industries-served hub — Trinity audit reference
+﻿---
+// industries-served hub 鈥?Trinity audit reference
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
@@ -9,13 +9,13 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Industries Served — Printing, Packaging, Paper, Food, Recycling, Converting, Metal',
+  title: 'Industries Served 鈥?Printing, Packaging, Paper, Food, Recycling, Converting, Metal',
   description:
-    'KAIPU Industrial Blades has supplied precision machine knives to six core industries since 1998. ISO 9001:2015 certified, materials per ASTM A681 / DIN 1.2379 / JIS SKD11, in-house heat treatment and PVD coating. 5–8 weeks lead time on standard blade geometries.',
+    'KAIPU Industrial Blades has supplied precision machine knives to six core industries since 1998. ISO 9001:2015 certified, materials per ASTM A681 / DIN 1.2379 / JIS SKD11, in-house heat treatment and PVD coating. 5鈥? weeks lead time on standard blade geometries.',
 };
 
 const heroImageHtml =
-  '<img src="/images/industries/index/hero.svg" alt="Industries served by KAIPU — six sectors (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+  '<img src="/images/industries/index/six-sectors-overview.svg" alt="Industries served by KAIPU 鈥?six sectors (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
 
 const SITE_URL = 'https://www.machine-knives.net';
 const PAGE_URL = `${SITE_URL}/industries/`;
@@ -61,7 +61,7 @@ const stats = [
   { amount: '27+', title: 'Years in Business', icon: 'tabler:calendar' },
   { amount: '6', title: 'Core Industries Served', icon: 'tabler:building-factory' },
   { amount: '50+', title: 'Steel Grades in Stock', icon: 'tabler:layers-intersect' },
-  { amount: '5–8 wk', title: 'Standard Lead Time', icon: 'tabler:clock' },
+  { amount: '5鈥? wk', title: 'Standard Lead Time', icon: 'tabler:clock' },
   { amount: '98%', title: 'On-Time Delivery', icon: 'tabler:truck-delivery' },
   { amount: '4', title: 'Continents Shipped To', icon: 'tabler:world' },
 ];
@@ -78,46 +78,46 @@ const industries = [
     title: 'Paper & Tissue',
     href: '/industries/paper-tissue/',
     description:
-      '<strong>Best for:</strong> long-life bed knives and top blades for tissue converting lines. <strong>Ideal for:</strong> 600–2,400 m/min tissue lines. Optimised cutting angles reduce dust and extend service intervals. <strong>Not suitable for</strong> hand-towel folding lines that require a creasing shoe retrofit.',
+      '<strong>Best for:</strong> long-life bed knives and top blades for tissue converting lines. <strong>Ideal for:</strong> 600鈥?,400 m/min tissue lines. Optimised cutting angles reduce dust and extend service intervals. <strong>Not suitable for</strong> hand-towel folding lines that require a creasing shoe retrofit.',
     icon: 'tabler:toilet-paper',
   },
   {
     title: 'Food Processing',
     href: '/industries/food-processing/',
     description:
-      '<strong>Best for:</strong> slicing, dicing and portioning of bread, cheese, meat and vegetable lines. Stainless and tool-steel blades for washdown environments and food-contact compliance. <strong>Not for:</strong> cryogenic or frozen-block cutting (consult engineering first). Material traceability documented per ISO 9001:2015 §8.5.',
+      '<strong>Best for:</strong> slicing, dicing and portioning of bread, cheese, meat and vegetable lines. Stainless and tool-steel blades for washdown environments and food-contact compliance. <strong>Not for:</strong> cryogenic or frozen-block cutting (consult engineering first). Material traceability documented per ISO 9001:2015 搂8.5.',
     icon: 'tabler:leaf',
   },
   {
     title: 'Plastics Recycling',
     href: '/industries/plastics-recycling/',
     description:
-      '<strong>Best for:</strong> granulator and shredder rotor / stator knives cutting through contamination, glass fibre and reinforced polymers. D2 and M2 HSS options, with optional TiN or CrN coating to extend interval by 2–4×. <strong>Not for:</strong> highly abrasive mineral-filled compounds above 40 % glass.',
+      '<strong>Best for:</strong> granulator and shredder rotor / stator knives cutting through contamination, glass fibre and reinforced polymers. D2 and M2 HSS options, with optional TiN or CrN coating to extend interval by 2鈥?脳. <strong>Not for:</strong> highly abrasive mineral-filled compounds above 40 % glass.',
     icon: 'tabler:recycle',
   },
   {
     title: 'Converting',
     href: '/industries/converting/',
     description:
-      '<strong>Best for:</strong> trim and score blades for pouch-making, label stock and adhesive tape lines. Repeatable edge profile across production shifts, with run-out controlled to ≤ 0.01 mm on Ø 250 mm blanks. <strong>Not suitable for</strong> very thick rigid sheet above 2 mm.',
+      '<strong>Best for:</strong> trim and score blades for pouch-making, label stock and adhesive tape lines. Repeatable edge profile across production shifts, with run-out controlled to 鈮?0.01 mm on 脴 250 mm blanks. <strong>Not suitable for</strong> very thick rigid sheet above 2 mm.',
     icon: 'tabler:layout',
   },
   {
     title: 'Metalworking',
     href: '/industries/metalworking/',
     description:
-      '<strong>Best for:</strong> guillotine and swing-beam shears cutting mild steel, stainless and aluminium plate up to 12 mm. HRC 58–62 working hardness, ground and polished to ≤ Ra 0.4 µm. <strong>Not for:</strong> hot-slab cutting (use a hot-shear grade with HRC 46–50).',
+      '<strong>Best for:</strong> guillotine and swing-beam shears cutting mild steel, stainless and aluminium plate up to 12 mm. HRC 58鈥?2 working hardness, ground and polished to 鈮?Ra 0.4 碌m. <strong>Not for:</strong> hot-slab cutting (use a hot-shear grade with HRC 46鈥?0).',
     icon: 'tabler:tool',
   },
 ];
 
 const comparisonRows = [
-  { industry: 'Printing & Packaging', substrate: 'Paper, film, foil, laminate', grade: 'D2 / SKD11', hardness: 'HRC 58–62', throughput: 'Up to 1,200 m/min', edge: '6–10 weeks' },
-  { industry: 'Paper & Tissue', substrate: 'Tissue, towel, napkin', grade: 'D2 / 1.2379', hardness: 'HRC 60–62', throughput: '600–2,400 m/min', edge: '4–8 weeks' },
-  { industry: 'Food Processing', substrate: 'Bread, cheese, meat, vegetable', grade: '440C / 1.4112', hardness: 'HRC 56–58', throughput: 'Up to 600 cuts/min', edge: '2–4 weeks' },
-  { industry: 'Plastics Recycling', substrate: 'PE, PP, PET, glass-filled', grade: 'D2 + TiN / CrN', hardness: 'HRC 58–60', throughput: 'Up to 800 kg/h', edge: '2–6 weeks' },
-  { industry: 'Converting', substrate: 'Pouch, label, adhesive tape', grade: 'M2 / SKH51', hardness: 'HRC 62–64', throughput: 'Up to 250 m/min', edge: '4–6 weeks' },
-  { industry: 'Metalworking', substrate: 'Mild / stainless / aluminium plate', grade: 'D2 / 1.2379', hardness: 'HRC 58–62', throughput: 'Up to 22 strokes/min', edge: '8–12 weeks' },
+  { industry: 'Printing & Packaging', substrate: 'Paper, film, foil, laminate', grade: 'D2 / SKD11', hardness: 'HRC 58鈥?2', throughput: 'Up to 1,200 m/min', edge: '6鈥?0 weeks' },
+  { industry: 'Paper & Tissue', substrate: 'Tissue, towel, napkin', grade: 'D2 / 1.2379', hardness: 'HRC 60鈥?2', throughput: '600鈥?,400 m/min', edge: '4鈥? weeks' },
+  { industry: 'Food Processing', substrate: 'Bread, cheese, meat, vegetable', grade: '440C / 1.4112', hardness: 'HRC 56鈥?8', throughput: 'Up to 600 cuts/min', edge: '2鈥? weeks' },
+  { industry: 'Plastics Recycling', substrate: 'PE, PP, PET, glass-filled', grade: 'D2 + TiN / CrN', hardness: 'HRC 58鈥?0', throughput: 'Up to 800 kg/h', edge: '2鈥? weeks' },
+  { industry: 'Converting', substrate: 'Pouch, label, adhesive tape', grade: 'M2 / SKH51', hardness: 'HRC 62鈥?4', throughput: 'Up to 250 m/min', edge: '4鈥? weeks' },
+  { industry: 'Metalworking', substrate: 'Mild / stainless / aluminium plate', grade: 'D2 / 1.2379', hardness: 'HRC 58鈥?2', throughput: 'Up to 22 strokes/min', edge: '8鈥?2 weeks' },
 ];
 
 const processSteps = [
@@ -130,17 +130,17 @@ const processSteps = [
   {
     title: 'Step 2: DFM review and Cpk sign-off',
     description:
-      'We run a Design-for-Manufacturing review, propose a steel grade and edge geometry, and validate manufacturability with a Cpk ≥ 1.33 capability study on critical dimensions before tooling.',
+      'We run a Design-for-Manufacturing review, propose a steel grade and edge geometry, and validate manufacturability with a Cpk 鈮?1.33 capability study on critical dimensions before tooling.',
     icon: 'tabler:compass',
   },
   {
     title: 'Step 3: Sample blade and field trial',
     description:
-      'A prototype is shipped for a 2–4 week field trial on your line. Yield, defect rate and edge life are logged against the agreed specification. We iterate up to two times before release.',
+      'A prototype is shipped for a 2鈥? week field trial on your line. Yield, defect rate and edge life are logged against the agreed specification. We iterate up to two times before release.',
     icon: 'tabler:flask',
   },
   {
-    title: 'Step 4: Production with 5–8 weeks lead time',
+    title: 'Step 4: Production with 5鈥? weeks lead time',
     description:
       'Production orders are scheduled on a dedicated 5-axis grinding cell with a 5,000-blade monthly capacity and a backup machine on the same floor to protect your delivery date.',
     icon: 'tabler:settings',
@@ -154,7 +154,7 @@ const processSteps = [
   {
     title: 'Step 6: Logistics, regrind and after-sales support',
     description:
-      'Standard Incoterms are FOB Ningbo, CIF or DDP. Worn blades can be returned for in-house regrind service — same steel, same geometry, lower cost per cutting hour.',
+      'Standard Incoterms are FOB Ningbo, CIF or DDP. Worn blades can be returned for in-house regrind service 鈥?same steel, same geometry, lower cost per cutting hour.',
     icon: 'tabler:truck-delivery',
   },
 ];
@@ -173,7 +173,7 @@ const faqs = [
   {
     title: 'How long does a custom blade take from drawing to dispatch?',
     description:
-      'Standard geometries ship in 5–8 weeks. Custom builds against a new drawing typically ship in 8–12 weeks, including the DFM review and the field trial.',
+      'Standard geometries ship in 5鈥? weeks. Custom builds against a new drawing typically ship in 8鈥?2 weeks, including the DFM review and the field trial.',
   },
   {
     title: 'Do you regrind blades supplied by other manufacturers?',
@@ -188,14 +188,14 @@ const faqs = [
   {
     title: 'How is the steel grade selected for a food-contact application?',
     description:
-      'For food-contact lines we default to 440C (DIN 1.4112) stainless with documented material traceability per ISO 9001:2015 §8.5, electropolished cutting edges, and a Mill Test Certificate per EN 10204 3.1 included in every shipment.',
+      'For food-contact lines we default to 440C (DIN 1.4112) stainless with documented material traceability per ISO 9001:2015 搂8.5, electropolished cutting edges, and a Mill Test Certificate per EN 10204 3.1 included in every shipment.',
   },
 ];
 
 const framework = {
   title: 'The 5-Factor Cut Validation Method',
   body:
-    'Every KAIPU blade is qualified against a proprietary 5-Factor framework before it leaves the floor: (1) substrate classification against ASTM A681 / DIN 1.2379 grade tables, (2) edge geometry on a 0.0019 mm HEXAGON Global S CMM, (3) hardness survey per Rockwell C with three-point mapping, (4) Cpk ≥ 1.33 capability study on the critical cut dimension, and (5) a documented 2–4 week field trial on the customer line. Lines that pass all five factors ship with a 98 % on-time delivery commitment and a 12-month edge-life guarantee.',
+    'Every KAIPU blade is qualified against a proprietary 5-Factor framework before it leaves the floor: (1) substrate classification against ASTM A681 / DIN 1.2379 grade tables, (2) edge geometry on a 0.0019 mm HEXAGON Global S CMM, (3) hardness survey per Rockwell C with three-point mapping, (4) Cpk 鈮?1.33 capability study on the critical cut dimension, and (5) a documented 2鈥? week field trial on the customer line. Lines that pass all five factors ship with a 98 % on-time delivery commitment and a 12-month edge-life guarantee.',
 };
 ---
 
@@ -223,8 +223,8 @@ const framework = {
         "step": [
           { "@type": "HowToStep", "position": 1, "name": "Submit drawing", "text": "Send STEP, IGES, DWG or DXF plus substrate, throughput and hygiene grade." },
           { "@type": "HowToStep", "position": 2, "name": "DFM review", "text": "Engineering team proposes steel grade and edge geometry within 1 business day." },
-          { "@type": "HowToStep", "position": 3, "name": "Sample and field trial", "text": "Prototype runs for 2–4 weeks on the customer line; we iterate up to twice." },
-          { "@type": "HowToStep", "position": 4, "name": "Production", "text": "5–8 weeks lead time on a dedicated 5-axis grinding cell with backup capacity." },
+          { "@type": "HowToStep", "position": 3, "name": "Sample and field trial", "text": "Prototype runs for 2鈥? weeks on the customer line; we iterate up to twice." },
+          { "@type": "HowToStep", "position": 4, "name": "Production", "text": "5鈥? weeks lead time on a dedicated 5-axis grinding cell with backup capacity." },
           { "@type": "HowToStep", "position": 5, "name": "MTC and dispatch", "text": "EN 10204 3.1 Mill Test Certificate and CMM report included with every shipment." }
         ]
       }
@@ -234,7 +234,7 @@ const framework = {
   <Hero
     tagline="Industries Served"
     title="Looking for Industrial Blades? Six Sectors, One Engineering Team"
-    subtitle="Each industry carries its own cutting mechanics — web tension, abrasive wear, hygiene grade, throughput. We tune blade geometry and steel grade to match. KAIPU has supplied converters, recyclers and OEMs across four continents since 1998 (ISO 9001:2015 certified since 2015), with a 98 % on-time delivery rate and a standard 5–8 weeks lead time."
+    subtitle="Each industry carries its own cutting mechanics 鈥?web tension, abrasive wear, hygiene grade, throughput. We tune blade geometry and steel grade to match. KAIPU has supplied converters, recyclers and OEMs across four continents since 1998 (ISO 9001:2015 certified since 2015), with a 98 % on-time delivery rate and a standard 5鈥? weeks lead time."
     actions={[
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:mail' },
       { text: 'View Products', href: '/products' },
@@ -257,7 +257,7 @@ const framework = {
     subtitle="Each page documents substrate ranges, material grades, edge preparation and tolerance windows our engineering team has validated in production. If you do not see your cut listed, send us a drawing."
     items={industries.map(({ title, description, icon, href }) => ({
       title,
-      description: `${description} <a href="${href}" class="text-primary hover:underline font-semibold">Read more →</a>`,
+      description: `${description} <a href="${href}" class="text-primary hover:underline font-semibold">Read more 鈫?/a>`,
       icon,
     }))}
     columns={3}
@@ -345,7 +345,7 @@ const framework = {
           <li>Mill Test Certificate per <a href="https://www.en-standard.eu/bs-en-10204-2004-metallic-products-types-of-inspection-documents/" target="_blank" rel="noopener" class="text-primary hover:underline">EN 10204 3.1</a> with every production batch.</li>
           <li>CMM dimensional report from a HEXAGON Global S coordinate measuring machine.</li>
           <li>Hardness survey per Rockwell C with three-point mapping on every blade.</li>
-          <li>12-month edge-life guarantee on catalog geometries; Cpk ≥ 1.33 on custom critical dimensions.</li>
+          <li>12-month edge-life guarantee on catalog geometries; Cpk 鈮?1.33 on custom critical dimensions.</li>
         </ul>
       </div>
     </div>

@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
@@ -6,52 +6,52 @@ import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Paper & Tissue Blades — Bed Knives and Top Blades for Tissue Converting',
+  title: 'Paper & Tissue Blades 鈥?Bed Knives and Top Blades for Tissue Converting',
   description:
-    'Long-life bed knives and top blades for tissue converting lines at 600–2,400 m/min. D2 / M2 HSS / SKD11 with optimised cutting angles to reduce dust and extend service interval. Validated with major OEMs.',
+    'Long-life bed knives and top blades for tissue converting lines at 600鈥?,400 m/min. D2 / M2 HSS / SKD11 with optimised cutting angles to reduce dust and extend service interval. Validated with major OEMs.',
 };
 
 const heroImageHtml =
-  '<img src="/images/industries/paper-tissue/hero.svg" alt="Bed knife and top blade pair on a tissue converting line (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+  '<img src="/images/industries/paper-tissue/tissue-line-overview.svg" alt="Bed knife and top blade pair on a tissue converting line (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
 
 const processImageHtml =
-  '<img src="/images/industries/paper-tissue/content.svg" alt="Tissue bed-knife and top-blade cutting mechanics (placeholder)" class="mx-auto w-full rounded-lg shadow-lg" width="500" height="500" loading="lazy" />';
+  '<img src="/images/industries/paper-tissue/bed-knife-detail.svg" alt="Tissue bed-knife and top-blade cutting mechanics (placeholder)" class="mx-auto w-full rounded-lg shadow-lg" width="500" height="500" loading="lazy" />';
 
 const features = [
   {
     title: 'Tissue grammage range',
     description:
-      'Validated on 1-ply, 2-ply and 3-ply tissue at 13–40 gsm per ply, including through-air-dried (TAD) and conventional pressed sheets. Bed-knife / top-blade pair geometry tuned to ply count and bonding pattern.',
+      'Validated on 1-ply, 2-ply and 3-ply tissue at 13鈥?0 gsm per ply, including through-air-dried (TAD) and conventional pressed sheets. Bed-knife / top-blade pair geometry tuned to ply count and bonding pattern.',
     icon: 'tabler:stack-2',
   },
   {
     title: 'Line speed envelope',
     description:
-      'Production-validated on tissue lines running 600 – 2,400 m/min. Higher speeds require tighter angular control on the bed-knife seat and stricter flatness on the top blade — both verified on the CMM before dispatch.',
+      'Production-validated on tissue lines running 600 鈥?2,400 m/min. Higher speeds require tighter angular control on the bed-knife seat and stricter flatness on the top blade 鈥?both verified on the CMM before dispatch.',
     icon: 'tabler:player-track-next',
   },
   {
     title: 'Cutting angle optimisation',
     description:
-      'Bed-knife shear angle and top-blade clearance optimised per OEM (typically 20°–24° shear, 0.5°–1.5° clearance). Correct angles reduce dust generation and extend regrind interval by 30–60 % versus generic tooling.',
+      'Bed-knife shear angle and top-blade clearance optimised per OEM (typically 20掳鈥?4掳 shear, 0.5掳鈥?.5掳 clearance). Correct angles reduce dust generation and extend regrind interval by 30鈥?0 % versus generic tooling.',
     icon: 'tabler:blade',
   },
   {
     title: 'Material grades',
     description:
-      'D2 (1.2379) and SKD11 for bed knives; M2 high-speed steel (1.3343) for top blades where impact loading is high. Hardness HRC 58–62 bed, HRC 60–64 top. Optional TiN or CrN PVD coating on abrasive furnish.',
+      'D2 (1.2379) and SKD11 for bed knives; M2 high-speed steel (1.3343) for top blades where impact loading is high. Hardness HRC 58鈥?2 bed, HRC 60鈥?4 top. Optional TiN or CrN PVD coating on abrasive furnish.',
     icon: 'tabler:certificate',
   },
   {
     title: 'Tolerances and flatness',
     description:
-      'Bed-knife flatness ≤ 0.02 mm across the full cutting length (typically 2,000 – 4,200 mm). Top-blade thickness ± 0.005 mm, parallel within 0.01 mm. CMM reports available with every shipment.',
+      'Bed-knife flatness 鈮?0.02 mm across the full cutting length (typically 2,000 鈥?4,200 mm). Top-blade thickness 卤 0.005 mm, parallel within 0.01 mm. CMM reports available with every shipment.',
     icon: 'tabler:ruler-measure',
   },
   {
     title: 'Service interval extension',
     description:
-      'Common service interval on premium uncoated D2 bed knives is 8–14 weeks on 2-ply tissue. PVD-coated sets typically run 14–22 weeks on the same lines. Intervals quoted against a reference substrate and shift count.',
+      'Common service interval on premium uncoated D2 bed knives is 8鈥?4 weeks on 2-ply tissue. PVD-coated sets typically run 14鈥?2 weeks on the same lines. Intervals quoted against a reference substrate and shift count.',
     icon: 'tabler:clock',
   },
 ];
@@ -61,7 +61,7 @@ const features = [
   <Hero
     tagline="Paper & Tissue"
     title="Bed Knives and Top Blades for Tissue Converting"
-    subtitle="Long-life tooling for tissue converting lines running 600–2,400 m/min. Optimised cutting angles reduce dust and extend service intervals — typically 8–14 weeks uncoated, 14–22 weeks PVD-coated on 2-ply stock."
+    subtitle="Long-life tooling for tissue converting lines running 600鈥?,400 m/min. Optimised cutting angles reduce dust and extend service intervals 鈥?typically 8鈥?4 weeks uncoated, 14鈥?2 weeks PVD-coated on 2-ply stock."
     actions={[
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:mail' },
       { text: 'View Straight Blades', href: '/products/straight/' },
@@ -79,23 +79,23 @@ const features = [
         Tissue cutting is a controlled shear between a stationary bed knife and a rotating top blade. The two blades meet at a precise angle, with a precise clearance, and the ply stack passes between them. The cut is so fast that any geometry drift shows up as dust within minutes, not shifts.
       </p>
       <p class="mt-4">
-        The two failure modes we see most often — dust generation and ply separation — both trace back to the same root cause: the bed-knife shear angle drifted outside the 20°–24° window, or the top-blade clearance drifted outside 0.5°–1.5°.
+        The two failure modes we see most often 鈥?dust generation and ply separation 鈥?both trace back to the same root cause: the bed-knife shear angle drifted outside the 20掳鈥?4掳 window, or the top-blade clearance drifted outside 0.5掳鈥?.5掳.
       </p>
     `}
     items={[
       {
         title: 'Shear angle and clearance',
-        description: 'Bed-knife shear angle 20°–24°, top-blade clearance 0.5°–1.5° per OEM. Correct angles reduce dust generation by 30–60 % and extend regrind interval over generic tooling.',
+        description: 'Bed-knife shear angle 20掳鈥?4掳, top-blade clearance 0.5掳鈥?.5掳 per OEM. Correct angles reduce dust generation by 30鈥?0 % and extend regrind interval over generic tooling.',
         icon: 'tabler:blade',
       },
       {
         title: 'Bed-knife flatness',
-        description: 'Bed-knife flatness ≤ 0.02 mm across the full cutting length (typically 2,000 – 4,200 mm). Granite-plate-verified before dispatch.',
+        description: 'Bed-knife flatness 鈮?0.02 mm across the full cutting length (typically 2,000 鈥?4,200 mm). Granite-plate-verified before dispatch.',
         icon: 'tabler:ruler-measure',
       },
       {
         title: 'Hardness pair for impact loading',
-        description: 'D2 / SKD11 bed knives at HRC 58–62; M2 HSS top blades at HRC 60–64 where impact loading is high. TiN or CrN PVD coating on abrasive furnish.',
+        description: 'D2 / SKD11 bed knives at HRC 58鈥?2; M2 HSS top blades at HRC 60鈥?4 where impact loading is high. TiN or CrN PVD coating on abrasive furnish.',
         icon: 'tabler:certificate',
       },
     ]}
@@ -114,7 +114,7 @@ const features = [
 
   <CallToAction
     title="Documented 1200 m/min 4-ply case study"
-    subtitle="See how a 15 μm micro-hone combined with an 18° clearance angle extended bed-knife service life from 11 days to 34 days at 1200 m/min on 4-ply tissue — with the D2 grade and HRC 60 unchanged."
+    subtitle="See how a 15 渭m micro-hone combined with an 18掳 clearance angle extended bed-knife service life from 11 days to 34 days at 1200 m/min on 4-ply tissue 鈥?with the D2 grade and HRC 60 unchanged."
     actions={[
       { variant: 'primary', text: 'Read the case study', href: '/products/straight/bed-knife-tissue/', icon: 'tabler:file-text' },
       { text: 'Request a Quote', href: '/contact' },

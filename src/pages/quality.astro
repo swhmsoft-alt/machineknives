@@ -1,5 +1,5 @@
----
-// /quality/ — Trinity audit target 100/100
+﻿---
+// /quality/ 鈥?Trinity audit target 100/100
 // QA hub: ISO 9001:2015 traceability, 5-stage quality gate, inspection lab,
 // comparison vs typical job shop, FAQ, Article + Service + HowTo JSON-LD.
 import Layout from '~/layouts/PageLayout.astro';
@@ -16,33 +16,33 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import { faqs } from '~/data/quality-faqs';
 
 const metadata = {
-  title: 'Quality & Certifications — ISO 9001:2015, CMM Inspection, EN 10204 3.1',
+  title: 'Quality & Certifications 鈥?ISO 9001:2015, CMM Inspection, EN 10204 3.1',
   description:
-    'KAIPU quality system: ISO 9001:2015 since 2001, 5-stage quality gate, HEXAGON Global S CMM, hardness mapping per Rockwell C, EN 10204 3.1 mill certificates, PPAP / ISIR on request, Cpk ≥ 1.33 audited quarterly.',
+    'KAIPU quality system: ISO 9001:2015 since 2001, 5-stage quality gate, HEXAGON Global S CMM, hardness mapping per Rockwell C, EN 10204 3.1 mill certificates, PPAP / ISIR on request, Cpk 鈮?1.33 audited quarterly.',
 };
 
 const heroImageHtml =
-  '<img src="/images/quality/hero.svg" alt="KAIPU CMM inspection lab and quality documentation (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+  '<img src="/images/quality/cmm-inspection-lab.svg" alt="KAIPU CMM inspection lab and quality documentation (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
 
 const inspectionLabImageHtml =
-  '<img src="/images/quality/content-1.svg" alt="Inspection lab — CMM, optical comparator, hardness tester (placeholder)" class="mx-auto w-full rounded-lg shadow-lg" width="500" height="500" loading="lazy" />';
+  '<img src="/images/quality/instrument-overview.svg" alt="Inspection lab 鈥?CMM, optical comparator, hardness tester (placeholder)" class="mx-auto w-full rounded-lg shadow-lg" width="500" height="500" loading="lazy" />';
 
 const standardsImageHtml =
-  '<img src="/images/quality/content-2.svg" alt="Standards referenced — ISO 9001, EN 10204 3.1, ASTM A681 (placeholder)" class="mx-auto w-full rounded-lg shadow-lg" width="500" height="500" loading="lazy" />';
+  '<img src="/images/quality/standards-display.svg" alt="Standards referenced 鈥?ISO 9001, EN 10204 3.1, ASTM A681 (placeholder)" class="mx-auto w-full rounded-lg shadow-lg" width="500" height="500" loading="lazy" />';
 
 const publishedDate = '2026-01-20';
 const lastUpdated = '2026-09-12';
 const siteUrl = String(Astro.site ?? 'https://www.machine-knives.net').replace(/\/$/, '');
 
-// ─── 1. AWARENESS STRIP DATA ─────────────────────────────────────────
+// 鈹€鈹€鈹€ 1. AWARENESS STRIP DATA 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€
 const awarenessStats = [
   { title: 'CMM machines', amount: '2' },
   { title: 'ISO 9001:2015', amount: 'since 2001' },
   { title: 'Audit retention', amount: '10 yr' },
-  { title: 'Cpk threshold', amount: '≥ 1.33' },
+  { title: 'Cpk threshold', amount: '鈮?1.33' },
 ];
 
-// ─── 2. STANDARDS & CERTIFICATIONS ───────────────────────────────────
+// 鈹€鈹€鈹€ 2. STANDARDS & CERTIFICATIONS 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€
 const standards = [
   {
     title: 'ISO 9001:2015',
@@ -59,7 +59,7 @@ const standards = [
   {
     title: 'ASTM A681 / DIN 1.2379 / JIS SKD11',
     description:
-      'D2 cold-work tool steel specified per ASTM A681, equivalent to DIN 1.2379 and JIS SKD11. Material grade declared on every quote and on the mill certificate. Best for: Cold-work cutting tools, slitter blades, granulator knives. Not for: Hot-work applications above 500 °C.',
+      'D2 cold-work tool steel specified per ASTM A681, equivalent to DIN 1.2379 and JIS SKD11. Material grade declared on every quote and on the mill certificate. Best for: Cold-work cutting tools, slitter blades, granulator knives. Not for: Hot-work applications above 500 掳C.',
     icon: 'tabler:ruler-measure',
   },
   {
@@ -82,12 +82,12 @@ const standards = [
   },
 ];
 
-// ─── 3. INSPECTION CAPABILITIES (CONTENT) ─────────────────────────────
+// 鈹€鈹€鈹€ 3. INSPECTION CAPABILITIES (CONTENT) 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€
 const inspectionItems = [
   {
     title: 'CMM (HEXAGON Global S)',
     description:
-      'Two coordinate measuring machines, including a HEXAGON Global S with ±0.003 mm repeatability. Every dimension on the customer drawing is measured, not just the ones that fit the schedule. Reports are signed off and shipped with the parts.',
+      'Two coordinate measuring machines, including a HEXAGON Global S with 卤0.003 mm repeatability. Every dimension on the customer drawing is measured, not just the ones that fit the schedule. Reports are signed off and shipped with the parts.',
   },
   {
     title: 'Rockwell Hardness Mapping',
@@ -97,17 +97,17 @@ const inspectionItems = [
   {
     title: 'Surface Roughness (Ra)',
     description:
-      'Working edge: ≤ Ra 0.2 µm. Ground surfaces: ≤ Ra 0.8 µm. Measured on a contact profilometer, traced back to the grinding machine and operator. Flatness and parallelism verified on a granite plate.',
+      'Working edge: 鈮?Ra 0.2 碌m. Ground surfaces: 鈮?Ra 0.8 碌m. Measured on a contact profilometer, traced back to the grinding machine and operator. Flatness and parallelism verified on a granite plate.',
   },
   {
     title: 'Calotest Coating Thickness',
     description:
-      'PVD coating thickness measured on a Calotest ball-crater rig at two points per blade. TiN, TiCN, CrN and DLC coatings applied to ±2 µm uniformity in our two in-house PVD chambers.',
+      'PVD coating thickness measured on a Calotest ball-crater rig at two points per blade. TiN, TiCN, CrN and DLC coatings applied to 卤2 碌m uniformity in our two in-house PVD chambers.',
   },
   {
     title: 'Optical Comparator',
     description:
-      'Edge-profile and micro-geometry inspection on a 300 mm optical comparator with 10× magnification. Used for burr measurement (≤ 50 µm target) and edge-prep land verification on thin-gauge substrate.',
+      'Edge-profile and micro-geometry inspection on a 300 mm optical comparator with 10脳 magnification. Used for burr measurement (鈮?50 碌m target) and edge-prep land verification on thin-gauge substrate.',
   },
   {
     title: 'Micro-hardness Tester',
@@ -116,36 +116,36 @@ const inspectionItems = [
   },
 ];
 
-// ─── 4. 5-STAGE QUALITY GATE (STEPS) ──────────────────────────────────
+// 鈹€鈹€鈹€ 4. 5-STAGE QUALITY GATE (STEPS) 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€
 const qualityGate = [
   {
-    title: 'Step 1: IQC — Incoming Quality Control',
+    title: 'Step 1: IQC 鈥?Incoming Quality Control',
     description:
       'Every bar of incoming steel is inspected against the mill certificate per EN 10204 3.1. Dimensional check, hardness spot-test, and grade verification by spark test or chemical analysis. Non-conforming stock is rejected and returned to the supplier.',
   },
   {
-    title: 'Step 2: IPQC — In-Process Quality Control',
+    title: 'Step 2: IPQC 鈥?In-Process Quality Control',
     description:
       'First-off inspection on every grinding setup. In-process dimensional checks at defined intervals. Operators sign off the traveller at each operation; any deviation triggers an immediate hold.',
   },
   {
-    title: 'Step 3: FQC — Final Quality Control',
+    title: 'Step 3: FQC 鈥?Final Quality Control',
     description:
       'Final CMM inspection against the customer drawing. Three-point Rockwell C mapping. Surface roughness on the working edge. Edge-profile measurement on the optical comparator. No part ships without a signed FQC report.',
   },
   {
-    title: 'Step 4: OQC — Outgoing Quality Control',
+    title: 'Step 4: OQC 鈥?Outgoing Quality Control',
     description:
       'Pre-shipment verification of batch quantity, serial numbers, certificates and packing list. Random re-inspection of finished goods from stock. Customer-specific labelling and packing verified against the order.',
   },
   {
     title: 'Step 5: Documentation & Archive',
     description:
-      'Mill certificate, CMM report, hardness survey, coating record and traveller bundled into a per-batch digital archive. Retained for ten years per ISO 9001 §7.5, indexed by blade serial number, retrievable within two business days.',
+      'Mill certificate, CMM report, hardness survey, coating record and traveller bundled into a per-batch digital archive. Retained for ten years per ISO 9001 搂7.5, indexed by blade serial number, retrievable within two business days.',
   },
 ];
 
-// ─── 5. TRACEABILITY CHAIN (TABLE) ─────────────────────────────────────
+// 鈹€鈹€鈹€ 5. TRACEABILITY CHAIN (TABLE) 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€
 const traceabilityRows = [
   { stage: 'Raw material', artefact: 'Mill Test Certificate per EN 10204 3.1', owner: 'IQC', retention: '10 yr' },
   { stage: 'Forging / rough machining', artefact: 'Heat number + rough-machining traveller', owner: 'Production', retention: '10 yr' },
@@ -156,23 +156,23 @@ const traceabilityRows = [
   { stage: 'Shipment', artefact: 'Packing list + CoC + customer-specific docs', owner: 'OQC', retention: '10 yr' },
 ];
 
-// ─── 6. COMPARISON TABLE ──────────────────────────────────────────────
+// 鈹€鈹€鈹€ 6. COMPARISON TABLE 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€
 const comparisonRows = [
   { kpi: 'ISO 9001:2015 certified', kaipu: 'Yes, since 2001', typical: 'Varies; often not certified' },
   { kpi: 'Mill certificate per EN 10204 3.1', kaipu: 'Shipped with every batch', typical: 'Only on request, surcharge' },
   { kpi: 'CMM inspection', kaipu: 'Every dimension on drawing', typical: 'Critical dims only' },
-  { kpi: 'CMM repeatability', kaipu: '±0.003 mm (HEXAGON Global S)', typical: '±0.01 mm typical' },
+  { kpi: 'CMM repeatability', kaipu: '卤0.003 mm (HEXAGON Global S)', typical: '卤0.01 mm typical' },
   { kpi: 'Hardness mapping', kaipu: '3-point Rockwell C per blade', typical: 'Single spot check' },
-  { kpi: 'Surface roughness on edge', kaipu: '≤ Ra 0.2 µm, profilometer', typical: 'Visual, no instrument' },
-  { kpi: 'Cpk on critical dims', kaipu: '≥ 1.33, quarterly audit', typical: 'Not tracked' },
+  { kpi: 'Surface roughness on edge', kaipu: '鈮?Ra 0.2 碌m, profilometer', typical: 'Visual, no instrument' },
+  { kpi: 'Cpk on critical dims', kaipu: '鈮?1.33, quarterly audit', typical: 'Not tracked' },
   { kpi: 'PPAP / ISIR package', kaipu: 'On request, AIAG-compliant', typical: 'Not offered' },
   { kpi: 'Coating adhesion test', kaipu: 'VDI 3198 per batch', typical: 'Not tested' },
-  { kpi: 'Document retention', kaipu: '10 yr per ISO 9001 §7.5', typical: '1–2 yr' },
+  { kpi: 'Document retention', kaipu: '10 yr per ISO 9001 搂7.5', typical: '1鈥? yr' },
   { kpi: 'Customer audit support', kaipu: 'On-site, twice monthly', typical: 'By appointment, limited' },
   { kpi: 'NCR turnaround', kaipu: '8D within 5 business days', typical: 'Ad hoc' },
 ];
 
-// ─── 7. JSON-LD BLOCKS ───────────────────────────────────────────────
+// 鈹€鈹€鈹€ 7. JSON-LD BLOCKS 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€
 const articleLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -228,7 +228,7 @@ const howToLd = {
   '@type': 'HowTo',
   name: 'How KAIPU inspects and releases a finished industrial blade',
   description:
-    'Five-stage quality gate under ISO 9001:2015 §8.5, from incoming steel inspection (IQC) to final CMM (FQC) and shipment documentation (OQC).',
+    'Five-stage quality gate under ISO 9001:2015 搂8.5, from incoming steel inspection (IQC) to final CMM (FQC) and shipment documentation (OQC).',
   totalTime: 'P6W',
   step: qualityGate.map((s, i) => ({
     '@type': 'HowToStep',
@@ -265,7 +265,7 @@ const faqLd = {
   <Hero
     tagline="Quality & Certifications"
     title="Built on Documentation, Not Hope"
-    subtitle="KAIPU has run an ISO 9001:2015 quality system since 2001. Every blade we ship carries a documented chain from incoming steel to your dock — CMM report, mill certificate, hardness mapping and Cpk study on request."
+    subtitle="KAIPU has run an ISO 9001:2015 quality system since 2001. Every blade we ship carries a documented chain from incoming steel to your dock 鈥?CMM report, mill certificate, hardness mapping and Cpk study on request."
     actions={[
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:clipboard-text' },
       { text: 'View Services', href: '/services' },
@@ -283,12 +283,12 @@ const faqLd = {
         the floor.
       </p>
       <ul class="mt-4 grid gap-2 text-sm md:grid-cols-2 md:text-base">
-        <li>• <strong>ISO 9001:2015</strong> since 2001, surveillance audit 2026</li>
-        <li>• <strong>EN 10204 3.1</strong> mill certificate shipped with every batch</li>
-        <li>• <strong>Cpk ≥ 1.33</strong> on critical dimensions, quarterly audit</li>
-        <li>• <strong>10-year</strong> document retention per ISO 9001 §7.5</li>
-        <li>• <strong>No MOQ</strong> on prototype batches; pricing per drawing, no hidden fees</li>
-        <li>• <strong>Engineering team</strong> response within one business day on every RFQ</li>
+        <li>鈥?<strong>ISO 9001:2015</strong> since 2001, surveillance audit 2026</li>
+        <li>鈥?<strong>EN 10204 3.1</strong> mill certificate shipped with every batch</li>
+        <li>鈥?<strong>Cpk 鈮?1.33</strong> on critical dimensions, quarterly audit</li>
+        <li>鈥?<strong>10-year</strong> document retention per ISO 9001 搂7.5</li>
+        <li>鈥?<strong>No MOQ</strong> on prototype batches; pricing per drawing, no hidden fees</li>
+        <li>鈥?<strong>Engineering team</strong> response within one business day on every RFQ</li>
       </ul>
     </div>
   </section>
@@ -312,7 +312,7 @@ const faqLd = {
     subtitle="Every quote, every certificate and every inspection report maps to one of these published standards. We do not invent our own specification language."
     content={`
       <p>
-        Six published standards define how KAIPU specifies, inspects and certifies every blade. They are referenced on every quote and on every dispatch note — not as marketing language but as the actual numbers behind every claim.
+        Six published standards define how KAIPU specifies, inspects and certifies every blade. They are referenced on every quote and on every dispatch note 鈥?not as marketing language but as the actual numbers behind every claim.
       </p>
       <p class="mt-4">
         Material grades cross-reference ASTM, DIN, JIS, GB and other national bodies. Surface finish and dimensional tolerances cite ISO 4287 / ISO 1101. Hardness testing follows ISO 6508. EN 10204 3.1 mill certificates ship with every production batch.
@@ -366,7 +366,7 @@ const faqLd = {
         <p class="text-sm font-semibold uppercase tracking-wide text-primary">Traceability chain</p>
         <h2 class="mb-2 text-3xl font-bold md:text-4xl">From Mill Heat to Shipped Blade</h2>
         <p class="mx-auto max-w-3xl text-base md:text-lg">
-          ISO 9001:2015 §8.5.2 requires identification of outputs throughout production. Our traveller links every stage
+          ISO 9001:2015 搂8.5.2 requires identification of outputs throughout production. Our traveller links every stage
           back to the original steel heat number. The table below is the actual paperwork we generate.
         </p>
       </div>
@@ -470,7 +470,7 @@ const faqLd = {
     </div>
   </section>
 
-  <!-- 10. STANDARDS REFERENCED (Note — only widget allowed custom bg) -->
+  <!-- 10. STANDARDS REFERENCED (Note 鈥?only widget allowed custom bg) -->
   <Note />
 
   <!-- 11. CALL TO ACTION -->
@@ -483,13 +483,13 @@ const faqLd = {
     <Fragment slot="title">Want to audit our factory?</Fragment>
     <Fragment slot="subtitle">
       We host on-site supplier audits about twice a month. Send us your checklist, the parts you buy from us and a
-      preferred window — we will assign a quality engineer to escort you for the full day.
+      preferred window 鈥?we will assign a quality engineer to escort you for the full day.
     </Fragment>
   </CallToAction>
 
   <!-- 12. LAST UPDATED FOOTER (freshnessDate) -->
   <div class="px-4 py-6 text-center text-xs text-slate-500 sm:px-6 dark:text-slate-400">
-    Last updated: {lastUpdated} · Originally published: {publishedDate} · ISO 9001:2015 since 2001
+    Last updated: {lastUpdated} 路 Originally published: {publishedDate} 路 ISO 9001:2015 since 2001
   </div>
 
   <!-- 13. JSON-LD BLOCKS -->
@@ -501,12 +501,12 @@ const faqLd = {
 
   <!--
     Trinity audit anchors (also semantically present in rendered HTML):
-      • Article JSON-LD above (the signal services.astro missed)
-      • Native <details> blocks for FAQ (faqHtmlPattern)
-      • Numbered headings: Step 1: IQC … Step 5: Documentation (headingNumbered)
-      • Real <table> elements for traceability + comparison (realTableElement)
-      • "Best for:" / "Not for:" pattern on every standard card (bestForPattern)
-      • Standards cited: ISO 9001:2015, EN 10204 3.1, ASTM A681, DIN 1.2379 (standardCitation)
-      • Specific metrics: Cpk ≥ 1.33, ±0.003 mm, Ra 0.2 µm, 10 yr retention (specificMetrics)
+      鈥?Article JSON-LD above (the signal services.astro missed)
+      鈥?Native <details> blocks for FAQ (faqHtmlPattern)
+      鈥?Numbered headings: Step 1: IQC 鈥?Step 5: Documentation (headingNumbered)
+      鈥?Real <table> elements for traceability + comparison (realTableElement)
+      鈥?"Best for:" / "Not for:" pattern on every standard card (bestForPattern)
+      鈥?Standards cited: ISO 9001:2015, EN 10204 3.1, ASTM A681, DIN 1.2379 (standardCitation)
+      鈥?Specific metrics: Cpk 鈮?1.33, 卤0.003 mm, Ra 0.2 碌m, 10 yr retention (specificMetrics)
   -->
 </Layout>
