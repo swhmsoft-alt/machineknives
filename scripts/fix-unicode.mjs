@@ -427,6 +427,11 @@ const RULES = [
    "| 430 / 409 sheet | 1–3 mm | Blanking / shear | D2 or HSS | HRC 60 | 5–10 µm |"],
   ["| M2 HSS or carbide | \nHRC 64 | 510 ��m |",
    "| M2 HSS or carbide | \nHRC 64 | 5–10 µm |"],
+  // ── Discovered 2026-09 via Cloudflare build failure ──────────────────────
+  // PowerShell zh-CN replaced UTF-8 chars with these specific codepoints:
+  ["鈥?" (U+9225+U+003F), "—"],   // em dash
+  ["脳" (U+8133), "×"],            // multiplication sign
+  ["卤" (U+5364), "±"],            // plus-minus
 ].sort((a, b) => b[0].length - a[0].length);
 
 function walk(dir, out = []) {

@@ -1,5 +1,5 @@
 ﻿---
-title: 'D2 Bed Knife for Tissue Converting 鈥?HRC 60, 18掳 Clearance Angle'
+title: 'D2 Bed Knife for Tissue Converting —HRC 60, 18掳 Clearance Angle'
 excerpt: 'D2 high-carbon high-chromium cold-work tool steel bed knife for paper and tissue converting lines. HRC 60, 15 渭m micro-hone, 18掳 clearance angle, ISO 9001:2015 material traceability. Documented 11 to 34-day service life at 1200 m/min on 4-ply tissue.'
 category: straight
 subcategories: []
@@ -12,7 +12,7 @@ applications:
 image: '/images/products/product-detail.svg'
 draft: false
 metadata:
-  title: 'D2 Bed Knife for Tissue Converting 鈥?HRC 60, 18掳 Clearance | KAIPU'
+  title: 'D2 Bed Knife for Tissue Converting —HRC 60, 18掳 Clearance | KAIPU'
   description: 'D2 bed knife for tissue converting lines. HRC 60, 15 渭m micro-hone, 18掳 clearance angle. Documented 11 to 34-day service life at 1200 m/min on 4-ply tissue. ISO 9001:2015 traceability.'
 ---
 
@@ -47,7 +47,7 @@ The bed-knife production sequence is anchored to precision grinding as the final
 Vacuum or controlled-atmosphere furnace is used to prevent surface decarburization, which would soften the cutting edge and shorten service life.
 ## Edge Geometry for 1200 m/min Tissue Lines
 
-The edge geometry 鈥?not the steel grade 鈥?is the dominant variable on high-speed tissue converting lines.
+The edge geometry —not the steel grade —is the dominant variable on high-speed tissue converting lines.
 
 ### Failure mode at sharp edge
 
@@ -65,7 +65,7 @@ At 1200 m/min on 4-ply tissue, edge temperature reaches approximately 180 掳C. 
 
 ### Documented outcome
 
-A 15 渭m micro-hone combined with an 18掳 clearance angle extended service life from **11 days to 34 days** at 1200 m/min on 4-ply tissue 鈥?with **no steel change and no price change**. The grade (D2, HRC 60) was never the problem; edge preparation was.
+A 15 渭m micro-hone combined with an 18掳 clearance angle extended service life from **11 days to 34 days** at 1200 m/min on 4-ply tissue —with **no steel change and no price change**. The grade (D2, HRC 60) was never the problem; edge preparation was.
 
 ### Tolerance control
 
@@ -77,9 +77,9 @@ The bed-knife production operates under ISO 9001:2015 with material traceability
 
 ### Traceability chain
 
-1. **Incoming steel heat** 鈥?linked to mill certificate (chemical composition, incoming hardness)
-2. **Heat-treatment batch records** 鈥?retained as objective evidence of metallurgical specification
-3. **Final dimensional and edge-prep inspection records** 鈥?reference back to material heat number for full lot traceability
+1. **Incoming steel heat** —linked to mill certificate (chemical composition, incoming hardness)
+2. **Heat-treatment batch records** —retained as objective evidence of metallurgical specification
+3. **Final dimensional and edge-prep inspection records** —reference back to material heat number for full lot traceability
 
 ### Engineering records as evidence
 
@@ -103,4 +103,4 @@ A: HRC 60, which sits within the D2 typical as-tempered band of HRC 58-62. Hardn
 A: ISO 9001:2015 搂8.5.2 requires identification of outputs throughout production. Each finished blade's dimensional and edge-prep inspection record references back to the material heat number, the mill certificate, and the heat-treatment batch record.
 
 **Q: Can burr height be controlled below 50 碌m on tissue?**
-A: Yes 鈥?`鈮?50 碌m` is the burr control target on tissue slitting, achieved by the 18掳 clearance angle and 15 渭m micro-hone combination. Exceeding this threshold indicates either edge wear (replace) or geometry drift (regrind or scrap).
+A: Yes —`鈮?50 碌m` is the burr control target on tissue slitting, achieved by the 18掳 clearance angle and 15 渭m micro-hone combination. Exceeding this threshold indicates either edge wear (replace) or geometry drift (regrind or scrap).
