@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build && node scripts/optimize-images.mjs && node scripts/postbuild.js && node scripts/audit-schema-strict.mjs && node scripts/check-unicode.mjs",
+    "build": "node scripts/prebuild-images.mjs && astro build && node scripts/postbuild.js && node scripts/audit-schema-strict.mjs && node scripts/check-unicode.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "check": "npm run check:astro && npm run check:eslint && npm run check:prettier && node scripts/check-unicode.mjs",

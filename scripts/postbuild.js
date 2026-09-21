@@ -1,46 +1,25 @@
 import { glob } from 'glob';
 import fs from 'node:fs';
-import path from 'node:path';
 
 // IMPORTANT: do NOT skip `index.html` files. In `trailingSlash: 'always'` mode
 // every route becomes `dist/<route>/index.html`, so ignoring them would skip
 // every page and the SSG normalization would do nothing.
 const files = glob.sync('dist/**/*.html', { ignore: ['dist/_astro/**'] });
 
-// Post-build script: normalize all internal `href="/path"` links in every
-// generated HTML page so they always end with a single trailing slash.
-//
-// Strategy:
-//   - Match `href="/..."` (internal absolute path)
-//   - Stop the captured body at `.`, `?`, `#` to avoid touching file extensions,
-//     query strings and fragments
-//   - Make the existing trailing slash optional in the match, then always emit
-//     exactly one `/`. This guarantees the result is `/path/` (never `//`).
-//
-// Skipped:
-//   - href values containing `.`, `?` or `#` (asset, query, fragment)
-//   - any href not starting with `/` (external, mailto:, javascript:, etc.)
-//
-// Note: we intentionally avoid the `**` glob pattern inside any comment so
-// that the `*` `*` `/` sequence does not terminate the block comment early.
-// Capture the path body WITHOUT the leading `/`. Any leading/trailing extra
-// slashes inside `p` are stripped before re-emitting, so the output is
-// guaranteed to be exactly `/path/` (never `//` or `///`).
-const LINK_RE = /href="\/([^".#?]+)"/g;
+// ─────────────────────────────────────────────────────────────────────────────
+// Post-build script 1: trailing-slash normalization.
+// ─────────────────────────────────────────────────────────────────────────────
+// Normalize all internal `href="/path"` links so they always end with a single
+// trailing slash.
+const LINK_RE = /href=\"\/([^\".#?]+)\"/g;
 
 let touched = 0;
 
 for (const file of files) {
   const html = fs.readFileSync(file, 'utf-8');
-  // Callback preserves the `href="` prefix and trailing `"`. The capture group
-  // `p` already includes the leading `/`, so we only need to append a single
-  // trailing `/`. Result is always exactly one `/` — never `//`.
   const next = html.replace(LINK_RE, (_match, p) => {
-    // Strip any extra leading/trailing slashes from the captured path, then
-    // re-emit it wrapped in exactly one leading and one trailing slash.
-    // Result is always `/path/` (never `//` or `///`).
     const clean = p.replace(/^\/+|\/+$/g, '');
-    return `href="/${clean}/"`;
+    return `href=\"/${clean}/\"`;
   });
   if (next !== html) {
     fs.writeFileSync(file, next, 'utf-8');
@@ -51,67 +30,69 @@ for (const file of files) {
 console.log(`[postbuild] trailing-slash normalization: rewrote ${touched}/${files.length} HTML files.`);
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Post-build script 2: WebP <picture> wrapping.
+// Post-build script 2: rewrite <img>/<source> raster references to .webp.
 // ─────────────────────────────────────────────────────────────────────────────
-// scripts/optimize-images.mjs (run earlier in the build chain) emits a same-
-// name `.webp` next to every JPG/JPEG/PNG under dist/. We wrap any matching
-// `<img src="/.../foo.jpg">` (or .jpeg / .png) in a `<picture>` with a WebP
-// `<source>` first, leaving the original `<img>` intact as the legacy fallback.
+// scripts/prebuild-images.mjs (run BEFORE `astro build`) has already replaced
+// every JPG/JPEG/PNG under public/ with a same-name `.webp` (and deleted the
+// original). Astro copied those WebPs into dist/. But the HTML still references
+// the old `.jpg` / `.jpeg` / `.png` paths because the templates were written
+// before the build renamed the assets.
 //
-// Astro's <Image /> already emits its own <picture> for ESM-imported images
-// via the asset pipeline. The files we want to upgrade live under public/
-// (copied verbatim to dist/), so they never go through that pipeline. Doing
-// the wrap in a post-build step means every emitted HTML page picks up the
-// WebP automatically — no template changes, no content authoring changes.
+// This pass rewrites every internal raster reference to its .webp counterpart
+// in three places:
 //
-// Caveats handled below:
-//   • External URLs (http(s)://, data:, mailto:) → skipped.
-//   • <img> already inside a <picture> from a previous run → skipped
-//     (idempotent: re-running the build doesn't double-wrap).
-//   • All original <img> attributes are preserved verbatim.
+//   1. `<img src="/.../foo.{jpg,jpeg,png}">` → `<img src="/.../foo.webp">`
+//   2. `<source srcset="/.../foo.{jpg,jpeg,png}">` → `.webp`
+//   3. `srcset="/.../foo.jpg 1x, /.../foo@2x.jpg 2x"` → all `.webp`
+//
+// External URLs (http(s)://, data:, mailto:) are skipped. Astro's
+// `/_astro/...` hashed asset paths are skipped (they're not raw raster files
+// from public/).
+//
+// We rewrite all references in one pass; the previous version of this script
+// wrapped `<img>` in `<picture>` for fallback, but the originals no longer
+// exist (prebuild deleted them), so the fallback is meaningless — direct
+// rewrite is simpler and correct.
+const RASTER_SRC_RE = /<img\b([^>]*?)\ssrc=\"(\/[^\"]+)\.(jpg|jpeg|png)([^\"]*)\"([^>]*?)\/?>/gi;
+const RASTER_SRCSET_RE = /<source\b([^>]*?)\ssrcset=\"(\/[^\"]+)\.(jpg|jpeg|png)([^\"]*)\"([^>]*?)\/?>/gi;
+// Bare srcset= on <img>, possibly multiple comma-separated entries with width
+// descriptors. We replace the extension on every jpg/jpeg/png path inside.
+const BARE_SRCSET_RE = /srcset=\"([^\"]+)\"/g;
 
-const DIST_ROOT = path.resolve('dist');
-const RASTER_SRC_RE = /<img\b([^>]*?)\ssrc=\"(\/[^"]+\.(?:jpg|jpeg|png))\"([^>]*?)\/?>/gi;
+function rewriteSrcsetValue(value) {
+  // Each entry looks like `/path/to/foo.jpg 1x` or `/path/to/foo.jpg 480w`.
+  // Replace the .jpg/.jpeg/.png suffix on each path with .webp.
+  return value.replace(/(\/[^,\s"]+)\.(jpg|jpeg|png)/gi, '$1.webp');
+}
 
-let wrapped = 0;
+let rewrites = 0;
 
 for (const file of files) {
   const html = fs.readFileSync(file, 'utf-8');
-  let result = '';
-  let cursor = 0;
-  let pictureDepth = 0;
-  RASTER_SRC_RE.lastIndex = 0;
-  let m;
-  let localWrapped = 0;
+  let next = html;
 
-  while ((m = RASTER_SRC_RE.exec(html)) !== null) {
-    const matchStart = m.index;
-    result += html.slice(cursor, matchStart);
-    // Track <picture> nesting by counting opens/closes between cursor and the
-    // current match. An <img> we encounter while pictureDepth > 0 is the
-    // inner <img> of a <picture> we wrote in a previous build — leave it.
-    const between = html.slice(cursor, matchStart);
-    pictureDepth += (between.match(/<picture\b/gi) || []).length;
-    pictureDepth -= (between.match(/<\/picture>/gi) || []).length;
+  // (1) <img src="...">
+  next = next.replace(RASTER_SRC_RE, (_m, pre, path, _ext, qs, post) => {
+    rewrites += 1;
+    return `<img${pre} src="${path}.webp${qs}"${post}>`;
+  });
 
-    const [, pre, src, post] = m;
-    const webpSrc = src.replace(/\.(?:jpg|jpeg|png)$/i, '.webp');
-    const distWebp = path.join(DIST_ROOT, webpSrc);
+  // (2) <source srcset="...">
+  next = next.replace(RASTER_SRCSET_RE, (_m, pre, path, _ext, qs, post) => {
+    rewrites += 1;
+    return `<source${pre} srcset="${path}.webp${qs}"${post}>`;
+  });
 
-    if (pictureDepth > 0 || !fs.existsSync(distWebp)) {
-      result += m[0];
-    } else {
-      result += `<picture><source type=\"image/webp\" srcset=\"${webpSrc}\" /><img${pre} src=\"${src}\"${post}></picture>`;
-      localWrapped += 1;
-    }
-    cursor = matchStart + m[0].length;
-  }
-  result += html.slice(cursor);
+  // (3) Bare srcset="..." on <img>, with multi-entry descriptors.
+  next = next.replace(BARE_SRCSET_RE, (_m, value) => {
+    const rewritten = rewriteSrcsetValue(value);
+    if (rewritten !== value) rewrites += 1;
+    return `srcset="${rewritten}"`;
+  });
 
-  if (localWrapped > 0) {
-    fs.writeFileSync(file, result, 'utf-8');
-    wrapped += localWrapped;
+  if (next !== html) {
+    fs.writeFileSync(file, next, 'utf-8');
   }
 }
 
-console.log(`[postbuild] WebP <picture> wrapping: upgraded ${wrapped} <img> tags across ${files.length} HTML files.`);
+console.log(`[postbuild] WebP src rewrite: updated ${rewrites} raster reference(s) across ${files.length} HTML files.`);
