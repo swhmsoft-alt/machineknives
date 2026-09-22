@@ -1,5 +1,5 @@
 site:
-  name: KAIPU Industrial Blades
+  name: Industrial Knives
   site: 'https://www.machine-knives.net'
   base: '/'
   trailingSlash: true
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: KAIPU Industrial Blades — Precision Engineered Machine Knives
-    template: '%s — KAIPU Industrial Blades'
+    default: Industrial Knives — Precision Engineered Machine Knives
+    template: '%s — Industrial Knives'
   description: "Manufacturer of industrial machine knives for printing, packaging, converting, food processing and recycling. OEM and custom solutions. Engineering-grade D2, HSS and carbide blades."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: KAIPU Industrial Blades
+    site_name: Industrial Knives
     images:
       - url: '~/assets/images/default.png'
         width: 1200
