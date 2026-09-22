@@ -24,7 +24,7 @@ A standard rotor knife for plastics granulators and shredders. Manufactured from
 | Thickness       | 20 mm (range 12—5 mm)      |
 | Bevel angle     | 30° / 35° / 40° (× 4 edges) |
 | Hardness        | HRC 60±4                   |
-| Surface finish  | Ra ≥?0.4 碌m                 |
+| Surface finish  | Ra ≥?0.4 µm                 |
 | Flatness        | ±0.02 mm                   |
 
 ## Material Selection

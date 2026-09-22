@@ -50,7 +50,7 @@ const ROOT = process.cwd();
 //   - node_modules, dist, .astro (build cache)
 //   - public/* (binary assets)
 //   - src/lib/schema.ts and JSON manifests (no user content)
-const TARGET_DIRS = ['src/data/product', 'src/data/post', 'src/data/glossary'];
+const TARGET_DIRS = ['src/data/product', 'src/data/post', 'src/data/glossary', 'src/pages'];
 const FILE_EXT = /\.(md|mdx|astro)$/i;
 
 // Replacement table. Sorted: LONGEST context first so a short generic rule
@@ -439,10 +439,22 @@ const RULES = [
   // in English data files under src/data/{product,post,glossary}/.
   ["脴", "Ø"],   // diameter sign
   ["掳", "°"],   // degree sign
-  ["渭", "μ"],   // micro sign
+  ["渭", "µ"],   // micro sign (U+00B5, NOT Greek mu U+03BC — engineering convention)
   ["鈮", "≥"],   // greater-than-or-equal
   ["鈫", "→"],   // rightwards arrow
   ["搂", "§"],   // section sign
+  // ── Discovered 2026-09-22 in src/pages/solutions.astro ─────────────────
+  // GBK fallback code points + 2-char patterns not covered above. Triggered
+  // by Hero/Features/Steps/FAQs/CallToAction widgets receiving Chinese-edited
+  // copy on /solutions/, /products/, and other top-level pages.
+  ["碌", "µ"],              // micro sign (U+788C — most common fallback)
+  ["鈥", "—"],              // standalone em-dash (U+9225, no trailing '?')
+  ["鈥揔", "–"],            // en-dash in K-range, e.g. K10鈥揔20 → K10–K20
+  ["鈹€", "─"],             // box-drawing decoration in JSX comment dividers
+  ["鈮?1.33",   "≥ 1.33"],     // Cpk ≥ 1.33
+  ["鈮?Ra",     "≤Ra"],        // roughness ≤ Ra 0.4 µm
+  ["鈮?0.01 mm","≤ 0.01 mm"],  // run-out ≤ 0.01 mm
+  ["鈮?2 mm",   "≤ 2 mm"],     // blade thickness ≤ 2 mm
 ].sort((a, b) => b[0].length - a[0].length);
 
 function walk(dir, out = []) {

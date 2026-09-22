@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'D2 Bed Knife for Tissue Converting —HRC 60, 18° Clearance Angle'
 excerpt: 'D2 high-carbon high-chromium cold-work tool steel bed knife for paper and tissue converting lines. HRC 60, 15 μm micro-hone, 18° clearance angle, ISO 9001:2015 material traceability. Documented 11 to 34-day service life at 1200 m/min on 4-ply tissue.'
 category: straight
@@ -24,9 +24,9 @@ The typical as-tempered hardness for D2 falls in the HRC 58-62 band. HRC 60 sits
 
 | Property | Value |
 |---|---|
-| Density | approximately 7.7 g/cm鲁 |
+| Density | approximately 7.7 g/cm³ |
 | Elastic modulus | approximately 200 GPa |
-| Thermal conductivity | approximately 20-25 W/(m路K) (low) |
+| Thermal conductivity | approximately 20–25 W/(m·K) (low) |
 | Hardness target | HRC 60 (within HRC 58-62 window) |
 | Carbide type | M7C3 (chromium-rich) |
 
@@ -61,7 +61,7 @@ At 1200 m/min on 4-ply tissue, edge temperature reaches approximately 180 °C. A
 | Clearance angle | 18° |
 | Reference web speed | 1200 m/min (4-ply tissue) |
 | Reference edge temperature | approximately 180 °C |
-| Burr control target | ≥?50 碌m |
+| Burr control target | ≤ 50 µm |
 
 ### Documented outcome
 
@@ -102,5 +102,5 @@ A: HRC 60, which sits within the D2 typical as-tempered band of HRC 58-62. Hardn
 **Q: How is the heat-treatment batch linked to the finished blade?**
 A: ISO 9001:2015 §8.5.2 requires identification of outputs throughout production. Each finished blade's dimensional and edge-prep inspection record references back to the material heat number, the mill certificate, and the heat-treatment batch record.
 
-**Q: Can burr height be controlled below 50 碌m on tissue?**
-A: Yes —`≥?50 碌m` is the burr control target on tissue slitting, achieved by the 18° clearance angle and 15 μm micro-hone combination. Exceeding this threshold indicates either edge wear (replace) or geometry drift (regrind or scrap).
+**Q: Can burr height be controlled below 50 µm on tissue?**
+A: Yes — `≤ 50 µm` is the burr control target on tissue slitting, achieved by the 18° clearance angle and 15 μm micro-hone combination. Exceeding this threshold indicates either edge wear (replace) or geometry drift (regrind or scrap).

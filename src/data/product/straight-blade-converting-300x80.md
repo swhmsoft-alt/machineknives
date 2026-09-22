@@ -23,7 +23,7 @@ A standard straight top blade for pouch-making, label stock and adhesive tape co
 | Width           | 80 mm (range 30—00 mm)     |
 | Thickness       | 2 / 3 / 4 / 5 mm            |
 | Edge angle       | 18° / 22° / 25° / 30°       |
-| Surface finish  | Ra ≥?0.4 碌m                 |
+| Surface finish  | Ra ≥?0.4 µm                 |
 | Flatness        | ±0.02 mm                   |
 
 ## Edge Geometry Options
