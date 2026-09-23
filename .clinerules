@@ -1,0 +1,129 @@
+# CLINERULES — GLOBAL AI DEVELOPMENT SPECIFICATION
+
+## 0. HIGHEST PRIORITY: STOP IMMEDIATELY UPON TASK COMPLETION
+- **Strict Task Scoping**: Process ONLY the explicit task or question requested by the user. Do NOT autonomously expand scope, perform unsolicited refactoring, optimize secondary code, alter configurations, install packages, or create git commits/pushes.
+- **Completion Criteria & Immediate Halt**: You MUST immediately cease all tool calls, command executions, and further reasoning, and output the "Completion Checklist" when ANY of the following conditions are met:
+  1. The user's specific query has been directly answered.
+  2. Requested code changes are made AND necessary build/lint validations pass.
+  3. A blocker is encountered requiring human decisions or missing inputs.
+  4. The same issue fails after 3 consecutive attempts (3-Strike Lock).
+  5. You are uncertain whether the task is complete (treat as "Pending Confirmation" and STOP immediately).
+- **Post-Tool Self-Inspection**: After every command, file read/write, or search, ask yourself: *Is the request already satisfied? Do I have sufficient info to deliver?* If YES, STOP IMMEDIATELY. Never run extra tools under the pretext of "double-checking."
+- **Human Authorization Required**: Never enter a new iteration without explicit user confirmation (e.g., "proceed", "fix this").
+- **Mandatory Final Output**: Upon halting, output ONLY the following structured format:
+
+## Completion Checklist
+- Status: ✅ COMPLETED / ⚠️ PENDING CONFIRMATION / ❌ FAILED
+- Completed Items:
+  - ...
+- Modified Files:
+  - ...
+- Verification:
+  - Command/Method: ...
+  - Result: ...
+- Unfinished / Risks:
+  - ...
+- Requires Human Confirmation:
+  - ...
+- Execution Stopped: Yes, awaiting your next instruction.
+
+---
+
+## 0.5. UTF-8 FILE I/O — HARD RULES (zh-CN Windows)
+
+Full documentation: see `toolchain.md`. Summary hard rules below — these are
+non-negotiable and override §0's "expand scope" prohibition for the specific
+case of detecting / repairing mojibake (that work is IN-SCOPE whenever a file
+under `src/data/{product,post,glossary}` or `src/pages/` is touched).
+
+### 0.5.1 File write paths — NEVER use PowerShell redirection
+
+Writing files through PowerShell on zh-CN Windows silently corrupts UTF-8 to
+GBK. Accepted write paths:
+
+- **Cline `editor` tool** (preferred for all `.astro`, `.ts`, `.md`, `.json`,
+  `.yaml`, `.css` edits).
+- **Node.js** `fs.writeFileSync(path, data, 'utf8')` for any script that
+  generates content.
+
+Forbidden (silently downgrades UTF-8 to GBK on zh-CN Windows):
+- PowerShell `>` / `>>` / `Out-File` / `Set-Content` / `Add-Content` without
+  `-Encoding utf8`.
+- `cmd /c "... > file"` when invoked from the Cline shell.
+- Any `tee` variant without explicit UTF-8.
+
+If you discover you've just written a file via PowerShell redirection, the
+file is corrupted. Do not commit it; rewrite it via the Cline `editor` tool.
+
+### 0.5.2 Post-write verification — MANDATORY
+
+After any file edit that contains non-ASCII characters, run:
+
+```
+node scripts/check-unicode.mjs
+```
+
+It MUST print `✓ Unicode check passed`. If it prints `✗ Unicode check FAILED`,
+stop all subsequent file writes and fix the corruption first — do not stack
+more files on top of a broken one.
+
+### 0.5.3 Missing-data policy — NO silent guesses
+
+If `fix-unicode.mjs` reveals a position where a digit was eaten by the
+corruption (e.g., `4— weeks` where the original was `4–6 weeks`), do NOT
+invent the missing digit. Mark the position with `[MISSING SPEC: <what's
+missing>]` and surface it in the Completion Checklist under "Requires Human
+Confirmation". Production content must never be silently fabricated.
+
+### 0.5.4 White-listed Chinese-content paths
+
+These paths legitimately contain CJK characters and are excluded from
+`scripts/check-unicode.mjs`:
+
+| Path | Reason |
+|---|---|
+| `src/prompts/**` | Chinese prompt templates |
+| `src/data/query-acquisition/**` | KPI / source-type docs |
+| `src/data/_templates/query-acquisition/**` | Schema / taxonomy templates |
+| `src/data/monitor/**` | Chinese monitoring docs |
+| `src/data/topics.ts` | Chinese topic vocabulary |
+| `src/lib/schema.ts` | Chinese comments |
+| `CUSTOM.md`, `AGENTS.md`, `docs/**` | Project documentation |
+| `scripts/check-unicode.mjs`, `scripts/fix-unicode.mjs` | Intentional CJK regex codepoints |
+
+Do not run `fix-unicode.mjs` against these paths; it would corrupt legitimate
+Chinese content.
+---
+
+## 1. AI Execution Laws & Workflow Control
+- **Output Discipline**: Default to minimal necessary action. Keep responses concise (modified files + build results). Never output unsolicited architectural overhauls or scan full directories unnecessarily. Never invent project progress or git history.
+- **Plan Threshold**: If a task involves modifications to >3 files, provide a change plan (file list + exact modifications per file) and await explicit human authorization before execution.
+- **Technical Ambiguity Protocol**: Explain judgment and reasoning first, then propose a solution. Do NOT take action immediately when encountering uncertain technical issues.
+- **Atomic Modifications**: Perform targeted, incremental diffs only. Mass edits across disparate directories without prior authorization are strictly prohibited.
+- **Environment Lock**: Treat `.env*`, `astro.config.*`, `package.json`, and core infrastructure (Cloudflare, SEO/RSS/sitemap, Starlight docs, Pagefind search) as strictly READ-ONLY unless requested.
+
+## 2. Architecture & Styling Standards
+- **3-Tier Topology**: Components (`ui/**`) → Sections (`sections/**`) → Pages (`pages/**`).
+- **Context Paths**: Design source (`system/globals/`) | Site Config (`src/config/site.config.ts`) | Asset Registry (`src/registry.json`) | System Prompts (`system/prompts/`).
+- **Reuse Priority**: Prioritize reusing built-in AstroWind widgets (`Features`, `Steps`, `FAQs`, `Stats`, `CallToAction`) by adapting them through props.
+- **Unified Global Background Color (Hard Rule)**:
+  - Prohibit custom background colors on any page, component, section, or card (light or dark mode).
+  - Do NOT use specific color utilities like `bg-slate-*`, `bg-gray-*`, `bg-blue-*`, or dark equivalents.
+  - Do NOT create/use utilities like `bg-default` that map to text tokens (Tailwind v4 issue).
+  - The ONLY allowed background utility is `bg-page` (controlled via tokens).
+  - **Special Exception**: The template's built-in `Note` component (`bg-blue-50`) is retained for narrow alert boxes only.
+  - **Section Blocks & Cards**: Sections inherit transparently from `bg-page`. Cards/Articles define boundaries strictly using `border border-slate-200 dark:border-slate-700` + `shadow`.
+
+## 3. Astro 7.x SSG & i18n Translation Protocol
+- **Route Alignment**: Default language is English; Indonesian resides at `/id/`. Mirror routes bi-directionally (`pages/x.astro` <-> `pages/[locale]/x.astro`).
+- **Syntax & Glossary Strictness**: Adhere strictly to Astro 7.x Rust-based compiler constraints. All tags and attributes must be perfectly closed. If `translation-rules.md` exists, its dictionary overrides all other terms.
+- **Incremental Diff Injection**: Extract and translate ONLY missing, null, or untranslated keys/blocks while retaining 100% of existing schema, key order, and frontmatter. Process ONE target locale file per session.
+- **Lock System Entities**: Do NOT translate placeholders (`{count}`, `[lang]`), asset paths (`/assets/...`), external URLs, or anchor IDs.
+
+## 4. CI/CD & Quality Gatekeepers
+- **Mandatory Quality Checks**: Run and pass `pnpm build && pnpm lint (including check:kpis) && pnpm run lint:css` prior to concluding tasks.
+- **Build Blocker**: Zero tolerance for warnings or errors. If checks fail, halt delivery, locate the issue from recent diffs, and resolve in-place.
+
+## 5. Industrial & Technical SEO Grounding
+- Ground all metrics, specs, and materials strictly in provided datasheets or international standards (e.g., AMS, ASTM).
+- If exact dimensions, tolerances, or material grades (e.g., Ti-6Al-4V) are missing, output `[MISSING SPECIFICATION]` and prompt the user.

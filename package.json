@@ -18,6 +18,7 @@
     "check:eslint": "eslint .",
     "check:prettier": "prettier --check .",
     "check:unicode": "node scripts/check-unicode.mjs",
+    "precommit": "node scripts/check-unicode.mjs",
     "query:audit": "node scripts/audit-query-acquisition.mjs",
     "fix": "npm run fix:eslint && npm run fix:prettier",
     "fix:eslint": "eslint --fix .",

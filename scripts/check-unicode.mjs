@@ -52,12 +52,15 @@ const PATTERNS = [
     re: /\uFFFD/g,
   },
   {
-    name: 'GBK mojibake (鈥 / 碌 / 脳 / 脴 / 掳 / 渭 / 鈮 / 鈫 / 搂 / 路)',
-    // These CJK code points survive GBK→UTF-8 mis-decoding as literal kanji
-    // in otherwise English content. Expanded 2026-09-22 after production
-    // mojibake in slitter-blade.md (Circular Slitting Blade 脴250 mm OD,
-    // 15掳 / 20掳 / 25掳, Ra 鈮?0.4 渭m, etc.).
-    re: /[\uFFFD\u9239\u9225\u922E\u922B\u63B3\u788C\u5364\u8133\u6E2D\u63D1\u63D4\u6402\u5E90\u8134\u6377\u9275\u8120\u78B5\u9280\u9396\u9332\u92F8\u9251\u9214\u91D1\u928B\u63E1\u9279\u8DEF]/g,
+    name: 'any CJK Unified Ideograph in English-content file (GBK fallback)',
+    // Structural fix (2026-09-23): instead of maintaining a hand-curated list
+    // of GBK fallback code points (which kept growing — 鈥, 碌, 脳, 脴, 掳,
+    // 渭, 鈮, 鈫, 搂, 路, 鉁, 鉂, 鈿, 揊, …), flag ANY CJK character in files
+    // under src/{data/{product,post,glossary},pages}/. Those directories are
+    // supposed to hold English-only content; Chinese-character files live in
+    // src/lib/, src/prompts/, src/data/query-acquisition/, which are NOT in
+    // TARGET_DIRS, so this rule has no false positives on legitimate Chinese.
+    re: /[\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF]/g,
   },
   {
     name: 'PowerShell downgrade "?" after Chinese/extended-Latin',

@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+// Pre-commit hook: fail if any mojibake snuck into the English-content dirs.
+// Wired into git via `git config core.hooksPath .husky` (one-time setup).
+// Manual fallback: `npm run precommit`.
+import { spawnSync } from 'node:child_process';
+import process from 'node:process';
+
+console.log('[husky/pre-commit] running scripts/check-unicode.mjs ...');
+const r = spawnSync(process.execPath, ['scripts/check-unicode.mjs'], {
+  cwd: process.cwd(),
+  stdio: 'inherit',
+  env: process.env,
+});
+if (r.status !== 0) {
+  console.error('');
+  console.error('╔════════════════════════════════════════════════════════════════╗');
+  console.error('║  COMMIT BLOCKED — mojibake detected in src/{data,pages}        ║');
+  console.error('║                                                                ║');
+  console.error('║  Fix path:                                                     ║');
+  console.error('║    1. node scripts/fix-unicode.mjs          (auto repair)      ║');
+  console.error('║    2. node scripts/check-unicode.mjs        (verify 0 hits)    ║');
+  console.error('║    3. If a new fallback code point is found, add a rule to      ║');
+  console.error('║       scripts/fix-unicode.mjs RULES table (see toolchain.md)   ║');
+  console.error('║    4. Re-run check, then commit.                                ║');
+  console.error('║                                                                ║');
+  console.error('║  Root cause: PowerShell on zh-CN Windows corrupted a UTF-8      ║');
+  console.error('║  source to GBK. Never write files via PowerShell `>` /         ║');
+  console.error('║  `Out-File` — use the Cline `editor` tool or                    ║');
+  console.error('║  `fs.writeFileSync(path, data, "utf8")` instead.                ║');
+  console.error('╚════════════════════════════════════════════════════════════════╝');
+  process.exit(1);
+}
+process.exit(0);

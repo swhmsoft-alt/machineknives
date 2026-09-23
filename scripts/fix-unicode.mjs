@@ -464,6 +464,19 @@ const RULES = [
   // surfaces as "Read more →?/a>" on /industries/. Context-anchored so it
   // cannot eat legitimate "?/a>" elsewhere.
   ["Read more →?/a>", "Read more →</a>"],
+  // ── Discovered 2026-09-23 on /services/ comparison table ────────────────
+  // Three GBK fallback CJK characters for "✓ " (U+2713 + space) and "✗ "
+  // (U+2717 + space) — PowerShell produces different fallback code points
+  // for the same source character on different writes, hence two distinct
+  // rep sequences for the same negative mark (鉂, 鈿).
+  ["鉁?4— weeks",    "✓ 4–6 weeks"],     // specific: lead time KAIPU row (eaten digit)
+  ["鈿?8—2 weeks",   "✗ 8–12 weeks"],    // specific: lead time Job Shop row (eaten digit)
+  ["鉁?",            "✓ "],              // general: check mark
+  ["鉂?",            "✗ "],              // general: ballot X (variant 1)
+  ["鈿?",            "✗ "],              // general: ballot X (variant 2)
+  // "F" of "Fri" corrupted to U+63CA (揊) on /contact/. Original was "Fri"
+  // (English business hours); PowerShell GBK fallback ate one ASCII byte.
+  ["Mon—揊ri",       "Mon–Fri"],
 ].sort((a, b) => b[0].length - a[0].length);
 
 function walk(dir, out = []) {
