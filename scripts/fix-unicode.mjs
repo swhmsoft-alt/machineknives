@@ -455,6 +455,15 @@ const RULES = [
   ["鈮?Ra",     "≤Ra"],        // roughness ≤ Ra 0.4 µm
   ["鈮?0.01 mm","≤ 0.01 mm"],  // run-out ≤ 0.01 mm
   ["鈮?2 mm",   "≤ 2 mm"],     // blade thickness ≤ 2 mm
+  // ── Discovered 2026-09-23 on /services/ and /industries/ ──────────────
+  // PowerShell fallback U+8DEF (路) for U+00B7 (· middle dot) — slipped past
+  // check-unicode.mjs because 路 was missing from the GBK mojibake set.
+  // Now both detection (check-unicode.mjs) and repair (this rule) cover it.
+  ["路", "·"],
+  // Literal `<` of `</a>` was downgraded to `?` by a PowerShell write —
+  // surfaces as "Read more →?/a>" on /industries/. Context-anchored so it
+  // cannot eat legitimate "?/a>" elsewhere.
+  ["Read more →?/a>", "Read more →</a>"],
 ].sort((a, b) => b[0].length - a[0].length);
 
 function walk(dir, out = []) {
