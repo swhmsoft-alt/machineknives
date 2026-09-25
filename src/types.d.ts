@@ -1,5 +1,6 @@
 import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
 import type { HTMLAttributes, ImageMetadata } from 'astro/types';
+import type { MarkdownHeading } from 'astro';
 
 export interface Post {
   /** Unique ID identifying the post. */
@@ -30,6 +31,14 @@ export interface Post {
 
   /** Estimated reading time in minutes. */
   readingTime?: number;
+
+  /**
+   * Markdown headings (h2-h3) extracted by Astro's content layer. Powers
+   * the article TOC sidebar on /blog/<category>/<slug>/. Empty array when
+   * the post has no qualifying headings (callers should treat that as
+   * "no TOC").
+   */
+  headings?: MarkdownHeading[];
 }
 
 export interface Taxonomy {

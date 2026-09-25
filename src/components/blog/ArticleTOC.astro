@@ -1,0 +1,171 @@
+---
+// src/components/blog/ArticleTOC.astro
+// ─────────────────────────────────────────────────────────────────────────────
+// Article table of contents. Renders a list of H2/H3 headings extracted by
+// Astro's content layer (see `headings` field on Post in src/types.d.ts).
+//
+// Visual rules:
+//   • Single render form — same component is used on desktop (inside a
+//     sticky sidebar) and on mobile (inside a <details> collapsible). The
+//     parent layout decides placement; this component just renders the
+//     list.
+//   • Only H2 (depth=2) and H3 (depth=3) qualify. H1 is excluded (it's the
+//     page title in the hero, not a section). H4+ excluded for readability.
+//   • When fewer than 2 qualifying headings exist the component renders
+//     nothing — short posts shouldn't carry a sidebar that says "1 item".
+//   • Active-state highlighting is done at runtime by the inline
+//     IntersectionObserver script at the bottom. The component itself
+//     emits `data-toc-link="<slug>"` attributes so the script can find
+//     both the link and the heading it points at.
+import type { MarkdownHeading } from 'astro';
+
+export interface Props {
+  /** Heading array extracted by Astro's content layer. */
+  headings: MarkdownHeading[];
+  /** Optional override for the section label. */
+  label?: string;
+}
+
+const { headings, label = 'On this page' } = Astro.props;
+
+const items = headings.filter((h) => h.depth === 2 || h.depth === 3);
+const visible = items.length >= 2;
+---
+
+{
+  visible && (
+    <nav aria-label={label} class="article-toc not-prose">
+      <p class="article-toc-label">{label}</p>
+      <ul class="article-toc-list">
+        {items.map((h) => (
+          <li class:list={['article-toc-item', `article-toc-depth-${h.depth}`]}>
+            <a
+              href={`#${h.slug}`}
+              data-toc-link={h.slug}
+              class="article-toc-link"
+            >
+              {h.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
+}
+
+<style>
+  /* === Article TOC =======================================================
+   * The list lives inside a 1px left border so the active/hover state can
+   * animate a 2px primary-coloured border over it without shifting layout.
+   * Depth-3 entries indent one level so H3 sections read as sub-items of
+   * their H2 parent without an extra rule set.
+   */
+  .article-toc-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--aw-color-text-muted);
+    margin: 0 0 0.75rem 0;
+  }
+
+  .article-toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-left: 1px solid var(--aw-color-border);
+  }
+
+  .article-toc-item {
+    margin: 0;
+  }
+
+  .article-toc-depth-3 {
+    /* H3 entries indent one level so they read as children of the
+     * preceding H2 without an explicit parent reference. */
+    margin-left: 0.75rem;
+  }
+
+  .article-toc-link {
+    display: block;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    color: var(--aw-color-text-muted);
+    border-left: 2px solid transparent;
+    margin-left: -1px;
+    text-wrap: balance;
+    transition: color 0.15s ease, border-left-color 0.15s ease;
+  }
+
+  .article-toc-link:hover {
+    color: var(--aw-color-text-default);
+    border-left-color: var(--aw-color-primary);
+  }
+
+  .article-toc-link.is-active {
+    color: var(--aw-color-primary);
+    border-left-color: var(--aw-color-primary);
+    font-weight: 600;
+  }
+</style>
+
+<script is:inline>
+  // === TOC scroll-spy =====================================================
+  // Highlights the link whose target heading is currently in the viewport's
+  // top region. No dependencies; runs only on pages that actually rendered
+  // a [data-toc-link] element.
+  //
+  // rootMargin: pull the activation band up to 80px below the viewport top
+  // (so the sticky header doesn't count as "above") and 70% down from the
+  // bottom (so a heading only counts as active once it's well past the
+  // fold). IntersectionObserver fires whenever entries cross that band;
+  // we pick the highest visible one.
+  (function () {
+    var links = document.querySelectorAll('[data-toc-link]');
+    if (!links.length) return;
+    var headings = Array.prototype.slice.call(
+      document.querySelectorAll('article :is(h2, h3)[id]'),
+    );
+    if (!headings.length) return;
+
+    var active = null;
+    function setActive(id) {
+      if (active === id) return;
+      active = id;
+      for (var i = 0; i < links.length; i++) {
+        var link = links[i];
+        var on = link.getAttribute('data-toc-link') === id;
+        if (on) {
+          link.classList.add('is-active');
+        } else {
+          link.classList.remove('is-active');
+        }
+      }
+    }
+
+    var visible = new Map();
+    var io = new IntersectionObserver(
+      function (entries) {
+        for (var i = 0; i < entries.length; i++) {
+          var entry = entries[i];
+          visible.set(entry.target.id, entry);
+        }
+        // Pick the highest visible heading (smallest offsetTop).
+        var chosen = null;
+        visible.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          if (chosen === null || entry.target.offsetTop < chosen.target.offsetTop) {
+            chosen = entry;
+          }
+        });
+        if (chosen) setActive(chosen.target.id);
+      },
+      { rootMargin: '-80px 0px -70% 0px', threshold: 0 },
+    );
+
+    headings.forEach(function (h) {
+      io.observe(h);
+    });
+  })();
+</script>

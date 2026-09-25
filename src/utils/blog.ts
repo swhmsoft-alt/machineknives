@@ -42,7 +42,7 @@ const generatePermalink = async ({
 
 const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> => {
   const { id, data } = post;
-  const { Content, remarkPluginFrontmatter } = await render(post);
+  const { Content, remarkPluginFrontmatter, headings } = await render(post);
 
   const {
     publishDate: rawPublishDate = new Date(),
@@ -108,6 +108,12 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
     // or 'content' in case you consume from API
 
     readingTime: remarkPluginFrontmatter?.readingTime,
+
+    // Markdown headings (h2-h3). The Astro content layer populates this
+    // automatically; we expose it so the article TOC component on
+    // /blog/<category>/<slug>/ can render a sidebar without a build-time
+    // AST walk.
+    headings: headings ?? [],
   };
 };
 
