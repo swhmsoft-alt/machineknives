@@ -23,14 +23,13 @@ const hasBgSlot = Astro.slots.has('bg');
 const defaultBg = '<div class="hero-bg absolute inset-0" aria-hidden="true"></div>';
 ---
 
-<section class="relative md:-mt-[76px] not-prose hero-section" {...id ? { id } : {}}>
+<section class="relative not-prose hero-section" {...id ? { id } : {}}>
   <div class="absolute inset-0 pointer-events-none -z-[1] bg-secondary" aria-hidden="true">
     <slot name="bg">
       {bg ? <Fragment set:html={bg} /> : <Fragment set:html={defaultBg} />}
     </slot>
   </div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
     <div class="py-16 md:py-24 lg:py-28">
       <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto">
         {

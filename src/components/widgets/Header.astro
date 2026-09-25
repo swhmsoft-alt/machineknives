@@ -56,7 +56,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
     {...isSticky ? { 'data-aw-sticky-header': true } : {}}
     {...id ? { id } : {}}
   >
-    <div class="absolute inset-0"></div>
+    <div class="absolute inset-0 bg-page md:bg-white/90 md:backdrop-blur-md shadow-[0_0.375rem_1.5rem_0_rgb(140_152_164/13%)] dark:bg-page md:dark:bg-[#030621e6] dark:border-b dark:border-gray-500/20"></div>
     <div
       class:list={[
         'relative header-inner py-3 px-3 md:px-6 mx-auto w-full',
@@ -201,17 +201,18 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
     display: contents;
   }
 
-  /* === Header text adapts to its background ==============================
-   * The header sits transparent over a dark Hero at the top of the page
-   * (white text), then becomes a white bar after scroll (the `scroll`
-   * class is toggled at 60px by the inline script below — dark text on
-   * white background). Color is controlled here so individual links /
-   * dropdowns / icons don't need to know.
+  /* === Header text stays dark regardless of scroll =========================
+   * Earlier the header was transparent at top (white text over a dark Hero
+   * that extended behind it via `md:-mt-[76px]`) and only flipped to a
+   * solid white bar after the user scrolled past 60px. That design is
+   * fragile: any page without a Hero (e.g. /blog/) left the header
+   * transparent over the body's white background and the nav text became
+   * invisible. The first-child <div> now always carries its own solid
+   * backdrop (see the markup above), so the nav can use dark text in all
+   * states. The `#header.scroll` class still toggles shadow/backdrop
+   * intensity via tailwind.css, but no longer drives color changes.
    */
   .header-inner {
-    color: var(--aw-color-text-on-dark);
-  }
-  :global(#header.scroll) .header-inner {
     color: var(--aw-color-text-default);
   }
 
@@ -226,40 +227,25 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
   }
 
   /* Header action button (e.g. "Request a Quote"):
-   *  — On the dark Hero: transparent fill, white border, white text.
-   *  — After scroll (white bar): primary-blue border + text, transparent
-   *    fill; flips to solid primary on hover. */
+   *  — Always: primary-blue border + text, transparent fill; flips to
+   *    solid primary on hover. */
   .header-cta {
-    border-color: var(--aw-color-border-on-dark) !important;
-    color: var(--aw-color-text-on-dark) !important;
-    background-color: transparent !important;
-  }
-  .header-cta:hover {
-    background-color: rgb(255 255 255 / 12%) !important;
-    border-color: rgb(255 255 255 / 35%) !important;
-  }
-  :global(#header.scroll) .header-cta {
     border-color: var(--aw-color-primary) !important;
     color: var(--aw-color-primary) !important;
     background-color: transparent !important;
   }
-  :global(#header.scroll) .header-cta:hover {
+  .header-cta:hover {
     background-color: var(--aw-color-primary) !important;
     color: white !important;
   }
 
   /* Logo (`text-gray-900` baked into Logo.astro) and theme-toggle / RSS
-   * icons (`text-muted` baked into ToggleTheme.astro + the RSS <a>)
-   * all default to dark text. Override here so they read on the dark
-   * Hero and flip to dark text once the header gains its white bar. */
+   * icons (`text-muted` baked into ToggleTheme.astro + the RSS <a>) all
+   * default to dark text. Now that the header always sits on a solid
+   * backdrop, no scroll-state override is needed. */
   :global(.header-inner .self-center),
   :global(.header-inner [data-aw-toggle-color-scheme]),
   :global(.header-inner a[aria-label='RSS Feed']) {
-    color: var(--aw-color-text-on-dark) !important;
-  }
-  :global(#header.scroll .header-inner .self-center),
-  :global(#header.scroll .header-inner [data-aw-toggle-color-scheme]),
-  :global(#header.scroll .header-inner a[aria-label='RSS Feed']) {
     color: var(--aw-color-text-default) !important;
   }
 </style>
