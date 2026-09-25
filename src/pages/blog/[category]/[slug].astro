@@ -1,0 +1,216 @@
+---
+// src/pages/blog/[category]/[slug].astro
+// ─────────────────────────────────────────────────────────────────────────────
+// /blog/<category>/<slug>/ — the catch-all underneath every category.
+//
+// Two `kind`s are emitted by getStaticPathsBlogCategoryEntries():
+//
+//   kind: 'post'  → a real article slug. Renders <SinglePost> with the
+//                   BlogPosting JSON-LD + BreadcrumbList.
+//   kind: 'page'  → a numeric pagination index (2..N) for categories
+//                   that exceed CATEGORY_PAGINATION_THRESHOLD. Renders
+//                   the category archive at page N with prev/next links.
+//
+// Anything else yields a 404.
+// ─────────────────────────────────────────────────────────────────────────────
+
+import type { InferGetStaticPropsType, GetStaticPaths } from 'astro';
+import merge from 'lodash.merge';
+import type { ImageMetadata } from 'astro';
+
+import Layout from '~/layouts/PageLayout.astro';
+import BlogList from '~/components/blog/List.astro';
+import Headline from '~/components/blog/Headline.astro';
+import Pagination from '~/components/blog/Pagination.astro';
+import SinglePost from '~/components/blog/SinglePost.astro';
+import ToBlogLink from '~/components/blog/ToBlogLink.astro';
+import RelatedPosts from '~/components/blog/RelatedPosts.astro';
+
+import { getCanonical } from '~/utils/permalinks';
+import { findImage } from '~/utils/images';
+import type { MetaData } from '~/types';
+import { buildBlogPostBreadcrumb, type BreadcrumbItem } from '~/utils/breadcrumb';
+
+import { getStaticPathsBlogCategoryEntries } from '~/utils/blog';
+
+export const prerender = true;
+
+export const getStaticPaths = (async () => {
+  return await getStaticPathsBlogCategoryEntries();
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+// Astro.props is a discriminated union — destructure per branch.
+const props = Astro.props as Props;
+const isPage = props.kind === 'page';
+const pageProps = isPage ? props : null;
+const postProps = !isPage ? (props as Extract<Props, { kind: 'post' }>) : null;
+
+// ─── kind === 'page' data ──────────────────────────────────────────────────
+const pageBreadcrumb: BreadcrumbItem[] = pageProps
+  ? [
+      { text: 'Home', href: '/' },
+      { text: 'Blog', href: '/blog/' },
+      { text: pageProps.category.title, href: `/blog/${pageProps.category.slug}/` },
+      { text: `Page ${pageProps.pageNumber}` },
+    ]
+  : [];
+const pageBreadcrumbLd = pageProps
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: pageBreadcrumb.map((it, idx) => ({
+        '@type': 'ListItem',
+        position: idx + 1,
+        name: it.text,
+        item: it.href
+          ? String(new URL(it.href, Astro.site ?? 'https://www.machine-knives.net'))
+          : Astro.url.toString(),
+      })),
+    }
+  : null;
+const pageMetadata = pageProps
+  ? {
+      title: `${pageProps.category.title} — Page ${pageProps.pageNumber} | KAIPU Blog`,
+      robots: { index: false, follow: true },
+    }
+  : null;
+
+// ─── kind === 'post' data ──────────────────────────────────────────────────
+const siteUrl = String(Astro.site ?? 'https://www.machine-knives.net').replace(/\/$/, '');
+const postUrl = postProps
+  ? getCanonical(`/blog/${postProps.post.category?.slug ?? ''}/${postProps.post.slug}/`)
+  : '';
+const postImage = postProps
+  ? ((await findImage(postProps.post.image)) as ImageMetadata | string | undefined)
+  : undefined;
+const postMetadata = postProps
+  ? (merge(
+      {
+        title: postProps.post.title,
+        description: postProps.post.excerpt,
+        robots: { index: true, follow: true },
+        openGraph: {
+          type: 'article',
+          ...(postImage
+            ? {
+                images: [
+                  {
+                    url: postImage,
+                    width: (postImage as ImageMetadata)?.width,
+                    height: (postImage as ImageMetadata)?.height,
+                  },
+                ],
+              }
+            : {}),
+        },
+      },
+      {
+        ...(postProps.post?.metadata
+          ? {
+              ...postProps.post.metadata,
+              canonical: postProps.post.metadata?.canonical || postUrl,
+            }
+          : {}),
+      },
+    ) as MetaData)
+  : null;
+
+const blogPostingLd: Record<string, unknown> | null = postProps
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: postProps.post.title,
+      description: postProps.post.excerpt,
+      datePublished: postProps.post.publishDate
+        ? new Date(postProps.post.publishDate).toISOString()
+        : undefined,
+      dateModified: postProps.post.updateDate
+        ? new Date(postProps.post.updateDate).toISOString()
+        : postProps.post.publishDate
+          ? new Date(postProps.post.publishDate).toISOString()
+          : undefined,
+      author: {
+        '@type': 'Organization',
+        name: postProps.post.author || 'KAIPU Engineering',
+        url: siteUrl + '/about/',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'KAIPU Industrial Blades',
+        url: siteUrl + '/',
+        logo: { '@type': 'ImageObject', url: siteUrl + '/favicon.svg' },
+      },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': String(postUrl) },
+      url: String(postUrl),
+      ...(postProps.post.category
+        ? { articleSection: postProps.post.category.title || String(postProps.post.category) }
+        : {}),
+      ...(Array.isArray(postProps.post.tags) && postProps.post.tags.length > 0
+        ? {
+            keywords: postProps.post.tags
+              .map((t: unknown) =>
+                typeof t === 'string' ? t : (t as { title?: string })?.title ?? '',
+              )
+              .filter(Boolean)
+              .join(', '),
+          }
+        : {}),
+    }
+  : null;
+if (blogPostingLd && postImage) {
+  blogPostingLd.image = typeof postImage === 'string' ? postImage : (postImage as ImageMetadata).src;
+}
+
+const postBreadcrumb: BreadcrumbItem[] = postProps
+  ? buildBlogPostBreadcrumb(
+      postProps.post.title,
+      postProps.post.category?.title,
+      postProps.post.category?.slug,
+    )
+  : [];
+const postBreadcrumbLd = postProps
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: postBreadcrumb.map((it, idx) => ({
+        '@type': 'ListItem',
+        position: idx + 1,
+        name: it.text,
+        item: it.href ? siteUrl + it.href : siteUrl + Astro.url.pathname,
+      })),
+    }
+  : null;
+
+const activeMetadata = (isPage ? pageMetadata : postMetadata) as MetaData;
+const activeBreadcrumb: BreadcrumbItem[] = isPage ? pageBreadcrumb : postBreadcrumb;
+
+---
+
+<Layout metadata={activeMetadata} breadcrumb={activeBreadcrumb}>
+  {isPage && pageProps && pageBreadcrumbLd && (
+    <>
+      <script type="application/ld+json" is:inline set:html={JSON.stringify(pageBreadcrumbLd)} />
+      <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-6xl">
+        <Headline>{pageProps.category.title}</Headline>
+        <p class="mb-8 md:mb-10 text-center text-sm text-muted dark:text-slate-400">
+          Page {pageProps.pageNumber} of {pageProps.totalPages}
+        </p>
+        <BlogList posts={pageProps.posts} />
+        <Pagination prevUrl={pageProps.prevUrl} nextUrl={pageProps.nextUrl} />
+      </section>
+    </>
+  )}
+  {!isPage && postProps && blogPostingLd && postBreadcrumbLd && (
+    <>
+      <script type="application/ld+json" is:inline set:html={JSON.stringify(blogPostingLd)} />
+      <script type="application/ld+json" is:inline set:html={JSON.stringify(postBreadcrumbLd)} />
+      <SinglePost post={{ ...postProps.post, image: postImage }} url={postUrl}>
+        {postProps.post.Content && <postProps.post.Content />}
+      </SinglePost>
+      <ToBlogLink />
+      <RelatedPosts post={postProps.post} />
+    </>
+  )}
+</Layout>

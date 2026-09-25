@@ -1,0 +1,118 @@
+---
+// src/pages/blog/[category]/index.astro
+// ─────────────────────────────────────────────────────────────────────────────
+// /blog/<category>/ — category archive landing page (always page 1).
+//
+// Pagination URLs (/blog/<category>/2/, /3/, …) are emitted by
+// src/pages/blog/[category]/[slug].astro with kind: 'page'. This file
+// handles only the directory-root URL.
+//
+// Visible archive shape depends on the post count:
+//   - count ≤ CATEGORY_PAGINATION_THRESHOLD (18): render every post on
+//     this single page. No /2/ exists for that category.
+//   - count > threshold: render the first `blogPostsPerPage` (6) posts
+//     here and emit /blog/<category>/2/ for the rest.
+//
+// This file is therefore the page-1 view for every category, paginated
+// or not.
+// ─────────────────────────────────────────────────────────────────────────────
+
+import type { InferGetStaticPropsType, GetStaticPaths } from 'astro';
+import { Icon } from 'astro-icon/components';
+
+import Layout from '~/layouts/PageLayout.astro';
+import BlogList from '~/components/blog/List.astro';
+import Headline from '~/components/blog/Headline.astro';
+import Pagination from '~/components/blog/Pagination.astro';
+
+import {
+  CATEGORY_PAGINATION_THRESHOLD,
+  blogCategoryRobots,
+  blogPostsPerPage,
+  getStaticPathsBlogCategoryIndex,
+} from '~/utils/blog';
+import { getTopic, topicsIndexHref } from '~/data/topics';
+
+export const prerender = true;
+
+export const getStaticPaths = (async () => {
+  return await getStaticPathsBlogCategoryIndex();
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+const { category, posts } = Astro.props as Props;
+
+const totalPosts = posts.length;
+const shouldPaginate = totalPosts > CATEGORY_PAGINATION_THRESHOLD;
+const pagePosts = shouldPaginate ? posts.slice(0, blogPostsPerPage) : posts;
+const nextUrl = shouldPaginate ? `/blog/${category.slug}/2/` : undefined;
+
+const topic = getTopic(category.slug);
+
+const breadcrumbItems = [
+  { text: 'Home', href: '/' },
+  { text: 'Blog', href: '/blog/' },
+  { text: category.title },
+];
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: breadcrumbItems.map((it, idx) => ({
+    '@type': 'ListItem',
+    position: idx + 1,
+    name: it.text,
+    item: it.href
+      ? String(new URL(it.href, Astro.site ?? 'https://www.machine-knives.net'))
+      : Astro.url.toString(),
+  })),
+};
+
+const pageDescription =
+  topic?.contentType === 'glossary'
+    ? `Reference entries in the ${category.title} topic — concise, AI-citable definitions curated by KAIPU engineering.`
+    : topic?.contentType === 'comparison'
+      ? `${category.title} — a side-by-side reference table for industrial blade specification. Curated and maintained by KAIPU engineering.`
+      : `Articles in the ${category.title} topic — engineering content for industrial blade selection, application and performance.`;
+
+const metadata = {
+  title: `${category.title} | KAIPU Blog`,
+  description: pageDescription,
+  robots: {
+    index: blogCategoryRobots?.index,
+    follow: blogCategoryRobots?.follow,
+  },
+};
+---
+
+<Layout metadata={metadata} breadcrumb={breadcrumbItems}>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)} />
+  <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-6xl">
+    <Headline>{category.title}</Headline>
+
+    {
+      topic && (
+        <div class="mb-8 md:mb-10 flex flex-wrap items-center justify-center gap-3 text-sm text-muted dark:text-slate-400">
+          <span class="inline-flex items-center gap-2">
+            <Icon name={topic.icon} class="w-5 h-5 text-primary" />
+            <span class="font-semibold uppercase tracking-wide text-secondary dark:text-blue-200">
+              {topic.contentType}
+            </span>
+          </span>
+          <span aria-hidden="true">·</span>
+          <span>
+            {totalPosts} {totalPosts === 1 ? 'post' : 'posts'}
+          </span>
+          <span aria-hidden="true">·</span>
+          <a class="inline-flex items-center text-primary hover:underline" href={topicsIndexHref()}>
+            All topics
+            <Icon name="tabler:arrow-right" class="w-4 h-4 ml-1" />
+          </a>
+        </div>
+      )
+    }
+
+    <BlogList posts={pagePosts} />
+    <Pagination nextUrl={nextUrl} prevText="Previous" nextText="Next page" />
+  </section>
+</Layout>

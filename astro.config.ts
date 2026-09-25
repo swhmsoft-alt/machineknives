@@ -15,6 +15,7 @@ import type { AstroIntegration } from 'astro';
 
 import astrowind from './vendor/integration';
 import loadConfig from './vendor/integration/utils/loadConfig';
+import { buildRedirectMap } from './src/utils/redirects';
 
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin } from './src/utils/frontmatter';
 
@@ -25,6 +26,11 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // spends crawl budget on nothing and sends two contradictory signals at once.
 // The prefixes are derived from the config instead of hardcoded because these
 // pathnames are meant to be renamed (see the comments in `src/config.yaml`).
+//
+// After the /blog/<category>/<post>/ migration, `category.pathname` is set to
+// "blog" in `src/config.yaml` so getPermalink(slug, 'category') emits
+// /blog/<slug>/. The noindex filter therefore only excludes tag paths from
+// the sitemap — category pages are indexable under their new URL.
 interface BlogSectionConfig {
   isEnabled?: boolean;
   pathname?: string;
@@ -46,6 +52,15 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 
 export default defineConfig({
   output: 'static',
+
+  // Static 301 redirects for the /blog/<category>/<post>/ URL migration.
+  // The map is derived from the post corpus at config load time (see
+  // src/utils/redirects.ts) so it always reflects the current state of
+  // src/data/post/. New posts automatically get a redirect entry; deleted
+  // posts simply have no entry. The "禁止丢失文章" guarantee is enforced
+  // by enumeration: every .md file in src/data/post/ produces a redirect
+  // entry on /<slug>/ → /blog/<category>/<slug>/.
+  redirects: buildRedirectMap(),
 
   // Prefetch links as they enter the viewport for snappier navigations
   // (works together with <ClientRouter />, which enables prefetch by default).

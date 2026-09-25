@@ -3,7 +3,7 @@ import { getCollection, render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import type { Post, Taxonomy } from '~/types';
 import { APP_BLOG } from 'astrowind:config';
-import { cleanSlug, trimSlash, BLOG_BASE, POST_PERMALINK_PATTERN, CATEGORY_BASE, TAG_BASE } from './permalinks';
+import { cleanSlug, trimSlash, POST_PERMALINK_PATTERN, TAG_BASE } from './permalinks';
 
 const generatePermalink = async ({
   id,
@@ -61,12 +61,23 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
   const publishDate = new Date(rawPublishDate);
   const updateDate = rawUpdateDate ? new Date(rawUpdateDate) : undefined;
 
-  const category = rawCategory
-    ? {
-        slug: cleanSlug(rawCategory),
-        title: rawCategory,
-      }
-    : undefined;
+  // ─── Hard assertion: every blog post must declare a category ───────────
+  // Topics and categories are the same taxonomy. A post without a category
+  // has no place under /blog/<category>/<slug>/ — the canonical URL scheme
+  // requires three nested segments and the middle one must be a real
+  // category slug. Surfacing missing categories as a build error keeps the
+  // "禁止删除/丢失文章" guarantee honest: a forgotten `category:` field
+  // becomes a red build, not a silent orphan URL.
+  if (!rawCategory || !String(rawCategory).trim()) {
+    throw new Error(
+      `[blog-migration] Post "${id}" is missing a \`category:\` field in its frontmatter. ` +
+        `Every blog post must declare exactly one category.`,
+    );
+  }
+  const category = {
+    slug: cleanSlug(rawCategory),
+    title: rawCategory,
+  };
 
   const tags = rawTags.map((tag: string) => ({
     slug: cleanSlug(tag),
@@ -128,6 +139,21 @@ export const blogTagRobots = APP_BLOG.tag.robots;
 
 export const blogPostsPerPage = APP_BLOG?.postsPerPage;
 
+/**
+ * Number of posts shown on the /blog/ home page. No pagination — the home
+ * page renders exactly this many newest posts and stops.
+ */
+export const BLOG_HOME_POST_COUNT = 12;
+
+/**
+ * Minimum post count required for a category to paginate. Categories with
+ * fewer than this many posts render as a single archive page
+ * (/blog/<category>/) with no /2/, /3/, … URLs. Set to 18 per editorial
+ * spec: pagination is reserved for topic-shaped content (glossary,
+ * encyclopedia), not for small per-category archives.
+ */
+export const CATEGORY_PAGINATION_THRESHOLD = 18;
+
 /** */
 export const fetchPosts = async (): Promise<Array<Post>> => {
   if (!_posts) {
@@ -173,48 +199,115 @@ export const findLatestPosts = async ({ count }: { count?: number }): Promise<Ar
   return posts ? posts.slice(0, _count) : [];
 };
 
-/** */
-export const getStaticPathsBlogList = async ({ paginate }: { paginate: PaginateFunction }) => {
-  if (!isBlogEnabled || !isBlogListRouteEnabled) return [];
-  return paginate(await fetchPosts(), {
-    params: { blog: BLOG_BASE || undefined },
-    pageSize: blogPostsPerPage,
-  });
-};
-
-/** */
-export const getStaticPathsBlogPost = async () => {
-  if (!isBlogEnabled || !isBlogPostRouteEnabled) return [];
-  return (await fetchPosts()).flatMap((post) => ({
-    params: {
-      blog: post.permalink,
-    },
-    props: { post },
-  }));
-};
-
-/** */
-export const getStaticPathsBlogCategory = async ({ paginate }: { paginate: PaginateFunction }) => {
+/**
+ * Build the static paths for /blog/<category>/ — the category landing page.
+ *
+ * Emits exactly one URL per category that has at least one post. This is
+ * always the page-1 view of the category archive; subsequent pages
+ * (/blog/<category>/2/, /3/, …) are emitted separately by
+ * `getStaticPathsBlogCategoryEntries`.
+ */
+export const getStaticPathsBlogCategoryIndex = async () => {
   if (!isBlogEnabled || !isBlogCategoryRouteEnabled) return [];
 
   const posts = await fetchPosts();
-  const categories: Record<string, Taxonomy> = {};
-  posts.map((post) => {
+  const categories: Map<string, Taxonomy> = new Map();
+  posts.forEach((post) => {
     if (post.category?.slug) {
-      categories[post.category.slug] = post.category;
+      categories.set(post.category.slug, post.category);
     }
   });
 
-  return Array.from(Object.keys(categories)).flatMap((categorySlug) =>
-    paginate(
-      posts.filter((post) => post.category?.slug && categorySlug === post.category?.slug),
-      {
-        params: { category: categorySlug, blog: CATEGORY_BASE || undefined },
-        pageSize: blogPostsPerPage,
-        props: { category: categories[categorySlug] },
+  return Array.from(categories.entries()).map(([categorySlug, category]) => ({
+    params: { category: categorySlug },
+    props: {
+      category,
+      posts: posts.filter((post) => post.category?.slug === categorySlug),
+    },
+  }));
+};
+
+/**
+ * Build the static paths for /blog/<category>/<slug>/ — the catch-all route
+ * underneath every category.
+ *
+ * Two kinds of entries are emitted per category:
+ *   - `kind: 'post'` — one entry per real article slug. The route renders
+ *     the single-post page.
+ *   - `kind: 'page'` — one entry per pagination index (2..N), ONLY for
+ *     categories whose post count exceeds `CATEGORY_PAGINATION_THRESHOLD`.
+ *     The route renders the category archive at page N with prev/next links.
+ *
+ * Categories below the threshold produce no pagination entries, so
+ * /blog/<category>/2/, /3/, … simply do not exist for them. This keeps the
+ * URL graph honest: a /2/ URL means "there really is a page 2 here".
+ */
+export const getStaticPathsBlogCategoryEntries = async () => {
+  if (!isBlogEnabled || !isBlogCategoryRouteEnabled) return [];
+
+  const posts = await fetchPosts();
+  const byCategory: Map<string, { category: Taxonomy; posts: Post[] }> = new Map();
+  posts.forEach((post) => {
+    if (post.category?.slug) {
+      const bucket = byCategory.get(post.category.slug);
+      if (bucket) {
+        bucket.posts.push(post);
+      } else {
+        byCategory.set(post.category.slug, { category: post.category, posts: [post] });
       }
-    )
-  );
+    }
+  });
+
+  type PostEntry = {
+    params: { category: string; slug: string };
+    props: { kind: 'post'; post: Post };
+  };
+  type PageEntry = {
+    params: { category: string; slug: string };
+    props: {
+      kind: 'page';
+      category: Taxonomy;
+      pageNumber: number;
+      totalPages: number;
+      posts: Post[];
+      prevUrl: string;
+      nextUrl: string | undefined;
+    };
+  };
+  type Entry = PostEntry | PageEntry;
+  const out: Entry[] = [];
+
+  for (const [categorySlug, { category, posts: catPosts }] of byCategory) {
+    // 1) one entry per real post slug
+    for (const post of catPosts) {
+      out.push({
+        params: { category: categorySlug, slug: post.slug },
+        props: { kind: 'post' as const, post },
+      });
+    }
+
+    // 2) pagination entries (only when over the threshold)
+    if (catPosts.length > CATEGORY_PAGINATION_THRESHOLD) {
+      const totalPages = Math.ceil(catPosts.length / blogPostsPerPage);
+      for (let n = 2; n <= totalPages; n++) {
+        const offset = (n - 1) * blogPostsPerPage;
+        out.push({
+          params: { category: categorySlug, slug: String(n) },
+          props: {
+            kind: 'page' as const,
+            category,
+            pageNumber: n,
+            totalPages,
+            posts: catPosts.slice(offset, offset + blogPostsPerPage),
+            prevUrl: n > 2 ? `/blog/${categorySlug}/${n - 1}/` : `/blog/${categorySlug}/`,
+            nextUrl: n < totalPages ? `/blog/${categorySlug}/${n + 1}/` : undefined,
+          },
+        });
+      }
+    }
+  }
+
+  return out;
 };
 
 /** */

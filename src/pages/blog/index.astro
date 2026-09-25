@@ -1,0 +1,103 @@
+---
+// src/pages/blog/index.astro
+// ─────────────────────────────────────────────────────────────────────────────
+// /blog/ — blog home page. Renders the latest BLOG_HOME_POST_COUNT (12) posts
+// in publish-date-desc order and stops. There is intentionally no pagination:
+// the home page is a fixed-size "what's new" surface, not an archive.
+//
+// The TopicGrid below the hero provides the navigation surface for browsing
+// posts by category — keeping the two concerns separate.
+//
+// URL scheme (canonical):
+//   /blog/                          ← this file
+//   /blog/<category>/               ← src/pages/blog/[category]/index.astro
+//   /blog/<category>/<slug>/        ← src/pages/blog/[category]/[slug].astro
+//   /blog/<category>/<page-n>/      ← same file as above, kind: 'page'
+// ─────────────────────────────────────────────────────────────────────────────
+
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import BlogList from '~/components/blog/List.astro';
+import TopicGrid from '~/components/blog/TopicGrid.astro';
+
+import { BLOG_HOME_POST_COUNT, blogListRobots, fetchPosts } from '~/utils/blog';
+import { TOPICS } from '~/data/topics';
+
+export const prerender = true;
+
+const breadcrumbItems = [
+  { text: 'Home', href: '/' },
+  { text: 'Blog', href: '/blog/' },
+];
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: breadcrumbItems.map((it, idx) => ({
+    '@type': 'ListItem',
+    position: idx + 1,
+    name: it.text,
+    item: it.href ? String(new URL(it.href, Astro.site ?? 'https://www.machine-knives.net')) : Astro.url.toString(),
+  })),
+};
+
+// All non-draft posts in publish-date-desc order. fetchPosts() returns them
+// already sorted, so .slice(0, N) picks the newest N for the home page.
+const allPosts = await fetchPosts();
+const latestPosts = allPosts.slice(0, BLOG_HOME_POST_COUNT);
+
+// Live post count per topic (slug → count), computed at build time so the
+// topic grid always reflects the current state of the corpus.
+const postsByTopic: Map<string, number> = new Map(
+  TOPICS.map((t) => [t.slug, allPosts.filter((p) => p.category?.slug === t.slug).length]),
+);
+
+const metadata = {
+  title: 'Blog',
+  description:
+    'Material comparisons, selection methodology, maintenance playbooks, troubleshooting case studies and AI-cited reference tables — written by KAIPU engineers.',
+  robots: {
+    index: blogListRobots?.index,
+    follow: blogListRobots?.follow,
+  },
+  openGraph: {
+    type: 'blog',
+  },
+};
+---
+
+<Layout metadata={metadata} breadcrumb={breadcrumbItems}>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)} />
+
+  <Hero
+    tagline="Industrial Insights"
+    title="The Blog"
+    subtitle="Material comparisons, selection methodology, maintenance playbooks, troubleshooting case studies and AI-cited reference tables — written by KAIPU engineers for line operators, buyers and procurement teams."
+  />
+
+  {/*
+    Region 1 — Topic navigation module.
+    Visually framed as a single panel: outer rounded border + soft shadow,
+    inner cells stay compact. Reads as a directory / control surface, not
+    as content. Background inherits the unified `bg-page` per
+    .clinerules §2; the panel boundary is drawn purely with border + shadow.
+  */}
+  <section class="px-4 sm:px-6 pb-12 sm:pb-16 mx-auto max-w-6xl">
+    <div class="rounded-xl border border-slate-200 dark:border-slate-700 shadow-md p-4 md:p-6 bg-page">
+      <TopicGrid postsByTopic={postsByTopic} />
+    </div>
+  </section>
+
+  {/*
+    Region 2 — Article showcase.
+    Spacious, image-led cards. No outer container so the cards breathe on
+    the unified `bg-page`. Heading is large + primary-toned to mark this as
+    the editorial surface (vs. the dense nav panel above).
+  */}
+  <section class="px-4 sm:px-6 pb-12 sm:pb-16 lg:pb-20 mx-auto max-w-6xl">
+    <h2 class="text-2xl md:text-3xl font-bold leading-tighter tracking-tighter font-heading mb-8 md:mb-10">
+      Latest Posts
+    </h2>
+    <BlogList posts={latestPosts} />
+  </section>
+</Layout>

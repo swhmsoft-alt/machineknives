@@ -1,0 +1,1 @@
+$ node scripts/prebuild-images.mjs && astro build && node scripts/postbuild.js && node scripts/audit-schema-strict.mjs && node scripts/check-unicode.mjs

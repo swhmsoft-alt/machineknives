@@ -38,7 +38,10 @@ apps:
 
     post:
       isEnabled: true
-      permalink: '/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+      # URL scheme: /blog/<category>/<slug>/. The %category% token is substituted
+      # by src/utils/blog.ts → generatePermalink(). Each post MUST declare a
+      # `category:` in its frontmatter (enforced at build time).
+      permalink: '/blog/%category%/%slug%'
       robots:
         index: true
 
@@ -50,7 +53,9 @@ apps:
 
     category:
       isEnabled: true
-      pathname: 'category' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
+      # Categories now live under /blog/<category>/, mirroring the post permalink
+      # above. getPermalink(slug, 'category') therefore produces /blog/<slug>/.
+      pathname: 'blog'
       robots:
         index: true
 
