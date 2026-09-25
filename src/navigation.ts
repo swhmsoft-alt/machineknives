@@ -53,10 +53,6 @@ export const headerData = {
         ...TOPICS.map((t) => ({ text: t.title, href: topicHrefFor(t) })),
       ],
     },
-    {
-      text: 'Contact',
-      href: getPermalink('/contact'),
-    },
   ],
   actions: [{ text: 'Request a Quote', href: getPermalink('/contact'), icon: 'tabler:mail' }],
 };
