@@ -1,10 +1,27 @@
 ---
-import { APP_BLOG } from 'astrowind:config';
+// src/components/blog/RelatedPosts.astro
+// ─────────────────────────────────────────────────────────────────────────────
+// Renders the four posts most related to the current article, directly in
+// the new ListItem visual register (border + shadow-sm + hover:lift +
+// image scale). Bypasses the older BlogHighlightedPosts widget because that
+// widget delegates to the legacy GridItem (bg-gray-400 placeholder,
+// heavy shadow), which read as dated against the rest of the site.
+//
+// Layout registers:
+//   • Eyebrow + heading + "View all" link = 橱窗 (showcase) tone, large heading
+//   • 4-col card grid on lg+, 2-col on sm, 1-col on mobile
+//   • Each card lifts on hover and the cover image scales 1.05
+import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 
+import { APP_BLOG } from 'astrowind:config';
 import { getRelatedPosts } from '~/utils/blog';
-import BlogHighlightedPosts from '~/components/widgets/BlogHighlightedPosts.astro';
+import { getBlogPermalink, getPermalink } from '~/utils/permalinks';
+import { findImage } from '~/utils/images';
+import { getFormattedDate } from '~/utils/utils';
+
 import type { Post } from '~/types';
-import { getBlogPermalink } from '~/utils/permalinks';
 
 export interface Props {
   post: Post;
@@ -13,19 +30,89 @@ export interface Props {
 const { post } = Astro.props;
 
 const relatedPosts = post.tags ? await getRelatedPosts(post, 4) : [];
+
+// Resolve cover images at build time so we can pass ImageMetadata into
+// <Image> directly (required for proper Sharp optimisation).
+const cards = await Promise.all(
+  relatedPosts.map(async (p) => {
+    const image = await findImage(p.image);
+    return { post: p, image: image as ImageMetadata | undefined };
+  }),
+);
 ---
 
 {
-  APP_BLOG.isRelatedPostsEnabled ? (
-    <BlogHighlightedPosts
-      classes={{
-        container:
-          'pt-0 lg:pt-0 md:pt-0 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade',
-      }}
-      title="Related Posts"
-      linkText="View All Posts"
-      linkUrl={getBlogPermalink()}
-      postIds={relatedPosts.map((post) => post.id)}
-    />
-  ) : null
+  APP_BLOG.isRelatedPostsEnabled && cards.length > 0 && (
+    <section class="px-4 sm:px-6 py-12 md:py-16 lg:py-20 mx-auto max-w-7xl">
+      <header class="mb-8 md:mb-12 text-center max-w-3xl mx-auto">
+        <p class="text-sm font-semibold uppercase tracking-widest text-primary">
+          Continue reading
+        </p>
+        <h2 class="mt-2 text-3xl md:text-4xl font-bold tracking-tight font-heading">
+          Related Posts
+        </h2>
+        <p class="mt-3 text-muted dark:text-slate-400">
+          More material comparisons, selection guides and troubleshooting case studies from our engineering team.
+        </p>
+        <a
+          href={getBlogPermalink()}
+          class="inline-flex items-center mt-4 text-sm font-semibold text-primary hover:underline underline-offset-4 transition"
+        >
+          View all posts
+          <Icon name="tabler:arrow-right" class="w-4 h-4 ml-1" />
+        </a>
+      </header>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        {
+          cards.map(({ post: p, image }) => {
+            const link = APP_BLOG?.post?.isEnabled ? getPermalink(p.permalink, 'post') : '';
+            return (
+              <article class="group flex flex-col h-full rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition duration-200 intersect-once intersect-quarter motion-safe:opacity-0 motion-safe:intersect:animate-fade">
+                {image && (
+                  <a class="relative block aspect-[16/10] overflow-hidden" href={link ?? 'javascript:void(0)'}>
+                    <Image
+                      src={image}
+                      class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      widths={[400, 600, 900]}
+                      width={900}
+                      height={563}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      alt={p.title}
+                      format="webp"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                )}
+                <div class="flex flex-col flex-grow p-5 sm:p-6">
+                  <time
+                    datetime={String(p.publishDate)}
+                    class="text-xs sm:text-sm text-muted dark:text-slate-400 mb-2 sm:mb-3"
+                  >
+                    {getFormattedDate(p.publishDate)}
+                  </time>
+                  <h3 class="text-base sm:text-lg font-bold leading-snug mb-2 sm:mb-3 font-heading dark:text-slate-300">
+                    {link ? (
+                      <a
+                        class="inline-block hover:text-primary dark:hover:text-blue-400 transition ease-in duration-200"
+                        href={link}
+                      >
+                        {p.title}
+                      </a>
+                    ) : (
+                      p.title
+                    )}
+                  </h3>
+                  {p.excerpt && (
+                    <p class="text-sm text-muted dark:text-slate-400 line-clamp-3">{p.excerpt}</p>
+                  )}
+                </div>
+              </article>
+            );
+          })
+        }
+      </div>
+    </section>
+  )
 }

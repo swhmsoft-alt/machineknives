@@ -22,8 +22,8 @@ import { Icon } from 'astro-icon/components';
 
 import Layout from '~/layouts/PageLayout.astro';
 import BlogList from '~/components/blog/List.astro';
-import Headline from '~/components/blog/Headline.astro';
 import Pagination from '~/components/blog/Pagination.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 
 import {
   CATEGORY_PAGINATION_THRESHOLD,
@@ -48,6 +48,11 @@ const pagePosts = shouldPaginate ? posts.slice(0, blogPostsPerPage) : posts;
 const nextUrl = shouldPaginate ? `/blog/${category.slug}/2/` : undefined;
 
 const topic = getTopic(category.slug);
+// Display title comes from the topic registry when present (e.g. "Material
+// Comparison"), else falls back to the post's raw category label. Without
+// this, the page would render the raw slug ("material-comparison") as the
+// H1, which reads as broken to a human visitor.
+const displayTitle: string = topic?.title ?? category.title;
 
 const breadcrumbItems = [
   { text: 'Home', href: '/' },
@@ -87,32 +92,121 @@ const metadata = {
 
 <Layout metadata={metadata} breadcrumb={breadcrumbItems}>
   <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)} />
-  <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-6xl">
-    <Headline>{category.title}</Headline>
 
-    {
-      topic && (
-        <div class="mb-8 md:mb-10 flex flex-wrap items-center justify-center gap-3 text-sm text-muted dark:text-slate-400">
-          <span class="inline-flex items-center gap-2">
-            <Icon name={topic.icon} class="w-5 h-5 text-primary" />
-            <span class="font-semibold uppercase tracking-wide text-secondary dark:text-blue-200">
-              {topic.contentType}
-            </span>
+  {/* ─── 1. Category Hero ──────────────────────────────────────────────
+   * Deep-blue radial gradient (same --aw-gradient-hero token used by the
+   * homepage Hero and the SinglePost article hero) so every blog surface
+   * opens on the same brand canvas. Renders the human-readable topic
+   * title, the topic description, the post count and a "Browse all
+   * topics" cross-link.
+   */}
+  <header class="category-hero relative isolate overflow-hidden">
+    <div class="category-hero-bg absolute inset-0 -z-10" aria-hidden="true"></div>
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 py-14 md:py-20 lg:py-24 text-center intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
+      {
+        topic && (
+          <span class="category-eyebrow inline-flex items-center mb-5">
+            <Icon name={topic.icon} class="w-4 h-4 mr-1.5 -mt-0.5" aria-hidden="true" />
+            {topic.contentType} topic
           </span>
-          <span aria-hidden="true">·</span>
-          <span>
-            {totalPosts} {totalPosts === 1 ? 'post' : 'posts'}
-          </span>
-          <span aria-hidden="true">·</span>
-          <a class="inline-flex items-center text-primary hover:underline" href={topicsIndexHref()}>
-            All topics
-            <Icon name="tabler:arrow-right" class="w-4 h-4 ml-1" />
-          </a>
-        </div>
-      )
-    }
+        )
+      }
+
+      <div class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 mb-5 text-sm text-white/75">
+        <span>
+          {totalPosts} {totalPosts === 1 ? 'post' : 'posts'}
+        </span>
+        {
+          topic && (
+            <>
+              <span aria-hidden="true">·</span>
+              <a class="inline-flex items-center hover:underline underline-offset-4" href={topicsIndexHref()}>
+                Browse all topics
+                <Icon name="tabler:arrow-right" class="w-4 h-4 ml-1" aria-hidden="true" />
+              </a>
+            </>
+          )
+        }
+      </div>
+
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tighter font-heading text-white">
+        {displayTitle}
+      </h1>
+
+      {
+        topic?.description && (
+          <p class="mt-5 text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
+            {topic.description}
+          </p>
+        )
+      }
+    </div>
+  </header>
+
+  {/* ─── 2. Article showcase ───────────────────────────────────────────
+   * Open, image-led cards (no panel wrap) — the "showcase" register
+   * defined in src/components/blog/TopicGrid.astro's commentary. The
+   * eyebrow + heading sequence matches the Related Posts section on
+   * the single-article page so visitors moving between the two read a
+   * consistent surface.
+   */}
+  <section class="px-4 sm:px-6 py-12 md:py-16 lg:py-20 mx-auto max-w-6xl">
+    <header class="mb-8 md:mb-12 text-center max-w-3xl mx-auto">
+      <p class="text-sm font-semibold uppercase tracking-widest text-primary">
+        {totalPosts} {totalPosts === 1 ? 'article' : 'articles'}
+      </p>
+      <h2 class="mt-2 text-3xl md:text-4xl font-bold tracking-tight font-heading">
+        All {displayTitle}
+      </h2>
+    </header>
 
     <BlogList posts={pagePosts} />
     <Pagination nextUrl={nextUrl} prevText="Previous" nextText="Next page" />
   </section>
+
+  {/* ─── 3. CTA closer ─────────────────────────────────────────────────
+   * Deep-blue gradient closer with a quote CTA. Mirrors the closer
+   * pattern used on every long landing page (/, /about, /products,
+   * /services, /quality, /solutions).
+   */}
+  <CallToAction
+    actions={[
+      { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:clipboard-text' },
+      { text: 'Browse All Topics', href: topicsIndexHref() },
+    ]}
+  >
+    <Fragment slot="title">Need help applying this to your line?</Fragment>
+    <Fragment slot="subtitle">
+      Send a drawing, a worn sample, or a written specification. KAIPU engineering responds with material grade,
+      hardness, tolerance and lead time within one business day.
+    </Fragment>
+  </CallToAction>
 </Layout>
+
+<style>
+  /* === Category Hero: deep-blue gradient + light text ===================
+   * Mirrors the homepage Hero and SinglePost article hero via the shared
+   * --aw-gradient-hero token, so the blog entry surfaces (index, category,
+   * single post) all open on the same brand canvas. The eyebrow pill
+   * reuses the same accent treatment as Hero's tagline pill.
+   */
+  .category-hero {
+    color: var(--aw-color-text-on-dark);
+  }
+
+  .category-hero-bg {
+    background: var(--aw-gradient-hero);
+  }
+
+  .category-eyebrow {
+    padding: 0.45rem 1.1rem;
+    border-radius: var(--aw-radius-pill);
+    background-color: var(--aw-color-accent);
+    color: var(--aw-color-text-on-accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    box-shadow: var(--aw-shadow-cta);
+  }
+</style>
