@@ -19,15 +19,20 @@ const {
   actions = await Astro.slots.render('actions'),
 
   id,
-  isDark = false,
+  isDark = true,
   classes = {},
   bg = await Astro.slots.render('bg'),
 } = Astro.props;
+
+// Default deep-blue gradient CTA — the page's conversion closer.
+const defaultBg = '<div class="absolute inset-0 cta-bg" aria-hidden="true"></div>';
+const hasBgSlot = Astro.slots.has('bg');
+const effectiveBg = hasBgSlot ? bg : defaultBg;
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto cta-section ${classes?.container ?? ''}`} bg={effectiveBg}>
   <div
-    class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600"
+    class="max-w-3xl mx-auto text-center p-8 md:p-12 rounded-card"
   >
     <Headline
       title={title}
@@ -35,17 +40,20 @@ const {
       tagline={tagline}
       classes={{
         container: 'mb-0 md:mb-0',
-        title: 'text-4xl md:text-4xl font-bold tracking-tighter mb-4 font-heading',
-        subtitle: 'text-xl text-muted dark:text-slate-400',
+        title: 'cta-title text-4xl md:text-5xl font-bold tracking-tight mb-5 font-heading',
+        subtitle: 'cta-subtitle text-lg md:text-xl',
       }}
     />
     {
       actions && (
-        <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 mt-6">
+        <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 mt-8">
           {Array.isArray(actions) ? (
-            actions.map((action) => (
+            actions.map((action, i) => (
               <div class="flex w-full sm:w-auto">
-                <Button {...(action || {})} class="w-full sm:mb-0" />
+                <Button
+                  {...(action || {})}
+                  class={`w-full sm:mb-0 ${i === 0 ? 'cta-btn-primary' : 'cta-btn-ghost'}`}
+                />
               </div>
             ))
           ) : (
@@ -56,3 +64,50 @@ const {
     }
   </div>
 </WidgetWrapper>
+
+<style>
+  /* === CallToAction: deep-blue gradient closer ===========================
+   * Drops the prior shadow-bordered card-in-section pattern in favor of
+   * a flat full-bleed dark gradient with a single bright CTA.
+   */
+  .cta-bg {
+    background: var(--aw-gradient-cta);
+  }
+
+  .cta-section {
+    color: var(--aw-color-text-on-dark);
+  }
+
+  .cta-title {
+    color: var(--aw-color-text-on-dark);
+  }
+
+  .cta-subtitle {
+    color: var(--aw-color-text-on-dark-muted);
+    line-height: 1.55;
+  }
+
+  .cta-btn-primary {
+    background-color: var(--aw-color-accent) !important;
+    border-color: var(--aw-color-accent) !important;
+    color: var(--aw-color-text-on-accent) !important;
+    box-shadow: var(--aw-shadow-cta);
+    padding-inline: 2rem;
+    font-weight: 700;
+  }
+  .cta-btn-primary:hover {
+    background-color: var(--aw-color-accent-hover) !important;
+    border-color: var(--aw-color-accent-hover) !important;
+    transform: translateY(-2px);
+  }
+
+  .cta-btn-ghost {
+    background-color: transparent !important;
+    border-color: var(--aw-color-border-on-dark) !important;
+    color: var(--aw-color-text-on-dark) !important;
+  }
+  .cta-btn-ghost:hover {
+    background-color: rgb(255 255 255 / 10%) !important;
+    border-color: rgb(255 255 255 / 30%) !important;
+  }
+</style>

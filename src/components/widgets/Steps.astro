@@ -15,13 +15,18 @@ const {
   defaultIcon,
 
   id,
-  isDark = false,
+  isDark = true,
   classes = {},
   bg = await Astro.slots.render('bg'),
 } = Astro.props;
+
+// Default deep-blue Steps background. Override via <div slot="bg">.
+const defaultBg = '<div class="absolute inset-0 steps-bg" aria-hidden="true"></div>';
+const hasBgSlot = Astro.slots.has('bg');
+const effectiveBg = hasBgSlot ? bg : defaultBg;
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-5xl ${classes?.container ?? ''}`} bg={bg}>
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-5xl steps-section ${classes?.container ?? ''}`} bg={effectiveBg}>
   <div class:list={['flex flex-col gap-8 md:gap-12', { 'md:flex-row-reverse': isReversed }, { 'md:flex-row': image }]}>
     <div class:list={['md:py-4 md:self-center', { 'md:basis-1/2': image }, { 'w-full': !image }]}>
       <Headline
@@ -59,3 +64,20 @@ const {
     }
   </div>
 </WidgetWrapper>
+
+<style>
+  /* === Steps: deep navy section with bright accent numbers ==============
+   * The Timeline already numbers its rows; we just make sure the section
+   * itself paints dark and any text that the wrapper doesn't auto-flip
+   * (Tagline, etc.) reads against the navy.
+   */
+  .steps-bg {
+    background: var(--aw-gradient-deep);
+  }
+
+  .steps-section :global(.text-default),
+  .steps-section :global(.text-muted) {
+    color: var(--aw-color-text-on-dark);
+    opacity: 0.88;
+  }
+</style>

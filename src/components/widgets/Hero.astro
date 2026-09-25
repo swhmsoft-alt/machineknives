@@ -16,22 +16,27 @@ const {
   id,
   bg = await Astro.slots.render('bg'),
 } = Astro.props;
+
+// Default industrial Hero background — deep blue radial gradient.
+// Pages that need a different background can pass their own via <div slot="bg">.
+const hasBgSlot = Astro.slots.has('bg');
+const defaultBg = '<div class="hero-bg absolute inset-0" aria-hidden="true"></div>';
 ---
 
-<section class="relative md:-mt-[76px] not-prose" {...id ? { id } : {}}>
-  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+<section class="relative md:-mt-[76px] not-prose hero-section" {...id ? { id } : {}}>
+  <div class="absolute inset-0 pointer-events-none -z-[1] bg-secondary" aria-hidden="true">
     <slot name="bg">
-      {bg ? <Fragment set:html={bg} /> : null}
+      {bg ? <Fragment set:html={bg} /> : <Fragment set:html={defaultBg} />}
     </slot>
   </div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
     <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
-    <div class="py-12 md:py-20">
+    <div class="py-16 md:py-24 lg:py-28">
       <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto">
         {
           tagline && (
             <p
-              class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+              class="hero-eyebrow-pill inline-block mb-5 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
               set:html={tagline}
             />
           )
@@ -39,7 +44,7 @@ const {
         {
           title && (
             <h1
-              class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+              class="hero-title font-bold leading-[1.05] tracking-tight mb-5 font-heading intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
               set:html={title}
             />
           )
@@ -48,7 +53,7 @@ const {
           {
             subtitle && (
               <p
-                class="text-xl text-muted mb-6 dark:text-slate-300 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+                class="hero-subtitle text-lg md:text-xl mb-8 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
                 set:html={subtitle}
               />
             )
@@ -57,9 +62,12 @@ const {
             actions && (
               <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
                 {Array.isArray(actions) ? (
-                  actions.map((action) => (
+                  actions.map((action, i) => (
                     <div class="flex w-full sm:w-auto">
-                      <Button {...(action || {})} class="w-full sm:mb-0" />
+                      <Button
+                        {...(action || {})}
+                        class={`w-full sm:mb-0 ${i === 0 ? 'hero-cta-primary' : 'hero-cta-ghost'}`}
+                      />
                     </div>
                   ))
                 ) : (
@@ -99,3 +107,92 @@ const {
     </div>
   </div>
 </section>
+<style>
+  /* Fluid Hero heading: scales smoothly between mobile and desktop
+   * instead of jumping at the md: breakpoint (text-5xl → text-6xl).
+   * Tailwind v4 doesn't ship a text-size clamp utility, hence the
+   * local <style>. The range matches the original ladder:
+   *   text-5xl = 3rem (48px)   →  clamp lower bound 2.25rem (36px)
+   *   text-6xl = 3.75rem (60px) →  clamp upper bound 4rem (64px)
+   * Mid-viewport lands near 5.5vw so the breakpoint crossfade is gone.
+   */
+  .hero-title {
+    font-size: clamp(2.25rem, 5.5vw, 4rem);
+  }
+</style>
+
+<style>
+  /* === Hero: industrial deep-blue visual theme =========================
+   * Replaces the prior flat white hero with a layered dark section so the
+   * page reads as a real product brand instead of a template.
+   *
+   * Layout:
+   *   - <section> gets a steel-navy base layer so even if the radial
+   *     gradient fails to load, contrast still holds.
+   *   - .hero-bg adds the radial highlight (defined in tokens.css).
+   *   - Eyebrow pill, headline, subtitle and CTA buttons all paint in
+   *     light tokens so they read against the dark background.
+   */
+
+  .hero-section {
+    color: var(--aw-color-text-on-dark);
+  }
+
+  .hero-bg {
+    background: var(--aw-gradient-hero);
+  }
+
+  .hero-eyebrow-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 1.1rem;
+    border-radius: var(--aw-radius-pill);
+    background-color: var(--aw-color-accent);
+    color: var(--aw-color-text-on-accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    box-shadow: var(--aw-shadow-cta);
+  }
+
+  /* Fluid Hero heading: scales smoothly between mobile and desktop.
+   * Range matches the original text-5xl → text-6xl ladder (48–60px)
+   * extended down to 36px on small phones and capped at 72px on huge
+   * displays so the dark hero keeps visual weight. */
+  .hero-title {
+    color: var(--aw-color-text-on-dark);
+    font-size: clamp(2.25rem, 5.5vw, 4.5rem);
+  }
+
+  .hero-subtitle {
+    color: var(--aw-color-text-on-dark-muted);
+    line-height: 1.55;
+  }
+
+  /* Primary CTA on dark Hero — orange instead of primary blue so it
+   * pops. Hover lifts + brightens. */
+  .hero-cta-primary {
+    background-color: var(--aw-color-accent) !important;
+    border-color: var(--aw-color-accent) !important;
+    color: var(--aw-color-text-on-accent) !important;
+    box-shadow: var(--aw-shadow-cta);
+  }
+  .hero-cta-primary:hover {
+    background-color: var(--aw-color-accent-hover) !important;
+    border-color: var(--aw-color-accent-hover) !important;
+    transform: translateY(-2px);
+  }
+
+  /* Secondary CTA on dark Hero — transparent with white border. */
+  .hero-cta-ghost {
+    background-color: transparent !important;
+    border-color: var(--aw-color-border-on-dark) !important;
+    color: var(--aw-color-text-on-dark) !important;
+  }
+  .hero-cta-ghost:hover {
+    background-color: rgb(255 255 255 / 10%) !important;
+    border-color: rgb(255 255 255 / 30%) !important;
+  }
+</style>

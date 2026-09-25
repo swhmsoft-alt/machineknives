@@ -26,9 +26,14 @@ const columnsClass =
       : columns === 2
         ? 'sm:grid-cols-2'
         : 'max-w-4xl';
+
+// Default light-gray FAQs background to visually separate from Features/Cases.
+const defaultBg = '<div class="absolute inset-0 faqs-bg" aria-hidden="true"></div>';
+const hasBgSlot = Astro.slots.has('bg');
+const effectiveBg = hasBgSlot ? bg : defaultBg;
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto faqs-section ${classes?.container ?? ''}`} bg={effectiveBg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
 
   {
@@ -81,3 +86,13 @@ const columnsClass =
     )
   }
 </WidgetWrapper>
+
+<style>
+  /* === FAQs: soft slate background to separate from Features/Cases ====
+   * Light tint gives a visual breath between the orange Stats block
+   * and the dark CTA closer, while keeping FAQ text dark for reading.
+   */
+  .faqs-bg {
+    background-color: var(--aw-color-surface-alt);
+  }
+</style>

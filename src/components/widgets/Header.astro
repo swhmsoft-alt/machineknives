@@ -59,7 +59,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
     <div class="absolute inset-0"></div>
     <div
       class:list={[
-        'relative text-default py-3 px-3 md:px-6 mx-auto w-full',
+        'relative header-inner py-3 px-3 md:px-6 mx-auto w-full',
         {
           'md:flex md:justify-between': position !== 'center',
         },
@@ -80,7 +80,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
         </div>
       </div>
       <nav
-        class="items-center w-full md:w-auto hidden md:flex md:mx-5 text-default overflow-y-auto overflow-x-hidden md:overflow-visible md:justify-self-center"
+        class="items-center w-full md:w-auto hidden md:flex md:mx-5 overflow-y-auto overflow-x-hidden md:overflow-visible md:justify-self-center"
         aria-label="Main navigation"
       >
         <ul
@@ -183,7 +183,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
             actions?.length ? (
               <span class="ml-4 rtl:ml-0 rtl:mr-4">
                 {actions.map((btnProps) => (
-                  <Button {...btnProps} class="ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto" />
+                  <Button {...btnProps} class="header-cta ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto" />
                 ))}
               </span>
             ) : (
@@ -199,6 +199,68 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
 <style>
   aw-header {
     display: contents;
+  }
+
+  /* === Header text adapts to its background ==============================
+   * The header sits transparent over a dark Hero at the top of the page
+   * (white text), then becomes a white bar after scroll (the `scroll`
+   * class is toggled at 60px by the inline script below — dark text on
+   * white background). Color is controlled here so individual links /
+   * dropdowns / icons don't need to know.
+   */
+  .header-inner {
+    color: var(--aw-color-text-on-dark);
+  }
+  :global(#header.scroll) .header-inner {
+    color: var(--aw-color-text-default);
+  }
+
+  /* Dropdown panel: keep the existing dark/blur look regardless of scroll */
+  :global(.header-inner) :global(.dropdown-menu) {
+    color: var(--aw-color-text-default);
+  }
+
+  /* Active link highlight: brand accent in both states */
+  .header-inner :global(.aw-link-active) {
+    color: var(--aw-color-accent);
+  }
+
+  /* Header action button (e.g. "Request a Quote"):
+   *  — On the dark Hero: transparent fill, white border, white text.
+   *  — After scroll (white bar): primary-blue border + text, transparent
+   *    fill; flips to solid primary on hover. */
+  .header-cta {
+    border-color: var(--aw-color-border-on-dark) !important;
+    color: var(--aw-color-text-on-dark) !important;
+    background-color: transparent !important;
+  }
+  .header-cta:hover {
+    background-color: rgb(255 255 255 / 12%) !important;
+    border-color: rgb(255 255 255 / 35%) !important;
+  }
+  :global(#header.scroll) .header-cta {
+    border-color: var(--aw-color-primary) !important;
+    color: var(--aw-color-primary) !important;
+    background-color: transparent !important;
+  }
+  :global(#header.scroll) .header-cta:hover {
+    background-color: var(--aw-color-primary) !important;
+    color: white !important;
+  }
+
+  /* Logo (`text-gray-900` baked into Logo.astro) and theme-toggle / RSS
+   * icons (`text-muted` baked into ToggleTheme.astro + the RSS <a>)
+   * all default to dark text. Override here so they read on the dark
+   * Hero and flip to dark text once the header gains its white bar. */
+  :global(.header-inner .self-center),
+  :global(.header-inner [data-aw-toggle-color-scheme]),
+  :global(.header-inner a[aria-label='RSS Feed']) {
+    color: var(--aw-color-text-on-dark) !important;
+  }
+  :global(#header.scroll .header-inner .self-center),
+  :global(#header.scroll .header-inner [data-aw-toggle-color-scheme]),
+  :global(#header.scroll .header-inner a[aria-label='RSS Feed']) {
+    color: var(--aw-color-text-default) !important;
   }
 </style>
 

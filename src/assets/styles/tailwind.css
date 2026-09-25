@@ -1,17 +1,34 @@
+@import './tokens.css';
 @import 'tailwindcss';
 
 @plugin "@tailwindcss/typography";
 
-@variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 
 @custom-variant intersect (&:not([no-intersect]));
 
 @theme {
   --color-primary: var(--aw-color-primary);
+  --color-primary-hover: var(--aw-color-primary-hover);
   --color-secondary: var(--aw-color-secondary);
   --color-accent: var(--aw-color-accent);
+  --color-accent-hover: var(--aw-color-accent-hover);
+  --color-surface: var(--aw-color-surface);
+  --color-surface-alt: var(--aw-color-surface-alt);
+  --color-border: var(--aw-color-border);
+  --color-border-strong: var(--aw-color-border-strong);
+  --color-success: var(--aw-color-success);
+  --color-warning: var(--aw-color-warning);
+  --color-danger: var(--aw-color-danger);
   --color-default: var(--aw-color-text-default);
   --color-muted: var(--aw-color-text-muted);
+
+  --radius-card: var(--aw-radius-card);
+  --radius-pill: var(--aw-radius-pill);
+
+  --shadow-card: var(--aw-shadow-card);
+  --shadow-card-hover: var(--aw-shadow-card-hover);
+  --shadow-cta: var(--aw-shadow-cta);
 
   --font-sans:
     var(--aw-font-sans, ui-sans-serif), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
@@ -114,4 +131,29 @@
 
 .dd *:first-child {
   margin-top: 0;
+}
+
+/* Honor the user's "reduce motion" system preference.
+ *
+ * The `motion-safe:` Tailwind variant used in Hero / WidgetWrapper /
+ * Note already short-circuits `animate-fade` for these users, but this
+ * blanket rule also covers everything else — button hover transitions,
+ * the mobile-menu slide, dropdown reveals, icon rotations — without
+ * needing to remember to add `motion-safe:` to every site.
+ *
+ * Durations are compressed to 0.01ms (effectively "instant" to the eye)
+ * rather than fully disabled, because some interactions depend on the
+ * `transitionend` / `animationend` event firing.
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
 }

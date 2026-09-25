@@ -11,31 +11,36 @@ const {
   stats = [],
 
   id,
-  isDark = false,
+  isDark = true,
   classes = {},
   bg = await Astro.slots.render('bg'),
 } = Astro.props;
+
+// Default orange-gradient Stats background — the brand's loudest section.
+const defaultBg = '<div class="absolute inset-0 stats-bg" aria-hidden="true"></div>';
+const hasBgSlot = Astro.slots.has('bg');
+const effectiveBg = hasBgSlot ? bg : defaultBg;
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto stats-section ${classes?.container ?? ''}`} bg={effectiveBg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
   <div class="flex flex-wrap justify-center -m-4 text-center">
     {
       stats &&
         stats.map(({ amount, title, icon }) => (
-          <div class="p-4 md:w-1/4 sm:w-1/2 w-full min-w-[220px] text-center md:border-r md:border-gray-200 md:last:border-none dark:md:border-slate-500 intersect-once motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade intersect-quarter">
+          <div class="stats-item p-4 md:w-1/4 sm:w-1/2 w-full min-w-[220px] text-center intersect-once motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade intersect-quarter">
             {icon && (
-              <div class="flex items-center justify-center mx-auto mb-4 text-primary">
+              <div class="flex items-center justify-center mx-auto mb-4 text-white">
                 <Icon name={icon} class="w-10 h-10" />
               </div>
             )}
             {amount && (
-              <div class="font-heading text-primary text-[2.6rem] font-bold dark:text-white lg:text-5xl xl:text-6xl">
+              <div class="stats-amount font-heading font-extrabold tracking-tight">
                 {amount}
               </div>
             )}
             {title && (
-              <div class="text-sm font-medium uppercase tracking-widest text-gray-800 dark:text-slate-400 lg:text-base">
+              <div class="stats-label">
                 {title}
               </div>
             )}
@@ -44,3 +49,45 @@ const {
     }
   </div>
 </WidgetWrapper>
+
+<style>
+  /* === Stats: orange-gradient feature wall ===============================
+   * Replaces the prior thin slate-bordered stat row with a bold orange
+   * gradient section that announces itself visually on the page.
+   */
+  .stats-bg {
+    background: var(--aw-gradient-stats);
+  }
+
+  .stats-section {
+    color: var(--aw-color-text-on-accent);
+  }
+
+  .stats-amount {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1;
+    color: var(--aw-color-text-on-accent);
+  }
+
+  .stats-label {
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--aw-color-text-on-accent);
+    opacity: 0.92;
+  }
+
+  .stats-item {
+    border-right: 1px solid rgb(255 255 255 / 20%);
+  }
+  .stats-item:last-child {
+    border-right: none;
+  }
+  @media (max-width: 767px) {
+    .stats-item {
+      border-right: none;
+    }
+  }
+</style>

@@ -29,24 +29,24 @@ const columnsClass =
         : '';
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-5xl ${classes?.container ?? ''}`} bg={bg}>
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-5xl features-section ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} classes={classes?.headline as Record<string, string>} />
 
   {
     items.length > 0 && (
-      <div class:list={['grid mx-auto gap-8 md:gap-y-12', columnsClass]}>
+      <div class:list={['grid mx-auto gap-6 md:gap-8', columnsClass]}>
         {items.map(({ title: itemTitle, description, icon, callToAction }) => (
-          <div class="intersect-once motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
-            <div class="flex flex-row max-w-md">
+          <div class="feature-card intersect-once motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
+            <div class="flex flex-row max-w-none">
               {(icon || defaultIcon) && (
-                <div class="flex justify-center">
+                <div class="flex justify-center feature-icon-wrap">
                   <Icon
                     name={icon || defaultIcon}
-                    class="w-7 h-7 mr-2 rtl:mr-0 rtl:ml-2 text-white bg-primary rounded-full md:w-12 md:h-12 md:p-3 p-2 mr-4 rtl:ml-4 rtl:mr-0"
+                    class="feature-icon"
                   />
                 </div>
               )}
-              <div class="mt-0.5">
+              <div class="mt-0.5 flex-1">
                 {itemTitle && <h3 class="text-xl md:text-[1.3rem] font-bold">{itemTitle}</h3>}
                 {description && <p class:list={[{ 'mt-3': itemTitle }, 'text-muted']} set:html={description} />}
                 {callToAction && (
@@ -61,4 +61,40 @@ const columnsClass =
       </div>
     )
   }
+</WidgetWrapper>
+
+<style>
+  /* === Features: card-elevated grid =====================================
+   * Replaces the prior flat row with bordered cards that lift on hover.
+   * Icon stays in its primary-color circular badge but the badge gets
+   * a subtle shadow for depth.
+   */
+  .feature-card {
+    padding: 1.5rem;
+    border: 1px solid var(--aw-color-border);
+    border-radius: var(--aw-radius-card);
+    background-color: var(--aw-color-surface);
+    box-shadow: var(--aw-shadow-card);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+  .feature-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--aw-color-border-strong);
+    box-shadow: var(--aw-shadow-card-hover);
+  }
+
+  .feature-icon-wrap {
+    flex-shrink: 0;
+    margin-right: 1rem;
+  }
+  .feature-icon {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.75rem;
+    color: white;
+    background-color: var(--aw-color-primary);
+    border-radius: var(--aw-radius-pill);
+    box-shadow: 0 6px 16px rgb(15 76 129 / 25%);
+  }
+</style>
 </WidgetWrapper>

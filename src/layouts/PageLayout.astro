@@ -100,14 +100,14 @@ const breadcrumbItems: ReadonlyArray<BreadcrumbItem> | null =
   <slot name="header">
     <Header {...filteredHeaderData} isSticky showRssFeed showToggleTheme />
   </slot>
+  <main>
+    <slot />
+  </main>
   <slot name="breadcrumb">
     {breadcrumbItems && breadcrumbItems.length > 0 && (
       <Breadcrumb items={breadcrumbItems} />
     )}
   </slot>
-  <main>
-    <slot />
-  </main>
   <slot name="footer">
     <Footer {...filteredFooterData} />
   </slot>
