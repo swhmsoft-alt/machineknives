@@ -8,10 +8,10 @@ applications:
   - 'Pouch-making lines'
   - 'Label stock slitting'
   - 'Adhesive tape converting'
-image: '/images/products/product-detail.jpg'
+image: '/images/products/product-detail.webp'
 ---
 
-# Straight Converting Blade —300 × 80 mm
+## Overview
 
 A standard straight top blade for pouch-making, label stock and adhesive tape converting lines. Manufactured from hardened tool steel, edge geometry tuned per application.
 

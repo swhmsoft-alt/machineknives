@@ -8,10 +8,10 @@ applications:
   - 'Reverse-engineered from sample'
   - 'Drawing-to-part'
   - 'Co-developed geometry'
-image: '/images/products/product-detail.jpg'
+image: '/images/products/product-detail.webp'
 ---
 
-# Custom Blade —Reverse-Engineered from Sample
+## Overview
 
 If your blade is obsolete, vendor-locked, or simply worn beyond recognition, we can reverse-engineer a replacement from the worn part. Send us the part (or a 3D scan / drawing), tell us what is failing on it, and our engineering team will design a replacement that fits —often with an upgraded material grade or geometry.
 

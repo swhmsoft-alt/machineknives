@@ -8,10 +8,10 @@ applications:
   - 'Paper slitting'
   - 'Film & foil slitting'
   - 'Tape slitting'
-image: '/images/products/product-detail.jpg'
+image: '/images/products/product-detail.webp'
 ---
 
-# Circular Slitting Blade Ø250 mm OD
+## Overview
 
 A standard circular slitting knife for paper, film and foil slitting lines. Manufactured from D2 tool steel, vacuum heat-treated to HRC 58±2, double-side ground to a parallel-tolerance of ±0.01 mm.
 

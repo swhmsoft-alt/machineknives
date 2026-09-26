@@ -103,9 +103,13 @@ for (const src of INPUTS) {
       .toBuffer();
     fs.writeFileSync(webp, buf);
     webpSize = buf.length;
-    // Delete the original only after the WebP is on disk — never leave the
-    // public/ tree in a half-converted state.
-    fs.unlinkSync(src);
+    // Keep the original alongside the WebP. The WebP is the production target
+    // (smaller, modern format); the original is a dev-mode fallback so
+    // `astro dev` can serve either extension after a fresh `git clone`
+    // without 404s on hero/category images. Production HTML now references
+    // `.webp` directly (see src/pages/index.astro and src/pages/products/
+    // [...slug].astro), so the originals are no longer required at runtime —
+    // they're purely a safety net for the dev workflow.
   } catch (err) {
     failed += 1;
     console.warn(`[prebuild-images] ✗ ${src}: ${err instanceof Error ? err.message : String(err)}`);

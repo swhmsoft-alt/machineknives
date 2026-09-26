@@ -8,10 +8,10 @@ applications:
   - 'Film perforating'
   - 'Foil tear lines'
   - 'Tear strips'
-image: '/images/products/product-detail.jpg'
+image: '/images/products/product-detail.webp'
 ---
 
-# Serrated Blade —6—2 TPI
+## Overview
 
 Serrated industrial blade for tear-strip, perforation and cut-to-length applications on film, foil, paper and laminate. Tooth profile, pitch and bevel selectable per process.
 

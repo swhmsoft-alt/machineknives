@@ -9,7 +9,7 @@ applications:
   - tissue converting
   - paper & tissue
   - high-speed web converting
-image: '/images/products/product-detail.jpg'
+image: '/images/products/product-detail.webp'
 draft: false
 metadata:
   title: 'D2 Bed Knife for Tissue Converting —HRC 60, 18° Clearance | KAIPU'

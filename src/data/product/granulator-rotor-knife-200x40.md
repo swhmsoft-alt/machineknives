@@ -8,10 +8,10 @@ applications:
   - 'Plastics granulators'
   - 'Shredder rotor / stator'
   - 'Recycling lines'
-image: '/images/products/product-detail.jpg'
+image: '/images/products/product-detail.webp'
 ---
 
-# Granulator Rotor Knife —200 × 40 × 20 mm
+## Overview
 
 A standard rotor knife for plastics granulators and shredders. Manufactured from M2 high-speed steel, vacuum heat-treated to HRC 60±4, with a four-edge reversible bevel for repeated re-grinding.
 

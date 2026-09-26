@@ -17,12 +17,12 @@ import {
 // title in kebab-case (e.g. 'Granulator Knives' -> 'granulator-knives.jpg').
 // Uploaded 2026-09-22; one image per level-1 category.
 const CATEGORY_HERO_IMAGES: Record<Level1Category, string> = {
-  circular: '/images/products/circular-blades.jpg',
-  straight: '/images/products/straight-blades.jpg',
-  serrated: '/images/products/serrated-blades.jpg',
-  shear: '/images/products/shear-blades.jpg',
-  granulator: '/images/products/granulator-knives.jpg',
-  custom: '/images/products/custom-blades.jpg',
+  circular: '/images/products/circular-blades.webp',
+  straight: '/images/products/straight-blades.webp',
+  serrated: '/images/products/serrated-blades.webp',
+  shear: '/images/products/shear-blades.webp',
+  granulator: '/images/products/granulator-knives.webp',
+  custom: '/images/products/custom-blades.webp',
 };
 import {
   buildProductCategoryBreadcrumb,
@@ -117,7 +117,11 @@ const props = Astro.props as PathProps;
 
 // Aggregated state for either view. Declared up-front so the template can
 // reference them without `var` hoisting tricks.
-let productContent: Awaited<ReturnType<typeof render>>['Content'] | null = null;
+// Astro treats lowercase tag names as HTML elements; the imported Content
+// component from `render()` must be referenced via an uppercase identifier
+// (`<Content />`) so the markdown body actually mounts. Previous name
+// `productContent` rendered as an empty `<productContent>` custom element.
+let Content: Awaited<ReturnType<typeof render>>['Content'] | null = null;
 let productEntry: CollectionEntry<'product'> | null = null;
 let productSubcategories: string[] = [];
 
@@ -134,7 +138,7 @@ let productBreadcrumb: BreadcrumbItem[] = [];
 
 if (props.kind === 'product') {
   const rendered = await render(props.product);
-  productContent = rendered.Content;
+  Content = rendered.Content;
   productEntry = props.product;
   productSubcategories = props.subcategories;
   productBreadcrumb = buildProductDetailBreadcrumb(
@@ -322,7 +326,7 @@ if (productEntry) {
     <Fragment slot="subtitle">Every product on this page is also available in custom geometry, hardness and tolerance. Send a drawing or sample and we will quote against your application.</Fragment>
   </CallToAction>
   </Layout>
-) : props.kind === 'product' && productEntry && productContent ? (
+) : props.kind === 'product' && productEntry && Content ? (
   <Layout metadata={{ title: `${productEntry.data.title} — KAIPU`, description: productEntry.data.excerpt ?? '' }} breadcrumb={productBreadcrumb}>
     <Hero
       tagline={getCategoryMeta(productEntry.data.category).label}
@@ -370,9 +374,12 @@ if (productEntry) {
           <p class='text-sm font-semibold uppercase tracking-widest text-primary mb-2'>
             {getCategoryMeta(productEntry.data.category).label} — {productEntry.data.category}
           </p>
-          <h1 class='text-3xl md:text-4xl font-bold font-heading dark:text-white mb-3'>
+          {/* Demoted from <h1> → <h2>: the page already has a canonical <h1>
+           *  rendered by <Hero> above. Keeping the same Tailwind classes so
+           *  the visual hierarchy is unchanged. */}
+          <h2 class='text-3xl md:text-4xl font-bold font-heading dark:text-white mb-3'>
             {productEntry.data.title}
-          </h1>
+          </h2>
           <p class='text-base text-muted dark:text-slate-300 mb-6'>
             {productEntry.data.excerpt ?? 'Precision industrial blade — engineering-grade material and tolerances.'}
           </p>
@@ -511,7 +518,7 @@ if (productEntry) {
 
         <div role='tabpanel' id='tab-panel-desc' data-panel='desc' aria-labelledby='tab-btn-desc' class='tab-panel hidden'>
           <div id='desc-container' class='prose dark:prose-invert max-w-none'>
-            <productContent />
+            <Content />
           </div>
         </div>
       </div>

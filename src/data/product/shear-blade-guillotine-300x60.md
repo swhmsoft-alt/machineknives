@@ -8,10 +8,10 @@ applications:
   - 'Plate guillotine cutting'
   - 'Swing-beam shearing'
   - 'Scrap shear'
-image: '/images/products/product-detail.jpg'
+image: '/images/products/product-detail.webp'
 ---
 
-# Shear Blade —Guillotine 300 × 60 mm
+## Overview
 
 Industrial shear blade for guillotine and swing-beam cutting of mild steel, stainless steel and aluminium plate up to 12 mm thickness. Manufactured from shock-resistant tool steel, ground to a flatness suitable for plate-edge quality.
 

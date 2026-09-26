@@ -72,15 +72,28 @@ export default defineConfig({
   // Native Fonts API: self-hosts + subsets + preloads Inter and generates
   // metric-adjusted fallbacks. Injected via <Font /> in Layout.astro and
   // consumed through the `--font-inter` CSS variable in CustomStyles.astro.
+  //
+  // Uses fontProviders.local() with a vendored woff2 file so that build and
+  // dev work fully offline. The source package `@fontsource-variable/inter`
+  // (kept in dependencies) is the canonical place to refresh the file from.
   fonts: [
     {
-      provider: fontProviders.fontsource(),
+      provider: fontProviders.local(),
       name: 'Inter',
       cssVariable: '--font-inter',
       weights: ['100 900'],
       styles: ['normal'],
       subsets: ['latin'],
       fallbacks: ['sans-serif'],
+      options: {
+        variants: [
+          {
+            src: ['./src/assets/fonts/Inter-Variable.woff2'],
+            weight: '100 900',
+            style: 'normal',
+          },
+        ],
+      },
     },
   ],
 
