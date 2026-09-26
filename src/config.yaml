@@ -1,6 +1,6 @@
 site:
   name: Industrial Knives
-  site: 'https://www.machine-knives.net'
+  site: 'https://industrial-knives.net'
   base: '/'
   trailingSlash: true
 
