@@ -20,7 +20,7 @@ const {
   (title || subtitle || tagline) && (
     <div class={twMerge('mb-8 md:mx-auto md:mb-12 text-center', containerClass)}>
       {tagline && (
-        <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase" set:html={tagline} />
+        <p class="text-sm font-semibold text-muted spec-eyebrow" set:html={tagline} />
       )}
       {title && (
         <h2
@@ -33,3 +33,15 @@ const {
     </div>
   )
 }
+
+<style>
+  /* spec-eyebrow: small spec-font label that sits above the headline.
+   * Replaces the prior tracked-out ALL-CAPS eyebrow that read as the
+   * generic "AI default" template. No uppercase, no heavy tracking —
+   * sentence-case label, sized to read as a content marker, not as
+   * a typographic flourish. Tabular numerals for spec content. */
+  .spec-eyebrow {
+    font-feature-settings: 'tnum', 'ss01';
+    letter-spacing: 0.01em;
+  }
+</style>

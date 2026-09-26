@@ -10,10 +10,17 @@
  * To rebrand the site, edit ONLY this file. The two consumers will pick
  * up the new values automatically through @import.
  *
- * Brand palette — KAIPU industrial:
- *   primary    deep industrial blue    rgb(15 76 129)
- *   secondary  steel navy              rgb(28 50 92)
- *   accent     molten metal orange     rgb(217 119 38)
+ * Brand palette — KAIPU industrial (oxide edition, 2026-09-26):
+ *   primary      cobalt          rgb(15 76 129)   deep industrial blue
+ *   secondary    steel navy      rgb(28 50 92)
+ *   accent       oxide-red       rgb(178 58 46)   #B23A2E  iron-oxide red
+ *   paper        engineering paper rgb(245 244 239) #F5F4EF warm beige page
+ *   graphite     near-black      rgb(22 24 29)    #16181D
+ *   rule         hairline        rgb(226 223 215) #E2DFD7  warm-gray rule
+ *
+ * The previous Anthropic-orange accent (rgb 217 119 38) is retired;
+ * the new accent is iron-oxide red, paired with a warm engineering-paper
+ * page background. Shadows are softened; SaaS card lift is removed.
  */
 
 :root {
@@ -21,51 +28,57 @@
   --aw-color-primary: rgb(15 76 129);
   --aw-color-primary-hover: rgb(20 95 158);
   --aw-color-secondary: rgb(28 50 92);
-  --aw-color-accent: rgb(217 119 38);
-  --aw-color-accent-hover: rgb(245 138 50);
+  --aw-color-accent: rgb(178 58 46);            /* #B23A2E oxide-red */
+  --aw-color-accent-hover: rgb(142 46 37);      /* #8E2E25 */
 
   /* === Semantic colors === */
-  --aw-color-success: rgb(22 163 74);
-  --aw-color-warning: rgb(217 119 38);
-  --aw-color-danger: rgb(220 38 38);
+  --aw-color-success: rgb(22 101 52);
+  --aw-color-warning: rgb(178 58 46);           /* shares oxide-red */
+  --aw-color-danger: rgb(168 32 24);
 
-  /* === Text on dark sections (for Hero/Steps/CTA) === */
+  /* === Text on dark sections (Hero/Steps/CTA) === */
   --aw-color-text-on-dark: rgb(243 244 246);
   --aw-color-text-on-dark-muted: rgb(243 244 246 / 78%);
   --aw-color-text-on-accent: rgb(255 255 255);
 
   /* === Surface layers === */
-  --aw-color-surface: rgb(255 255 255);
-  --aw-color-surface-alt: rgb(248 250 252);
-  --aw-color-surface-dark: rgb(28 50 92);
-  --aw-color-surface-darker: rgb(15 23 42);
+  --aw-color-surface: rgb(255 255 255);         /* card surface — white to pop off paper */
+  --aw-color-surface-alt: rgb(237 233 222);     /* deeper paper for stripe rows */
+  --aw-color-surface-dark: rgb(22 24 29);
+  --aw-color-surface-darker: rgb(8 10 14);
+
+  /* === Paper, rule, graphite (Phase 1 additions) === */
+  --aw-color-paper: rgb(245 244 239);           /* #F5F4EF engineering paper */
+  --aw-color-rule: rgb(226 223 215);            /* #E2DFD7 hairline */
+  --aw-color-graphite: rgb(22 24 29);           /* #16181D */
+  --aw-color-graphite-700: rgb(45 49 56);
 
   /* === Borders === */
-  --aw-color-border: rgb(226 232 240);
+  --aw-color-border: rgb(226 223 215);
   --aw-color-border-strong: rgb(15 76 129);
   --aw-color-border-on-dark: rgb(255 255 255 / 14%);
 
-  /* === Existing text & page colors (backward compat) === */
-  --aw-color-text-heading: rgb(17 24 39);
-  --aw-color-text-default: rgb(31 41 55);
-  --aw-color-text-muted: rgb(31 41 55 / 70%);
-  --aw-color-bg-page: rgb(255 255 255);
+  /* === Text === */
+  --aw-color-text-heading: rgb(22 24 29);
+  --aw-color-text-default: rgb(22 24 29);
+  --aw-color-text-muted: rgb(45 49 56 / 78%);
+  --aw-color-bg-page: rgb(245 244 239);
 
-  /* === Radii === */
-  --aw-radius-sm: 0.375rem;
-  --aw-radius-md: 0.75rem;
-  --aw-radius-card: 1rem;
+  /* === Radii — restrained, not SaaS-rounded === */
+  --aw-radius-sm: 0.25rem;        /* 4px */
+  --aw-radius-md: 0.375rem;       /* 6px */
+  --aw-radius-card: 0.5rem;       /* 8px */
   --aw-radius-pill: 9999px;
 
-  /* === Shadows === */
-  --aw-shadow-card: 0 4px 14px rgb(15 23 42 / 6%), 0 1px 3px rgb(15 23 42 / 4%);
-  --aw-shadow-card-hover: 0 16px 40px rgb(15 76 129 / 16%), 0 2px 6px rgb(15 23 42 / 6%);
-  --aw-shadow-cta: 0 10px 30px rgb(217 119 38 / 35%);
-  --aw-shadow-deep: 0 20px 50px rgb(15 23 42 / 25%);
+  /* === Shadows — softened; cards rely on border, not lift === */
+  --aw-shadow-card: 0 1px 2px rgb(22 24 29 / 4%);
+  --aw-shadow-card-hover: 0 0 0 1px rgb(15 76 129 / 22%);
+  --aw-shadow-cta: 0 6px 18px rgb(178 58 46 / 28%);
+  --aw-shadow-deep: 0 12px 32px rgb(22 24 29 / 18%);
 
-  /* === Gradients (key visual rhythm — light/dark contrast sections) === */
+  /* === Gradients (kept for Phase 1 backward compat; Phase 3 retires hero/stats) === */
   --aw-gradient-hero: radial-gradient(ellipse 90% 70% at 50% 0%, var(--aw-color-primary) 0%, var(--aw-color-secondary) 60%, rgb(20 35 70) 100%);
-  --aw-gradient-stats: linear-gradient(135deg, var(--aw-color-accent) 0%, var(--aw-color-accent-hover) 100%);
+  --aw-gradient-stats: linear-gradient(135deg, var(--aw-color-graphite) 0%, var(--aw-color-surface-darker) 100%);
   --aw-gradient-cta: linear-gradient(135deg, var(--aw-color-primary) 0%, var(--aw-color-secondary) 100%);
   --aw-gradient-deep: linear-gradient(180deg, var(--aw-color-secondary) 0%, var(--aw-color-primary) 100%);
 }
@@ -73,18 +86,18 @@
 .dark {
   --aw-color-primary: rgb(56 132 210);
   --aw-color-secondary: rgb(96 165 250);
-  --aw-color-accent: rgb(251 146 60);
-  --aw-color-accent-hover: rgb(253 186 116);
-  --aw-color-success: rgb(74 222 128);
-  --aw-color-warning: rgb(251 146 60);
-  --aw-color-danger: rgb(248 113 113);
+  --aw-color-accent: rgb(217 88 75);             /* brighter oxide-red on dark */
+  --aw-color-accent-hover: rgb(232 110 96);
+  --aw-color-success: rgb(74 178 96);
+  --aw-color-warning: rgb(217 88 75);
+  --aw-color-danger: rgb(220 64 56);
 
   --aw-color-surface: rgb(17 24 39);
   --aw-color-surface-alt: rgb(30 41 59);
   --aw-color-surface-dark: rgb(10 15 28);
   --aw-color-surface-darker: rgb(2 6 23);
 
-  --aw-color-border: rgb(51 65 85);
+  --aw-color-border: rgb(45 49 56);
   --aw-color-border-strong: rgb(96 165 250);
   --aw-color-border-on-dark: rgb(255 255 255 / 8%);
 
@@ -93,14 +106,19 @@
   --aw-color-text-muted: rgb(229 231 235 / 70%);
   --aw-color-bg-page: rgb(10 15 28);
 
+  --aw-color-paper: rgb(10 15 28);
+  --aw-color-rule: rgb(45 49 56);
+  --aw-color-graphite: rgb(243 244 246);
+  --aw-color-graphite-700: rgb(200 205 215);
+
   --aw-color-text-on-dark: rgb(255 255 255);
   --aw-color-text-on-dark-muted: rgb(255 255 255 / 75%);
   --aw-color-text-on-accent: rgb(17 24 39);
 
-  --aw-shadow-card: 0 4px 14px rgb(0 0 0 / 30%), 0 1px 3px rgb(0 0 0 / 20%);
-  --aw-shadow-card-hover: 0 16px 40px rgb(56 132 210 / 25%);
-  --aw-shadow-cta: 0 10px 30px rgb(251 146 60 / 35%);
-  --aw-shadow-deep: 0 20px 50px rgb(0 0 0 / 50%);
+  --aw-shadow-card: 0 1px 2px rgb(0 0 0 / 30%);
+  --aw-shadow-card-hover: 0 0 0 1px rgb(96 165 250 / 22%);
+  --aw-shadow-cta: 0 8px 20px rgb(217 88 75 / 30%);
+  --aw-shadow-deep: 0 12px 32px rgb(0 0 0 / 50%);
 }
 
 ::selection {
