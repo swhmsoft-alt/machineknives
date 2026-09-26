@@ -72,14 +72,19 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.66.0"
   },
-  "overrides": {
+    "overrides": {
     "yaml": ">=2.8.3",
     "astro-compress": {
       "sharp": "^0.35.3",
       "svgo": "^4.0.2"
     },
+    "deepmerge-ts": "^8.0.0",
     "postcss": {
       "nanoid": "^3.3.18"
     }
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
   }
 }
+

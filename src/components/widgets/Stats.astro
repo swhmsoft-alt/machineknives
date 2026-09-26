@@ -1,47 +1,42 @@
 ---
-import type { Stats as Props } from '~/types';
-import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
-import Headline from '~/components/ui/Headline.astro';
-import { Icon } from 'astro-icon/components';
+import type { Stats as Props } from "~/types";
+import WidgetWrapper from "~/components/ui/WidgetWrapper.astro";
+import Headline from "~/components/ui/Headline.astro";
+import { Icon } from "astro-icon/components";
 
 const {
-  title = await Astro.slots.render('title'),
-  subtitle = await Astro.slots.render('subtitle'),
+  title = await Astro.slots.render("title"),
+  subtitle = await Astro.slots.render("subtitle"),
   tagline,
   stats = [],
 
   id,
-  isDark = true,
+  isDark = false,
   classes = {},
-  bg = await Astro.slots.render('bg'),
+  bg = await Astro.slots.render("bg"),
 } = Astro.props;
-
-// Default orange-gradient Stats background — the brand's loudest section.
-const defaultBg = '<div class="absolute inset-0 stats-bg" aria-hidden="true"></div>';
-const hasBgSlot = Astro.slots.has('bg');
-const effectiveBg = hasBgSlot ? bg : defaultBg;
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto stats-section ${classes?.container ?? ''}`} bg={effectiveBg}>
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto stats-section ${classes?.container ?? ""}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
   <div class="flex flex-wrap justify-center -m-4 text-center">
     {
       stats &&
-        stats.map(({ amount, title, icon }) => (
-          <div class="stats-item p-4 md:w-1/4 sm:w-1/2 w-full min-w-[220px] text-center intersect-once motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade intersect-quarter">
+        stats.map(({ amount, title: statTitle, icon }) => (
+          <div class="stats-item p-4 md:w-1/4 sm:w-1/2 w-full min-w-[220px] text-center">
             {icon && (
-              <div class="flex items-center justify-center mx-auto mb-4 text-white">
-                <Icon name={icon} class="w-10 h-10" />
+              <div class="flex items-center justify-center mx-auto mb-3">
+                <Icon name={icon} class="w-7 h-7" style="color: var(--aw-color-graphite-700)" />
               </div>
             )}
             {amount && (
-              <div class="stats-amount font-heading font-extrabold tracking-tight">
+              <div class="stats-amount font-heading">
                 {amount}
               </div>
             )}
-            {title && (
+            {statTitle && (
               <div class="stats-label">
-                {title}
+                {statTitle}
               </div>
             )}
           </div>
@@ -51,36 +46,35 @@ const effectiveBg = hasBgSlot ? bg : defaultBg;
 </WidgetWrapper>
 
 <style>
-  /* === Stats: orange-gradient feature wall ===============================
-   * Replaces the prior thin slate-bordered stat row with a bold orange
-   * gradient section that announces itself visually on the page.
-   */
-  .stats-bg {
-    background: var(--aw-gradient-stats);
-  }
+  /* === Stats: paper-bg engineering panel ===
+   * Phase 3 — replaces the orange-gradient feature wall with a quiet
+   * paper-bg spec panel: thin rules, sentence-case labels, large
+   * graphite numerals. Reads as an instrument panel, not a SaaS hero. */
 
   .stats-section {
-    color: var(--aw-color-text-on-accent);
+    color: var(--aw-color-graphite);
   }
 
   .stats-amount {
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-size: clamp(2.25rem, 4.5vw, 3.75rem);
     line-height: 1;
-    color: var(--aw-color-text-on-accent);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--aw-color-graphite);
+    font-feature-settings: 'tnum', 'ss01';
   }
 
   .stats-label {
-    margin-top: 0.75rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--aw-color-text-on-accent);
-    opacity: 0.92;
+    margin-top: 0.5rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--aw-color-graphite-700);
+    font-feature-settings: 'tnum';
+    /* sentence case — no uppercase, no heavy tracking */
   }
 
   .stats-item {
-    border-right: 1px solid rgb(255 255 255 / 20%);
+    border-right: 1px solid var(--aw-color-rule);
   }
   .stats-item:last-child {
     border-right: none;
@@ -88,6 +82,10 @@ const effectiveBg = hasBgSlot ? bg : defaultBg;
   @media (max-width: 767px) {
     .stats-item {
       border-right: none;
+      border-bottom: 1px solid var(--aw-color-rule);
+    }
+    .stats-item:last-child {
+      border-bottom: none;
     }
   }
 </style>

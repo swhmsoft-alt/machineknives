@@ -21,6 +21,7 @@ import type { InferGetStaticPropsType, GetStaticPaths } from 'astro';
 import { Icon } from 'astro-icon/components';
 
 import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
 import BlogList from '~/components/blog/List.astro';
 import Pagination from '~/components/blog/Pagination.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
@@ -93,55 +94,11 @@ const metadata = {
 <Layout metadata={metadata} breadcrumb={breadcrumbItems}>
   <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)} />
 
-  {/* ─── 1. Category Hero ──────────────────────────────────────────────
-   * Deep-blue radial gradient (same --aw-gradient-hero token used by the
-   * homepage Hero and the SinglePost article hero) so every blog surface
-   * opens on the same brand canvas. Renders the human-readable topic
-   * title, the topic description, the post count and a "Browse all
-   * topics" cross-link.
-   */}
-  <header class="category-hero relative isolate overflow-hidden">
-    <div class="category-hero-bg absolute inset-0 -z-10" aria-hidden="true"></div>
-    <div class="mx-auto max-w-4xl px-4 sm:px-6 py-14 md:py-20 lg:py-24 text-center intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
-      {
-        topic && (
-          <span class="category-eyebrow inline-flex items-center mb-5">
-            <Icon name={topic.icon} class="w-4 h-4 mr-1.5 -mt-0.5" aria-hidden="true" />
-            {topic.contentType} topic
-          </span>
-        )
-      }
-
-      <div class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 mb-5 text-sm text-white/75">
-        <span>
-          {totalPosts} {totalPosts === 1 ? 'post' : 'posts'}
-        </span>
-        {
-          topic && (
-            <>
-              <span aria-hidden="true">·</span>
-              <a class="inline-flex items-center hover:underline underline-offset-4" href={topicsIndexHref()}>
-                Browse all topics
-                <Icon name="tabler:arrow-right" class="w-4 h-4 ml-1" aria-hidden="true" />
-              </a>
-            </>
-          )
-        }
-      </div>
-
-      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tighter font-heading text-white">
-        {displayTitle}
-      </h1>
-
-      {
-        topic?.description && (
-          <p class="mt-5 text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
-            {topic.description}
-          </p>
-        )
-      }
-    </div>
-  </header>
+<Hero
+    tagline={category.title}
+    title={displayTitle}
+    subtitle={topic?.description ?? pageDescription}
+  />
 
   {/* ─── 2. Article showcase ───────────────────────────────────────────
    * Open, image-led cards (no panel wrap) — the "showcase" register
@@ -151,11 +108,11 @@ const metadata = {
    * consistent surface.
    */}
   <section class="px-4 sm:px-6 py-12 md:py-16 lg:py-20 mx-auto max-w-6xl">
-    <header class="mb-8 md:mb-12 text-center max-w-3xl mx-auto">
-      <p class="text-sm font-semibold uppercase tracking-widest text-primary">
+    <header class="mb-8 md:mb-12 max-w-3xl">
+      <p class="text-sm font-semibold text-muted" style="font-feature-settings: 'tnum'; letter-spacing: 0.02em;">
         {totalPosts} {totalPosts === 1 ? 'article' : 'articles'}
       </p>
-      <h2 class="mt-2 text-3xl md:text-4xl font-bold tracking-tight font-heading">
+      <h2 class="mt-3 text-3xl md:text-4xl font-bold tracking-tight font-heading">
         All {displayTitle}
       </h2>
     </header>
@@ -183,30 +140,3 @@ const metadata = {
   </CallToAction>
 </Layout>
 
-<style>
-  /* === Category Hero: deep-blue gradient + light text ===================
-   * Mirrors the homepage Hero and SinglePost article hero via the shared
-   * --aw-gradient-hero token, so the blog entry surfaces (index, category,
-   * single post) all open on the same brand canvas. The eyebrow pill
-   * reuses the same accent treatment as Hero's tagline pill.
-   */
-  .category-hero {
-    color: var(--aw-color-text-on-dark);
-  }
-
-  .category-hero-bg {
-    background: var(--aw-gradient-hero);
-  }
-
-  .category-eyebrow {
-    padding: 0.45rem 1.1rem;
-    border-radius: var(--aw-radius-pill);
-    background-color: var(--aw-color-accent);
-    color: var(--aw-color-text-on-accent);
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    box-shadow: var(--aw-shadow-cta);
-  }
-</style>

@@ -1,197 +1,227 @@
 ---
-import Image from '~/components/common/Image.astro';
-import Button from '~/components/ui/Button.astro';
+import Image from "~/components/common/Image.astro";
+import Button from "~/components/ui/Button.astro";
 
-import type { Hero as Props } from '~/types';
+import type { Hero as Props } from "~/types";
 
 const {
-  title = await Astro.slots.render('title'),
-  subtitle = await Astro.slots.render('subtitle'),
+  title = await Astro.slots.render("title"),
+  subtitle = await Astro.slots.render("subtitle"),
   tagline,
-
-  content = await Astro.slots.render('content'),
-  actions = await Astro.slots.render('actions'),
-  image = await Astro.slots.render('image'),
-
+  content = await Astro.slots.render("content"),
+  actions = await Astro.slots.render("actions"),
+  image = await Astro.slots.render("image"),
+  // Optional engineering spec strip rendered below the main grid.
+  // Each entry: { label, value } — e.g. HRC, Lead time, Tolerance.
+  specs,
   id,
-  bg = await Astro.slots.render('bg'),
 } = Astro.props;
-
-// Default industrial Hero background — deep blue radial gradient.
-// Pages that need a different background can pass their own via <div slot="bg">.
-const hasBgSlot = Astro.slots.has('bg');
-const defaultBg = '<div class="hero-bg absolute inset-0" aria-hidden="true"></div>';
 ---
 
 <section class="relative not-prose hero-section" {...id ? { id } : {}}>
-  <div class="absolute inset-0 pointer-events-none -z-[1] bg-secondary" aria-hidden="true">
-    <slot name="bg">
-      {bg ? <Fragment set:html={bg} /> : <Fragment set:html={defaultBg} />}
-    </slot>
-  </div>
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="py-16 md:py-24 lg:py-28">
-      <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto">
-        {
-          tagline && (
-            <p
-              class="hero-eyebrow-pill inline-block mb-5 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
-              set:html={tagline}
-            />
-          )
-        }
-        {
-          title && (
-            <h1
-              class="hero-title font-bold leading-[1.05] tracking-tight mb-5 font-heading intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
-              set:html={title}
-            />
-          )
-        }
-        <div class="max-w-3xl mx-auto">
-          {
-            subtitle && (
-              <p
-                class="hero-subtitle text-lg md:text-xl mb-8 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
-                set:html={subtitle}
-              />
-            )
-          }
-          {
-            actions && (
-              <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
-                {Array.isArray(actions) ? (
-                  actions.map((action, i) => (
-                    <div class="flex w-full sm:w-auto">
-                      <Button
-                        {...(action || {})}
-                        class={`w-full sm:mb-0 ${i === 0 ? 'hero-cta-primary' : 'hero-cta-ghost'}`}
-                      />
-                    </div>
-                  ))
-                ) : (
-                  <Fragment set:html={actions} />
-                )}
-              </div>
-            )
-          }
-        </div>
+  <div class="relative max-w-7xl mx-auto px-4 md:px-6">
+    <div class="hero-grid">
+      {/* Left: text column */}
+      <div class="hero-text">
+        {tagline && <p class="hero-eyebrow" set:html={tagline} />}
+        {title && <h1 class="hero-title" set:html={title} />}
+        {subtitle && <p class="hero-subtitle" set:html={subtitle} />}
+        {actions && (
+          <div class="hero-actions">
+            {Array.isArray(actions) ? (
+              actions.map((action, i) => (
+                <div class="hero-action-wrap">
+                  <Button {...(action || {})} class={`${i === 0 ? 'hero-cta-primary' : 'hero-cta-ghost'}`} />
+                </div>
+              ))
+            ) : (
+              <Fragment set:html={actions} />
+            )}
+          </div>
+        )}
         {content && <Fragment set:html={content} />}
       </div>
-      <div
-        class="intersect-once intersect-no-queue intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
-      >
-        {
-          image && (
-            <div class="relative m-auto max-w-5xl">
-              {typeof image === 'string' ? (
-                <Fragment set:html={image} />
-              ) : (
-                <Image
-                  class="mx-auto rounded-md w-full"
-                  widths={[400, 768, 1024, 2040]}
-                  sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
-                  loading="eager"
-                  fetchpriority="high"
-                  width={1024}
-                  height={576}
-                  format="webp"
-                  {...image}
-                />
-              )}
-            </div>
-          )
-        }
-      </div>
+
+      {/* Right: image column */}
+      {image && (
+        <div class="hero-image">
+          {typeof image === "string" ? (
+            <Fragment set:html={image} />
+          ) : (
+            <Image
+              class="hero-img-el"
+              widths={[400, 768, 1024]}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              loading="eager"
+              fetchpriority="high"
+              width={1024}
+              height={576}
+              format="webp"
+              {...image}
+            />
+          )}
+        </div>
+      )}
     </div>
+
+    {/* Optional spec strip — engineering blueprint detail row. */}
+    {specs && specs.length > 0 && (
+      <dl class="hero-spec-strip">
+        {specs.map(({ label, value }) => (
+          <div class="hero-spec-item">
+            <dt class="hero-spec-label" set:html={label} />
+            <dd class="hero-spec-value" set:html={value} />
+          </div>
+        ))}
+      </dl>
+    )}
   </div>
 </section>
-<style>
-  /* Fluid Hero heading: scales smoothly between mobile and desktop
-   * instead of jumping at the md: breakpoint (text-5xl → text-6xl).
-   * Tailwind v4 doesn't ship a text-size clamp utility, hence the
-   * local <style>. The range matches the original ladder:
-   *   text-5xl = 3rem (48px)   →  clamp lower bound 2.25rem (36px)
-   *   text-6xl = 3.75rem (60px) →  clamp upper bound 4rem (64px)
-   * Mid-viewport lands near 5.5vw so the breakpoint crossfade is gone.
-   */
-  .hero-title {
-    font-size: clamp(2.25rem, 5.5vw, 4rem);
-  }
-</style>
 
 <style>
-  /* === Hero: industrial deep-blue visual theme =========================
-   * Replaces the prior flat white hero with a layered dark section so the
-   * page reads as a real product brand instead of a template.
-   *
-   * Layout:
-   *   - <section> gets a steel-navy base layer so even if the radial
-   *     gradient fails to load, contrast still holds.
-   *   - .hero-bg adds the radial highlight (defined in tokens.css).
-   *   - Eyebrow pill, headline, subtitle and CTA buttons all paint in
-   *     light tokens so they read against the dark background.
-   */
+  /* === Hero: asymmetric blueprint layout ===
+   * Phase 3 — replaces the dark radial-gradient centered hero with a
+   * light, asymmetric layout: text on the left, product image on the
+   * right, optional engineering spec strip below. */
 
   .hero-section {
-    color: var(--aw-color-text-on-dark);
+    color: var(--aw-color-graphite);
   }
 
-  .hero-bg {
-    background: var(--aw-gradient-hero);
-  }
-
-  .hero-eyebrow-pill {
-    display: inline-flex;
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(2rem, 5vw, 3.5rem);
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.45rem 1.1rem;
-    border-radius: var(--aw-radius-pill);
-    background-color: var(--aw-color-accent);
-    color: var(--aw-color-text-on-accent);
+    padding-block: clamp(3rem, 6vw, 5rem);
+  }
+  @media (min-width: 768px) {
+    .hero-grid {
+      grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    }
+  }
+
+  .hero-text {
+    max-width: 38rem;
+    text-align: left;
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+  }
+  .hero-img-el {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--aw-color-rule);
+    border-radius: var(--aw-radius-sm);
+    background-color: var(--aw-color-surface);
+  }
+
+  .hero-eyebrow {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--aw-color-accent);
+    border-radius: var(--aw-radius-sm);
+    background-color: transparent;
+    color: var(--aw-color-accent);
     font-size: 0.75rem;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    box-shadow: var(--aw-shadow-cta);
+    letter-spacing: 0.02em;
+    font-feature-settings: 'tnum';
   }
 
-  /* Fluid Hero heading: scales smoothly between mobile and desktop.
-   * Range matches the original text-5xl → text-6xl ladder (48–60px)
-   * extended down to 36px on small phones and capped at 72px on huge
-   * displays so the dark hero keeps visual weight. */
   .hero-title {
-    color: var(--aw-color-text-on-dark);
-    font-size: clamp(2.25rem, 5.5vw, 4.5rem);
+    font-size: clamp(2.25rem, 5vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    color: var(--aw-color-graphite);
+    margin-bottom: 1.25rem;
+    animation: hero-reveal 0.55s ease-out both;
   }
 
   .hero-subtitle {
-    color: var(--aw-color-text-on-dark-muted);
-    line-height: 1.55;
+    color: var(--aw-color-graphite-700);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 36rem;
   }
 
-  /* Primary CTA on dark Hero — orange instead of primary blue so it
-   * pops. Hover lifts + brightens. */
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .hero-action-wrap {
+    display: flex;
+  }
+
   .hero-cta-primary {
     background-color: var(--aw-color-accent) !important;
     border-color: var(--aw-color-accent) !important;
     color: var(--aw-color-text-on-accent) !important;
-    box-shadow: var(--aw-shadow-cta);
   }
   .hero-cta-primary:hover {
     background-color: var(--aw-color-accent-hover) !important;
     border-color: var(--aw-color-accent-hover) !important;
-    transform: translateY(-2px);
   }
 
-  /* Secondary CTA on dark Hero — transparent with white border. */
   .hero-cta-ghost {
     background-color: transparent !important;
-    border-color: var(--aw-color-border-on-dark) !important;
-    color: var(--aw-color-text-on-dark) !important;
+    border-color: var(--aw-color-graphite) !important;
+    color: var(--aw-color-graphite) !important;
   }
   .hero-cta-ghost:hover {
-    background-color: rgb(255 255 255 / 10%) !important;
-    border-color: rgb(255 255 255 / 30%) !important;
+    background-color: var(--aw-color-graphite) !important;
+    color: var(--aw-color-paper) !important;
+    border-color: var(--aw-color-graphite) !important;
+  }
+
+  .hero-spec-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    margin-bottom: clamp(2rem, 5vw, 4rem);
+    border-top: 1px solid var(--aw-color-rule);
+    border-bottom: 1px solid var(--aw-color-rule);
+  }
+  .hero-spec-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.75rem 1.25rem 0.75rem 0;
+    border-right: 1px solid var(--aw-color-rule);
+  }
+  .hero-spec-item:last-child {
+    border-right: none;
+  }
+  .hero-spec-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--aw-color-graphite-700);
+    text-transform: uppercase;
+    font-feature-settings: 'tnum';
+    margin: 0;
+  }
+  .hero-spec-value {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--aw-color-graphite);
+    font-feature-settings: 'tnum';
+    margin: 0;
+  }
+
+  @keyframes hero-reveal {
+    0% {
+      opacity: 0;
+      transform: translateY(0.5rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 </style>

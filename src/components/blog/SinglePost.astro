@@ -4,11 +4,9 @@
 // Article detail layout for /blog/<category>/<slug>/.
 //
 // Visual registers (top → bottom):
-//   1. Article Hero  — deep-blue radial gradient (same --aw-gradient-hero
-//      token used by the homepage Hero). Title, eyebrow pill (category),
-//      metadata line and excerpt all live here in white-on-dark. Gives
-//      every article a real hero weight instead of the previous flat
-//      "personal blog" feel.
+//   1. Article Hero  — engineering-paper background with graphite text.
+//      Oxide-red outlined category chip, spec-font meta line, graphite
+//      title + excerpt. Aligned with the Phase 3 Hero widget register.
 //   2. Lede figure    — 4-col-wide floating card that overlaps the hero by
 //      14 on md+ via negative top margin, giving a layered "card peels
 //      off the gradient" effect. Rounded-2xl, border, shadow-deep.
@@ -38,61 +36,45 @@ const { post, url } = Astro.props;
 
 <article>
   {/* ─── 1. Article Hero ──────────────────────────────────────────────
-   * Deep-blue radial gradient with all hero text in white. Mirrors the
-   * homepage Hero via --aw-gradient-hero so every blog post lands on
-   * the same brand canvas.
+   * Engineering-paper background with graphite text. Eyebrow is an
+   * oxide-red outlined chip; meta line below in spec font.
    */}
-  <header class="article-hero relative isolate overflow-hidden">
-    <div class="article-hero-bg absolute inset-0 -z-10" aria-hidden="true"></div>
-    <div class="mx-auto max-w-3xl px-4 sm:px-6 py-14 md:py-20 lg:py-24 text-center intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
-      {
-        post.category && (
-          <a
-            href={getPermalink(post.category.slug, 'category')}
-            class="article-eyebrow inline-block mb-5"
-          >
-            {post.category.title}
-          </a>
-        )
-      }
+  <header class="article-hero">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 py-12 md:py-16 lg:py-20 text-center">
+      {post.category && (
+        <a
+          href={getPermalink(post.category.slug, 'category')}
+          class="article-eyebrow"
+        >
+          {post.category.title}
+        </a>
+      )}
 
-      <div class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 mb-5 text-sm text-white/75">
-        <span class="inline-flex items-center gap-1.5">
+      <div class="article-meta">
+        <span class="meta-item">
           <Icon name="tabler:clock" class="w-4 h-4" aria-hidden="true" />
           <time datetime={String(post.publishDate)}>{getFormattedDate(post.publishDate)}</time>
         </span>
-        {
-          post.author && (
-            <>
-              <span aria-hidden="true">·</span>
-              <span class="inline-flex items-center gap-1.5">
-                <Icon name="tabler:user" class="w-4 h-4" aria-hidden="true" />
-                {post.author}
-              </span>
-            </>
-          )
-        }
-        {
-          post.readingTime && (
-            <>
-              <span aria-hidden="true">·</span>
-              <span>{post.readingTime} min read</span>
-            </>
-          )
-        }
+        {post.author && (
+          <span class="meta-item">
+            <span aria-hidden="true" class="meta-sep">·</span>
+            <Icon name="tabler:user" class="w-4 h-4" aria-hidden="true" />
+            {post.author}
+          </span>
+        )}
+        {post.readingTime && (
+          <span class="meta-item">
+            <span aria-hidden="true" class="meta-sep">·</span>
+            <span>{post.readingTime} min read</span>
+          </span>
+        )}
       </div>
 
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tighter font-heading text-white">
-        {post.title}
-      </h1>
+      <h1 class="article-title">{post.title}</h1>
 
-      {
-        post.excerpt && (
-          <p class="mt-5 text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
-            {post.excerpt}
-          </p>
-        )
-      }
+      {post.excerpt && (
+        <p class="article-excerpt">{post.excerpt}</p>
+      )}
     </div>
   </header>
 
@@ -102,7 +84,7 @@ const { post, url } = Astro.props;
    */}
   {
     post.image ? (
-      <figure class="mx-auto max-w-4xl px-4 sm:px-6 -mt-8 md:-mt-14 mb-10 md:mb-14 relative z-10 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
+      <figure class="mx-auto max-w-4xl px-4 sm:px-6 -mt-8 md:-mt-14 mb-10 md:mb-14 relative z-10 intersect-once intersect-quarter">
         <Image
           src={post.image}
           class="w-full aspect-[16/9] object-cover rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 shadow-deep"
@@ -179,33 +161,55 @@ const { post, url } = Astro.props;
   </div>
 </article>
 
+
+
 <style>
-  /* === Article Hero: deep-blue gradient + light text ===================
-   * Mirrors the homepage Hero (--aw-gradient-hero) so every blog post
-   * lands on the same brand canvas. The eyebrow pill reuses the same
-   * accent treatment as Hero's tagline pill.
-   */
-  .article-hero {
-    color: var(--aw-color-text-on-dark);
-  }
-
-  .article-hero-bg {
-    background: var(--aw-gradient-hero);
-  }
-
+  /* === Article Hero: light engineering-paper register =================
+   * Aligned with the homepage Hero widget (Phase 3): paper bg,
+   * oxide-red outlined eyebrow chip, graphite title, sentence-case
+   * meta. No entrance animation on this single register. */
+  .article-hero { color: var(--aw-color-graphite); }
   .article-eyebrow {
-    padding: 0.45rem 1.1rem;
-    border-radius: var(--aw-radius-pill);
-    background-color: var(--aw-color-accent);
-    color: var(--aw-color-text-on-accent);
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--aw-color-accent);
+    border-radius: var(--aw-radius-sm);
+    background-color: transparent;
+    color: var(--aw-color-accent);
     font-size: 0.75rem;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    box-shadow: var(--aw-shadow-cta);
-    transition: transform 0.2s ease;
+    letter-spacing: 0.02em;
+    font-feature-settings: 'tnum';
+    transition: background-color 0.15s ease, color 0.15s ease;
   }
   .article-eyebrow:hover {
-    transform: translateY(-1px);
+    background-color: var(--aw-color-accent);
+    color: var(--aw-color-text-on-accent);
+  }
+  .article-meta {
+    display: flex; flex-wrap: wrap; align-items: center;
+    justify-content: center; gap: 0.5rem 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.8125rem;
+    color: var(--aw-color-graphite-700);
+    font-feature-settings: 'tnum';
+  }
+  .meta-item { display: inline-flex; align-items: center; gap: 0.4rem; }
+  .meta-sep { color: var(--aw-color-rule); }
+  .article-title {
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    color: var(--aw-color-graphite);
+  }
+  .article-excerpt {
+    margin-top: 1.25rem;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--aw-color-graphite-700);
+    max-width: 36rem;
+    margin-inline: auto;
   }
 </style>

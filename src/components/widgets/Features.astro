@@ -64,10 +64,9 @@ const columnsClass =
 </WidgetWrapper>
 
 <style>
-  /* === Features: card-elevated grid =====================================
-   * Replaces the prior flat row with bordered cards that lift on hover.
-   * Icon stays in its primary-color circular badge but the badge gets
-   * a subtle shadow for depth.
+  /* === Features: bordered spec grid ===
+   * Phase 4 — kills the SaaS card lift on hover. Cards stay grounded;
+   * hover only changes border colour so the spec-table feel holds.
    */
   .feature-card {
     padding: 1.5rem;
@@ -75,12 +74,10 @@ const columnsClass =
     border-radius: var(--aw-radius-card);
     background-color: var(--aw-color-surface);
     box-shadow: var(--aw-shadow-card);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
   }
   .feature-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--aw-color-border-strong);
-    box-shadow: var(--aw-shadow-card-hover);
+    border-color: var(--aw-color-accent);
   }
 
   .feature-icon-wrap {
@@ -88,13 +85,12 @@ const columnsClass =
     margin-right: 1rem;
   }
   .feature-icon {
-    width: 3rem;
-    height: 3rem;
-    padding: 0.75rem;
-    color: white;
-    background-color: var(--aw-color-primary);
-    border-radius: var(--aw-radius-pill);
-    box-shadow: 0 6px 16px rgb(15 76 129 / 25%);
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+    color: var(--aw-color-text-on-accent);
+    background-color: var(--aw-color-graphite);
+    border-radius: var(--aw-radius-sm);
   }
 </style>
 </WidgetWrapper>
