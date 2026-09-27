@@ -11,10 +11,10 @@ tags:
   - D2
   - 'SKD11'
   - M2 HSS
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'How to choose a slitting blade for a paper converting line. Substrate GSM and caliper, steel grade by rewind quality, edge prep, clearance and line-side conditions.'
-  canonical: 'https://www.machine-knives.net/selection-guide-paper-converting/'
+  canonical: 'https://www.industrial-knives.net/selection-guide-paper-converting/'
 ---
 
 Paper slitting is the highest-volume industrial knife application in the world, and it is also the application where the wrong steel grade is most often mis-specified. The decision is not "D2 or M2" — it is a four-axis question: substrate GSM and caliper, line speed, burr target, and re-grind cycle. Get those four right and the steel grade follows.
@@ -106,7 +106,7 @@ For the runnable coating comparison, see [Coating Comparison Table](/coatings-co
 
 ---
 
-## Field cases from the KAIPU shop
+## Field cases from the Industrial Knives shop
 
 **Case 1: Tissue slitter, 320 mm, 1,200 m/min, 18 gsm.** Customer was getting 11 days from a D2 slitter. Failure mode: thermal fatigue micro-cracking at the edge from day 3. We quoted M2 HSS, HRC 64, 15 µm hone, TiAlN coating. Service life: 31 days. The M2's hot hardness + the TiAlN coating dropped the edge temperature by ~ 80 °C.
 
@@ -122,10 +122,10 @@ For a paper slitting blade on a paper converting line:
 
 > "Slitter, [OD] × [ID] × [thickness] mm, AISI D2 or SKD11 (or AISI M2 HSS at > 500 m/min), vacuum heat-treated to HRC 60–64 ± 1, 5-point file test, parallel ≤ 0.005 mm, surface finish Ra ≤ 0.4 µm, edge hone [5–15] µm radius, clearance angle [18–30]° per substrate. Substrate: [paper family / GSM / caliper]. Line speed: [X] m/min. Re-grind SOP: aluminium-oxide or CBN, 25 m/s, 0.002 mm infeed, flood coolant. Mill certificate with ladle chemistry required."
 
-For the broader five-factor selection framework, see [The KAIPU 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/). For a runnable steel grade cross-reference, see [Material Grade Converter](/material-grade-converter/). For a head-to-head on HSS, see [M2 vs M4 HSS](/m2-vs-m4-hss/).
+For the broader five-factor selection framework, see [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/). For a runnable steel grade cross-reference, see [Material Grade Converter](/material-grade-converter/). For a head-to-head on HSS, see [M2 vs M4 HSS](/m2-vs-m4-hss/).
 
-For a written paper-converting specification, send the part drawing, the substrate, the line speed and the current service life to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
+For a written paper-converting specification, send the part drawing, the substrate, the line speed and the current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.*
+*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.*

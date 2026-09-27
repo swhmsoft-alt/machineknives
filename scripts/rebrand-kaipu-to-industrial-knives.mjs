@@ -44,31 +44,35 @@ const BRAND_RULES = [
   ['KAIPU industrial blades', 'Industrial Knives'],
   ['kaipu industrial blades', 'Industrial Knives'],
 
-  // Title-cased standalone.
-  [/\bKaipu\b/g, 'Industrial Knives'],
-
-  // ALL-CAPS standalone with hard word boundary. Will not match
-  // "kaipu-engineering" or "kaipu.com" — those are handled below or in
-  // DOMAIN_RULES. ASCII-only \b keeps the rule deterministic.
-  [/\bKAIPU\b/g, 'Industrial Knives'],
+  // Bare-word brand mentions in prose.
+  // Negative lookahead (?![-_]) preserves URL slugs (kaipu-...) and code
+  // identifiers (kaipu_...) — per user direction URLs must stay stable,
+  // so anything kaipu-foo or kaipu_foo is left alone.
+  [/\bKaipu\b(?![-_])/g, 'Industrial Knives'],
+  [/\bKAIPU\b(?![-_])/g, 'Industrial Knives'],
+  [/\bkaipu\b(?![-_])/g, 'Industrial Knives'],
 ];
 
 const DOMAIN_RULES = [
-  // Full hostnames first (longer literal beats the bare domain).
+  // Email — explicit per user. Full address rewrite, not just domain.
+  // Previous generic "@kaipu-industrial.com → @industrial-knives.com" was
+  // wrong because it kept the local part (engineering@) — user wants the
+  // whole new address to be info@industrial-knives.com.
+  ['engineering@kaipu-industrial.com', 'info@industrial-knives.com'],
+
+  // Site hostname: legacy → canonical. Config.yaml already declares
+  // industrial-knives.net; this clears any hardcoded legacy URLs.
   ['www.machine-knives.net', 'www.industrial-knives.net'],
   ['machine-knives.net', 'industrial-knives.net'],
   ['Machine-Knives.net', 'Industrial-Knives.net'],
+
+  // Legacy kaipu.com (if anything still references it).
   ['www.kaipu.com', 'www.industrial-knives.net'],
   ['kaipu.com', 'industrial-knives.net'],
-
-  // Slug fragments inside code / URLs. Word-bounded so we never corrupt
-  // English words that merely contain "kaipu" as a substring.
-  [/\bkaipu-engineering\b/g, 'industrial-knives-engineering'],
-  [/\bkaipu-industrial-blades\b/g, 'industrial-knives'],
 ];
 
 const TARGETS = [
-  'src/data/post',
+  'src/data',
   'src/components',
   'src/layouts',
   'src/pages',
@@ -149,7 +153,7 @@ for (const target of TARGETS) {
     const occurrences = countHits(original);
     stats.changed++;
     stats.hits += occurrences;
-    if (stats.sample.length < 25) {
+    if (stats.sample.length < 200) {
       stats.sample.push({
         file: path.relative(ROOT, file),
         occurrences,

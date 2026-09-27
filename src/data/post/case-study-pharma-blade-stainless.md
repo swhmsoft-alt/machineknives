@@ -14,10 +14,10 @@ tags:
   - '440C'
   - 'India'
   - 'FDA'
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'An Indian pharma converter cutting 50 µm 304 stainless foil at 80 m/min was getting 7 days from a D2 slitter. The fix was a 9Cr18MoV stainless slitter. 35 days. The case study walks through the audit, the trial, and the FDA / GMP compliance angle.'
-  canonical: 'https://www.machine-knives.net/case-study-pharma-blade-stainless/'
+  canonical: 'https://www.industrial-knives.net/case-study-pharma-blade-stainless/'
 ---
 
 In mid-2024 our Indian distributor called about a pharma converter cutting 50 µm 304 stainless foil for blister-pack tooling. The customer was getting 7 days from a D2 upper slitter, with progressive rust on the surface. The line was 600 mm wide, 80 m/min, 16 h/day, 6 days/week, in a Class 100,000 cleanroom with weekly washdown.
@@ -114,8 +114,8 @@ The customer was previously buying generic D2 with no traceability. The switch b
 
 If your line uses D2 in a washdown, the failure mode is corrosion, not wear. Move to stainless.
 
-For a written field audit on a pharma or medical-device cutting line, send the substrate, line speed, current blade spec, washdown chemistry and current service life to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). ROI is typically inside 6 months on lines with > USD 30k/year knife spend.
+For a written field audit on a pharma or medical-device cutting line, send the substrate, line speed, current blade spec, washdown chemistry and current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). ROI is typically inside 6 months on lines with > USD 30k/year knife spend.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. Mill certificates, FDA declarations and EU 1935/2004 compliance are standard.*
+*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Mill certificates, FDA declarations and EU 1935/2004 compliance are standard.*

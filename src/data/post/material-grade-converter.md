@@ -18,15 +18,15 @@ tags:
   - 440C
   - YG6X
   - YG8
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'Cross-reference table for industrial blade steel and carbide grades. ASTM/AISI, JIS, DIN/EN/W.-Nr., GB, BS, AFNOR, UNI, SS and UNE equivalents for cold-work, HSS, stainless and tungsten carbide.'
-  canonical: 'https://www.machine-knives.net/material-grade-converter/'
+  canonical: 'https://www.industrial-knives.net/material-grade-converter/'
 ---
 
 When a European customer asks for "W.-Nr. 1.2379", a Chinese customer asks for "Cr12Mo1V1", and a Japanese customer asks for "SKD11", they are almost always asking for the same steel. The international cross-reference is not perfect — there are subtle chemistry and heat-treat differences between equivalent grades from different national systems — but for industrial blade specification it is accurate enough that a single chemistry target can be quoted against any of the four major national systems.
 
-This page is the runnable cross-reference we use at KAIPU when a customer RFQ arrives in one national nomenclature and the warehouse stocks in another. The tables are organised by material family (cold-work tool steel, high-speed steel, hot-work tool steel, martensitic stainless, tungsten carbide) and cover the grades most-commonly specified for industrial blades.
+This page is the runnable cross-reference we use at Industrial Knives when a customer RFQ arrives in one national nomenclature and the warehouse stocks in another. The tables are organised by material family (cold-work tool steel, high-speed steel, hot-work tool steel, martensitic stainless, tungsten carbide) and cover the grades most-commonly specified for industrial blades.
 
 > **One-line summary:** *D2 ≈ SKD11 ≈ 1.2379 ≈ Cr12Mo1V1. M2 ≈ SKD51 ≈ 1.3343 ≈ W6Mo5Cr4V2. M4 ≈ SKD54 ≈ 1.3344 ≈ W6Mo5Cr4V4. 440C ≈ 95Cr18 ≈ 1.4125 ≈ 9Cr18MoV (close). YG6X ≈ K20. YG8 ≈ K30.*
 
@@ -146,7 +146,7 @@ For a typical customer RFQ:
 3. **Verify the chemistry.** If the mill certificate from your warehouse matches the cross-referenced grade's chemistry band, you can stamp the part with either the customer's nomenclature or yours.
 4. **Flag the difference.** If the chemistry is at the edge of the cross-reference band (e.g. D2 spec says V 0.50–1.10 % and your warehouse stock is 1.05 %), flag it to the customer before quoting. Some applications care about the V level (e.g. higher V = more wear but harder to grind).
 
-A good knife supplier will maintain a single chemistry target for each cross-referenced family and stamp the part with whichever nomenclature the customer requests. KAIPU ships parts stamped to the customer's national standard from a single heat — D2, SKD11, 1.2379, Cr12Mo1V1, BD2, Z160CDV12 all come off the same furnace.
+A good knife supplier will maintain a single chemistry target for each cross-referenced family and stamp the part with whichever nomenclature the customer requests. Industrial Knives ships parts stamped to the customer's national standard from a single heat — D2, SKD11, 1.2379, Cr12Mo1V1, BD2, Z160CDV12 all come off the same furnace.
 
 ---
 
@@ -178,7 +178,7 @@ These pairs are *not* equivalent and should not be cross-referenced:
 
 ## When you need a mill-certified cross-reference
 
-For a critical blade (aerospace, medical, food-contact), the cross-reference is not enough — you need a mill certificate with the actual ladle chemistry, and a heat-treatment certificate documenting the cycle. KAIPU ships a mill certificate with every industrial blade shipment, and a heat-treatment certificate on request. The certificate shows the actual chemistry and the tempers used.
+For a critical blade (aerospace, medical, food-contact), the cross-reference is not enough — you need a mill certificate with the actual ladle chemistry, and a heat-treatment certificate documenting the cycle. Industrial Knives ships a mill certificate with every industrial blade shipment, and a heat-treatment certificate on request. The certificate shows the actual chemistry and the tempers used.
 
 If your supplier cannot show you a mill certificate, the cross-reference is marketing copy. Demand the cert.
 
@@ -205,8 +205,8 @@ For deeper field guidance, see the individual material-family comparisons linked
 
 ## For a written cross-reference and quotation
 
-For a written cross-reference table for a specific RFQ, or a quotation against your warehouse stock in any of the four major systems, send the part drawing and the requested grade to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Cross-reference, FOB quote and lead time within one business day.
+For a written cross-reference table for a specific RFQ, or a quotation against your warehouse stock in any of the four major systems, send the part drawing and the requested grade to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Cross-reference, FOB quote and lead time within one business day.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. The team maintains a single-chemistry-stock for the cross-referenced families and ships parts stamped to the customer's national nomenclature from a single heat.*
+*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. The team maintains a single-chemistry-stock for the cross-referenced families and ships parts stamped to the customer's national nomenclature from a single heat.*

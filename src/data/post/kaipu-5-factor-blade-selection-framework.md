@@ -1,5 +1,5 @@
 ---
-title: 'The KAIPU 5-Factor Blade Selection Framework — How to Specify the Right Industrial Knife in 30 Minutes'
+title: 'The Industrial Knives 5-Factor Blade Selection Framework — How to Specify the Right Industrial Knife in 30 Minutes'
 excerpt: 'A structured method our engineers use to match substrate, geometry, hardness target, edge preparation and operating speed to a production line — without second-guessing the steel grade.'
 publishDate: 2026-09-11
 updateDate: 2026-09-11
@@ -14,10 +14,10 @@ tags:
   - slitting blades
   - granulator knives
   - process engineering
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
-  description: 'The KAIPU 5-Factor Blade Selection Framework: a 30-minute method for specifying industrial machine knives — substrate, geometry, hardness, edge prep, operating speed. Backed by 25+ years of converting, recycling and metalworking line experience.'
-  canonical: 'https://www.machine-knives.net/kaipu-5-factor-blade-selection-framework/'
+  description: 'The Industrial Knives 5-Factor Blade Selection Framework: a 30-minute method for specifying industrial machine knives — substrate, geometry, hardness, edge prep, operating speed. Backed by 25+ years of converting, recycling and metalworking line experience.'
+  canonical: 'https://www.industrial-knives.net/kaipu-5-factor-blade-selection-framework/'
 ---
 
 Most blade selection is guesswork dressed up as experience. A buyer sends a part number, a competitor cross-reference, or "we use D2"; the supplier quotes it; the line runs; three weeks later the operator is on the phone again because the edge wears twice as fast as promised.
@@ -152,7 +152,7 @@ The framework assumes a defined production line with measurable parameters. Ther
 
 ---
 
-## Want KAIPU to run this for you?
+## Want Industrial Knives to run this for you?
 
 If you have a drawing, a worn blade, or a competitor's part number, send it to [engineering](mailto:[email protected]) or use the [request-a-quote form](/contact). We will run the framework, return a specification within one business day, and ship against a written tolerance guarantee.
 
@@ -162,5 +162,5 @@ For the broader material selection guide, see our [industry solutions overview](
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, a precision machine knife manufacturer in operation since 1998. The team holds ISO 9001:2015 certification and ships to converters, recyclers and OEMs across four continents.*
+*Industrial Knives Engineering is the technical team at Industrial Knives, a precision machine knife manufacturer in operation since 1998. The team holds ISO 9001:2015 certification and ships to converters, recyclers and OEMs across four continents.*
 Geometry interacts with substrate through **chip flow and clearance angle**. A 30° clearance that works for paper will chip on recycled polymer; a 12° clearance that survives recycled polymer will smear on paper. This is the second conversation, not the first.

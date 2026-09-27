@@ -11,10 +11,10 @@ tags:
   - 'tungsten carbide tipped'
   - 'D2'
   - 'M2 HSS'
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'Corrugated slitting is one of the most abrasive industrial cutting applications. The substrate is a multi-layer composite of kraft paper + adhesive + flute geometry, running at 200–500 m/min. The wrong blade grade loses 50 % of life. This guide covers single-face, double-face and thin-board slitting, with grade maps and field cases.'
-  canonical: 'https://www.machine-knives.net/selection-guide-corrugated-slitter/'
+  canonical: 'https://www.industrial-knives.net/selection-guide-corrugated-slitter/'
 ---
 
 Corrugated cardboard is a multi-layer composite — two flat liner sheets bonded to a corrugated medium (the "flute") with starch adhesive. Cutting it cleanly at 200–500 m/min requires a slitter geometry that handles the abrasive liner, the adhesive build-up and the variable flute direction. The wrong blade grade loses 50 % of life to adhesive wear; the right grade (carbide-tipped or full carbide) runs 3–5× longer.
@@ -101,8 +101,8 @@ A slitter-scorer is precision-ground and must be re-ground as a set. Mixing worn
 
 For the broader substrate-by-substrate selection, see [How to choose a slitter blade for paper converting](/selection-guide-paper-converting/) and [YG6X vs YG8](/yg6x-vs-yg8-carbide/).
 
-For a written corrugated slitter specification, send the flute type, line speed, substrate batch and current service life to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
+For a written corrugated slitter specification, send the flute type, line speed, substrate batch and current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. Ships to converters, packaging manufacturers and OEMs across four continents, with a dedicated corrugated and heavy-paper cell for slitter and slitter-scorer applications.*
+*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, packaging manufacturers and OEMs across four continents, with a dedicated corrugated and heavy-paper cell for slitter and slitter-scorer applications.*

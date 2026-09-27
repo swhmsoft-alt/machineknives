@@ -10,10 +10,10 @@ tags:
   - 'gravure printing'
   - 'coating line'
   - 'printing blade'
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'Doctor blades see high-speed scraping, ink chemistry and metrology-grade edge geometry. The wrong steel grade produces streaking, ghosting, or a 20 % scrap rate. This guide walks through the substrate, the ink, the line speed, the steel grade and the edge prep for flexo, gravure and coating lines.'
-  canonical: 'https://www.machine-knives.net/selection-guide-doctor-blade-printing/'
+  canonical: 'https://www.industrial-knives.net/selection-guide-doctor-blade-printing/'
 ---
 
 Doctor blades are precision scraping tools in flexo, gravure and coating lines. They remove excess ink or coating from the anilox roll or cylinder, leaving a precisely metered film. Edge tolerance is ± 1 µm at 50–800 m/min.
@@ -102,10 +102,10 @@ Measure with a load cell, not by feel.
 
 > "Doctor blade, [L] × [W] × [T] mm, [AISI 420 stainless / spring steel / YG6X carbide], HRC [per table], wiping face Ra ≤ 0.05 µm, edge thickness [0.10–0.40] mm ± 2 µm at 5 points, edge radius [2–10] µm, edge angle [25–45]°, flatness ≤ 0.005 mm. Mill certificate required."
 
-For broader selection guidance, see [How to choose a slitter blade for paper converting](/selection-guide-paper-converting/) and [The KAIPU 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/).
+For broader selection guidance, see [How to choose a slitter blade for paper converting](/selection-guide-paper-converting/) and [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/).
 
-For a written doctor-blade specification, send the process, substrate, ink chemistry, line speed and current service life to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
+For a written doctor-blade specification, send the process, substrate, ink chemistry, line speed and current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. Ships to printers, coaters and OEMs across four continents, with active distribution in Europe and Asia.*
+*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Ships to printers, coaters and OEMs across four continents, with active distribution in Europe and Asia.*

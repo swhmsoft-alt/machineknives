@@ -13,10 +13,10 @@ tags:
   - converting line
   - D2 tool steel
   - M2 high speed steel
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
-  description: 'How to extend the service life of a slitting machine blade: seven variables from substrate to edge prep to in-process care. Field-tested guidance from KAIPU engineering.'
-  canonical: 'https://www.machine-knives.net/maintenance-slitting-blade-life/'
+  description: 'How to extend the service life of a slitting machine blade: seven variables from substrate to edge prep to in-process care. Field-tested guidance from Industrial Knives engineering.'
+  canonical: 'https://www.industrial-knives.net/maintenance-slitting-blade-life/'
 ---
 
 The single most-asked question we get from converting-line operators is "how do I make my slitter knife last longer?" The honest answer is that service life is not a single number — it is the product of seven variables, and the cheapest way to extend it is almost always to fix the variable that is currently limiting the run. This post walks through the seven variables in the order they are most often missed, the re-grind cycle that turns a worn knife into a sharp one without destroying the geometry, and the in-process habits that double the life of a typical slitter.
@@ -194,10 +194,10 @@ For a slitter knife in regular service:
 
 If you can tick all eight, your slitter knives will out-last your regrind shop's wildest expectations. If you cannot, the variable that is missing is the one that is costing you knife life.
 
-For the broader five-factor selection framework, see [The KAIPU 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/). For a runnable coating comparison, see [Coating Comparison Table](/coatings-comparison/). For a head-to-head on the two most common HSS grades, see [M2 vs M4 HSS](/m2-vs-m4-hss/).
+For the broader five-factor selection framework, see [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/). For a runnable coating comparison, see [Coating Comparison Table](/coatings-comparison/). For a head-to-head on the two most common HSS grades, see [M2 vs M4 HSS](/m2-vs-m4-hss/).
 
-For a written specification, send the part drawing, the substrate, the line speed and the current service life to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
+For a written specification, send the part drawing, the substrate, the line speed and the current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.
+*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.

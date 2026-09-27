@@ -12,8 +12,8 @@ export interface FaqItem {
 
 export const faqs: FaqItem[] = [
   {
-    q: 'Is KAIPU ISO 9001 certified, and how long has the certificate been valid?',
-    a: 'Yes. KAIPU has held ISO 9001:2015 certification continuously since 2001, with the most recent surveillance audit completed in 2026. The certificate, quality manual and a sample CMM inspection report are available on request under NDA.',
+    q: 'Is Industrial Knives ISO 9001 certified, and how long has the certificate been valid?',
+    a: 'Yes. Industrial Knives has held ISO 9001:2015 certification continuously since 2001, with the most recent surveillance audit completed in 2026. The certificate, quality manual and a sample CMM inspection report are available on request under NDA.',
     bullets: [
       'ISO 9001:2015 certified since 2001',
       'Surveillance audit: 2026',

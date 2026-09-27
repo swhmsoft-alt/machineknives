@@ -11,10 +11,10 @@ tags:
   - blade service
   - outsource re-grind
   - CBN grinding
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'How to outsource industrial blade re-sharpening: specification, deliverables, SLA, the four questions to ask a re-grind shop before you ship your first knife.'
-  canonical: 'https://www.machine-knives.net/maintenance-resharpening-service/'
+  canonical: 'https://www.industrial-knives.net/maintenance-resharpening-service/'
 ---
 
 Re-sharpening an industrial blade in-house requires a CNC grinder, a skilled operator, a controlled SOP, and a metrology station. For most converting and fabrication operations, the volume does not justify the overhead. Outsourcing to a specialised re-grind shop is the right answer — but only if you specify the deliverable correctly and audit the supplier on the first five knives.
@@ -160,8 +160,8 @@ For a re-sharpening service:
 
 For the broader maintenance framework, see [Maintenance: how to extend slitter life](/maintenance-slitting-blade-life/). For a runnable coating comparison, see [Coating Comparison Table](/coatings-comparison/).
 
-For a written re-sharpening specification for your line, send the knife drawing, the current service life, the current re-grind cost and the current reject rate to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Specification, partner-shop recommendation and indicative cost within one business day.
+For a written re-sharpening specification for your line, send the knife drawing, the current service life, the current re-grind cost and the current reject rate to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, partner-shop recommendation and indicative cost within one business day.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. Runs an in-house re-grind cell as a value-added service for the European market, with 5-day standard turnaround and 1 % measured reject rate.*
+*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Runs an in-house re-grind cell as a value-added service for the European market, with 5-day standard turnaround and 1 % measured reject rate.*

@@ -1,5 +1,5 @@
 # ============================================================
-# KAIPU Entities (V1.0 Seed)
+# Industrial Knives Entities (V1.0 Seed)
 # ============================================================
 # 7 个 Entity. ID 与 src/data/facts/*.yaml 的 node.id 严格对齐.
 # 禁止孤儿 query: 每条 query 必须挂载一个 entity_id.

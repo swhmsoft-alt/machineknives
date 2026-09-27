@@ -13,10 +13,10 @@ tags:
   - DC53
   - M2 HSS
   - tungsten carbide
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'How to choose a granulator knife for plastics recycling: rotor / bed / screen / wear-strip. Substrate by polymer family, grade, geometry, edge prep and field guidance.'
-  canonical: 'https://www.machine-knives.net/selection-guide-granulator-knife/'
+  canonical: 'https://www.industrial-knives.net/selection-guide-granulator-knife/'
 ---
 
 Granulator knives are the most-impact-loaded industrial blades in routine use. They see contamination (metal, sand, foreign polymer), abrasive fillers (glass fibre, mineral, carbon black), and rotor speeds of 400–800 rpm. Get the grade, the geometry or the gap wrong, and the knife chips in days. Get them right, and the same knife runs 3–6 months.
@@ -106,10 +106,10 @@ For a granulator knife:
 
 > "Granulator [bed / rotor] knife, [L] × [W] × [T] mm, AISI M2 HSS (or YG8 / YG10X / YG15 for abrasive / contamination), vacuum heat-treated to HRC [58–60] ± 1, 5-point file test, edge chamfer [0.10–0.30] mm on cutting edge, [2-edge / 4-edge reversible]. Substrate: [polymer family / filler / contamination profile]. Rotor speed: [RPM]. Throughput: [kg/h]. Mill certificate required."
 
-For the broader five-factor selection framework, see [The KAIPU 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/). For a runnable steel grade cross-reference, see [Material Grade Converter](/material-grade-converter/). For a head-to-head on carbide grades, see [YG6X vs YG8](/yg6x-vs-yg8-carbide/).
+For the broader five-factor selection framework, see [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/). For a runnable steel grade cross-reference, see [Material Grade Converter](/material-grade-converter/). For a head-to-head on carbide grades, see [YG6X vs YG8](/yg6x-vs-yg8-carbide/).
 
-For a written granulator-knife specification, send the part drawing, the polymer, the filler content, the contamination profile and the current service life to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
+For a written granulator-knife specification, send the part drawing, the polymer, the filler content, the contamination profile and the current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.*
+*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.*

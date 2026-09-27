@@ -204,7 +204,7 @@ if (props.kind === 'product') {
 // Generated only when we are rendering a product entry; category pages keep
 // their existing layout untouched. All schema entities pass through
 // generatePageSchema() which enforces the /products/ route whitelist.
-const SITE_URL = 'https://www.machine-knives.net';
+const SITE_URL = 'https://www.industrial-knives.net';
 
 let productSchemaJson = '';
 
@@ -230,8 +230,8 @@ if (productEntry) {
           headline: entry.data.title,
           description: entry.data.excerpt ?? undefined,
           dateModified: statSync(entry.filePath ?? '').mtime.toISOString(),
-          author: { name: 'KAIPU Engineering', url: SITE_URL + '/about/' },
-          publisher: { name: 'KAIPU' },
+          author: { name: 'Industrial Knives Engineering', url: SITE_URL + '/about/' },
+          publisher: { name: 'Industrial Knives' },
           url: productUrl,
           about: {
             '@type': 'Product',
@@ -261,7 +261,7 @@ if (productEntry) {
 ---
 
 {props.kind === 'category' && categoryLevel1 ? (
-  <Layout metadata={{ title: `${categoryPageTitle} — KAIPU`, description: categoryPageSubtitle }} breadcrumb={categoryBreadcrumb}>
+  <Layout metadata={{ title: `${categoryPageTitle} — Industrial Knives`, description: categoryPageSubtitle }} breadcrumb={categoryBreadcrumb}>
   <Hero
     tagline={categoryPageTagline}
     title={`${categoryPageTitle} for Industrial Cutting`}
@@ -346,7 +346,7 @@ if (productEntry) {
   </CallToAction>
   </Layout>
 ) : props.kind === 'product' && productEntry && Content ? (
-  <Layout metadata={{ title: `${productEntry.data.title} — KAIPU`, description: productEntry.data.excerpt ?? '' }} breadcrumb={productBreadcrumb}>
+  <Layout metadata={{ title: `${productEntry.data.title} — Industrial Knives`, description: productEntry.data.excerpt ?? '' }} breadcrumb={productBreadcrumb}>
     <Hero
       tagline={getCategoryMeta(productEntry.data.category).label}
       title={productEntry.data.title}

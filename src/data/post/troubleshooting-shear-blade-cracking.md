@@ -11,10 +11,10 @@ tags:
   - guillotine
   - chamfer
   - blade gap
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'Why a plate shear blade keeps cracking at the edge. Four root causes, the diagnostic flow, the fix for each, and field cases for stainless, mild steel and AR plate shearing.'
-  canonical: 'https://www.machine-knives.net/troubleshooting-shear-blade-cracking/'
+  canonical: 'https://www.industrial-knives.net/troubleshooting-shear-blade-cracking/'
 ---
 
 A plate shear blade that cracks at the edge is one of the most expensive failures in industrial cutting — a single crack can scrap a 600 mm blade worth €800–2,000, and the shear is out of service for the changeover. The four root causes are predictable, and each has a different fix. This article walks through the diagnostic and the field guidance for each.
@@ -125,10 +125,10 @@ If visual, chamfer, hardness, gap and plate checks all pass, and the knife is st
 - **Knife has been damaged in storage.** Drop, dent, or impact in the tool crib. Inspect every knife on receipt.
 - **Shear frame is misaligned.** The upper or lower blade rail is bent. Check with a dial indicator across the full frame.
 
-For a written diagnosis on a cracked shear blade, send the cracked blade, the line log, the plate batch records and the blade gap measurement to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Diagnosis within 24 hours, replacement blade within 3 weeks.
+For a written diagnosis on a cracked shear blade, send the cracked blade, the line log, the plate batch records and the blade gap measurement to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Diagnosis within 24 hours, replacement blade within 3 weeks.
 
 For the broader shear blade selection guidance, see [How to choose a shear blade for plate steel](/selection-guide-shear-blade-plate-steel/) and [Troubleshooting: why is my blade wearing out too fast?](/troubleshooting-premature-wear/).
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents, with a dedicated shear-blade cell for hot-rolling-mill and service-centre customers.*
+*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents, with a dedicated shear-blade cell for hot-rolling-mill and service-centre customers.*

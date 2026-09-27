@@ -14,10 +14,10 @@ tags:
   - W6Mo5Cr4V4
   - slitting blades
   - industrial knives
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
-  description: 'M2 vs M4 high-speed steel for industrial machine knives. Chemistry, hot hardness, wear resistance, grindability, cost. Side-by-side comparison with field guidance from KAIPU engineering.'
-  canonical: 'https://www.machine-knives.net/m2-vs-m4-hss/'
+  description: 'M2 vs M4 high-speed steel for industrial machine knives. Chemistry, hot hardness, wear resistance, grindability, cost. Side-by-side comparison with field guidance from Industrial Knives engineering.'
+  canonical: 'https://www.industrial-knives.net/m2-vs-m4-hss/'
 ---
 
 M2 is the workhorse. It has been the dominant high-speed steel for slitting, sheeting and converting blades for 60 years. M4 is its higher-vanadium cousin — the chemistry sheet shows a 1 % bump in V, but that single number changes the wear behaviour, the grindability, and the line economics. Both are excellent. The right answer depends on your substrate, your edge geometry, and how much you value re-grind cycle time.
@@ -162,11 +162,11 @@ For a precision HSS slitter or converting blade, write the spec as:
 
 > "AISI M2 or AISI M4 high-speed steel, AOD-ESR or vacuum-arc remelted, hardened and tempered to HRC 64 ± 1, decarburisation-free to 0.1 mm per side, surface roughness Ra ≤ 0.4 µm, parallel ≤ 0.005 mm, mill certificate with actual ladle chemistry and ultrasonic test report."
 
-This phrasing lets your supplier cross-reference M2/M4 to your actual substrate, keeps the option open for an upgrade, and locks the heat-treat quality. For a copy of the full five-factor selection method, see [The KAIPU 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/). For a runnable M-series cross-reference, see [Material Grade Converter](/material-grade-converter/).
+This phrasing lets your supplier cross-reference M2/M4 to your actual substrate, keeps the option open for an upgrade, and locks the heat-treat quality. For a copy of the full five-factor selection method, see [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/). For a runnable M-series cross-reference, see [Material Grade Converter](/material-grade-converter/).
 
-For a written M2/M4 quotation, send the part drawing to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Specification, FOB quote and indicative lead time within one business day.
+For a written M2/M4 quotation, send the part drawing to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and indicative lead time within one business day.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.*
+*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.*
 

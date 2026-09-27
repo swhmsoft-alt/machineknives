@@ -10,10 +10,10 @@ tags:
   - relief angle
   - blade geometry
   - edge prep
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'Industrial blade clearance angle — definition, the substrate-by-substrate range, the relationship to hone and burr, and how to set clearance on slitter, shear and granulator blades.'
-  canonical: 'https://www.machine-knives.net/glossary/clearance-angle/'
+  canonical: 'https://www.industrial-knives.net/glossary/clearance-angle/'
 ---
 
 **Clearance angle** (also: *relief angle*, *back angle*) is the angle of the back face of an industrial cutting edge, measured from a line perpendicular to the cut direction to the back face of the knife. The clearance angle lets the cut substrate separate from the knife after the cut, and it is the second-most-important edge-geometry parameter after hone.
@@ -42,4 +42,4 @@ metadata:
 
 **Relationship to hone:** the clearance angle is set behind the hone. A 5 µm hone at 20° clearance means the clearance starts 5 µm behind the very tip of the edge. A larger hone or a larger chamfer consumes more of the clearance angle's effective range, so a 0.10 mm chamfer at 15° clearance starts the chamfer 0.10 mm behind the tip.
 
-**See also:** [Hone (micro-hone)](/glossary/hone/), [Burr](/glossary/burr/), [Chipping](/glossary/chipping/), [The KAIPU 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/).
+**See also:** [Hone (micro-hone)](/glossary/hone/), [Burr](/glossary/burr/), [Chipping](/glossary/chipping/), [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/).

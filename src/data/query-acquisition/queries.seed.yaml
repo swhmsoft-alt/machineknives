@@ -1,5 +1,5 @@
 # ============================================================
-# KAIPU Query Seed (V1.0)
+# Industrial Knives Query Seed (V1.0)
 # ============================================================
 # 首批 40 条 query. 覆盖 7 个 entity × 5 个 buyer_role × 5 个 funnel_stage.
 # 注意: 一半 reliability=generated (LLM Fan-Out 模拟),

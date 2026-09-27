@@ -12,10 +12,10 @@ tags:
   - 'M2 HSS'
   - 'TiCN coating'
   - 'hygiene'
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'A European non-woven producer slitting 25 gsm spunbond at 600 m/min was getting 4 days from a D2 slitter. The fix was a M2 HSS slitter with TiCN coating. 18 days. The case study walks through the audit, the trial, and the role of abrasive fillers in non-woven wear.'
-  canonical: 'https://www.machine-knives.net/case-study-textile-nonwoven-slitter/'
+  canonical: 'https://www.industrial-knives.net/case-study-textile-nonwoven-slitter/'
 ---
 
 In mid-2025 our European distributor called about a non-woven producer slitting 25 gsm spunbond polypropylene for hygiene applications (baby diaper top sheet, femcare coverstock). The customer was getting 4 days from a D2 slitter, with progressive wear on the leading edge. The line was a 1,200 mm-wide slitter running 600 m/min, 24/6, throughput 1,500 kg/day. The non-woven had a calcium carbonate (CaCO₃) filler at 2–3 % by weight, which made it more abrasive than neat PP. Blade consumption was the largest consumable cost on the line. This case study walks through the audit, the trial, and the result.
@@ -101,8 +101,8 @@ The savings are real but not dramatic because the line was already operating wit
 
 If your non-woven line is wearing D2 knives faster than 10 days, the answer is usually a coating, not a harder steel.
 
-For a written field audit on a non-woven slitter, send the substrate (gsm, polymer, filler content), line speed, current blade spec and current service life to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). ROI is typically inside 12 months on lines with > EUR 30k/year knife spend.
+For a written field audit on a non-woven slitter, send the substrate (gsm, polymer, filler content), line speed, current blade spec and current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). ROI is typically inside 12 months on lines with > EUR 30k/year knife spend.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. Ships to non-woven, hygiene and medical-textile manufacturers across four continents.*
+*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Ships to non-woven, hygiene and medical-textile manufacturers across four continents.*

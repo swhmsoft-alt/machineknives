@@ -40,4 +40,4 @@
 
 ## 5. 当前实例
 
-KAIPU 实例化首批种子见 `src/data/query-acquisition/`。
+Industrial Knives 实例化首批种子见 `src/data/query-acquisition/`。

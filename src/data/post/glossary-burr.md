@@ -10,10 +10,10 @@ tags:
   - edge quality
   - slitter blade
   - shear blade
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'Industrial cutting burr — definition, measurement, causes, and how edge prep and clearance angle affect burr height on slitter and shear blades.'
-  canonical: 'https://www.machine-knives.net/glossary/burr/'
+  canonical: 'https://www.industrial-knives.net/glossary/burr/'
 ---
 
 **Burr** (also: *flash*, *feather*, *whisker*) is the unwanted projection of substrate material that forms on the cut edge during an industrial cutting operation. It is the single most common quality complaint on a slitting, shearing or blanking line, and it is the metric most-often specified on a knife drawing.
@@ -45,4 +45,4 @@ metadata:
 - Adjust shear blade gap to 5–12 % of thickness.
 - Audit incoming substrate for hardness and finish drift.
 
-**See also:** [The KAIPU 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/), [Maintenance: how to extend slitter life](/maintenance-slitting-blade-life/), [Hone (micro-hone)](/glossary/hone/).
+**See also:** [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/), [Maintenance: how to extend slitter life](/maintenance-slitting-blade-life/), [Hone (micro-hone)](/glossary/hone/).

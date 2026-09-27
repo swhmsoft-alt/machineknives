@@ -115,50 +115,50 @@ export const PAIN_POINTS: ReadonlyArray<{ title: string; description: string; ic
   {
     title: 'No engineering support',
     description:
-      'A supplier that just ships a SKU. Every KAIPU order has a named engineer — from RFQ review through to the dispatch paperwork.',
+      'A supplier that just ships a SKU. Every Industrial Knives order has a named engineer — from RFQ review through to the dispatch paperwork.',
     icon: 'tabler:user-check',
   },
 ];
 
-/** Comparison block: KAIPU vs catalog-only suppliers. */
+/** Comparison block: Industrial Knives vs catalog-only suppliers. */
 export const COMPARISON: ReadonlyArray<{
   criterion: string;
-  kaipu: string;
+  Industrial Knives: string;
   catalog: string;
 }> = [
   {
     criterion: 'Material certificate with every batch',
-    kaipu: 'Mill certificate included',
+    Industrial Knives: 'Mill certificate included',
     catalog: 'On request, often extra',
   },
   {
     criterion: 'Hardness verified per batch',
-    kaipu: 'Rockwell tested, recorded',
+    Industrial Knives: 'Rockwell tested, recorded',
     catalog: 'Heat-treater sub-contracted',
   },
   {
     criterion: 'CMM dimensional report',
-    kaipu: 'Every specified dimension',
+    Industrial Knives: 'Every specified dimension',
     catalog: 'Spot-check only',
   },
   {
     criterion: 'Custom geometry from drawing',
-    kaipu: 'In-house design office',
+    Industrial Knives: 'In-house design office',
     catalog: 'Referral to a third party',
   },
   {
     criterion: 'Reverse-engineering from worn sample',
-    kaipu: 'CMM measurement + 2D/3D drawing approval',
+    Industrial Knives: 'CMM measurement + 2D/3D drawing approval',
     catalog: 'Not offered',
   },
   {
     criterion: 'Engineering contact for the order',
-    kaipu: 'Named engineer, end-to-end',
+    Industrial Knives: 'Named engineer, end-to-end',
     catalog: 'Sales rep only',
   },
   {
     criterion: 'Lead-time honesty',
-    kaipu: 'Quoted lead time = delivered lead time',
+    Industrial Knives: 'Quoted lead time = delivered lead time',
     catalog: 'Best-case lead time quoted',
   },
 ];

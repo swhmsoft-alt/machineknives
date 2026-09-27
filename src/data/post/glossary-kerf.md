@@ -10,10 +10,10 @@ tags:
   - cut width
   - slitter set-up
   - material yield
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'Industrial cutting kerf — definition, how it is measured, the substrate-by-substrate range, and the relationship to slitter knife thickness and material yield.'
-  canonical: 'https://www.machine-knives.net/glossary/kerf/'
+  canonical: 'https://www.industrial-knives.net/glossary/kerf/'
 ---
 
 **Kerf** is the width of material removed by a single cut, equal to the thickness of the knife at the cut plus any lateral spread of the cut into the substrate. Kerf is a critical parameter on slitting and cut-to-length lines because it directly determines material yield — every millimetre of kerf is a millimetre of substrate that becomes scrap instead of sellable product.
@@ -45,4 +45,4 @@ metadata:
 - Ensure knife-to-anvil parallel within 0.01 mm to prevent the knife from tilting and widening the cut.
 - Use the lowest knife grade that will survive the substrate (D2 instead of M2 if the wear life is acceptable — D2 is usually available in thinner stock).
 
-**See also:** [Hone (micro-hone)](/glossary/hone/), [Clearance angle](/glossary/clearance-angle/), [The KAIPU 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/).
+**See also:** [Hone (micro-hone)](/glossary/hone/), [Clearance angle](/glossary/clearance-angle/), [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/).

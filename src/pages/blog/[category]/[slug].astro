@@ -65,20 +65,20 @@ const pageBreadcrumbLd = pageProps
         position: idx + 1,
         name: it.text,
         item: it.href
-          ? String(new URL(it.href, Astro.site ?? 'https://www.machine-knives.net'))
+          ? String(new URL(it.href, Astro.site ?? 'https://www.industrial-knives.net'))
           : Astro.url.toString(),
       })),
     }
   : null;
 const pageMetadata = pageProps
   ? {
-      title: `${pageProps.category.title} — Page ${pageProps.pageNumber} | KAIPU Blog`,
+      title: `${pageProps.category.title} — Page ${pageProps.pageNumber} | Industrial Knives Blog`,
       robots: { index: false, follow: true },
     }
   : null;
 
 // ─── kind === 'post' data ──────────────────────────────────────────────────
-const siteUrl = String(Astro.site ?? 'https://www.machine-knives.net').replace(/\/$/, '');
+const siteUrl = String(Astro.site ?? 'https://www.industrial-knives.net').replace(/\/$/, '');
 const postUrl = postProps
   ? getCanonical(`/blog/${postProps.post.category?.slug ?? ''}/${postProps.post.slug}/`)
   : '';
@@ -133,12 +133,12 @@ const blogPostingLd: Record<string, unknown> | null = postProps
           : undefined,
       author: {
         '@type': 'Organization',
-        name: postProps.post.author || 'KAIPU Engineering',
+        name: postProps.post.author || 'Industrial Knives Engineering',
         url: siteUrl + '/about/',
       },
       publisher: {
         '@type': 'Organization',
-        name: 'KAIPU Industrial Blades',
+        name: 'Industrial Knives',
         url: siteUrl + '/',
         logo: { '@type': 'ImageObject', url: siteUrl + '/favicon.svg' },
       },

@@ -11,19 +11,19 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 const metadata = {
   title: 'Industries Served —Printing, Packaging, Paper, Food, Recycling, Converting, Metal',
   description:
-    'KAIPU Industrial Blades has supplied precision machine knives to six core industries since 1998. ISO 9001:2015 certified, materials per ASTM A681 / DIN 1.2379 / JIS SKD11, in-house heat treatment and PVD coating. 5— weeks lead time on standard blade geometries.',
+    'Industrial Knives has supplied precision machine knives to six core industries since 1998. ISO 9001:2015 certified, materials per ASTM A681 / DIN 1.2379 / JIS SKD11, in-house heat treatment and PVD coating. 5— weeks lead time on standard blade geometries.',
 };
 
 const heroImageHtml =
-  '<img src="/images/industries/index/six-sectors-overview.webp" alt="Industries served by KAIPU —six sectors (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+  '<img src="/images/industries/index/six-sectors-overview.webp" alt="Industries served by Industrial Knives —six sectors (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
 
-const SITE_URL = 'https://www.machine-knives.net';
+const SITE_URL = 'https://www.industrial-knives.net';
 const PAGE_URL = `${SITE_URL}/industries/`;
 
 const itemListLd = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Industries served by KAIPU Industrial Blades',
+  name: 'Industries served by Industrial Knives',
   url: PAGE_URL,
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Printing & Packaging', url: `${PAGE_URL}printing-packaging/` },
@@ -42,7 +42,7 @@ const serviceLd = {
   serviceType: 'Custom industrial blade manufacturing',
   provider: {
     '@type': 'Organization',
-    name: 'KAIPU Industrial Blades',
+    name: 'Industrial Knives',
     foundingDate: '1998',
     url: SITE_URL,
   },
@@ -178,7 +178,7 @@ const faqs = [
   {
     title: 'Do you regrind blades supplied by other manufacturers?',
     description:
-      'Yes. Send us a worn sample and we will measure the current edge geometry, regrind to OEM or KAIPU specification, and return a regrind report with edge-life expectations. We regrind blades from most major OEMs including Bosch, S&S, BSH and Herbert.',
+      'Yes. Send us a worn sample and we will measure the current edge geometry, regrind to OEM or Industrial Knives specification, and return a regrind report with edge-life expectations. We regrind blades from most major OEMs including Bosch, S&S, BSH and Herbert.',
   },
   {
     title: 'Which file formats can I send with my RFQ?',
@@ -195,7 +195,7 @@ const faqs = [
 const framework = {
   title: 'The 5-Factor Cut Validation Method',
   body:
-    'Every KAIPU blade is qualified against a proprietary 5-Factor framework before it leaves the floor: (1) substrate classification against ASTM A681 / DIN 1.2379 grade tables, (2) edge geometry on a 0.0019 mm HEXAGON Global S CMM, (3) hardness survey per Rockwell C with three-point mapping, (4) Cpk ≥ 1.33 capability study on the critical cut dimension, and (5) a documented 2— week field trial on the customer line. Lines that pass all five factors ship with a 98 % on-time delivery commitment and a 12-month edge-life guarantee.',
+    'Every Industrial Knives blade is qualified against a proprietary 5-Factor framework before it leaves the floor: (1) substrate classification against ASTM A681 / DIN 1.2379 grade tables, (2) edge geometry on a 0.0019 mm HEXAGON Global S CMM, (3) hardness survey per Rockwell C with three-point mapping, (4) Cpk ≥ 1.33 capability study on the critical cut dimension, and (5) a documented 2— week field trial on the customer line. Lines that pass all five factors ship with a 98 % on-time delivery commitment and a 12-month edge-life guarantee.',
 };
 ---
 
@@ -208,16 +208,16 @@ const framework = {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "The 5-Factor Blade Selection Framework",
-        "url": "https://www.machine-knives.net/kaipu-5-factor-blade-selection-framework/",
+        "url": "https://www.industrial-knives.net/kaipu-5-factor-blade-selection-framework/",
         "datePublished": "2026-01-15",
-        "author": { "@type": "Organization", "name": "KAIPU Industrial Blades" }
+        "author": { "@type": "Organization", "name": "Industrial Knives" }
       }
     </script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to specify an industrial blade for KAIPU",
+        "name": "How to specify an industrial blade for Industrial Knives",
         "totalTime": "P12W",
         "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
         "step": [
@@ -234,7 +234,7 @@ const framework = {
   <Hero
     tagline="Industries Served"
     title="Looking for Industrial Blades? Six Sectors, One Engineering Team"
-    subtitle="Each industry carries its own cutting mechanics —web tension, abrasive wear, hygiene grade, throughput. We tune blade geometry and steel grade to match. KAIPU has supplied converters, recyclers and OEMs across four continents since 1998 (ISO 9001:2015 certified since 2015), with a 98 % on-time delivery rate and a standard 5— weeks lead time."
+    subtitle="Each industry carries its own cutting mechanics —web tension, abrasive wear, hygiene grade, throughput. We tune blade geometry and steel grade to match. Industrial Knives has supplied converters, recyclers and OEMs across four continents since 1998 (ISO 9001:2015 certified since 2015), with a 98 % on-time delivery rate and a standard 5— weeks lead time."
     actions={[
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:mail' },
       { text: 'View Products', href: '/products' },
@@ -269,7 +269,7 @@ const framework = {
       <div class="mb-8 text-center">
         <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">Industry Comparison</p>
         <h2 class="text-3xl md:text-4xl font-bold font-heading dark:text-gray-200 mt-2">
-          KAIPU blade envelope, at a glance
+          Industrial Knives blade envelope, at a glance
         </h2>
         <p class="text-lg text-muted dark:text-slate-300 mt-3 max-w-3xl mx-auto">
           Compared against typical job-shop and overseas-sourced equivalents. All values are production-validated, not theoretical. For a CAD-level quote, send a STEP, IGES or DWG file.

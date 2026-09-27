@@ -10,10 +10,10 @@ tags:
   - high speed steel
   - W6Mo5Cr4V2
   - '1.3343'
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'AISI M2 high-speed steel — chemistry, hardness, heat treatment, applications and cross-reference. The workhorse HSS grade for industrial slitter and shear blades.'
-  canonical: 'https://www.machine-knives.net/materials-encyclopedia/m2-hss/'
+  canonical: 'https://www.industrial-knives.net/materials-encyclopedia/m2-hss/'
 ---
 
 AISI M2 (UNS T11302) is the most widely used molybdenum-tungsten high-speed steel for industrial cutting tools and blades. It is the default HSS grade for slitting, shearing and converting blades that need to retain hardness at elevated temperatures.
@@ -30,4 +30,4 @@ AISI M2 (UNS T11302) is the most widely used molybdenum-tungsten high-speed stee
 
 **Cross-reference:** ≈ JIS SKD51 / SKH51, DIN 1.3343, GB W6Mo5Cr4V2, BS BM2, AFNOR Z85WDCV6-5-4-2. See the [Material Grade Converter](/material-grade-converter/).
 
-**See also:** [M2 vs M4 HSS](/m2-vs-m4-hss/), [HSS vs Carbide](/hss-vs-carbide/), [The KAIPU 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/).
+**See also:** [M2 vs M4 HSS](/m2-vs-m4-hss/), [HSS vs Carbide](/hss-vs-carbide/), [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/).

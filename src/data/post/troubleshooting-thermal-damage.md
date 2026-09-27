@@ -11,10 +11,10 @@ tags:
   - 'tissue slitter'
   - 'high-speed cutting'
   - 'cooling'
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'A slitter knife that turns blue, straw or purple is being annealed in service. The edge temperature has exceeded the tempering temperature. The fix is usually cooling, then grade upgrade, then coating.'
-  canonical: 'https://www.machine-knives.net/troubleshooting-thermal-damage/'
+  canonical: 'https://www.industrial-knives.net/troubleshooting-thermal-damage/'
 ---
 
 A slitter knife that turns blue, straw or purple is being annealed in service. The edge temperature has exceeded the tempering temperature of the steel. The fix is usually cooling first, then grade upgrade, then coating.
@@ -104,8 +104,8 @@ The cheapest fix is the first one. Most thermal-damage events are fixed by step 
 
 For the broader troubleshooting framework, see [Why is my blade wearing out too fast?](/troubleshooting-premature-wear/) and [Chipping (glossary entry)](/glossary/chipping/).
 
-For a written thermal damage diagnosis, send the discoloured knife, the line log, the substrate spec and the current cooling configuration to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Diagnosis within 24 hours.
+For a written thermal damage diagnosis, send the discoloured knife, the line log, the substrate spec and the current cooling configuration to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Diagnosis within 24 hours.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified.*
+*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified.*

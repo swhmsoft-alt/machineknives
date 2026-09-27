@@ -7,10 +7,10 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'fatigue wear'
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of fatigue wear in industrial cutting: loss of knife material by sub-surface crack propagation under repeated thermal-mechanical cycling, common on high-speed lines.'
-  canonical: 'https://www.machine-knives.net/glossary/fatigue-wear/'
+  canonical: 'https://www.industrial-knives.net/glossary/fatigue-wear/'
 ---
 
 **undefined** is the loss of knife material by sub-surface crack propagation under repeated thermal-mechanical cycling. Each cut cycle heats the edge, then cools it; the temperature swing + the mechanical stress grows micro-cracks. Eventually a chip breaks off.

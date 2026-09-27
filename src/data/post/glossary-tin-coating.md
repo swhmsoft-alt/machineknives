@@ -7,10 +7,10 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'TiN coating'
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of TiN (Titanium Nitride) PVD coating for industrial blades: a gold-coloured ceramic coating that reduces friction and extends knife life 20–30 % on general-purpose slitting and shearing.'
-  canonical: 'https://www.machine-knives.net/glossary/tin-coating/'
+  canonical: 'https://www.industrial-knives.net/glossary/tin-coating/'
 ---
 
 **undefined** Titanium Nitride (TiN) is a PVD (Physical Vapour Deposition) ceramic coating applied to a precision blade in a vacuum chamber at 400–500 °C. The gold-coloured TiN layer (2–4 µm) reduces coefficient of friction and increases surface hardness, extending knife life 20–30 % on most substrates.

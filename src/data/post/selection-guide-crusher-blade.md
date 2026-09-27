@@ -13,10 +13,10 @@ tags:
   - 'DC53'
   - 'tungsten carbide'
   - 'YG15'
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'Crusher blades take the largest impact loads in industrial cutting. A 30 mm M16 nut in a granulator feed will shatter a D2 blade in 200 cycles. This guide covers jaw, hammer, rotary and impact crusher blades for stone, ore, scrap and ASR.'
-  canonical: 'https://www.machine-knives.net/selection-guide-crusher-blade/'
+  canonical: 'https://www.industrial-knives.net/selection-guide-crusher-blade/'
 ---
 
 Crusher blades are the largest, thickest, most impact-loaded industrial blades in routine use. A 30 mm M16 nut in a granulator feed will shatter a D2 blade in 200 cycles; a tungsten carbide rotor survives 10,000+ cycles on the same feed. The right grade, geometry and bolting discipline separates a 6-month blade from a 2-week one.
@@ -102,10 +102,10 @@ A measured rotation protocol typically doubles the effective life per blade. Cos
 
 > "[Rotor knife / hammer / anvil], [L] × [W] × [T] mm, [D2 / M2 HSS / DC53 / YG8 / YG10X / YG15] per substrate table, [vacuum heat-treated / sintered] to HRC [per grade table], 5-point hardness file test, edge chamfer [0.20–0.50] mm on cutting edge, [2-edge / 4-edge / 6-edge reversible]. Bolt pattern: [drawing], torque [120–700] Nm with calibrated wrench, Nord-Lock washers required. Mill certificate with cobalt content (carbide) or ladle chemistry (tool steel) required."
 
-For broader impact-loaded blade selection, see [How to choose a granulator knife](/selection-guide-granulator-knife/) and [The KAIPU 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/).
+For broader impact-loaded blade selection, see [How to choose a granulator knife](/selection-guide-granulator-knife/) and [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/).
 
-For a written crusher blade specification, send the crusher type, substrate, throughput, current blade spec and current service life to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
+For a written crusher blade specification, send the crusher type, substrate, throughput, current blade spec and current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. Ships to recyclers, quarries and OEMs across four continents.*
+*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Ships to recyclers, quarries and OEMs across four continents.*

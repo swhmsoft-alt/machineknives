@@ -10,10 +10,10 @@ tags:
   - inspection form
   - line audit
   - knife life
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'Preventive maintenance schedule for industrial blades: daily / weekly / monthly / quarterly checks, inspection form, parts replacement plan, line-side measurements that drive knife life.'
-  canonical: 'https://www.machine-knives.net/maintenance-preventive-schedule/'
+  canonical: 'https://www.industrial-knives.net/maintenance-preventive-schedule/'
 ---
 
 A preventive maintenance schedule for industrial blades is not about replacing knives on a fixed interval — it is about catching the symptoms that predict a failure before the line trips. The 80 % of premature blade failures we see in the field show up as a measurable symptom days or weeks before the line stops. A good PM schedule catches the symptom and acts on it; a bad PM schedule waits for the failure and then reacts.
@@ -173,8 +173,8 @@ For a preventive maintenance SOP:
 
 For the broader re-grind SOP, see [Maintenance: how to extend slitter life](/maintenance-slitting-blade-life/). For the re-sharpening service article, see [Re-sharpening service: how to outsource](/maintenance-resharpening-service/).
 
-For a written PM schedule for your line, send the line layout, the current knife consumption, the current downtime and the current scrap rate to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Specification, template forms, and a quarterly audit protocol within one business day.
+For a written PM schedule for your line, send the line layout, the current knife consumption, the current downtime and the current scrap rate to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, template forms, and a quarterly audit protocol within one business day.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. Provides PM schedule templates as a value-added service for customers who buy a 12-knife annual volume.*
+*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Provides PM schedule templates as a value-added service for customers who buy a 12-knife annual volume.*

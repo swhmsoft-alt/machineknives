@@ -28,7 +28,7 @@ const { metadata = {} } = Astro.props;
 const { language, textDirection } = I18N;
 
 // ─── Global JSON-LD (Organization + WebSite + BreadcrumbList + Service on home) ──
-const siteUrl = String(Astro.site ?? 'https://www.machine-knives.net').replace(/\/$/, '');
+const siteUrl = String(Astro.site ?? 'https://www.industrial-knives.net').replace(/\/$/, '');
 const breadcrumbLdItems = buildBreadcrumbItems(Astro.url.pathname).map((it, idx) => ({
   '@type': 'ListItem',
   position: idx + 1,

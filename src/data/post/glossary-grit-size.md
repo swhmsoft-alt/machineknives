@@ -7,10 +7,10 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'grit size'
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of grit size in industrial blade grinding: the abrasive particle size of a grinding wheel, and how grit size affects surface finish, stock removal and thermal load on the workpiece.'
-  canonical: 'https://www.machine-knives.net/glossary/grit-size/'
+  canonical: 'https://www.industrial-knives.net/glossary/grit-size/'
 ---
 
 **undefined** is the nominal abrasive particle size of a grinding wheel, measured by the number of openings per linear inch in a sieve that the particles just pass through. A 60-grit wheel has coarser particles than a 120-grit wheel.

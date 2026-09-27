@@ -12,10 +12,10 @@ tags:
   - D2
   - M2 HSS
   - carbide shear
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'How to choose a shear blade for plate steel in hot rolling mill and service centre applications. Substrate by family, grade and chamfer selection, blade gap, field cases.'
-  canonical: 'https://www.machine-knives.net/selection-guide-shear-blade-plate-steel/'
+  canonical: 'https://www.industrial-knives.net/selection-guide-shear-blade-plate-steel/'
 ---
 
 Plate shear blades are the highest-impact industrial cutting tool in routine use. They see a single, hard cut per stroke on a plate that can be 6–25 mm thick, often work-hardened from prior rolling, often with a hard scale on the surface. Get the grade, the chamfer, the clearance or the gap wrong, and the blade chips inside 1,000 cycles. Get them right, and a blade survives 30,000+ cycles.
@@ -152,10 +152,10 @@ For a plate shear blade:
 
 > "Shear blade, [L] × [W] × [T] mm, AISI M2 HSS (or carbide insert YG8 for AR / stainless ≥ 4 mm), vacuum heat-treated to HRC [60–64] ± 1, 5-point file test, surface finish Ra ≤ 0.4 µm, parallelism ≤ 0.005 mm across length, edge chamfer [0.05–0.30] mm on back face, clearance angle [0.5–2]°, rake angle 0–3°. Substrate: [grade / thickness]. Blade gap: [X] % of plate thickness per side. Mill certificate required."
 
-For the broader five-factor selection framework, see [The KAIPU 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/). For the M2 vs M4 HSS head-to-head, see [M2 vs M4 HSS](/m2-vs-m4-hss/). For the carbide grade comparison, see [YG6X vs YG8](/yg6x-vs-yg8-carbide/).
+For the broader five-factor selection framework, see [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/). For the M2 vs M4 HSS head-to-head, see [M2 vs M4 HSS](/m2-vs-m4-hss/). For the carbide grade comparison, see [YG6X vs YG8](/yg6x-vs-yg8-carbide/).
 
-For a written shear-blade specification, send the part drawing, the substrate, the plate thickness and the current service life to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
+For a written shear-blade specification, send the part drawing, the substrate, the plate thickness and the current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.*
+*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.*

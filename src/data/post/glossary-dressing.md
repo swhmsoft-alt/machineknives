@@ -7,10 +7,10 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'dressing'
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of dressing in industrial blade grinding: the process of re-sharpening or re-shaping a grinding wheel to expose fresh abrasive and restore geometry.'
-  canonical: 'https://www.machine-knives.net/glossary/dressing/'
+  canonical: 'https://www.industrial-knives.net/glossary/dressing/'
 ---
 
 **undefined** is the process of re-sharpening or re-shaping a grinding wheel to expose fresh abrasive grains and restore the wheel's geometry. A glazed or loaded wheel drags, burns the workpiece, and leaves a poor surface.

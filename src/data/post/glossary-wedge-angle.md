@@ -7,10 +7,10 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'wedge angle'
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of wedge angle in industrial cutting: the included angle between the front and back faces of a cutting edge, and how it balances edge sharpness against edge strength.'
-  canonical: 'https://www.machine-knives.net/glossary/wedge-angle/'
+  canonical: 'https://www.industrial-knives.net/glossary/wedge-angle/'
 ---
 
 **undefined** is the included angle between the front face and the back face of a cutting edge. A small wedge angle means a sharp edge (low cutting force) but a weak edge (chips easily). A large wedge angle means a strong edge (no chipping) but a dull edge (high cutting force).

@@ -32,7 +32,7 @@ export const capabilities: Capability[] = [
   {
     title: 'Re-sharpening & Re-grinding',
     description:
-      'Return-and-resharpen service for our own blades. Original geometry preserved by reading the worn edge profile before grinding. Best for: Blades originally supplied by KAIPU with geometry record on file. Not for: Blades from other suppliers with unknown geometry or materials.',
+      'Return-and-resharpen service for our own blades. Original geometry preserved by reading the worn edge profile before grinding. Best for: Blades originally supplied by Industrial Knives with geometry record on file. Not for: Blades from other suppliers with unknown geometry or materials.',
   },
   {
     title: 'Quality Assurance',

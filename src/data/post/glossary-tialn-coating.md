@@ -7,10 +7,10 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'TiAlN coating'
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of TiAlN (Titanium Aluminium Nitride) PVD coating for industrial blades: a violet-black high-temperature coating for hot-work and foil slitting applications.'
-  canonical: 'https://www.machine-knives.net/glossary/tialn-coating/'
+  canonical: 'https://www.industrial-knives.net/glossary/tialn-coating/'
 ---
 
 **undefined** Titanium Aluminium Nitride (TiAlN) is a PVD ceramic coating, violet-black, with excellent high-temperature hardness (HRC 60+ at 700 °C). Applied at 400–500 °C, 2–4 µm thick. The aluminium forms a stable oxide layer at high temperature that prevents the coating from breaking down.

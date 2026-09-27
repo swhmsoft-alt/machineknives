@@ -13,10 +13,10 @@ tags:
   - service centre
   - M2 HSS
   - TiN coating
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'Case study: shear blade for 6 mm 304 stainless plate at a Turkish service centre. From 1,200 strokes to 18,000 strokes — diagnostic, trial, ROI.'
-  canonical: 'https://www.machine-knives.net/case-study-shear-stainless-turkey/'
+  canonical: 'https://www.industrial-knives.net/case-study-shear-stainless-turkey/'
 ---
 
 In late 2024 our Istanbul distributor called about a service centre cutting 6 mm 304 stainless plate. The customer was burning through a D2 upper shear blade every 1,200 strokes, with frequent chipping on the leading edge. The line was a 1,200-tonne hydraulic guillotine running 8 hours per day, 5 days per week. Knife consumption was the second-largest cost on the line (after electricity), and the downtime for blade changes was hurting the on-time delivery KPI. This case study walks through the audit, the trial, the result and the ROI.
@@ -158,8 +158,8 @@ If your line is chipping shear blades on stainless plate, the chamfer is almost 
 
 ## Want us to audit your line?
 
-For a written field audit on a plate shear line, send the substrate, the plate thickness, the current knife spec and the current service life to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). A typical audit takes 1 day on site, returns a written diagnosis and a trial protocol, and ships the trial knives within 3 weeks. ROI is typically inside 6 months on lines with > USD 30k/year knife spend.
+For a written field audit on a plate shear line, send the substrate, the plate thickness, the current knife spec and the current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). A typical audit takes 1 day on site, returns a written diagnosis and a trial protocol, and ships the trial knives within 3 weeks. ROI is typically inside 6 months on lines with > USD 30k/year knife spend.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. The team ships to converters, recyclers and OEMs across four continents, with active distribution in Turkey, Poland, Germany, Italy, India, Vietnam and Brazil.*
+*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. The team ships to converters, recyclers and OEMs across four continents, with active distribution in Turkey, Poland, Germany, Italy, India, Vietnam and Brazil.*

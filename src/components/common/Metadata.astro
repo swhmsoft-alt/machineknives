@@ -96,13 +96,13 @@ const seoProps: SEOProps = {
       ? !robots.index
       : typeof METADATA?.robots?.index !== 'undefined'
         ? !METADATA.robots.index
-        : true,
+        : false, // safe fallback: do not noindex if config is missing (audit F-003)
   nofollow:
     typeof robots?.follow !== 'undefined'
       ? !robots.follow
       : typeof METADATA?.robots?.follow !== 'undefined'
         ? !METADATA.robots.follow
-        : true,
+        : false, // safe fallback: do not nofollow if config is missing (audit F-003)
   description: description || METADATA?.description,
   openGraph: buildOpenGraph(adaptedOg),
   twitter: mergedTwitter,

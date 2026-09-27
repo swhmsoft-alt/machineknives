@@ -12,7 +12,7 @@ applications:
 image: '/images/products/product-detail.webp'
 draft: false
 metadata:
-  title: 'D2 Bed Knife for Tissue Converting —HRC 60, 18° Clearance | KAIPU'
+  title: 'D2 Bed Knife for Tissue Converting —HRC 60, 18° Clearance | Industrial Knives'
   description: 'D2 bed knife for tissue converting lines. HRC 60, 15 μm micro-hone, 18° clearance angle. Documented 11 to 34-day service life at 1200 m/min on 4-ply tissue. ISO 9001:2015 traceability.'
 ---
 

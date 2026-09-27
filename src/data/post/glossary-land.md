@@ -7,10 +7,10 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'land'
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of land in industrial cutting: the small flat behind the cutting edge that supports the hone, used on shear blades and heavy-duty slitter knives for edge strength.'
-  canonical: 'https://www.machine-knives.net/glossary/land/'
+  canonical: 'https://www.industrial-knives.net/glossary/land/'
 ---
 
 **undefined** is a small flat behind the cutting edge, parallel to the cut direction, that provides additional support to the hone. On a plate shear blade, the land is the flat portion of the back face between the chamfer and the start of the clearance angle. On a slitter knife, the land is the portion of the back face within 0.05–0.20 mm of the hone.

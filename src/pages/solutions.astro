@@ -10,11 +10,11 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 const metadata = {
   title: 'Industry Solutions — Machine Knives for Printing, Packaging, Food & Recycling',
   description:
-    'KAIPU supplies precision machine knives to six core industries since 1998. ISO 9001 certified, D2 / M2 / SKD11 / carbide materials, ASTM A681 / DIN 1.2379 / JIS SKD11 grades, in-house heat treatment and PVD coating. Lead time typically 15–25 business days.',
+    'Industrial Knives supplies precision machine knives to six core industries since 1998. ISO 9001 certified, D2 / M2 / SKD11 / carbide materials, ASTM A681 / DIN 1.2379 / JIS SKD11 grades, in-house heat treatment and PVD coating. Lead time typically 15–25 business days.',
 };
 
 const heroImageHtml =
-  '<img src="/images/solutions/industry-applications-overview.webp" alt="Six industry applications served by KAIPU (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+  '<img src="/images/solutions/industry-applications-overview.webp" alt="Six industry applications served by Industrial Knives (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
 
 const stepsMaterialImageHtml =
   '<img src="/images/solutions/material-families-overview.webp" alt="Six steel families for industrial cutting (placeholder)" class="w-full rounded-md shadow-lg" width="432" height="768" loading="lazy" />';
@@ -29,7 +29,7 @@ const stepsProcessImageHtml =
 // Keys are double-quoted so the literal pattern `"@type":"Service"` appears in
 // the .astro source — required by some validators that scan page source rather
 // than rendered HTML.
-const siteUrl = String(Astro.site ?? 'https://www.machine-knives.net').replace(/\/$/, '');
+const siteUrl = String(Astro.site ?? 'https://www.industrial-knives.net').replace(/\/$/, '');
 const serviceLd = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -37,7 +37,7 @@ const serviceLd = {
   "serviceType": "Custom industrial blade manufacturing",
   "provider": {
     "@type": "Organization",
-    "name": "KAIPU Industrial Blades",
+    "name": "Industrial Knives",
     "url": siteUrl + "/",
     "foundingDate": "1998",
     "knowsAbout": [
@@ -102,7 +102,7 @@ const howToLd = {
       "@type": "HowToStep",
       "position": 2,
       "name": "Application review within 1 business day",
-      "text": "KAIPU's engineering team reviews geometry, material, hardness target and operating speed. Response includes specification, indicative price and lead time. Unworkable drawings are flagged with the reason."
+      "text": "Industrial Knives's engineering team reviews geometry, material, hardness target and operating speed. Response includes specification, indicative price and lead time. Unworkable drawings are flagged with the reason."
     },
     {
       "@type": "HowToStep",
@@ -131,7 +131,7 @@ const howToLd = {
   ]
 };
 
-// Page-level JSON-LD: BlogPosting cross-link. The "KAIPU 5-Factor Selection
+// Page-level JSON-LD: BlogPosting cross-link. The "Industrial Knives 5-Factor Selection
 // Method" rendered as a Steps widget below is the inline summary of this
 // engineering notebook article; the schema lets AI crawlers and Google cite
 // the hub page as related to the long-form piece.
@@ -139,12 +139,12 @@ const blogPostingLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline":
-    "The KAIPU 5-Factor Blade Selection Framework — How to Specify the Right Industrial Knife in 30 Minutes",
-  "url": "https://www.machine-knives.net/kaipu-5-factor-blade-selection-framework/",
+    "The Industrial Knives 5-Factor Blade Selection Framework — How to Specify the Right Industrial Knife in 30 Minutes",
+  "url": "https://www.industrial-knives.net/kaipu-5-factor-blade-selection-framework/",
   "datePublished": "2026-09-11",
   "dateModified": "2026-09-11",
-  "author": { "@type": "Organization", "name": "KAIPU Engineering" },
-  "publisher": { "@type": "Organization", "name": "KAIPU Industrial Blades" },
+  "author": { "@type": "Organization", "name": "Industrial Knives Engineering" },
+  "publisher": { "@type": "Organization", "name": "Industrial Knives" },
   "description":
     "A structured method our engineers use to match substrate, geometry, hardness target, edge preparation and operating speed to a production line — without second-guessing the steel grade.",
 };
@@ -209,7 +209,7 @@ const blogPostingLd = {
     id="industries"
     tagline="Industries Served"
     title="Six Core Sectors, One Trusted Manufacturer"
-    subtitle="Each industry carries its own cutting mechanics — web tension, abrasive wear, hygiene grade, throughput. We tune the blade geometry and steel grade to match. KAIPU has supplied converters, recyclers and OEMs across four continents since 1998."
+    subtitle="Each industry carries its own cutting mechanics — web tension, abrasive wear, hygiene grade, throughput. We tune the blade geometry and steel grade to match. Industrial Knives has supplied converters, recyclers and OEMs across four continents since 1998."
     items={[
       {
         title: 'Printing & Packaging',
@@ -322,11 +322,11 @@ const blogPostingLd = {
     </p>
   </section>
 
-  {/* ──────────────────────────────────────── KAIPU 5-Factor Method (inline summary — full version in /kaipu-5-factor-...) ──────────────────────────────────────── */}
+  {/* ──────────────────────────────────────── Industrial Knives 5-Factor Method (inline summary — full version in /kaipu-5-factor-...) ──────────────────────────────────────── */}
   <Steps
     id="framework"
     tagline="Our Method"
-    title="The KAIPU 5-Factor Selection Method — Five Dimensions of Blade Specification"
+    title="The Industrial Knives 5-Factor Selection Method — Five Dimensions of Blade Specification"
     subtitle="A proprietary 30-minute framework our engineering team runs on every inquiry, evaluating each application across five dimensions. We specify the cut, not the steel — the grade falls out of the first four dimensions. Full breakdown published in our engineering notebook."
     items={[
       {
@@ -360,7 +360,7 @@ const blogPostingLd = {
   <p class="text-center text-sm text-muted max-w-3xl mx-auto px-4 pb-2">
     Want the full 2,000-word engineering write-up, decision matrix, and a real case study?
     <a href="/kaipu-5-factor-blade-selection-framework/" class="text-primary font-semibold hover:underline">
-      Read the KAIPU 5-Factor Framework →
+      Read the Industrial Knives 5-Factor Framework →
     </a>
   </p>
 
@@ -454,7 +454,7 @@ const blogPostingLd = {
     <ul class="space-y-4 text-muted list-disc pl-5">
       <li>
         <strong class="text-default">Material traceability.</strong> Every shipment is accompanied by a mill certificate
-        and a KAIPU heat-treatment record. The certificate names the heat lot, the steel grade and the actual hardness
+        and a Industrial Knives heat-treatment record. The certificate names the heat lot, the steel grade and the actual hardness
         measured.
       </li>
       <li>
@@ -520,7 +520,7 @@ const blogPostingLd = {
       {
         title: 'Do you ship outside China?',
         description:
-          'Yes. KAIPU exports to converters, recyclers and OEMs across four continents — North America, Europe, Latin America and Asia-Pacific. We ship EXW, FOB, CIF and DDP. Standard packing is vacuum-sealed foil + foam + plywood crate suitable for ocean freight.',
+          'Yes. Industrial Knives exports to converters, recyclers and OEMs across four continents — North America, Europe, Latin America and Asia-Pacific. We ship EXW, FOB, CIF and DDP. Standard packing is vacuum-sealed foil + foam + plywood crate suitable for ocean freight.',
       },
     ]}
   />

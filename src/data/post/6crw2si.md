@@ -10,10 +10,10 @@ tags:
   - 'cold work tool steel'
   - 'tool steel'
   - 'industrial knife'
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'GB 6CrW2Si Hot-Work Tool Steel. Chemistry, hardness, heat treatment, applications, cross-reference.'
-  canonical: 'https://www.machine-knives.net/materials-encyclopedia/6crw2si/'
+  canonical: 'https://www.industrial-knives.net/materials-encyclopedia/6crw2si/'
 ---
 
 GB 6CrW2Si Hot-Work Tool Steel is a reference entry for industrial cutting tools and blades. The composition, hardness, heat treatment and application guidance are summarised below for engineering reference.
@@ -30,4 +30,4 @@ GB 6CrW2Si Hot-Work Tool Steel is a reference entry for industrial cutting tools
 
 **Cross-reference:** ≈ DIN 1.2550 (similar), no precise Western equivalent.
 
-**See also: [D2 vs SKD11 comparison](/d2-vs-skd11/), [Material Grade Converter](/material-grade-converter/), [The KAIPU 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/).**
+**See also: [D2 vs SKD11 comparison](/d2-vs-skd11/), [Material Grade Converter](/material-grade-converter/), [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/).**

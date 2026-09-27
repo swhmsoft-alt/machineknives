@@ -7,10 +7,10 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'dead zone'
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of dead zone in industrial slitting: the area immediately around the cut where the substrate is unsupported and can wrinkle, tear, or lift.'
-  canonical: 'https://www.machine-knives.net/glossary/dead-zone/'
+  canonical: 'https://www.industrial-knives.net/glossary/dead-zone/'
 ---
 
 **undefined** is the area immediately around the cut where the substrate is no longer supported by the anvil or the parent web. In the dead zone, the substrate can wrinkle, lift, or tear, producing cut-surface defects that are not the knife's fault.

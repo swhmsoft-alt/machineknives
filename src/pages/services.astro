@@ -17,13 +17,13 @@ const metadata = {
 };
 
 const heroImageHtml =
-  '<img src="/images/services/manufacturing-service-operations.webp" alt="KAIPU manufacturing service operations (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+  '<img src="/images/services/manufacturing-service-operations.webp" alt="Industrial Knives manufacturing service operations (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
 
 const lastUpdated = '2026-09-11';
 const publishedDate = '2026-01-15';
 const foundedYear = 2008;
 const yearsInBusiness = new Date().getFullYear() - foundedYear;
-const siteUrl = 'https://www.machine-knives.net';
+const siteUrl = 'https://www.industrial-knives.net';
 ---
 
 <Layout metadata={{ ...metadata, dateModified: lastUpdated, datePublished: publishedDate }}>
@@ -31,7 +31,7 @@ const siteUrl = 'https://www.machine-knives.net';
   <Hero
     tagline="Manufacturing Services"
     title="From Drawing to Dispatch —One Source"
-    subtitle={`KAIPU operates the design office, tool-room, heat treatment, surface coating and quality lab under one roof. ${yearsInBusiness} years of industrial-blade manufacturing since ${foundedYear}, one engineering team end-to-end.`}
+    subtitle={`Industrial Knives operates the design office, tool-room, heat treatment, surface coating and quality lab under one roof. ${yearsInBusiness} years of industrial-blade manufacturing since ${foundedYear}, one engineering team end-to-end.`}
     actions={[
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:clipboard-text' },
       { text: 'View Products', href: '/products' },
@@ -67,9 +67,9 @@ const siteUrl = 'https://www.machine-knives.net';
     <div class="mx-auto max-w-6xl">
       <div class="mb-8 text-center">
         <p class="text-sm font-semibold uppercase tracking-wide text-primary">Comparison</p>
-        <h2 class="mb-2 text-3xl font-bold md:text-4xl">KAIPU vs Typical Job Shop</h2>
+        <h2 class="mb-2 text-3xl font-bold md:text-4xl">Industrial Knives vs Typical Job Shop</h2>
         <p class="mx-auto max-w-3xl text-base md:text-lg">
-          How KAIPU compares to a typical CNC job shop or overseas OEM. Compared with the alternatives, the difference is in-house control of every critical step —from steel sourcing to final QA documentation.
+          How Industrial Knives compares to a typical CNC job shop or overseas OEM. Compared with the alternatives, the difference is in-house control of every critical step —from steel sourcing to final QA documentation.
         </p>
       </div>
       <div class="overflow-x-auto rounded-lg border border-slate-200 shadow-sm dark:border-slate-700">
@@ -77,7 +77,7 @@ const siteUrl = 'https://www.machine-knives.net';
           <thead>
             <tr class="border-b border-slate-300 dark:border-slate-600">
               <th class="px-4 py-3 font-semibold">Capability</th>
-              <th class="px-4 py-3 font-semibold">KAIPU</th>
+              <th class="px-4 py-3 font-semibold">Industrial Knives</th>
               <th class="px-4 py-3 font-semibold">Typical Job Shop</th>
             </tr>
           </thead>
@@ -195,7 +195,7 @@ const siteUrl = 'https://www.machine-knives.net';
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: 'Custom Industrial Blade Manufacturing',
-    provider: { '@type': 'Organization', name: 'KAIPU' },
+    provider: { '@type': 'Organization', name: 'Industrial Knives' },
     areaServed: 'Worldwide',
     serviceType: 'OEM/ODM blade manufacturing',
     description: 'Custom blade design, CNC grinding, vacuum heat treatment, PVD coating and precision QA under one roof.',
@@ -210,8 +210,8 @@ const siteUrl = 'https://www.machine-knives.net';
     inLanguage: 'en',
     datePublished: publishedDate,
     dateModified: lastUpdated,
-    author: { '@type': 'Organization', name: 'KAIPU Engineering Team', url: siteUrl + '/about/' },
-    publisher: { '@type': 'Organization', name: 'KAIPU' },
+    author: { '@type': 'Organization', name: 'Industrial Knives Engineering Team', url: siteUrl + '/about/' },
+    publisher: { '@type': 'Organization', name: 'Industrial Knives' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': siteUrl + '/services/' },
     about: {
       '@type': 'Service',
@@ -222,7 +222,7 @@ const siteUrl = 'https://www.machine-knives.net';
   <script type="application/ld+json" set:html={JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'HowTo',
-    name: 'KAIPU Order Process: From RFQ to Delivery',
+    name: 'Industrial Knives Order Process: From RFQ to Delivery',
     totalTime: 'P6W',
     step: processSteps.map((s, i) => ({
       '@type': 'HowToStep',

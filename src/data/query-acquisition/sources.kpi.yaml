@@ -1,7 +1,7 @@
 # ============================================================
-# KAIPU Source KPI / Configuration (V1.0)
+# Industrial Knives Source KPI / Configuration (V1.0)
 # ============================================================
-# 列出 KAIPU 实际可触达的数据源 + 配置点.
+# 列出 Industrial Knives 实际可触达的数据源 + 配置点.
 # 字段反映"我们在哪里采集", 决定 source_type 取值的落地路径.
 # ============================================================
 
@@ -9,8 +9,8 @@ sources:
   # --- L1: First-party Search ---
   - id: kaipu-gsc
     type: gsc
-    label: 'KAIPU Google Search Console'
-    target_property: 'https://www.machine-knives.net'
+    label: 'Industrial Knives Google Search Console'
+    target_property: 'https://www.industrial-knives.net'
     status: 'available' # available | pending | blocked
     capture_method: 'human_export_csv'
     cadence: 'monthly'
@@ -58,7 +58,7 @@ sources:
   # --- L4: First-party Buyer ---
   - id: kaipu-rfq
     type: rfq
-    label: 'KAIPU RFQ / Sales Inquiries'
+    label: 'Industrial Knives RFQ / Sales Inquiries'
     intake_email: '[email protected]'
     status: 'available'
     capture_method: 'sales_archive_anonymized'
@@ -67,7 +67,7 @@ sources:
 
   - id: kaipu-linkedin
     type: linkedin_dm
-    label: 'KAIPU LinkedIn DMs'
+    label: 'Industrial Knives LinkedIn DMs'
     status: 'available'
     capture_method: 'sales_archive_anonymized'
     cadence: 'monthly'

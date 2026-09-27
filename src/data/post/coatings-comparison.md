@@ -17,15 +17,15 @@ tags:
   - CrAlN
   - blade coating
   - industrial knives
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'Side-by-side comparison of PVD coatings for industrial blades. Hardness, friction, max temperature, colour, typical thickness, substrate fit and field guidance for TiN, TiCN, CrN, AlCrN, TiAlN, DLC and CrAlN.'
-  canonical: 'https://www.machine-knives.net/coatings-comparison/'
+  canonical: 'https://www.industrial-knives.net/coatings-comparison/'
 ---
 
 A PVD (physical vapour deposition) coating is a 1–5 µm ceramic layer on the cutting edge of an industrial blade. The coating reduces friction, increases surface hardness, and — for the right coating on the right substrate — extends knife life by 20–50 %. The wrong coating on the wrong substrate is wasted money, and on impact-loaded applications a coating can accelerate chipping by adding a brittle ceramic layer to a steel that is already on the edge of its toughness window.
 
-This page is the side-by-side reference we use at KAIPU when an RFQ asks "should we coat this knife, and with what?" It is a living document — the field data refreshes every 6 months. The table is structured for direct quotation in an RFQ response or a knife specification.
+This page is the side-by-side reference we use at Industrial Knives when an RFQ asks "should we coat this knife, and with what?" It is a living document — the field data refreshes every 6 months. The table is structured for direct quotation in an RFQ response or a knife specification.
 
 > **One-line summary:** *For paper and film slitting, TiN or CrN. For stainless and high-temperature cutting, AlCrN or TiAlN. For sticky polymers and austenitic stainless, DLC. For granulator and impact-loaded parts, no coating or a thin CrN.*
 
@@ -150,10 +150,10 @@ For a coated industrial blade, the spec should read:
 
 This phrasing locks the critical variables and lets the coating house recommend the deposition process.
 
-For the broader five-factor selection method, see [The KAIPU 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/). For the steel-grade cross-reference behind the choice, see [Material Grade Converter](/material-grade-converter/). For a runnable comparison of carbide grades, see [YG6X vs YG8](/yg6x-vs-yg8-carbide/).
+For the broader five-factor selection method, see [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/). For the steel-grade cross-reference behind the choice, see [Material Grade Converter](/material-grade-converter/). For a runnable comparison of carbide grades, see [YG6X vs YG8](/yg6x-vs-yg8-carbide/).
 
-For a written coating recommendation on your specific RFQ, send the part drawing, the substrate, the line speed and the current service life to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
+For a written coating recommendation on your specific RFQ, send the part drawing, the substrate, the line speed and the current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. In-house PVD coating line for TiN, TiCN, CrN, AlCrN, TiAlN, DLC and ta-C.*
+*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. In-house PVD coating line for TiN, TiCN, CrN, AlCrN, TiAlN, DLC and ta-C.*

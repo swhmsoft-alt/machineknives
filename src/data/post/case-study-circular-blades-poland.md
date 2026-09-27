@@ -14,10 +14,10 @@ tags:
   - Poland
   - D2 tool steel
   - M2 high speed steel
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'Field case study: high-precision circular blades for 12 µm BOPP film at a Polish converter. From 4 knives/week to 1 knife every 6 weeks — diagnostic, trial, and result.'
-  canonical: 'https://www.machine-knives.net/case-study-circular-blades-poland/'
+  canonical: 'https://www.industrial-knives.net/case-study-circular-blades-poland/'
 ---
 
 In early 2025 our distribution partner in Łódź, Poland, called us about a converter running 12 µm biaxially-oriented polypropylene (BOPP) film at 600 m/min. The customer was replacing the top slitter knife every 6–7 days, burning through four D2 blades per month on a single line. The line was producing 24/6, and the cost of the knives (€380 each, 2024 prices) was dwarfed by the lost production during re-grinds. This post walks through the two-week field audit, the trial, the change-out, and the result — a 6× life improvement that paid back the entire project cost in 11 weeks.
@@ -156,8 +156,8 @@ If your line is running knives more often than the steel grade would suggest, yo
 
 ## Want us to audit your line?
 
-For a written field audit on a thin-film slitting line, send the substrate, the line speed, the current knife spec and the current service life to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). A typical audit takes 1–2 days on site, returns a written diagnosis and a trial protocol, and ships the trial knives within 3 weeks. ROI is typically inside 6 months on lines with > €50k/year knife spend.
+For a written field audit on a thin-film slitting line, send the substrate, the line speed, the current knife spec and the current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). A typical audit takes 1–2 days on site, returns a written diagnosis and a trial protocol, and ships the trial knives within 3 weeks. ROI is typically inside 6 months on lines with > €50k/year knife spend.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. The team ships to converters, recyclers and OEMs across four continents, with active distribution in Poland, Germany, Italy, Turkey, India, Vietnam and Brazil.*
+*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. The team ships to converters, recyclers and OEMs across four continents, with active distribution in Poland, Germany, Italy, Turkey, India, Vietnam and Brazil.*

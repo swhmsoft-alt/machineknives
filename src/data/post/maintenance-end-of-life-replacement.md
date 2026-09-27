@@ -10,10 +10,10 @@ tags:
   - 'blade life'
   - 'blade refurbishment'
   - 'end of life'
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'A knife that is past its design life is a chip waiting to happen. The four retirement criteria, the protocol for retiring and re-purposing, and how to avoid the most common retirement mistakes.'
-  canonical: 'https://www.machine-knives.net/maintenance-end-of-life-replacement/'
+  canonical: 'https://www.industrial-knives.net/maintenance-end-of-life-replacement/'
 ---
 
 A knife that is past its design life is a chip waiting to happen. Retiring at the right time prevents the most expensive failure modes (gross fracture, decarburised surface, geometry drift past spec) and frees up re-grind capacity to focus on the knives still in the rotation.
@@ -114,8 +114,8 @@ For industrial knife retirement:
 
 For the broader maintenance framework, see [Maintenance: how to extend slitter life](/maintenance-slitting-blade-life/) and [Preventive maintenance schedule](/maintenance-preventive-schedule/).
 
-For a written retirement protocol for your line, send the knife inventory, current chip event rate, current re-grind count distribution and current scrap rate to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Retirement protocol, decision tree, and tracking template within one business day.
+For a written retirement protocol for your line, send the knife inventory, current chip event rate, current re-grind count distribution and current scrap rate to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Retirement protocol, decision tree, and tracking template within one business day.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified.*
+*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified.*

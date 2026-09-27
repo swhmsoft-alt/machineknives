@@ -10,10 +10,10 @@ tags:
   - 'tool crib'
   - 'rust prevention'
   - 'edge protection'
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'A knife that is dropped on a concrete floor is a knife with a chipped edge you cannot see until the line trips. Storage and handling SOPs cost almost nothing and prevent the most expensive failure modes — micro-chips, rust, geometry drift — before they reach the line.'
-  canonical: 'https://www.machine-knives.net/maintenance-storage-handling/'
+  canonical: 'https://www.industrial-knives.net/maintenance-storage-handling/'
 ---
 
 A knife that is dropped on a concrete floor is a knife with a chipped edge you cannot see until the line trips. Storage and handling SOPs cost almost nothing and prevent the most expensive failure modes — micro-chips, rust, geometry drift — before they reach the line.
@@ -103,8 +103,8 @@ For industrial knife storage and handling:
 
 For the broader maintenance framework, see [Maintenance: how to extend slitter life](/maintenance-slitting-blade-life/) and [Preventive maintenance schedule](/maintenance-preventive-schedule/).
 
-For a written storage SOP for your line, send the line layout, the knife inventory, the current failure rate and the current storage room setup to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). SOP, inspection checklist, and storage room layout within one business day.
+For a written storage SOP for your line, send the line layout, the knife inventory, the current failure rate and the current storage room setup to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). SOP, inspection checklist, and storage room layout within one business day.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified.*
+*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified.*

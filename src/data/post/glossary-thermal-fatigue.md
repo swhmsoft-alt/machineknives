@@ -7,10 +7,10 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'thermal fatigue'
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of thermal fatigue in industrial cutting: failure by repeated thermal cycling at the edge, common on high-speed tissue and film slitting without active cooling.'
-  canonical: 'https://www.machine-knives.net/glossary/thermal-fatigue/'
+  canonical: 'https://www.industrial-knives.net/glossary/thermal-fatigue/'
 ---
 
 **undefined** is a specific failure mode where repeated heating and cooling of the cutting edge grows micro-cracks that eventually chip the edge. Thermal fatigue is the dominant failure mode on high-speed tissue and film slitting without active cooling.

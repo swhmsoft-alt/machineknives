@@ -26,7 +26,7 @@ import {
   STANDARDS_REFERENCED,
 } from '~/data/_products-overview';
 
-const SITE_URL = 'https://www.machine-knives.net';
+const SITE_URL = 'https://www.industrial-knives.net';
 const PAGE_URL = `${SITE_URL}/products/`;
 
 const metadata = {
@@ -98,7 +98,7 @@ const jsonLd = JSON.stringify({
     {
       '@type': 'Organization',
       '@id': `${SITE_URL}#organization`,
-      name: 'KAIPU Industrial Blades',
+      name: 'Industrial Knives',
       url: SITE_URL,
       foundingDate: '1998',
       description:
@@ -110,7 +110,7 @@ const jsonLd = JSON.stringify({
       '@type': 'WebSite',
       '@id': `${SITE_URL}#website`,
       url: SITE_URL,
-      name: 'KAIPU Industrial Blades',
+      name: 'Industrial Knives',
       publisher: { '@id': `${SITE_URL}#organization` },
     },
     {
@@ -158,7 +158,7 @@ const jsonLd = JSON.stringify({
     },
     {
       '@type': 'HowTo',
-      name: 'How to order a custom industrial blade from KAIPU',
+      name: 'How to order a custom industrial blade from Industrial Knives',
       totalTime: 'P25D',
       description:
         'Six-step process to take a custom industrial blade from drawing or worn sample through to dispatch, with engineering review, written quotation, drawing approval, manufacture and final inspection.',
@@ -189,7 +189,7 @@ const jsonLd = JSON.stringify({
   <Stats
     id="by-the-numbers"
     title="By the Numbers"
-    subtitle={`KAIPU has engineered industrial blades in-house since 1998. ${activeProductCount} standard SKU${activeProductCount === 1 ? '' : 's'} are currently published across ${familyCount} product families.`}
+    subtitle={`Industrial Knives has engineered industrial blades in-house since 1998. ${activeProductCount} standard SKU${activeProductCount === 1 ? '' : 's'} are currently published across ${familyCount} product families.`}
     stats={OVERVIEW_STATS.map((s) => ({ ...s }))}
   />
 
@@ -197,7 +197,7 @@ const jsonLd = JSON.stringify({
     id="pain-points"
     tagline="Why Buyers Come to Us"
     title="Six Problems Our Customers Were Trying to Solve"
-    subtitle="If any of these sound familiar, you are in the right place. Every KAIPU order is engineering-led, not a SKU match."
+    subtitle="If any of these sound familiar, you are in the right place. Every Industrial Knives order is engineering-led, not a SKU match."
     items={PAIN_POINTS.map((p) => ({ ...p }))}
   />
 
@@ -312,24 +312,24 @@ const jsonLd = JSON.stringify({
     items={HOWTO_STEPS.map((s) => ({ ...s }))}
   />
 
-  <!-- Comparison: KAIPU vs catalog-only suppliers -->
+  <!-- Comparison: Industrial Knives vs catalog-only suppliers -->
   <section id="comparison" class="mx-auto max-w-7xl px-4 md:px-6 py-12 md:py-16 scroll-mt-[72px]">
     <div class="mb-8">
       <p class="text-sm font-semibold uppercase tracking-widest text-primary">Comparison</p>
-      <h2 class="mt-2 text-3xl md:text-4xl font-bold font-heading">KAIPU vs Catalog-Only Suppliers</h2>
+      <h2 class="mt-2 text-3xl md:text-4xl font-bold font-heading">Industrial Knives vs Catalog-Only Suppliers</h2>
       <p class="mt-3 max-w-3xl text-muted">
-        Seven criteria that distinguish an engineering-led manufacturer from a SKU drop-shipper. Source for every KAIPU
+        Seven criteria that distinguish an engineering-led manufacturer from a SKU drop-shipper. Source for every Industrial Knives
         line is our ISO 9001 quality manual and our batch paperwork.
       </p>
     </div>
 
     <div class="overflow-x-auto rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm">
       <table class="w-full text-left text-sm">
-        <caption class="sr-only">Side-by-side comparison of KAIPU and catalog-only blade suppliers.</caption>
+        <caption class="sr-only">Side-by-side comparison of Industrial Knives and catalog-only blade suppliers.</caption>
         <thead>
           <tr class="border-b border-slate-300 dark:border-slate-600">
             <th scope="col" class="px-4 py-3 font-semibold">Criterion</th>
-            <th scope="col" class="px-4 py-3 font-semibold text-primary">KAIPU</th>
+            <th scope="col" class="px-4 py-3 font-semibold text-primary">Industrial Knives</th>
             <th scope="col" class="px-4 py-3 font-semibold text-muted">Catalog-only</th>
           </tr>
         </thead>
@@ -340,7 +340,7 @@ const jsonLd = JSON.stringify({
                 <th scope="row" class="px-4 py-3 font-medium">
                   {row.criterion}
                 </th>
-                <td class="px-4 py-3">{row.kaipu}</td>
+                <td class="px-4 py-3">{row.Industrial Knives}</td>
                 <td class="px-4 py-3 text-muted">{row.catalog}</td>
               </tr>
             ))

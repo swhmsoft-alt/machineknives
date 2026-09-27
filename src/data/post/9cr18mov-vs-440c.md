@@ -13,10 +13,10 @@ tags:
   - corrosion-resistant knife
   - food processing blade
   - medical blade
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
-  description: '9Cr18MoV vs 440C for industrial stainless machine knives. Chemistry, corrosion resistance, achievable hardness, wear, edge retention. Side-by-side comparison from KAIPU engineering.'
-  canonical: 'https://www.machine-knives.net/9cr18mov-vs-440c/'
+  description: '9Cr18MoV vs 440C for industrial stainless machine knives. Chemistry, corrosion resistance, achievable hardness, wear, edge retention. Side-by-side comparison from Industrial Knives engineering.'
+  canonical: 'https://www.industrial-knives.net/9cr18mov-vs-440c/'
 ---
 
 For industrial cutting applications where corrosion resistance matters — food processing, medical device manufacturing, wet-end converting, marine environments — the question is almost always "9Cr18MoV or 440C?" Both are high-carbon martensitic stainless steels hardened to HRC 56–60, both are magnetic, both resist mild organic acids and food residues. But the GB-standard 9Cr18MoV (≈ DIN 1.4112 / X90CrMoV18 / AISI 440B modified) carries 1–1.3 % Mo and 0.1–0.2 % V that 440C does not have, and that small chemistry difference shifts the trade-off in a meaningful direction.
@@ -120,10 +120,10 @@ For a corrosion-resistant industrial machine knife, write the spec as:
 
 Lock the sub-zero treatment to mandatory for 440C and recommended for 9Cr18MoV above HRC 58. For food-contact applications, request a declaration of compliance with regional food-safety codes (FDA 21 CFR, EU 1935/2004, GB 4806.1). *[MISSING SPECIFICATION — confirm regulatory version with your QA team]*
 
-For the broader 5-factor selection method, see [The KAIPU 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/). For a runnable cross-reference table, see [Material Grade Converter](/material-grade-converter/). For a runnable cross-reference of stainless blade grades, see [9Cr18MoV entry in the Materials Encyclopedia](/materials-encyclopedia/9cr18mov/).
+For the broader 5-factor selection method, see [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/). For a runnable cross-reference table, see [Material Grade Converter](/material-grade-converter/). For a runnable cross-reference of stainless blade grades, see [9Cr18MoV entry in the Materials Encyclopedia](/materials-encyclopedia/9cr18mov/).
 
-For a written 9Cr18MoV / 440C quotation, send the part drawing and the food-contact / washdown spec to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
+For a written 9Cr18MoV / 440C quotation, send the part drawing and the food-contact / washdown spec to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.*
+*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.*

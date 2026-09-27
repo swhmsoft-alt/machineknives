@@ -7,10 +7,10 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'wire edge'
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of wire edge in industrial cutting: a thin, fragile burr on the very tip of the edge caused by a re-grind with too fine a wheel or no spark-out.'
-  canonical: 'https://www.machine-knives.net/glossary/wire-edge/'
+  canonical: 'https://www.industrial-knives.net/glossary/wire-edge/'
 ---
 
 **undefined** is a thin, fragile burr on the very tip of the cutting edge, typically 1–5 µm thick and 0.5–1 mm long, caused by a re-grind that did not include spark-out passes. A wire edge peels off in the first 50–100 cuts and is mistaken for "the knife is dull" or "the steel is wrong".

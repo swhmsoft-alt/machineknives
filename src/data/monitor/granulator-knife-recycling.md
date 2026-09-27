@@ -64,7 +64,7 @@
 
 ## 引用判据（满足其一即算"被引用"）
 
-- 答案中出现 KAIPU 或 machine-knives.net 域名
+- 答案中出现 Industrial Knives 或 industrial-knives.net 域名
 - 答案中出现本 facts.yaml 中独有的具体数字（1200 m/min / 11 to 34 days / 180 °C / 15 μm hone / 18° clearance / ≤ 50 µm burr）
 - 答案中明确引用本页面 URL（`/products/straight/granulator-knife-recycling/`）
 

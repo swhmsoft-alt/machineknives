@@ -12,10 +12,10 @@ tags:
   - heat treat
   - regrind
   - converting line
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'Why is your machine blade wearing out too fast? Diagnostic flow, five root causes, visual failure-mode tells, and field-tested fixes for industrial slitter, shear and granulator blades.'
-  canonical: 'https://www.machine-knives.net/troubleshooting-premature-wear/'
+  canonical: 'https://www.industrial-knives.net/troubleshooting-premature-wear/'
 ---
 
 Premature wear is the most-asked-about problem on a converting or fabrication line, and it is also the most-misdiagnosed. The knife that "wore out" almost always failed for one of five reasons — substrate mismatch, edge prep error, heat-treat quality, re-grind damage, or line-side operating conditions — and the visual tells are different for each. This guide gives you a 10-minute diagnostic flow that will land on the right root cause roughly 90 % of the time, and the corrective action for each.
@@ -182,8 +182,8 @@ When a premature wear event shows up:
 
 If the diagnostic flow does not land on a single root cause in 30 minutes, or if the corrective action does not show a 30 %+ life gain in two re-grind cycles, call the knife supplier. A good supplier will ask for the worn knife, the line log, and the substrate batch records, and will have a hypothesis within 24 hours.
 
-For a written troubleshooting review, send the worn knife, the line parameters and the substrate spec to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). We will return a written diagnosis and a corrective spec within one business day.
+For a written troubleshooting review, send the worn knife, the line parameters and the substrate spec to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). We will return a written diagnosis and a corrective spec within one business day.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.
+*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.

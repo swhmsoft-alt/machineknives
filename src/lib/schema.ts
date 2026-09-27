@@ -176,7 +176,7 @@ export function buildFaqPage(qas: ReadonlyArray<{ q: string; a: string }>): Sche
  * headline / author / dateModified layer that AI engines (ChatGPT,
  * Perplexity, Google AIO) extract most reliably.
  *
- * Author defaults to "KAIPU Engineering" Organization — the engineering
+ * Author defaults to "Industrial Knives Engineering" Organization — the engineering
  * team that authors our content. Per E-E-A-T guidance we use Organization
  * as the author entity rather than a Person, because individual engineer
  * names are intentionally not exposed.
@@ -186,8 +186,8 @@ export function buildFaqPage(qas: ReadonlyArray<{ q: string; a: string }>): Sche
  *   headline: 'D2 Bed Knife for Tissue Converting',
  *   description: 'D2 high-carbon ...',
  *   dateModified: '2026-09-26',
- *   author: { name: 'KAIPU Engineering', url: 'https://www.machine-knives.net/about/' },
- *   url: 'https://www.machine-knives.net/products/straight/bed-knife-tissue/',
+ *   author: { name: 'Industrial Knives Engineering', url: 'https://www.industrial-knives.net/about/' },
+ *   url: 'https://www.industrial-knives.net/products/straight/bed-knife-tissue/',
  * })
  */
 export function buildArticle(opts: {
@@ -210,7 +210,7 @@ export function buildArticle(opts: {
         name: opts.author.name,
         ...(opts.author.url ? { url: opts.author.url } : {}),
       }
-    : { '@type': 'Organization', name: 'KAIPU Engineering' };
+    : { '@type': 'Organization', name: 'Industrial Knives Engineering' };
 
   const publisherEntity = opts.publisher
     ? {
@@ -218,7 +218,7 @@ export function buildArticle(opts: {
         name: opts.publisher.name,
         ...(opts.publisher.logoUrl ? { logo: { '@type': 'ImageObject', url: opts.publisher.logoUrl } } : {}),
       }
-    : { '@type': 'Organization', name: 'KAIPU' };
+    : { '@type': 'Organization', name: 'Industrial Knives' };
 
   const entity: SchemaEntity = {
     '@type': 'Article',

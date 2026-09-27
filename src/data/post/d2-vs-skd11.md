@@ -12,10 +12,10 @@ tags:
   - Cr12Mo1V1
   - cold work tool steel
   - industrial knives
-author: 'KAIPU Engineering'
+author: 'Industrial Knives Engineering'
 metadata:
   description: 'D2 vs SKD11 for industrial machine knives. Chemistry, hardenability, dimensional stability, edge retention and sourcing. The honest answer to whether they are interchangeable.'
-  canonical: 'https://www.machine-knives.net/d2-vs-skd11/'
+  canonical: 'https://www.industrial-knives.net/d2-vs-skd11/'
 ---
 
 Sales engineers have a running joke: when a customer asks for "D2 or equivalent", nine times out of ten they mean SKD11, and when they ask for "SKD11 or equivalent" they actually want D2. The reason is that the two grades share a chemistry, a hardness range and an application window — and the international blade market treats them as interchangeable. The honest engineering answer is that they are *almost* the same steel, but the sourcing, heat-treatment behaviour and dimensional consistency differ in ways that matter on a precision blade.
@@ -87,7 +87,7 @@ If your heat-treat supplier cannot show you a tempering chart with a hardness re
 
 ---
 
-## Field cases from the KAIPU shop
+## Field cases from the Industrial Knives shop
 
 **Case 1: Tissue slitter, 320 × 25 × 4 mm.** Customer was getting 11 days of life from generic D2 bed knives. We quoted the same geometry in Japanese-mill SKD11 with vacuum heat treatment to HRC 60–61. Service life went to 34 days at the same line speed. The steel chemistry was within 0.1 % of the original D2 spec — the win came from cleaner stock and a more consistent heat-treat.
 
@@ -115,10 +115,10 @@ Not the right steel for: high-temperature cutting above ~ 400 °C at the edge (M
 
 For an industrial machine knife at HRC 58–62, the choice between D2 and SKD11 is less important than the choice of mill, the heat treatment and the edge preparation. If the steel is from a reputable mill, vacuum heat-treated to a documented tempering chart, and honed to the substrate-appropriate radius, both grades will deliver the same life. For a tight-tolerance drawing, write the spec as "AISI D2 or JIS SKD11, mill-certified, vacuum heat-treated to HRC 60 ± 1, decarburisation ≤ 0.1 mm/side" — and let your supplier cross-reference the two.
 
-For a runnable cross-reference table, see [Material Grade Converter: ASTM / JIS / DIN / GB](/material-grade-converter/). For the broader five-factor methodology, see [The KAIPU 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/).
+For a runnable cross-reference table, see [Material Grade Converter: ASTM / JIS / DIN / GB](/material-grade-converter/). For the broader five-factor methodology, see [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/).
 
-For a written D2 / SKD11 quotation, send the part drawing to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Specification, FOB quote and indicative lead time within one business day.
+For a written D2 / SKD11 quotation, send the part drawing to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and indicative lead time within one business day.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.*
+*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.*
