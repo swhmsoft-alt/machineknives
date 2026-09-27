@@ -1,6 +1,6 @@
 ---
-title: 'undefined — Industry Glossary Entry'
-excerpt: 'Definition of DLC (Diamond-Like Carbon) PVD coating for industrial blades: the lowest-friction coating available, eliminates built-up edge on stainless, aluminium and sticky polymers.'
+title: 'DLC coating — Industry Glossary Entry'
+excerpt: 'Definition of DLC PVD coating for industrial blades: the lowest-friction coating available, eliminates built-up edge on stainless.'
 publishDate: 2026-09-18
 category: 'glossary'
 type: 'glossary'
@@ -11,9 +11,10 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of DLC (Diamond-Like Carbon) PVD coating for industrial blades: the lowest-friction coating available, eliminates built-up edge on stainless, aluminium and sticky polymers.'
   canonical: 'https://www.industrial-knives.net/glossary/dlc-coating/'
+image: '/images/og/glossary-dlc-coating.png'
 ---
 
-**undefined** Diamond-Like Carbon (DLC) is a PVD or PECVD amorphous carbon coating with a coefficient of friction as low as 0.05 against steel. Applied at 150–200 °C (much lower than nitride coatings), 1–3 µm thick. The amorphous carbon structure gives DLC its low friction and chemical inertness, while the sp²/sp³ carbon ratio controls hardness and density.
+**DLC coating** Diamond-Like Carbon (DLC) is a PVD or PECVD amorphous carbon coating with a coefficient of friction as low as 0.05 against steel. Applied at 150–200 °C (much lower than nitride coatings), 1–3 µm thick. The amorphous carbon structure gives DLC its low friction and chemical inertness, while the sp²/sp³ carbon ratio controls hardness and density.
 
 ## When to use
 

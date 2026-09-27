@@ -11,11 +11,9 @@ const metadata = {
     'Shear blades for guillotine and swing-beam cutting of mild steel, stainless and aluminium plate up to 12 mm. HRC 58—2 working hardness, ground and polished to ≤Ra 0.4 µm. 4-edge indexable designs available.',
 };
 
-const heroImageHtml =
-  '<img src="/images/industries/metalworking/shear-blade-action.webp" alt="Shear blade pair in a guillotine cutting steel plate (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+const heroImage = { src: "/images/industries/metalworking/shear-blade-action.webp", alt: "Shear blade pair in a guillotine cutting steel plate" };
 
-const processImageHtml =
-  '<img src="/images/industries/metalworking/clearance-fracture-diagram.webp" alt="Shear blade pair cutting mechanics (placeholder)" class="mx-auto w-full rounded-lg shadow-lg" width="500" height="500" loading="lazy" />';
+const processImage = { src: "/images/industries/metalworking/clearance-fracture-diagram.webp", alt: "Shear blade pair cutting mechanics" };
 
 const features = [
   {
@@ -66,7 +64,7 @@ const features = [
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:mail' },
       { text: 'View Shear Blades', href: '/products/shear/' },
     ]}
-    image={heroImageHtml}
+    image={heroImage}
   />
 
   <Content
@@ -99,7 +97,7 @@ const features = [
         icon: 'tabler:gauge',
       },
     ]}
-    image={processImageHtml}
+    image={processImage}
   />
 
   <Features

@@ -1,6 +1,6 @@
 ---
-title: 'AISI M2 High-Speed Steel — Materials Encyclopedia Entry'
-excerpt: 'AISI M2 is the workhorse high-speed steel (HSS) of the converting and slitting industry. Molybdenum-tungsten-vanadium tool steel, hardened to HRC 62–65, retains hardness at 500–600 °C.'
+title: 'AISI M2 High-Speed Steel: Hot hardn'
+excerpt: 'AISI M2 is the workhorse high-speed steel of the converting and slitting industry. Molybdenum-tungsten-vanadium tool steel, hardened to HRC 62–65.'
 publishDate: 2026-09-18
 category: 'materials-encyclopedia'
 type: 'glossary'
@@ -14,6 +14,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'AISI M2 high-speed steel — chemistry, hardness, heat treatment, applications and cross-reference. The workhorse HSS grade for industrial slitter and shear blades.'
   canonical: 'https://www.industrial-knives.net/materials-encyclopedia/m2-hss/'
+image: '/images/og/materials-encyclopedia-m2-hss.png'
 ---
 
 AISI M2 (UNS T11302) is the most widely used molybdenum-tungsten high-speed steel for industrial cutting tools and blades. It is the default HSS grade for slitting, shearing and converting blades that need to retain hardness at elevated temperatures.

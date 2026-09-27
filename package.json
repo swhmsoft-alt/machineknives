@@ -11,10 +11,10 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "node scripts/prebuild-images.mjs && astro build && node scripts/postbuild.js && node scripts/build-llms-full.mjs && node scripts/build-okf.mjs && node scripts/audit-schema-strict.mjs && node scripts/check-unicode.mjs",
+    "build": "node scripts/prebuild-images.mjs && node scripts/og-image-generator.mjs && astro build && node scripts/postbuild.js && node scripts/build-llms-full.mjs && node scripts/build-okf.mjs && node scripts/audit-schema-strict.mjs && node scripts/check-frontmatter-lint.mjs && node scripts/check-unicode.mjs",
     "preview": "astro preview",
     "astro": "astro",
-    "check": "npm run check:astro && npm run check:eslint && npm run check:prettier && node scripts/check-unicode.mjs",
+    "check": "npm run check:astro && npm run check:eslint && npm run check:prettier && node scripts/check-frontmatter-lint.mjs && node scripts/check-unicode.mjs",
     "check:astro": "astro check",
     "check:eslint": "eslint .",
     "check:prettier": "prettier --check .",

@@ -1,6 +1,6 @@
 ---
-title: 'How to Choose a Shear Blade for Plate Steel (Hot Rolling Mill)'
-excerpt: 'Plate shear blades see impact, work-hardening substrate and variable stock thickness. The grade, hardness and chamfer choice drive a 10× difference in service life between a mill-spec blade and a generic one. This guide covers carbon steel, stainless, high-strength and abrasion-resistant plate.'
+title: 'How to Choose a Shear Blade for'
+excerpt: 'Plate shear blades see impact, work-hardening substrate and variable stock thickness. The grade, hardness and chamfer choice drive a 10× difference in service.'
 publishDate: 2026-09-18
 category: 'selection-guide'
 type: 'article'
@@ -16,6 +16,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'How to choose a shear blade for plate steel in hot rolling mill and service centre applications. Substrate by family, grade and chamfer selection, blade gap, field cases.'
   canonical: 'https://www.industrial-knives.net/selection-guide-shear-blade-plate-steel/'
+image: '/images/og/selection-guide-shear-blade-plate-steel.png'
 ---
 
 Plate shear blades are the highest-impact industrial cutting tool in routine use. They see a single, hard cut per stroke on a plate that can be 6–25 mm thick, often work-hardened from prior rolling, often with a hard scale on the surface. Get the grade, the chamfer, the clearance or the gap wrong, and the blade chips inside 1,000 cycles. Get them right, and a blade survives 30,000+ cycles.

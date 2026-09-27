@@ -1,6 +1,6 @@
 ---
-title: 'YG6X vs YG8 Tungsten Carbide: Which Grade for Your Industrial Blade?'
-excerpt: 'YG6X and YG8 are the two most-specified Chinese GB standard tungsten carbide grades for industrial knives. The 2 % cobalt difference looks small but it changes the wear-toughness trade, the impact resistance, and the substrate fit. Here is the engineering comparison.'
+title: 'YG6X vs YG8 Tungsten Carbide: The t'
+excerpt: 'YG6X and YG8 are the two most-specified Chinese GB standard tungsten carbide grades for industrial knives. The 2 % cobalt difference looks small but it changes.'
 publishDate: 2026-09-18
 category: 'material-comparison'
 type: 'article'
@@ -19,6 +19,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'YG6X vs YG8 cemented tungsten carbide for industrial machine knives. Cobalt content, hardness, toughness, wear resistance, ISO 513 classification, substrate fit. Side-by-side comparison from Industrial Knives engineering.'
   canonical: 'https://www.industrial-knives.net/yg6x-vs-yg8-carbide/'
+image: '/images/og/yg6x-vs-yg8-carbide.png'
 ---
 
 Tungsten carbide is a powder-metallurgy composite of tungsten carbide (WC) grains in a cobalt (Co) binder. The single biggest material lever is the cobalt content: more Co = tougher, less wear; less Co = harder, more wear, more brittle. YG6X (6 % Co, fine grain) and YG8 (8 % Co, medium grain) are the two most-specified Chinese GB standard carbide grades for industrial knives. They sit in the same K-series (machining of cast iron, non-ferrous metals, non-metallic materials) but in different ISO 513 sub-classes: K10/K20 for YG6X, K20/K30 for YG8.

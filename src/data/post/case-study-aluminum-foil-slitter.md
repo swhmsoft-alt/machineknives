@@ -1,6 +1,6 @@
 ---
-title: 'Case Study: Aluminium Foil Slitter Blade Upgrade in Vietnam'
-excerpt: 'A Vietnamese converter slitting 30 µm aluminium foil at 400 m/min was getting 5 days from a D2 slitter. The fix was a M2 HSS slitter with a ta-C coating. 18 days. The case study walks through the audit, the trial, the result, and the cost of welding.'
+title: 'Case Study: Aluminum Foil Slitter'
+excerpt: 'A Vietnamese converter slitting 30 µm aluminium foil at 400 m/min was getting 5 days from a D2 slitter. The fix was a M2 HSS slitter with a ta-C coating.'
 publishDate: 2026-09-18
 category: 'case-studies'
 type: 'article'
@@ -17,6 +17,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'A Vietnamese converter slitting 30 µm aluminium foil at 400 m/min was getting 5 days from a D2 slitter. The fix was a M2 HSS slitter with a ta-C coating. 18 days. The case study walks through the audit, the trial, the result, and the cost of welding.'
   canonical: 'https://www.industrial-knives.net/case-study-aluminum-foil-slitter/'
+image: '/images/og/case-study-aluminum-foil-slitter.png'
 ---
 
 In late 2024 our Vietnamese distributor called about a converter slitting 30 µm aluminium household foil at 400 m/min. The customer was getting 5 days from a D2 slitter, with progressive welding — the aluminium was building up on the cutting edge, requiring emergency stops every 4–6 hours for blade cleaning. The line was a 1,200 mm-wide slitter running 24/7, throughput 800 kg/day. Downtime for cleaning was 30 minutes per shift.

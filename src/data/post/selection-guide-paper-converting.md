@@ -1,6 +1,6 @@
 ---
-title: 'How to Choose a Slitting Blade for a Paper Converting Line'
-excerpt: 'Paper slitting looks simple until you account for the substrate GSM, the caliper variation, the trim, the lay-flat tension and the line speed. This guide walks through the substrate map, the steel grade decision, the edge-prep and clearance targets, and the line-side conditions that determine whether your slitter lasts 7 days or 70 days.'
+title: 'How to Choose a Slitting Blade for'
+excerpt: 'Paper slitting looks simple until you account for the substrate GSM, the caliper variation, the trim, the lay-flat tension and the line speed.'
 publishDate: 2026-09-18
 category: 'selection-guide'
 type: 'article'
@@ -15,6 +15,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'How to choose a slitting blade for a paper converting line. Substrate GSM and caliper, steel grade by rewind quality, edge prep, clearance and line-side conditions.'
   canonical: 'https://www.industrial-knives.net/selection-guide-paper-converting/'
+image: '/images/og/selection-guide-paper-converting.png'
 ---
 
 Paper slitting is the highest-volume industrial knife application in the world, and it is also the application where the wrong steel grade is most often mis-specified. The decision is not "D2 or M2" — it is a four-axis question: substrate GSM and caliper, line speed, burr target, and re-grind cycle. Get those four right and the steel grade follows.

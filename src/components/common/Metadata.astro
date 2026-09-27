@@ -87,9 +87,22 @@ const mergedTwitter = merge(
     : {}
 );
 
+// ─── Title-template auto-detection (audit F-004) ────────────────────────────
+// If the caller already supplied a title that ends with the configured brand
+// suffix (e.g. "… — Industrial Knives"), skip the template to avoid the
+// doubled "— Industrial Knives — Industrial Knives" pattern that previously
+// truncated several SERP titles (homepage, industries pages, etc.).
+const TEMPLATE_BRAND = (METADATA?.title?.template ?? '%s').replace(/^%s\s*[—\-]\s*/, '').trim();
+const titleAlreadyBranded =
+  !ignoreTitleTemplate &&
+  typeof title === 'string' &&
+  title.length > 0 &&
+  TEMPLATE_BRAND.length > 0 &&
+  title.endsWith(TEMPLATE_BRAND);
+
 const seoProps: SEOProps = {
   title: title || METADATA?.title?.default || '',
-  titleTemplate: ignoreTitleTemplate ? '%s' : METADATA?.title?.template || '%s',
+  titleTemplate: ignoreTitleTemplate || titleAlreadyBranded ? '%s' : METADATA?.title?.template || '%s',
   canonical: canonical,
   noindex:
     typeof robots?.index !== 'undefined'

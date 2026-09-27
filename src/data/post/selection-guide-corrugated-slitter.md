@@ -1,6 +1,6 @@
 ---
-title: 'How to Choose a Slitter Blade for Corrugated Cardboard'
-excerpt: 'Corrugated slitting is one of the most abrasive industrial cutting applications. The substrate is a multi-layer composite of kraft paper + adhesive + flute geometry, running at 200–500 m/min. The wrong blade grade loses 50 % of life. This guide covers single-face, double-face and thin-board slitting, with grade maps and field cases.'
+title: 'How to Choose a Slitter Blade for'
+excerpt: 'Corrugated slitting is one of the most abrasive industrial cutting applications. The substrate is a multi-layer composite of kraft paper + adhesive + flute.'
 publishDate: 2026-09-18
 category: 'selection-guide'
 type: 'article'
@@ -15,6 +15,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Corrugated slitting is one of the most abrasive industrial cutting applications. The substrate is a multi-layer composite of kraft paper + adhesive + flute geometry, running at 200–500 m/min. The wrong blade grade loses 50 % of life. This guide covers single-face, double-face and thin-board slitting, with grade maps and field cases.'
   canonical: 'https://www.industrial-knives.net/selection-guide-corrugated-slitter/'
+image: '/images/og/selection-guide-corrugated-slitter.png'
 ---
 
 Corrugated cardboard is a multi-layer composite — two flat liner sheets bonded to a corrugated medium (the "flute") with starch adhesive. Cutting it cleanly at 200–500 m/min requires a slitter geometry that handles the abrasive liner, the adhesive build-up and the variable flute direction. The wrong blade grade loses 50 % of life to adhesive wear; the right grade (carbide-tipped or full carbide) runs 3–5× longer.

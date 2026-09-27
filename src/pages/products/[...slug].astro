@@ -39,6 +39,7 @@ import {
 } from '~/lib/schema';
 import { getProductFaqs } from '~/data/_product-faqs';
 import { statSync } from 'node:fs';
+import { appendCtaIfMissing } from '~/utils/seo-cta';
 
 export const prerender = true;
 
@@ -113,7 +114,7 @@ export async function getStaticPaths() {
   return paths;
 }
 
-let categoryHeroImageHtml = '';
+let categoryHeroImage = '';
 
 const props = Astro.props as PathProps;
 
@@ -195,7 +196,7 @@ if (props.kind === 'product') {
     categoryPageIcon = meta.icon;
   }
 
-  categoryHeroImageHtml = `<img src="${CATEGORY_HERO_IMAGES[l1]}" alt="${meta.title} — industrial cutting tools" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />`;
+  categoryHeroImage = `<img src="${CATEGORY_HERO_IMAGES[l1]}" alt="${meta.title} — industrial cutting tools" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />`;
 
   categoryBreadcrumb = buildProductCategoryBreadcrumb(l1, subs);
 }
@@ -270,7 +271,7 @@ if (productEntry) {
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:clipboard-text' },
       { text: 'All Categories', href: '/products' },
     ]}
-    image={categoryHeroImageHtml}
+    image={categoryHeroImage}
   />
 
   <section class="mx-auto max-w-7xl px-4 sm:px-6 py-12 md:py-16">
@@ -346,7 +347,7 @@ if (productEntry) {
   </CallToAction>
   </Layout>
 ) : props.kind === 'product' && productEntry && Content ? (
-  <Layout metadata={{ title: `${productEntry.data.title} — Industrial Knives`, description: productEntry.data.excerpt ?? '' }} breadcrumb={productBreadcrumb}>
+  <Layout metadata={{ title: `${productEntry.data.title} — Industrial Knives`, description: appendCtaIfMissing(productEntry.data.excerpt ?? '') }} breadcrumb={productBreadcrumb}>
     <Hero
       tagline={getCategoryMeta(productEntry.data.category).label}
       title={productEntry.data.title}

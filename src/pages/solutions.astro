@@ -13,14 +13,11 @@ const metadata = {
     'Industrial Knives supplies precision machine knives to six core industries since 1998. ISO 9001 certified, D2 / M2 / SKD11 / carbide materials, ASTM A681 / DIN 1.2379 / JIS SKD11 grades, in-house heat treatment and PVD coating. Lead time typically 15–25 business days.',
 };
 
-const heroImageHtml =
-  '<img src="/images/solutions/industry-applications-overview.webp" alt="Six industry applications served by Industrial Knives (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+const heroImage = { src: "/images/solutions/industry-applications-overview.webp", alt: "Six industry applications served by Industrial Knives" };
 
-const stepsMaterialImageHtml =
-  '<img src="/images/solutions/material-families-overview.webp" alt="Six steel families for industrial cutting (placeholder)" class="w-full rounded-md shadow-lg" width="432" height="768" loading="lazy" />';
+const stepsMaterialImage = { src: "/images/solutions/material-families-overview.webp", alt: "Six steel families for industrial cutting" };
 
-const stepsProcessImageHtml =
-  '<img src="/images/solutions/engagement-process-flow.webp" alt="Engagement process — six documented stages from drawing to dispatch (placeholder)" class="w-full rounded-md shadow-lg" width="432" height="768" loading="lazy" />';
+const stepsProcessImage = { src: "/images/solutions/engagement-process-flow.webp", alt: "Engagement process — six documented stages from drawing to dispatch" };
 
 // Page-level JSON-LD: Service schema (the global Layout only injects Service
 // schema on the home page). This fills the gap for /solutions so AI crawlers
@@ -170,7 +167,7 @@ const blogPostingLd = {
       },
       { text: 'Browse Products', href: '/products' },
     ]}
-    image={heroImageHtml}
+    image={heroImage}
   />
 
   {/* ──────────────────────────────────────── Awareness: the problems buyers face before they reach for a supplier ──────────────────────────────────────── */}
@@ -369,7 +366,7 @@ const blogPostingLd = {
     tagline="Material Guide"
     title="Step-by-step: Six Steel Families, Six Edge Behaviours"
     subtitle="Material selection drives edge retention, corrosion behaviour and total cost per cut. We specify deliberately rather than by default."
-    image={stepsMaterialImageHtml}
+    image={stepsMaterialImage}
     items={[
       {
         title: 'Step 1: D2 Tool Steel (1.2379)',
@@ -410,7 +407,7 @@ const blogPostingLd = {
     tagline="Engagement Process"
     title="Step-by-step: From Drawing to Dispatch"
     subtitle="Six documented stages. Every order carries an engineering review before any steel is cut, and a CMM-traceable inspection before any blade ships."
-    image={stepsProcessImageHtml}
+    image={stepsProcessImage}
     items={[
       {
         title: 'Step 1: Drawing or sample submission',

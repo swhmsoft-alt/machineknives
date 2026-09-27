@@ -1,5 +1,5 @@
 ---
-title: 'undefined — Industry Glossary Entry'
+title: 'Point Angle — Industry Glossary Entry'
 excerpt: 'Definition of point angle in industrial cutting: the included angle at the tip of a drill bit, rarely used in slitter and shear blade specification.'
 publishDate: 2026-09-18
 category: 'glossary'
@@ -11,9 +11,10 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of point angle in industrial cutting: the included angle at the tip of a drill bit, rarely used in slitter and shear blade specification.'
   canonical: 'https://www.industrial-knives.net/glossary/point-angle/'
+image: '/images/og/glossary-point-angle.png'
 ---
 
-**undefined** is the included angle at the tip of a drill bit, typically 118°–135° for general-purpose drilling. Point angle is not a parameter on industrial slitter or shear blades, but the term appears in some older blade specifications and is sometimes confused with wedge angle.
+**Point Angle** is the included angle at the tip of a drill bit, typically 118°–135° for general-purpose drilling. Point angle is not a parameter on industrial slitter or shear blades, but the term appears in some older blade specifications and is sometimes confused with wedge angle.
 
 ## Why it is mentioned here
 

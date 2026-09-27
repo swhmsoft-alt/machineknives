@@ -1,5 +1,5 @@
-﻿---
-title: 'Custom Blade —Reverse-Engineered from Sample'
+---
+title: 'Custom Blade —Reverse-Engineered'
 excerpt: 'Custom industrial blade reverse-engineered from your worn sample or drawing, with material and hardness tuned to the application.'
 category: custom
 bladeMaterial: 'Specified per application —D2, SKD11, DC53, M2 HSS, H13, carbide'

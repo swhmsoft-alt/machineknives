@@ -1,6 +1,6 @@
 ---
-title: 'Case Study: Circular Blades for High-Precision Thin Material in Poland'
-excerpt: 'A Polish converter cutting 12 µm BOPP film at 600 m/min was burning through 4 D2 slitters per week. The fix was a 2-week field audit, a steel-grade change, an edge-prep change, and a coolant-nozzle relocation. This case study walks through the diagnostic, the trial, and the result — a 6× service life improvement that paid back the entire project cost in 11 weeks.'
+title: 'Case Study: Circular Blades Poland'
+excerpt: 'A Polish converter cutting 12 µm BOPP film at 600 m/min was burning through 4 D2 slitters per week. The fix was a 2-week field audit, a steel-grade change.'
 publishDate: 2026-09-18
 category: 'case-studies'
 type: 'article'
@@ -18,6 +18,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Field case study: high-precision circular blades for 12 µm BOPP film at a Polish converter. From 4 knives/week to 1 knife every 6 weeks — diagnostic, trial, and result.'
   canonical: 'https://www.industrial-knives.net/case-study-circular-blades-poland/'
+image: '/images/og/case-study-circular-blades-poland.png'
 ---
 
 In early 2025 our distribution partner in Łódź, Poland, called us about a converter running 12 µm biaxially-oriented polypropylene (BOPP) film at 600 m/min. The customer was replacing the top slitter knife every 6–7 days, burning through four D2 blades per month on a single line. The line was producing 24/6, and the cost of the knives (€380 each, 2024 prices) was dwarfed by the lost production during re-grinds. This post walks through the two-week field audit, the trial, the change-out, and the result — a 6× life improvement that paid back the entire project cost in 11 weeks.

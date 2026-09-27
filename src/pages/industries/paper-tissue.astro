@@ -11,11 +11,9 @@ const metadata = {
     'Long-life bed knives and top blades for tissue converting lines at 600—,400 m/min. D2 / M2 HSS / SKD11 with optimised cutting angles to reduce dust and extend service interval. Validated with major OEMs.',
 };
 
-const heroImageHtml =
-  '<img src="/images/industries/paper-tissue/tissue-line-overview.webp" alt="Bed knife and top blade pair on a tissue converting line (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+const heroImage = { src: "/images/industries/paper-tissue/tissue-line-overview.webp", alt: "Bed knife and top blade pair on a tissue converting line" };
 
-const processImageHtml =
-  '<img src="/images/industries/paper-tissue/bed-knife-detail.webp" alt="Tissue bed-knife and top-blade cutting mechanics (placeholder)" class="mx-auto w-full rounded-lg shadow-lg" width="500" height="500" loading="lazy" />';
+const processImage = { src: "/images/industries/paper-tissue/bed-knife-detail.webp", alt: "Tissue bed-knife and top-blade cutting mechanics" };
 
 const features = [
   {
@@ -66,7 +64,7 @@ const features = [
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:mail' },
       { text: 'View Straight Blades', href: '/products/straight/' },
     ]}
-    image={heroImageHtml}
+    image={heroImage}
   />
 
   <Content
@@ -99,7 +97,7 @@ const features = [
         icon: 'tabler:certificate',
       },
     ]}
-    image={processImageHtml}
+    image={processImage}
   />
 
   <Features

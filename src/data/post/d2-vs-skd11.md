@@ -1,6 +1,6 @@
 ---
-title: 'D2 vs SKD11: Are They Really the Same Steel?'
-excerpt: 'AISI D2 and JIS SKD11 are the most-quoted cold-work tool steels in industrial blade manufacturing. They share a spec sheet — but the heat treatment, dimensional consistency and field performance are not identical. Here is the engineering comparison.'
+title: 'D2 vs SKD11: Are They the Same Steel?'
+excerpt: 'AISI D2 and JIS SKD11 are the most-quoted cold-work tool steels in industrial blade manufacturing. They share a spec sheet — but the heat treatment.'
 publishDate: 2026-09-18
 category: 'material-comparison'
 type: 'article'
@@ -16,6 +16,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'D2 vs SKD11 for industrial machine knives. Chemistry, hardenability, dimensional stability, edge retention and sourcing. The honest answer to whether they are interchangeable.'
   canonical: 'https://www.industrial-knives.net/d2-vs-skd11/'
+image: '/images/og/d2-vs-skd11.png'
 ---
 
 Sales engineers have a running joke: when a customer asks for "D2 or equivalent", nine times out of ten they mean SKD11, and when they ask for "SKD11 or equivalent" they actually want D2. The reason is that the two grades share a chemistry, a hardness range and an application window — and the international blade market treats them as interchangeable. The honest engineering answer is that they are *almost* the same steel, but the sourcing, heat-treatment behaviour and dimensional consistency differ in ways that matter on a precision blade.

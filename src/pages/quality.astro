@@ -21,14 +21,11 @@ const metadata = {
     'Industrial Knives quality system: ISO 9001:2015 since 2001, 5-stage quality gate, HEXAGON Global S CMM, hardness mapping per Rockwell C, EN 10204 3.1 mill certificates, PPAP / ISIR on request, Cpk ≥ 1.33 audited quarterly.',
 };
 
-const heroImageHtml =
-  '<img src="/images/quality/cmm-inspection-lab.webp" alt="Industrial Knives CMM inspection lab and quality documentation (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+const heroImage = { src: "/images/quality/cmm-inspection-lab.webp", alt: "Industrial Knives CMM inspection lab and quality documentation" };
 
-const inspectionLabImageHtml =
-  '<img src="/images/quality/instrument-overview.svg" alt="Inspection lab —CMM, optical comparator, hardness tester (placeholder)" class="mx-auto w-full rounded-lg shadow-lg" width="500" height="500" loading="lazy" />';
+const inspectionLabImage = { src: "/images/quality/instrument-overview.svg", alt: "Inspection lab —CMM, optical comparator, hardness tester" };
 
-const standardsImageHtml =
-  '<img src="/images/quality/standards-display.webp" alt="Standards referenced —ISO 9001, EN 10204 3.1, ASTM A681 (placeholder)" class="mx-auto w-full rounded-lg shadow-lg" width="500" height="500" loading="lazy" />';
+const standardsImage = { src: "/images/quality/standards-display.webp", alt: "Standards referenced —ISO 9001, EN 10204 3.1, ASTM A681" };
 
 const publishedDate = '2026-01-20';
 const lastUpdated = '2026-09-12';
@@ -270,7 +267,7 @@ const faqLd = {
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:clipboard-text' },
       { text: 'View Services', href: '/services' },
     ]}
-    image={heroImageHtml}
+    image={heroImage}
   />
 
   <!-- 2. AWARENESS STRIP (yearsInBusiness / specificMetrics / uniqueDataPoint) -->
@@ -335,7 +332,7 @@ const faqLd = {
         icon: 'tabler:ruler-measure',
       },
     ]}
-    image={standardsImageHtml}
+    image={standardsImage}
   />
 
   <!-- 4. INSPECTION CAPABILITIES -->
@@ -346,7 +343,7 @@ const faqLd = {
     title="Six Instruments, Calibrated Daily"
     subtitle="A short tour of the equipment that decides whether a blade ships or stays on the bench."
     items={inspectionItems}
-    image={inspectionLabImageHtml}
+    image={inspectionLabImage}
   />
 
   <!-- 5. 5-STAGE QUALITY GATE -->

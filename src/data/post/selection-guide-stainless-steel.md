@@ -1,6 +1,6 @@
 ---
-title: 'How to Choose an Industrial Blade for Stainless Steel'
-excerpt: 'Stainless steel work-hardens under the cut, and the wrong blade grade will see service life drop by 3–5×. This selection guide walks through the substrate family, the right steel grade, the right edge prep, and the heat-treat spec for cutting 304, 316, 430 and 17-4PH.'
+title: 'How to Choose an Industrial Blade'
+excerpt: 'Stainless steel work-hardens under the cut, and the wrong blade grade will see service life drop by 3–5×. This selection guide walks through the substrate.'
 publishDate: 2026-09-18
 category: 'selection-guide'
 type: 'article'
@@ -18,6 +18,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'How to choose an industrial machine knife for cutting stainless steel. Substrate family, steel grade, hardness target, edge prep, and operating speed — with grade recommendations for 304, 316, 430 and 17-4PH.'
   canonical: 'https://www.industrial-knives.net/selection-guide-stainless-steel/'
+image: '/images/og/selection-guide-stainless-steel.png'
 ---
 
 Stainless steel is the worst-case substrate for an industrial blade: it work-hardens at the cut, the austenitic grades gall to the tool, and the wrong blade grade loses its edge in a single shift. The good news is that the selection is a five-question decision, and once you have answered them you can write a specification that any competent supplier can quote. This guide walks through the five questions, the substrate-by-substrate grade map, and the field cases we have on file from the Industrial Knives shop.

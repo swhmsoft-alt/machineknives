@@ -1,5 +1,5 @@
 ---
-title: 'undefined — Industry Glossary Entry'
+title: 'Relief — Industry Glossary Entry'
 excerpt: 'Definition of relief in industrial cutting: the surface behind the cutting edge that prevents the body of the knife from rubbing on the cut surface.'
 publishDate: 2026-09-18
 category: 'glossary'
@@ -11,9 +11,10 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of relief in industrial cutting: the surface behind the cutting edge that prevents the body of the knife from rubbing on the cut surface.'
   canonical: 'https://www.industrial-knives.net/glossary/relief/'
+image: '/images/og/glossary-relief.png'
 ---
 
-**undefined** is the surface behind the cutting edge that prevents the body of the knife from rubbing on the freshly cut substrate. The relief is the combination of the hone, the primary bevel, the secondary bevel (if any), the land (if any), and the main clearance face of the knife.
+**Relief** is the surface behind the cutting edge that prevents the body of the knife from rubbing on the freshly cut substrate. The relief is the combination of the hone, the primary bevel, the secondary bevel (if any), the land (if any), and the main clearance face of the knife.
 
 ## Insufficient relief — what happens
 

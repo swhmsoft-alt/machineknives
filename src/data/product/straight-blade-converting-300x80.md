@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Straight Converting Blade —300 × 80 mm'
 excerpt: 'Top blade for pouch-making and label stock converting, hardened tool steel, sharpened to specification.'
 category: straight

@@ -1,5 +1,5 @@
 ---
-title: 'D2 Bed Knife for Tissue Converting —HRC 60, 18° Clearance Angle'
+title: 'D2 Bed Knife HRC 60 for Tissue'
 excerpt: 'D2 high-carbon high-chromium cold-work tool steel bed knife for paper and tissue converting lines. HRC 60, 15 μm micro-hone, 18° clearance angle, ISO 9001:2015 material traceability. Documented 11 to 34-day service life at 1200 m/min on 4-ply tissue.'
 category: straight
 subcategories: []

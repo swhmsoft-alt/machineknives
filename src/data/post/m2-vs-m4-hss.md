@@ -1,6 +1,6 @@
 ---
-title: 'M2 vs M4 HSS: Which High-Speed Steel for Your Industrial Blade?'
-excerpt: 'AISI M2 is the workhorse high-speed steel of the converting industry. AISI M4 is its higher-vanadium cousin. The 1 % V difference looks small on a chemistry sheet but it changes how the knife cuts, how it grinds, and how long it lasts. Here is the engineering comparison.'
+title: 'M2 vs M4 HSS: Which to Choose?'
+excerpt: 'AISI M2 is the workhorse high-speed steel of the converting industry. AISI M4 is its higher-vanadium cousin. The 1 % V difference looks small on a chemistry.'
 publishDate: 2026-09-18
 category: 'material-comparison'
 type: 'article'
@@ -18,6 +18,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'M2 vs M4 high-speed steel for industrial machine knives. Chemistry, hot hardness, wear resistance, grindability, cost. Side-by-side comparison with field guidance from Industrial Knives engineering.'
   canonical: 'https://www.industrial-knives.net/m2-vs-m4-hss/'
+image: '/images/og/m2-vs-m4-hss.png'
 ---
 
 M2 is the workhorse. It has been the dominant high-speed steel for slitting, sheeting and converting blades for 60 years. M4 is its higher-vanadium cousin — the chemistry sheet shows a 1 % bump in V, but that single number changes the wear behaviour, the grindability, and the line economics. Both are excellent. The right answer depends on your substrate, your edge geometry, and how much you value re-grind cycle time.

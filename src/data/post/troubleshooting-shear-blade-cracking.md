@@ -1,6 +1,6 @@
 ---
-title: 'Why Your Shear Blade Keeps Cracking at the Edge'
-excerpt: 'A plate shear blade that cracks at the edge is almost always one of four things: chamfer too small, hardness too high, blade gap wrong, or plate out of spec. This article walks through the diagnostic and the fix for each, with a field case for stainless, mild and AR plate.'
+title: 'Why Your Shear Blade Keeps: The fou'
+excerpt: 'A plate shear blade that cracks at the edge is almost always one of four things: chamfer too small, hardness too high, blade gap wrong, or plate out of spec.'
 publishDate: 2026-09-18
 category: 'troubleshooting'
 type: 'article'
@@ -15,6 +15,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Why a plate shear blade keeps cracking at the edge. Four root causes, the diagnostic flow, the fix for each, and field cases for stainless, mild steel and AR plate shearing.'
   canonical: 'https://www.industrial-knives.net/troubleshooting-shear-blade-cracking/'
+image: '/images/og/troubleshooting-shear-blade-cracking.png'
 ---
 
 A plate shear blade that cracks at the edge is one of the most expensive failures in industrial cutting — a single crack can scrap a 600 mm blade worth €800–2,000, and the shear is out of service for the changeover. The four root causes are predictable, and each has a different fix. This article walks through the diagnostic and the field guidance for each.

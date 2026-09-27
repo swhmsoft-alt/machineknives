@@ -1,6 +1,6 @@
 ---
 title: 'GB 6CrW2Si Hot-Work Tool Steel'
-excerpt: 'Materials encyclopedia entry for 6CrW2Si.'
+excerpt: 'GB 6CrW2Si Hot-Work Tool Steel. GB 6CrW2Si Hot-Work Tool Steel. Chemistry, hardness, heat treatment, applications, cross-reference.'
 publishDate: 2026-09-18
 category: 'materials-encyclopedia'
 type: 'glossary'
@@ -14,6 +14,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'GB 6CrW2Si Hot-Work Tool Steel. Chemistry, hardness, heat treatment, applications, cross-reference.'
   canonical: 'https://www.industrial-knives.net/materials-encyclopedia/6crw2si/'
+image: '/images/og/6crw2si.png'
 ---
 
 GB 6CrW2Si Hot-Work Tool Steel is a reference entry for industrial cutting tools and blades. The composition, hardness, heat treatment and application guidance are summarised below for engineering reference.

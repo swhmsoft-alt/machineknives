@@ -1,6 +1,6 @@
 ---
-title: 'The Industrial Knives 5-Factor Blade Selection Framework — How to Specify the Right Industrial Knife in 30 Minutes'
-excerpt: 'A structured method our engineers use to match substrate, geometry, hardness target, edge preparation and operating speed to a production line — without second-guessing the steel grade.'
+title: 'The Industrial Knives 5-Factor'
+excerpt: 'A structured method our engineers use to match substrate, geometry, hardness target, edge preparation and operating speed to a production line — without.'
 publishDate: 2026-09-11
 updateDate: 2026-09-11
 category: 'Engineering'
@@ -18,6 +18,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'The Industrial Knives 5-Factor Blade Selection Framework: a 30-minute method for specifying industrial machine knives — substrate, geometry, hardness, edge prep, operating speed. Backed by 25+ years of converting, recycling and metalworking line experience.'
   canonical: 'https://www.industrial-knives.net/kaipu-5-factor-blade-selection-framework/'
+image: '/images/og/kaipu-5-factor-blade-selection-framework.png'
 ---
 
 Most blade selection is guesswork dressed up as experience. A buyer sends a part number, a competitor cross-reference, or "we use D2"; the supplier quotes it; the line runs; three weeks later the operator is on the phone again because the edge wears twice as fast as promised.

@@ -1,6 +1,6 @@
 ---
-title: 'Clearance Angle — Industry Glossary Entry'
-excerpt: 'Definition of clearance angle (also called relief angle) in industrial cutting: the angle of the back face behind the cutting edge, the substrate-by-substrate range, and how it interacts with hone and burr.'
+title: 'Clearance Angle — Glossary Entry'
+excerpt: 'Definition of clearance angle in industrial cutting: the angle of the back face behind the cutting edge, the substrate-by-substrate range.'
 publishDate: 2026-09-18
 category: 'glossary'
 type: 'glossary'
@@ -14,6 +14,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Industrial blade clearance angle — definition, the substrate-by-substrate range, the relationship to hone and burr, and how to set clearance on slitter, shear and granulator blades.'
   canonical: 'https://www.industrial-knives.net/glossary/clearance-angle/'
+image: '/images/og/glossary-clearance-angle.png'
 ---
 
 **Clearance angle** (also: *relief angle*, *back angle*) is the angle of the back face of an industrial cutting edge, measured from a line perpendicular to the cut direction to the back face of the knife. The clearance angle lets the cut substrate separate from the knife after the cut, and it is the second-most-important edge-geometry parameter after hone.

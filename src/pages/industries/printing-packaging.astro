@@ -11,11 +11,9 @@ const metadata = {
     'Precision slitting, sheeting and rewinding blades for printing and packaging lines. Paper 40—00 gsm, BOPP/PET film 12—00 µm, alu-foil 6—0 µm. D2 / SKD11 per ASTM A681 / JIS G4404. Tight burr control protects printed surfaces.',
 };
 
-const heroImageHtml =
-  '<img src="/images/industries/printing-packaging/slitter-line-overview.webp" alt="Slitter blades on a printing and packaging converting line (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+const heroImage = { src: "/images/industries/printing-packaging/slitter-line-overview.webp", alt: "Slitter blades on a printing and packaging converting line" };
 
-const processImageHtml =
-  '<img src="/images/industries/printing-packaging/edge-prep-detail.webp" alt="Printing slitting edge prep science (placeholder)" class="mx-auto w-full rounded-lg shadow-lg" width="500" height="500" loading="lazy" />';
+const processImage = { src: "/images/industries/printing-packaging/edge-prep-detail.webp", alt: "Printing slitting edge prep science" };
 
 const features = [
   {
@@ -66,7 +64,7 @@ const features = [
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:mail' },
       { text: 'View Circular Blades', href: '/products/circular/' },
     ]}
-    image={heroImageHtml}
+    image={heroImage}
   />
 
   <Content
@@ -99,7 +97,7 @@ const features = [
         icon: 'tabler:rotate-clockwise',
       },
     ]}
-    image={processImageHtml}
+    image={processImage}
   />
 
   <Features

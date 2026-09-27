@@ -1,6 +1,6 @@
 ---
-title: 'AISI 440C Stainless Steel — Materials Encyclopedia Entry'
-excerpt: 'AISI 440C is the standard martensitic stainless steel for industrial cutting tools, bearings and food-contact blades. High-carbon, 17 % Cr, hardened to HRC 58–60. Cross-reference to 9Cr18MoV, 1.4125, 11Cr17.'
+title: 'AISI 440C Stainless Steel: Lower to'
+excerpt: 'AISI 440C is the standard martensitic stainless steel for industrial cutting tools, bearings and food-contact blades. High-carbon, 17 % Cr.'
 publishDate: 2026-09-18
 category: 'materials-encyclopedia'
 type: 'glossary'
@@ -15,6 +15,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'AISI 440C martensitic stainless steel — chemistry, hardness, heat treatment, applications and cross-reference. The reference entry for food-contact and corrosion-resistant industrial blades.'
   canonical: 'https://www.industrial-knives.net/materials-encyclopedia/440c/'
+image: '/images/og/materials-encyclopedia-440c.png'
 ---
 
 AISI 440C (UNS S44004) is the highest-carbon standard martensitic stainless steel, hardened by a population of large M₂₃C₆ primary carbides in a tempered martensite matrix. It is the default grade for industrial cutting tools that need corrosion resistance with high achievable hardness.

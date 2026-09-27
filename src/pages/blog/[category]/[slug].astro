@@ -32,6 +32,7 @@ import type { MetaData } from '~/types';
 import { buildBlogPostBreadcrumb, type BreadcrumbItem } from '~/utils/breadcrumb';
 
 import { getStaticPathsBlogCategoryEntries } from '~/utils/blog';
+import { appendCtaIfMissing } from '~/utils/seo-cta';
 
 export const prerender = true;
 
@@ -122,7 +123,7 @@ const blogPostingLd: Record<string, unknown> | null = postProps
       '@context': 'https://schema.org',
       '@type': 'BlogPosting',
       headline: postProps.post.title,
-      description: postProps.post.excerpt,
+      description: appendCtaIfMissing(postProps.post.metadata?.description ?? postProps.post.excerpt),
       datePublished: postProps.post.publishDate
         ? new Date(postProps.post.publishDate).toISOString()
         : undefined,

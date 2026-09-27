@@ -1,6 +1,6 @@
 ---
-title: 'Burr Growth Diagnosis: Why Your Slitter Knife Is Producing Increasing Burr'
-excerpt: 'A slitter knife that produces growing burr is almost always one of four things: hone growth from wear, substrate variation, line condition drift, or heat-treat quality. This article walks through the 10-minute diagnostic and the corrective action for each root cause.'
+title: 'Burr Growth Diagnosis: The 10-minut'
+excerpt: 'A slitter knife that produces growing burr is almost always one of four things: hone growth from wear, substrate variation, line condition drift.'
 publishDate: 2026-09-18
 category: 'troubleshooting'
 type: 'article'
@@ -14,6 +14,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'A slitter knife that produces growing burr is almost always one of four things: hone growth from wear, substrate variation, line condition drift, or heat-treat quality. This article walks through the 10-minute diagnostic and the corrective action for each root cause.'
   canonical: 'https://www.industrial-knives.net/troubleshooting-burr-growth/'
+image: '/images/og/troubleshooting-burr-growth.png'
 ---
 
 A slitter knife that produces growing burr is almost always one of four things: hone growth from wear, substrate variation, line condition drift, or heat-treat quality. This article walks through the 10-minute diagnostic and the corrective action for each root cause.

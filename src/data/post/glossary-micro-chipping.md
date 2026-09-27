@@ -1,6 +1,6 @@
 ---
-title: 'undefined — Industry Glossary Entry'
-excerpt: 'Definition of micro-chipping in industrial cutting: loss of small fragments (0.1–2 mm) from the cutting edge, usually a precursor to gross chipping or a wear-rate problem.'
+title: 'Micro Chipping — Glossary Entry'
+excerpt: 'Definition of micro-chipping in industrial cutting: loss of small fragments from the cutting edge, usually a precursor to gross chipping or a wear-rate problem.'
 publishDate: 2026-09-18
 category: 'glossary'
 type: 'glossary'
@@ -11,9 +11,10 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of micro-chipping in industrial cutting: loss of small fragments (0.1–2 mm) from the cutting edge, usually a precursor to gross chipping or a wear-rate problem.'
   canonical: 'https://www.industrial-knives.net/glossary/micro-chipping/'
+image: '/images/og/glossary-micro-chipping.png'
 ---
 
-**undefined** is the loss of small fragments (0.1–2 mm in size) from the cutting edge. Micro-chips are too small to see with the naked eye but visible under 10× magnification. They are the precursor to gross chipping and a sign that one of the four root causes (hone too sharp, hardness too high, impact load, heat-treat defect) is at work.
+**Micro Chipping** is the loss of small fragments (0.1–2 mm in size) from the cutting edge. Micro-chips are too small to see with the naked eye but visible under 10× magnification. They are the precursor to gross chipping and a sign that one of the four root causes (hone too sharp, hardness too high, impact load, heat-treat defect) is at work.
 
 ## How to detect
 

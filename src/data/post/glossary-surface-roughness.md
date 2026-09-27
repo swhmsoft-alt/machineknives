@@ -1,6 +1,6 @@
 ---
-title: 'undefined — Industry Glossary Entry'
-excerpt: 'Definition of surface roughness (Ra) in industrial blade measurement: the arithmetic average of the absolute deviations of the surface profile from the mean, and the typical Ra targets for slitter and shear blades.'
+title: 'Surface Roughness — Glossary Entry'
+excerpt: 'Definition of surface roughness in industrial blade measurement: the arithmetic average of the absolute deviations of the surface profile from the mean.'
 publishDate: 2026-09-18
 category: 'glossary'
 type: 'glossary'
@@ -11,9 +11,10 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of surface roughness (Ra) in industrial blade measurement: the arithmetic average of the absolute deviations of the surface profile from the mean, and the typical Ra targets for slitter and shear blades.'
   canonical: 'https://www.industrial-knives.net/glossary/surface-roughness/'
+image: '/images/og/glossary-surface-roughness.png'
 ---
 
-**undefined** is the arithmetic average of the absolute deviations of the surface profile from the mean, expressed in micrometres (µm) and denoted Ra. A lower Ra means a smoother surface.
+**Surface Roughness** is the arithmetic average of the absolute deviations of the surface profile from the mean, expressed in micrometres (µm) and denoted Ra. A lower Ra means a smoother surface.
 
 ## Typical Ra by application
 

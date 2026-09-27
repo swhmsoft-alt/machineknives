@@ -1,6 +1,6 @@
 ---
-title: 'undefined — Industry Glossary Entry'
-excerpt: 'Definition of nose radius in industrial cutting: the radius at the corner of a punch, drill, or specialised blade edge.'
+title: 'Nose Radius — Industry Glossary Entry'
+excerpt: 'Nose Radius. Definition of nose radius in industrial cutting: the radius at the corner of a punch, drill, or specialised blade edge.'
 publishDate: 2026-09-18
 category: 'glossary'
 type: 'glossary'
@@ -11,9 +11,10 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of nose radius in industrial cutting: the radius at the corner of a punch, drill, or specialised blade edge.'
   canonical: 'https://www.industrial-knives.net/glossary/nose-radius/'
+image: '/images/og/glossary-nose-radius.png'
 ---
 
-**undefined** is the small radius at the corner of a cutting edge, typically on punches, drills, end mills, and some specialised blade geometries. On a standard slitter or shear blade, the "nose radius" is the same as the hone radius.
+**Nose Radius** is the small radius at the corner of a cutting edge, typically on punches, drills, end mills, and some specialised blade geometries. On a standard slitter or shear blade, the "nose radius" is the same as the hone radius.
 
 ## Nose radius on a slitter
 

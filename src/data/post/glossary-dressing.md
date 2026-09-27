@@ -1,5 +1,5 @@
 ---
-title: 'undefined — Industry Glossary Entry'
+title: 'Dressing — Industry Glossary Entry'
 excerpt: 'Definition of dressing in industrial blade grinding: the process of re-sharpening or re-shaping a grinding wheel to expose fresh abrasive and restore geometry.'
 publishDate: 2026-09-18
 category: 'glossary'
@@ -11,9 +11,10 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of dressing in industrial blade grinding: the process of re-sharpening or re-shaping a grinding wheel to expose fresh abrasive and restore geometry.'
   canonical: 'https://www.industrial-knives.net/glossary/dressing/'
+image: '/images/og/glossary-dressing.png'
 ---
 
-**undefined** is the process of re-sharpening or re-shaping a grinding wheel to expose fresh abrasive grains and restore the wheel's geometry. A glazed or loaded wheel drags, burns the workpiece, and leaves a poor surface.
+**Dressing** is the process of re-sharpening or re-shaping a grinding wheel to expose fresh abrasive grains and restore the wheel's geometry. A glazed or loaded wheel drags, burns the workpiece, and leaves a poor surface.
 
 ## When to dress
 

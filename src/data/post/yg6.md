@@ -1,6 +1,6 @@
 ---
-title: 'GB YG6 Tungsten Carbide (K20)'
-excerpt: 'Materials encyclopedia entry for YG6.'
+title: 'GB YG6 Tungsten Carbide (K20): Lowe'
+excerpt: 'GB YG6 Tungsten Carbide (K20). GB YG6 Tungsten Carbide (K20). Chemistry, hardness, heat treatment, applications, cross-reference.'
 publishDate: 2026-09-18
 category: 'materials-encyclopedia'
 type: 'glossary'
@@ -14,6 +14,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'GB YG6 Tungsten Carbide (K20). Chemistry, hardness, heat treatment, applications, cross-reference.'
   canonical: 'https://www.industrial-knives.net/materials-encyclopedia/yg6/'
+image: '/images/og/yg6.png'
 ---
 
 GB YG6 Tungsten Carbide (K20) is a reference entry for industrial cutting tools and blades. The composition, hardness, heat treatment and application guidance are summarised below for engineering reference.

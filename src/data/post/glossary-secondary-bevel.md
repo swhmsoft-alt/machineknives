@@ -1,5 +1,5 @@
 ---
-title: 'undefined — Industry Glossary Entry'
+title: 'Secondary Bevel — Glossary Entry'
 excerpt: 'Definition of secondary bevel in industrial cutting: a smaller angled face behind the primary bevel, used to add strength without sacrificing hone.'
 publishDate: 2026-09-18
 category: 'glossary'
@@ -11,9 +11,10 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of secondary bevel in industrial cutting: a smaller angled face behind the primary bevel, used to add strength without sacrificing hone.'
   canonical: 'https://www.industrial-knives.net/glossary/secondary-bevel/'
+image: '/images/og/glossary-secondary-bevel.png'
 ---
 
-**undefined** is a smaller angled face behind the primary bevel, used to add edge strength without sacrificing the hone radius. The secondary bevel is typically ground at a smaller clearance angle than the primary, providing a thicker cross-section at the edge.
+**Secondary Bevel** is a smaller angled face behind the primary bevel, used to add edge strength without sacrificing the hone radius. The secondary bevel is typically ground at a smaller clearance angle than the primary, providing a thicker cross-section at the edge.
 
 ## When to use a secondary bevel
 

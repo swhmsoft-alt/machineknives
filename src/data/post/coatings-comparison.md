@@ -1,6 +1,6 @@
 ---
-title: 'PVD Coating Comparison Table for Industrial Blades'
-excerpt: 'TiN, TiCN, CrN, AlCrN, TiAlN, DLC and CrAlN compared across hardness, friction coefficient, max operating temperature, substrate fit and field performance. A side-by-side reference for industrial slitter, shear and granulator blades.'
+title: 'PVD vs CVD Coating Comparison Table'
+excerpt: 'TiN, TiCN, CrN, AlCrN, TiAlN, DLC and CrAlN compared across hardness, friction coefficient, max operating temperature, substrate fit and field performance.'
 publishDate: 2026-09-18
 updateDate: 2026-09-18
 category: 'coatings-comparison'
@@ -21,6 +21,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Side-by-side comparison of PVD coatings for industrial blades. Hardness, friction, max temperature, colour, typical thickness, substrate fit and field guidance for TiN, TiCN, CrN, AlCrN, TiAlN, DLC and CrAlN.'
   canonical: 'https://www.industrial-knives.net/coatings-comparison/'
+image: '/images/og/coatings-comparison.png'
 ---
 
 A PVD (physical vapour deposition) coating is a 1–5 µm ceramic layer on the cutting edge of an industrial blade. The coating reduces friction, increases surface hardness, and — for the right coating on the right substrate — extends knife life by 20–50 %. The wrong coating on the wrong substrate is wasted money, and on impact-loaded applications a coating can accelerate chipping by adding a brittle ceramic layer to a steel that is already on the edge of its toughness window.

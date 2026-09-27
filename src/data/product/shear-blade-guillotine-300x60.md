@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Shear Blade —Guillotine 300 × 60 mm'
 excerpt: 'Industrial shear blade for guillotine and swing-beam cutting of mild and stainless plate up to 12 mm.'
 category: shear

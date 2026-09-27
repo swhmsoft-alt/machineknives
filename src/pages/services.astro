@@ -16,8 +16,7 @@ const metadata = {
     'OEM / ODM blade manufacturing services: custom design, CNC grinding, vacuum heat treatment, PVD coating, precision QA and global logistics.',
 };
 
-const heroImageHtml =
-  '<img src="/images/services/manufacturing-service-operations.webp" alt="Industrial Knives manufacturing service operations (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+const heroImage = { src: "/images/services/manufacturing-service-operations.webp", alt: "Industrial Knives manufacturing service operations" };
 
 const lastUpdated = '2026-09-11';
 const publishedDate = '2026-01-15';
@@ -36,7 +35,7 @@ const siteUrl = 'https://www.industrial-knives.net';
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:clipboard-text' },
       { text: 'View Products', href: '/products' },
     ]}
-    image={heroImageHtml}
+    image={heroImage}
   />
 
   <!-- 2. AWARENESS STRIP (awareness / yearsInBusiness / uniqueDataPoint) -->

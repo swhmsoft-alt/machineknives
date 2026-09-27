@@ -11,11 +11,9 @@ const metadata = {
     'Trim and score blades for pouch-making, label-stock and adhesive-tape converting lines. Repeatable edge profile with run-out controlled to ≤ 0.01 mm on Ø 250 mm blanks. M2 HSS and tungsten carbide available.',
 };
 
-const heroImageHtml =
-  '<img src="/images/industries/converting/trim-score-line-overview.webp" alt="Trim and score blades on a pouch converting line (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+const heroImage = { src: "/images/industries/converting/trim-score-line-overview.webp", alt: "Trim and score blades on a pouch converting line" };
 
-const processImageHtml =
-  '<img src="/images/industries/converting/score-geometry-diagram.webp" alt="Trim and score geometry working principle (placeholder)" class="mx-auto w-full rounded-lg shadow-lg" width="500" height="500" loading="lazy" />';
+const processImage = { src: "/images/industries/converting/score-geometry-diagram.webp", alt: "Trim and score geometry working principle" };
 
 const features = [
   {
@@ -66,7 +64,7 @@ const features = [
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:mail' },
       { text: 'View Serrated Blades', href: '/products/serrated/' },
     ]}
-    image={heroImageHtml}
+    image={heroImage}
   />
 
   <Content
@@ -99,7 +97,7 @@ const features = [
         icon: 'tabler:layout-grid',
       },
     ]}
-    image={processImageHtml}
+    image={processImage}
   />
 
   <Features

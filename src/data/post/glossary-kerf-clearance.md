@@ -1,6 +1,6 @@
 ---
-title: 'undefined — Industry Glossary Entry'
-excerpt: 'Definition of kerf clearance in industrial cutting: the lateral gap between the knife and the substrate after the cut, and why a positive kerf clearance is essential for clean cuts.'
+title: 'Kerf Clearance — Glossary Entry'
+excerpt: 'Definition of kerf clearance in industrial cutting: the lateral gap between the knife and the substrate after the cut, and why a positive kerf clearance is.'
 publishDate: 2026-09-18
 category: 'glossary'
 type: 'glossary'
@@ -11,9 +11,10 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of kerf clearance in industrial cutting: the lateral gap between the knife and the substrate after the cut, and why a positive kerf clearance is essential for clean cuts.'
   canonical: 'https://www.industrial-knives.net/glossary/kerf-clearance/'
+image: '/images/og/glossary-kerf-clearance.png'
 ---
 
-**undefined** is the lateral gap between the cut face of the substrate and the body of the knife after the cut. Positive kerf clearance lets the substrate separate cleanly from the knife; negative kerf clearance (the substrate dragging on the knife body) is the primary cause of burr, drag, and tearing on a slitting line.
+**Kerf Clearance** is the lateral gap between the cut face of the substrate and the body of the knife after the cut. Positive kerf clearance lets the substrate separate cleanly from the knife; negative kerf clearance (the substrate dragging on the knife body) is the primary cause of burr, drag, and tearing on a slitting line.
 
 ## Typical kerf clearance
 

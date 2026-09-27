@@ -1,6 +1,6 @@
 ---
-title: 'undefined — Industry Glossary Entry'
-excerpt: 'Definition of galling in industrial cutting: severe adhesive wear where substrate material welds to the edge, tears off, and re-welds, common on stainless and aluminium cutting without lubrication.'
+title: 'Galling — Industry Glossary Entry'
+excerpt: 'Definition of galling in industrial cutting: severe adhesive wear where substrate material welds to the edge, tears off, and re-welds.'
 publishDate: 2026-09-18
 category: 'glossary'
 type: 'glossary'
@@ -11,9 +11,10 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of galling in industrial cutting: severe adhesive wear where substrate material welds to the edge, tears off, and re-welds, common on stainless and aluminium cutting without lubrication.'
   canonical: 'https://www.industrial-knives.net/glossary/galling/'
+image: '/images/og/glossary-galling.png'
 ---
 
-**undefined** is severe adhesive wear where the substrate material welds to the cutting edge, tears off, and re-welds in a continuous cycle. The cut surface shows deep gouges, the edge is built up with substrate material, and the line speed must be dropped to keep cut quality in spec.
+**Galling** is severe adhesive wear where the substrate material welds to the cutting edge, tears off, and re-welds in a continuous cycle. The cut surface shows deep gouges, the edge is built up with substrate material, and the line speed must be dropped to keep cut quality in spec.
 
 ## Substrates prone to galling
 

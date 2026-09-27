@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Circular Slitting Blade Ø250 mm'
 excerpt: 'D2 tool steel circular knife for paper and film slitting, 250 mm OD, hardened HRC 58±2.'
 category: circular

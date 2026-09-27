@@ -11,11 +11,9 @@ const metadata = {
     'Stainless and tool-steel blades for food slicing, dicing and portioning lines. Washdown-rated surface finish, full material traceability per ISO 9001:2015 §8.5, food-contact compliance documentation supplied.',
 };
 
-const heroImageHtml =
-  '<img src="/images/industries/food-processing/hygienic-line-overview.webp" alt="Stainless steel food slicing blades on a portioning line (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+const heroImage = { src: "/images/industries/food-processing/hygienic-line-overview.webp", alt: "Stainless steel food slicing blades on a portioning line" };
 
-const processImageHtml =
-  '<img src="/images/industries/food-processing/cip-system-diagram.webp" alt="Hygienic food-grade blade design (placeholder)" class="mx-auto w-full rounded-lg shadow-lg" width="500" height="500" loading="lazy" />';
+const processImage = { src: "/images/industries/food-processing/cip-system-diagram.webp", alt: "Hygienic food-grade blade design" };
 
 const features = [
   {
@@ -66,7 +64,7 @@ const features = [
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:mail' },
       { text: 'View Custom Blades', href: '/products/custom/' },
     ]}
-    image={heroImageHtml}
+    image={heroImage}
   />
 
   <Content
@@ -99,7 +97,7 @@ const features = [
         icon: 'tabler:shield-check',
       },
     ]}
-    image={processImageHtml}
+    image={processImage}
   />
 
   <Features

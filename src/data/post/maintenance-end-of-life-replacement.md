@@ -1,6 +1,6 @@
 ---
-title: 'End-of-Life Replacement: When to Retire an Industrial Blade'
-excerpt: 'A knife that is past its design life is a chip waiting to happen. The four retirement criteria, the protocol for retiring and re-purposing, and how to avoid the most common retirement mistakes.'
+title: 'End-of-Life Replacement: The four r'
+excerpt: 'A knife that is past its design life is a chip waiting to happen. The four retirement criteria, the protocol for retiring and re-purposing.'
 publishDate: 2026-09-18
 category: 'maintenance'
 type: 'article'
@@ -14,6 +14,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'A knife that is past its design life is a chip waiting to happen. The four retirement criteria, the protocol for retiring and re-purposing, and how to avoid the most common retirement mistakes.'
   canonical: 'https://www.industrial-knives.net/maintenance-end-of-life-replacement/'
+image: '/images/og/maintenance-end-of-life-replacement.png'
 ---
 
 A knife that is past its design life is a chip waiting to happen. Retiring at the right time prevents the most expensive failure modes (gross fracture, decarburised surface, geometry drift past spec) and frees up re-grind capacity to focus on the knives still in the rotation.

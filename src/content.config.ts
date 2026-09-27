@@ -54,9 +54,14 @@ const postCollection = defineCollection({
     updateDate: z.date().optional(),
     draft: z.boolean().optional(),
 
-    title: z.string(),
-    excerpt: z.string().optional(),
-    image: z.string().optional(),
+    title: z.string().min(8).max(60), // hard cap on raw title; brand suffix brings full to ~30-60
+    excerpt: z
+      .string()
+      .min(80, 'excerpt too short (< 80 chars)')
+      .max(160, 'excerpt too long (Google truncates > 160 chars)'),
+    image: z
+      .string()
+      .regex(/^\/images\/og\/[a-z0-9-]+\.png$/, 'image must point at /images/og/<slug>.png'),
 
     category: z.string().optional(),
     tags: z.array(z.string()).optional(),

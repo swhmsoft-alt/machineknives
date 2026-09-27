@@ -1,6 +1,6 @@
 ---
 title: 'Kerf — Industry Glossary Entry'
-excerpt: 'Definition of kerf in industrial cutting: the width of material removed by the cut, how it is measured, the substrate-by-substrate range, and how it relates to slitter-set-up and material yield.'
+excerpt: 'Definition of kerf in industrial cutting: the width of material removed by the cut, how it is measured, the substrate-by-substrate range.'
 publishDate: 2026-09-18
 category: 'glossary'
 type: 'glossary'
@@ -14,6 +14,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Industrial cutting kerf — definition, how it is measured, the substrate-by-substrate range, and the relationship to slitter knife thickness and material yield.'
   canonical: 'https://www.industrial-knives.net/glossary/kerf/'
+image: '/images/og/glossary-kerf.png'
 ---
 
 **Kerf** is the width of material removed by a single cut, equal to the thickness of the knife at the cut plus any lateral spread of the cut into the substrate. Kerf is a critical parameter on slitting and cut-to-length lines because it directly determines material yield — every millimetre of kerf is a millimetre of substrate that becomes scrap instead of sellable product.

@@ -1,6 +1,6 @@
 ---
-title: 'undefined — Industry Glossary Entry'
-excerpt: 'Definition of infeed in industrial blade grinding: the per-pass depth that the grinding wheel advances into the workpiece, and how infeed affects surface finish, thermal load and grinding time.'
+title: 'Infeed — Industry Glossary Entry'
+excerpt: 'Definition of infeed in industrial blade grinding: the per-pass depth that the grinding wheel advances into the workpiece, and how infeed affects surface.'
 publishDate: 2026-09-18
 category: 'glossary'
 type: 'glossary'
@@ -11,9 +11,10 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of infeed in industrial blade grinding: the per-pass depth that the grinding wheel advances into the workpiece, and how infeed affects surface finish, thermal load and grinding time.'
   canonical: 'https://www.industrial-knives.net/glossary/infeed/'
+image: '/images/og/glossary-infeed.png'
 ---
 
-**undefined** is the per-pass depth that the grinding wheel advances into the workpiece, measured in millimetres (mm) or micrometres (µm) per pass. Infeed is the primary control on grinding time, surface finish, and thermal load on the workpiece.
+**Infeed** is the per-pass depth that the grinding wheel advances into the workpiece, measured in millimetres (mm) or micrometres (µm) per pass. Infeed is the primary control on grinding time, surface finish, and thermal load on the workpiece.
 
 ## Typical infeed by operation
 

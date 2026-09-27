@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Serrated Blade —Cut-to-Length 6—2 TPI'
 excerpt: 'Serrated industrial blade for film, foil and paper, tooth profile selectable, hardened tool steel.'
 category: serrated

@@ -1,6 +1,6 @@
 ---
-title: 'Material Grade Converter: ASTM/AISI · JIS · DIN/EN · GB Steel Cross-Reference'
-excerpt: 'A runnable cross-reference table for cold-work tool steel, high-speed steel, martensitic stainless and carbide grades. Find the equivalent of AISI D2, M2, M4, 440C, 9Cr18MoV, YG6X, YG8 and 30+ other grades across ASTM/AISI, JIS, DIN/EN/W.-Nr., GB, BS, AFNOR, UNI, SS and UNE.'
+title: 'Material Grade Converter: Cold-work'
+excerpt: 'A runnable cross-reference table for cold-work tool steel, high-speed steel, martensitic stainless and carbide grades. Find the equivalent of AISI D2, M2, M4.'
 publishDate: 2026-09-18
 updateDate: 2026-09-18
 category: 'material-grade-converter'
@@ -22,6 +22,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Cross-reference table for industrial blade steel and carbide grades. ASTM/AISI, JIS, DIN/EN/W.-Nr., GB, BS, AFNOR, UNI, SS and UNE equivalents for cold-work, HSS, stainless and tungsten carbide.'
   canonical: 'https://www.industrial-knives.net/material-grade-converter/'
+image: '/images/og/material-grade-converter.png'
 ---
 
 When a European customer asks for "W.-Nr. 1.2379", a Chinese customer asks for "Cr12Mo1V1", and a Japanese customer asks for "SKD11", they are almost always asking for the same steel. The international cross-reference is not perfect — there are subtle chemistry and heat-treat differences between equivalent grades from different national systems — but for industrial blade specification it is accurate enough that a single chemistry target can be quoted against any of the four major national systems.

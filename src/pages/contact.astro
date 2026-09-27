@@ -10,8 +10,7 @@ const metadata = {
     'Send your blade specification, drawing or worn sample. Engineering responds with material grade, hardness, tolerance and lead time within one business day.',
 };
 
-const heroImageHtml =
-  '<img src="/images/contact/engineering-team-drawing.webp" alt="Industrial Knives engineering team reviewing a customer drawing (placeholder)" class="mx-auto rounded-md w-full" width="1024" height="576" loading="eager" />';
+const heroImage = { src: "/images/contact/engineering-team-drawing.webp", alt: "Industrial Knives engineering team reviewing a customer drawing" };
 ---
 
 <Layout metadata={metadata}>
@@ -23,7 +22,7 @@ const heroImageHtml =
       { text: 'Email Directly', href: 'mailto:[email protected]', icon: 'tabler:mail' },
       { text: 'View Products', href: '/products' },
     ]}
-    image={heroImageHtml}
+    image={heroImage}
   />
 
   <Contact

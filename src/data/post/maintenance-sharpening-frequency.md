@@ -1,6 +1,6 @@
 ---
-title: 'Re-sharpening Frequency: When to Re-grind vs When to Replace'
-excerpt: 'The right re-grinding frequency balances knife life, scrap rate, and re-grind cost. Re-grind too often wastes stock; re-grind too late produces scrap. This article gives the frequency rules per knife family and the cost model to pick the right interval.'
+title: 'Re-sharpening Frequency: The three '
+excerpt: 'The right re-grinding frequency balances knife life, scrap rate, and re-grind cost. Re-grind too often wastes stock; re-grind too late produces scrap.'
 publishDate: 2026-09-18
 category: 'maintenance'
 type: 'article'
@@ -14,6 +14,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'The right re-grinding frequency balances knife life, scrap rate, and re-grind cost. Re-grind too often wastes stock; re-grind too late produces scrap. This article gives the frequency rules per knife family and the cost model to pick the right interval.'
   canonical: 'https://www.industrial-knives.net/maintenance-sharpening-frequency/'
+image: '/images/og/maintenance-sharpening-frequency.png'
 ---
 
 The right re-grinding frequency balances knife life, scrap rate, and re-grind cost. Re-grind too often and you waste stock (each re-grind removes 0.05–0.10 mm); re-grind too late and you produce scrap.

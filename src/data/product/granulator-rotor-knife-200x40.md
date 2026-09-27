@@ -1,5 +1,5 @@
-﻿---
-title: 'Granulator Rotor Knife —200 × 40 × 20 mm'
+---
+title: 'Granulator Rotor Knife —200 × 40 ×'
 excerpt: 'Rotor knife for plastics granulators, M2 HSS, hardened to HRC 60±4, bevel re-grindable.'
 category: granulator
 bladeMaterial: 'M2 HSS (1.3343) —alt: D2, tungsten carbide tipped'

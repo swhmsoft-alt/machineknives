@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Circular Slitting Blade Ø250 mm OD'
 excerpt: 'D2 tool steel circular knife for paper and film slitting, 250 mm OD, hardened HRC 58±2. Manufactured for slitter-rewinder lines running 80—00 m/min on paper, BOPP / PET film and aluminium foil.'
 category: circular

@@ -1,0 +1,62 @@
+{
+  "titles": {
+    "trimmed": 0,
+    "smereview": [],
+    "unchanged": 104,
+    "skipped": 0,
+    "expanded": 6
+  },
+  "excerpts": {
+    "replacedPlaceholder": 0,
+    "compressedOverlong": 0,
+    "expandedShort": 0,
+    "smereview": [],
+    "unchanged": 110,
+    "skipped": 0
+  },
+  "filesChanged": [
+    {
+      "file": "src\\data\\post\\case-study-aluminum-foil-slitter.md",
+      "field": "title",
+      "from": "Case Study: The line and the audit",
+      "to": "Case Study: Aluminum Foil Slitter",
+      "reason": "case-study-topic-extracted"
+    },
+    {
+      "file": "src\\data\\post\\case-study-circular-blades-poland.md",
+      "field": "title",
+      "from": "Case Study: The line and the substrate",
+      "to": "Case Study: Circular Blades Poland",
+      "reason": "case-study-topic-extracted"
+    },
+    {
+      "file": "src\\data\\post\\case-study-granulator-rotor-automotive.md",
+      "field": "title",
+      "from": "Case Study: The line and the substrate",
+      "to": "Case Study: Granulator Rotor Automotive",
+      "reason": "case-study-topic-extracted"
+    },
+    {
+      "file": "src\\data\\post\\case-study-pharma-blade-stainless.md",
+      "field": "title",
+      "from": "Case Study: The line and the audit",
+      "to": "Case Study: Pharma Blade Stainless",
+      "reason": "case-study-topic-extracted"
+    },
+    {
+      "file": "src\\data\\post\\case-study-shear-stainless-turkey.md",
+      "field": "title",
+      "from": "Case Study: The line and the substrate",
+      "to": "Case Study: Shear Stainless Turkey",
+      "reason": "case-study-topic-extracted"
+    },
+    {
+      "file": "src\\data\\post\\case-study-textile-nonwoven-slitter.md",
+      "field": "title",
+      "from": "Case Study: The line and the audit",
+      "to": "Case Study: Textile Nonwoven Slitter",
+      "reason": "case-study-topic-extracted"
+    }
+  ],
+  "errors": []
+}

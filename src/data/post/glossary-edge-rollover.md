@@ -1,6 +1,6 @@
 ---
-title: 'undefined — Industry Glossary Entry'
-excerpt: 'Definition of edge rollover in industrial cutting: deformation of the edge where the substrate pushes the steel over instead of cutting it, common on a too-soft knife or a too-sharp edge.'
+title: 'Edge Rollover — Industry Glossary Entry'
+excerpt: 'Definition of edge rollover in industrial cutting: deformation of the edge where the substrate pushes the steel over instead of cutting it.'
 publishDate: 2026-09-18
 category: 'glossary'
 type: 'glossary'
@@ -11,9 +11,10 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of edge rollover in industrial cutting: deformation of the edge where the substrate pushes the steel over instead of cutting it, common on a too-soft knife or a too-sharp edge.'
   canonical: 'https://www.industrial-knives.net/glossary/edge-rollover/'
+image: '/images/og/glossary-edge-rollover.png'
 ---
 
-**undefined** is the deformation of a cutting edge where the substrate pushes the steel over instead of cutting it cleanly. The rolled edge looks like a wire edge that has folded over, usually visible as a bright lip on the back face of the knife.
+**Edge Rollover** is the deformation of a cutting edge where the substrate pushes the steel over instead of cutting it cleanly. The rolled edge looks like a wire edge that has folded over, usually visible as a bright lip on the back face of the knife.
 
 ## Common causes
 
