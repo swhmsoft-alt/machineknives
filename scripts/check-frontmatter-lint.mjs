@@ -20,7 +20,7 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-const ROOT = 'c:/Users/User/Desktop/machineknives/src/data';
+const ROOT = join(process.cwd(), 'src/data');
 const POST_DIR = join(ROOT, 'post');
 const PRODUCT_DIR = join(ROOT, 'product');
 
