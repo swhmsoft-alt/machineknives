@@ -1,0 +1,176 @@
+---
+import { SITE } from 'astrowind:config';
+import { getPermalink } from '~/utils/permalinks';
+import { Icon } from 'astro-icon/components';
+
+const year = new Date().getFullYear();
+
+// Real contact surface — these are the B2B trust anchors. B2B
+// procurement managers look for a physical address, a phone that
+// works, and a LinkedIn they can verify. Items marked
+// [PLACEHOLDER: ...] need filling from the sales / admin team.
+const address = '[PLACEHOLDER: factory address — street, city, country]';
+const phone = '+86 [PLACEHOLDER: intl phone]';
+const phoneHref = 'tel:' + phone.replace(/[^+\d]/g, '');
+const email = 'engineering@kaipu-industrial.com';
+const linkedinHref = '[PLACEHOLDER: LinkedIn company URL]';
+const foundedYear = 1998;
+---
+
+<footer class="lp-footer">
+  <div class="lp-footer-inner">
+    <div class="lp-footer-brand">
+      <span class="lp-footer-name">{SITE?.name}</span>
+      <span class="lp-footer-tag">Manufacturer of precision machine knives · est. {foundedYear}</span>
+    </div>
+
+    <ul class="lp-footer-contact">
+      <li>
+        <Icon name="tabler:map-pin" class="lp-footer-icon" aria-hidden="true" />
+        <span>{address}</span>
+      </li>
+      <li>
+        <Icon name="tabler:phone" class="lp-footer-icon" aria-hidden="true" />
+        <a href={phoneHref}>{phone}</a>
+      </li>
+      <li>
+        <Icon name="tabler:mail" class="lp-footer-icon" aria-hidden="true" />
+        <a href={`mailto:${email}`}>{email}</a>
+      </li>
+      <li>
+        <Icon name="tabler:brand-linkedin" class="lp-footer-icon" aria-hidden="true" />
+        <a href={linkedinHref} rel="noopener noreferrer">LinkedIn</a>
+      </li>
+    </ul>
+
+    <div class="lp-footer-meta">
+      <span>© {year} KAIPU Industrial Blades</span>
+      <span class="lp-footer-sep" aria-hidden="true">·</span>
+      <a class="lp-footer-link" href={getPermalink('/privacy')}>Privacy</a>
+      <span class="lp-footer-sep" aria-hidden="true">·</span>
+      <a class="lp-footer-link" href={getPermalink('/terms')}>Terms</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  /* Trust-first footer: real address, phone, email, LinkedIn. No
+   * mega-menu, no social row, no sitemap. Inherits `bg-page` from
+   * <body> (`.clinerules` §2). */
+
+  .lp-footer {
+    position: relative;
+    width: 100%;
+    border-top: 1px solid var(--aw-color-rule);
+    padding-block: 2.25rem;
+  }
+
+  /* Reserve space at the bottom on mobile so the fixed sticky CTA does
+   * not occlude the legal links. */
+  @media (max-width: 767px) {
+    .lp-footer {
+      padding-bottom: calc(4.5rem + env(safe-area-inset-bottom));
+    }
+  }
+
+  .lp-footer-inner {
+    display: grid;
+    gap: 1.5rem;
+    margin-inline: auto;
+    max-width: 72rem;
+    padding-inline: 1rem;
+    color: var(--aw-color-text-muted);
+  }
+
+  @media (min-width: 768px) {
+    .lp-footer-inner {
+      padding-inline: 1.5rem;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+      align-items: start;
+    }
+
+    .lp-footer-meta {
+      grid-column: 1 / -1;
+    }
+  }
+
+  .lp-footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .lp-footer-name {
+    font-weight: 700;
+    color: var(--aw-color-text-default);
+    font-size: 1rem;
+  }
+
+  .lp-footer-tag {
+    font-size: 0.8125rem;
+    color: var(--aw-color-text-muted);
+  }
+
+  .lp-footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .lp-footer-contact li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .lp-footer-icon {
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+    color: var(--aw-color-primary);
+  }
+
+  .lp-footer-contact a {
+    color: var(--aw-color-text-default);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+
+  .lp-footer-contact a:hover {
+    color: var(--aw-color-primary);
+  }
+
+  .lp-footer-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--aw-color-rule);
+    font-size: 0.8125rem;
+  }
+
+  @media (min-width: 768px) {
+    .lp-footer-meta {
+      justify-content: flex-start;
+    }
+  }
+
+  .lp-footer-sep {
+    opacity: 0.6;
+  }
+
+  .lp-footer-link {
+    color: var(--aw-color-text-muted);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+
+  .lp-footer-link:hover {
+    color: var(--aw-color-graphite);
+  }
+</style>

@@ -1,0 +1,982 @@
+---
+import Layout from '~/layouts/Layout.astro';
+
+import LPHeader from '~/components/widgets/LPHeader.astro';
+import LPFooter from '~/components/widgets/LPFooter.astro';
+import LPStickyCTA from '~/components/widgets/LPStickyCTA.astro';
+
+import Contact from '~/components/widgets/Contact.astro';
+
+// LP-specific metadata. `robots.index: false` + `follow: false` so Google
+// does not crawl / index the page (paid traffic should not dilute organic
+// SEO). The sitemap filter in astro.config.ts additionally keeps this
+// path out of sitemap.xml.
+const metadata = {
+  title: 'Industrial Blades — Quoted in 1 Business Day',
+  description:
+    'Manufacturer of industrial circular, straight, serrated, shear, granulator and custom blades. ISO 9001:2015 since 2001. Send a drawing, sample or written spec — engineering replies within 1 business day.',
+  robots: { index: false, follow: false },
+  ignoreTitleTemplate: true,
+};
+
+// 6 blade families, each described by what it does + where it goes
+// + the spec anchor that earns it a slot. Powers the "Recognition →
+// Qualification" decision step.
+const categories = [
+  {
+    label: 'Circular',
+    href: '/products/circular/',
+    capability: 'Slitting knives for paper, film, foil and tape.',
+    spec: 'OD 60–600 mm · parallelism ≤ 0.01 mm',
+  },
+  {
+    label: 'Straight',
+    href: '/products/straight/',
+    capability: 'Top & bottom blades for slitting, sheeting and converting lines.',
+    spec: 'Length up to 3 m · single or double-bevel',
+  },
+  {
+    label: 'Serrated',
+    href: '/products/serrated/',
+    capability: 'Toothed blades for tear-strips, perforations and cut-to-length.',
+    spec: '6–32 TPI · custom tooth profiles',
+  },
+  {
+    label: 'Shear',
+    href: '/products/shear/',
+    capability: 'Industrial shear blades for guillotine, swing-beam and plate cutting.',
+    spec: 'Up to 12 mm mild / 8 mm SS304',
+  },
+  {
+    label: 'Granulator',
+    href: '/products/granulator/',
+    capability: 'Rotor and stator knives for plastics granulators and shredders.',
+    spec: 'M2 HSS · four-edge reversible',
+  },
+  {
+    label: 'Custom',
+    href: '/products/custom/',
+    capability: 'Reverse-engineered from your sample or drawing.',
+    spec: 'Co-developed geometry, material, tolerance',
+  },
+];
+
+// Spec table content for the "Technical Validation" decision step.
+// 4-column grid: material × hardness × tolerance × process.
+const specRows = [
+  { mat: 'D2 / SKD11 (1.2379)', hrc: '58–62', tol: '±0.01 mm', proc: 'Through-hardened · optional PVD' },
+  { mat: 'DC53', hrc: '60–62', tol: '±0.005 mm', proc: 'Through-hardened + cryo' },
+  { mat: 'M2 HSS · 1.3343', hrc: '62–65', tol: '±0.01 mm', proc: 'Through-hardened' },
+  { mat: 'M4 HSS · 1.3351', hrc: '62–65', tol: '±0.01 mm', proc: 'Through-hardened · abrasion-resistant' },
+  { mat: 'H13 · 1.2344', hrc: '56–58', tol: '±0.02 mm', proc: 'Through-hardened · hot-work' },
+  { mat: '6CrW2Si', hrc: '58–60', tol: '±0.02 mm', proc: 'Through-hardened' },
+  { mat: 'WC-Co (YG6X / YG8X)', hrc: 'n/a', tol: '±0.005 mm', proc: 'Sintered + diamond ground' },
+];
+---
+
+<Layout metadata={metadata}>
+  <LPHeader />
+
+  <main>
+    {
+      /* ============================================================
+       * 1. RECOGNITION — Hero. The buyer lands here because something
+       * on their line is failing. The H1 acknowledges that pain
+       * before naming what we do. The image is the "real company"
+       * signal; placeholder until the asset is supplied.
+       * ============================================================ */
+    }
+    <section class="lp-hero" aria-labelledby="hero-heading">
+      <div class="lp-hero-inner">
+        <div class="lp-hero-copy">
+          <p class="lp-hero-eyebrow">For procurement &amp; engineering teams</p>
+          <h1 id="hero-heading" class="lp-hero-title">
+            Worn blade costing you<br />
+            change-over time?
+          </h1>
+          <p class="lp-hero-sub">
+            KAIPU Industrial Blades has been manufacturing precision knives for printing, packaging, paper, food
+            processing and recycling lines since 1998. Send a drawing, sample or written spec — engineering replies with
+            material, hardness, tolerance and lead time within <strong>one business day</strong>.
+          </p>
+          <ul class="lp-hero-anchors">
+            <li>D2, SKD11, DC53, M2 HSS, tungsten carbide</li>
+            <li>In-house heat treatment · CMM report per batch</li>
+            <li>ISO 9001:2015 certified since 2001</li>
+          </ul>
+          <a class="lp-hero-link" href="#rfq">Request a Quote →</a>
+        </div>
+
+        <figure class="lp-hero-figure">
+          {
+            /* [PLACEHOLDER: hero image] — recommended: factory-floor
+             * or CNC grinding scene, ~720×540, webp, eager-loaded.
+             * The alt text below is the spec the asset must satisfy. */
+          }
+          <img
+            src="/lp/hero-factory.webp"
+            alt="[PLACEHOLDER: KAIPU factory floor — CNC grinding of an industrial circular blade]"
+            width="720"
+            height="540"
+            loading="eager"
+            fetchpriority="high"
+            class="lp-hero-img"
+          />
+          <figcaption class="lp-hero-cap">[PLACEHOLDER: KAIPU factory — city, country]</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    {
+      /* ============================================================
+       * 2. QUALIFICATION — Six blade families. Each card names what
+       * the knife does, where it goes, and the spec anchor that
+       * earns the line. Links deep into the category page if the
+       * buyer wants detail, but the LP stands on its own.
+       * ============================================================ */
+    }
+    <section class="lp-families" aria-labelledby="families-heading">
+      <div class="lp-families-inner">
+        <header class="lp-section-head">
+          <p class="lp-section-eyebrow">What we make</p>
+          <h2 id="families-heading" class="lp-section-title">Six blade families, one supplier</h2>
+        </header>
+        <ul class="lp-families-grid">
+          {
+            categories.map(({ label, href, capability, spec }) => (
+              <li class="lp-family-card">
+                <a href={href} class="lp-family-link">
+                  <h3 class="lp-family-name">{label}</h3>
+                  <p class="lp-family-cap">{capability}</p>
+                  <p class="lp-family-spec">{spec}</p>
+                  <span class="lp-family-cta">View family →</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+
+    {
+      /* ============================================================
+       * 3. TECHNICAL VALIDATION — Spec table. Engineer-skimmable:
+       * material × hardness × tolerance × process.
+       * ============================================================ */
+    }
+    <section class="lp-specs" aria-labelledby="specs-heading">
+      <div class="lp-specs-inner">
+        <header class="lp-section-head">
+          <p class="lp-section-eyebrow">Material capability</p>
+          <h2 id="specs-heading" class="lp-section-title">Materials, hardness, tolerance</h2>
+        </header>
+        <div class="lp-specs-table-wrap">
+          <table class="lp-specs-table">
+            <thead>
+              <tr>
+                <th scope="col">Material</th>
+                <th scope="col">Hardness (HRC)</th>
+                <th scope="col">Tolerance</th>
+                <th scope="col">Process</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                specRows.map((row) => (
+                  <tr>
+                    <th scope="row">{row.mat}</th>
+                    <td>{row.hrc}</td>
+                    <td>{row.tol}</td>
+                    <td>{row.proc}</td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    {
+      /* ============================================================
+       * 4. RISK MITIGATION — Certifications + quality KPIs.
+       * Answers "what if they fail me?".
+       * ============================================================ */
+    }
+    <section class="lp-risk" aria-labelledby="risk-heading">
+      <div class="lp-risk-inner">
+        <header class="lp-section-head">
+          <p class="lp-section-eyebrow">Risk &amp; quality</p>
+          <h2 id="risk-heading" class="lp-section-title">What we put on the line when a batch ships</h2>
+        </header>
+
+        <div class="lp-risk-grid">
+          <article class="lp-risk-card">
+            <h3 class="lp-risk-card-title">Certification</h3>
+            <p class="lp-risk-card-body">
+              <strong>ISO 9001:2015</strong> since 2001, last reviewed [PLACEHOLDER: month/year]. Scope: design and manufacture
+              of industrial cutting tools up to 600&nbsp;mm OD.
+            </p>
+          </article>
+
+          <article class="lp-risk-card">
+            <h3 class="lp-risk-card-title">Process control</h3>
+            <p class="lp-risk-card-body">
+              <strong>Cpk&nbsp;≥&nbsp;1.33</strong> on critical dimensions · first-pass yield above 99% · scrap rate below
+              0.4%.
+            </p>
+          </article>
+
+          <article class="lp-risk-card">
+            <h3 class="lp-risk-card-title">Paperwork per batch</h3>
+            <p class="lp-risk-card-body">
+              Mill certificate + CMM dimensional report + hardness chart ship with every order at no charge.
+            </p>
+          </article>
+        </div>
+
+        <div class="lp-cases">
+          <p class="lp-section-eyebrow">Documented outcomes</p>
+          <h3 class="lp-cases-title">Three changes that paid back inside one quarter</h3>
+
+          <ol class="lp-cases-list">
+            {
+              /* [PLACEHOLDER: case studies] — fill from real CRM /
+               * quotes file. Each item should answer:
+               *   - what was failing on the customer's line
+               *   - what KAIPU changed
+               *   - the quantified result */
+            }
+            <li>
+              <span class="lp-case-tag">Corrugated slitter-scorer</span>
+              <p class="lp-case-body">
+                A converter running B-flute corrugated was chipping within the first 200&nbsp;m of every shift on
+                straight D2 knives. KAIPU replaced them with tungsten-carbide-tipped blades (YG6X) and refined the grind
+                profile. <strong>Result:</strong> chipping stopped; the change interval stretched from 8&nbsp;h to 72&nbsp;h.
+              </p>
+            </li>
+
+            <li>
+              <span class="lp-case-tag">Stainless plate shear</span>
+              <p class="lp-case-body">
+                [PLACEHOLDER: 6&nbsp;mm SS304 swing-beam shear was burr-ing above 0.15&nbsp;mm after 5,000 cycles. KAIPU
+                replaced standard blades with an H13 pair, hardened to 56&nbsp;HRC, and re-engineered the gap.] — <strong
+                  >Result:</strong
+                > [PLACEHOLDER: burr held below 0.10&nbsp;mm for 18,000 cycles; QC reject rate halved.]
+              </p>
+            </li>
+
+            <li>
+              <span class="lp-case-tag">[PLACEHOLDER: third application]</span>
+              <p class="lp-case-body">
+                [PLACEHOLDER: one more quantified change-and-result, in the same problem → change → result shape. Pick
+                from paper, film, foil, food or recycling where KAIPU has a real win.]
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    {
+      /* ============================================================
+       * 5. COMMERCIAL TERMS — Lead time, MOQ, payment, NDA, samples.
+       * ============================================================ */
+    }
+    <section class="lp-commercial" aria-labelledby="commercial-heading">
+      <div class="lp-commercial-inner">
+        <header class="lp-section-head">
+          <p class="lp-section-eyebrow">Commercial terms</p>
+          <h2 id="commercial-heading" class="lp-section-title">What quoting looks like</h2>
+        </header>
+        <dl class="lp-commercial-grid">
+          <div class="lp-commercial-item">
+            <dt>Lead time</dt>
+            <dd>Stocked SKUs ship in 5–7 working days. Custom builds 20–35 working days from drawing approval.</dd>
+          </div>
+          <div class="lp-commercial-item">
+            <dt>MOQ</dt>
+            <dd>1 piece on stocked SKUs. 10 pieces on custom builds (engineering &amp; setup dominate below that).</dd>
+          </div>
+          <div class="lp-commercial-item">
+            <dt>Payment</dt>
+            <dd>30% T/T deposit, 70% against B/L copy. Open-account terms after one year of trading.</dd>
+          </div>
+          <div class="lp-commercial-item">
+            <dt>NDA</dt>
+            <dd>Signed on request, no cost. We will not release drawings or specifications to third parties.</dd>
+          </div>
+          <div class="lp-commercial-item">
+            <dt>Samples</dt>
+            <dd>
+              Stock SKUs ship from 1 piece. Custom prototypes are quoted against the spec, not against a catalogue SKU.
+            </dd>
+          </div>
+          <div class="lp-commercial-item">
+            <dt>Re-sharpening</dt>
+            <dd>
+              Send us the worn blade; we measure the original geometry before grinding so the re-sharpened part fits
+              back without re-tooling.
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    {
+      /* ============================================================
+       * 6. ONE NAMED TESTIMONIAL — generic customer counts do not
+       * convince a procurement manager. One quote with role, sector
+       * and date does.
+       * ============================================================ */
+    }
+    <section class="lp-quote" aria-labelledby="quote-heading">
+      <div class="lp-quote-inner">
+        <blockquote class="lp-quote-body">
+          <p class="lp-quote-text">
+            [PLACEHOLDER: one short testimonial — 25–40 words, in the customer's voice. Example shape: &ldquo;We
+            replaced our European supplier with KAIPU on the corrugated line in 2024. Blade life went from 12 hours to
+            three shifts, and the first batch came with the CMM report we needed for our own customers.&rdquo;]
+          </p>
+          <footer class="lp-quote-attrib">[PLACEHOLDER: Name, Role, Company / Sector, Year]</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    {
+      /* ============================================================
+       * 7. DECISION ACTION — Form. Positioned AFTER the evidence.
+       * ============================================================ */
+    }
+    <section id="rfq" class="lp-form" aria-labelledby="rfq-heading">
+      <div class="lp-form-inner">
+        <header class="lp-section-head lp-form-head">
+          <p class="lp-section-eyebrow">Request a Quote</p>
+          <h2 id="rfq-heading" class="lp-section-title">Tell us your spec</h2>
+          <p class="lp-section-sub">
+            Engineering replies within one business day with material, hardness, tolerance, lead time and price. We will
+            not share your details with third parties.
+          </p>
+        </header>
+
+        <div class="lp-form-card">
+          <Contact
+            inputs={[
+              { type: 'text', name: 'fullName', label: 'Full Name *', placeholder: 'Jane Smith', autocomplete: 'name' },
+              {
+                type: 'email',
+                name: 'email',
+                label: 'Work Email *',
+                placeholder: '[email protected]',
+                autocomplete: 'email',
+              },
+              {
+                type: 'text',
+                name: 'company',
+                label: 'Company *',
+                placeholder: 'Acme Converting Co.',
+                autocomplete: 'organization',
+              },
+              {
+                type: 'tel',
+                name: 'phone',
+                label: 'Phone (optional)',
+                placeholder: '+1 555 123 4567',
+                autocomplete: 'tel',
+              },
+              {
+                type: 'text',
+                name: 'productType',
+                label: 'Product / Application *',
+                placeholder: 'e.g. Circular blade for B-flute corrugated',
+              },
+            ]}
+            textarea={{
+              label: 'What are you cutting? (optional)',
+              name: 'requirements',
+              rows: 3,
+              placeholder: 'Material, current blade, target tolerances, or any deadline we should know.',
+            }}
+            button="Send Quote Request"
+            description="We typically reply within 1 business day (Mon–Fri, GMT+8)."
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <LPFooter />
+  <LPStickyCTA />
+</Layout>
+
+<style>
+  /* =========================================================================
+   * LP page styles — decision-chain-driven structure.
+   *
+   * Background discipline (`.clinerules` §2): every section inherits
+   * `bg-page` from <body>. Cards (risk-grid, families, specs, cases,
+   * commercial, quote, form) use border + shadow for separation. The
+   * form card itself relies on Contact.astro's own `bg-white
+   * dark:bg-slate-900` (the explicit card exception documented in
+   * `.agents/skills/styling.md`).
+   * ========================================================================= */
+
+  /* --- Shared section frame ----------------------------------------------- */
+  .lp-section-head {
+    max-width: 48rem;
+    margin: 0 0 1.75rem 0;
+  }
+
+  .lp-section-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--aw-color-accent);
+    margin: 0 0 0.625rem 0;
+    font-feature-settings: 'tnum';
+  }
+
+  .lp-section-title {
+    font-size: clamp(1.5rem, 3.2vw, 2.125rem);
+    line-height: 1.18;
+    font-weight: 700;
+    color: var(--aw-color-text-default);
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+
+  .lp-section-sub {
+    color: var(--aw-color-text-muted);
+    font-size: 1rem;
+    line-height: 1.55;
+    margin: 0.75rem 0 0 0;
+    max-width: 36rem;
+  }
+
+  /* --- 1. HERO ------------------------------------------------------------- */
+  .lp-hero {
+    position: relative;
+    padding-block: clamp(2.5rem, 5vw, 4rem);
+    border-bottom: 1px solid var(--aw-color-rule);
+  }
+
+  .lp-hero-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(2rem, 4vw, 3rem);
+    align-items: center;
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  @media (min-width: 960px) {
+    .lp-hero-inner {
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+      padding-inline: 1.5rem;
+    }
+  }
+
+  .lp-hero-copy {
+    max-width: 36rem;
+  }
+
+  .lp-hero-eyebrow {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--aw-color-rule);
+    border-radius: var(--aw-radius-sm);
+    color: var(--aw-color-text-muted);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    font-feature-settings: 'tnum';
+  }
+
+  .lp-hero-title {
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    color: var(--aw-color-text-default);
+    margin: 0 0 1.25rem 0;
+  }
+
+  .lp-hero-sub {
+    color: var(--aw-color-text-muted);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .lp-hero-anchors {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .lp-hero-anchors li {
+    position: relative;
+    padding-left: 1.25rem;
+    color: var(--aw-color-text-default);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+  }
+
+  .lp-hero-anchors li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 0.625rem;
+    height: 1px;
+    background-color: var(--aw-color-accent);
+  }
+
+  .lp-hero-link {
+    color: var(--aw-color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+  }
+
+  .lp-hero-figure {
+    margin: 0;
+  }
+
+  .lp-hero-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border: 1px solid var(--aw-color-rule);
+    border-radius: var(--aw-radius-sm);
+    background-color: var(--aw-color-surface);
+  }
+
+  .lp-hero-cap {
+    margin-top: 0.5rem;
+    font-size: 0.8125rem;
+    color: var(--aw-color-text-muted);
+    text-align: center;
+  }
+
+  /* --- 2. FAMILIES --------------------------------------------------------- */
+  .lp-families {
+    padding-block: clamp(2.5rem, 5vw, 4rem);
+    border-bottom: 1px solid var(--aw-color-rule);
+  }
+
+  .lp-families-inner {
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .lp-families-inner {
+      padding-inline: 1.5rem;
+    }
+  }
+
+  .lp-families-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.875rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 640px) {
+    .lp-families-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .lp-families-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  .lp-family-card {
+    border: 1px solid var(--aw-color-rule);
+    border-radius: var(--aw-radius-card);
+    background-color: var(--aw-color-surface);
+    transition:
+      border-color 0.15s ease,
+      box-shadow 0.15s ease;
+  }
+
+  .lp-family-card:hover {
+    border-color: var(--aw-color-primary);
+    box-shadow: var(--aw-shadow-card-hover);
+  }
+
+  .lp-family-link {
+    display: block;
+    padding: 1.25rem;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .lp-family-name {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--aw-color-text-default);
+    margin: 0 0 0.5rem 0;
+  }
+
+  .lp-family-cap {
+    font-size: 0.9375rem;
+    color: var(--aw-color-text-muted);
+    line-height: 1.55;
+    margin: 0 0 0.625rem 0;
+  }
+
+  .lp-family-spec {
+    font-size: 0.8125rem;
+    color: var(--aw-color-text-default);
+    line-height: 1.5;
+    font-feature-settings: 'tnum';
+    margin: 0 0 0.875rem 0;
+  }
+
+  .lp-family-cta {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--aw-color-primary);
+  }
+
+  /* --- 3. SPECS TABLE ------------------------------------------------------ */
+  .lp-specs {
+    padding-block: clamp(2.5rem, 5vw, 4rem);
+    border-bottom: 1px solid var(--aw-color-rule);
+  }
+
+  .lp-specs-inner {
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .lp-specs-inner {
+      padding-inline: 1.5rem;
+    }
+  }
+
+  .lp-specs-table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--aw-color-rule);
+    border-radius: var(--aw-radius-card);
+    background-color: var(--aw-color-surface);
+  }
+
+  .lp-specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+  }
+
+  .lp-specs-table th,
+  .lp-specs-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .lp-specs-table thead th {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--aw-color-text-muted);
+    border-bottom: 2px solid var(--aw-color-border-strong);
+    background-color: var(--aw-color-surface-alt);
+  }
+
+  .lp-specs-table tbody tr {
+    border-bottom: 1px solid var(--aw-color-rule);
+  }
+
+  .lp-specs-table tbody tr:last-child {
+    border-bottom: none;
+  }
+
+  .lp-specs-table tbody th[scope='row'] {
+    font-weight: 600;
+    color: var(--aw-color-text-default);
+    white-space: nowrap;
+  }
+
+  .lp-specs-table tbody td {
+    color: var(--aw-color-text-default);
+    font-feature-settings: 'tnum';
+  }
+
+  /* --- 4. RISK & QUALITY --------------------------------------------------- */
+  .lp-risk {
+    padding-block: clamp(2.5rem, 5vw, 4rem);
+    border-bottom: 1px solid var(--aw-color-rule);
+  }
+
+  .lp-risk-inner {
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .lp-risk-inner {
+      padding-inline: 1.5rem;
+    }
+  }
+
+  .lp-risk-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  @media (min-width: 768px) {
+    .lp-risk-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  .lp-risk-card {
+    padding: 1.25rem;
+    border: 1px solid var(--aw-color-rule);
+    border-radius: var(--aw-radius-card);
+    background-color: var(--aw-color-surface);
+  }
+
+  .lp-risk-card-title {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--aw-color-primary);
+    margin: 0 0 0.625rem 0;
+    font-feature-settings: 'tnum';
+  }
+
+  .lp-risk-card-body {
+    font-size: 0.9375rem;
+    color: var(--aw-color-text-default);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .lp-cases {
+    padding-top: clamp(1.5rem, 3vw, 2.5rem);
+    border-top: 1px solid var(--aw-color-rule);
+  }
+
+  .lp-cases-title {
+    font-size: clamp(1.125rem, 2.4vw, 1.375rem);
+    font-weight: 700;
+    color: var(--aw-color-text-default);
+    margin: 0 0 1.25rem 0;
+  }
+
+  .lp-cases-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: lp-cases;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .lp-cases-list li {
+    counter-increment: lp-cases;
+    padding: 1.125rem 1.25rem 1.125rem 3rem;
+    border: 1px solid var(--aw-color-rule);
+    border-radius: var(--aw-radius-card);
+    background-color: var(--aw-color-surface);
+    position: relative;
+  }
+
+  .lp-cases-list li::before {
+    content: counter(lp-cases, decimal-leading-zero);
+    position: absolute;
+    left: 1.125rem;
+    top: 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--aw-color-primary);
+    font-feature-settings: 'tnum';
+  }
+
+  .lp-case-tag {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--aw-color-accent);
+  }
+
+  .lp-case-body {
+    font-size: 0.9375rem;
+    color: var(--aw-color-text-muted);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* --- 5. COMMERCIAL TERMS ------------------------------------------------- */
+  .lp-commercial {
+    padding-block: clamp(2.5rem, 5vw, 4rem);
+    border-bottom: 1px solid var(--aw-color-rule);
+  }
+
+  .lp-commercial-inner {
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .lp-commercial-inner {
+      padding-inline: 1.5rem;
+    }
+  }
+
+  .lp-commercial-grid {
+    margin: 0;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 640px) {
+    .lp-commercial-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .lp-commercial-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  .lp-commercial-item {
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--aw-color-rule);
+    border-radius: var(--aw-radius-card);
+    background-color: var(--aw-color-surface);
+  }
+
+  .lp-commercial-item dt {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--aw-color-primary);
+    margin: 0 0 0.5rem 0;
+    font-feature-settings: 'tnum';
+  }
+
+  .lp-commercial-item dd {
+    margin: 0;
+    font-size: 0.9375rem;
+    color: var(--aw-color-text-default);
+    line-height: 1.55;
+  }
+
+  /* --- 6. TESTIMONIAL ----------------------------------------------------- */
+  .lp-quote {
+    padding-block: clamp(2.5rem, 5vw, 4rem);
+    border-bottom: 1px solid var(--aw-color-rule);
+  }
+
+  .lp-quote-inner {
+    max-width: 56rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .lp-quote-inner {
+      padding-inline: 1.5rem;
+    }
+  }
+
+  .lp-quote-body {
+    margin: 0;
+    padding: 1.5rem;
+    border-left: 3px solid var(--aw-color-accent);
+    background-color: var(--aw-color-surface);
+    border-radius: 0 var(--aw-radius-card) var(--aw-radius-card) 0;
+  }
+
+  .lp-quote-text {
+    font-size: clamp(1.0625rem, 2vw, 1.25rem);
+    line-height: 1.5;
+    color: var(--aw-color-text-default);
+    margin: 0 0 0.875rem 0;
+    font-style: italic;
+  }
+
+  .lp-quote-attrib {
+    font-size: 0.8125rem;
+    color: var(--aw-color-text-muted);
+    font-style: normal;
+  }
+
+  /* --- 7. FORM ------------------------------------------------------------- */
+  .lp-form {
+    padding-block: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  @media (max-width: 767px) {
+    .lp-form {
+      /* Reserve space at the bottom so the fixed sticky CTA does not
+       * occlude the submit button. */
+      padding-bottom: calc(6rem + env(safe-area-inset-bottom));
+    }
+  }
+
+  .lp-form-inner {
+    max-width: 56rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .lp-form-inner {
+      padding-inline: 1.5rem;
+    }
+  }
+
+  .lp-form-head {
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .lp-form-head .lp-section-eyebrow,
+  .lp-form-head .lp-section-title,
+  .lp-form-head .lp-section-sub {
+    margin-inline: auto;
+  }
+
+  .lp-form-card {
+    max-width: 36rem;
+    margin-inline: auto;
+    /* Contact widget already wraps its inputs in a white/dark card;
+     * no extra wrapper needed. */
+  }
+</style>

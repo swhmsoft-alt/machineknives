@@ -46,6 +46,12 @@ const noindexTaxonomyPaths = ['category', 'tag']
   .filter((section): section is BlogSectionConfig => Boolean(section?.isEnabled) && section?.robots?.index === false)
   .map((section) => `/${(section.pathname ?? '').replace(/^\/+|\/+$/g, '')}/`);
 
+// Landing pages under /lp/ are paid-traffic destinations and self-set
+// `robots: { index: false, follow: false }` in their page metadata.
+// Keep them out of sitemap.xml so the crawler doesn't waste budget and
+// doesn't surface a contradictory `index` directive.
+const noindexLandingPaths = ['/lp/'];
+
 const hasExternalScripts = false;
 const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroIntegration)[] = []) =>
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
@@ -99,7 +105,13 @@ export default defineConfig({
 
   integrations: [
     sitemap({
-      filter: (page) => !noindexTaxonomyPaths.some((prefix) => new URL(page).pathname.startsWith(prefix)),
+      filter: (page) => {
+        const path = new URL(page).pathname;
+        return (
+          !noindexTaxonomyPaths.some((prefix) => path.startsWith(prefix)) &&
+          !noindexLandingPaths.some((prefix) => path.startsWith(prefix))
+        );
+      },
     }),
     mdx(),
     icon({

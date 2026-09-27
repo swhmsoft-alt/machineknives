@@ -1,0 +1,51 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<!-- Mobile-only sticky bottom CTA. Hidden at md+ where the page
+ * layout already keeps the form reachable. Soft, full-bleed
+ * primary colour rather than high-contrast accent — the page is
+ * trust-led, not conversion-bait. -->
+<a class="lp-sticky-cta" href="#rfq" aria-label="Get a quote">
+  <Icon name="tabler:mail" class="lp-sticky-cta-icon" aria-hidden="true" />
+  <span>Get a Quote · 1-Day Reply</span>
+</a>
+
+<style>
+  .lp-sticky-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: 50;
+    padding: 0.875rem 1rem;
+    background-color: var(--aw-color-primary);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    box-shadow: 0 -4px 14px rgb(22 24 29 / 14%);
+    /* iOS safe-area inset for notched devices. */
+    padding-bottom: calc(0.875rem + env(safe-area-inset-bottom));
+    transition: background-color 0.15s ease;
+  }
+
+  .lp-sticky-cta:hover {
+    background-color: var(--aw-color-primary-hover);
+  }
+
+  .lp-sticky-cta-icon {
+    width: 1.125rem;
+    height: 1.125rem;
+    margin-right: 0.5rem;
+  }
+
+  /* Hide on tablet+ where the form is reachable by scrolling. */
+  @media (min-width: 768px) {
+    .lp-sticky-cta {
+      display: none;
+    }
+  }
+</style>

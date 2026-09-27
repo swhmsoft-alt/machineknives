@@ -1,0 +1,126 @@
+---
+import Logo from '~/components/Logo.astro';
+import { SITE } from 'astrowind:config';
+import { getHomePermalink } from '~/utils/permalinks';
+
+// [PLACEHOLDER: phone] — replace with a real B2B contact number.
+// Left blank until the sales team confirms which line to expose
+// (international vs CN direct). For a paid LP, the phone is a trust
+// anchor, not a conversion CTA — leave it as text, not a button.
+const phone = '+86 [PLACEHOLDER: intl phone]';
+const phoneHref = 'tel:' + phone.replace(/[^+\d]/g, '');
+---
+
+<div class="lp-header">
+  <div class="lp-header-inner">
+    <a class="lp-brand" href={getHomePermalink()} aria-label={`${SITE?.name} home`}>
+      <Logo />
+    </a>
+
+    <div class="lp-header-meta">
+      <a class="lp-header-phone" href={phoneHref} aria-label="Call KAIPU engineering">
+        <svg
+          viewBox="0 0 24 24"
+          width="14"
+          height="14"
+          aria-hidden="true"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+          ></path>
+        </svg>
+        <span>{phone}</span>
+      </a>
+
+      <a class="lp-header-quote" href="#rfq">Request Quote</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Trust-first header: brand + a phone number (B2B legitimacy
+   * signal) + a low-key text link to the form. No button-style CTA,
+   * no dropdowns, no theme toggle — `.clinerules` §2 background
+   * discipline (only `bg-page`) is preserved. */
+
+  .lp-header {
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid var(--aw-color-rule);
+  }
+
+  .lp-header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.875rem 1rem;
+    margin-inline: auto;
+    max-width: 72rem;
+  }
+
+  @media (min-width: 768px) {
+    .lp-header-inner {
+      padding: 1rem 1.5rem;
+    }
+  }
+
+  .lp-brand {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--aw-color-text-default);
+  }
+
+  .lp-header-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .lp-header-phone {
+    display: none;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--aw-color-text-muted);
+    text-decoration: none;
+    font-size: 0.8125rem;
+    font-feature-settings: 'tnum';
+    transition: color 0.15s ease;
+  }
+
+  .lp-header-phone:hover {
+    color: var(--aw-color-primary);
+  }
+
+  @media (min-width: 640px) {
+    .lp-header-phone {
+      display: inline-flex;
+    }
+  }
+
+  .lp-header-quote {
+    color: var(--aw-color-primary);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+    transition: opacity 0.15s ease;
+  }
+
+  .lp-header-quote:hover {
+    opacity: 0.7;
+  }
+
+  @media (max-width: 479px) {
+    .lp-header-quote {
+      font-size: 0.875rem;
+    }
+  }
+</style>
