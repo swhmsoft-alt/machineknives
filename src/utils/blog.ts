@@ -128,8 +128,6 @@ const load = async function (): Promise<Array<Post>> {
   return results;
 };
 
-let _posts: Array<Post>;
-
 /** */
 export const isBlogEnabled = APP_BLOG.isEnabled;
 export const isRelatedPostsEnabled = APP_BLOG.isRelatedPostsEnabled;
@@ -160,13 +158,22 @@ export const BLOG_HOME_POST_COUNT = 12;
  */
 export const CATEGORY_PAGINATION_THRESHOLD = 18;
 
-/** */
+/**
+ * Fetch all non-draft posts, sorted by `publishDate` descending.
+ *
+ * Note: this function intentionally does NOT cache. Astro's content
+ * collection loader refreshes on file changes in dev mode, but a module-
+ * level cache here would defeat that — the cached snapshot could be a
+ * few edits stale and silently drop newly-added (or draft-flipped)
+ * posts from listings until the dev server is restarted. `load()` is
+ * cheap enough (~100 markdown files, no I/O beyond what Astro already
+ * does) that the trade-off is worth it for the guarantee that every
+ * page render reflects the current corpus. If this becomes a hotspot
+ * in the future, the right fix is to invalidate the cache via
+ * `import.meta.hot.dispose`, not to add a longer-lived cache.
+ */
 export const fetchPosts = async (): Promise<Array<Post>> => {
-  if (!_posts) {
-    _posts = await load();
-  }
-
-  return _posts;
+  return await load();
 };
 
 /** */

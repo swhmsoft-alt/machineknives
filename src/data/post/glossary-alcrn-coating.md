@@ -11,7 +11,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of AlCrN (Aluminium Chromium Nitride) PVD coating for industrial blades: the hardest standard PVD coating, ideal for high-temperature and dry cutting applications.'
   canonical: 'https://www.industrial-knives.net/glossary/alcrn-coating/'
-image: '/images/og/glossary-alcrn-coating.png'
+image: '/images/og/glossary-alcrn-coating.webp'
 ---
 
 **AlCrN coating** Aluminium Chromium Nitride (AlCrN) is a PVD ceramic coating with the highest hardness (3,200 HV) and the best high-temperature stability of the standard PVD coatings. Applied at 400–500 °C, 2–4 µm thick. The aluminium content forms a stable aluminium oxide layer at high temperature, preventing further oxidation.

@@ -11,7 +11,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of CrN (Chromium Nitride) PVD coating for industrial blades: a corrosion-resistant silver-grey coating, the standard for food-contact and wet applications.'
   canonical: 'https://www.industrial-knives.net/glossary/crn-coating/'
-image: '/images/og/glossary-crn-coating.png'
+image: '/images/og/glossary-crn-coating.webp'
 ---
 
 **CrN coating** Chromium Nitride (CrN) is a PVD ceramic coating, silver-grey, with the best corrosion resistance of the standard PVD coatings. Applied at 400–500 °C, 3–5 µm thick. CrN is chemically inert in most food acids, fuels, and mild chemicals, making it the standard for food-contact cutting and wet-end applications.

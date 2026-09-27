@@ -14,7 +14,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'JIS SKD11 cold-work tool steel — chemistry, hardness, heat treatment, applications and the practical differences vs AISI D2 for industrial blades.'
   canonical: 'https://www.industrial-knives.net/materials-encyclopedia/skd11/'
-image: '/images/og/materials-encyclopedia-skd11.png'
+image: '/images/og/materials-encyclopedia-skd11.webp'
 ---
 
 JIS SKD11 is the Japanese Industrial Standard grade for high-carbon, high-chromium cold-work tool steel, chemically equivalent to AISI D2 but produced to tighter dimensional and metallurgical tolerances by Japanese mills. It is the default precision-blade grade in Japan, Korea, Taiwan and most of East Asia.

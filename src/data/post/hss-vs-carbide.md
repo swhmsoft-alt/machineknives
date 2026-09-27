@@ -17,7 +17,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'HSS vs carbide for industrial blades: hardness (HRC 62–67 vs HRA 89–92), toughness, cost-per-edge, edge retention and substrate fit. Side-by-side comparison with selection guidance from Industrial Knives engineering.'
   canonical: 'https://www.industrial-knives.net/hss-vs-carbide/'
-image: '/images/og/hss-vs-carbide.png'
+image: '/images/og/hss-vs-carbide.webp'
 ---
 
 If you have ever asked a blade supplier "HSS or carbide?" and received a one-line answer, you have been mis-served. The honest answer is a five-question decision: what are you cutting, how fast, what does failure look like, what is your change-over budget, and what is the knife worth to your line? This post walks through the material science, the cost maths and the field cases we use at Industrial Knives to make that call — including the three situations where the "carbide is always better" answer is plain wrong.

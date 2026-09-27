@@ -11,7 +11,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of flatness in industrial blade measurement: the deviation of a face from a perfect plane, and how flatness affects the contact area between knife and anvil.'
   canonical: 'https://www.industrial-knives.net/glossary/flatness/'
-image: '/images/og/glossary-flatness.png'
+image: '/images/og/glossary-flatness.webp'
 ---
 
 **Flatness** is the deviation of a knife face from a perfect plane, measured in millimetres. On a slitter, flatness affects the contact area between the knife and the anvil; on a shear, it affects the contact with the workpiece.

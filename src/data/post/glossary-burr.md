@@ -14,7 +14,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Industrial cutting burr — definition, measurement, causes, and how edge prep and clearance angle affect burr height on slitter and shear blades.'
   canonical: 'https://www.industrial-knives.net/glossary/burr/'
-image: '/images/og/glossary-burr.png'
+image: '/images/og/glossary-burr.webp'
 ---
 
 **Burr** (also: *flash*, *feather*, *whisker*) is the unwanted projection of substrate material that forms on the cut edge during an industrial cutting operation. It is the single most common quality complaint on a slitting, shearing or blanking line, and it is the metric most-often specified on a knife drawing.

@@ -14,7 +14,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Industrial blade hone / micro-hone — definition, the substrate-by-substrate range, the relationship to coating thickness and burr, and how to set hone on slitter and shear blades.'
   canonical: 'https://www.industrial-knives.net/glossary/hone/'
-image: '/images/og/glossary-hone.png'
+image: '/images/og/glossary-hone.webp'
 ---
 
 **Hone** (also: *micro-hone*, *edge radius*, *secondary radius*) is the small radius formed at the very tip of a cutting edge during the final grinding or stropping operation. The hone absorbs thermal and mechanical shock at the edge, prevents micro-chipping, and — when sized correctly for the substrate — reduces burr.

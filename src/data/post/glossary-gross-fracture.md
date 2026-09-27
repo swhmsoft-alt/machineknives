@@ -11,7 +11,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of gross fracture in industrial cutting: complete break of a knife, usually catastrophic and immediate. The rarest but most expensive failure mode.'
   canonical: 'https://www.industrial-knives.net/glossary/gross-fracture/'
-image: '/images/og/glossary-gross-fracture.png'
+image: '/images/og/glossary-gross-fracture.webp'
 ---
 
 **Gross Fracture** is the complete break of a knife into two or more pieces, usually caused by an impact event (foreign object, dropped knife, misaligned stock) on a brittle substrate. Gross fracture is the rarest industrial cutting failure mode but the most expensive — a 600 mm shear blade that breaks in service costs €800–2,000 in scrap plus the downtime.

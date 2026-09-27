@@ -15,7 +15,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'How to choose a slitting blade for a paper converting line. Substrate GSM and caliper, steel grade by rewind quality, edge prep, clearance and line-side conditions.'
   canonical: 'https://www.industrial-knives.net/selection-guide-paper-converting/'
-image: '/images/og/selection-guide-paper-converting.png'
+image: '/images/og/selection-guide-paper-converting.webp'
 ---
 
 Paper slitting is the highest-volume industrial knife application in the world, and it is also the application where the wrong steel grade is most often mis-specified. The decision is not "D2 or M2" — it is a four-axis question: substrate GSM and caliper, line speed, burr target, and re-grind cycle. Get those four right and the steel grade follows.

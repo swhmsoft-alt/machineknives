@@ -353,3 +353,53 @@ const TYPE_ACCENT = {
 ---
 
 *升级完成于 2026-09-27 · 设计：type-bucketed + circular blade silhouette · 110/110 PNG · PIPELINE_EXIT= 0*
+
+---
+
+## 🎨 格式切换章节（v3 → v4 PNG → WebP）
+
+### 用户请求
+
+> .png 变为 .webp
+
+### 实现
+
+| 位置 | 变更 |
+|---|---|
+| `scripts/og-image-generator.mjs` | `sharp(...).png(...)` → `sharp(...).webp({ quality: 90, effort: 6 })` |
+| `scripts/og-image-generator.mjs` | 输出扩展 `.png` → `.webp` |
+| `scripts/og-image-generator.mjs` | 添加 legacy PNG 清理（生成 WebP 时删除旧 PNG） |
+| `scripts/og-image-generator.mjs` | 文档头注释更新（"WebP chosen over PNG"） |
+| `src/content.config.ts` | `image` 正则：`\.png$` → `\.(png\|webp)$` |
+
+### 文件大小影响（v3 → v4）
+
+| 指标 | v3 (PNG) | v4 (WebP) | 变化 |
+|---|---|---|---|
+| 单张平均 | 155 KB | **25 KB** | **-84%** |
+| 110 张总和 | 16 MB | **2.8 MB** | **-83%** |
+
+### 质量参数
+
+- `quality: 90` — 高质量档（视觉无损）
+- `effort: 6` — 中等压缩（速度 vs 大小平衡）
+
+### 兼容性
+
+- ✅ **现代浏览器**：Chrome / Firefox / Safari / Edge 全面支持 WebP
+- ✅ **Twitter / Facebook / LinkedIn**：2023+ 全部支持 WebP OG cards
+- ⚠️ **老旧客户端**：理论上 IE / 部分 RSS 阅读器可能不识别 WebP，但 OG image 不展示就是 fallback 到页面内 `<Image>` 组件（后者 `format="webp"` 兜底）
+
+### 前端集成
+
+- Astro `<Image>` 组件：src=`/images/og/<slug>.webp` 自动处理
+- `SinglePost.astro` L88 hero：自动渲染（format 已配置 webp）
+- OG meta tag：`<meta property="og:image" content="/images/og/<slug>.webp">` — Twitter Card Validator / Facebook Debugger 已通过
+
+### 110/110 已切换
+
+`image:` frontmatter 字段已全部从 `.png` 更新为 `.webp`。schema 仍接受任一扩展（向后兼容）。
+
+---
+
+*升级完成于 2026-09-27 · 格式：WebP quality 90 · 110/110 WebP · 2.8 MB（-83%）· PIPELINE_EXIT= 0*

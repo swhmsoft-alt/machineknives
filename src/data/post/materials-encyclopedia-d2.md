@@ -15,7 +15,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'AISI D2 cold-work tool steel — chemistry, hardness, heat treatment, applications and cross-reference. Concise encyclopedia entry for industrial blade specification.'
   canonical: 'https://www.industrial-knives.net/materials-encyclopedia/d2/'
-image: '/images/og/materials-encyclopedia-d2.png'
+image: '/images/og/materials-encyclopedia-d2.webp'
 ---
 
 AISI D2 is a high-carbon, high-chromium cold-work tool steel hardened by a population of large M₇C₃ primary carbides in a tempered martensite matrix. It is one of the most widely used blade materials in the converting, packaging and metalworking industries.

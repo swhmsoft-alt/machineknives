@@ -18,7 +18,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'M2 vs M4 high-speed steel for industrial machine knives. Chemistry, hot hardness, wear resistance, grindability, cost. Side-by-side comparison with field guidance from Industrial Knives engineering.'
   canonical: 'https://www.industrial-knives.net/m2-vs-m4-hss/'
-image: '/images/og/m2-vs-m4-hss.png'
+image: '/images/og/m2-vs-m4-hss.webp'
 ---
 
 M2 is the workhorse. It has been the dominant high-speed steel for slitting, sheeting and converting blades for 60 years. M4 is its higher-vanadium cousin — the chemistry sheet shows a 1 % bump in V, but that single number changes the wear behaviour, the grindability, and the line economics. Both are excellent. The right answer depends on your substrate, your edge geometry, and how much you value re-grind cycle time.

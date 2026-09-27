@@ -16,7 +16,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Why is your machine blade wearing out too fast? Diagnostic flow, five root causes, visual failure-mode tells, and field-tested fixes for industrial slitter, shear and granulator blades.'
   canonical: 'https://www.industrial-knives.net/troubleshooting-premature-wear/'
-image: '/images/og/troubleshooting-premature-wear.png'
+image: '/images/og/troubleshooting-premature-wear.webp'
 ---
 
 Premature wear is the most-asked-about problem on a converting or fabrication line, and it is also the most-misdiagnosed. The knife that "wore out" almost always failed for one of five reasons — substrate mismatch, edge prep error, heat-treat quality, re-grind damage, or line-side operating conditions — and the visual tells are different for each. This guide gives you a 10-minute diagnostic flow that will land on the right root cause roughly 90 % of the time, and the corrective action for each.

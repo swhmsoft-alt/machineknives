@@ -16,7 +16,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'A European non-woven producer slitting 25 gsm spunbond at 600 m/min was getting 4 days from a D2 slitter. The fix was a M2 HSS slitter with TiCN coating. 18 days. The case study walks through the audit, the trial, and the role of abrasive fillers in non-woven wear.'
   canonical: 'https://www.industrial-knives.net/case-study-textile-nonwoven-slitter/'
-image: '/images/og/case-study-textile-nonwoven-slitter.png'
+image: '/images/og/case-study-textile-nonwoven-slitter.webp'
 ---
 
 In mid-2025 our European distributor called about a non-woven producer slitting 25 gsm spunbond polypropylene for hygiene applications (baby diaper top sheet, femcare coverstock). The customer was getting 4 days from a D2 slitter, with progressive wear on the leading edge. The line was a 1,200 mm-wide slitter running 600 m/min, 24/6, throughput 1,500 kg/day. The non-woven had a calcium carbonate (CaCO₃) filler at 2–3 % by weight, which made it more abrasive than neat PP. Blade consumption was the largest consumable cost on the line. This case study walks through the audit, the trial, and the result.

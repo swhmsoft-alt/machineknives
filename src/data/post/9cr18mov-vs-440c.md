@@ -17,7 +17,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: '9Cr18MoV vs 440C for industrial stainless machine knives. Chemistry, corrosion resistance, achievable hardness, wear, edge retention. Side-by-side comparison from Industrial Knives engineering.'
   canonical: 'https://www.industrial-knives.net/9cr18mov-vs-440c/'
-image: '/images/og/9cr18mov-vs-440c.png'
+image: '/images/og/9cr18mov-vs-440c.webp'
 ---
 
 For industrial cutting applications where corrosion resistance matters — food processing, medical device manufacturing, wet-end converting, marine environments — the question is almost always "9Cr18MoV or 440C?" Both are high-carbon martensitic stainless steels hardened to HRC 56–60, both are magnetic, both resist mild organic acids and food residues. But the GB-standard 9Cr18MoV (≈ DIN 1.4112 / X90CrMoV18 / AISI 440B modified) carries 1–1.3 % Mo and 0.1–0.2 % V that 440C does not have, and that small chemistry difference shifts the trade-off in a meaningful direction.

@@ -11,7 +11,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of adhesive wear in industrial cutting: loss of knife material when micro-welds between the edge and the substrate fracture at the knife side, not the substrate side.'
   canonical: 'https://www.industrial-knives.net/glossary/adhesive-wear/'
-image: '/images/og/glossary-adhesive-wear.png'
+image: '/images/og/glossary-adhesive-wear.webp'
 ---
 
 **Adhesive Wear** is the loss of knife material when micro-welds formed between the cutting edge and the substrate fracture on the knife side rather than the substrate side. Adhesive wear is the mechanism behind built-up edge, and it accelerates at higher temperatures and on softer substrates.

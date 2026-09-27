@@ -61,7 +61,7 @@ const postCollection = defineCollection({
       .max(160, 'excerpt too long (Google truncates > 160 chars)'),
     image: z
       .string()
-      .regex(/^\/images\/og\/[a-z0-9-]+\.png$/, 'image must point at /images/og/<slug>.png'),
+      .regex(/^\/images\/og\/[a-z0-9-]+\.(png|webp)$/, 'image must point at /images/og/<slug>.{png,webp}'),
 
     category: z.string().optional(),
     tags: z.array(z.string()).optional(),

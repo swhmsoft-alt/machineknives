@@ -14,7 +14,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Industrial blade chipping — definition, four root causes, the role of edge hone and hardness, and how to diagnose and fix chipping on slitter, shear and granulator blades.'
   canonical: 'https://www.industrial-knives.net/glossary/chipping/'
-image: '/images/og/glossary-chipping.png'
+image: '/images/og/glossary-chipping.webp'
 ---
 
 **Chipping** is the loss of small fragments of material from the cutting edge of an industrial blade. Chipping is distinct from wear (which is a gradual loss of edge material) and from gross fracture (which is a catastrophic break of the whole knife). Chipping is the failure mode that turns a "worn-out" knife into a "scrap" knife.

@@ -1,20 +1,24 @@
 // scripts/og-image-generator.mjs
 // ─────────────────────────────────────────────────────────────────────────────
-// Auto-generates 1200×630 PNG OG cards for every blog post in
-// src/data/post/, writes them to public/images/og/<slug>.png, and wires
+// Auto-generates 1200×630 WebP OG cards for every blog post in
+// src/data/post/, writes them to public/images/og/<slug>.webp, and wires
 // them into each post's frontmatter `image:` field.
 //
-// Uses sharp's SVG → PNG pipeline (librsvg) with system sans-serif fonts
+// Uses sharp's SVG → WebP pipeline (librsvg) with system sans-serif fonts
 // (Arial / Segoe UI). Deterministic, brand-consistent template that
 // scales across article / glossary / comparison types by varying the eyebrow
-// label and category strip.
+// label, category strip and accent palette.
+//
+// WebP chosen over PNG: ~25–30% smaller files at equivalent visual quality,
+// universal modern browser support, and Twitter/Facebook/LinkedIn crawlers
+// all handle WebP OG cards as of 2023+.
 //
 // Frontmatter hook: writes / updates the `image:` field on each post with
 // the public-relative path. SinglePost's hero <Image> + any OpenGraph
 // consumer picks the generated card up.
 //
-// Idempotency: skips posts whose image: already points at the right PNG
-// and that PNG exists on disk. To force regenerate, pass --force.
+// Idempotency: skips posts whose image: already points at the right WebP
+// and that WebP exists on disk. To force regenerate, pass --force.
 //
 // Usage:
 //   node scripts/og-image-generator.mjs            # only missing
@@ -28,6 +32,10 @@ const ROOT = process.cwd();
 const POSTS_DIR = path.join(ROOT, 'src', 'data', 'post');
 const OG_DIR = path.join(ROOT, 'public', 'images', 'og');
 const FORCE = process.argv.includes('--force');
+// --slug <name>: only process this one post (used by new-blog-post.mjs).
+// If omitted, processes every .md/.mdx in POSTS_DIR.
+const SLUG_ARG_INDEX = process.argv.indexOf('--slug');
+const SLUG_ONLY = SLUG_ARG_INDEX > -1 ? process.argv[SLUG_ARG_INDEX + 1] : null;
 
 // Brand palette (kept in sync with src/components/CustomStyles.astro).
 // Dark "industrial glassmorphism" theme: deep navy → indigo gradient
@@ -323,14 +331,23 @@ function buildSvg(post) {
 // ─── Main loop ───────────────────────────────────────────────────────────
 fs.mkdirSync(OG_DIR, { recursive: true });
 
-const postFiles = fs.readdirSync(POSTS_DIR).filter((f) => f.endsWith('.md') || f.endsWith('.mdx'));
+let postFiles = fs.readdirSync(POSTS_DIR).filter((f) => f.endsWith('.md') || f.endsWith('.mdx'));
+if (SLUG_ONLY) {
+  const target = `${SLUG_ONLY}.md`;
+  if (!postFiles.includes(target)) {
+    console.error(`[og] --slug ${SLUG_ONLY}: no such file ${POSTS_DIR}/${target}`);
+    process.exit(1);
+  }
+  postFiles = [target];
+  console.log(`[og] single-file mode: ${target}`);
+}
 const log = { generated: 0, skipped: 0, errors: 0, filesChanged: [] };
 
 for (const f of postFiles) {
   const fullPath = path.join(POSTS_DIR, f);
   const slug = f.replace(/\.(md|mdx)$/, '');
-  const outPath = path.join(OG_DIR, `${slug}.png`);
-  const relativeImagePath = `/images/og/${slug}.png`;
+  const outPath = path.join(OG_DIR, `${slug}.webp`);
+  const relativeImagePath = `/images/og/${slug}.webp`;
 
   let raw;
   try {
@@ -346,11 +363,21 @@ for (const f of postFiles) {
     continue;
   }
 
-  // Idempotency: skip if PNG exists AND frontmatter already points at it.
+  // Idempotency: skip if WebP exists AND frontmatter already points at it.
   if (!FORCE && fs.existsSync(outPath) && fs.statSync(outPath).size > 0) {
     if (fm.image === relativeImagePath) {
       log.skipped++;
       continue;
+    }
+  }
+
+  // Clean up legacy PNG if it exists from earlier PNG-era generation.
+  const legacyPngPath = path.join(OG_DIR, `${slug}.png`);
+  if (fs.existsSync(legacyPngPath)) {
+    try {
+      fs.unlinkSync(legacyPngPath);
+    } catch (e) {
+      // best-effort cleanup
     }
   }
 
@@ -361,7 +388,9 @@ for (const f of postFiles) {
   });
 
   try {
-    const buf = await sharp(Buffer.from(svg)).png({ compressionLevel: 9 }).toBuffer();
+    const buf = await sharp(Buffer.from(svg))
+      .webp({ quality: 90, effort: 6 })
+      .toBuffer();
     fs.writeFileSync(outPath, buf);
 
     if (fm.image !== relativeImagePath) {

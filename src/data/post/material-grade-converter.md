@@ -22,7 +22,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Cross-reference table for industrial blade steel and carbide grades. ASTM/AISI, JIS, DIN/EN/W.-Nr., GB, BS, AFNOR, UNI, SS and UNE equivalents for cold-work, HSS, stainless and tungsten carbide.'
   canonical: 'https://www.industrial-knives.net/material-grade-converter/'
-image: '/images/og/material-grade-converter.png'
+image: '/images/og/material-grade-converter.webp'
 ---
 
 When a European customer asks for "W.-Nr. 1.2379", a Chinese customer asks for "Cr12Mo1V1", and a Japanese customer asks for "SKD11", they are almost always asking for the same steel. The international cross-reference is not perfect — there are subtle chemistry and heat-treat differences between equivalent grades from different national systems — but for industrial blade specification it is accurate enough that a single chemistry target can be quoted against any of the four major national systems.

@@ -14,7 +14,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Edge chipping on a paper slitter: 10-minute field diagnostic flowchart. Visual inspection, dimensional check, hardness test, line-side audit, corrective action by root cause.'
   canonical: 'https://www.industrial-knives.net/troubleshooting-edge-chipping-paper-slitter/'
-image: '/images/og/troubleshooting-edge-chipping-paper-slitter.png'
+image: '/images/og/troubleshooting-edge-chipping-paper-slitter.webp'
 ---
 
 Edge chipping is the single most-asked-about failure mode on a paper slitter. The question is always "my knife is chipping, what should I do?" The honest answer is "look at the chip, then look at the line" — the visual tells and the line conditions together land on the right root cause in under 10 minutes. This post is the diagnostic flow we ship to customers who call with a chipping knife.

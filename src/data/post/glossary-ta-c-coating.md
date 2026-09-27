@@ -11,7 +11,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of ta-C (tetrahedral amorphous carbon) PVD coating for industrial blades: a harder, lower-friction variant of DLC, ideal for aluminium foil and medical cutting.'
   canonical: 'https://www.industrial-knives.net/glossary/ta-c-coating/'
-image: '/images/og/glossary-ta-c-coating.png'
+image: '/images/og/glossary-ta-c-coating.webp'
 ---
 
 **Ta-C coating** Tetrahedral Amorphous Carbon (ta-C) is a high-density DLC variant with 50–90 % sp³ (diamond-like) bonding, giving it higher hardness (3,000–6,000 HV) than standard DLC and an even lower coefficient of friction (0.05–0.10). Applied by filtered cathodic vacuum arc (FCVA) at room temperature to 200 °C, 0.5–2 µm thick.

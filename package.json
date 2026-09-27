@@ -22,6 +22,7 @@
     "precommit": "node scripts/check-unicode.mjs",
     "query:audit": "node scripts/audit-query-acquisition.mjs",
     "fix": "npm run fix:eslint && npm run fix:prettier",
+    "new:blog": "node scripts/new-blog-post.mjs",
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier -w .",
     "fix:unicode": "node scripts/fix-unicode.mjs",

@@ -14,7 +14,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Doctor blades see high-speed scraping, ink chemistry and metrology-grade edge geometry. The wrong steel grade produces streaking, ghosting, or a 20 % scrap rate. This guide walks through the substrate, the ink, the line speed, the steel grade and the edge prep for flexo, gravure and coating lines.'
   canonical: 'https://www.industrial-knives.net/selection-guide-doctor-blade-printing/'
-image: '/images/og/selection-guide-doctor-blade-printing.png'
+image: '/images/og/selection-guide-doctor-blade-printing.webp'
 ---
 
 Doctor blades are precision scraping tools in flexo, gravure and coating lines. They remove excess ink or coating from the anilox roll or cylinder, leaving a precisely metered film. Edge tolerance is ± 1 µm at 50–800 m/min.

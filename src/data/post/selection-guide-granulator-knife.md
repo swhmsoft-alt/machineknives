@@ -17,7 +17,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'How to choose a granulator knife for plastics recycling: rotor / bed / screen / wear-strip. Substrate by polymer family, grade, geometry, edge prep and field guidance.'
   canonical: 'https://www.industrial-knives.net/selection-guide-granulator-knife/'
-image: '/images/og/selection-guide-granulator-knife.png'
+image: '/images/og/selection-guide-granulator-knife.webp'
 ---
 
 Granulator knives are the most-impact-loaded industrial blades in routine use. They see contamination (metal, sand, foreign polymer), abrasive fillers (glass fibre, mineral, carbon black), and rotor speeds of 400–800 rpm. Get the grade, the geometry or the gap wrong, and the knife chips in days. Get them right, and the same knife runs 3–6 months.

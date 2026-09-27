@@ -18,7 +18,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'An Indian pharma converter cutting 50 µm 304 stainless foil at 80 m/min was getting 7 days from a D2 slitter. The fix was a 9Cr18MoV stainless slitter. 35 days. The case study walks through the audit, the trial, and the FDA / GMP compliance angle.'
   canonical: 'https://www.industrial-knives.net/case-study-pharma-blade-stainless/'
-image: '/images/og/case-study-pharma-blade-stainless.png'
+image: '/images/og/case-study-pharma-blade-stainless.webp'
 ---
 
 In mid-2024 our Indian distributor called about a pharma converter cutting 50 µm 304 stainless foil for blister-pack tooling. The customer was getting 7 days from a D2 upper slitter, with progressive rust on the surface. The line was 600 mm wide, 80 m/min, 16 h/day, 6 days/week, in a Class 100,000 cleanroom with weekly washdown.

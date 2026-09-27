@@ -11,7 +11,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of abrasive wear in industrial cutting: loss of knife material by hard particles in the substrate ploughing or cutting into the edge.'
   canonical: 'https://www.industrial-knives.net/glossary/abrasive-wear/'
-image: '/images/og/glossary-abrasive-wear.png'
+image: '/images/og/glossary-abrasive-wear.webp'
 ---
 
 **Abrasive Wear** is the loss of knife material by hard particles in the substrate (glass fibre, mineral filler, sand, recycled contaminants) ploughing or micro-cutting into the edge. Abrasive wear is the dominant mechanism on most industrial cutting lines and is the variable that PVD coatings, hone, and steel grade upgrades are designed to address.

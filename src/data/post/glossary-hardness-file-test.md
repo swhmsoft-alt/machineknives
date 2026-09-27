@@ -11,7 +11,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of the hardness file test in industrial blade quality control: a quick, portable method for verifying blade hardness using calibrated files, the 5-point convention, and the limits of the test.'
   canonical: 'https://www.industrial-knives.net/glossary/hardness-file-test/'
-image: '/images/og/glossary-hardness-file-test.png'
+image: '/images/og/glossary-hardness-file-test.webp'
 ---
 
 **Hardness File Test** is a quick, portable method for verifying the hardness of a heat-treated knife, using a set of calibrated files of known HRC values. The test is the standard quality-control check for slitter, shear and granulator blades.

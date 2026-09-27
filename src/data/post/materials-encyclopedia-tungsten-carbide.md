@@ -15,7 +15,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Cemented tungsten carbide (WC-Co) — composition, ISO 513 classification, hardness, applications, grades (YG6X, YG8, YG10X, YG15). The reference entry for carbide industrial blades.'
   canonical: 'https://www.industrial-knives.net/materials-encyclopedia/tungsten-carbide/'
-image: '/images/og/materials-encyclopedia-tungsten-carbide.png'
+image: '/images/og/materials-encyclopedia-tungsten-carbide.webp'
 ---
 
 Cemented tungsten carbide is a powder-metallurgy composite of tungsten carbide (WC) grains bonded by a cobalt (Co) matrix. It is the standard material for industrial blades that face abrasive substrates, high-impact events, or very long service intervals.

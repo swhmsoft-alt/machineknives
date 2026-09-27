@@ -11,7 +11,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of lip angle in industrial cutting: the angle of the cutting edge of a granulator rotor knife, equivalent to the rake angle on a slitter.'
   canonical: 'https://www.industrial-knives.net/glossary/lip-angle/'
-image: '/images/og/glossary-lip-angle.png'
+image: '/images/og/glossary-lip-angle.webp'
 ---
 
 **Lip Angle** is the angle of the cutting edge of a granulator rotor knife, equivalent to the rake angle on a slitter or shear blade. A positive lip angle "scoops" material into the cut; a zero or slightly negative lip angle "pushes" material through the cut.

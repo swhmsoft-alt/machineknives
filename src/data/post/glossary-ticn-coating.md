@@ -11,7 +11,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of TiCN (Titanium Carbonitride) PVD coating for industrial blades: a harder and more wear-resistant variant of TiN, ideal for abrasive substrates.'
   canonical: 'https://www.industrial-knives.net/glossary/ticn-coating/'
-image: '/images/og/glossary-ticn-coating.png'
+image: '/images/og/glossary-ticn-coating.webp'
 ---
 
 **TiCN coating** Titanium Carbonitride (TiCN) is a PVD ceramic coating, harder and more wear-resistant than TiN, with a blue-grey colour. Applied at 400–500 °C, 2–4 µm thick. The carbon content in the coating structure gives TiCN a higher hardness (2,800 HV vs 2,300 HV) and lower friction than TiN.

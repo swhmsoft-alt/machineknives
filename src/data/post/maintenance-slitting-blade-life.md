@@ -17,7 +17,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'How to extend the service life of a slitting machine blade: seven variables from substrate to edge prep to in-process care. Field-tested guidance from Industrial Knives engineering.'
   canonical: 'https://www.industrial-knives.net/maintenance-slitting-blade-life/'
-image: '/images/og/maintenance-slitting-blade-life.png'
+image: '/images/og/maintenance-slitting-blade-life.webp'
 ---
 
 The single most-asked question we get from converting-line operators is "how do I make my slitter knife last longer?" The honest answer is that service life is not a single number — it is the product of seven variables, and the cheapest way to extend it is almost always to fix the variable that is currently limiting the run. This post walks through the seven variables in the order they are most often missed, the re-grind cycle that turns a worn knife into a sharp one without destroying the geometry, and the in-process habits that double the life of a typical slitter.

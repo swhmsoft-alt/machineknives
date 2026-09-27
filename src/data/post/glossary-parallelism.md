@@ -11,7 +11,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of parallelism in industrial blade measurement: the difference between two parallel reference surfaces of a knife, and how parallelism affects cut quality on a slitter or shear.'
   canonical: 'https://www.industrial-knives.net/glossary/parallelism/'
-image: '/images/og/glossary-parallelism.png'
+image: '/images/og/glossary-parallelism.webp'
 ---
 
 **Parallelism** is the difference between two parallel reference surfaces of a knife, measured in millimetres. On a slitter, parallelism is the difference between the two side faces; on a shear, it is the difference between the cutting face and the back face of the upper or lower blade.

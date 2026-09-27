@@ -14,7 +14,7 @@ author: 'Industrial Knives Engineering'
 metadata:
   description: 'Preventive maintenance schedule for industrial blades: daily / weekly / monthly / quarterly checks, inspection form, parts replacement plan, line-side measurements that drive knife life.'
   canonical: 'https://www.industrial-knives.net/maintenance-preventive-schedule/'
-image: '/images/og/maintenance-preventive-schedule.png'
+image: '/images/og/maintenance-preventive-schedule.webp'
 ---
 
 A preventive maintenance schedule for industrial blades is not about replacing knives on a fixed interval — it is about catching the symptoms that predict a failure before the line trips. The 80 % of premature blade failures we see in the field show up as a measurable symptom days or weeks before the line stops. A good PM schedule catches the symptom and acts on it; a bad PM schedule waits for the failure and then reacts.
