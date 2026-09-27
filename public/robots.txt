@@ -1,2 +1,81 @@
+# ─────────────────────────────────────────────────────────────────────
+# robots.txt —KAIPU machine-knives
+# ─────────────────────────────────────────────────────────────────────
+# Policy summary:
+#   • Default behavior for all crawlers: ALLOW everything except
+#     internal surfaces (/admin/, /lp/, *.json build manifests).
+#   • Search-and-cite AI bots are explicitly allowed (redundant with
+#     the default-allow above, but the explicit rules document intent
+#     and ensure that any future blanket-Disallow edits cannot silently
+#     cut off AI citation).
+#   • Training-only crawlers (CCBot, Google-Extended) are also allowed
+#     to maximize AI visibility. Flip to Disallow if you want to opt
+#     out of model training while still being cited by search bots.
+#
+# Reference: ai-seo-SKILL §"Step 4: AI Bot Access Check".
+# ─────────────────────────────────────────────────────────────────────
+
+# ─── Default policy ──────────────────────────────────────────────────
 User-agent: *
-Disallow:
+Disallow: /admin/
+Disallow: /lp/
+Disallow: /*.json$
+Allow: /
+
+# ─── AI search-and-cite bots (explicit allow) ───────────────────────
+# OpenAI
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: anthropic-ai-extended
+Allow: /
+
+# Google (Gemini + AI Overviews training/extension)
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# ByteDance (Doubao / TikTok AI)
+User-agent: Bytespider
+Allow: /
+
+# Amazon ( Rufus / Q )
+User-agent: Amazonbot
+Allow: /
+
+# Common Crawl —its corpus feeds many LLM training pipelines.
+# ALLOW for inclusion in future model training. To opt out of training
+# while keeping AI citation, change `Allow: /` to `Disallow: /` below.
+User-agent: CCBot
+Allow: /
+
+# ─── Sitemap ─────────────────────────────────────────────────────────
+# Adjust the filename to match what @astrojs/sitemap actually emits
+# (sitemap-index.xml vs sitemap-N.xml vs sitemap.xml) for this build.
+Sitemap: https://www.machine-knives.net/sitemap-index.xml

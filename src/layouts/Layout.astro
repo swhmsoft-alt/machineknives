@@ -88,6 +88,20 @@ const serviceLd = isHome
     <ApplyColorMode />
     <Metadata {...metadata} />
 
+    {/*
+      Open Graph article freshness signals. These are not surfaced by
+      astro-seo's <SEO /> because MetaData exposes them as the optional
+      `dateModified` / `datePublished` props. Render them once at the
+      layout level so any page can opt in via `metadata={...}` without
+      touching individual templates.
+    */}
+    {metadata.dateModified && (
+      <meta property="article:modified_time" content={metadata.dateModified} />
+    )}
+    {metadata.datePublished && (
+      <meta property="article:published_time" content={metadata.datePublished} />
+    )}
+
     <script type="application/ld+json" set:html={JSON.stringify(organizationLd)} />
     <script type="application/ld+json" set:html={JSON.stringify(websiteLd)} />
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />

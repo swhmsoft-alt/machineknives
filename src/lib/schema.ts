@@ -7,8 +7,12 @@
 
 // ─── 路由白名单（基于 src/pages 实际目录）─────────────────────────────────
 // 与 scripts/audit-schema-strict.mjs 中的 SCHEMA_PERMISSIONS 同步。
+// `Article` 在所有内容路由（products / services / industries）都允许：
+// 内容页通常同时承载 Product / Service / Industry 实体 *和* 描述性 Article
+// 元数据（headline / author / dateModified）。Article schema 不替换主实体，
+// 只是给 AI 引擎一个可直接抽取的、带作者和时间戳的"知识条目"。
 export const SCHEMA_PERMISSIONS = {
-  '/products/':   ['Product', 'CollectionPage', 'BreadcrumbList', 'FAQPage', 'HowTo', 'WebPage', 'ItemList'],
+  '/products/':   ['Product', 'Article', 'CollectionPage', 'BreadcrumbList', 'FAQPage', 'HowTo', 'WebPage', 'ItemList'],
   '/services/':   ['Service', 'Article', 'CollectionPage', 'BreadcrumbList', 'FAQPage', 'HowTo', 'WebPage', 'ItemList'],
   '/industries/': ['Article', 'CollectionPage', 'BreadcrumbList', 'FAQPage', 'WebPage', 'ItemList'],
 } as const;
@@ -163,4 +167,71 @@ export function buildFaqPage(qas: ReadonlyArray<{ q: string; a: string }>): Sche
       acceptedAnswer: { '@type': 'Answer', text: qa.a },
     })),
   };
+}
+
+/**
+ * Build a Schema.org Article entity for AI-extractable metadata on content
+ * pages. Always accompanies the primary entity (Product / Service / etc.)
+ * — Article does NOT replace the primary entity, it adds the
+ * headline / author / dateModified layer that AI engines (ChatGPT,
+ * Perplexity, Google AIO) extract most reliably.
+ *
+ * Author defaults to "KAIPU Engineering" Organization — the engineering
+ * team that authors our content. Per E-E-A-T guidance we use Organization
+ * as the author entity rather than a Person, because individual engineer
+ * names are intentionally not exposed.
+ *
+ * @example
+ * buildArticle({
+ *   headline: 'D2 Bed Knife for Tissue Converting',
+ *   description: 'D2 high-carbon ...',
+ *   dateModified: '2026-09-26',
+ *   author: { name: 'KAIPU Engineering', url: 'https://www.machine-knives.net/about/' },
+ *   url: 'https://www.machine-knives.net/products/straight/bed-knife-tissue/',
+ * })
+ */
+export function buildArticle(opts: {
+  headline: string;
+  description?: string;
+  dateModified?: string;
+  datePublished?: string;
+  /** Optional ISO 8601 string. Falls back to dateModified. */
+  inLanguage?: string;
+  author?: { name: string; url?: string };
+  publisher?: { name: string; logoUrl?: string };
+  url?: string;
+  image?: string;
+  /** A Schema.org @type describing what this Article is about (e.g. "Product", "Service"). */
+  about?: { '@type': string; [key: string]: unknown };
+}): SchemaEntity {
+  const authorEntity = opts.author
+    ? {
+        '@type': 'Organization',
+        name: opts.author.name,
+        ...(opts.author.url ? { url: opts.author.url } : {}),
+      }
+    : { '@type': 'Organization', name: 'KAIPU Engineering' };
+
+  const publisherEntity = opts.publisher
+    ? {
+        '@type': 'Organization',
+        name: opts.publisher.name,
+        ...(opts.publisher.logoUrl ? { logo: { '@type': 'ImageObject', url: opts.publisher.logoUrl } } : {}),
+      }
+    : { '@type': 'Organization', name: 'KAIPU' };
+
+  const entity: SchemaEntity = {
+    '@type': 'Article',
+    headline: opts.headline,
+  };
+  if (opts.description) entity.description = opts.description;
+  if (opts.dateModified) entity.dateModified = opts.dateModified;
+  if (opts.datePublished) entity.datePublished = opts.datePublished;
+  if (opts.inLanguage) entity.inLanguage = opts.inLanguage;
+  if (opts.url) entity.mainEntityOfPage = { '@type': 'WebPage', '@id': opts.url };
+  if (opts.image) entity.image = opts.image;
+  entity.author = authorEntity;
+  entity.publisher = publisherEntity;
+  if (opts.about) entity.about = opts.about as SchemaEntity;
+  return entity;
 }

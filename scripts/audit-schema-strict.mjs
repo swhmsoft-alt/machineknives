@@ -9,7 +9,7 @@ import { glob } from 'glob';
 
 // ─── 路由白名单（基于 src/pages 实际目录）─────────────────────────────────
 const SCHEMA_PERMISSIONS = {
-  '/products/':   ['Product', 'CollectionPage', 'BreadcrumbList', 'FAQPage', 'HowTo', 'WebPage', 'ItemList'],
+  '/products/':   ['Product', 'Article', 'CollectionPage', 'BreadcrumbList', 'FAQPage', 'HowTo', 'WebPage', 'ItemList'],
   '/services/':   ['Service', 'Article', 'CollectionPage', 'BreadcrumbList', 'FAQPage', 'HowTo', 'WebPage', 'ItemList'],
   '/industries/': ['Article', 'CollectionPage', 'BreadcrumbList', 'FAQPage', 'WebPage', 'ItemList'],
 };

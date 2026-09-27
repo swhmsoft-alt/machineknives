@@ -1,0 +1,2191 @@
+[
+  {
+    "file": "17-4ph.md",
+    "title": "17-4 PH Precipitation-Hardening Martensitic Stainless Steel",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "17-4PH",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 40,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 161
+  },
+  {
+    "file": "420.md",
+    "title": "AISI 420 Martensitic Stainless Steel",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "420",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 37,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 143
+  },
+  {
+    "file": "440a.md",
+    "title": "AISI 440A Martensitic Stainless Steel",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "440A",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 38,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 128
+  },
+  {
+    "file": "440b.md",
+    "title": "AISI 440B Martensitic Stainless Steel",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "440B",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 38,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 122
+  },
+  {
+    "file": "6crw2si.md",
+    "title": "GB 6CrW2Si Hot-Work Tool Steel",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "6CrW2Si",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 41,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 135
+  },
+  {
+    "file": "9cr18mov-vs-440c.md",
+    "title": "9Cr18MoV vs 440C: Stainless Steel for Industrial Machine Knives",
+    "type": "article",
+    "category": "material-comparison",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "9Cr18MoV",
+      "440C",
+      "X90CrMoV18",
+      "1.4112",
+      "stainless steel blade",
+      "corrosion-resistant knife",
+      "food processing blade",
+      "medical blade"
+    ],
+    "excerpt_len": 256,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 1370
+  },
+  {
+    "file": "a2.md",
+    "title": "AISI A2 Air-Hardening Cold-Work Tool Steel",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "A2",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 36,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 151
+  },
+  {
+    "file": "a6.md",
+    "title": "AISI A6 Air-Hardening Cold-Work Tool Steel",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "A6",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 36,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 136
+  },
+  {
+    "file": "a8.md",
+    "title": "AISI A8 Air-Hardening Cold-Work Tool Steel",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "A8",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 36,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 135
+  },
+  {
+    "file": "asp2060.md",
+    "title": "ASP 2060 (PM High-Speed Steel, 8% Co, 4% V)",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "ASP 2060",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 42,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 151
+  },
+  {
+    "file": "case-study-aluminum-foil-slitter.md",
+    "title": "Case Study: Aluminium Foil Slitter Blade Upgrade in Vietnam",
+    "type": "article",
+    "category": "case-studies",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "case study",
+      "aluminium foil",
+      "slitter",
+      "ta-C",
+      "DLC",
+      "welding",
+      "Vietnam",
+      "M2 HSS"
+    ],
+    "excerpt_len": 250,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 853
+  },
+  {
+    "file": "case-study-circular-blades-poland.md",
+    "title": "Case Study: Circular Blades for High-Precision Thin Material in Poland",
+    "type": "article",
+    "category": "case-studies",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "case study",
+      "circular blade",
+      "BOPP film",
+      "slitter",
+      "high-precision cutting",
+      "thin film",
+      "Poland",
+      "D2 tool steel",
+      "M2 high speed steel"
+    ],
+    "excerpt_len": 365,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 1626
+  },
+  {
+    "file": "case-study-granulator-rotor-automotive.md",
+    "title": "Case Study: Granulator Rotor Knife Upgrade for Automotive Plastic Recycling",
+    "type": "article",
+    "category": "case-studies",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "case study",
+      "granulator",
+      "rotor knife",
+      "bed knife",
+      "automotive recycling",
+      "YG15",
+      "YG10X",
+      "Germany"
+    ],
+    "excerpt_len": 323,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 1870
+  },
+  {
+    "file": "case-study-pharma-blade-stainless.md",
+    "title": "Case Study: Pharmaceutical Slitter Blade for Stainless Foil in India",
+    "type": "article",
+    "category": "case-studies",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "case study",
+      "pharmaceutical",
+      "stainless foil",
+      "304 stainless",
+      "slitter blade",
+      "9Cr18MoV",
+      "440C",
+      "India",
+      "FDA"
+    ],
+    "excerpt_len": 247,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 938
+  },
+  {
+    "file": "case-study-shear-stainless-turkey.md",
+    "title": "Case Study: Shear Blade for Stainless Steel Plate in Turkey",
+    "type": "article",
+    "category": "case-studies",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "case study",
+      "shear blade",
+      "stainless steel",
+      "304 stainless",
+      "Turkey",
+      "service centre",
+      "M2 HSS",
+      "TiN coating"
+    ],
+    "excerpt_len": 285,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 1734
+  },
+  {
+    "file": "case-study-textile-nonwoven-slitter.md",
+    "title": "Case Study: Non-Woven Textile Slitter Blade Upgrade for Hygiene Application",
+    "type": "article",
+    "category": "case-studies",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "case study",
+      "non-woven",
+      "spunbond",
+      "textile slitter",
+      "M2 HSS",
+      "TiCN coating",
+      "hygiene"
+    ],
+    "excerpt_len": 265,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 979
+  },
+  {
+    "file": "coatings-comparison.md",
+    "title": "PVD Coating Comparison Table for Industrial Blades",
+    "type": "comparison",
+    "category": "coatings-comparison",
+    "publishDate": "2026-09-18",
+    "updateDate": "2026-09-18",
+    "author": "KAIPU Engineering",
+    "tags": [
+      "PVD coating",
+      "TiN",
+      "TiCN",
+      "CrN",
+      "AlCrN",
+      "TiAlN",
+      "DLC",
+      "CrAlN",
+      "blade coating",
+      "industrial knives"
+    ],
+    "excerpt_len": 233,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 1777
+  },
+  {
+    "file": "d2-vs-skd11.md",
+    "title": "D2 vs SKD11: Are They Really the Same Steel?",
+    "type": "article",
+    "category": "material-comparison",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "D2 tool steel",
+      "SKD11",
+      "DC53",
+      "1.2379",
+      "Cr12Mo1V1",
+      "cold work tool steel",
+      "industrial knives"
+    ],
+    "excerpt_len": 249,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 1428
+  },
+  {
+    "file": "d3.md",
+    "title": "AISI D3 High-Carbon, High-Chromium Cold-Work Tool Steel",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "D3",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 36,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 160
+  },
+  {
+    "file": "d4.md",
+    "title": "AISI D4 High-Carbon, High-Chromium + Tungsten Cold-Work Tool Steel",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "D4",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 36,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 136
+  },
+  {
+    "file": "d5.md",
+    "title": "AISI D5 High-Carbon, High-Chromium + Molybdenum Cold-Work Tool Steel",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "D5",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 36,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 141
+  },
+  {
+    "file": "d7.md",
+    "title": "AISI D7 High-Carbon, High-Chromium + Vanadium Cold-Work Tool Steel",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "D7",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 36,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 150
+  },
+  {
+    "file": "dc53.md",
+    "title": "Daido DC53 Refined Cold-Work Tool Steel",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "DC53",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 38,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 151
+  },
+  {
+    "file": "glossary-abrasive-wear.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "abrasive wear"
+    ],
+    "excerpt_len": 144,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 129
+  },
+  {
+    "file": "glossary-adhesive-wear.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "adhesive wear"
+    ],
+    "excerpt_len": 177,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 113
+  },
+  {
+    "file": "glossary-alcrn-coating.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "AlCrN coating"
+    ],
+    "excerpt_len": 174,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 134
+  },
+  {
+    "file": "glossary-built-up-edge.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "built-up edge"
+    ],
+    "excerpt_len": 197,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 162
+  },
+  {
+    "file": "glossary-burr.md",
+    "title": "Burr 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "burr",
+      "edge quality",
+      "slitter blade",
+      "shear blade"
+    ],
+    "excerpt_len": 194,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 357
+  },
+  {
+    "file": "glossary-chipping.md",
+    "title": "Chipping 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "chipping",
+      "edge failure",
+      "blade toughness",
+      "impact load"
+    ],
+    "excerpt_len": 189,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 358
+  },
+  {
+    "file": "glossary-clearance-angle.md",
+    "title": "Clearance Angle 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "clearance angle",
+      "relief angle",
+      "blade geometry",
+      "edge prep"
+    ],
+    "excerpt_len": 206,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 445
+  },
+  {
+    "file": "glossary-crn-coating.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "CrN coating"
+    ],
+    "excerpt_len": 166,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 132
+  },
+  {
+    "file": "glossary-dead-zone.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "dead zone"
+    ],
+    "excerpt_len": 150,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 133
+  },
+  {
+    "file": "glossary-dlc-coating.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "DLC coating"
+    ],
+    "excerpt_len": 183,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 164
+  },
+  {
+    "file": "glossary-dressing.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "dressing"
+    ],
+    "excerpt_len": 159,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 136
+  },
+  {
+    "file": "glossary-edge-rollover.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "edge rollover"
+    ],
+    "excerpt_len": 187,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 128
+  },
+  {
+    "file": "glossary-fatigue-wear.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "fatigue wear"
+    ],
+    "excerpt_len": 176,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 135
+  },
+  {
+    "file": "glossary-flatness.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "flatness"
+    ],
+    "excerpt_len": 168,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 126
+  },
+  {
+    "file": "glossary-galling.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "galling"
+    ],
+    "excerpt_len": 197,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 152
+  },
+  {
+    "file": "glossary-grit-size.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "grit size"
+    ],
+    "excerpt_len": 192,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 147
+  },
+  {
+    "file": "glossary-gross-fracture.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "gross fracture"
+    ],
+    "excerpt_len": 158,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 154
+  },
+  {
+    "file": "glossary-hardness-file-test.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "hardness file test"
+    ],
+    "excerpt_len": 203,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 159
+  },
+  {
+    "file": "glossary-hone.md",
+    "title": "Hone (Micro-hone) 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "hone",
+      "micro-hone",
+      "edge radius",
+      "edge prep"
+    ],
+    "excerpt_len": 212,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 407
+  },
+  {
+    "file": "glossary-infeed.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "infeed"
+    ],
+    "excerpt_len": 193,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 116
+  },
+  {
+    "file": "glossary-kerf-clearance.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "kerf clearance"
+    ],
+    "excerpt_len": 181,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 133
+  },
+  {
+    "file": "glossary-kerf.md",
+    "title": "Kerf 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "kerf",
+      "cut width",
+      "slitter set-up",
+      "material yield"
+    ],
+    "excerpt_len": 194,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 435
+  },
+  {
+    "file": "glossary-land.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "land"
+    ],
+    "excerpt_len": 174,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 162
+  },
+  {
+    "file": "glossary-lip-angle.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "lip angle"
+    ],
+    "excerpt_len": 148,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 93
+  },
+  {
+    "file": "glossary-micro-chipping.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "micro-chipping"
+    ],
+    "excerpt_len": 171,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 154
+  },
+  {
+    "file": "glossary-nose-radius.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "nose radius"
+    ],
+    "excerpt_len": 119,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 100
+  },
+  {
+    "file": "glossary-parallelism.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "parallelism"
+    ],
+    "excerpt_len": 188,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 127
+  },
+  {
+    "file": "glossary-point-angle.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "point angle"
+    ],
+    "excerpt_len": 148,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 102
+  },
+  {
+    "file": "glossary-primary-bevel.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "primary bevel"
+    ],
+    "excerpt_len": 166,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 114
+  },
+  {
+    "file": "glossary-pvd-coating.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "PVD coating"
+    ],
+    "excerpt_len": 193,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 172
+  },
+  {
+    "file": "glossary-rake-angle.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "rake angle"
+    ],
+    "excerpt_len": 247,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 196
+  },
+  {
+    "file": "glossary-relief.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "relief"
+    ],
+    "excerpt_len": 148,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 138
+  },
+  {
+    "file": "glossary-runout.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "runout"
+    ],
+    "excerpt_len": 164,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 127
+  },
+  {
+    "file": "glossary-secondary-bevel.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "secondary bevel"
+    ],
+    "excerpt_len": 147,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 140
+  },
+  {
+    "file": "glossary-side-clearance.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "side clearance"
+    ],
+    "excerpt_len": 215,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 163
+  },
+  {
+    "file": "glossary-spark-out.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "spark out"
+    ],
+    "excerpt_len": 150,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 108
+  },
+  {
+    "file": "glossary-surface-roughness.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "surface roughness"
+    ],
+    "excerpt_len": 214,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 122
+  },
+  {
+    "file": "glossary-swarf.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "swarf"
+    ],
+    "excerpt_len": 152,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 169
+  },
+  {
+    "file": "glossary-ta-c-coating.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "ta-C coating"
+    ],
+    "excerpt_len": 171,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 147
+  },
+  {
+    "file": "glossary-thermal-fatigue.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "thermal fatigue"
+    ],
+    "excerpt_len": 171,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 146
+  },
+  {
+    "file": "glossary-tialn-coating.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "TiAlN coating"
+    ],
+    "excerpt_len": 168,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 113
+  },
+  {
+    "file": "glossary-ticn-coating.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "TiCN coating"
+    ],
+    "excerpt_len": 157,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 112
+  },
+  {
+    "file": "glossary-tin-coating.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "TiN coating"
+    ],
+    "excerpt_len": 198,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 147
+  },
+  {
+    "file": "glossary-wedge-angle.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "wedge angle"
+    ],
+    "excerpt_len": 177,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 171
+  },
+  {
+    "file": "glossary-wire-edge.md",
+    "title": "undefined 鈥?Industry Glossary Entry",
+    "type": "glossary",
+    "category": "glossary",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "wire edge"
+    ],
+    "excerpt_len": 155,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 164
+  },
+  {
+    "file": "h11.md",
+    "title": "AISI H11 Hot-Work Tool Steel",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "H11",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 37,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 136
+  },
+  {
+    "file": "h13.md",
+    "title": "AISI H13 Hot-Work Tool Steel",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "H13",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 37,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 145
+  },
+  {
+    "file": "hss-vs-carbide.md",
+    "title": "HSS vs Carbide: How to Choose the Right Industrial Blade Material",
+    "type": "article",
+    "category": "material-comparison",
+    "publishDate": "2026-09-18",
+    "updateDate": "2026-09-18",
+    "author": "KAIPU Engineering",
+    "tags": [
+      "HSS",
+      "tungsten carbide",
+      "M2 high speed steel",
+      "M4 high speed steel",
+      "YG6X",
+      "blade material selection",
+      "industrial knives"
+    ],
+    "excerpt_len": 212,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 1420
+  },
+  {
+    "file": "kaipu-5-factor-blade-selection-framework.md",
+    "title": "The KAIPU 5-Factor Blade Selection Framework 鈥?How to Specify the Right Industrial Knife in 30 Minutes",
+    "type": "article",
+    "category": "Engineering",
+    "publishDate": "2026-09-11",
+    "updateDate": "2026-09-11",
+    "author": "KAIPU Engineering",
+    "tags": [
+      "blade selection",
+      "D2 tool steel",
+      "M2 high speed steel",
+      "SKD11",
+      "tungsten carbide",
+      "industrial knives",
+      "slitting blades",
+      "granulator knives",
+      "process engineering"
+    ],
+    "excerpt_len": 185,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 1674
+  },
+  {
+    "file": "m1.md",
+    "title": "AISI M1 Molybdenum High-Speed Steel",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "M1",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 36,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 139
+  },
+  {
+    "file": "m2-vs-m4-hss.md",
+    "title": "M2 vs M4 HSS: Which High-Speed Steel for Your Industrial Blade?",
+    "type": "article",
+    "category": "material-comparison",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "M2 high speed steel",
+      "M4 high speed steel",
+      "HSS",
+      "1.3343",
+      "1.3344",
+      "W6Mo5Cr4V2",
+      "W6Mo5Cr4V4",
+      "slitting blades",
+      "industrial knives"
+    ],
+    "excerpt_len": 271,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 1592
+  },
+  {
+    "file": "m3.md",
+    "title": "AISI M3 Class 1 & Class 2 High-Speed Steel",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "M3",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 36,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 150
+  },
+  {
+    "file": "m35.md",
+    "title": "AISI M35 Cobalt-Bearing High-Speed Steel",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "M35",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 37,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 150
+  },
+  {
+    "file": "m42.md",
+    "title": "AISI M42 Cobalt-Bearing Super High-Speed Steel",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "M42",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 37,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 152
+  },
+  {
+    "file": "m50.md",
+    "title": "AISI M50 High-Speed Steel for Bearings",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "M50",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 37,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 137
+  },
+  {
+    "file": "maintenance-end-of-life-replacement.md",
+    "title": "End-of-Life Replacement: When to Retire an Industrial Blade",
+    "type": "article",
+    "category": "maintenance",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "blade retirement",
+      "knife replacement",
+      "blade life",
+      "blade refurbishment",
+      "end of life"
+    ],
+    "excerpt_len": 193,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 815
+  },
+  {
+    "file": "maintenance-preventive-schedule.md",
+    "title": "Preventive Maintenance Schedule for Industrial Blades: A Practical SOP",
+    "type": "article",
+    "category": "maintenance",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "preventive maintenance",
+      "blade SOP",
+      "inspection form",
+      "line audit",
+      "knife life"
+    ],
+    "excerpt_len": 328,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 1624
+  },
+  {
+    "file": "maintenance-resharpening-service.md",
+    "title": "Re-sharpening Service: How to Outsource Industrial Blade Re-grinding",
+    "type": "article",
+    "category": "maintenance",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "re-sharpening",
+      "re-grinding",
+      "knife service",
+      "blade service",
+      "outsource re-grind",
+      "CBN grinding"
+    ],
+    "excerpt_len": 299,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 1596
+  },
+  {
+    "file": "maintenance-sharpening-frequency.md",
+    "title": "Re-sharpening Frequency: When to Re-grind vs When to Replace",
+    "type": "article",
+    "category": "maintenance",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "re-grinding frequency",
+      "re-grind interval",
+      "re-grind cost",
+      "blade economics",
+      "preventive maintenance"
+    ],
+    "excerpt_len": 253,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 911
+  },
+  {
+    "file": "maintenance-slitting-blade-life.md",
+    "title": "How to Extend the Life of a Slitting Machine Blade",
+    "type": "article",
+    "category": "maintenance",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "slitting blade",
+      "blade life",
+      "blade maintenance",
+      "knife regrinding",
+      "edge preparation",
+      "converting line",
+      "D2 tool steel",
+      "M2 high speed steel"
+    ],
+    "excerpt_len": 305,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 2092
+  },
+  {
+    "file": "maintenance-storage-handling.md",
+    "title": "Knife Storage and Handling: A Practical SOP for Industrial Blades",
+    "type": "article",
+    "category": "maintenance",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "blade storage",
+      "knife handling",
+      "tool crib",
+      "rust prevention",
+      "edge protection"
+    ],
+    "excerpt_len": 268,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 862
+  },
+  {
+    "file": "material-grade-converter.md",
+    "title": "Material Grade Converter: ASTM/AISI 路 JIS 路 DIN/EN 路 GB Steel Cross-Reference",
+    "type": "comparison",
+    "category": "material-grade-converter",
+    "publishDate": "2026-09-18",
+    "updateDate": "2026-09-18",
+    "author": "KAIPU Engineering",
+    "tags": [
+      "material cross reference",
+      "steel grade converter",
+      "AISI D2",
+      "JIS SKD11",
+      "DIN 1.2379",
+      "GB Cr12Mo1V1",
+      "M2 HSS",
+      "9Cr18MoV",
+      "440C",
+      "YG6X",
+      "YG8"
+    ],
+    "excerpt_len": 275,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 2717
+  },
+  {
+    "file": "materials-encyclopedia-440c.md",
+    "title": "AISI 440C Stainless Steel 鈥?Materials Encyclopedia Entry",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "440C",
+      "martensitic stainless",
+      "1.4125",
+      "food contact blade",
+      "9Cr18MoV"
+    ],
+    "excerpt_len": 207,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 212
+  },
+  {
+    "file": "materials-encyclopedia-d2.md",
+    "title": "AISI D2 Tool Steel 鈥?Materials Encyclopedia Entry",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "D2",
+      "cold work tool steel",
+      "Cr12Mo1V1",
+      "1.2379",
+      "industrial knife"
+    ],
+    "excerpt_len": 223,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 202
+  },
+  {
+    "file": "materials-encyclopedia-m2-hss.md",
+    "title": "AISI M2 High-Speed Steel 鈥?Materials Encyclopedia Entry",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "M2 HSS",
+      "high speed steel",
+      "W6Mo5Cr4V2",
+      "1.3343"
+    ],
+    "excerpt_len": 184,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 198
+  },
+  {
+    "file": "materials-encyclopedia-skd11.md",
+    "title": "JIS SKD11 鈥?Materials Encyclopedia Entry",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "SKD11",
+      "JIS",
+      "cold work tool steel",
+      "D2 equivalent"
+    ],
+    "excerpt_len": 210,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 191
+  },
+  {
+    "file": "materials-encyclopedia-tungsten-carbide.md",
+    "title": "Tungsten Carbide (WC-Co) 鈥?Materials Encyclopedia Entry",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "tungsten carbide",
+      "WC-Co",
+      "YG6X",
+      "YG8",
+      "cemented carbide"
+    ],
+    "excerpt_len": 194,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 209
+  },
+  {
+    "file": "o1.md",
+    "title": "AISI O1 Oil-Hardening Cold-Work Tool Steel",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "O1",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 36,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 146
+  },
+  {
+    "file": "selection-guide-corrugated-slitter.md",
+    "title": "How to Choose a Slitter Blade for Corrugated Cardboard",
+    "type": "article",
+    "category": "selection-guide",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "corrugated slitting",
+      "slitter scorer",
+      "corrugated cardboard",
+      "tungsten carbide tipped",
+      "D2",
+      "M2 HSS"
+    ],
+    "excerpt_len": 334,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 918
+  },
+  {
+    "file": "selection-guide-crusher-blade.md",
+    "title": "How to Choose a Crusher Blade for Aggregate, Mining and Recycling",
+    "type": "article",
+    "category": "selection-guide",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "crusher blade",
+      "recycling rotor",
+      "asr",
+      "granulator rotor",
+      "D2",
+      "DC53",
+      "tungsten carbide",
+      "YG15"
+    ],
+    "excerpt_len": 238,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 872
+  },
+  {
+    "file": "selection-guide-doctor-blade-printing.md",
+    "title": "How to Choose a Doctor Blade for Printing and Coating Lines",
+    "type": "article",
+    "category": "selection-guide",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "doctor blade",
+      "flexo printing",
+      "gravure printing",
+      "coating line",
+      "printing blade"
+    ],
+    "excerpt_len": 298,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 750
+  },
+  {
+    "file": "selection-guide-foam-rubber-cutting.md",
+    "title": "How to Choose a Slitter or Shear Blade for Foam and Rubber Cutting",
+    "type": "article",
+    "category": "selection-guide",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "foam cutting",
+      "rubber cutting",
+      "EPDM",
+      "silicone rubber",
+      "polyurethane foam",
+      "slitter blade"
+    ],
+    "excerpt_len": 315,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 835
+  },
+  {
+    "file": "selection-guide-granulator-knife.md",
+    "title": "How to Choose a Granulator Knife for Plastics Recycling",
+    "type": "article",
+    "category": "selection-guide",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "granulator knife",
+      "rotor knife",
+      "bed knife",
+      "plastics recycling",
+      "D2",
+      "DC53",
+      "M2 HSS",
+      "tungsten carbide"
+    ],
+    "excerpt_len": 279,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 1174
+  },
+  {
+    "file": "selection-guide-paper-converting.md",
+    "title": "How to Choose a Slitting Blade for a Paper Converting Line",
+    "type": "article",
+    "category": "selection-guide",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "paper slitting",
+      "paper converting",
+      "slitter blade",
+      "D2",
+      "SKD11",
+      "M2 HSS"
+    ],
+    "excerpt_len": 339,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 1291
+  },
+  {
+    "file": "selection-guide-shear-blade-plate-steel.md",
+    "title": "How to Choose a Shear Blade for Plate Steel (Hot Rolling Mill)",
+    "type": "article",
+    "category": "selection-guide",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "shear blade",
+      "plate steel",
+      "swing beam shear",
+      "guillotine shear",
+      "D2",
+      "M2 HSS",
+      "carbide shear"
+    ],
+    "excerpt_len": 295,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 1675
+  },
+  {
+    "file": "selection-guide-stainless-steel.md",
+    "title": "How to Choose an Industrial Blade for Stainless Steel",
+    "type": "article",
+    "category": "selection-guide",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "stainless steel cutting",
+      "304 stainless",
+      "316 stainless",
+      "430 stainless",
+      "17-4PH",
+      "work hardening",
+      "shear blades",
+      "slitter blades",
+      "blade material selection"
+    ],
+    "excerpt_len": 268,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 1979
+  },
+  {
+    "file": "t1.md",
+    "title": "AISI T1 Tungsten High-Speed Steel",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "T1",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 36,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 152
+  },
+  {
+    "file": "t15.md",
+    "title": "AISI T15 Cobalt-Bearing Tungsten Super High-Speed Steel",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "T15",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 37,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 153
+  },
+  {
+    "file": "troubleshooting-burr-growth.md",
+    "title": "Burr Growth Diagnosis: Why Your Slitter Knife Is Producing Increasing Burr",
+    "type": "article",
+    "category": "troubleshooting",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "burr growth",
+      "slitter troubleshooting",
+      "blade wear",
+      "hone growth",
+      "substrate variation"
+    ],
+    "excerpt_len": 267,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 907
+  },
+  {
+    "file": "troubleshooting-edge-chipping-paper-slitter.md",
+    "title": "Edge Chipping Diagnosis on a Paper Slitter: A Field Flowchart",
+    "type": "article",
+    "category": "troubleshooting",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "edge chipping",
+      "paper slitter",
+      "blade failure",
+      "diagnosis",
+      "troubleshooting"
+    ],
+    "excerpt_len": 228,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 1350
+  },
+  {
+    "file": "troubleshooting-premature-wear.md",
+    "title": "Why Is My Machine Blade Wearing Out Too Fast?",
+    "type": "article",
+    "category": "troubleshooting",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "premature blade wear",
+      "troubleshooting",
+      "blade failure",
+      "edge chipping",
+      "heat treat",
+      "regrind",
+      "converting line"
+    ],
+    "excerpt_len": 288,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 1907
+  },
+  {
+    "file": "troubleshooting-shear-blade-cracking.md",
+    "title": "Why Your Shear Blade Keeps Cracking at the Edge",
+    "type": "article",
+    "category": "troubleshooting",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "shear blade cracking",
+      "plate shear",
+      "swing beam shear",
+      "guillotine",
+      "chamfer",
+      "blade gap"
+    ],
+    "excerpt_len": 273,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 1373
+  },
+  {
+    "file": "troubleshooting-thermal-damage.md",
+    "title": "Thermal Damage Diagnosis: When Your Slitter Knife Turns Blue",
+    "type": "article",
+    "category": "troubleshooting",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "thermal damage",
+      "blueing",
+      "edge overheating",
+      "tissue slitter",
+      "high-speed cutting",
+      "cooling"
+    ],
+    "excerpt_len": 201,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 897
+  },
+  {
+    "file": "yg10.md",
+    "title": "GB YG10 Tungsten Carbide (K30)",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "YG10",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 38,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 108
+  },
+  {
+    "file": "yg15.md",
+    "title": "GB YG15 Tungsten Carbide (K30鈥揔40)",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "YG15",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 38,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 112
+  },
+  {
+    "file": "yg6.md",
+    "title": "GB YG6 Tungsten Carbide (K20)",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "YG6",
+      "cold work tool steel",
+      "tool steel",
+      "industrial knife"
+    ],
+    "excerpt_len": 37,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 112
+  },
+  {
+    "file": "yg6x-vs-yg8-carbide.md",
+    "title": "YG6X vs YG8 Tungsten Carbide: Which Grade for Your Industrial Blade?",
+    "type": "article",
+    "category": "material-comparison",
+    "publishDate": "2026-09-18",
+    "updateDate": null,
+    "author": "KAIPU Engineering",
+    "tags": [
+      "YG6X",
+      "YG8",
+      "tungsten carbide",
+      "cemented carbide",
+      "WC-Co",
+      "K20",
+      "K30",
+      "ISO 513",
+      "industrial knives",
+      "granulator knives"
+    ],
+    "excerpt_len": 267,
+    "excerpt_present": true,
+    "description_present": true,
+    "image_present": false,
+    "wordCount": 1481
+  }
+]

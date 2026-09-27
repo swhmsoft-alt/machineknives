@@ -1,0 +1,35 @@
+--- 4 articles ---
+[article/case-studies] case-study-granulator-rotor-automotive.md
+  title: Case Study: Granulator Rotor Knife Upgrade for Automotive Plastic Recycling
+  type=article category=case-studies author=KAIPU Engineering wc=1870 descLen=323
+  publishDate=2026-09-18 image_present=false
+[article/selection-guide] selection-guide-shear-blade-plate-steel.md
+  title: How to Choose a Shear Blade for Plate Steel (Hot Rolling Mill)
+  type=article category=selection-guide author=KAIPU Engineering wc=1675 descLen=295
+  publishDate=2026-09-18 image_present=false
+[article/maintenance] maintenance-slitting-blade-life.md
+  title: How to Extend the Life of a Slitting Machine Blade
+  type=article category=maintenance author=KAIPU Engineering wc=1797 descLen=305
+  publishDate=2026-09-18 image_present=false
+[article/troubleshooting] troubleshooting-premature-wear.md
+  title: Why Is My Machine Blade Wearing Out Too Fast?
+  type=article category=troubleshooting author=KAIPU Engineering wc=1907 descLen=288
+  publishDate=2026-09-18 image_present=false
+
+--- 3 glossary ---
+[glossary/material] materials-encyclopedia-440c.md
+  title: AISI 440C Stainless Steel 鈥?Materials Encyclopedia Entry
+  type=glossary category=materials-encyclopedia author=KAIPU Engineering wc=212 descLen=207
+  publishDate=2026-09-18 image_present=false
+file:///c:/Users/User/Desktop/machineknives/audit-results/_sample.mjs:22
+  console.log(`[${label}] ${pick.file}`);
+                                 ^
+
+TypeError: Cannot read properties of undefined (reading 'file')
+    at pickOne (file:///c:/Users/User/Desktop/machineknives/audit-results/_sample.mjs:22:34)
+    at file:///c:/Users/User/Desktop/machineknives/audit-results/_sample.mjs:37:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:569:25)
+    at async node:internal/modules/esm/loader:650:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:105:5)
+
+Node.js v26.10.0

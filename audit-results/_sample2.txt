@@ -1,0 +1,43 @@
+--- glossary/material (large) ---
+[glossary/material] materials-encyclopedia-440c.md
+  title: AISI 440C Stainless Steel 鈥?Materials Encyclopedia Entry
+  type=glossary category=materials-encyclopedia entityType=material author=KAIPU Engineering wc=212 descLen=207
+  tags=["440C","martensitic stainless","1.4125","food contact blade","9Cr18MoV"]
+
+--- glossary/wear-mode ---
+[glossary/wear-mode] glossary-chipping.md
+  title: Chipping 鈥?Industry Glossary Entry
+  type=glossary category=glossary entityType=term author=KAIPU Engineering wc=358 descLen=189
+  tags=["chipping","edge failure","blade toughness","impact load"]
+
+--- glossary/coating ---
+[glossary/coating] glossary-pvd-coating.md
+  title: undefined 鈥?Industry Glossary Entry
+  type=glossary category=glossary entityType=term author=KAIPU Engineering wc=172 descLen=193
+  tags=["PVD coating"]
+
+--- 2 comparisons ---
+[comparison/all-1] material-grade-converter.md
+  title: Material Grade Converter: ASTM/AISI 路 JIS 路 DIN/EN 路 GB Steel Cross-Reference
+  type=comparison category=material-grade-converter entityType=null author=KAIPU Engineering wc=2717 descLen=275
+  tags=["material cross reference","steel grade converter","AISI D2","JIS SKD11","DIN 1.2379","GB Cr12Mo1V1","M2 HSS","9Cr18MoV","440C","YG6X","YG8"]
+[comparison/all-2] material-grade-converter.md
+  title: Material Grade Converter: ASTM/AISI 路 JIS 路 DIN/EN 路 GB Steel Cross-Reference
+  type=comparison category=material-grade-converter entityType=null author=KAIPU Engineering wc=2717 descLen=275
+  tags=["material cross reference","steel grade converter","AISI D2","JIS SKD11","DIN 1.2379","GB Cr12Mo1V1","M2 HSS","9Cr18MoV","440C","YG6X","YG8"]
+
+--- 1 long-form article for depth ---
+[longest-article] troubleshooting-premature-wear.md
+  title: Why Is My Machine Blade Wearing Out Too Fast?, wc=1907, descLen=288
+
+--- duplicate-title samples (3) ---
+[undef-title] glossary-abrasive-wear.md
+  type=glossary category=glossary wc=129
+[undef-title] glossary-adhesive-wear.md
+  type=glossary category=glossary wc=113
+[undef-title] glossary-alcrn-coating.md
+  type=glossary category=glossary wc=134
+
+--- thinnest articles (wc<400) ---
+[thin-article] case-study-aluminum-foil-slitter.md wc=345 descLen=250
+[thin-article] case-study-textile-nonwoven-slitter.md wc=373 descLen=265

@@ -1,0 +1,524 @@
+{
+  "audit_meta": {
+    "version": "1.0",
+    "round": 1,
+    "scope": "on-page-seo",
+    "audited_at": "2026-09-27",
+    "pages_total_scanned": 50,
+    "blog_sample_size": 10,
+    "findings_total": 13,
+    "method": "static-code-analysis",
+    "method_notes": "No npm run build executed. No production URL fetched. Search Console data not available.",
+    "data_sources": [
+      "src/data/post/*.md (110 files)",
+      "src/pages/**/*.astro (24 files)",
+      "src/components/**/*.astro",
+      "src/lib/schema.ts",
+      "src/navigation.ts",
+      "src/config.yaml",
+      "src/content.config.ts"
+    ]
+  }
+,
+  "findings":[
+  {
+    "id": "F-001",
+    "category": "brand-consistency",
+    "severity": "high",
+    "title": "Brand name conflict: KAIPU vs Industrial Knives",
+    "summary": "config.yaml site.name = \"Industrial Knives\" but KAIPU appears 401 times across 143 files.",
+    "blocking": true,
+    "requires_decision": true
+  },
+  {
+    "id": "F-002",
+    "category": "domain-consistency",
+    "severity": "high",
+    "title": "Domain inconsistency: machine-knives.net vs industrial-knives.net",
+    "summary": "machine-knives.net (legacy) appears 132 times across 128 files; industrial-knives.net (configured) appears only 2 times.",
+    "blocking": true,
+    "requires_decision": false
+  },
+  {
+    "id": "F-003",
+    "category": "metadata-component",
+    "severity": "high",
+    "title": "Unsafe noindex/nofollow default in Metadata.astro",
+    "summary": "noindex/nofollow fallbacks default to true. Site relies on config.yaml metadata.robots.index:true.",
+    "location": "src/components/common/Metadata.astro lines 94-105",
+    "blocking": true,
+    "requires_decision": false
+  },
+  {
+    "id": "F-004",
+    "category": "title-template",
+    "severity": "medium",
+    "title": "Title template doubles up brand suffix",
+    "summary": "Pages with title already containing brand suffix produce doubled titles.",
+    "blocking": false,
+    "requires_decision": false
+  },
+  {
+    "id": "F-005",
+    "category": "image-optimization",
+    "severity": "medium",
+    "title": "Placeholder alt text in production HTML",
+    "summary": "24 alt strings contain \"(placeholder)\" across 14 files.",
+    "blocking": false,
+    "requires_decision": false
+  },
+  {
+    "id": "F-006",
+    "category": "content-quality",
+    "severity": "high",
+    "title": "Glossary \"undefined — Industry Glossary Entry\" title",
+    "summary": "40 of 77 glossary entries share the malformed title from generation script bug.",
+    "metrics": {
+      "affected_files": 40,
+      "type": "glossary"
+    },
+    "blocking": false,
+    "requires_decision": false
+  },
+  {
+    "id": "F-007",
+    "category": "encoding-damage",
+    "severity": "high",
+    "title": "GBK-to-UTF8 encoding damage: em-dash + digit-gap",
+    "summary": "126 occurrences across 16 files. Pattern suggests en-dash ranges with eaten digits.",
+    "blocking": false,
+    "requires_decision": true,
+    "requires_human_input": true
+  },
+  {
+    "id": "F-008",
+    "category": "image-optimization",
+    "severity": "medium",
+    "title": "Raw <img> bypasses Astro <Image />",
+    "summary": "29 raw <img src=...> across 15 .astro files. Skips asset pipeline.",
+    "blocking": false,
+    "requires_decision": false
+  },
+  {
+    "id": "F-009",
+    "category": "performance",
+    "severity": "low",
+    "title": "loading=\"eager\" beyond first-fold",
+    "summary": "20 occurrences across 19 files. Most legitimate.",
+    "blocking": false,
+    "requires_decision": false
+  },
+  {
+    "id": "F-010",
+    "category": "accessibility",
+    "severity": "medium",
+    "title": "404 page has no <h1>",
+    "summary": "src/pages/404.astro uses <h2> for \"404\".",
+    "location": "src/pages/404.astro lines 12-15",
+    "blocking": false,
+    "requires_decision": false
+  },
+  {
+    "id": "F-011",
+    "category": "content-depth",
+    "severity": "high",
+    "title": "65% of blog posts are thin content (<300 words)",
+    "summary": "72/110 <300 words; 0 >3000 words. Mostly materials-encyclopedia + glossary.",
+    "blocking": false,
+    "requires_decision": false
+  },
+  {
+    "id": "F-012",
+    "category": "og-image",
+    "severity": "high",
+    "title": "100% of blog posts lack image: frontmatter field",
+    "summary": "All 110 blog posts have no image: field. OG cards fall back to global default.",
+    "blocking": false,
+    "requires_decision": true
+  },
+  {
+    "id": "F-013",
+    "category": "description-length",
+    "severity": "medium",
+    "title": "Meta description length distribution suboptimal",
+    "summary": "Only 11.8% in 80-160 char range. 24.5% too short, 59.1% too long.",
+    "blocking": false,
+    "requires_decision": false
+  }
+],
+  "content_strategy":{
+  "topic_clusters": [
+    {
+      "slug": "glossary",
+      "post_count": 45,
+      "share_pct": 40.9,
+      "strategic_role": "supporting"
+    },
+    {
+      "slug": "materials-encyclopedia",
+      "post_count": 32,
+      "share_pct": 29.1,
+      "strategic_role": "pillar"
+    },
+    {
+      "slug": "selection-guide",
+      "post_count": 8,
+      "share_pct": 7.3,
+      "strategic_role": "conversion"
+    },
+    {
+      "slug": "case-studies",
+      "post_count": 6,
+      "share_pct": 5.5,
+      "strategic_role": "trust"
+    },
+    {
+      "slug": "maintenance",
+      "post_count": 6,
+      "share_pct": 5.5,
+      "strategic_role": "retention"
+    },
+    {
+      "slug": "material-comparison",
+      "post_count": 5,
+      "share_pct": 4.5,
+      "strategic_role": "comparison"
+    },
+    {
+      "slug": "troubleshooting",
+      "post_count": 5,
+      "share_pct": 4.5,
+      "strategic_role": "support"
+    },
+    {
+      "slug": "coatings-comparison",
+      "post_count": 1,
+      "share_pct": 0.9,
+      "strategic_role": "comparison"
+    },
+    {
+      "slug": "Engineering",
+      "post_count": 1,
+      "share_pct": 0.9,
+      "strategic_role": "orphan-or-misclassified"
+    },
+    {
+      "slug": "material-grade-converter",
+      "post_count": 1,
+      "share_pct": 0.9,
+      "strategic_role": "tool"
+    }
+  ],
+  "word_count_distribution": {
+    "tiny_lt300": 72,
+    "small_300_800": 11,
+    "medium_800_1500": 18,
+    "long_1500_3000": 9,
+    "very_long_3000_plus": 0
+  },
+  "description_length_distribution": {
+    "missing": 0,
+    "short_lt80": 27,
+    "ok_80_160": 13,
+    "long_160_320": 65,
+    "too_long": 5
+  },
+  "stale_post_count": 0,
+  "missing_image_count": 110,
+  "duplicate_titles_count": 1,
+  "duplicate_title_patterns": [
+    {
+      "title": "undefined — Industry Glossary Entry",
+      "count": 40
+    }
+  ],
+  "eeat_signals": {
+    "author_strategy": "single Organization-level author (KAIPU Engineering) — no individual author pages",
+    "source_citations": "limited — only selection-guide posts cite ASTM/JIS/DIN standard numbers",
+    "case_studies_count": 6,
+    "case_studies_target": 20
+  },
+  "cannibalization_groups": [
+    {
+      "pattern": "materials-encyclopedia-*",
+      "count": 25,
+      "slug_set": [
+        "17-4ph.md",
+        "420.md",
+        "440a.md",
+        "d2.md",
+        "h11.md",
+        "m1.md",
+        "o1.md",
+        "t1.md",
+        "yg6.md",
+        "asp2060.md"
+      ]
+    },
+    {
+      "pattern": "glossary-*",
+      "count": 45,
+      "slug_set": [
+        "glossary-chipping.md",
+        "glossary-burr.md",
+        "glossary-hone.md",
+        "glossary-kerf.md"
+      ]
+    },
+    {
+      "pattern": "selection-guide-*",
+      "count": 8,
+      "slug_set": [
+        "selection-guide-paper-converting.md",
+        "selection-guide-doctor-blade-printing.md"
+      ]
+    }
+  ]
+},
+  "sampled_blog":[
+  {
+    "slot": "article/case-studies",
+    "file": "case-study-granulator-rotor-automotive.md",
+    "type": "article",
+    "category": "case-studies",
+    "sampling_reason": "largest article in case-studies cluster (wc=1870)",
+    "round": 1
+  },
+  {
+    "slot": "article/selection-guide",
+    "file": "selection-guide-shear-blade-plate-steel.md",
+    "type": "article",
+    "category": "selection-guide",
+    "sampling_reason": "largest article in selection-guide cluster (wc=1675)",
+    "round": 1
+  },
+  {
+    "slot": "article/maintenance",
+    "file": "maintenance-slitting-blade-life.md",
+    "type": "article",
+    "category": "maintenance",
+    "sampling_reason": "largest article in maintenance cluster (wc=1797)",
+    "round": 1
+  },
+  {
+    "slot": "article/troubleshooting",
+    "file": "troubleshooting-premature-wear.md",
+    "type": "article",
+    "category": "troubleshooting",
+    "sampling_reason": "largest article in troubleshooting cluster (wc=1907, also longest overall)",
+    "round": 1,
+    "known_issues": [
+      "canonical uses legacy domain",
+      "description_len 288 overlong"
+    ]
+  },
+  {
+    "slot": "glossary/material",
+    "file": "materials-encyclopedia-440c.md",
+    "type": "glossary",
+    "category": "materials-encyclopedia",
+    "entityType": "material",
+    "sampling_reason": "representative material entityType (wc=212, thin)",
+    "round": 1
+  },
+  {
+    "slot": "glossary/wear-mode",
+    "file": "glossary-chipping.md",
+    "type": "glossary",
+    "category": "glossary",
+    "entityType": "term",
+    "sampling_reason": "representative wear-mode term (wc=358)",
+    "round": 1
+  },
+  {
+    "slot": "glossary/coating",
+    "file": "glossary-pvd-coating.md",
+    "type": "glossary",
+    "category": "glossary",
+    "entityType": "term",
+    "sampling_reason": "representative coating term (wc=172, also flagged for undefined-title bug)",
+    "round": 1,
+    "known_issues": [
+      "undefined title bug",
+      "thin content wc=172"
+    ]
+  },
+  {
+    "slot": "comparison/material-grade",
+    "file": "material-grade-converter.md",
+    "type": "comparison",
+    "category": "material-grade-converter",
+    "sampling_reason": "pillar comparison content (wc=2717)",
+    "round": 1
+  },
+  {
+    "slot": "comparison/coating",
+    "file": "coatings-comparison.md",
+    "type": "comparison",
+    "category": "coatings-comparison",
+    "sampling_reason": "coatings comparison (paired with material-grade-converter)",
+    "round": 1
+  },
+  {
+    "slot": "flagship-article",
+    "file": "kaipu-5-factor-blade-selection-framework.md",
+    "type": "article",
+    "category": null,
+    "sampling_reason": "flagship internal-link target — most-cited across quality, solutions, industries/index pages",
+    "round": 1,
+    "sampling_status": "metadata_only_in_round1_round2_for_deep_audit"
+  }
+],
+  "roadmap":{
+  "Q1": [
+    {
+      "id": "Q1-1",
+      "task": "Decide canonical brand name (KAIPU vs Industrial Knives)",
+      "estimate": "0.5d",
+      "owner": "business",
+      "blocking_for": [
+        "Q1-2",
+        "Q1-5",
+        "Q1-6"
+      ]
+    },
+    {
+      "id": "Q1-2",
+      "task": "Full-repo brand string consolidation after decision",
+      "estimate": "0.5d",
+      "owner": "engineering",
+      "depends_on": [
+        "Q1-1"
+      ]
+    },
+    {
+      "id": "Q1-3",
+      "task": "Full-repo find/replace machine-knives.net → industrial-knives.net",
+      "estimate": "0.5d",
+      "owner": "engineering"
+    },
+    {
+      "id": "Q1-4",
+      "task": "Fix Metadata.astro fallback defaults (line 99, 105) → false",
+      "estimate": "5min",
+      "owner": "engineering"
+    },
+    {
+      "id": "Q1-5",
+      "task": "Clean up 24 (placeholder) alt strings across 14 files",
+      "estimate": "0.5d",
+      "owner": "content+engineering",
+      "depends_on": [
+        "Q1-1"
+      ]
+    },
+    {
+      "id": "Q1-6",
+      "task": "Encoding damage human review (batch 1: top 10 files)",
+      "estimate": "1-2d",
+      "owner": "product/engineering+content",
+      "depends_on": [
+        "Q1-1"
+      ]
+    }
+  ],
+  "Q2": [
+    {
+      "id": "Q2-1",
+      "task": "Fix 40 glossary \"undefined\" title bug (regenerate or post-process)",
+      "estimate": "0.5d",
+      "owner": "engineering"
+    },
+    {
+      "id": "Q2-2",
+      "task": "Round 2 deep audit + optimization on 10 sampled posts",
+      "estimate": "1w",
+      "owner": "seo+content"
+    },
+    {
+      "id": "Q2-3",
+      "task": "Establish 12-month content refresh calendar",
+      "estimate": "0.5d",
+      "owner": "content_ops"
+    },
+    {
+      "id": "Q2-4",
+      "task": "Migrate hero/case-study raw <img> to <Image /> component",
+      "estimate": "1w",
+      "owner": "engineering"
+    },
+    {
+      "id": "Q2-5",
+      "task": "Build frontmatter CI lint (description length, image required)",
+      "estimate": "1d",
+      "owner": "engineering"
+    },
+    {
+      "id": "Q2-6",
+      "task": "Backfill OG image for all 110 blog posts",
+      "estimate": "2w",
+      "owner": "content+design"
+    }
+  ],
+  "Q3": [
+    {
+      "id": "Q3-1",
+      "task": "Author 6 pillar articles (3000+ words) in selection-guide cluster",
+      "estimate": "4w",
+      "owner": "seo+sme"
+    },
+    {
+      "id": "Q3-2",
+      "task": "Expand case-studies to 20+ posts (with testimonials, quantified outcomes)",
+      "estimate": "continuous",
+      "owner": "sales+content"
+    },
+    {
+      "id": "Q3-3",
+      "task": "Build /authors/[slug] route + 5 named engineer profiles",
+      "estimate": "1w",
+      "owner": "engineering+content"
+    },
+    {
+      "id": "Q3-4",
+      "task": "Close content gaps (6 products × 6 industries × 5 long-tail = 60 keyword matrix)",
+      "estimate": "continuous",
+      "owner": "content"
+    },
+    {
+      "id": "Q3-5",
+      "task": "Cannibalization audit on dist build output",
+      "estimate": "1w",
+      "owner": "seo"
+    }
+  ],
+  "Q4": [
+    {
+      "id": "Q4-1",
+      "task": "Round 2 deep audit (100% blogs + all static pages)",
+      "estimate": "2w",
+      "owner": "seo"
+    },
+    {
+      "id": "Q4-2",
+      "task": "Content ROI tracking (GSC per-URL dashboard)",
+      "estimate": "continuous",
+      "owner": "seo"
+    },
+    {
+      "id": "Q4-3",
+      "task": "Internal link health monitoring (broken, orphan, depth)",
+      "estimate": "continuous",
+      "owner": "seo"
+    },
+    {
+      "id": "Q4-4",
+      "task": "AI search optimization (LLMs.txt expansion, structured data completion)",
+      "estimate": "continuous",
+      "owner": "seo"
+    }
+  ]
+},
+  "open_questions_for_business": ["Canonical brand name: KAIPU Industrial Blades vs Industrial Knives?","Domain strategy: keep industrial-knives.net or revert to machine-knives.net?","OG image strategy: per-post images vs auto-generated from post title?","Author identity: named engineers with LinkedIn vs anonymous \"KAIPU Engineering\"?","Content production budget: 4-6 deep posts per month sustainable?"],
+  "out_of_scope": ["Technical SEO (robots.txt, sitemap, crawlability, CWV, mobile)","Indexability audit (requires Search Console)","Content quality E-E-A-T assessment beyond frontmatter","Backlink audit","Keyword research (search volume, KD, intent classification)","Production schema rendering verification","Real image dimensions / file size analysis","International SEO / hreflang (site is single-locale English)"]
+}

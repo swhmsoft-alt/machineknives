@@ -23,10 +23,10 @@ const lastUpdated = '2026-09-11';
 const publishedDate = '2026-01-15';
 const foundedYear = 2008;
 const yearsInBusiness = new Date().getFullYear() - foundedYear;
-const siteUrl = 'https://kaipu.com';
+const siteUrl = 'https://www.machine-knives.net';
 ---
 
-<Layout metadata={metadata}>
+<Layout metadata={{ ...metadata, dateModified: lastUpdated, datePublished: publishedDate }}>
   <!-- 1. HERO -->
   <Hero
     tagline="Manufacturing Services"
@@ -201,6 +201,23 @@ const siteUrl = 'https://kaipu.com';
     description: 'Custom blade design, CNC grinding, vacuum heat treatment, PVD coating and precision QA under one roof.',
     dateModified: lastUpdated,
     datePublished: publishedDate,
+  })}></script>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Manufacturing Services —From Drawing to Dispatch',
+    description: metadata.description,
+    inLanguage: 'en',
+    datePublished: publishedDate,
+    dateModified: lastUpdated,
+    author: { '@type': 'Organization', name: 'KAIPU Engineering Team', url: siteUrl + '/about/' },
+    publisher: { '@type': 'Organization', name: 'KAIPU' },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': siteUrl + '/services/' },
+    about: {
+      '@type': 'Service',
+      name: 'Custom Industrial Blade Manufacturing',
+      serviceType: 'OEM/ODM blade manufacturing',
+    },
   })}></script>
   <script type="application/ld+json" set:html={JSON.stringify({
     '@context': 'https://schema.org',

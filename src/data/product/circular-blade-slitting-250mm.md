@@ -37,4 +37,4 @@ A standard circular slitting knife for paper, film and foil slitting lines. Manu
 
 Used on centre-surface and centreless winders, on slitter-rewinders for label stock, on tape and foil converting lines, and on paper sheeters.
 
-> TODO —drawing available on request. Lead time for stocked OD sizes is 10 working days; custom OD sizes 20—5 working days.
+> TODO —drawing available on request. Lead time for stocked OD sizes is 10 working days; custom OD sizes 20—[MISSING SPEC: lead time max in working days] working days.

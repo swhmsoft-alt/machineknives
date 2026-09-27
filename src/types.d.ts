@@ -58,6 +58,19 @@ export interface MetaData {
 
   openGraph?: MetaDataOpenGraph;
   twitter?: MetaDataTwitter;
+
+  /**
+   * ISO 8601 datetime when the page content was last substantially updated.
+   * Rendered as Open Graph `article:modified_time` (and consumed by Google
+   * as a content-freshness signal). Optional — pages without it simply
+   * omit the meta tag. See ai-seo-SKILL §"Freshness signals".
+   */
+  dateModified?: string;
+  /**
+   * ISO 8601 datetime when the page content was originally published.
+   * Rendered as Open Graph `article:published_time`. Optional.
+   */
+  datePublished?: string;
 }
 
 export interface MetaDataRobots {

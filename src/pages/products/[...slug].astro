@@ -35,8 +35,10 @@ import {
   buildProductDetail,
   buildBreadcrumb,
   buildFaqPage,
+  buildArticle,
 } from '~/lib/schema';
 import { getProductFaqs } from '~/data/_product-faqs';
+import { statSync } from 'node:fs';
 
 export const prerender = true;
 
@@ -218,6 +220,23 @@ if (productEntry) {
         buildProductDetail({
           name: entry.data.title,
           description: entry.data.excerpt ?? undefined,
+        }),
+        // Article wrapper for AI engines (ChatGPT/Perplexity/AIO) that
+        // extract passages by headline + author + dateModified. Adds an
+        // E-E-A-T layer (author Organization) alongside the Product entity.
+        // dateModified is the product source-file mtime — honest signal of
+        // when the spec last changed.
+        buildArticle({
+          headline: entry.data.title,
+          description: entry.data.excerpt ?? undefined,
+          dateModified: statSync(entry.filePath ?? '').mtime.toISOString(),
+          author: { name: 'KAIPU Engineering', url: SITE_URL + '/about/' },
+          publisher: { name: 'KAIPU' },
+          url: productUrl,
+          about: {
+            '@type': 'Product',
+            name: entry.data.title,
+          },
         }),
         // Mirror the visible breadcrumb chain so AI crawlers see the same
         // label set the user sees. Subcategory segments are included when the

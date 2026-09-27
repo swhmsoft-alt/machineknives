@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "node scripts/prebuild-images.mjs && astro build && node scripts/postbuild.js && node scripts/audit-schema-strict.mjs && node scripts/check-unicode.mjs",
+    "build": "node scripts/prebuild-images.mjs && astro build && node scripts/postbuild.js && node scripts/build-llms-full.mjs && node scripts/build-okf.mjs && node scripts/audit-schema-strict.mjs && node scripts/check-unicode.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "check": "npm run check:astro && npm run check:eslint && npm run check:prettier && node scripts/check-unicode.mjs",
@@ -24,7 +24,9 @@
     "fix": "npm run fix:eslint && npm run fix:prettier",
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier -w .",
-    "fix:unicode": "node scripts/fix-unicode.mjs"
+    "fix:unicode": "node scripts/fix-unicode.mjs",
+    "audit:fanout": "node scripts/audit-query-fanout.mjs",
+    "monitor:citations": "node scripts/monitor-citations.mjs"
   },
   "dependencies": {
     "@astro-community/astro-embed-twitter": "^0.5.11",
@@ -72,7 +74,7 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.66.0"
   },
-    "overrides": {
+  "overrides": {
     "yaml": ">=2.8.3",
     "astro-compress": {
       "sharp": "^0.35.3",
@@ -87,4 +89,3 @@
     "esbuild@0.28.2": true
   }
 }
-

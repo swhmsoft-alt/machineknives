@@ -2,7 +2,7 @@
 
 **Type**: service
 **File**: src/pages/services.astro
-**Score**: 97/100  (Buyer 100 | EEAT 100 | AI 92)
+**Score**: 100/100  (Buyer 100 | EEAT 100 | AI 100)
 
 ## 1. Buyer Decision Chain (100/100)
 
@@ -27,7 +27,7 @@
 |---|---|
 | experienceSignal | ✅ |
 | yearsInBusiness | ✅ |
-| specificMetrics | ✅ 5 |
+| specificMetrics | ✅ 10 |
 | specificExamples | ✅ |
 | standardCitation | ✅ |
 | certification | ✅ |
@@ -39,7 +39,7 @@
 | uniqueDataPoint | ✅ |
 | proprietaryFrame | ✅ |
 
-## 3. Generative AI Citation (92/100)
+## 3. Generative AI Citation (100/100)
 
 | Signal | Status |
 |---|---|
@@ -47,7 +47,7 @@
 | faqSchema | ✅
 | breadcrumbSchema | ✅
 | productSchema | ✅
-| articleSchema | ❌
+| articleSchema | ✅
 | howToSchema | ✅
 | faqHtmlPattern | ✅
 | realTableElement | ✅
@@ -58,4 +58,3 @@
 
 ## P0 Fix List
 
-- AI: add signal "articleSchema"
