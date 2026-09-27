@@ -158,18 +158,18 @@ const traceabilityRows = [
 
 // ─── 6. COMPARISON TABLE ──────────────────────────────────────────────
 const comparisonRows = [
-  { kpi: 'ISO 9001:2015 certified', Industrial Knives: 'Yes, since 2001', typical: 'Varies; often not certified' },
-  { kpi: 'Mill certificate per EN 10204 3.1', Industrial Knives: 'Shipped with every batch', typical: 'Only on request, surcharge' },
-  { kpi: 'CMM inspection', Industrial Knives: 'Every dimension on drawing', typical: 'Critical dims only' },
-  { kpi: 'CMM repeatability', Industrial Knives: '±0.003 mm (HEXAGON Global S)', typical: '±0.01 mm typical' },
-  { kpi: 'Hardness mapping', Industrial Knives: '3-point Rockwell C per blade', typical: 'Single spot check' },
-  { kpi: 'Surface roughness on edge', Industrial Knives: '≤Ra 0.2 µm, profilometer', typical: 'Visual, no instrument' },
-  { kpi: 'Cpk on critical dims', Industrial Knives: '≥ 1.33, quarterly audit', typical: 'Not tracked' },
-  { kpi: 'PPAP / ISIR package', Industrial Knives: 'On request, AIAG-compliant', typical: 'Not offered' },
-  { kpi: 'Coating adhesion test', Industrial Knives: 'VDI 3198 per batch', typical: 'Not tested' },
-  { kpi: 'Document retention', Industrial Knives: '10 yr per ISO 9001 §7.5', typical: '1— yr' },
-  { kpi: 'Customer audit support', Industrial Knives: 'On-site, twice monthly', typical: 'By appointment, limited' },
-  { kpi: 'NCR turnaround', Industrial Knives: '8D within 5 business days', typical: 'Ad hoc' },
+  { kpi: 'ISO 9001:2015 certified', ours: 'Yes, since 2001', typical: 'Varies; often not certified' },
+  { kpi: 'Mill certificate per EN 10204 3.1', ours: 'Shipped with every batch', typical: 'Only on request, surcharge' },
+  { kpi: 'CMM inspection', ours: 'Every dimension on drawing', typical: 'Critical dims only' },
+  { kpi: 'CMM repeatability', ours: '±0.003 mm (HEXAGON Global S)', typical: '±0.01 mm typical' },
+  { kpi: 'Hardness mapping', ours: '3-point Rockwell C per blade', typical: 'Single spot check' },
+  { kpi: 'Surface roughness on edge', ours: '≤Ra 0.2 µm, profilometer', typical: 'Visual, no instrument' },
+  { kpi: 'Cpk on critical dims', ours: '≥ 1.33, quarterly audit', typical: 'Not tracked' },
+  { kpi: 'PPAP / ISIR package', ours: 'On request, AIAG-compliant', typical: 'Not offered' },
+  { kpi: 'Coating adhesion test', ours: 'VDI 3198 per batch', typical: 'Not tested' },
+  { kpi: 'Document retention', ours: '10 yr per ISO 9001 §7.5', typical: '1— yr' },
+  { kpi: 'Customer audit support', ours: 'On-site, twice monthly', typical: 'By appointment, limited' },
+  { kpi: 'NCR turnaround', ours: '8D within 5 business days', typical: 'Ad hoc' },
 ];
 
 // ─── 7. JSON-LD BLOCKS ───────────────────────────────────────────────
@@ -425,7 +425,7 @@ const faqLd = {
             {comparisonRows.map((row) => (
               <tr class="border-t border-slate-200 dark:border-slate-700 align-top">
                 <td class="px-4 py-3 font-semibold">{row.kpi}</td>
-                <td class="px-4 py-3 text-muted dark:text-slate-300">{row.Industrial Knives}</td>
+                <td class="px-4 py-3 text-muted dark:text-slate-300">{row.ours}</td>
                 <td class="px-4 py-3 text-muted dark:text-slate-300">{row.typical}</td>
               </tr>
             ))}

@@ -45,12 +45,19 @@ const BRAND_RULES = [
   ['kaipu industrial blades', 'Industrial Knives'],
 
   // Bare-word brand mentions in prose.
-  // Negative lookahead (?![-_]) preserves URL slugs (kaipu-...) and code
-  // identifiers (kaipu_...) — per user direction URLs must stay stable,
-  // so anything kaipu-foo or kaipu_foo is left alone.
-  [/\bKaipu\b(?![-_])/g, 'Industrial Knives'],
-  [/\bKAIPU\b(?![-_])/g, 'Industrial Knives'],
-  [/\bkaipu\b(?![-_])/g, 'Industrial Knives'],
+// Negative lookahead (?![-_:\w]) preserves:
+//   - URL slugs      (kaipu-...)
+//   - snake_case ids (kaipu_...)
+//   - JS/TS object keys  (kaipu:)
+//   - camelCase continuations (kaipuSomething)
+// Without these guards the rule corrupts object-literal syntax in
+// files like src/pages/quality.astro and src/data/_products-overview.ts
+// (e.g. `kaipu:` -> `Industrial Knives:` is not a valid JS identifier).
+// Post-mortem of the bug that motivated this rule is documented in
+// commit history (CHANGELOG: rebrand identifier-safety lookahead).
+  [/\bKaipu\b(?![-_:\w])/g, 'Industrial Knives'],
+  [/\bKAIPU\b(?![-_:\w])/g, 'Industrial Knives'],
+  [/\bkaipu\b(?![-_:\w])/g, 'Industrial Knives'],
 ];
 
 const DOMAIN_RULES = [

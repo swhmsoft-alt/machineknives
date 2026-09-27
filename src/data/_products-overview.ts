@@ -123,42 +123,42 @@ export const PAIN_POINTS: ReadonlyArray<{ title: string; description: string; ic
 /** Comparison block: Industrial Knives vs catalog-only suppliers. */
 export const COMPARISON: ReadonlyArray<{
   criterion: string;
-  Industrial Knives: string;
+  ours: string;
   catalog: string;
 }> = [
   {
     criterion: 'Material certificate with every batch',
-    Industrial Knives: 'Mill certificate included',
+    ours: 'Mill certificate included',
     catalog: 'On request, often extra',
   },
   {
     criterion: 'Hardness verified per batch',
-    Industrial Knives: 'Rockwell tested, recorded',
+    ours: 'Rockwell tested, recorded',
     catalog: 'Heat-treater sub-contracted',
   },
   {
     criterion: 'CMM dimensional report',
-    Industrial Knives: 'Every specified dimension',
+    ours: 'Every specified dimension',
     catalog: 'Spot-check only',
   },
   {
     criterion: 'Custom geometry from drawing',
-    Industrial Knives: 'In-house design office',
+    ours: 'In-house design office',
     catalog: 'Referral to a third party',
   },
   {
     criterion: 'Reverse-engineering from worn sample',
-    Industrial Knives: 'CMM measurement + 2D/3D drawing approval',
+    ours: 'CMM measurement + 2D/3D drawing approval',
     catalog: 'Not offered',
   },
   {
     criterion: 'Engineering contact for the order',
-    Industrial Knives: 'Named engineer, end-to-end',
+    ours: 'Named engineer, end-to-end',
     catalog: 'Sales rep only',
   },
   {
     criterion: 'Lead-time honesty',
-    Industrial Knives: 'Quoted lead time = delivered lead time',
+    ours: 'Quoted lead time = delivered lead time',
     catalog: 'Best-case lead time quoted',
   },
 ];
