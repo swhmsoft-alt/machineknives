@@ -46,4 +46,4 @@ image: '/images/og/glossary-burr.webp'
 - Adjust shear blade gap to 5–12 % of thickness.
 - Audit incoming substrate for hardness and finish drift.
 
-**See also:** [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/), [Maintenance: how to extend slitter life](/maintenance-slitting-blade-life/), [Hone (micro-hone)](/glossary/hone/).
+**See also:** [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/), [Maintenance: how to extend slitter life](/maintenance-slitting-blade-life/), [Hone (micro-hone)](/glossary/hone/).

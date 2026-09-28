@@ -200,7 +200,7 @@ If your supplier cannot show you a mill certificate, the cross-reference is mark
 | Corrugated slitter | YG6X (tipped) | M2 HSS | Abrasive liners |
 | Aluminium foil slitter | M2 + ta-C coating | SKD11 + DLC | Anti-weld, low friction |
 
-For deeper field guidance, see the individual material-family comparisons linked above and the broader [five-factor selection framework](/kaipu-5-factor-blade-selection-framework/).
+For deeper field guidance, see the individual material-family comparisons linked above and the broader [five-factor selection framework](/5-factor-blade-selection-framework/).
 
 ---
 

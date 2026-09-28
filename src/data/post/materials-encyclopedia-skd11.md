@@ -31,4 +31,4 @@ JIS SKD11 is the Japanese Industrial Standard grade for high-carbon, high-chromi
 
 **Cross-reference:** ≈ AISI D2, DIN 1.2379, GB Cr12Mo1V1. See [D2 vs SKD11](/d2-vs-skd11/) for the field-level comparison.
 
-**See also:** [Material Grade Converter](/material-grade-converter/), [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/).
+**See also:** [Material Grade Converter](/material-grade-converter/), [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/).

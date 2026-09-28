@@ -1,5 +1,5 @@
 ---
-title: 'Granulator Rotor Knife —200 × 40 ×'
+title: 'Granulator Rotor Knife — 200 × 40 × 20 mm'
 excerpt: 'Rotor knife for plastics granulators, M2 HSS, hardened to HRC 60±4, bevel re-grindable.'
 category: granulator
 bladeMaterial: 'M2 HSS (1.3343) —alt: D2, tungsten carbide tipped'
@@ -35,6 +35,6 @@ A standard rotor knife for plastics granulators and shredders. Manufactured from
 
 ## Stator / Bed Knife
 
-The rotor knife works in shear against a stator (bed knife). We supply matched sets; rotor-to-bed clearance target is 0.1—0.3 mm depending on material.
+The rotor knife works in shear against a stator (bed knife). We supply matched sets; rotor-to-bed clearance target is 0.1–0.3 mm depending on material.
 
 > TODO —for a quote, send machine model, rotor / stator dimensions, target material and current blade life.

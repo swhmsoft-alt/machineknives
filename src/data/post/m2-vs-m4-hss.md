@@ -163,7 +163,7 @@ For a precision HSS slitter or converting blade, write the spec as:
 
 > "AISI M2 or AISI M4 high-speed steel, AOD-ESR or vacuum-arc remelted, hardened and tempered to HRC 64 ± 1, decarburisation-free to 0.1 mm per side, surface roughness Ra ≤ 0.4 µm, parallel ≤ 0.005 mm, mill certificate with actual ladle chemistry and ultrasonic test report."
 
-This phrasing lets your supplier cross-reference M2/M4 to your actual substrate, keeps the option open for an upgrade, and locks the heat-treat quality. For a copy of the full five-factor selection method, see [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/). For a runnable M-series cross-reference, see [Material Grade Converter](/material-grade-converter/).
+This phrasing lets your supplier cross-reference M2/M4 to your actual substrate, keeps the option open for an upgrade, and locks the heat-treat quality. For a copy of the full five-factor selection method, see [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/). For a runnable M-series cross-reference, see [Material Grade Converter](/material-grade-converter/).
 
 For a written M2/M4 quotation, send the part drawing to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and indicative lead time within one business day.
 

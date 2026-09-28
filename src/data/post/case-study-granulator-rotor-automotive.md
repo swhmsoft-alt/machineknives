@@ -176,7 +176,7 @@ If you have a granulator line and the knives are wearing too fast:
 
 For a written granulator audit on your line, send the substrate, the throughput, the rotor speed, the current knife spec and the current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). A typical audit takes 1 day on site, returns a written diagnosis and a trial protocol, and ships the trial knives within 3 weeks. ROI is typically inside 6 months on lines with > €50k/year knife spend.
 
-For the broader granulator selection guidance, see [How to choose a granulator knife](/selection-guide-granulator-knife/) and the granulator section in [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/).
+For the broader granulator selection guidance, see [How to choose a granulator knife](/selection-guide-granulator-knife/) and the granulator section in [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/).
 
 **About the author**
 

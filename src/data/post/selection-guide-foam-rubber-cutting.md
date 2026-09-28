@@ -97,7 +97,7 @@ The wrong lubricant can swell or degrade the substrate.
 
 > "Slitter / shear blade, [L] × [W] × [T] mm, [420 stainless / M2 HSS / DC53] per substrate, HRC [56–64] per grade, edge chamfer [0.10–0.40] mm, hone [5–25] µm, surface finish Ra ≤ 0.4 µm, polished bevel. Optional PVD coating: [TiN / TiCN / DLC]. Substrate: [foam / rubber family]. Line speed: [X] m/min. Lubricant: [type]. Mill certificate required."
 
-For broader selection guidance, see [How to choose a slitter blade for paper converting](/selection-guide-paper-converting/) and [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/).
+For broader selection guidance, see [How to choose a slitter blade for paper converting](/selection-guide-paper-converting/) and [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/).
 
 For a written foam or rubber cutting specification, send the substrate family, density, line speed, current blade spec and current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 

@@ -47,4 +47,4 @@ image: '/images/og/glossary-chipping.webp'
 4. Audit heat-treat (5-point file test, mill certificate, decarb-free guarantee).
 5. Fix the upstream problem (substrate contamination, line alignment, knife clamp).
 
-**See also:** [Troubleshooting: why is my blade wearing out too fast?](/troubleshooting-premature-wear/), [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/), [Hone (micro-hone)](/glossary/hone/), [Clearance angle](/glossary/clearance-angle/).
+**See also:** [Troubleshooting: why is my blade wearing out too fast?](/troubleshooting-premature-wear/), [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/), [Hone (micro-hone)](/glossary/hone/), [Clearance angle](/glossary/clearance-angle/).

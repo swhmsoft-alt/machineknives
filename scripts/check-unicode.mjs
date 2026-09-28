@@ -75,6 +75,27 @@ const PATTERNS = [
     // (could be a Markdown reference link we don't want to flag).
     re: /(?<![?\w])(?<=\d)\?(?=\d)/g,
   },
+  {
+    name: 'em-dash between digits (encoding damage: e.g. "40—00" → "40–200")',
+    // Context: digit, em-dash (U+2014), digit. Em-dashes are almost never
+    // used between two digits in legitimate English prose — grammatical
+    // em-dashes sit between words/clauses. A digit-em-dash-digit pattern is
+    // the F-007 GBK fingerprint where an en-dash (U+2013) was upgraded to
+    // em-dash (U+2014) AND a boundary digit was eaten. Flag every hit; the
+    // reviewer confirms or rewrites (per .clinerules §0.5.3 AI never
+    // fabricates the missing digit).
+    re: /(?<=\d)—(?=\d)/g,
+  },
+  {
+    name: 'digit + em-dash + space + word (encoding damage: e.g. "5— weeks")',
+    // Context: digit, em-dash, space, word. Legitimate English prose never
+    // writes "5— weeks" or "2— week" — the grammatical em-dash sits between
+    // clauses (no digit lead) and the en-dash in ranges never has a digit
+    // immediately before. This pattern is the second-most-common F-007
+    // fingerprint: an en-dash range "5–6 weeks" was upgraded to em-dash and
+    // the closing digit was eaten. Flag for SME review.
+    re: /(?<=\d)—\s+(?=[a-zA-Z])/g,
+  },
 ];
 
 const TARGET_DIRS = ['src/data/product', 'src/data/post', 'src/data/glossary', 'src/pages'];

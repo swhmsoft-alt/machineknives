@@ -123,7 +123,7 @@ For a paper slitting blade on a paper converting line:
 
 > "Slitter, [OD] × [ID] × [thickness] mm, AISI D2 or SKD11 (or AISI M2 HSS at > 500 m/min), vacuum heat-treated to HRC 60–64 ± 1, 5-point file test, parallel ≤ 0.005 mm, surface finish Ra ≤ 0.4 µm, edge hone [5–15] µm radius, clearance angle [18–30]° per substrate. Substrate: [paper family / GSM / caliper]. Line speed: [X] m/min. Re-grind SOP: aluminium-oxide or CBN, 25 m/s, 0.002 mm infeed, flood coolant. Mill certificate with ladle chemistry required."
 
-For the broader five-factor selection framework, see [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/). For a runnable steel grade cross-reference, see [Material Grade Converter](/material-grade-converter/). For a head-to-head on HSS, see [M2 vs M4 HSS](/m2-vs-m4-hss/).
+For the broader five-factor selection framework, see [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/). For a runnable steel grade cross-reference, see [Material Grade Converter](/material-grade-converter/). For a head-to-head on HSS, see [M2 vs M4 HSS](/m2-vs-m4-hss/).
 
 For a written paper-converting specification, send the part drawing, the substrate, the line speed and the current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 

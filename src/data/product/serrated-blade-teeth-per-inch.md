@@ -1,5 +1,5 @@
 ---
-title: 'Serrated Blade —Cut-to-Length 6—2 TPI'
+title: 'Serrated Blade —Cut-to-Length 6–10 TPI'
 excerpt: 'Serrated industrial blade for film, foil and paper, tooth profile selectable, hardened tool steel.'
 category: serrated
 bladeMaterial: 'D2 (1.2379) —alt: SKD11, M2 HSS'
@@ -36,4 +36,4 @@ Serrated industrial blade for tear-strip, perforation and cut-to-length applicat
 
 Flexible packaging, label stock, hygiene products, gift wrap, and tear-strip applications on shrink film and lidding foil.
 
-> TODO —for a quote, send the substrate thickness, the desired tooth profile and pitch (TPI or P). Lead time is typically 20—5 working days for custom profiles.
+> TODO —for a quote, send the substrate thickness, the desired tooth profile and pitch (TPI or P). Lead time is typically 20–25 working days for custom profiles.

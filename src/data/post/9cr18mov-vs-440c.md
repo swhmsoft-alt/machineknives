@@ -121,7 +121,7 @@ For a corrosion-resistant industrial machine knife, write the spec as:
 
 Lock the sub-zero treatment to mandatory for 440C and recommended for 9Cr18MoV above HRC 58. For food-contact applications, request a declaration of compliance with regional food-safety codes (FDA 21 CFR, EU 1935/2004, GB 4806.1). *[MISSING SPECIFICATION — confirm regulatory version with your QA team]*
 
-For the broader 5-factor selection method, see [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/). For a runnable cross-reference table, see [Material Grade Converter](/material-grade-converter/). For a runnable cross-reference of stainless blade grades, see [9Cr18MoV entry in the Materials Encyclopedia](/materials-encyclopedia/9cr18mov/).
+For the broader 5-factor selection method, see [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/). For a runnable cross-reference table, see [Material Grade Converter](/material-grade-converter/). For a runnable cross-reference of stainless blade grades, see [9Cr18MoV entry in the Materials Encyclopedia](/materials-encyclopedia/9cr18mov/).
 
 For a written 9Cr18MoV / 440C quotation, send the part drawing and the food-contact / washdown spec to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 

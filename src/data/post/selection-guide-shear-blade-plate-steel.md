@@ -153,7 +153,7 @@ For a plate shear blade:
 
 > "Shear blade, [L] × [W] × [T] mm, AISI M2 HSS (or carbide insert YG8 for AR / stainless ≥ 4 mm), vacuum heat-treated to HRC [60–64] ± 1, 5-point file test, surface finish Ra ≤ 0.4 µm, parallelism ≤ 0.005 mm across length, edge chamfer [0.05–0.30] mm on back face, clearance angle [0.5–2]°, rake angle 0–3°. Substrate: [grade / thickness]. Blade gap: [X] % of plate thickness per side. Mill certificate required."
 
-For the broader five-factor selection framework, see [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/). For the M2 vs M4 HSS head-to-head, see [M2 vs M4 HSS](/m2-vs-m4-hss/). For the carbide grade comparison, see [YG6X vs YG8](/yg6x-vs-yg8-carbide/).
+For the broader five-factor selection framework, see [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/). For the M2 vs M4 HSS head-to-head, see [M2 vs M4 HSS](/m2-vs-m4-hss/). For the carbide grade comparison, see [YG6X vs YG8](/yg6x-vs-yg8-carbide/).
 
 For a written shear-blade specification, send the part drawing, the substrate, the plate thickness and the current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 

@@ -19,8 +19,8 @@ A standard straight top blade for pouch-making, label stock and adhesive tape co
 
 | Parameter       | Value                       |
 | --------------- | --------------------------- |
-| Length          | 300 mm (range 100—00 mm)   |
-| Width           | 80 mm (range 30—00 mm)     |
+| Length          | 300 mm (range 100–1000 mm)   |
+| Width           | 80 mm (range 30–100 mm)     |
 | Thickness       | 2 / 3 / 4 / 5 mm            |
 | Edge angle       | 18° / 22° / 25° / 30°       |
 | Surface finish  | Ra ≥?0.4 µm                 |

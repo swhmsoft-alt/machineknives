@@ -143,7 +143,7 @@ For a stainless-cutting industrial blade, the spec should read:
 
 This phrasing locks the critical variables and leaves the supplier enough freedom to recommend an upgrade if needed.
 
-For a copy of the broader five-factor selection framework, see [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/). For a runnable cross-reference of the steel grades referenced here, see [Material Grade Converter](/material-grade-converter/). For a head-to-head comparison of M2 vs M4 HSS, see [M2 vs M4 HSS](/m2-vs-m4-hss/). For HSS vs carbide selection, see [HSS vs Carbide](/hss-vs-carbide/).
+For a copy of the broader five-factor selection framework, see [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/). For a runnable cross-reference of the steel grades referenced here, see [Material Grade Converter](/material-grade-converter/). For a head-to-head comparison of M2 vs M4 HSS, see [M2 vs M4 HSS](/m2-vs-m4-hss/). For HSS vs carbide selection, see [HSS vs Carbide](/hss-vs-carbide/).
 
 For a written stainless-cutting specification, send the part drawing, the substrate, the thickness and the line speed to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 

@@ -152,7 +152,7 @@ On a clean film line, YG6X is cheaper per hour. On a contaminated line where YG8
 
 For an industrial machine knife, pick the carbide grade by impact, not by substrate. If the line is clean (paper, film, foil, neat polymer), YG6X. If the line has any contamination risk (recycling, granulator, metalwork), start at YG8 and move up. The wear difference is 20 %; the impact difference is 2×. Get the impact right first, then optimise wear.
 
-For a copy of the full five-factor selection method, see [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/). For a coating comparison to extend carbide life further, see [Coating Comparison Table](/coatings-comparison/). For a runnable carbide grade cross-reference, see [Material Grade Converter](/material-grade-converter/).
+For a copy of the full five-factor selection method, see [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/). For a coating comparison to extend carbide life further, see [Coating Comparison Table](/coatings-comparison/). For a runnable carbide grade cross-reference, see [Material Grade Converter](/material-grade-converter/).
 
 For a written YG6X / YG8 quotation, send the part drawing, the substrate and the impact profile to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 

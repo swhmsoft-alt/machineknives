@@ -32,4 +32,4 @@ AISI D2 is a high-carbon, high-chromium cold-work tool steel hardened by a popul
 
 **Cross-reference:** ≈ JIS SKD11, DIN 1.2379, GB Cr12Mo1V1, BS BD2, AFNOR Z160CDV12, UNE F.5211. See the [Material Grade Converter](/material-grade-converter/) for the full table.
 
-**See also:** [D2 vs SKD11 comparison](/d2-vs-skd11/) for the differences that matter in service, [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/) for selection methodology.
+**See also:** [D2 vs SKD11 comparison](/d2-vs-skd11/) for the differences that matter in service, [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/) for selection methodology.

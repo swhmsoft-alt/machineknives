@@ -195,7 +195,7 @@ For a slitter knife in regular service:
 
 If you can tick all eight, your slitter knives will out-last your regrind shop's wildest expectations. If you cannot, the variable that is missing is the one that is costing you knife life.
 
-For the broader five-factor selection framework, see [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/). For a runnable coating comparison, see [Coating Comparison Table](/coatings-comparison/). For a head-to-head on the two most common HSS grades, see [M2 vs M4 HSS](/m2-vs-m4-hss/).
+For the broader five-factor selection framework, see [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/). For a runnable coating comparison, see [Coating Comparison Table](/coatings-comparison/). For a head-to-head on the two most common HSS grades, see [M2 vs M4 HSS](/m2-vs-m4-hss/).
 
 For a written specification, send the part drawing, the substrate, the line speed and the current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 

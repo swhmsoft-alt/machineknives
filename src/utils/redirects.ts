@@ -126,7 +126,10 @@ export const buildRedirectMap = (): Record<string, string> => {
     redirects[`/blog/${n}/`] = '/blog/';
   }
 
-  // 4) Old topics index: /blog/topics/  →  /blog/
+    // 5) KAIPU rename (Phase 2 cleanup): /kaipu-5-factor-blade-selection-framework/ → /blog/engineering/5-factor-blade-selection-framework/
+  redirects['/kaipu-5-factor-blade-selection-framework/'] = '/blog/engineering/5-factor-blade-selection-framework/';
+
+
   redirects['/blog/topics/'] = '/blog/';
 
   return redirects;

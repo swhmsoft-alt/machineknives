@@ -46,4 +46,4 @@ image: '/images/og/glossary-kerf.webp'
 - Ensure knife-to-anvil parallel within 0.01 mm to prevent the knife from tilting and widening the cut.
 - Use the lowest knife grade that will survive the substrate (D2 instead of M2 if the wear life is acceptable — D2 is usually available in thinner stock).
 
-**See also:** [Hone (micro-hone)](/glossary/hone/), [Clearance angle](/glossary/clearance-angle/), [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/).
+**See also:** [Hone (micro-hone)](/glossary/hone/), [Clearance angle](/glossary/clearance-angle/), [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/).

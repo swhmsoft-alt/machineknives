@@ -31,4 +31,4 @@ GB YG6 Tungsten Carbide (K20) is a reference entry for industrial cutting tools 
 
 **Cross-reference:** ≈ ISO K20, no precise Western equivalent.
 
-**See also: [D2 vs SKD11 comparison](/d2-vs-skd11/), [Material Grade Converter](/material-grade-converter/), [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/).**
+**See also: [D2 vs SKD11 comparison](/d2-vs-skd11/), [Material Grade Converter](/material-grade-converter/), [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/).**

@@ -31,4 +31,4 @@ AISI M2 (UNS T11302) is the most widely used molybdenum-tungsten high-speed stee
 
 **Cross-reference:** ≈ JIS SKD51 / SKH51, DIN 1.3343, GB W6Mo5Cr4V2, BS BM2, AFNOR Z85WDCV6-5-4-2. See the [Material Grade Converter](/material-grade-converter/).
 
-**See also:** [M2 vs M4 HSS](/m2-vs-m4-hss/), [HSS vs Carbide](/hss-vs-carbide/), [The Industrial Knives 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/).
+**See also:** [M2 vs M4 HSS](/m2-vs-m4-hss/), [HSS vs Carbide](/hss-vs-carbide/), [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/).
