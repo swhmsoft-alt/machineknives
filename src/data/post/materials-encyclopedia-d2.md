@@ -1,5 +1,5 @@
 ---
-title: 'AISI D2 Tool Steel: **Properties:**'
+title: 'AISI D2 Cold-Work Tool Steel'
 excerpt: 'AISI D2 is a high-carbon, high-chromium cold-work tool steel widely used for industrial slitter, shear and granulator blades.'
 publishDate: 2026-09-18
 category: 'materials-encyclopedia'

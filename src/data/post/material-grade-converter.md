@@ -1,5 +1,5 @@
 ---
-title: 'Material Grade Converter: Cold-work'
+title: 'Material Grade Converter'
 excerpt: 'A runnable cross-reference table for cold-work tool steel, high-speed steel, martensitic stainless and carbide grades. Find the equivalent of AISI D2, M2, M4.'
 publishDate: 2026-09-18
 updateDate: 2026-09-18

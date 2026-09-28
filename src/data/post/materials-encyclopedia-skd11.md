@@ -1,5 +1,5 @@
 ---
-title: 'JIS SKD11 — Encyclopedia Entry'
+title: 'JIS SKD11 Cold-Work Tool Steel'
 excerpt: 'JIS SKD11 is the Japanese standard cold-work tool steel, chemically equivalent to AISI D2 but with a tighter vanadium range and typically tighter stock.'
 publishDate: 2026-09-18
 category: 'materials-encyclopedia'

@@ -1,5 +1,5 @@
 ---
-title: 'AISI 440C Stainless Steel: Lower to'
+title: 'AISI 440C Stainless Steel'
 excerpt: 'AISI 440C is the standard martensitic stainless steel for industrial cutting tools, bearings and food-contact blades. High-carbon, 17 % Cr.'
 publishDate: 2026-09-18
 category: 'materials-encyclopedia'

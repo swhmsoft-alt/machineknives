@@ -1,6 +1,6 @@
 ---
 title: 'GB 6CrW2Si Hot-Work Tool Steel'
-excerpt: 'GB 6CrW2Si Hot-Work Tool Steel. GB 6CrW2Si Hot-Work Tool Steel. Chemistry, hardness, heat treatment, applications, cross-reference.'
+excerpt: 'GB 6CrW2Si (GB/T 1299) — tungsten-modified 5 Cr hot-work tool steel. Compare with H11 and H13 for hot shear blades and short-run hot-work dies.'
 publishDate: 2026-09-18
 category: 'materials-encyclopedia'
 type: 'glossary'
@@ -12,12 +12,14 @@ tags:
   - 'industrial knife'
 author: 'Industrial Knives Engineering'
 metadata:
-  description: 'GB 6CrW2Si Hot-Work Tool Steel. Chemistry, hardness, heat treatment, applications, cross-reference.'
+  description: 'GB 6CrW2Si (GB/T 1299) — tungsten-modified 5 Cr hot-work tool steel. Compare with H11 and H13 for hot shear blades and short-run hot-work dies.'
   canonical: 'https://www.industrial-knives.net/materials-encyclopedia/6crw2si/'
 image: '/images/og/6crw2si.webp'
 ---
 
-GB 6CrW2Si Hot-Work Tool Steel is a reference entry for industrial cutting tools and blades. The composition, hardness, heat treatment and application guidance are summarised below for engineering reference.
+GB 6CrW2Si (China GB/T 1299 standard) is a tungsten-modified 5 Cr-type hot-work tool steel — used primarily for hot shear blades, punches and short-run hot-work dies. Slightly higher hot hardness than the more common 5CrNiMo / H13 family due to the W addition, with comparable toughness.
+
+
 
 **Standard composition:** C 0.55–0.65 %, Cr 1.00–1.30 %, W 2.00–2.50 %, Si 0.50–0.80 %, Mn ≤ 0.40 %, V ≤ 0.30 %, balance Fe
 

@@ -1,5 +1,5 @@
 ---
-title: 'Tungsten Carbide for Blades: Option'
+title: 'Tungsten Carbide for Industrial Blades'
 excerpt: 'Cemented tungsten carbide is a powder-metallurgy composite of tungsten carbide grains in a cobalt binder. The standard material for granulator.'
 publishDate: 2026-09-18
 category: 'materials-encyclopedia'

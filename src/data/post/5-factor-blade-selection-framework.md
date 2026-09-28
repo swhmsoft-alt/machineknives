@@ -1,9 +1,9 @@
 ---
-title: 'The Industrial Knives 5-Factor'
+title: '5-Factor Blade Selection Framework'
 excerpt: 'A structured method our engineers use to match substrate, geometry, hardness target, edge preparation and operating speed to a production line — without.'
 publishDate: 2026-09-11
 updateDate: 2026-09-11
-category: 'Engineering'
+category: 'engineering'
 tags:
   - blade selection
   - D2 tool steel

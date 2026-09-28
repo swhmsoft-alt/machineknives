@@ -77,6 +77,7 @@ const CATEGORY_LABEL = {
   'troubleshooting': 'Troubleshooting',
   'material-comparison': 'Material Comparison',
   'coatings-comparison': 'Coatings Comparison',
+  'engineering': 'Engineering Article',
   'blog': 'Engineering Article',
 };
 

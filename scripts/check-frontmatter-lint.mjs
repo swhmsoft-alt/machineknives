@@ -91,6 +91,41 @@ for (const f of postFiles) {
     if (fullTitleLen < 50 || fullTitleLen > 60) {
       warnings.push(`${f}: title length ${fullTitleLen} outside [50,60] (raw title ${fm.title.length} chars)`);
     }
+    // Round 2 regression guard — truncated title patterns observed in the
+    // pre-fix corpus (see audit-results/post-fix-v2-verification.md and
+    // scripts/_audit-titles.mjs). These slipped past the [50,60] length
+    // check because the truncation produced strings within range.
+    //   ': Sligh' / ': Excel' / ': Hard' / ': Option' / ': Lowe'
+    //     — colon + short fragment, no terminator
+    //   ': Lower to'  — colon + dangling preposition
+    //   'Hot-Work' / 'Cold-Work' / 'High-Speed'
+    //     — missing trailing 'Tool Steel' or 'Steel'
+    //   'The Industrial Knives ...'  — over-name prefix
+    //     that masks a mid-phrase break
+    const TRUNC_TITLE_PATTERNS = [
+      /^.+:\s+[A-Z][a-z]{1,4}$/,        // colon + 3-5 letter capitalised fragment
+      /^.+:\s+[a-z]+\s+to$/i,            // colon + preposition phrase
+      /\bHot-Work$/i,
+      /\bCold-Work$/i,
+      /\bHigh-Speed$/,
+      /^The Industrial Knives\b/,        // over-name prefix
+    ];
+    for (const re of TRUNC_TITLE_PATTERNS) {
+      if (re.test(fm.title)) {
+        errors.push(`${f}: title appears truncated (matches ${re}) — see Round 2 fix`);
+        break;
+      }
+    }
+  }
+
+  // Round 2 regression guard — excerpt self-repetition. Pre-fix pattern:
+  //   '<Title>. <Title>. Chemistry, hardness, heat treatment, applications, cross-reference.'
+  // The opening title phrase is duplicated verbatim, almost always from the
+  // generator template bug. Caught here so future regressions fail fast.
+  if (desc) {
+    if (/^(.+?)\.\s*\1\./.test(desc)) {
+      warnings.push(`${f}: excerpt repeats opening phrase — likely generator artifact`);
+    }
   }
 
   if (!fm.image) warnings.push(`${f}: missing frontmatter image field (OG image)`);

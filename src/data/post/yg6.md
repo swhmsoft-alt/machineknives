@@ -1,6 +1,6 @@
 ---
-title: 'GB YG6 Tungsten Carbide (K20): Lowe'
-excerpt: 'GB YG6 Tungsten Carbide (K20). GB YG6 Tungsten Carbide (K20). Chemistry, hardness, heat treatment, applications, cross-reference.'
+title: 'GB YG6 Tungsten Carbide (K20)'
+excerpt: 'GB YG6 (GB/T 30892, ISO K20) — 6 % Co coarse-grain tungsten carbide, HRA 91–92. Compare with YG10 and YG15 for granulator and wear parts.'
 publishDate: 2026-09-18
 category: 'materials-encyclopedia'
 type: 'glossary'
@@ -12,12 +12,14 @@ tags:
   - 'industrial knife'
 author: 'Industrial Knives Engineering'
 metadata:
-  description: 'GB YG6 Tungsten Carbide (K20). Chemistry, hardness, heat treatment, applications, cross-reference.'
+  description: 'GB YG6 (GB/T 30892, ISO K20) — 6 % Co coarse-grain tungsten carbide, HRA 91–92. Compare with YG10 and YG15 for granulator and wear parts.'
   canonical: 'https://www.industrial-knives.net/materials-encyclopedia/yg6/'
 image: '/images/og/yg6.webp'
 ---
 
-GB YG6 Tungsten Carbide (K20) is a reference entry for industrial cutting tools and blades. The composition, hardness, heat treatment and application guidance are summarised below for engineering reference.
+GB YG6 (China GB/T 30892 standard) is the standard 6 % Co coarse-grain tungsten carbide — ISO K20 classification. HRA 91.0–92.0 (≈ HRC 78–80). It is the general-purpose coarse-grain YG grade, with lower wear resistance but higher impact resistance than the fine-grain YG6X. Used for non-precision wear parts, granulator bed knives (light duty) and general mechanical wear parts.
+
+
 
 **Standard composition:** WC 94 %, Co 6 %, no grain-growth inhibitors, WC grain 1.5–2.5 µm
 

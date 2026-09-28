@@ -1,5 +1,5 @@
 ---
-title: 'AISI M2 High-Speed Steel: Hot hardn'
+title: 'AISI M2 (T11302) High-Speed Steel'
 excerpt: 'AISI M2 is the workhorse high-speed steel of the converting and slitting industry. Molybdenum-tungsten-vanadium tool steel, hardened to HRC 62–65.'
 publishDate: 2026-09-18
 category: 'materials-encyclopedia'
