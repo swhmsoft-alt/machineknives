@@ -1,0 +1,30 @@
+/**
+ * _pillar-reorder-selection.mjs — transition sentences for pillar-selection-guide.
+ */
+export const SELECTION = {
+  2: 'Building on the framework\'s rationale, the five factors in detail.',
+  3: 'Factor 1 — Substrate: the dominant factor.',
+  4: 'Factor 2 — Geometry: thickness constrains maximum hardness.',
+  5: 'Factor 3 — Hardness target: wear-vs-toughness trade-off.',
+  6: 'Factor 4 — Edge preparation: highest-ROI factor.',
+  7: 'Factor 5 — Operating speed: determines cutting-edge temperature.',
+  8: 'Worked example: applying the framework to glass-filled PA granulator.',
+  9: 'Decision matrix mapping factors to recommended materials.',
+  10: 'Failure mode mapping: each failure mode traces to a mis-specified factor.',
+  11: 'Implementation through specification, wear-testing, and review.',
+  12: 'Standards and references for the framework.',
+  13: 'Summary of the 5-Factor Framework.',
+  14: 'Edge geometry quick reference.',
+  15: 'Coating selection matrix.',
+  16: 'QC checklist for blade procurement.',
+  17: 'Real-world case 2: tissue slitter upgrade.',
+  18: 'Real-world case 3: abrasive paper slitter.',
+  19: 'Troubleshooting flowchart for blade failures.',
+  20: 'Real-world case 4: hot shear blade.',
+  21: 'Closing notes for the framework.',
+  22: 'Blade procurement playbook.',
+  23: 'Vendor selection criteria.',
+  24: 'Common mistakes in blade specification.',
+  25: 'ROI framework for blade optimisation.',
+  26: 'Future trends in blade specification.',
+};

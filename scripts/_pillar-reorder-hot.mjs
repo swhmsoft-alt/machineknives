@@ -1,0 +1,32 @@
+/**
+ * _pillar-reorder-hot.mjs — transition sentences for pillar-hot-work-tool-steel.
+ */
+export const HOT = {
+  2: 'The chemistry of hot-work tool steel is dominated by secondary hardening.',
+  3: 'AISI H11 is the lower-V toughness-favouring hot-work grade.',
+  4: 'AISI H13 is the workhorse die-casting and hot-shear grade.',
+  5: 'GB 6CrW2Si is the Chinese GB-standard tungsten-modified alternative.',
+  6: 'Heat treatment of hot-work tool steel requires careful austenitising and tempering.',
+  7: 'Selection methodology for hot-work applications.',
+  8: 'Three recurring failure modes in hot-work blade service.',
+  9: 'Grade comparison table.',
+  10: 'International standards cross-reference.',
+  11: 'PVD coatings for hot-work tool steel.',
+  12: 'Specialty applications beyond die-casting and hot shear.',
+  13: 'Procurement and supply for hot-work grades.',
+  14: 'Summary of the hot-work family.',
+  15: 'Edge geometry for hot-work blades.',
+  16: 'Real-world case: H13 die-casting die thermal-fatigue failure.',
+  17: 'QC protocol for hot-work blades.',
+  18: 'Troubleshooting decision tree for hot-work failures.',
+  19: 'Worked example: H11 vs H13 selection for hot shear.',
+  20: 'Die-casting die design considerations.',
+  21: 'Surface treatments beyond PVD.',
+  22: 'Heat treatment quality control.',
+  23: 'Industry-specific applications.',
+  24: 'Real-world case: H11 vs H13 for hot piercing punches.',
+  25: 'Cost-per-cycle and total cost of ownership.',
+  26: 'Summary of the hot-work family.',
+  27: 'Quick reference card for the hot-work family.',
+  28: 'Author notes & source confidence for the hot-work pillar.',
+};

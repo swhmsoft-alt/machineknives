@@ -1,5 +1,5 @@
 ---
-title: 'How to Choose a Slitter Blade for'
+title: 'How to Choose a Slitter Blade for Corrugated Slitting'
 excerpt: 'Corrugated slitting is one of the most abrasive industrial cutting applications. The substrate is a multi-layer composite of kraft paper + adhesive + flute.'
 publishDate: 2026-09-18
 category: 'selection-guide'

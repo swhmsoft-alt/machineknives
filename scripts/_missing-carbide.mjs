@@ -1,0 +1,6 @@
+/** Missing section for pillar-tungsten-carbide */
+export const CARBIDE = {
+  num: 3,
+  title: 'The GB YG-series grades',
+  body: 'The GB YG-series (China GB/T 30892 standard) is the Chinese national standard for tungsten carbide grades used in industrial applications. The naming convention: YG = hard metal (cemented carbide), followed by the cobalt content percentage. So YG6 = 6 % Co, YG10 = 10 % Co, YG15 = 15 % Co.\n\nThe YG-series from China corresponds approximately to the ISO 513 K-series for global nomenclature: YG6 ≈ K20, YG10 ≈ K30, YG15 ≈ K30–K40. The exact correspondence is approximate; specific properties vary by manufacturer.\n\nThe YG-series focuses on coarse-grain carbide grades (WC grain size 1.5–2.5 µm) for general-purpose industrial applications. For fine-grain grades (better wear resistance, lower toughness), the YG-X variants (YG6X, YG8X, etc.) are used. For ultra-fine grades (<1 µm), special designations from individual manufacturers are required.\n\nFor industrial cutting tools covered in this pillar, the standard YG grades (YG6, YG10, YG15) are the focus. The next three sections cover each grade in detail.',
+};

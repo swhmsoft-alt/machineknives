@@ -1,0 +1,33 @@
+/**
+ * _pillar-reorder-carbide.mjs — transition sentences for pillar-tungsten-carbide.
+ */
+export const CARBIDE = {
+  2: 'ISO 513 classifies carbide grades by application category.',
+  3: 'The GB YG-series from China corresponds approximately to ISO K-series.',
+  4: 'GB YG6 is the standard 6 % Co coarse-grain grade, ISO K20.',
+  5: 'GB YG10 is the higher-Co granulator / heavy-duty grade, ISO K30.',
+  6: 'GB YG15 is the impact-dominant ultra-heavy-duty grade, ISO K30–K40.',
+  7: 'Selection methodology for tungsten carbide grades.',
+  8: 'Carbide manufacturing requires specialised equipment and processes.',
+  9: 'Four recurring failure modes in carbide blade service.',
+  10: 'Grade comparison table.',
+  11: 'International standards cross-reference for carbide grades.',
+  12: 'PVD and CVD coatings for tungsten carbide.',
+  13: 'Specialty applications for carbide beyond slitter blades.',
+  14: 'Summary of the carbide family.',
+  15: 'Edge geometry for carbide blades differs from tool steel.',
+  16: 'Real-world case: upgrading paper slitter from M2 to YG6.',
+  17: 'Real-world case: selecting YG10 for glass-filled polymer granulator.',
+  18: 'Inspection and QC for carbide blades.',
+  19: 'Decision matrix: carbide grade by application.',
+  20: 'Procurement and supply for carbide grades.',
+  21: 'Cost-vs-performance deep dive for carbide adoption.',
+  22: 'ISO 513 detailed mapping.',
+  23: 'Failure analysis case studies for carbide.',
+  24: 'Author notes & source confidence for the carbide pillar.',
+  25: 'Future trends in tungsten carbide.',
+  26: 'Quick reference card for carbide grades.',
+  27: 'Carbide recycling for cost reduction.',
+  28: 'Pillar cross-references summary for the cluster.',
+  29: 'Closing note for the carbide pillar.',
+};

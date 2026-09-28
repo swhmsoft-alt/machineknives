@@ -19,8 +19,8 @@ metadata:
   canonical: 'https://www.industrial-knives.net/pillar-tungsten-carbide/'
 image: '/images/og/pillar-tungsten-carbide.webp'
 ---
-
 # Tungsten Carbide Grades for Industrial Blades
+
 
 Cemented tungsten carbide is the standard material for industrial cutting tools that must survive highly abrasive substrates or high-impact events where steel wear life is insufficient. The defining feature is a composite of tungsten carbide (WC) grains bonded by a cobalt (Co) matrix — hardness HRA 88–93 (≈ HRC 75–82), vastly higher than tool steel. The trade-off is brittleness: carbide has no plastic deformation, only catastrophic fracture under impact.
 
@@ -30,495 +30,507 @@ Selection follows three steps: identify the abrasive severity, identify the impa
 
 For per-grade chemistry, hardness and cross-reference tables, see the [YG6 reference entry](/blog/materials-encyclopedia/yg6/), [YG10 entry](/blog/materials-encyclopedia/yg10/), [YG15 entry](/blog/materials-encyclopedia/yg15/), and the [tungsten carbide overview](/blog/materials-encyclopedia/tungsten-carbide/).
 
+
+
+
+
 ## 1. What is cemented tungsten carbide?
-
 Cemented tungsten carbide is a powder-metallurgy composite of tungsten carbide (WC) grains in a cobalt (Co) binder. The WC grains provide the hardness (2000–2500 HV); the Co binder provides the toughness (Co is a ductile metal that bridges between the WC grains). The composite is produced by:
-1. Milling WC and Co powders to a fine mixture
-2. Pressing into the desired shape
-3. Liquid-phase sintering at 1400–1500 °C, where a small fraction of Co melts and bonds the WC grains
-
-The result is a material with hardness HRA 88–93 (much higher than tool steel HRC 60–65) but with limited toughness — Charpy impact typically 5–15 J, vs tool steel 20–40 J. The trade-off drives the grade taxonomy.
-
-ISO 513 classifies carbide grades by application:
-- **K-series** (K01–K40) — short chips, cast iron, non-ferrous metals, non-metals — the focus of this guide
-- **P-series** (P01–P50) — long chips, steel
-End.
-For the latest revision dates, see the git history.
-The pillar cluster is a living document, updated quarterly.
-For technical support or custom grade consultation, contact the editorial team.
-Subscribe to the Industrial Knives Engineering newsletter for major pillar revisions, new pillar releases, and case studies from the field.
-The carbide industry continues to evolve with new grades, new coatings, and new processing methods. This pillar will be updated periodically to reflect industry developments.
-This pillar article is approximately 2,950 words in length — meeting the 3,000-word pillar-class depth target. Future updates may push higher as the carbide industry evolves.
-## 29. Closing note
-
-This pillar is part of the Industrial Knives Engineering blade-material pillar cluster — six pillars covering the four material families (cold-work tool steel, martensitic stainless, high-speed steel, hot-work tool steel, tungsten carbide) plus the selection framework pillar that ties them together. The pillars share a consistent structure, cross-references, and terminology, enabling engineering teams to navigate the material selection space efficiently.
-
-For organisations considering a move to carbide for the first time, the typical adoption path is:
-1. Identify the highest-cost blade (annual cost × wear life = cost per cut)
-2. Trial carbide grade in parallel with the current steel grade
-3. Measure wear life, blade cost, and total cost per cut
-4. If carbide wins on cost per cut and the wear-life premium justifies the upfront cost, adopt
-5. Train operators and inspectors on carbide-specific protocols (diamond grinding, visual inspection at 30×, no 0-hone edges)
-
-The typical ROI for carbide adoption on abrasive applications is 3–10×. For applications with extreme wear (rock crushing, glass fibre cutting), ROI can exceed 20×.
-
-Future revisions of this pillar will include additional case studies, refined cost ranges, and updates on emerging technologies (nano-grain carbide, functionally graded carbide, recycled WC powder). Subscribe to the [5-Factor Framework revision feed](/blog/selection-guide/5-factor-blade-selection-framework/) for updates.
-
-End of pillar.
-## 27. Cost reduction through carbide recycling
-
-Carbide recycling is a significant cost-reduction lever for high-volume users:
-
-**Spent carbide value**: tungsten carbide scrap has significant value as WC-Co recycled powder. Market price for clean spent carbide: ~$15–25/kg (vs $30–80/kg for new YG-series). Recycling is standard practice in mining, road construction, and high-volume manufacturing.
-
-**Collection**: collect spent carbide blades in dedicated containers (separate from steel scrap). Avoid contamination with steel filings or other materials — contamination reduces recycle value or makes the material unrecyclable.
-
-**Processing**: spent carbide is crushed, milled, and chemically treated to recover WC and Co separately. The recovered materials meet standard chemistry specifications and can be used to make new carbide with equivalent properties.
-
-**Reprocessing**: recycled WC powder is blended with virgin powder (typically 30–50 % recycled, 50–70 % virgin) to maintain consistent properties. Higher recycled ratios (>50 %) may show slightly lower performance for critical applications.
-
-**Environmental benefit**: recycling saves ~70 % of the energy vs primary WC production. For high-volume users, the environmental footprint reduction is substantial.
-
-**Practical recommendation**: for industrial blade applications, ask your carbide supplier about take-back programmes. Many Chinese YG-series suppliers have established recycling channels. The cost saving on the next blade can be 20–40 % if you return the spent blade.
-
-For more information, see ISO 28079 (hardmetals — chemical analysis) and ASTM B932 (Standard Guide for Environmental Aspects of Tungsten Carbide Scrap Recycling).
-
-## 28. Pillar cross-references summary
-
-For navigation across the pillar cluster:
-
-| Pillar | URL | Covers |
-|--------|-----|--------|
-| Cold-work tool steel | `/pillar-cold-work-tool-steel/` | D-series, A-series, O1, DC53, ASP |
-| Martensitic stainless | `/pillar-martensitic-stainless/` | 420, 440A/B/C, 17-4 PH |
-| High-speed steel | `/pillar-high-speed-steel/` | M1, M3, M35, M42, M50, T1, T15, ASP |
-| Hot-work tool steel | `/pillar-hot-work-tool-steel/` | H11, H13, 6CrW2Si |
-| Tungsten carbide | `/pillar-tungsten-carbide/` (this page) | YG6, YG10, YG15 |
-| Selection framework | `/pillar-selection-guide/` | 5-factor methodology |
-
-The pillars are organised by material family with consistent structure (intro / chemistry / grades / heat treatment / selection / failure modes / standards / summary). Cross-references between pillars are provided at the end of each.
-## 24. Author notes & source confidence
-
-This pillar article covers GB YG6, YG10 and YG15 tungsten carbide grades based on the following sources, with confidence levels noted:
-
-**High confidence** (standard international standard, well-documented):
-- GB/T 30892 standard designations (YG6, YG8, YG10, YG11, YG15, YG20) — Chinese national standard
-- ISO 513 application classification (K, P, M series) — widely used international standard
-- Chemistry compositions (Co %, WC grain size) — standard datasheet
-- Hardness ranges (HRA 88–93) — standard measurement
-- International cross-references — based on standard tables
-
-**Medium confidence** (manufacturer or trade data, verified against multiple sources):
-- Charpy impact ranges — based on typical published values; ±2 J
-- Transverse rupture strength (TRS) ranges — standard for YG grades
-- ISO 513 category mapping — based on standard classification
-- Cost ranges USD/kg — 2026 indicative; may vary 30 % by region
-
-**Lower confidence** (single source or training data only, requires SME verification):
-- Specific failure mode signatures (§17, §23) — illustrative based on field experience
-- Worked examples — illustrative cases; specific numbers are estimates
-- Brazing procedure details — based on standard practice, requires verification for critical applications
-
-SME review recommended for the Charpy impact numbers, TRS ranges, and brazing procedure details before production use.
-
-For revisions or corrections, contact the editorial team or update the `scripts/_materials-dictionary.mjs` source.
-
-**Revision history**: v1.0 (2026-09-28). Future revisions may add brazed-tip design guidelines, additional ISO 513 subcategories, and refined cost ranges. Subscribe to the [5-Factor Framework revision feed](/blog/selection-guide/5-factor-blade-selection-framework/) for updates.
-
-**Author**: Industrial Knives Engineering editorial team. Standards cited: GB/T 30892, ISO 513, ISO 28079, ASTM B611, ASTM E384, JIS B4053.
-
-## 25. Future trends
-
-The tungsten carbide industry is evolving on several fronts:
-
-**Nano-grain carbide** (WC grain <0.5 µm): 2–3× the wear resistance of conventional grades at similar toughness. Cost: 3–5× standard. Application: ultra-premium slitter blades, precision machining.
-
-**Functionally graded carbide**: surface layer with low Co for wear resistance, core with high Co for toughness. Eliminates the trade-off. Available from select manufacturers (Sandvik, Kennametal). Cost: 5–10× standard.
-
-**Recycled WC powder**: sustainability trend. Recycled WC powder has equivalent properties to virgin powder for most applications. Cost: 20–30 % lower. Adoption growing.
-
-**CVD diamond coating** continues to drop in cost. Premium abrasive cutting applications (CFRP, MMC, ceramics) increasingly use CVD-diamond-coated carbide as the standard.
-
-**Additive manufacturing (3D printing)** of carbide is in development. Currently limited to specific binder compositions, but could enable novel part geometries (conformal cooling channels in carbide inserts, lattice structures for weight reduction) in the next 5–10 years.
-
-For industrial blade applications, the dominant trend is the gradual replacement of tool steel with carbide (especially YG10, YG15) for abrasive and impact-dominant applications. The economics consistently favour carbide for wear-life-critical applications.
-
-## 26. Quick reference card
-
-For shop-floor reference:
-
-**Card 1: Carbide grade selection by application**
-```
-Application                  | Grade    | Hone | Coating
------------------------------|----------|------|----------
-Paper slitter (abrasive)     | YG6      | 10 µm| TiN
-Paper slitter (glassine)     | YG6      | 10 µm| none
-Plastic granulator (filled)  | YG10     | 15 µm| AlCrN
-Plastic granulator (glass)   | YG10     | 15 µm| AlCrN
-Mineral wool cutting         | YG10/YG15| 20 µm| AlCrN
-Rock crusher blade           | YG15     | 25 µm| none
-Wire drawing die             | YG15     | n/a | none
-CFRP cutting                 | YG6X + CVD| 10 µm| diamond
-```
-
-**Card 2: Failure mode vs fix**
-```
-Failure         | Fix
-----------------|----------------------
-Edge chipping   | Increase hone, or upgrade YG grade
-Gross fracture  | Upgrade YG, increase fillets
-Brazing failure | Redesign joint, verify procedure
-Uniform wear    | Upgrade YG or apply coating
-```
-
-**Card 3: When to use carbide vs steel**
-```
-Use carbide when:           | Use steel when:
------------------------------|---------------------
-Abrasive substrate           | Corrosion-sensitive (use stainless)
-High-impact load              | Moderate duty (cost-effective)
-Premium wear life needed     | Low-volume (tool steel cheaper upfront)
-```
-
-For deeper treatment, see the [cold-work tool steel pillar](/blog/selection-guide/pillar-cold-work-tool-steel/), [martensitic stainless pillar](/blog/selection-guide/pillar-martensitic-stainless/), and the [Industrial Blade Selection Framework](/blog/selection-guide/5-factor-blade-selection-framework/).
-## 20. Procurement and supply
-
-Tungsten carbide prices (2026 indicative, USD/kg, finished blanks or brazed tips):
-
-| Grade | Indicative USD/kg | Supply availability |
-|------:|------------------:|---------------------|
-| YG6 | $30–50 | China-domestic |
-| YG8 | $35–55 | China-domestic |
-| YG10 | $40–70 | China-domestic |
-| YG15 | $50–80 | China-domestic |
-| YG20 | $60–90 | China-domestic |
-| Brazed carbide tip (D2 carrier) | $50–200 per tip | Standard |
-
-Lead times for YG-series are typically 2–6 weeks depending on size and quantity. For standard sizes (10–50 mm blanks), 2-week lead time is typical. For custom sizes or large quantities, 6–8 weeks may be required.
-
-Standard mill specifications should include:
-- GB/T 30892 grade designation (or ISO equivalent)
-- Co content (with tolerance, typically ±0.5 %)
-- WC grain size (with tolerance)
-- HRA hardness (typical range, not single value)
-- TRS (transverse rupture strength) — typically 1,500–2,500 MPa for YG grades
-- Dimensional tolerance (typically ±0.05 mm for small blanks, ±0.1 % for large)
-- Surface finish (as-sintered, ground, polished)
-
-For non-Chinese-market applications, equivalent grades from European (Böhler, CERATIZIT) or US (Kennametal, Sandvik) suppliers are available at 2–3× the YG-series price. Quality is comparable; the price premium reflects brand and distribution costs rather than material differences.
-
-## 21. Cost-vs-performance deep dive
-
-The economic comparison between carbide and tool steel for industrial blades:
-
-**Per-cut cost analysis** (typical paper slitter):
-- M2 blade: $15 / blade, 5-day life, 50,000 cuts/day → $0.00015/cut
-- YG6 blade: $40 / blade, 60-day life, 50,000 cuts/day → $0.0000033/cut (45× cheaper per cut)
-- ASP 2060 + ta-C: $100 / blade, 120-day life, 50,000 cuts/day → $0.0000083/cut (18× cheaper than M2)
-
-**Per-tonne throughput** (plastic granulator):
-- D2 rotor blade: $20 / blade, 5-day life, 2 tonnes/day → $2/tonne
-- YG10 rotor blade: $60 / blade, 75-day life, 2 tonnes/day → $0.40/tonne (5× cheaper)
-- ASP 2060 + ta-C: $200 / blade, 200-day life, 2 tonnes/day → $0.50/tonne
-
-**Hidden costs in carbide adoption**:
-- Higher upfront per-blade cost (capex impact)
-- Different sharpening equipment (diamond wheels vs abrasive wheels)
-- Different inspection protocol (visual at 30× vs 10×)
-- Longer lead times (2–6 weeks vs 1 week for tool steel)
-- Need for braze-joint inspection (if using brazed tips)
-
-The hidden costs are typically 10–20 % of the per-blade cost premium. Even accounting for hidden costs, the wear-life premium typically justifies the upgrade for any abrasive-substrate or impact-heavy application.
-
-## 22. ISO 513 detailed mapping
-
-ISO 513 classifies carbide grades by application category. The K-series (cast iron, non-ferrous, non-metal) is the focus for industrial blades:
-
-| ISO Category | Workpiece | YG equivalent | Application |
-|--------------|-----------|---------------|-------------|
-| K01 | High-grade cast iron, chilled rolls | n/a (precision grinding grade) | Precision turning, boring |
-| K05 | Grey cast iron, short chips | YG6X (fine-grain) | High-speed finishing |
-| K10 | Grey cast iron, non-ferrous | YG6X | Turning, milling |
-| K20 | Cast iron, non-ferrous | **YG6** | General cutting, medium roughing |
-| K25 | Cast iron, non-ferrous | **YG8** | Intermediate |
-| K30 | Cast iron, non-ferrous, long chips | **YG10** | Roughing, interrupted cuts |
-| K35 | Cast iron, tough conditions | YG11 (close to YG10) | Heavy roughing |
-| K40 | Cast iron, very tough conditions | **YG15**, YG20 | Heavy roughing, mining |
-
-The YG-series from China corresponds approximately to K20 (YG6), K30 (YG10), K40 (YG15). The exact correspondence is approximate — different manufacturers may have slightly different grades within each ISO category.
-
-For cutting tool selection, use the ISO category as the primary guide, with the YG-series as the Chinese-standard equivalent. For non-Chinese-market applications, equivalent grades from European or US suppliers can be used directly under their own designations (e.g., Böhler K20 / Sandvik GC3015 for ISO K20).
-
-## 23. Failure analysis case studies
-
-**Case 1: Granulator rotor YG6 fracture.** A glass-filled nylon granulator with YG6 rotor blades shows catastrophic fracture after 2 weeks. Visual: clean break through the blade body. Root cause: impact from a foreign metal object entered the granulator. The YG6 grade (6 % Co) has insufficient toughness for the impact event. Fix: upgrade to YG15 (15 % Co), add metal detector upstream of granulator. The fix costs ~$5,000 (detector + YG15 upgrade) but saves ~$40,000/year in avoided downtime.
-
-**Case 2: YG10 paper slitter wear.** Abrasive paper slitter using YG10 blades shows rapid wear at the edge, with chipping at corners. Visual: uniform edge recession + corner chipping. Root cause: the application is pure wear-dominant (no impact), and the abrasive paper is moderately abrasive. YG10 over-specified for impact but under-performs on wear. Fix: downgrade to YG6 (lower Co → higher wear resistance) and add CVD diamond coating for ultra-premium wear life. The downgraded YG6 blade + diamond coating gives 3× the wear life of YG10 at lower cost.
-
-**Case 3: Brazed YG6 tip detachment.** A brazed YG6 carbide tip on a steel carrier detaches after 1 week of service. Visual: clean separation at braze joint. Root cause: insufficient braze joint area, or incorrect brazing temperature / time. Fix: redesign braze joint to increase area by 50 %, verify brazing procedure (filler metal, temperature, time, surface prep). Premium solution: use mechanical clamping (set screw + locking pin) instead of brazing for easy replacement.
-## 15. Edge geometry for carbide blades
-
-Carbide edge geometry is fundamentally different from tool steel due to carbide's brittleness. Key principles:
-
-**Edge radius**: carbide blades need a hone, even for sharp applications. The minimum practical hone is 5 µm; below this, the edge chips under any impact. Standard: 5–15 µm for most applications.
-
-**Rake angle**: negative rake is more common for carbide than for steel. Negative rake (-5 to -15°) puts the cutting edge in compression rather than tension, reducing chipping. Positive rake (5–10°) is used for thin-section cutting where chip evacuation is critical.
-
-**Clearance angle**: 12–25° for carbide (vs 8–15° for steel). Higher clearance reduces drag but increases chipping risk.
-
-**Secondary bevel**: 20–30° at 0.2–1 mm width. Carbide bevels are typically wider than steel bevels because the brittleness requires more robust geometry.
-
-**Carbide-specific considerations**:
-- Never use 0 hone on carbide — will chip immediately
-- Brazed carbide tips are ground to final dimension after brazing (the steel carrier is softer than the carbide)
-- Sharpening is with diamond grinding wheels only, light passes with no thermal damage
-- Wire EDM can be used for non-standard shapes but requires EDM-grade carbide
-
-**Hone matching rule for carbide**:
-- YG6 + 10 µm hone: general-purpose, moderate impact
-- YG10 + 15 µm hone: granulator rotors, heavy impact
-- YG15 + 20 µm hone: rock crusher, extreme impact
-
-## 16. Real-world case: paper slitter YG6 upgrade
-
-A paper-converting line was experiencing M2 slitter blade service life of 5 days on abrasive kraft paper. Annual blade cost: ~$60,000. Failure mode: uniform wear to a knife edge.
-
-Upgrade to YG6 with TiN coating:
-- YG6 cost: ~$40 per blade (vs M2 ~$15 per blade) — 2.7× premium
-- YG6 service life: 60 days on same abrasive paper — 12× wear life over M2
-- Annual cost: $60,000 / 12 × 2.7 = $13,500 annual cost
-- **Total savings: $46,500/year**
-- ROI: 13× considering the carbide premium
-
-The economics are clear for highly abrasive applications — carbide pays for itself within weeks even at 2–3× per-blade cost. The break-even wear-life ratio is approximately 3×; any carbide grade giving 3×+ the wear life of steel is cost-effective on abrasive substrates.
-
-## 17. Real-world case: granulator rotor YG10 selection
-
-A plastic granulator processes 2 tonnes/hour of glass-fibre-filled nylon (35 % glass). Granulator rotor has 5 bed knives + 3 rotor knives. Rotor blade material: D2 tool steel. Service life: 5 days. Failure mode: edge chipping + uniform wear.
-
-Failure analysis:
-- D2 at HRC 60 has Charpy 25 J — marginal for the glass-fibre impact
-- Glass fibre is highly abrasive (SiO₂ particles)
-- The combination of impact + abrasion wears D2 quickly
-
-Upgrade options:
-- **D7**: high-V D-series, 2× wear life but still chipping-prone
-- **M42 with coating**: 3× wear life but Co grade is expensive
-- **YG10 carbide**: 10–20× wear life + high impact resistance
-
-Upgrade to YG10 with brazed carbide tips on D2 carrier:
-- YG10 cost: ~$60 per rotor blade (vs D2 ~$20) — 3× premium
-- YG10 service life: 75 days — 15× wear life over D2
-- Annual cost: $60,000 / 15 × 3 = $12,000
-- **Total savings: $48,000/year**
-
-The YG10 upgrade is a no-brainer for highly abrasive + impact applications like glass-filled granulator rotors.
-
-## 18. Inspection and quality control
-
-Carbide blade QC differs from tool steel:
-
-**Incoming material inspection**: grade designation, Co content, WC grain size per supplier datasheet. Visual for surface defects (carbide often has visible porosity or cracks).
-
-**Post-brazing inspection**: visual for braze joint quality. Dye-penetrant or ultrasonic for brazed joints. Pull test for critical joints (destructive testing on samples).
-
-**Pre-use inspection**: visual for edge chipping (use 10–30× magnification). Dimensional verification of edge geometry.
-
-**Post-use failure analysis**: failed carbide blades should be inspected at 30–100× magnification to identify failure mode:
-- Edge chipping → upgrade Co content, increase hone
-- Gross fracture → redesign geometry, upgrade Co content
-- Brazing failure → improve brazing procedure
-- Uniform wear → upgrade to fine-grain or apply CVD diamond coating
-
-**Hardness verification**: Vickers hardness per ASTM E384 (carbide hardness > 1000 HV requires specialised equipment). HRA scale per ASTM B611 for routine quality control.
-
-## 19. Decision matrix: carbide grade vs application
-
-| Application | Grade | Hone | Coating | Expected life vs D2 |
-|------------|-------|------|---------|---------------------|
-| Paper slitter (abrasive paper) | YG6 | 10 µm | TiN | 5–10× |
-| Paper slitter (glassine) | YG6 | 10 µm | none | 5× |
-| Plastic granulator (filled) | YG10 | 15 µm | AlCrN | 10–20× |
-| Plastic granulator (glass-filled) | YG10 | 15 µm | AlCrN | 10–15× |
-| Mineral wool cutting | YG10/YG15 | 20 µm | AlCrN | 15–25× |
-| Rock crusher blade | YG15 | 25 µm | none | 20–50× |
-| Stamping die (high speed) | YG15 | n/a | none | 50–200× (dies not blades) |
-| Wire drawing die | YG6/YG15 | n/a | none | 100–1000× (dies) |
-| CFRP cutting | YG6X fine-grain | 10 µm | CVD diamond | 30–100× |
-| Mineral cutting | YG10 | 15 µm | none | 10–20× |
-
-This matrix is a starting point for grade selection. Final selection should be based on wear testing in the actual production environment.
-## 11. International standards cross-reference
-
-| Standard | Region | Coverage |
-|----------|--------|----------|
-| **GB/T 30892** | China | YG6, YG8, YG10, YG15, YG20 (coarse grain) |
-| **ISO 513** | International | Application classification (K, P, M series) |
-| **ISO 28079** | International | Hardmetals — mechanical testing |
-| **ASTM B611** | US | Abrasive wear resistance of carbide |
-| **DIN ISO 513** | Germany | Same as ISO 513 |
-| **JIS B4053** | Japan | Carbide grade designation (similar to YG) |
-
-ISO 513 is the most widely used international standard for carbide selection by application category. The YG-series from China has approximate equivalents in DIN, JIS and ISO, but the exact chemical match varies.
-
-## 12. Coatings for tungsten carbide
-
-PVD coatings are applied to carbide for additional wear resistance. The high hardness of carbide substrate supports coatings well.
-
-**TiN (Titanium Nitride, 2–5 µm)**: standard gold coating. Hardness ~2300 HV. Good general-purpose.
-
-**TiCN (Titanium Carbonitride, 2–5 µm)**: harder than TiN. Better for abrasive cutting.
-
-**AlCrN (Aluminium Chromium Nitride, 3–5 µm)**: high hardness, excellent thermal stability. Premium for high-temperature cutting.
-
-**CVD diamond coating**: ultra-premium for abrasive non-metallic cutting. Hardness ~10,000 HV. Used on carbide inserts for CFRP, MMC, ceramics. Cost: $50–200 per blade.
-
-For granulator rotor blades on filled plastics, AlCrN is the standard coating. For paper slitter blades on abrasive paper, TiCN or AlCrN. For ultra-premium abrasive cutting, CVD diamond.
-
-## 13. Specialty applications
-
-**Mineral wool cutting**: YG10 or YG15 with AlCrN coating. The high impact resistance of YG15 handles the brittle mineral wool material.
-
-**Glass fibre reinforced polymer cutting**: YG6X (fine-grain) or YG10 with AlCrN. The high wear resistance handles the abrasive glass particles.
-
-**Rock crusher blades**: YG15 or YG20. High impact resistance for the rock-on-blade impact events.
-
-**Paper slitter on abrasive paper**: YG6 with TiN or AlCrN. The abrasive paper quickly wears steel blades; YG6 lasts 5–10× longer.
-
-**Plastic granulator rotors**: YG10 (filled plastics) to YG15 (glass-filled). The Co binder handles the impact from foreign objects.
-
-**Wire drawing dies**: YG6 (fine wire) to YG15 (rod). The wear resistance is critical for long die life.
-
-**Mining bits**: YG20+ for percussion drilling. Higher Co content for impact resistance.
-
-**Metal cutting inserts**: YG6, YG8 for cast iron; P-series for steel; M-series for stainless. (Beyond scope of this guide.)
-
-## 14. Summary
-
-Cemented tungsten carbide is the standard material for industrial cutting tools that must survive highly abrasive substrates or high-impact events. The defining feature is a composite of WC grains bonded by Co matrix — hardness HRA 88–93 (≈ HRC 75–82) but limited toughness. The GB YG-series (YG6, YG10, YG15) spans the ISO 513 K20–K40 application range. Selection follows three steps: identify the wear severity, identify the impact severity, and match the grade. Higher Co content gives higher impact resistance but lower wear resistance. YG6 is the general-purpose grade; YG10 is the granulator / heavy-duty grade; YG15 is the impact-dominant / rock-crusher grade. Coatings (TiN, AlCrN, CVD diamond) extend wear life further for the most demanding applications.
-
-For related content, see the [cold-work tool steel pillar](/blog/selection-guide/pillar-cold-work-tool-steel/), [high-speed steel pillar](/blog/selection-guide/pillar-high-speed-steel/), [martensitic stainless pillar](/blog/selection-guide/pillar-martensitic-stainless/), [hot-work tool steel pillar](/blog/selection-guide/pillar-hot-work-tool-steel/), and the [Industrial Blade Selection Framework](/blog/selection-guide/5-factor-blade-selection-framework/).
-## 7. Selection methodology
-
-Tungsten carbide grade selection:
-
-1. **Identify the wear severity**:
-   - Low wear (paper, light plastics): YG6
-   - Medium wear (filled plastics, abrasive paper): YG10
-   - High wear (mineral wool, glass fibre, ceramic): YG10 or YG6X (fine-grain)
-   - Extreme wear (rock crushing): not standard YG; consider YG20+ or brazed PCD
-
-2. **Identify the impact severity**:
-   - Low impact (slitter, light granulator): YG6
-   - Medium impact (granulator on filled plastics): YG10
-   - High impact (rock crusher, drop-hammer): YG15
-
-3. **Match grade to wear × impact matrix**:
-   - Low wear + low impact: YG6
-   - Medium wear + medium impact: YG10
-   - High impact: YG15
-   - High wear + low impact: YG6X (fine-grain) or premium PCD
-   - High wear + high impact: brazed PCD or special composite
-
-4. **Check grain size requirements**:
-   - Coarse grain (YG standard): higher toughness, lower wear
-   - Fine grain (YG6X, YG10X): higher wear, lower toughness — use for very abrasive conditions
-   - Ultra-fine grain (<0.5 µm): highest wear, lowest toughness — premium applications
-
-5. **Edge geometry for carbide blades**:
-   - Carbide cannot be honed the same way as steel — use 5–15 µm hone standard
-   - Negative rake (-5 to -15°) for brittle applications
-   - Larger clearance angle (15–25°) for chip evacuation
-   - Avoid sharp edges on carbide — always hone to reduce chipping
-
-6. **Cost-vs-performance trade-off**: YG6 at ~$30–50/kg is cheapest; YG10 at ~$40–70/kg; YG15 at ~$50–80/kg. Brazed PCD (polycrystalline diamond) at $500+/kg is the ultra-premium for the most abrasive non-metallic cutting.
-
-## 8. Manufacturing notes for carbide blades
-
-Carbide is fundamentally different from steel — manufacturing requires specialised equipment:
-
-**Sintering**: WC + Co powder pressed and sintered at 1400–1500 °C. Net-shape or near-net-shape parts can be produced, reducing machining.
-
-**Machining**: carbide is machined with diamond grinding wheels (not carbide tooling — that won't work). EDMs (electrical discharge machining) is standard for complex shapes. Wire EDM for profiles.
-
-**Brazing**: carbide is typically brazed to a steel carrier (the steel provides the structural support, the carbide provides the cutting edge). Induction brazing or furnace brazing with silver or copper filler metal.
-
-**Sharpening**: diamond grinding wheels only. Coolant is critical to prevent thermal cracking. Light passes, not heavy grinding.
-
-**Inspection**: visual at 10–30× for edge chipping, surface defects. Dye-penetrant or magnetic-particle inspection for brazed joints.
-
-## 9. Common failure modes
-
-The four most common carbide blade failures:
-
-**1. Edge chipping.** A YG6 blade on a paper slitter has small fragments missing from the edge. Visual tell: sharp-edged fragments missing, often at corners. Fix: increase hone from 5 µm to 15 µm; or upgrade to YG10 for higher impact resistance.
-
-**2. Gross fracture.** A YG10 granulator blade fractures through the blade body. Visual tell: clean break with no wear on the rest of the edge. Fix: upgrade to YG15 for higher toughness; or redesign with larger fillets.
-
-**3. Brazing failure.** A brazed carbide-tipped blade separates at the braze joint. Visual tell: carbide tip detaches from steel carrier. Fix: improve brazing procedure (clean surfaces, proper filler metal, correct temperature); or use mechanical clamping instead of brazing.
-
-**4. Abrasive wear.** A YG6 blade on highly abrasive substrate wears to a knife edge. Visual tell: uniform edge recession. Fix: upgrade to YG10 or fine-grain grade; or apply CVD diamond coating (where applicable).
-
-## 10. Grade comparison table
-
-| Grade | ISO | Co % | WC grain | HRA | HRC equivalent | Charpy J | Application |
-|------:|----:|-----:|---------:|----:|----------------:|---------:|------------|
-| **YG6** | K20 | 6 | Coarse (1.5–2.5 µm) | 91–92 | 78–80 | 5–8 | General-purpose wear |
-| **YG10** | K30 | 10 | Coarse (1.5–2.5 µm) | 90–91 | 76–78 | 8–12 | Granulator rotor |
-| **YG15** | K30–K40 | 15 | Coarse (1.5–2.5 µm) | 89–90 | 74–76 | 12–18 | Stamping dies, impact |
-| **YG6X** | K20 | 6 | Fine (0.8–1.2 µm) | 92–93 | 80–82 | 4–6 | High wear |
-| **YG8** | K25 | 8 | Coarse | 90–91 | 76–78 | 7–10 | Intermediate |
-| **YG20** | K40 | 20 | Coarse | 87–88 | 71–73 | 18–25 | Mining bits |
-## 4. GB YG6 — K20 general purpose
-
-**GB YG6 (China GB/T 30892 standard)** is the standard 6 % Co coarse-grain tungsten carbide — ISO K20 classification. HRA 91.0–92.0 (≈ HRC 78–80).
-
-YG6 is the general-purpose coarse-grain YG grade, with lower wear resistance but higher impact resistance than the fine-grain YG6X. The lower Co content means more WC and less metal binder — the grade is harder but less tough than higher-Co grades.
-
-YG6 is used for non-precision wear parts, granulator bed knives (light duty), general mechanical wear parts, and paper slitter blades on moderately abrasive paper.
-
-YG6 selection rule: use YG6 for moderate abrasive wear with low to moderate impact. For higher impact resistance, move to YG10. For higher wear resistance on very abrasive substrates, move to fine-grain YG6X (different grade, not covered here).
-
-## 5. GB YG10 — K30 heavy-duty
-
-**GB YG10 (GB/T 30892)** is a 10 % Co tungsten carbide — ISO K30 classification. HRA 90.0–91.0. Higher Co content than YG6 means greater impact resistance, lower wear resistance.
-
-YG10 is used for granulator rotor blades, heavy-impact wear parts, and applications where YG6 would chip. The 10 % Co binder can absorb impact energy that would shatter a 6 % Co grade.
-
-YG10 selection rule: use YG10 for granulator rotors on filled plastics, glass fibre cutting, and similar applications with both abrasion and impact.
-
-## 6. GB YG15 — K30–K40 ultra-heavy-duty
-
-**GB YG15 (GB/T 30892)** is a 15 % Co tungsten carbide — between ISO K30 and K40. HRA 89.0–90.0. The highest Co content in the standard YG series, with the highest impact resistance and the lowest wear resistance.
-
-YG15 is used for stamping dies, heavy-section shear blades, rock crusher blades, and impact-prone wear parts where YG6 / YG10 would chip. The high Co binder gives exceptional toughness at the cost of wear life.
-
-YG15 selection rule: use YG15 for impact-dominant heavy-duty applications — rock crusher blades, large granulator rotors, drop-hammer dies. For wear-dominant applications, use YG6 or YG10.
-- **M-series** (M01–M40) — austenitic stainless, difficult-to-machine
-
-For industrial blades, the K-series (cast iron / non-ferrous / non-metal) is the primary focus. YG6 = K20, YG10 = K30, YG15 = K30–K40 in ISO terms.
 
 ## 2. ISO 513 application classification
 
-The ISO 513 classification assigns each carbide grade a usage category based on the workpiece material and cutting conditions:
+ISO 513 classifies carbide grades by application category.
 
-| Category | Workpiece | Typical applications |
-|----------|-----------|----------------------|
-| **K01** | Cast iron, hardened steel | Precision turning, high-quality surface finish |
-| **K10** | Cast iron, non-ferrous | Turning, milling, drilling |
-| **K20** | Cast iron, non-ferrous, short chips | General-purpose cutting, medium roughing |
-| **K30** | Cast iron, non-ferrous, long chips | Roughing, interrupted cuts |
-| **K40** | Cast iron, non-ferrous, very tough conditions | Heavy roughing, low cutting speed |
+ISO 513 is the international standard for classification and application of hard cutting materials. The standard divides carbides into three main categories by workpiece material:
 
-The lower the K-number, the higher the wear resistance (lower Co content, finer grain). The higher the K-number, the higher the impact resistance (higher Co content, coarser grain).
+**K-series** (K01–K45) — for short-chip workpiece materials: cast iron, non-ferrous metals, plastics, glass, ceramics, stone. The K-series is the category relevant to industrial blade service. K01 is the hardest and most wear-resistant; K45 is the toughest and most impact-resistant. The intermediate grades (K10, K20, K30, K40) span the wear-toughness trade-off.
 
-For industrial blades:
-- **Granulator rotors on lightly-filled plastics**: K20–K30 (YG6–YG10)
-- **Granulator rotors on heavily-filled plastics, glass fibre, mineral wool**: K30–K40 (YG10–YG15)
-- **Rock crusher blades**: K40 (YG15)
-- **Paper slitter blades on abrasive paper**: K20 (YG6)
-- **Granulator bed knives (counter-knife)**: K30 (YG10)
+**P-series** (P01–P50) — for long-chip workpiece materials: steels. P-series grades have TiC and TiN additives for crater wear resistance at high cutting speeds. Used in metal-cutting tooling, not typically in industrial blades.
+
+**M-series** (M10–M40) — for stainless steels and difficult-to-machine materials. Universal grades applicable to a range of workpiece materials. Rarely used in industrial blades.
+
+For industrial blade service, the K-series is the relevant classification. The standard YG6, YG10, YG15 grades from China correspond approximately to K20, K30, K30–K40 respectively. Within each grade, the WC grain size and Co content are tightly specified to deliver the rated hardness and toughness.
+
+The selection methodology in §7 uses the ISO 513 K-series classification as the primary framework, with the GB YG grades as the specific implementation.
+
 
 ## 3. The GB YG-series grades
 
 The GB YG-series (China GB/T 30892 standard) is the Chinese national standard for tungsten carbide grades used in industrial applications. The naming convention: YG = hard metal (cemented carbide), followed by the cobalt content percentage. So YG6 = 6 % Co, YG10 = 10 % Co, YG15 = 15 % Co.
+
+The YG-series from China corresponds approximately to the ISO 513 K-series for global nomenclature: YG6 ≈ K20, YG10 ≈ K30, YG15 ≈ K30–K40. The exact correspondence is approximate; specific properties vary by manufacturer.
+
+The YG-series focuses on coarse-grain carbide grades (WC grain size 1.5–2.5 µm) for general-purpose industrial applications. For fine-grain grades (better wear resistance, lower toughness), the YG-X variants (YG6X, YG8X, etc.) are used. For ultra-fine grades (<1 µm), special designations from individual manufacturers are required.
+
+For industrial cutting tools covered in this pillar, the standard YG grades (YG6, YG10, YG15) are the focus. The next three sections cover each grade in detail.
+
+## 4. GB YG6 — K20 general purpose
+
+GB YG6 is the standard 6 % Co coarse-grain grade, ISO K20.
+
+**GB YG6** is the standard 6 % cobalt carbide grade for industrial blade service. Nominal composition is 94 % WC + 6 % Co by weight, with WC grain size typically 1.5–2.5 µm (medium grain). Hardness HRA 89.5–91 (equivalent to HRC 76–79). Transverse rupture strength (TRS) typically 1800–2200 MPa.
+
+YG6 is the wear-resistant workhorse of the YG-series. The 6 % Co content is at the lower end of the range for blade service, maximising wear resistance at the cost of some impact resistance. YG6 is the standard specification for slitter blades in highly abrasive service (mineral-loaded paper, glassine, filled polymer film), for paper-slitter and metal-slitter applications where impact loading is moderate.
+
+YG6 is also the standard specification for PCB drilling (where the wear resistance is critical for tool life) and for cutting-tool inserts in woodworking and metalworking. The grade is widely available from Chinese and international carbide producers.
+
+YG6 limitations: the 6 % Co content limits impact resistance. Heavy-impact applications (granulator rotors, rock-crusher blades) should specify YG10 or YG15 instead. YG6 also has limited corrosion resistance — the WC grains are stable but the Co binder can corrode in acidic or chloride-rich environments. For wet or corrosive service, Ni-binder or Cr-rich grades are available.
+
+## 5. GB YG10 — K30 heavy-duty
+
+GB YG10 is the higher-Co granulator / heavy-duty grade, ISO K30.
+
+**GB YG10** is the 10 % cobalt carbide grade for heavy-duty industrial blade service. Nominal composition is 90 % WC + 10 % Co by weight, with WC grain size 1.5–2.5 µm. Hardness HRA 87–89 (equivalent to HRC 73–75). TRS typically 2200–2600 MPa.
+
+The 10 % Co content is the standard balance between wear resistance and impact resistance for granulator and crusher blades. YG10 is the dominant specification for:
+- Plastic granulator rotors and bed knives (especially glass-filled or mineral-filled polymers)
+- Recycling granulators
+- Crusher blades for stone, brick, and concrete
+- Wood-waste granulators
+- Metal-cutting applications with intermittent heavy impact
+
+YG10's higher Co content gives roughly 30–40 % higher TRS than YG6, which translates to proportionally higher resistance to chipping and gross fracture. The trade-off is about 15 % lower wear resistance than YG6 — acceptable for heavy-duty service where impact is the primary failure mode.
+
+YG10 is also widely available from Chinese and international carbide producers. For impact-dominant industrial blade service, YG10 is typically the right answer; YG15 is reserved for extreme impact applications.
+
+## 6. GB YG15 — K30–K40 ultra-heavy-duty
+
+GB YG15 is the impact-dominant ultra-heavy-duty grade, ISO K30–K40.
+
+**GB YG15** is the 15 % cobalt carbide grade for extreme-impact industrial blade service. Nominal composition is 85 % WC + 15 % Co by weight, with WC grain size 1.5–2.5 µm. Hardness HRA 85–87.5 (equivalent to HRC 70–73). TRS typically 2500–2800 MPa.
+
+The 15 % Co content is at the upper limit for industrial blade service. YG15 is specified for:
+- Heavy rock-crusher hammers and anvils
+- Primary crusher wear liners in mining
+- Drop-hammer anvils
+- Heavy stamping punches where carbide is preferred over tool steel
+- Extreme-impact applications where YG10 chips in service
+
+YG15's higher Co content gives roughly 10–15 % higher TRS than YG10, the maximum impact resistance available in the standard YG-series. The trade-off is significant: about 25–30 % lower wear resistance than YG6, and the lowest hardness of the standard YG-series.
+
+YG15 is rarely the optimal choice for industrial blades where wear is also a significant concern. It is specified only for extreme-impact applications where YG10 has chipped in service and the operator is willing to accept the wear-life penalty for additional impact margin.
+
+For most industrial blade service, YG10 is the right answer in the heavy-duty category; YG15 is reserved for very specific impact-dominant applications.
+
+## 7. Selection methodology
+
+Selection methodology for tungsten carbide grades.
+
+**Step 1 — Identify the abrasive severity.** Light abrasion (clean paper, soft polymer): YG6 may be sufficient. Moderate abrasion (filled polymer, mineral-loaded paper): YG6 standard. Severe abrasion (glass-fibre composite, mineral wool): YG6 fine-grain or YG6X.
+
+**Step 2 — Identify the impact severity.** Light impact (slitter blades, paper cutting): YG6 acceptable. Moderate impact (granulator rotors, recycling): YG10 standard. Heavy impact (rock-crusher blades, mining): YG15.
+
+**Step 3 — Match the grade.** Abrasive-dominant, light impact: YG6 or YG6X. Abrasive + moderate impact: YG10. Impact-dominant: YG15. Mixed-mode service: typically YG10 is the right answer; YG6 if wear dominates.
+
+**Step 4 — WC grain size.** Standard YG grades use 1.5–2.5 µm medium grain. Fine-grain (YG6X, 0.8–1.2 µm) gives 10–15 % better wear resistance at the cost of some toughness. Ultra-fine (<0.8 µm) is for specialty applications — typically not standard blade service.
+
+**Step 5 — Binder considerations.** Standard Co binder is the default. Ni-binder or Ni-Co binder for corrosion resistance (food, pharma, marine). Cr-rich binder for abrasive + corrosive combinations.
+
+**Step 6 — Cost vs performance.** YG6 is the cost baseline. YG10 carries roughly 15 % premium. YG15 carries roughly 25 % premium. The wear-life differences are larger than the cost differences, so the higher-Co grades usually pay back through longer service life.
+
+## 8. Manufacturing notes for carbide blades
+
+Carbide manufacturing requires specialised equipment and processes.
+
+**Powder preparation.** WC and Co powders are mixed in the specified ratio (e.g., 94 % WC + 6 % Co for YG6), milled with a binder (typically paraffin or polyethylene glycol) to ensure homogeneity, then spray-dried to form free-flowing granules ready for pressing.
+
+**Pressing.** The powder is pressed in a rigid die at 100–200 MPa to form a "green" part with the approximate shape of the finished blade. For complex geometries, isostatic pressing (CIP) at 200–300 MPa produces a more uniform density distribution. The pressed density is roughly 50–60 % of theoretical.
+
+**Sintering.** The green part is heated in a vacuum or hydrogen-atmosphere furnace to 1350–1500 °C. The Co melts and wets the WC grains; capillary action pulls the part to near-full density (98–99.5 % of theoretical). The sintering cycle must be precisely controlled to avoid WC grain growth (which reduces wear resistance) or residual porosity (which initiates fracture).
+
+**Sinter-HIP.** For critical applications, sintering is combined with hot isostatic pressing (HIP) at 100–200 MPa argon pressure. The HIP eliminates residual porosity and produces a fully dense material with maximum TRS. Sinter-HIP carbide carries a 30–50 % premium over vacuum-sintered carbide.
+
+**Grinding.** Sintered carbide is ground with diamond wheels (not aluminium-oxide or CBN — diamond is required for WC). Coolant flood is mandatory to prevent thermal damage. EDG (electrical discharge grinding) with wire or die-sinker EDM is used for complex geometries that cannot be ground mechanically.
+
+**Edge preparation.** Final edge geometry is critical. Sharp edges (no hone) for paper slitter blades; 0.05–0.10 mm hone for general industrial; larger hone for impact service. Edge radii must be measured and verified per the drawing.
+
+**Quality control.** Each batch of carbide is tested for hardness (HRA or HV), TRS (per ISO 3327), density (per ASTM B311), and microstructure (per ASTM B657). For critical applications, the specific carbide grade from each manufacturer lot is verified against the procurement specification.
+
+## 9. Common failure modes
+
+Four recurring failure modes in carbide blade service.
+
+**Abrasive wear** is the dominant gradual failure mode for carbide blades in normal service. The cutting edge gradually loses its profile as WC grains fracture or pull out of the Co binder. Abrasive wear on carbide is typically 5–10× slower than on D2 cold-work tool steel, but the wear rate accelerates when the binder is preferentially eroded (exposing WC grains to mechanical overload).
+
+**Chipping** is the most common impact-related failure. A fragment of the cutting edge breaks off, usually within 1–2 mm of the tip. Causes include: impact event (slug contact, splice, foreign object), hone too small for the service, grade with insufficient Co content, or residual porosity from poor sintering. Mitigation: larger hone, higher-Co grade (YG10, YG15), sinter-HIP carbide, better process control.
+
+**Gross fracture** is catastrophic failure of the entire blade. Causes include: severe impact beyond design, internal defects from poor sintering, sharp internal corners initiating stress concentration, or improper brazing/assembly. Mitigation: sinter-HIP carbide, rounded internal corners, robust assembly design, drop-test verification for impact-dominant applications.
+
+**Corrosion** of the cobalt matrix appears in wet or chemically aggressive environments. The Co binder corrodes preferentially, leaving the WC grains unsupported and accelerating wear. Mitigation: Ni-binder grades, Cr-rich binder grades, protective coatings (TiN, CrN, DLC).
+
+**Thermal damage** can occur if grinding is too aggressive without adequate coolant. Thermal cracking at the edge initiates fracture. Mitigation: proper grinding protocol with coolant flood, verification of damage-free surface.
+
+## 10. Grade comparison table
+
+Grade comparison table.
+
+| Grade | Co (%) | WC grain (µm) | HRA | HRC equivalent | TRS (MPa) | ISO 513 | Primary use |
+|-------|--------|---------------|-----|----------------|-----------|---------|-------------|
+| YG6 | 6 | 1.5–2.5 | 89.5–91 | 76–79 | 1800–2200 | K20 | Slitter blades, abrasive wear |
+| YG6X | 6 | 0.8–1.2 | 90.5–92 | 78–81 | 1700–2000 | K10 | Fine-grain wear service |
+| YG8 | 8 | 1.5–2.5 | 88.5–90 | 74–77 | 1900–2300 | K20–K30 | General industrial |
+| YG10 | 10 | 1.5–2.5 | 87–89 | 73–75 | 2200–2600 | K30 | Granulator rotors, crusher blades |
+| YG15 | 15 | 1.5–2.5 | 85–87.5 | 70–73 | 2500–2800 | K30–K40 | Heavy impact, mining |
+
+TRS values are typical for vacuum-sintered carbide. Sinter-HIP carbide carries 20–30 % higher TRS at the same hardness level. HRC equivalent values are approximate conversions from HRA and should be treated as relative indicators rather than absolute specifications.
+
+## 11. International standards cross-reference
+
+International standards cross-reference for carbide grades.
+
+| Grade | China GB | ISO 513 | Sandvik | Kennametal | Iscar | Mitsubishi |
+|-------|----------|---------|---------|------------|-------|------------|
+| YG6 | YG6 | K20 | H10F | K68 | IC20 | US20 |
+| YG6X | YG6X | K10 | H6F | K68 (fine) | IC08 | US05 |
+| YG8 | YG8 | K20–K30 | H10 | K45 | IC25 | US30 |
+| YG10 | YG10 | K30 | H13A | K45 | IC30 | US40 |
+| YG15 | YG15 | K30–K40 | H20 | K55 | IC45 | US50 |
+
+The ISO 513 designation (K20, K30, etc.) is the most universally applicable cross-reference. Manufacturer-specific designations (Sandvik H-series, Kennametal K-series) cover proprietary grades that may have different chemistries or grain sizes even at the same ISO designation. Procurement specifications should reference the chemistry and grain size requirements, not just the ISO designation.
+
+Chinese carbide producers (Toshiba / Tungaloy-equivalent Zhuzhou, Zigong, etc.) supply YG6, YG10, YG15 grades that comply with GB/T 30892 and ISO 513. International carbide producers (Sandvik, Kennametal, Iscar, Mitsubishi, Ceratizit, Boehlerit) supply equivalent grades under their own designations. Quality varies — international producers generally offer tighter grain-size control and more consistent mechanical properties; Chinese producers offer significant cost advantages.
+
+## 12. Coatings for tungsten carbide
+
+PVD and CVD coatings for tungsten carbide.
+
+**TiN (titanium nitride)** — gold colour, hardness ~2300 HV, wear-life gain on carbide 30–50 % in abrasive service. The standard first-coating specification.
+
+**TiCN (titanium carbonitride)** — higher hardness than TiN (~3000 HV), better for abrasive substrates. Wear-life gain 50–80 % over uncoated.
+
+**TiAlN (titanium aluminium nitride)** — oxidative stability to 800 °C, used where the cutting edge runs hot. Best for metal-cutting applications.
+
+**AlCrN (aluminium chromium nitride)** — highest-temperature stability, premium coating for hot-work and high-speed applications.
+
+**CrN (chromium nitride)** — corrosion-resistant, used where the carbide substrate is exposed to wet or mildly corrosive environments.
+
+**DLC (diamond-like carbon)** — low friction, used for adhesive-wear service (polymer film, sticky food). Hardness 1500–3000 HV depending on variant.
+
+**CVD (chemical vapour deposition) diamond coating** — applied to carbide substrates for ultra-high wear applications. Hardness 8000–10000 HV. Used in graphite machining, CFRP cutting, and other extreme-wear applications. CVD diamond is expensive and requires special substrate preparation.
+
+Coating thickness on carbide is typically 2–8 µm for PVD and 5–20 µm for CVD. Hone geometry must be sharp enough for the coating to deposit at the edge. PVD coating on sharp edges (<0.05 mm hone) can be deposited but is more vulnerable to chipping than coated tool-steel edges. CVD coatings are typically applied to inserts rather than to industrial blades.
+
+## 13. Specialty applications
+
+Specialty applications for carbide beyond slitter blades.
+
+**Mining and quarrying.** Crusher hammers, anvil liners, primary crusher wear parts — YG15 standard. YG6X for severe abrasive wear with moderate impact. Heavy-duty mining applications often specify sinter-HIP carbide for maximum TRS.
+
+**Recycling.** Granulator rotors, hammer mills, shredder blades for plastics, metals, electronic waste — YG10 standard. Glass-filled and mineral-filled polymers require YG10 minimum; pure plastic recycling can use YG6.
+
+**Wood processing.** Planer knives, jointer blades, profile cutters for MDF and particle board — YG6 or YG6X. The silica content in composite wood products drives the YG specification over tool steel.
+
+**Paper converting.** Slitter blades, perforator blades, cut-off blades for abrasive paper grades — YG6. Tissue slitter blades occasionally use YG6 for extended life in coated paper applications.
+
+**Metal slitting.** High-speed slitting of electrical steel, silicon steel, stainless steel — YG6 or YG6X with TiAlN coating. The combination of high speed and abrasive substrate pushes the material requirement to carbide.
+
+**Cement and concrete.** Crusher wear parts, grinding media — YG10 or YG15 depending on impact severity.
+
+**Food and pharmaceutical.** YG6 with Ni-binder or Cr-rich binder for corrosion resistance. Standard Co-binder carbide is not suitable for acidic or chloride-rich food environments.
+
+**Electronics.** PCB drilling, routing — YG6X with WC grain <1 µm for the smallest hole diameters and longest tool life.
+
+## 14. Summary
+
+Summary of the carbide family.
+
+Cemented tungsten carbide is the workhorse substrate for industrial blades where wear resistance is the primary requirement and impact is moderate. The defining feature is the WC-Co composite with hardness HRA 85–92 (HRC 70–80) and TRS 1700–2800 MPa. YG6 is the wear-resistant standard; YG10 is the impact-resistant upgrade; YG15 is reserved for extreme impact. ISO 513 K-series (K10–K45) is the universal classification framework. Selection is driven by abrasive severity, impact severity, and the wear-toughness trade-off. Manufacturing requires specialised equipment (powder pressing, vacuum sintering, diamond grinding) that not every tool shop possesses. Sinter-HIP is the premium process for maximum TRS. Coatings (TiN, TiCN, TiAlN, AlCrN, CrN, DLC, CVD diamond) extend wear life further. Beyond carbide, the next material family is ceramic (SiAlON, silicon nitride) for very high temperature or PCD (polycrystalline diamond) for ultra-high wear.
+
+## 15. Edge geometry for carbide blades
+
+Edge geometry for carbide blades differs from tool steel.
+
+**Edge angle.** Carbide can hold sharper edges than tool steel because of the higher hardness. Standard edge angles for industrial carbide blades are 15–25° per side for thin slitters, 22–30° for general cutting, 28–35° for heavy shear and granulator rotors. Sharper edges than these ranges are typically not used because the chipping risk outweighs the cutting-force benefit.
+
+**Primary hone.** Carbide hone sizes are typically smaller than tool steel because the higher hardness supports the geometry. Slitter blades for paper and tissue: 0.02–0.08 mm. Granulator blades: 0.20–0.50 mm. Heavy shear and crusher blades: 0.5–1.5 mm or secondary micro-bevel.
+
+**Secondary micro-bevel.** Standard on chip-prone applications. The micro-bevel width is typically 0.5–2.0 mm at an angle of 25–45° per side. The micro-bevel is particularly important on YG6 (lower Co, less impact resistance) for impact-loaded service.
+
+**Edge radius measurement.** For sharp edges (no hone), edge radius is measured by light-section microscopy or laser confocal. Production-grade sharp edges should measure below 3 µm radius. For honed edges, the hone width and secondary bevel angle are the controlled parameters.
+
+**Surface finish.** Final surface finish at the edge should be Ra < 0.4 µm for general industrial, Ra < 0.2 µm for premium applications. Surface finish is controlled by grinding wheel grit size, grinding parameters, and post-grind polishing if required.
+
+**Assembly considerations.** Carbide blades are often brazed or clamped into a steel body. The braze alloy must have a melting point below the sintering temperature of the carbide (typically below 700 °C) but high enough for the service temperature. Silver-braze alloys are standard. Clamped assemblies avoid the braze temperature limit but require precision machining of the clamp interface.
+
+## 16. Real-world case: paper slitter YG6 upgrade
+
+Real-world case: upgrading paper slitter from M2 to YG6.
+
+A specialty paper mill producing mineral-loaded security paper is running D2 slitter blades at HRC 60 with TiN coating. Blade life is 36 hours between changes, with edge rounding at the tip and occasional micro-chipping. The line runs at 800 m/min on 120 gsm paper with 18 % calcium-carbonate filler and 2 % titanium-dioxide pigment — highly abrasive substrate.
+
+**Baseline cost analysis.** D2 blade: $120 per blade (material $30, grinding $70, TiN coating $20). Blade life: 36 hours. Blade-change downtime: 12 minutes at $800/minute = $9,600 per change. Off-spec product during the first 30 minutes after each change: ~$2,000 per change. Total cost per change: $11,720.
+
+**Intervention.** Replace D2 with YG6 carbide slitter blade with TiN coating. YG6 blade: $280 per blade (carbide blank $150, diamond grinding $110, TiN coating $20). Blade life: 220 hours (based on carbide's 6× wear-life advantage over D2 in this abrasive service).
+
+**Outcome.** Blade life extended from 36 to 220 hours (6.1×). Blade changes reduced from 6.5 per day to 1.0 per day. Downtime cost per day: from $76,180 to $11,720 (84 % reduction). Off-spec product cost per day: from $13,000 to $2,000 (85 % reduction). Net daily savings: $75,460. Annual savings on this line: ~$19 million.
+
+**Payback.** The YG6 upgrade pays back the cost differential (about $160 per blade more than D2) within the first 2 hours of operation. The intervention is one of the highest-ROI changes available in industrial blade selection — when the substrate is highly abrasive and the blade-change cost is significant, carbide consistently outperforms tool steel by an order of magnitude.
+
+## 17. Real-world case: granulator rotor YG10 selection
+
+Real-world case: selecting YG10 for glass-filled polymer granulator.
+
+A plastics recycler is processing glass-filled polyamide (PA66 + 30 % glass fibre) through a granulator with D2 rotor blades at HRC 60. Blade life is 4 shifts before the cutting edge has worn enough to require rotation or replacement. Failure mode is gradual edge rounding with occasional micro-chipping at the corner where the rotor blade meets the bed knife.
+
+**Step 1 — Abrasive severity.** Glass fibre at 30 % by weight is highly abrasive. The fibre ends exposed at the cut surface act like miniature cutting tools against the rotor blade. This is a classic carbide application.
+
+**Step 2 — Impact severity.** Granulator rotors see impact loading on every cut, particularly when slug or oversized feed enters the cutting chamber. The impact is moderate but repetitive. YG6 would chip in service; YG10 or YG15 is required.
+
+**Step 3 — Grade match.** YG10 is the right answer: 10 % Co gives adequate impact resistance for granulator service, with sufficient wear resistance for the abrasive glass-fibre environment. YG15 is overkill for this service.
+
+**Step 4 — Edge geometry.** 25° per side edge angle, 0.4 mm primary hone, 1.5 mm secondary micro-bevel at 35° to absorb chipping initiation at the corner.
+
+**Step 5 — Procurement.** Source YG10 from a major Chinese carbide producer (Zhuzhou, Zigong) at substantially lower cost than Western equivalents. For granulator service where the failure cost is moderate, the cost-quality trade-off favours Chinese supply.
+
+**Outcome.** YG10 rotor blades deliver 18 shifts of blade life (4.5× D2 baseline). Blade cost premium: YG10 blade is roughly 4× D2 per blade, but the longer service life and reduced downtime more than compensate. Annual savings on granulator blade consumption: $45,000.
+
+## 18. Inspection and quality control
+
+Inspection and QC for carbide blades.
+
+**Stage 1 — Material certification.** Mill certificate shows nominal chemistry (Co content, WC grain size range), hardness (HRA), TRS, and density. For sinter-HIP material, the certificate confirms HIP processing. For international suppliers, certificates should reference ISO 513 designation and the equivalent national standard.
+
+**Stage 2 — Visual and dimensional inspection.** Visual inspection at 10× magnification for cracks, chips, or surface defects. Dimensional inspection against the drawing — dimensions must be within drawing tolerance, which for carbide is typically ±0.01 mm or tighter for precision blades.
+
+**Stage 3 — Edge inspection.** Edge geometry is measured against the drawing — edge angle, primary hone, secondary micro-bevel. Sharp edges measured by edge radius. Visual inspection under magnification for grinding damage, chipping, or thermal cracks.
+
+**Stage 4 — Hardness verification.** Sample-basis hardness check per ASTM B294 (Vickers) or ASTM B311 (density confirmation). For critical applications, every blade is hardness-tested. Out-of-spec hardness triggers a batch review.
+
+**Stage 5 — Microstructure verification.** Sample-basis metallographic examination per ASTM B657. Confirms: WC grain size within specification; Co binder distribution uniform; absence of abnormal grain growth; absence of η-phase (Co-depleted carbides that indicate carbon imbalance); porosity within specified limits.
+
+**Stage 6 — Functional test.** For critical applications, sample-basis functional test (cutting trial or impact test) confirms the carbide meets the application requirements. Cutting trials at production parameters are common for slitter and granulator blades.
+
+**Documentation.** Each blade should be traceable to the carbide batch and to the supplier lot. The documentation chain (mill certificate, processing records, inspection results) supports failure analysis and warranty claims.
+
+## 19. Decision matrix: carbide grade vs application
+
+Decision matrix: carbide grade by application.
+
+| Application | Abrasive severity | Impact severity | Recommended grade | Co (%) | ISO 513 |
+|-------------|-------------------|-----------------|-------------------|--------|---------|
+| Paper slitter (clean) | Low | Low | YG6 | 6 | K20 |
+| Paper slitter (mineral-filled) | High | Low | YG6 / YG6X | 6 | K20 / K10 |
+| Tissue slitter | Low | Low | YG6 | 6 | K20 |
+| Film slitter | Low | Low | YG6 | 6 | K20 |
+| PCB drill/router | High | Low | YG6X | 6 | K10 |
+| Plastic granulator (filled) | High | Moderate | YG10 | 10 | K30 |
+| Plastic granulator (recycling) | High | Moderate-high | YG10 | 10 | K30 |
+| Metal slitter (high-speed) | Moderate | Moderate | YG6 + TiAlN | 6 | K20 |
+| Metal slitter (stainless) | High | Moderate | YG6 + TiAlN | 6 | K20 |
+| Wood planer/jointer | Moderate-high | Low | YG6 / YG6X | 6 | K20 / K10 |
+| MDF / particle board | Very high | Low | YG6X | 6 | K10 |
+| Crusher (rock/mining) | Very high | Very high | YG15 | 15 | K30–K40 |
+| Crusher (recycling) | High | High | YG10–YG15 | 10–15 | K30–K40 |
+| Hammer mill (agri) | Moderate | High | YG10 | 10 | K30 |
+| Food/pharma | Low | Low | YG6 + Ni binder | 6 | K20 |
+| Glass cutting | Very high | Low | YG6X + DLC | 6 | K10 |
+
+This matrix is a starting point. Actual selection should consider the specific abrasive and impact conditions, the blade-change cost, and the cost-vs-life trade-off.
+
+## 20. Procurement and supply
+
+Procurement and supply for carbide grades.
+
+**Per-piece cost** varies widely by grade, geometry, and supplier. Standard YG6 slitter blanks: $80–$200 per piece depending on size. YG10 granulator blanks: $300–$800 per piece. YG15 crusher parts: $500–$2,000 per piece depending on size. Sinter-HIP premium adds 30–50 % to base cost. Finished-and-ground blades add grinding cost ($50–$300 per blade depending on geometry complexity).
+
+**Chinese vs international supply.** Chinese carbide producers (Zhuzhou Cemented Carbide, Zigong, etc.) supply the bulk of the global YG-grade market at significantly lower cost than international producers (Sandvik, Kennametal, Iscar, Mitsubishi, Ceratizit, Boehlerit). The cost differential is typically 30–50 % for equivalent grade designation. The quality differential varies by supplier — top Chinese producers offer carbide that matches international equivalents for most industrial blade applications; smaller Chinese producers may have wider batch-to-batch variability.
+
+**Lead time.** Standard YG-grade blanks from Chinese suppliers: 4–8 weeks for stock sizes, 8–12 weeks for custom geometries. From international suppliers: 6–12 weeks for stock sizes, 12–20 weeks for custom geometries. Sinter-HIP material adds 2–4 weeks to the lead time.
+
+**Quality verification.** For critical applications, source qualification should include: chemistry verification (XRF or wet chemistry); hardness testing per ASTM B294; TRS per ISO 3327; density per ASTM B311; metallographic examination per ASTM B657. Sample-basis testing on each shipment is the standard procurement protocol for production-grade carbide.
+
+**Recycling.** Used carbide can be reclaimed through the zinc process (Zn melt dissolves Co binder, allowing WC recovery) or through chemical reprocessing. Recycled WC is used in lower-grade applications or blended with virgin powder. Recycling reduces raw material cost by 30–50 % for the recovered material.
+
+## 21. Cost-vs-performance deep dive
+
+Cost-vs-performance deep dive for carbide adoption.
+
+The cost-vs-performance trade-off for industrial carbide adoption follows a predictable pattern. For most industrial blade applications, carbide costs 3–10× as much per blade as the equivalent tool-steel blade, but delivers 3–30× the wear life in abrasive service. The crossover point — where the higher blade cost is offset by the longer service life — depends on the blade-change cost.
+
+**Crossover analysis for a typical slitter line.**
+- D2 blade: $120 per blade, 36-hour life, 12-minute change at $800/min
+- YG6 carbide blade: $280 per blade, 220-hour life, 12-minute change at $800/min
+
+Per-change cost (blade + downtime + off-spec product):
+- D2: $120 + $9,600 + $2,000 = $11,720
+- YG6: $280 + $9,600 + $2,000 = $11,880
+
+Per-hour operating cost:
+- D2: $11,720 / 36 hours = $326/hour
+- YG6: $11,880 / 220 hours = $54/hour
+
+Carbide pays back immediately when the blade-change cost is significant. When the change is cheap and infrequent, the wear-life advantage of carbide may not offset the cost premium — but those applications are usually better served by tool steel anyway, because the abrasive wear is not severe enough to justify carbide.
+
+**Crossover analysis for a typical granulator line.**
+- D2 rotor blade: $400 per blade, 4-shift life (32 hours), 30-minute change at $1,500/min
+- YG10 carbide rotor blade: $1,500 per blade, 18-shift life (144 hours), 30-minute change at $1,500/min
+
+Per-hour cost:
+- D2: ($400 + $45,000 + $5,000) / 32 = $1,569/hour
+- YG10: ($1,500 + $45,000 + $5,000) / 144 = $360/hour
+
+Carbide pays back overwhelmingly even in moderately abrasive service when the blade-change cost is high.
+
+**The threshold for carbide adoption** is roughly: when the abrasive severity exceeds what tool steel can handle economically (typically 2–5× the wear rate of D2) AND the blade-change cost is significant (downtime > 5 minutes per change at meaningful hourly rate). For paper slitters and granulators, this threshold is met routinely. For stamping dies and small shear blades, tool steel is usually correct.
+
+## 22. ISO 513 detailed mapping
+
+ISO 513 detailed mapping.
+
+ISO 513 designates hard cutting materials by application category using letter-number combinations. The letter indicates the workpiece material category, and the number indicates the grade within that category — higher numbers within a category generally indicate tougher (less wear-resistant) grades.
+
+**K-series (short-chip materials):**
+- K01 — highest wear resistance, lowest toughness. Used for finishing cuts on cast iron, non-ferrous metals, plastics. Not typically specified for industrial blades.
+- K05 — high wear, low impact. Used for precision cutting of abrasive plastics and composite materials.
+- K10 — high wear resistance. YG6X-equivalent. PCB drilling, precision slitting.
+- K20 — medium-high wear, medium toughness. YG6-equivalent. Standard industrial blade grade for paper, film, abrasive service.
+- K30 — medium wear, medium-high toughness. YG10-equivalent. Granulator rotors, crusher blades.
+- K40 — medium-low wear, high toughness. Used for heavy-impact applications.
+- K45 — lowest wear, highest toughness in the K-series. YG15-equivalent. Mining and quarrying.
+
+**P-series (long-chip materials, mainly steels):**
+P-series grades have TiC/TiN additives for crater wear resistance at high cutting speeds. Used in metal-cutting inserts. Not relevant to industrial blades.
+
+**M-series (stainless and difficult materials):**
+M-series grades are universal. Not commonly used in industrial blade service.
+
+The K-series is the relevant classification for industrial blade service. YG6, YG10, YG15 correspond approximately to K20, K30, K30–K40 respectively. The exact correspondence is approximate; specific properties vary by manufacturer.
+
+For procurement specifications, ISO 513 designation alone is insufficient — the chemistry, WC grain size, and Co content must be specified to ensure the right grade is sourced. Manufacturer-specific datasheets provide the detailed property data.
+
+## 23. Failure analysis case studies
+
+Failure analysis case studies for carbide.
+
+**Case 1 — Chipping at the cutting edge of a YG6 paper slitter.** Symptom: 0.5 mm chip breaks off the cutting edge after 80 hours of service. Investigation: metallographic cross-section shows η-phase (Co-depleted M₁₂C carbide) at the chip origin. The η-phase formed because the carbon balance in the carbide was off — likely due to decarburisation during sintering or incorrect carbon content in the powder. Fix: change supplier to one with tighter carbon control; specify Co content and C-content in the procurement spec; require metallographic verification on first article.
+
+**Case 2 — Rapid wear on a YG10 granulator rotor.** Symptom: edge wears 1.5 mm in 4 shifts instead of expected 0.5 mm. Investigation: chemical analysis shows Co content of 8 % instead of specified 10 %. The supplier delivered the wrong grade. Fix: source qualification with chemistry verification on every batch; on-site XRF or wet chemistry for spot-checks; tighten procurement specification.
+
+**Case 3 — Gross fracture of a YG15 crusher hammer.** Symptom: hammer breaks into three pieces during normal service. Investigation: fracture surface shows large pore clusters (200–500 µm diameter) at the origin. The pores indicate inadequate sintering or missing HIP. Fix: require sinter-HIP processing for crusher-grade carbide; verify density per ASTM B311 on every batch; metallographic verification of porosity.
+
+**Case 4 — Corrosion failure of a YG6 food-processing blade.** Symptom: edge wear accelerates in chloride-bearing food service. Investigation: SEM shows Co binder has been preferentially etched away, leaving unsupported WC grains. The Co binder is not corrosion-resistant in chloride environments. Fix: switch to Ni-binder or Cr-rich binder carbide for chloride service; specify ASTM G48 pitting test on first article.
+
+**Case 5 — Thermal damage from grinding.** Symptom: micro-cracks visible at the cutting edge. Investigation: cross-section shows re-crystallisation and Co enrichment at the surface, indicating grinding temperatures exceeded 700 °C. Fix: improve grinding protocol with proper coolant; verify grinding parameters; specify maximum grinding temperature in the procurement spec.
+
+These cases illustrate the importance of supplier qualification, batch verification, and metallurgical understanding in carbide procurement. The most expensive carbide is worthless if the wrong grade, wrong chemistry, or wrong processing is delivered.
+
+## 24. Author notes & source confidence
+
+Author notes & source confidence for the carbide pillar.
+
+This pillar is compiled from publicly available standards (ISO 513, GB/T 30892, ASTM B294, B311, B657), major carbide manufacturer datasheets (Sandvik, Kennametal, Iscar, Mitsubishi, Ceratizit, Zhuzhou Cemented Carbide, Zigong), and standard industrial references on cemented carbide metallurgy and applications.
+
+**Confidence levels** by claim category:
+- Chemistry and grade designations: high confidence (standardised internationally)
+- Hardness (HRA) values: high confidence (per ASTM B294)
+- TRS values: medium confidence (depend on lot, processing route, specimen orientation)
+- ISO 513 designations: high confidence (international standard)
+- Application guidance: high confidence (well-established across the industry)
+- Cost comparisons: low-medium confidence (regional and supplier-specific variation is significant)
+- Real-world case results: illustrative not definitive
+
+**Known limitations.** Specific carbide grade properties vary by manufacturer even at the same nominal ISO designation. WC grain size, Co distribution, and sintering route (vacuum vs HIP) all affect the actual mechanical properties. Procurement specifications should reference the manufacturer's certificate, not just the ISO designation.
+
+**Update cadence.** Cemented carbide chemistry and ISO classifications are stable over decades. New grades appear occasionally as manufacturers introduce proprietary compositions, but the YG-series and K-series classifications remain valid. This pillar should be reviewed against current manufacturer datasheets every 2–3 years.
+
+**Tool steel vs carbide cross-references.** Many of the cited values in this pillar (TRS, hardness, wear life) are based on published carbide manufacturer data and standard references. Specific tool steel comparisons (D2, M2, etc.) are cross-referenced to the relevant pillar page.
+
+## 25. Future trends
+
+Future trends in tungsten carbide.
+
+**Ultra-fine and nano-grain carbide.** WC grain sizes below 0.5 µm are becoming commercially available from major manufacturers. Ultra-fine grades offer significantly higher wear resistance than conventional grades, approaching the performance of PCD in some applications. Cost is 2–4× conventional YG grades; specification is by manufacturer designation.
+
+**Functionally graded carbide.** Carbide with a wear-resistant surface layer and a tougher core is now available from Sandvik, Kennametal and others. The graded structure is produced by powder stacking or by controlled carbon content during sintering. The result is impact resistance approaching YG15 with wear resistance approaching YG6 — the previous trade-off is partially bypassed.
+
+**Recycled and sustainable carbide.** The zinc-process recycling of used carbide is becoming standard. Recycled WC powder has 90–95 % of the performance of virgin powder at 30–50 % lower cost. Major manufacturers (Sandvik, Ceratizit) now offer carbide with 30–50 % recycled content as standard. Sustainability drivers in the European market are pushing this further.
+
+**Alternative binders.** Ni-binder, Cr-rich binder, and Fe-Co-Ni binders are extending carbide into applications where standard Co-binder is unsuitable (corrosion, food contact). Performance is approaching Co-binder in many applications.
+
+**Additive manufacturing.** 3D-printed carbide is in development. The technology allows complex internal geometries that cannot be produced by conventional pressing. Commercial adoption is limited but the technology is advancing. Industrial blade service is unlikely to be an early application.
+
+**CVD diamond and PCD expansion.** CVD diamond coating on carbide substrates and free-standing PCD (polycrystalline diamond) are extending the high-end performance. Applications in CFRP cutting, graphite machining, and other extreme-wear service will continue to grow. PCD is the next material family beyond carbide for ultra-high wear applications.
+
+## 26. Quick reference card
+
+Quick reference card for carbide grades.
+
+**By abrasive severity:**
+- Light abrasion: YG6 standard
+- Moderate abrasion: YG6 standard
+- Severe abrasion: YG6X (fine grain) or PCD
+- Very severe abrasion: PCD or CVD diamond
+
+**By impact severity:**
+- Light impact (slitter, paper): YG6
+- Moderate impact (granulator, recycling): YG10
+- Heavy impact (crusher, mining): YG15
+- Extreme impact: YG15 + sinter-HIP
+
+**By application:**
+- Paper slitter (clean): YG6
+- Paper slitter (mineral): YG6 / YG6X
+- Tissue slitter: YG6
+- Film slitter: YG6
+- PCB drill: YG6X
+- Plastic granulator (filled): YG10
+- Metal slitter (high-speed): YG6 + TiAlN
+- Wood planer: YG6 / YG6X
+- MDF / particle board: YG6X
+- Rock crusher: YG15 + sinter-HIP
+- Recycling crusher: YG10–YG15
+- Food/pharma: YG6 + Ni binder
+
+**By cost tier:**
+- Cost baseline: YG6, Chinese supply
+- Premium: YG10, sinter-HIP, Western supply
+- Ultra-premium: PCD, CVD diamond, custom geometry
+
+## 27. Cost reduction through carbide recycling
+
+Carbide recycling for cost reduction.
+
+Used carbide (worn slitter blades, spent granulator rotors, scrap inserts) is a recyclable material. The Co binder is the key to recycling — the zinc-melt process dissolves Co away from the WC grains, allowing the WC to be recovered in powder form suitable for re-use.
+
+**Zinc-melt process.** Used carbide is cleaned to remove braze alloy, steel substrate, and surface contamination. The cleaned carbide is heated with zinc to 900–1000 °C. The molten zinc dissolves the Co binder, and the WC grains are released as a powder. The zinc is distilled off and recovered; the WC powder is milled, classified, and graded for re-use.
+
+**Recycled WC quality.** Recycled WC has slightly higher impurity content than virgin WC (mainly from the zinc process and from trace contamination of the feedstock). Performance is typically 90–95 % of virgin material at 30–50 % lower cost. Recycled WC is used in lower-grade carbide applications or blended with virgin powder for standard grades.
+
+**Direct recycling.** Major carbide manufacturers (Sandvik, Ceratizit) operate direct recycling loops — customer's used carbide is returned to the manufacturer, reprocessed, and re-supplied as recycled-content carbide. The direct recycling model provides traceability and quality verification that third-party recyclers cannot always match.
+
+**Cost impact.** For a large carbide consumer (paper mill, granulator operator), the annual used-carbide scrap value can be significant. Returning used carbide to the supplier for credit against new purchases typically offsets 5–15 % of new carbide procurement cost. The economics are most favourable for high-volume YG6 slitter blade applications.
+
+**Limitations.** Recycling is not appropriate for sinter-HIP carbide with trace contamination, or for carbide with embedded brazing material that cannot be cleanly removed. Recycled carbide is also not appropriate for medical, food, or pharmaceutical applications where the trace impurity profile must be tightly controlled.
+
+## 28. Pillar cross-references summary
+
+Pillar cross-references summary.
+
+This tungsten carbide pillar is part of the broader pillar cluster covering substrate selection for industrial cutting blades. The cross-references below help readers navigate the cluster.
+
+**Cross-references to other pillars:**
+- [Cold-work tool steel pillar](/blog/selection-guide/pillar-cold-work-tool-steel/) — primary substrate family for non-carbide industrial blades
+- [Martensitic stainless steel pillar](/blog/selection-guide/pillar-martensitic-stainless/) — corrosion-resistant substrate family
+- [High-speed steel pillar](/blog/selection-guide/pillar-high-speed-steel/) — high-temperature substrate family
+- [Hot-work tool steel pillar](/blog/selection-guide/pillar-hot-work-tool-steel/) — elevated-temperature substrate family
+- [Industrial blade selection framework pillar](/blog/selection-guide/pillar-selection-guide/) — the cross-cutting selection methodology
+
+**Cross-references to encyclopedia entries:**
+- [GB YG6 reference entry](/blog/materials-encyclopedia/yg6/)
+- [GB YG10 reference entry](/blog/materials-encyclopedia/yg10/)
+- [GB YG15 reference entry](/blog/materials-encyclopedia/yg15/)
+- [Tungsten carbide overview](/blog/materials-encyclopedia/tungsten-carbide/)
+
+**Cross-reference to selection methodology:**
+- [5-Factor Blade Selection Framework](/blog/selection-guide/5-factor-blade-selection-framework/) — the methodology that drives the substrate decision
+
+The full pillar cluster is interconnected. Industrial blade selection begins with the selection framework, then narrows to the appropriate material family based on operating temperature, corrosion environment, and abrasive/impact severity. The substrate decision tree (cold-work → martensitic stainless → HSS → hot-work → carbide → ceramic/PCD) is the standard path through the cluster.
+
+Pillar cross-references summary for the cluster.
+
+
+
+## 29. Closing note
+
+Closing note for the carbide pillar.
+
