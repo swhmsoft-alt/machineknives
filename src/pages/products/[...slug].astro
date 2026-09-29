@@ -257,7 +257,14 @@ if (productEntry) {
     },
   );
 
-  productSchemaJson = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph });
+  // Final defence line: every entity has already been cleaned inside its
+  // builder; here we only guard against a fully-empty graph (which would
+  // otherwise emit `{@context, @graph: []}` and trip a GSC warning).
+  if (graph.length === 0) {
+    productSchemaJson = '';
+  } else {
+    productSchemaJson = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph });
+  }
 }
 ---
 

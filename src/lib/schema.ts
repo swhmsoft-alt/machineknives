@@ -89,6 +89,98 @@ export function validateSchemaGraph(urlPath: string, graph: SchemaEntity[]): voi
   }
 }
 
+// ─── 防御层：递归清洗 + 空对象拦截（Google Search Console BreadcrumbList 报错专用）──────────
+
+/**
+ * 递归删除 undefined / null / 空字符串 / 空数组 / 空对象的字段。
+ *
+ * 构建 JSON-LD 前的最后一道清洗。一旦任何字段留空，GSC 会以
+ * "未填写字段 itemListElement" 之类的告警降级整页 rich result —— 即便
+ * 其他字段全部合法。本函数保证喂给 Schema.org 的对象始终最小化、且永不
+ * 包含空字段。
+ *
+ * @example
+ * cleanEmptyFields({ a: 1, b: '', c: null, d: [], e: { f: undefined } })
+ * // → { a: 1 }
+ */
+export function cleanEmptyFields<T>(value: T): T | null {
+  if (value === null || value === undefined) return null;
+  if (typeof value === 'string') {
+    return value.trim() === '' ? null : (value as T);
+  }
+  if (typeof value !== 'object') return value;
+  if (Array.isArray(value)) {
+    const cleaned = value
+      .map((v) => cleanEmptyFields(v))
+      .filter((v): v is NonNullable<unknown> => v !== null && v !== undefined && v !== '');
+    return cleaned as T;
+  }
+  // 普通对象
+  const obj = value as Record<string, unknown>;
+  const out: Record<string, unknown> = {};
+  for (const [k, v] of Object.entries(obj)) {
+    const c = cleanEmptyFields(v);
+    if (c === null || c === undefined || c === '') continue;
+    if (Array.isArray(c) && c.length === 0) continue;
+    if (typeof c === 'object' && !Array.isArray(c) && Object.keys(c as object).length === 0) continue;
+    out[k] = c;
+  }
+  return Object.keys(out).length > 0 ? (out as T) : null;
+}
+
+/**
+ * 防御型 Schema 包装：清洗 → 拦截空对象 → 校验白名单 → 返回 JSON 字符串。
+ *
+ * 行为契约：
+ * - 整体清洗后为空对象 → 返回 `null`（调用方必须 `&&` 守卫后输出）
+ * - `type === 'BreadcrumbList'` 且 `itemListElement` 为空 → 返回 `null`
+ * - 字段校验失败（越权实体）→ 抛出错误（与 `generatePageSchema` 一致）
+ *
+ * @example
+ * ---
+ * const json = safeEmitSchema('BreadcrumbList', { itemListElement: [] });
+ * // json === null  → 模板层 `{json && <script ... />}` 自动跳过
+ * ---
+ * {json && <script type="application/ld+json" set:html={json} />}
+ */
+export function safeEmitSchema(type: string, data: Record<string, unknown>): string | null {
+  const cleaned = cleanEmptyFields(data);
+  if (!cleaned || typeof cleaned !== 'object') return null;
+  const obj = cleaned as Record<string, unknown>;
+  // BreadcrumbList 必须有 itemListElement（核心 GSC 拦截点）
+  if (type === 'BreadcrumbList') {
+    const items = obj.itemListElement;
+    if (!Array.isArray(items) || items.length === 0) return null;
+  }
+  const schemaObject = {
+    '@context': 'https://schema.org',
+    '@type': type,
+    ...obj,
+  };
+  return JSON.stringify(schemaObject);
+}
+
+/**
+ * 询盘制 B2B Offer 工厂：彻底剔除 `price` 字段，仅保留可供应状态 + 价格规格说明。
+ *
+ * 决策依据：Google 会把 `price: 0` / `price: 0.00` 解读为"零元促销"并降级
+ * rich result；询盘制场景下价格由 sales 在收到 RFQ 后才确定，硬编码为零
+ * 违反 `.clinerules` §5 工业与 SEO 诚信规则。这里用
+ * `priceSpecification.description: 'Contact for quotation'` 显式声明价格
+ * 待定，配合 `availability: InStock` 表示可供应。
+ */
+export function buildB2bOffer(): SchemaEntity {
+  return {
+    '@type': 'Offer',
+    availability: 'https://schema.org/InStock',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      priceCurrency: 'USD',
+      description: 'Contact for quotation',
+    },
+  };
+}
+
 // ─── 工厂函数 ──────────────────────────────────────────────────────────────
 
 /**
@@ -127,6 +219,13 @@ export function buildProductDetail(opts: {
   price?: number;
   currency?: string;
   availability?: 'InStock' | 'OutOfStock' | 'PreOrder';
+  /**
+   * 询盘制 B2B 模式：未传入 `price` 时默认注入 `buildB2bOffer()`，
+   * 即不暴露价格数字，仅声明可供应 + 价格待定。
+   * 显式传 `false` 可关闭（如有真实零售价格的衍生 SKU）。
+   * 显式传 `price` 时仍走数字价格分支，保持向后兼容。
+   */
+  inquiryBased?: boolean;
 }): SchemaEntity {
   const entity: SchemaEntity = {
     '@type': 'Product',
@@ -142,12 +241,16 @@ export function buildProductDetail(opts: {
       priceCurrency: opts.currency || 'USD',
       availability: `https://schema.org/${opts.availability || 'InStock'}`,
     };
+  } else if (opts.inquiryBased !== false) {
+    // 询盘制兜底：本项目为 B2B 询盘模式，默认注入不带数字价格的 Offer
+    entity.offers = buildB2bOffer();
   }
-  return entity;
+  // 最后一道清洗：剥离任何因分支未走到而残留的空字段
+  return (cleanEmptyFields(entity) as SchemaEntity) ?? entity;
 }
 
 export function buildBreadcrumb(items: ReadonlyArray<{ name: string; url: string }>): SchemaEntity {
-  return {
+  const list: SchemaEntity = {
     '@type': 'BreadcrumbList',
     itemListElement: items.map((it, i) => ({
       '@type': 'ListItem',
@@ -156,17 +259,21 @@ export function buildBreadcrumb(items: ReadonlyArray<{ name: string; url: string
       item: it.url,
     })),
   };
+  // 清洗后若 itemListElement 为空 → 整对象被截为 null，调用方需用 `&&` 守卫
+  return (cleanEmptyFields(list) as SchemaEntity) ?? list;
 }
 
 export function buildFaqPage(qas: ReadonlyArray<{ q: string; a: string }>): SchemaEntity {
-  return {
+  const filtered = qas.filter((qa) => qa.q?.trim() && qa.a?.trim());
+  const list: SchemaEntity = {
     '@type': 'FAQPage',
-    mainEntity: qas.map((qa) => ({
+    mainEntity: filtered.map((qa) => ({
       '@type': 'Question',
       name: qa.q,
       acceptedAnswer: { '@type': 'Answer', text: qa.a },
     })),
   };
+  return (cleanEmptyFields(list) as SchemaEntity) ?? list;
 }
 
 /**
@@ -233,5 +340,6 @@ export function buildArticle(opts: {
   entity.author = authorEntity;
   entity.publisher = publisherEntity;
   if (opts.about) entity.about = opts.about as SchemaEntity;
-  return entity;
+  // 最后一道清洗：防御 GSC "未填写字段" 告警
+  return (cleanEmptyFields(entity) as SchemaEntity) ?? entity;
 }

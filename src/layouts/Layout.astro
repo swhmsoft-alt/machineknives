@@ -19,6 +19,7 @@ import Intersect from '~/components/common/Intersect.astro';
 import { ClientRouter } from 'astro:transitions';
 
 import type { MetaData as MetaDataType } from '~/types';
+import { safeEmitSchema } from '~/lib/schema';
 
 export interface Props {
   metadata?: MetaDataType;
@@ -28,6 +29,10 @@ const { metadata = {} } = Astro.props;
 const { language, textDirection } = I18N;
 
 // ─── Global JSON-LD (Organization + WebSite + BreadcrumbList + Service on home) ──
+// Each block is funnelled through `safeEmitSchema()`: empty objects / empty
+// BreadcrumbLists never produce HTML. This is the core fix for the GSC
+// "Missing field itemListElement" report — without it the homepage would emit
+// a `<script type="application/ld+json">` containing an empty BreadcrumbList.
 const siteUrl = String(Astro.site ?? 'https://www.industrial-knives.net').replace(/\/$/, '');
 const breadcrumbLdItems = buildBreadcrumbItems(Astro.url.pathname).map((it, idx) => ({
   '@type': 'ListItem',
@@ -35,36 +40,34 @@ const breadcrumbLdItems = buildBreadcrumbItems(Astro.url.pathname).map((it, idx)
   name: it.text,
   item: it.href ? siteUrl + it.href : siteUrl + '/',
 }));
-const organizationLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
+const organizationLdJson = safeEmitSchema('Organization', {
   name: 'Industrial Knives',
   url: siteUrl + '/',
+  logo: siteUrl + '/favicon.svg',
   description:
     'Manufacturer of industrial machine knives for printing, packaging, converting, food processing and recycling.',
+  // B2B global-service properties (per the .clinerules decision log:
+  // no fabricated telephone; only the contact email hard-coded in CTA buttons).
+  email: '[email protected]',
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'sales',
+    email: '[email protected]',
     areaServed: 'Worldwide',
     availableLanguage: ['English'],
   },
-};
-const websiteLd = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
+});
+const websiteLdJson = safeEmitSchema('WebSite', {
   name: 'Industrial Knives',
   url: siteUrl + '/',
-};
-const breadcrumbLd = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: breadcrumbLdItems,
-};
+});
+const breadcrumbLdJson =
+  breadcrumbLdItems.length > 0
+    ? safeEmitSchema('BreadcrumbList', { itemListElement: breadcrumbLdItems })
+    : null;
 const isHome = Astro.url.pathname === '/' || Astro.url.pathname === '';
-const serviceLd = isHome
-  ? {
-      '@context': 'https://schema.org',
-      '@type': 'Service',
+const serviceLdJson = isHome
+  ? safeEmitSchema('Service', {
       serviceType: 'Custom industrial blade manufacturing',
       provider: {
         '@type': 'Organization',
@@ -74,7 +77,7 @@ const serviceLd = isHome
       areaServed: 'Worldwide',
       description:
         'Design, manufacture and re-sharpening of precision industrial machine knives: circular, straight, serrated, shear and granulator blades.',
-    }
+    })
   : null;
 ---
 
@@ -102,12 +105,24 @@ const serviceLd = isHome
       <meta property="article:published_time" content={metadata.datePublished} />
     )}
 
-    <script type="application/ld+json" set:html={JSON.stringify(organizationLd)} />
-    <script type="application/ld+json" set:html={JSON.stringify(websiteLd)} />
-    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
     {
-      serviceLd && (
-        <script type="application/ld+json" set:html={JSON.stringify(serviceLd)} />
+      organizationLdJson && (
+        <script type="application/ld+json" set:html={organizationLdJson} />
+      )
+    }
+    {
+      websiteLdJson && (
+        <script type="application/ld+json" set:html={websiteLdJson} />
+      )
+    }
+    {
+      breadcrumbLdJson && (
+        <script type="application/ld+json" set:html={breadcrumbLdJson} />
+      )
+    }
+    {
+      serviceLdJson && (
+        <script type="application/ld+json" set:html={serviceLdJson} />
       )
     }
 

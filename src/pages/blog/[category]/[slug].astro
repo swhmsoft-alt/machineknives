@@ -33,6 +33,7 @@ import { buildBlogPostBreadcrumb, type BreadcrumbItem } from '~/utils/breadcrumb
 
 import { getStaticPathsBlogCategoryEntries } from '~/utils/blog';
 import { appendCtaIfMissing } from '~/utils/seo-cta';
+import { safeEmitSchema } from '~/lib/schema';
 
 export const prerender = true;
 
@@ -57,10 +58,10 @@ const pageBreadcrumb: BreadcrumbItem[] = pageProps
       { text: `Page ${pageProps.pageNumber}` },
     ]
   : [];
+// Defence layer: safeEmitSchema returns null when itemListElement is empty,
+// so the template-level `&&` guard naturally skips the <script> emit.
 const pageBreadcrumbLd = pageProps
-  ? {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
+  ? safeEmitSchema('BreadcrumbList', {
       itemListElement: pageBreadcrumb.map((it, idx) => ({
         '@type': 'ListItem',
         position: idx + 1,
@@ -69,7 +70,7 @@ const pageBreadcrumbLd = pageProps
           ? String(new URL(it.href, Astro.site ?? 'https://www.industrial-knives.net'))
           : Astro.url.toString(),
       })),
-    }
+    })
   : null;
 const pageMetadata = pageProps
   ? {
@@ -118,10 +119,11 @@ const postMetadata = postProps
     ) as MetaData)
   : null;
 
-const blogPostingLd: Record<string, unknown> | null = postProps
+// Defence layer: safeEmitSchema returns null when the cleaned object is
+// empty and automatically injects @context. We hand it only the user-data
+// payload here; it adds @context + @type itself.
+const blogPostingLdRaw: Record<string, unknown> | null = postProps
   ? {
-      '@context': 'https://schema.org',
-      '@type': 'BlogPosting',
       headline: postProps.post.title,
       description: appendCtaIfMissing(postProps.post.metadata?.description ?? postProps.post.excerpt),
       datePublished: postProps.post.publishDate
@@ -160,9 +162,13 @@ const blogPostingLd: Record<string, unknown> | null = postProps
         : {}),
     }
   : null;
-if (blogPostingLd && postImage) {
-  blogPostingLd.image = typeof postImage === 'string' ? postImage : (postImage as ImageMetadata).src;
+if (blogPostingLdRaw && postImage) {
+  blogPostingLdRaw.image = typeof postImage === 'string' ? postImage : (postImage as ImageMetadata).src;
 }
+// Run the raw payload through clean + whitelist validation
+const blogPostingLd: string | null = blogPostingLdRaw
+  ? safeEmitSchema('BlogPosting', blogPostingLdRaw)
+  : null;
 
 const postBreadcrumb: BreadcrumbItem[] = postProps
   ? buildBlogPostBreadcrumb(
@@ -171,17 +177,17 @@ const postBreadcrumb: BreadcrumbItem[] = postProps
       postProps.post.category?.slug,
     )
   : [];
+// Defence layer: safeEmitSchema returns null when itemListElement is empty,
+// so the template-level `&&` guard naturally skips the <script> emit.
 const postBreadcrumbLd = postProps
-  ? {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
+  ? safeEmitSchema('BreadcrumbList', {
       itemListElement: postBreadcrumb.map((it, idx) => ({
         '@type': 'ListItem',
         position: idx + 1,
         name: it.text,
         item: it.href ? siteUrl + it.href : siteUrl + Astro.url.pathname,
       })),
-    }
+    })
   : null;
 
 const activeMetadata = (isPage ? pageMetadata : postMetadata) as MetaData;
@@ -192,7 +198,7 @@ const activeBreadcrumb: BreadcrumbItem[] = isPage ? pageBreadcrumb : postBreadcr
 <Layout metadata={activeMetadata} breadcrumb={activeBreadcrumb}>
   {isPage && pageProps && pageBreadcrumbLd && (
     <>
-      <script type="application/ld+json" is:inline set:html={JSON.stringify(pageBreadcrumbLd)} />
+      <script type="application/ld+json" is:inline set:html={pageBreadcrumbLd} />
       <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-6xl">
         <Headline>{pageProps.category.title}</Headline>
         <p class="mb-8 md:mb-10 text-center text-sm text-muted dark:text-slate-400">
@@ -205,8 +211,8 @@ const activeBreadcrumb: BreadcrumbItem[] = isPage ? pageBreadcrumb : postBreadcr
   )}
   {!isPage && postProps && blogPostingLd && postBreadcrumbLd && (
     <>
-      <script type="application/ld+json" is:inline set:html={JSON.stringify(blogPostingLd)} />
-      <script type="application/ld+json" is:inline set:html={JSON.stringify(postBreadcrumbLd)} />
+      <script type="application/ld+json" is:inline set:html={blogPostingLd} />
+      <script type="application/ld+json" is:inline set:html={postBreadcrumbLd} />
       <SinglePost post={{ ...postProps.post, image: postImage }} url={postUrl}>
         {postProps.post.Content && <postProps.post.Content />}
       </SinglePost>
