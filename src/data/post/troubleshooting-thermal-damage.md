@@ -1,5 +1,5 @@
 ---
-title: 'Thermal Damage Diagnosis: What the '
+title: 'Blade Thermal Damage: Blue-Edge Annealing'
 excerpt: 'A slitter knife that turns blue, straw or purple is being annealed in service. The edge temperature has exceeded the tempering temperature.'
 publishDate: 2026-09-18
 category: 'troubleshooting'

@@ -1,5 +1,5 @@
 ---
-title: 'How to Choose a Doctor Blade for'
+title: 'How to Choose a Doctor Blade (Flexo & Gravure)'
 excerpt: 'Doctor blades see high-speed scraping, ink chemistry and metrology-grade edge geometry. The wrong steel grade produces streaking, ghosting.'
 publishDate: 2026-09-18
 category: 'selection-guide'

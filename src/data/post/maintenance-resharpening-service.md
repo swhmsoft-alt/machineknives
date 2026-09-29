@@ -1,5 +1,5 @@
 ---
-title: 'Re-sharpening Service: When to outs'
+title: 'When to Outsource Blade Re-sharpening'
 excerpt: 'Outsourcing the re-grind is the right call for most converting and fabrication operations. This article walks through how to specify a re-sharpening service.'
 publishDate: 2026-09-18
 category: 'maintenance'

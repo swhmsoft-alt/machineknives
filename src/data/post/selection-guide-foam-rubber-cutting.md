@@ -1,5 +1,5 @@
 ---
-title: 'How to Choose a Slitter or Shear'
+title: 'How to Choose Blades for Foam & Rubber Cutting'
 excerpt: 'Foam and rubber substrates are gummy, abrasive and chemically variable. The wrong blade grade galls immediately, the wrong edge geometry produces a torn.'
 publishDate: 2026-09-18
 category: 'selection-guide'

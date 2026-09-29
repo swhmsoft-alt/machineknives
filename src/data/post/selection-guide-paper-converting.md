@@ -1,5 +1,5 @@
 ---
-title: 'How to Choose a Slitting Blade for'
+title: 'Choosing Slitting Blades for Paper Converting'
 excerpt: 'Paper slitting looks simple until you account for the substrate GSM, the caliper variation, the trim, the lay-flat tension and the line speed.'
 publishDate: 2026-09-18
 category: 'selection-guide'

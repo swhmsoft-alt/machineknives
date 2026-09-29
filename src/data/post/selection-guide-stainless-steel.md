@@ -1,5 +1,5 @@
 ---
-title: 'How to Choose an Industrial Blade'
+title: 'Choosing Blades for Cutting Stainless Steel'
 excerpt: 'Stainless steel work-hardens under the cut, and the wrong blade grade will see service life drop by 3–5×. This selection guide walks through the substrate.'
 publishDate: 2026-09-18
 category: 'selection-guide'

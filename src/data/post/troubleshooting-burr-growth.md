@@ -1,5 +1,5 @@
 ---
-title: 'Burr Growth Diagnosis: The 10-minut'
+title: 'Slitter Burr Growth: 4 Root Causes & Fixes'
 excerpt: 'A slitter knife that produces growing burr is almost always one of four things: hone growth from wear, substrate variation, line condition drift.'
 publishDate: 2026-09-18
 category: 'troubleshooting'

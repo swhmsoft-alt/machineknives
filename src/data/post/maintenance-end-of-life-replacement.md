@@ -1,5 +1,5 @@
 ---
-title: 'End-of-Life Replacement: The four r'
+title: 'When to Replace an Industrial Blade: 4 Criteria'
 excerpt: 'A knife that is past its design life is a chip waiting to happen. The four retirement criteria, the protocol for retiring and re-purposing.'
 publishDate: 2026-09-18
 category: 'maintenance'

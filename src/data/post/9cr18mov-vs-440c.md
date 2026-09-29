@@ -1,5 +1,5 @@
 ---
-title: '9Cr18MoV vs 440C: Stainless Steel'
+title: '9Cr18MoV vs 440C Stainless Blade Steel'
 excerpt: 'Chinese GB 9Cr18MoV and AISI 440C are the most-quoted martensitic stainless steels for industrial blades that need corrosion resistance.'
 publishDate: 2026-09-18
 category: 'material-comparison'

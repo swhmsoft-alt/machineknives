@@ -1,5 +1,5 @@
 ---
-title: 'Edge Chipping Diagnosis on a Paper'
+title: 'Paper Slitter Edge Chipping: 4 Root Causes'
 excerpt: 'Edge chipping on a paper slitter has four root causes, and each has a different fix. This article walks through the 10-minute diagnostic — visual, dimensional.'
 publishDate: 2026-09-18
 category: 'troubleshooting'

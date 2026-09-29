@@ -1,5 +1,5 @@
 ---
-title: 'YG6X vs YG8 Tungsten Carbide: The t'
+title: 'YG6X vs YG8 Tungsten Carbide Grade Comparison'
 excerpt: 'YG6X and YG8 are the two most-specified Chinese GB standard tungsten carbide grades for industrial knives. The 2 % cobalt difference looks small but it changes.'
 publishDate: 2026-09-18
 category: 'material-comparison'

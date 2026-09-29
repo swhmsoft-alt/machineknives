@@ -1,5 +1,5 @@
 ---
-title: 'How to Choose a Shear Blade for'
+title: 'How to Choose a Shear Blade for Plate Steel'
 excerpt: 'Plate shear blades see impact, work-hardening substrate and variable stock thickness. The grade, hardness and chamfer choice drive a 10× difference in service.'
 publishDate: 2026-09-18
 category: 'selection-guide'

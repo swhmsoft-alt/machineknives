@@ -1,5 +1,5 @@
 ---
-title: 'How to Choose a Crusher Blade for'
+title: 'How to Choose Crusher & Granulator Blades'
 excerpt: 'Crusher blades take the largest impact loads in industrial cutting. A 30 mm M16 nut in a granulator feed will shatter a D2 blade in 200 cycles.'
 publishDate: 2026-09-18
 category: 'selection-guide'

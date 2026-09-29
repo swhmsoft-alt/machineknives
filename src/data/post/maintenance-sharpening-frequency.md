@@ -1,5 +1,5 @@
 ---
-title: 'Re-sharpening Frequency: The three '
+title: 'How Often to Re-sharpen Machine Knives'
 excerpt: 'The right re-grinding frequency balances knife life, scrap rate, and re-grind cost. Re-grind too often wastes stock; re-grind too late produces scrap.'
 publishDate: 2026-09-18
 category: 'maintenance'

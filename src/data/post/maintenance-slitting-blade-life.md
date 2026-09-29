@@ -1,5 +1,5 @@
 ---
-title: 'How to Extend the Life of a: The se'
+title: 'Extend Slitting Blade Life: 7 Variables'
 excerpt: 'A slitting blade is the most-asked-about consumable on a converting line. The life of the knife is set by the substrate, the steel grade, the edge prep.'
 publishDate: 2026-09-18
 category: 'maintenance'

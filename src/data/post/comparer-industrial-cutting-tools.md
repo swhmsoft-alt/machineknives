@@ -1,5 +1,5 @@
 ---
-title: 'Comparer industrial cutting tools:HSS VS WC Blades'
+title: 'Compare HSS vs Tungsten Carbide Cutting Tools'
 excerpt: 'Compare industrial cutting tools to optimize manufacturing efficiency. Learn how to choose between high-speed steel, carbide, and coated blades today.'
 publishDate: 2026-09-27
 category: 'selection-guide'

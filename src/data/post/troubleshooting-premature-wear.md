@@ -1,5 +1,5 @@
 ---
-title: 'Why Is My Machine Blade Wearing'
+title: 'Premature Blade Wear: 5 Root Causes Diagnosed'
 excerpt: 'Premature blade wear has five root causes: substrate mismatch, edge prep error, heat-treat quality, re-grind damage, and line-side operating conditions.'
 publishDate: 2026-09-18
 category: 'troubleshooting'

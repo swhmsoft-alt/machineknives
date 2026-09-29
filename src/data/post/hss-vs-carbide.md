@@ -1,5 +1,5 @@
 ---
-title: 'HSS vs Carbide: How to Choose: The '
+title: 'HSS vs Carbide Machine Knives: How to Choose'
 excerpt: 'A side-by-side comparison of high-speed steel and tungsten carbide for industrial machine knives — covering hardness, toughness, cost.'
 publishDate: 2026-09-18
 updateDate: 2026-09-18

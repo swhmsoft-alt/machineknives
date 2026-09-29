@@ -1,5 +1,5 @@
 ---
-title: 'Knife Storage and Handling: The fou'
+title: 'Industrial Knife Storage & Handling SOPs'
 excerpt: 'A knife that is dropped on a concrete floor is a knife with a chipped edge you cannot see until the line trips. Storage and handling SOPs cost almost nothing.'
 publishDate: 2026-09-18
 category: 'maintenance'

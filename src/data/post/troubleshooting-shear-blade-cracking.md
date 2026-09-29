@@ -1,5 +1,5 @@
 ---
-title: 'Why Your Shear Blade Keeps: The fou'
+title: 'Why Shear Blades Crack: 4 Root Causes & Fixes'
 excerpt: 'A plate shear blade that cracks at the edge is almost always one of four things: chamfer too small, hardness too high, blade gap wrong, or plate out of spec.'
 publishDate: 2026-09-18
 category: 'troubleshooting'
