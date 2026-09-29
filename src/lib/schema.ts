@@ -28,6 +28,9 @@ export const GLOBAL_TYPES = [
   'ListItem', 'HowToStep', 'Question', 'Answer', 'Offer',
   'ContactPoint', 'ContactPage', 'Brand', 'Person', 'Country',
   'PostalAddress', 'GeoCoordinates', 'OpeningHoursSpecification',
+  // B2B inquiry-based Offer — declared in src/lib/schema.ts → buildB2bOffer().
+  // Added alongside Offer so the audit script accepts it as a nested type.
+  'PriceSpecification', 'MonetaryAmount',
 ] as const;
 
 // ─── 类型定义 ──────────────────────────────────────────────────────────────

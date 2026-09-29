@@ -21,18 +21,24 @@ const SAFE_FALLBACK_TYPES = ['WebPage', 'Article', 'BreadcrumbList', 'FAQPage', 
 // - Organization/WebSite/ImageObject/SearchAction：顶层全局实体
 // - ListItem/HowToStep/Question/Answer/Offer/ContactPoint/ContactPage：
 //   这些是作为 @graph 内嵌套实体出现的，不应被算作越权
+// - PriceSpecification/MonetaryAmount：B2B 询盘制 Offer 的嵌套类型
+//   （见 src/lib/schema.ts → buildB2bOffer()），必须与 src/lib/schema.ts
+//   的 GLOBAL_TYPES 保持同步。
 const GLOBAL_TYPES = [
   'Organization', 'WebSite', 'ImageObject', 'SearchAction',
   'ListItem', 'HowToStep', 'Question', 'Answer', 'Offer',
   'ContactPoint', 'ContactPage', 'Brand', 'Person', 'Country',
   'PostalAddress', 'GeoCoordinates', 'OpeningHoursSpecification',
+  'PriceSpecification', 'MonetaryAmount',
 ];
 
 // 阈值（基线后调整）
 const EXPECTED_MAX_PRODUCTS = 300;
 
 // 模式开关（true = 严格阻断；false = 仅打印基线）
-const STRICT_MODE = false; // ← 阶段 0：false ；阶段 1 切换为 true
+// 阶段 1：B2B Offer 接入 PriceSpecification 完成后，切换到 true 启用部署熔断。
+// 任何新增越权实体或 Product 数量异常都会立即 process.exit(1)。
+const STRICT_MODE = true;
 
 const JSON_LD_RE = /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi;
 const AT_TYPE_RE = /"@type"\s*:\s*"([^"]+)"/g;
