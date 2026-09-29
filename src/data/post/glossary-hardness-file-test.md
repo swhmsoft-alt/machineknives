@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of the hardness file test in industrial blade quality control: a quick, portable method for verifying blade hardness using calibrated files, the 5-point convention, and the limits of the test.'
-  canonical: 'https://www.industrial-knives.net/glossary/hardness-file-test/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-hardness-file-test/'
 image: '/images/og/glossary-hardness-file-test.webp'
 ---
 
@@ -30,4 +30,4 @@ image: '/images/og/glossary-hardness-file-test.webp'
 - Centre 2+ HRC high: incomplete austenitisation, knife must be re-heat-treated
 - All 5 points high: heat-treat temperature wrong, knife must be re-heat-treated
 
-**See also:** [Preventive maintenance schedule (article)](/maintenance-preventive-schedule/), [D2 vs SKD11 (article)](/d2-vs-skd11/).
+**See also.**

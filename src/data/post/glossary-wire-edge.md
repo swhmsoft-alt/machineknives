@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of wire edge in industrial cutting: a thin, fragile burr on the very tip of the edge caused by a re-grind with too fine a wheel or no spark-out.'
-  canonical: 'https://www.industrial-knives.net/glossary/wire-edge/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-wire-edge/'
 image: '/images/og/glossary-wire-edge.webp'
 ---
 
@@ -29,4 +29,4 @@ image: '/images/og/glossary-wire-edge.webp'
 - Replace the wheel if it is glazed or loaded
 - Use a felt wheel with 1 µm diamond paste for the final pass on a precision slitter
 
-**See also:** [Hone (micro-hone)](/glossary/hone/), [Burr](/glossary/burr/), [Maintenance: how to extend slitter life](/maintenance-slitting-blade-life/).
+**See also.**

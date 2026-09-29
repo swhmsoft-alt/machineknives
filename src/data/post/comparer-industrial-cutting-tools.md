@@ -47,4 +47,4 @@ The following specifications detail the distinct mechanical baselines compiled f
 
 When specifying a blade material for your slitting line, follow this binary engineering rule: if your application involves high shock, inconsistent material thickness, or light-duty machinery, **High-Speed Steel** guarantees structural reliability and prevents catastrophic blade breakage. Conversely, if you operate automated, high-precision slitting lines demanding sub-micron tolerances and extended production runs, the upfront capital expenditure of **Tungsten Carbide** is offset by the drastic reduction in downtime.
 
-For deeper component-level cross-references, review our detailed guide on steel grades in our [materials-encyclopedia](/category/materials-encyclopedia).
+For deeper component-level cross-references, review our detailed guide on steel grades in our materials-encyclopedia.

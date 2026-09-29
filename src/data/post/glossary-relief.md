@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of relief in industrial cutting: the surface behind the cutting edge that prevents the body of the knife from rubbing on the cut surface.'
-  canonical: 'https://www.industrial-knives.net/glossary/relief/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-relief/'
 image: '/images/og/glossary-relief.webp'
 ---
 
@@ -27,4 +27,4 @@ image: '/images/og/glossary-relief.webp'
 
 Run a cut and inspect the cut surface under 10× magnification. If the surface has scratches parallel to the cut direction, the relief is insufficient. The fix is more clearance angle or a wider chamfer.
 
-**See also:** [Clearance angle](/glossary/clearance-angle/), [Land](/glossary/land/).
+**See also.**

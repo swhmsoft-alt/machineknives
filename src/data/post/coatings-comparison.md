@@ -20,7 +20,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Side-by-side comparison of PVD coatings for industrial blades. Hardness, friction, max temperature, colour, typical thickness, substrate fit and field guidance for TiN, TiCN, CrN, AlCrN, TiAlN, DLC and CrAlN.'
-  canonical: 'https://www.industrial-knives.net/coatings-comparison/'
+  canonical: 'https://industrial-knives.net/blog/coatings-comparison/coatings-comparison/'
 image: '/images/og/coatings-comparison.webp'
 ---
 
@@ -151,7 +151,7 @@ For a coated industrial blade, the spec should read:
 
 This phrasing locks the critical variables and lets the coating house recommend the deposition process.
 
-For the broader five-factor selection method, see [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/). For the steel-grade cross-reference behind the choice, see [Material Grade Converter](/material-grade-converter/). For a runnable comparison of carbide grades, see [YG6X vs YG8](/yg6x-vs-yg8-carbide/).
+For the broader five-factor selection method, see [The Industrial Knives 5-Factor Blade Selection Framework](/blog/engineering/5-factor-blade-selection-framework/). For the steel-grade cross-reference behind the choice, see [Material Grade Converter](/blog/material-grade-converter/material-grade-converter/). For a runnable comparison of carbide grades, see [YG6X vs YG8](/blog/material-comparison/yg6x-vs-yg8-carbide/).
 
 For a written coating recommendation on your specific RFQ, send the part drawing, the substrate, the line speed and the current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 

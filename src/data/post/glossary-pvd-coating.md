@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of PVD (Physical Vapour Deposition) coating for industrial blades: the family of vacuum-deposited ceramic coatings (TiN, TiCN, CrN, AlCrN, TiAlN, DLC) that extend knife life 20–50 %.'
-  canonical: 'https://www.industrial-knives.net/glossary/pvd-coating/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-pvd-coating/'
 image: '/images/og/glossary-pvd-coating.webp'
 ---
 
@@ -30,4 +30,4 @@ image: '/images/og/glossary-pvd-coating.webp'
 - Deposition temperature: ≤ 350 °C for HSS, ≤ 450 °C for D2 / SKD11
 - Adhesion test: Rockwell indentation, no delamination at the test load
 
-**See also:** [PVD Coating Comparison Table](/coatings-comparison/), [TiN coating](/glossary/tin-coating/), [DLC coating](/glossary/dlc-coating/).
+**See also.**

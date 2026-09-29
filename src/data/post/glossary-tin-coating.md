@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of TiN (Titanium Nitride) PVD coating for industrial blades: a gold-coloured ceramic coating that reduces friction and extends knife life 20–30 % on general-purpose slitting and shearing.'
-  canonical: 'https://www.industrial-knives.net/glossary/tin-coating/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-tin-coating/'
 image: '/images/og/glossary-tin-coating.webp'
 ---
 
@@ -30,4 +30,4 @@ image: '/images/og/glossary-tin-coating.webp'
 - On very thin knives where the 3 µm coating can dominate the edge profile
 - On food-contact cutting where TiN's gold colour is rejected (use CrN)
 
-**See also:** [PVD Coating Comparison Table](/coatings-comparison/), [DLC coating](/glossary/dlc-coating/).
+**See also.**

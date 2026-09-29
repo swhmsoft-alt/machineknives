@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of abrasive wear in industrial cutting: loss of knife material by hard particles in the substrate ploughing or cutting into the edge.'
-  canonical: 'https://www.industrial-knives.net/glossary/abrasive-wear/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-abrasive-wear/'
 image: '/images/og/glossary-abrasive-wear.webp'
 ---
 
@@ -25,4 +25,4 @@ image: '/images/og/glossary-abrasive-wear.webp'
 - Tungsten carbide (YG6X) on 30 % glass-filled PA66: 1.5–2× baseline
 - Tungsten carbide (YG6X) + TiCN coating on 30 % glass-filled PA66: 2.5–3× baseline
 
-**See also:** [Adhesive wear](/glossary/adhesive-wear/), [Built-up edge](/glossary/built-up-edge/), [Coating Comparison Table](/coatings-comparison/).
+**See also.**

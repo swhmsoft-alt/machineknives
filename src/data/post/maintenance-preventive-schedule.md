@@ -13,7 +13,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Preventive maintenance schedule for industrial blades: daily / weekly / monthly / quarterly checks, inspection form, parts replacement plan, line-side measurements that drive knife life.'
-  canonical: 'https://www.industrial-knives.net/maintenance-preventive-schedule/'
+  canonical: 'https://industrial-knives.net/blog/maintenance/maintenance-preventive-schedule/'
 image: '/images/og/maintenance-preventive-schedule.webp'
 ---
 
@@ -172,7 +172,7 @@ For a preventive maintenance SOP:
 
 > "Preventive maintenance schedule for [slitter / shear / granulator] knives. Cadences: daily (5 min/operator), weekly (30 min/technician), monthly (2 h/engineer), quarterly (half-day/manager). Forms: at-machine, in plastic sleeve, pencil. Findings: written, action-tracked, closed in [1 week / 1 month / 1 quarter] depending on severity. Knife tracking: per-knife sheet in storage case. Re-grind decision: weekly. Audit cycle: annual metallurgical check on 1 random knife. Cost target: re-grind cost per metre cut, line availability, scrap rate."
 
-For the broader re-grind SOP, see [Maintenance: how to extend slitter life](/maintenance-slitting-blade-life/). For the re-sharpening service article, see [Re-sharpening service: how to outsource](/maintenance-resharpening-service/).
+For the broader re-grind SOP, see [Maintenance: how to extend slitter life](/blog/maintenance/maintenance-slitting-blade-life/). For the re-sharpening service article, see [Re-sharpening service: how to outsource](/blog/maintenance/maintenance-resharpening-service/).
 
 For a written PM schedule for your line, send the line layout, the current knife consumption, the current downtime and the current scrap rate to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, template forms, and a quarterly audit protocol within one business day.
 

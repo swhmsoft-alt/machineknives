@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of AlCrN (Aluminium Chromium Nitride) PVD coating for industrial blades: the hardest standard PVD coating, ideal for high-temperature and dry cutting applications.'
-  canonical: 'https://www.industrial-knives.net/glossary/alcrn-coating/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-alcrn-coating/'
 image: '/images/og/glossary-alcrn-coating.webp'
 ---
 
@@ -30,4 +30,4 @@ image: '/images/og/glossary-alcrn-coating.webp'
 - On impact-loaded parts (carbide or uncoated is better)
 - Where the substrate dominates (a coating is a 20–30 % life gain, not a transformation)
 
-**See also:** [PVD Coating Comparison Table](/coatings-comparison/), [TiAlN coating](/glossary/tialn-coating/).
+**See also.**

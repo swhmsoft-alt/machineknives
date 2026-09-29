@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of thermal fatigue in industrial cutting: failure by repeated thermal cycling at the edge, common on high-speed tissue and film slitting without active cooling.'
-  canonical: 'https://www.industrial-knives.net/glossary/thermal-fatigue/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-thermal-fatigue/'
 image: '/images/og/glossary-thermal-fatigue.webp'
 ---
 
@@ -29,4 +29,4 @@ image: '/images/og/glossary-thermal-fatigue.webp'
 - Add active cooling (air or water-mist) aimed at the cut zone
 - Verify the hone is ≥ 10 µm on a high-speed line
 
-**See also:** [Fatigue wear](/glossary/fatigue-wear/), [Chipping](/glossary/chipping/), [Maintenance: how to extend slitter life](/maintenance-slitting-blade-life/).
+**See also.**

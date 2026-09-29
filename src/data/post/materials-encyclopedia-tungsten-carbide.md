@@ -14,7 +14,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Cemented tungsten carbide (WC-Co) — composition, ISO 513 classification, hardness, applications, grades (YG6X, YG8, YG10X, YG15). The reference entry for carbide industrial blades.'
-  canonical: 'https://www.industrial-knives.net/materials-encyclopedia/tungsten-carbide/'
+  canonical: 'https://industrial-knives.net/blog/materials-encyclopedia/materials-encyclopedia-tungsten-carbide/'
 image: '/images/og/materials-encyclopedia-tungsten-carbide.webp'
 ---
 
@@ -32,4 +32,4 @@ Cemented tungsten carbide is a powder-metallurgy composite of tungsten carbide (
 
 **Common grades (GB / ISO):** YG6X (K10–K20, 6 % Co fine grain, slitter); YG8 (K20–K30, 8 % Co, granulator); YG10X (K30, 10 % Co fine grain, impact-loaded granulator); YG15 (K30–K40, 15 % Co, recycling).
 
-**See also:** [YG6X vs YG8](/yg6x-vs-yg8-carbide/), [HSS vs Carbide](/hss-vs-carbide/), [Material Grade Converter](/material-grade-converter/).
+**See also.**

@@ -17,7 +17,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Cold-work tool steel selection guide — AISI D-series, A-series, O1, DC53 chemistry, heat treatment and selection. Compare wear life, toughness and hardenability for industrial blades.'
-  canonical: 'https://www.industrial-knives.net/pillar-cold-work-tool-steel/'
+  canonical: 'https://industrial-knives.net/blog/selection-guide/pillar-cold-work-tool-steel/'
 image: '/images/og/pillar-cold-work-tool-steel.webp'
 ---
 # Cold-Work Tool Steel Selection Guide
@@ -29,7 +29,7 @@ Cold-work tool steels are used wherever the workpiece is harder than the substra
 
 The most widely used cold-work tool steels are the AISI standard grades — D2, D3, A2, A6, A8, O1 — supplemented by Japanese JIS SKD11 and SKD1 (D-equivalents), the Daido DC53 refinement, and powder-metallurgy grades like ASP 2060 for high-wear-edge applications. Each grade has a distinctive balance of carbon, chromium, vanadium and molybdenum, and the selection depends on the wear-vs-toughness-vs-grindability trade-off appropriate to the application.
 
-This guide walks through the major AISI cold-work grades, the metallurgical differences between them, and a selection methodology grounded in the cutting conditions of converting, packaging and metalworking lines. For per-grade chemistry, heat treatment and cross-reference tables, see the [A2 reference entry](/blog/materials-encyclopedia/a2/), [D2 reference entry](/blog/materials-encyclopedia/d2/), and the other 9 encyclopedia entries linked at the end of this article.
+This guide walks through the major AISI cold-work grades, the metallurgical differences between them, and a selection methodology grounded in the cutting conditions of converting, packaging and metalworking lines. For per-grade chemistry, heat treatment and cross-reference tables, see the [A2 reference entry](/blog/materials-encyclopedia/a2/), D2 reference entry, and the other 9 encyclopedia entries linked at the end of this article.
 
 
 
@@ -131,14 +131,14 @@ When D2's wear life is insufficient, the next step is rarely a different D-serie
 
 For per-grade chemistry, heat treatment and standards data, see the dedicated encyclopedia entries for each grade.
 
-- [AISI D2 reference entry](/blog/materials-encyclopedia/d2/)
+- AISI D2 reference entry
 - [AISI A2 reference entry](/blog/materials-encyclopedia/a2/)
 - [AISI O1 reference entry](/blog/materials-encyclopedia/o1/)
-- [JIS SKD11 reference entry](/blog/materials-encyclopedia/skd11/)
+- JIS SKD11 reference entry
 - [Daido DC53 reference entry](/blog/materials-encyclopedia/dc53/)
 - [AISI A6 reference entry](/blog/materials-encyclopedia/a6/)
 - [AISI A8 reference entry](/blog/materials-encyclopedia/a8/)
-- [Cold-work tool steel selection methodology](/blog/selection-guide/5-factor-blade-selection-framework/)
+- Cold-work tool steel selection methodology
 
 ## 10. Grade comparison table
 

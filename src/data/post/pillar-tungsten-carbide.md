@@ -16,7 +16,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Tungsten carbide grades for industrial blades — GB YG6, YG10, YG15, ISO 513 K-series. Compare composition, hardness, impact resistance and selection for granulator, rock-crusher and high-impact wear parts.'
-  canonical: 'https://www.industrial-knives.net/pillar-tungsten-carbide/'
+  canonical: 'https://industrial-knives.net/blog/selection-guide/pillar-tungsten-carbide/'
 image: '/images/og/pillar-tungsten-carbide.webp'
 ---
 # Tungsten Carbide Grades for Industrial Blades
@@ -28,7 +28,7 @@ For industrial cutting tools, tungsten carbide is the right choice when wear lif
 
 Selection follows three steps: identify the abrasive severity, identify the impact severity, and match the grade. Higher Co content gives higher impact resistance but lower wear resistance. Higher WC grain size gives higher wear resistance but lower toughness.
 
-For per-grade chemistry, hardness and cross-reference tables, see the [YG6 reference entry](/blog/materials-encyclopedia/yg6/), [YG10 entry](/blog/materials-encyclopedia/yg10/), [YG15 entry](/blog/materials-encyclopedia/yg15/), and the [tungsten carbide overview](/blog/materials-encyclopedia/tungsten-carbide/).
+For per-grade chemistry, hardness and cross-reference tables, see the [YG6 reference entry](/blog/materials-encyclopedia/yg6/), [YG10 entry](/blog/materials-encyclopedia/yg10/), [YG15 entry](/blog/materials-encyclopedia/yg15/), and the tungsten carbide overview.
 
 
 
@@ -519,10 +519,10 @@ This tungsten carbide pillar is part of the broader pillar cluster covering subs
 - [GB YG6 reference entry](/blog/materials-encyclopedia/yg6/)
 - [GB YG10 reference entry](/blog/materials-encyclopedia/yg10/)
 - [GB YG15 reference entry](/blog/materials-encyclopedia/yg15/)
-- [Tungsten carbide overview](/blog/materials-encyclopedia/tungsten-carbide/)
+- Tungsten carbide overview
 
 **Cross-reference to selection methodology:**
-- [5-Factor Blade Selection Framework](/blog/selection-guide/5-factor-blade-selection-framework/) — the methodology that drives the substrate decision
+- 5-Factor Blade Selection Framework — the methodology that drives the substrate decision
 
 The full pillar cluster is interconnected. Industrial blade selection begins with the selection framework, then narrows to the appropriate material family based on operating temperature, corrosion environment, and abrasive/impact severity. The substrate decision tree (cold-work → martensitic stainless → HSS → hot-work → carbide → ceramic/PCD) is the standard path through the cluster.
 

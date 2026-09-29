@@ -16,7 +16,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Martensitic stainless selection guide — AISI 420, 440A, 440B, 440C, 17-4 PH. Compare corrosion resistance, hardness and toughness for food-contact and corrosion-resistant industrial blades.'
-  canonical: 'https://www.industrial-knives.net/pillar-martensitic-stainless/'
+  canonical: 'https://industrial-knives.net/blog/selection-guide/pillar-martensitic-stainless/'
 image: '/images/og/pillar-martensitic-stainless.webp'
 ---
 # Martensitic Stainless Steel for Cutting Tools
@@ -28,7 +28,7 @@ For industrial cutting tools, the martensitic stainless family is the right choi
 
 Selection follows three steps: identify the corrosion environment (food-grade vs mild chemicals vs marine), identify the required hardness (cutting edge needs HRC 50+), and match the grade to the application. 420 is the basic entry grade; the 440 family is the workhorse for industrial blades; 17-4 PH fills the niche where high strength matters more than wear life.
 
-For per-grade chemistry, heat treatment and cross-reference tables, see the [AISI 420 reference entry](/blog/materials-encyclopedia/420/), [440A entry](/blog/materials-encyclopedia/440a/), [440B entry](/blog/materials-encyclopedia/440b/), [440C entry](/blog/materials-encyclopedia/440c/), and [17-4 PH entry](/blog/materials-encyclopedia/17-4ph/).
+For per-grade chemistry, heat treatment and cross-reference tables, see the [AISI 420 reference entry](/blog/materials-encyclopedia/420/), [440A entry](/blog/materials-encyclopedia/440a/), [440B entry](/blog/materials-encyclopedia/440b/), 440C entry, and [17-4 PH entry](/blog/materials-encyclopedia/17-4ph/).
 
 
 
@@ -158,9 +158,9 @@ Cross-references to related content across the site.
 - [AISI 420 reference entry](/blog/materials-encyclopedia/420/)
 - [AISI 440A reference entry](/blog/materials-encyclopedia/440a/)
 - [AISI 440B reference entry](/blog/materials-encyclopedia/440b/)
-- [AISI 440C reference entry](/blog/materials-encyclopedia/440c/)
+- AISI 440C reference entry
 - [17-4 PH reference entry](/blog/materials-encyclopedia/17-4ph/)
-- [Cold-work tool steel selection methodology](/blog/selection-guide/5-factor-blade-selection-framework/)
+- Cold-work tool steel selection methodology
 - [Pillar comparison: cold-work vs stainless vs HSS](/blog/selection-guide/pillar-cold-work-tool-steel/)
 
 ## 12. Summary

@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of gross fracture in industrial cutting: complete break of a knife, usually catastrophic and immediate. The rarest but most expensive failure mode.'
-  canonical: 'https://www.industrial-knives.net/glossary/gross-fracture/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-gross-fracture/'
 image: '/images/og/glossary-gross-fracture.webp'
 ---
 
@@ -31,4 +31,4 @@ image: '/images/og/glossary-gross-fracture.webp'
 - Dye-penetrant or magnetic particle inspection on critical blades
 - Replace knives at the end of their design life, regardless of visual condition
 
-**See also:** [Chipping](/glossary/chipping/), [Heat-treat quality (PM schedule)](/maintenance-preventive-schedule/).
+**See also.**

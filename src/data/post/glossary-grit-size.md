@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of grit size in industrial blade grinding: the abrasive particle size of a grinding wheel, and how grit size affects surface finish, stock removal and thermal load on the workpiece.'
-  canonical: 'https://www.industrial-knives.net/glossary/grit-size/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-grit-size/'
 image: '/images/og/glossary-grit-size.webp'
 ---
 
@@ -30,4 +30,4 @@ image: '/images/og/glossary-grit-size.webp'
 - Too fine on a high-stock job: the wheel loads and burns the workpiece
 - Too coarse on a precision finish: leaves grind marks and requires extra passes
 
-**See also:** [Re-sharpening service (article)](/maintenance-resharpening-service/), [Hone (micro-hone)](/glossary/hone/), [Maintenance: how to extend slitter life](/maintenance-slitting-blade-life/).
+**See also.**

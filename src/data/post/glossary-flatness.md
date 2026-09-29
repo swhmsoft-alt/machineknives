@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of flatness in industrial blade measurement: the deviation of a face from a perfect plane, and how flatness affects the contact area between knife and anvil.'
-  canonical: 'https://www.industrial-knives.net/glossary/flatness/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-flatness/'
 image: '/images/og/glossary-flatness.webp'
 ---
 
@@ -30,4 +30,4 @@ image: '/images/og/glossary-flatness.webp'
 - Read the maximum gauge that fits
 - A knife that rocks on the plate is not flat
 
-**See also:** [Parallelism](/glossary/parallelism/), [Runout](/glossary/runout/).
+**See also.**

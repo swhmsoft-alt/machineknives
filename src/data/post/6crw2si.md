@@ -13,7 +13,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'GB 6CrW2Si (GB/T 1299) — tungsten-modified 5 Cr hot-work tool steel. Compare with H11 and H13 for hot shear blades and short-run hot-work dies.'
-  canonical: 'https://www.industrial-knives.net/materials-encyclopedia/6crw2si/'
+  canonical: 'https://industrial-knives.net/blog/materials-encyclopedia/6crw2si/'
 image: '/images/og/6crw2si.webp'
 ---
 
@@ -33,4 +33,4 @@ GB 6CrW2Si (China GB/T 1299 standard) is a tungsten-modified 5 Cr-type hot-work 
 
 **Cross-reference:** ≈ DIN 1.2550 (similar), no precise Western equivalent.
 
-**See also: [D2 vs SKD11 comparison](/d2-vs-skd11/), [Material Grade Converter](/material-grade-converter/), [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/).**
+**See also.**

@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of point angle in industrial cutting: the included angle at the tip of a drill bit, rarely used in slitter and shear blade specification.'
-  canonical: 'https://www.industrial-knives.net/glossary/point-angle/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-point-angle/'
 image: '/images/og/glossary-point-angle.webp'
 ---
 
@@ -20,4 +20,4 @@ image: '/images/og/glossary-point-angle.webp'
 
 Point angle occasionally appears in legacy drawings for circular knife blades (especially in paper and tissue cutting). When it does, the intended meaning is the wedge angle of the cutting edge, measured between the two side faces of the disc. Confirm with the drawing issuer before specifying.
 
-**See also:** [Wedge angle](/glossary/wedge-angle/).
+**See also.**

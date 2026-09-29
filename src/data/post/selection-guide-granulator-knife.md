@@ -16,7 +16,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'How to choose a granulator knife for plastics recycling: rotor / bed / screen / wear-strip. Substrate by polymer family, grade, geometry, edge prep and field guidance.'
-  canonical: 'https://www.industrial-knives.net/selection-guide-granulator-knife/'
+  canonical: 'https://industrial-knives.net/blog/selection-guide/selection-guide-granulator-knife/'
 image: '/images/og/selection-guide-granulator-knife.webp'
 ---
 
@@ -107,7 +107,7 @@ For a granulator knife:
 
 > "Granulator [bed / rotor] knife, [L] × [W] × [T] mm, AISI M2 HSS (or YG8 / YG10X / YG15 for abrasive / contamination), vacuum heat-treated to HRC [58–60] ± 1, 5-point file test, edge chamfer [0.10–0.30] mm on cutting edge, [2-edge / 4-edge reversible]. Substrate: [polymer family / filler / contamination profile]. Rotor speed: [RPM]. Throughput: [kg/h]. Mill certificate required."
 
-For the broader five-factor selection framework, see [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/). For a runnable steel grade cross-reference, see [Material Grade Converter](/material-grade-converter/). For a head-to-head on carbide grades, see [YG6X vs YG8](/yg6x-vs-yg8-carbide/).
+For the broader five-factor selection framework, see [The Industrial Knives 5-Factor Blade Selection Framework](/blog/engineering/5-factor-blade-selection-framework/). For a runnable steel grade cross-reference, see [Material Grade Converter](/blog/material-grade-converter/material-grade-converter/). For a head-to-head on carbide grades, see [YG6X vs YG8](/blog/material-comparison/yg6x-vs-yg8-carbide/).
 
 For a written granulator-knife specification, send the part drawing, the polymer, the filler content, the contamination profile and the current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 

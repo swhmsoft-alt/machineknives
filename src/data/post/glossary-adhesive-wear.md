@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of adhesive wear in industrial cutting: loss of knife material when micro-welds between the edge and the substrate fracture at the knife side, not the substrate side.'
-  canonical: 'https://www.industrial-knives.net/glossary/adhesive-wear/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-adhesive-wear/'
 image: '/images/og/glossary-adhesive-wear.webp'
 ---
 
@@ -20,4 +20,4 @@ image: '/images/og/glossary-adhesive-wear.webp'
 
 Abrasive wear is the dominant mechanism on hard, abrasive substrates (glass-filled polymer, recycled feedstock, mineral-coated paper). Adhesive wear is dominant on softer, gummy substrates (stainless, aluminium, low-density polyethylene). The knife design trades off the two: harder knife + sharper edge = more adhesive wear; softer knife + duller edge = more abrasive wear.
 
-**See also:** [Abrasive wear](/glossary/abrasive-wear/), [Built-up edge](/glossary/built-up-edge/), [Coating Comparison Table](/coatings-comparison/).
+**See also.**

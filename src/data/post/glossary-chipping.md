@@ -13,7 +13,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Industrial blade chipping — definition, four root causes, the role of edge hone and hardness, and how to diagnose and fix chipping on slitter, shear and granulator blades.'
-  canonical: 'https://www.industrial-knives.net/glossary/chipping/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-chipping/'
 image: '/images/og/glossary-chipping.webp'
 ---
 
@@ -47,4 +47,4 @@ image: '/images/og/glossary-chipping.webp'
 4. Audit heat-treat (5-point file test, mill certificate, decarb-free guarantee).
 5. Fix the upstream problem (substrate contamination, line alignment, knife clamp).
 
-**See also:** [Troubleshooting: why is my blade wearing out too fast?](/troubleshooting-premature-wear/), [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/), [Hone (micro-hone)](/glossary/hone/), [Clearance angle](/glossary/clearance-angle/).
+**See also.**

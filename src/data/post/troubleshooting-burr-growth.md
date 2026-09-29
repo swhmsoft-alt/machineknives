@@ -13,7 +13,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'A slitter knife that produces growing burr is almost always one of four things: hone growth from wear, substrate variation, line condition drift, or heat-treat quality. This article walks through the 10-minute diagnostic and the corrective action for each root cause.'
-  canonical: 'https://www.industrial-knives.net/troubleshooting-burr-growth/'
+  canonical: 'https://industrial-knives.net/blog/troubleshooting/troubleshooting-burr-growth/'
 image: '/images/og/troubleshooting-burr-growth.webp'
 ---
 
@@ -134,7 +134,7 @@ If steps 1–5 all pass, the answer is one of:
 
 For a written burr growth diagnosis, send the worn knife, the line log, and the substrate batch records to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Diagnosis within 24 hours.
 
-For the broader troubleshooting framework, see [Why is my blade wearing out too fast?](/troubleshooting-premature-wear/) and [Burr (glossary entry)](/glossary/burr/).
+For the broader troubleshooting framework, see [Why is my blade wearing out too fast?](/blog/troubleshooting/troubleshooting-premature-wear/) and Burr (glossary entry).
 
 **About the author**
 

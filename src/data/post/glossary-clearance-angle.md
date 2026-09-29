@@ -13,7 +13,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Industrial blade clearance angle — definition, the substrate-by-substrate range, the relationship to hone and burr, and how to set clearance on slitter, shear and granulator blades.'
-  canonical: 'https://www.industrial-knives.net/glossary/clearance-angle/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-clearance-angle/'
 image: '/images/og/glossary-clearance-angle.webp'
 ---
 
@@ -43,4 +43,4 @@ image: '/images/og/glossary-clearance-angle.webp'
 
 **Relationship to hone:** the clearance angle is set behind the hone. A 5 µm hone at 20° clearance means the clearance starts 5 µm behind the very tip of the edge. A larger hone or a larger chamfer consumes more of the clearance angle's effective range, so a 0.10 mm chamfer at 15° clearance starts the chamfer 0.10 mm behind the tip.
 
-**See also:** [Hone (micro-hone)](/glossary/hone/), [Burr](/glossary/burr/), [Chipping](/glossary/chipping/), [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/).
+**See also.**

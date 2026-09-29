@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of rake angle (also called rake, top rake or cutting rake) in industrial cutting: the angle of the front face of the cutting edge measured from vertical, and how positive vs negative rake affects cutting force, chip flow and blade life.'
-  canonical: 'https://www.industrial-knives.net/glossary/rake-angle/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-rake-angle/'
 image: '/images/og/glossary-rake-angle.webp'
 ---
 
@@ -31,4 +31,4 @@ image: '/images/og/glossary-rake-angle.webp'
 - Too much negative rake on a tough substrate: the cutting force is too high, the knife chatters, the substrate work-hardens.
 - Asymmetric rake: the knife cuts in a curve instead of a straight line.
 
-**See also:** [Clearance angle](/glossary/clearance-angle/), [Hone (micro-hone)](/glossary/hone/), [Burr](/glossary/burr/).
+**See also.**

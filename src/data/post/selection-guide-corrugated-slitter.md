@@ -14,7 +14,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Corrugated slitting is one of the most abrasive industrial cutting applications. The substrate is a multi-layer composite of kraft paper + adhesive + flute geometry, running at 200–500 m/min. The wrong blade grade loses 50 % of life. This guide covers single-face, double-face and thin-board slitting, with grade maps and field cases.'
-  canonical: 'https://www.industrial-knives.net/selection-guide-corrugated-slitter/'
+  canonical: 'https://industrial-knives.net/blog/selection-guide/selection-guide-corrugated-slitter/'
 image: '/images/og/selection-guide-corrugated-slitter.webp'
 ---
 
@@ -100,7 +100,7 @@ A slitter-scorer is precision-ground and must be re-ground as a set. Mixing worn
 
 > "Slitter blade, [OD] × [ID] × [thickness] mm, [D2 / carbide-tipped D2 / M2 HSS / YG6X] per flute table, [HRC 60 ± 1 / HRA 91.5 ± 1] per grade, edge chamfer [0.05–0.25] mm per flute, hone [5–15] µm, surface finish Ra ≤ 0.4 µm. Substrate: [flute / liner / adhesive]. Line speed: [X] m/min. Mill certificate required."
 
-For the broader substrate-by-substrate selection, see [How to choose a slitter blade for paper converting](/selection-guide-paper-converting/) and [YG6X vs YG8](/yg6x-vs-yg8-carbide/).
+For the broader substrate-by-substrate selection, see [How to choose a slitter blade for paper converting](/blog/selection-guide/selection-guide-paper-converting/) and [YG6X vs YG8](/blog/material-comparison/yg6x-vs-yg8-carbide/).
 
 For a written corrugated slitter specification, send the flute type, line speed, substrate batch and current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 

@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of primary bevel in industrial cutting: the first angled face behind the cutting edge, typically the largest relief face on a shear blade or slitter knife.'
-  canonical: 'https://www.industrial-knives.net/glossary/primary-bevel/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-primary-bevel/'
 image: '/images/og/glossary-primary-bevel.webp'
 ---
 
@@ -20,4 +20,4 @@ image: '/images/og/glossary-primary-bevel.webp'
 
 A primary bevel is the largest relief behind the edge. A secondary bevel, if present, is a smaller face behind the primary. Most industrial slitter and shear blades have only a primary bevel. Compound bevels (two or more) are used in woodworking and metalworking turning tools but rarely in industrial cutting blades.
 
-**See also:** [Clearance angle](/glossary/clearance-angle/), [Wedge angle](/glossary/wedge-angle/).
+**See also.**

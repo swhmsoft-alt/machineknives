@@ -13,7 +13,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Edge chipping on a paper slitter: 10-minute field diagnostic flowchart. Visual inspection, dimensional check, hardness test, line-side audit, corrective action by root cause.'
-  canonical: 'https://www.industrial-knives.net/troubleshooting-edge-chipping-paper-slitter/'
+  canonical: 'https://industrial-knives.net/blog/troubleshooting/troubleshooting-edge-chipping-paper-slitter/'
 image: '/images/og/troubleshooting-edge-chipping-paper-slitter.webp'
 ---
 
@@ -128,7 +128,7 @@ If the visual, dimensional, hardness, line-side and re-grind checks all pass, an
 
 For a written chip diagnosis on a specific knife, send the chipped knife, the line log and the substrate batch records to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Diagnosis within 24 hours.
 
-For the broader troubleshooting framework, see [Why is my blade wearing out too fast?](/troubleshooting-premature-wear/) and [Chipping (glossary entry)](/glossary/chipping/).
+For the broader troubleshooting framework, see [Why is my blade wearing out too fast?](/blog/troubleshooting/troubleshooting-premature-wear/) and Chipping (glossary entry).
 
 **About the author**
 

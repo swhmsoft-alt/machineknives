@@ -17,7 +17,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'High-speed steel selection guide — AISI M-series, T-series and PM grades (ASP 2060). Compare hot hardness, wear life and selection for high-speed and high-temperature industrial blades.'
-  canonical: 'https://www.industrial-knives.net/pillar-high-speed-steel/'
+  canonical: 'https://industrial-knives.net/blog/selection-guide/pillar-high-speed-steel/'
 image: '/images/og/pillar-high-speed-steel.webp'
 ---
 # High-Speed Steel Selection Guide
@@ -29,7 +29,7 @@ For industrial cutting tools, HSS is the right choice when the cutting edge sees
 
 Selection follows three steps: identify the operating temperature (cold work ~200 °C, warm work 200–500 °C, hot work 500–650 °C), identify the dominant failure mode (wear, chipping, hot-collapse), and match the grade to the application. M2 is the workhorse; Co-bearing M35 / M42 extend hot hardness; PM grades like ASP 2060 give 3–5× the wear life at premium cost.
 
-For per-grade chemistry, heat treatment and cross-reference tables, see the [M2 reference entry](/blog/materials-encyclopedia/m2-hss/), [M42 entry](/blog/materials-encyclopedia/m42/), [T1 entry](/blog/materials-encyclopedia/t1/), [T15 entry](/blog/materials-encyclopedia/t15/), [ASP 2060 entry](/blog/materials-encyclopedia/asp2060/), and others linked at the end of this article.
+For per-grade chemistry, heat treatment and cross-reference tables, see the M2 reference entry, [M42 entry](/blog/materials-encyclopedia/m42/), [T1 entry](/blog/materials-encyclopedia/t1/), [T15 entry](/blog/materials-encyclopedia/t15/), [ASP 2060 entry](/blog/materials-encyclopedia/asp2060/), and others linked at the end of this article.
 
 
 
@@ -196,12 +196,12 @@ M2 and T1 have different national standard designations but functionally similar
 
 Cross-references to related content.
 
-- [AISI M2 reference entry](/blog/materials-encyclopedia/m2-hss/)
+- AISI M2 reference entry
 - [AISI M35 reference entry](/blog/materials-encyclopedia/m35/)
 - [AISI M42 reference entry](/blog/materials-encyclopedia/m42/)
 - [AISI T1 reference entry](/blog/materials-encyclopedia/t1/)
 - [Pillar comparison: HSS vs cold-work](/blog/selection-guide/pillar-cold-work-tool-steel/)
-- [Cold-work tool steel selection methodology](/blog/selection-guide/5-factor-blade-selection-framework/)
+- Cold-work tool steel selection methodology
 
 ## 13. Summary
 

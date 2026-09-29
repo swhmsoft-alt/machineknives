@@ -14,7 +14,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'How to outsource industrial blade re-sharpening: specification, deliverables, SLA, the four questions to ask a re-grind shop before you ship your first knife.'
-  canonical: 'https://www.industrial-knives.net/maintenance-resharpening-service/'
+  canonical: 'https://industrial-knives.net/blog/maintenance/maintenance-resharpening-service/'
 image: '/images/og/maintenance-resharpening-service.webp'
 ---
 
@@ -132,7 +132,7 @@ Bring re-grinding in-house when:
 
 A small in-house regrind cell is a CNC grinder (~ €80,000), a metrology station (~ €15,000), a wet bench (~ €10,000), and a trained operator (~ €40,000/year). The payback at 200 knives/year is typically 18–24 months.
 
-For a more detailed re-grind SOP, see [Maintenance: how to extend slitter life](/maintenance-slitting-blade-life/).
+For a more detailed re-grind SOP, see [Maintenance: how to extend slitter life](/blog/maintenance/maintenance-slitting-blade-life/).
 
 
 ---
@@ -159,7 +159,7 @@ For a re-sharpening service:
 
 > "Re-sharpening service for industrial slitter knives. Scope: re-grind to drawing dimensions, restore edge geometry ([hone] µm radius, [chamfer] mm, [clearance]°), surface finish Ra ≤ [0.4] µm, 5-point hardness file test on every knife. Deliverables: re-ground knife + re-grind report (before/after dimensions, hardness, surface finish, hone, re-grind count stamped on knife). Turnaround: [5–10] working days. Quality: ≤ [2] % reject rate. SLA: refund or free re-grind on rejects. ISO 9001 certification required. Audit on first 5 knives."
 
-For the broader maintenance framework, see [Maintenance: how to extend slitter life](/maintenance-slitting-blade-life/). For a runnable coating comparison, see [Coating Comparison Table](/coatings-comparison/).
+For the broader maintenance framework, see [Maintenance: how to extend slitter life](/blog/maintenance/maintenance-slitting-blade-life/). For a runnable coating comparison, see [Coating Comparison Table](/blog/coatings-comparison/coatings-comparison/).
 
 For a written re-sharpening specification for your line, send the knife drawing, the current service life, the current re-grind cost and the current reject rate to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, partner-shop recommendation and indicative cost within one business day.
 

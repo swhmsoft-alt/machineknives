@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of wedge angle in industrial cutting: the included angle between the front and back faces of a cutting edge, and how it balances edge sharpness against edge strength.'
-  canonical: 'https://www.industrial-knives.net/glossary/wedge-angle/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-wedge-angle/'
 image: '/images/og/glossary-wedge-angle.webp'
 ---
 
@@ -29,4 +29,4 @@ image: '/images/og/glossary-wedge-angle.webp'
 
 On a slitter knife, the wedge angle is set by the front-face clearance and the back-face chamfer. A 22° clearance with a 5 µm hone gives ~ 30° wedge. A 15° clearance with a 0.10 mm chamfer gives ~ 75° wedge. The hone and the chamfer are the practical levers; the wedge angle is the result.
 
-**See also:** [Clearance angle](/glossary/clearance-angle/), [Rake angle](/glossary/rake-angle/).
+**See also.**

@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of TiCN (Titanium Carbonitride) PVD coating for industrial blades: a harder and more wear-resistant variant of TiN, ideal for abrasive substrates.'
-  canonical: 'https://www.industrial-knives.net/glossary/ticn-coating/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-ticn-coating/'
 image: '/images/og/glossary-ticn-coating.webp'
 ---
 
@@ -30,4 +30,4 @@ image: '/images/og/glossary-ticn-coating.webp'
 - Stainless or aluminium (DLC is better)
 - High-temperature cutting (TiAlN, AlCrN better)
 
-**See also:** [PVD Coating Comparison Table](/coatings-comparison/), [TiN coating](/glossary/tin-coating/).
+**See also.**

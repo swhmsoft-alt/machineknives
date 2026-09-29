@@ -14,7 +14,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'AISI 440C martensitic stainless steel — chemistry, hardness, heat treatment, applications and cross-reference. The reference entry for food-contact and corrosion-resistant industrial blades.'
-  canonical: 'https://www.industrial-knives.net/materials-encyclopedia/440c/'
+  canonical: 'https://industrial-knives.net/blog/materials-encyclopedia/materials-encyclopedia-440c/'
 image: '/images/og/materials-encyclopedia-440c.webp'
 ---
 
@@ -30,6 +30,6 @@ AISI 440C (UNS S44004) is the highest-carbon standard martensitic stainless stee
 
 **Applications:** Food slicer blades, meat-bone granulator rotors (food recycling), surgical instruments, food-contact slitter blades, marine and outdoor cutting applications, ball bearings and valve seats.
 
-**Cross-reference:** ≈ JIS SUS440C, DIN 1.4125, GB 11Cr17 (close: 9Cr18MoV / 1.4112). Note: 9Cr18MoV carries 0.1–0.2 % V and 1.0–1.3 % Mo that 440C does not, making it tougher but slightly less hard. See [9Cr18MoV vs 440C](/9cr18mov-vs-440c/) for the field differences.
+**Cross-reference:** ≈ JIS SUS440C, DIN 1.4125, GB 11Cr17 (close: 9Cr18MoV / 1.4112). Note: 9Cr18MoV carries 0.1–0.2 % V and 1.0–1.3 % Mo that 440C does not, making it tougher but slightly less hard. See [9Cr18MoV vs 440C](/blog/material-comparison/9cr18mov-vs-440c/) for the field differences.
 
-**See also:** [Material Grade Converter](/material-grade-converter/), [HSS vs Carbide](/hss-vs-carbide/).
+**See also.**

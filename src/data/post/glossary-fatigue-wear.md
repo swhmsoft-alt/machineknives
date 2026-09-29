@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of fatigue wear in industrial cutting: loss of knife material by sub-surface crack propagation under repeated thermal-mechanical cycling, common on high-speed lines.'
-  canonical: 'https://www.industrial-knives.net/glossary/fatigue-wear/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-fatigue-wear/'
 image: '/images/og/glossary-fatigue-wear.webp'
 ---
 
@@ -30,4 +30,4 @@ image: '/images/og/glossary-fatigue-wear.webp'
 - Add active cooling (air or water-mist) aimed at the cut zone
 - Reduce line speed within the knife's rated window
 
-**See also:** [Thermal fatigue (failure mode)](/glossary/thermal-fatigue/), [Hone (micro-hone)](/glossary/hone/), [Chipping](/glossary/chipping/).
+**See also.**

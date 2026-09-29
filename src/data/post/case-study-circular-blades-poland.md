@@ -17,7 +17,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Field case study: high-precision circular blades for 12 µm BOPP film at a Polish converter. From 4 knives/week to 1 knife every 6 weeks — diagnostic, trial, and result.'
-  canonical: 'https://www.industrial-knives.net/case-study-circular-blades-poland/'
+  canonical: 'https://industrial-knives.net/blog/case-studies/case-study-circular-blades-poland/'
 image: '/images/og/case-study-circular-blades-poland.webp'
 ---
 

@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of side clearance (also called side relief or lateral clearance) in industrial cutting: the angle that lets the substrate separate from the knife after the cut, on circular and rectangular slitter blades.'
-  canonical: 'https://www.industrial-knives.net/glossary/side-clearance/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-side-clearance/'
 image: '/images/og/glossary-side-clearance.webp'
 ---
 
@@ -27,4 +27,4 @@ image: '/images/og/glossary-side-clearance.webp'
 
 On a circular slitter, side clearance is the included angle between the two side faces of the disc. A 250 mm OD × 25 mm × 3 mm slitter with 1° per side clearance has a side taper of 4.4 mm over the 25 mm thickness — the OD at the centre of the thickness is 4.4 mm smaller than at the edges. The re-grind shop must restore this taper every cycle.
 
-**See also:** [Clearance angle](/glossary/clearance-angle/), [Hone (micro-hone)](/glossary/hone/).
+**See also.**

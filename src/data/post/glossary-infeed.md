@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of infeed in industrial blade grinding: the per-pass depth that the grinding wheel advances into the workpiece, and how infeed affects surface finish, thermal load and grinding time.'
-  canonical: 'https://www.industrial-knives.net/glossary/infeed/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-infeed/'
 image: '/images/og/glossary-infeed.webp'
 ---
 
@@ -30,4 +30,4 @@ image: '/images/og/glossary-infeed.webp'
 - Multi-pass with finer infeed: better finish than single-pass with coarse infeed
 - Spark-out at the final infeed removes residual stress and produces a stable finish
 
-**See also:** [Re-sharpening service (article)](/maintenance-resharpening-service/), [Spark-out](/glossary/spark-out/).
+**See also.**

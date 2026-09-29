@@ -15,7 +15,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'A European non-woven producer slitting 25 gsm spunbond at 600 m/min was getting 4 days from a D2 slitter. The fix was a M2 HSS slitter with TiCN coating. 18 days. The case study walks through the audit, the trial, and the role of abrasive fillers in non-woven wear.'
-  canonical: 'https://www.industrial-knives.net/case-study-textile-nonwoven-slitter/'
+  canonical: 'https://industrial-knives.net/blog/case-studies/case-study-textile-nonwoven-slitter/'
 image: '/images/og/case-study-textile-nonwoven-slitter.webp'
 ---
 

@@ -14,7 +14,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'A slitter knife that turns blue, straw or purple is being annealed in service. The edge temperature has exceeded the tempering temperature. The fix is usually cooling, then grade upgrade, then coating.'
-  canonical: 'https://www.industrial-knives.net/troubleshooting-thermal-damage/'
+  canonical: 'https://industrial-knives.net/blog/troubleshooting/troubleshooting-thermal-damage/'
 image: '/images/og/troubleshooting-thermal-damage.webp'
 ---
 
@@ -103,7 +103,7 @@ The cheapest fix is the first one. Most thermal-damage events are fixed by step 
 
 > "Slitter, [OD] × [ID] × [thickness] mm, AISI M2 HSS (or M42, or carbide), vacuum heat-treated to HRC [62–64] ± 1, 5-point file test, [PVD coating: TiAlN / AlCrN / CrAlN] for hot-hardness, [10–15] µm hone, [active cooling: flood, 5+ bar, 5–8 % emulsion]. Line speed: [X] m/min. Substrate: [tissue / film / foil / etc.]. Mill certificate with ladle chemistry and coating report required."
 
-For the broader troubleshooting framework, see [Why is my blade wearing out too fast?](/troubleshooting-premature-wear/) and [Chipping (glossary entry)](/glossary/chipping/).
+For the broader troubleshooting framework, see [Why is my blade wearing out too fast?](/blog/troubleshooting/troubleshooting-premature-wear/) and Chipping (glossary entry).
 
 For a written thermal damage diagnosis, send the discoloured knife, the line log, the substrate spec and the current cooling configuration to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Diagnosis within 24 hours.
 

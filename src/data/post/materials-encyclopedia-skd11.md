@@ -13,7 +13,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'JIS SKD11 cold-work tool steel — chemistry, hardness, heat treatment, applications and the practical differences vs AISI D2 for industrial blades.'
-  canonical: 'https://www.industrial-knives.net/materials-encyclopedia/skd11/'
+  canonical: 'https://industrial-knives.net/blog/materials-encyclopedia/materials-encyclopedia-skd11/'
 image: '/images/og/materials-encyclopedia-skd11.webp'
 ---
 
@@ -29,6 +29,6 @@ JIS SKD11 is the Japanese Industrial Standard grade for high-carbon, high-chromi
 
 **Applications:** Precision slitter blades, thin shear blades, die-casting inserts, plastic moulds. Particularly suited to tight-tolerance industrial blades where stock consistency matters.
 
-**Cross-reference:** ≈ AISI D2, DIN 1.2379, GB Cr12Mo1V1. See [D2 vs SKD11](/d2-vs-skd11/) for the field-level comparison.
+**Cross-reference:** ≈ AISI D2, DIN 1.2379, GB Cr12Mo1V1. See [D2 vs SKD11](/blog/material-comparison/d2-vs-skd11/) for the field-level comparison.
 
-**See also:** [Material Grade Converter](/material-grade-converter/), [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/).
+**See also.**

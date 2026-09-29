@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of built-up edge (BUE) in industrial cutting: weld-like adhesion of substrate material to the cutting edge, a common cause of poor cut quality on stainless, aluminium and gummy plastics.'
-  canonical: 'https://www.industrial-knives.net/glossary/built-up-edge/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-built-up-edge/'
 image: '/images/og/glossary-built-up-edge.webp'
 ---
 
@@ -32,4 +32,4 @@ image: '/images/og/glossary-built-up-edge.webp'
 - Drop the rake angle (more positive rake increases BUE)
 - Consider M2 HSS or M42 HSS at HRC 64 instead of D2
 
-**See also:** [Burr](/glossary/burr/), [Hone (micro-hone)](/glossary/hone/), [DLC coating](/coatings-comparison/).
+**See also.**

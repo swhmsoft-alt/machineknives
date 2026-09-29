@@ -13,7 +13,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Industrial blade hone / micro-hone — definition, the substrate-by-substrate range, the relationship to coating thickness and burr, and how to set hone on slitter and shear blades.'
-  canonical: 'https://www.industrial-knives.net/glossary/hone/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-hone/'
 image: '/images/og/glossary-hone.webp'
 ---
 
@@ -44,4 +44,4 @@ image: '/images/og/glossary-hone.webp'
 4. **Hone smaller than the PVD coating thickness.** A 3 µm TiN coating on a 5 µm steel hone creates a negative effective hone (the coating wraps the edge). The steel hone should be ≥ 2× the coating thickness.
 5. **Hone varying around the perimeter.** On a circular slitter, the hone should be uniform. A re-grind that left the centre 5 µm different from the edge will cut unevenly.
 
-**See also:** [Clearance angle](/glossary/clearance-angle/), [Burr](/glossary/burr/), [Chipping](/glossary/chipping/), [PVD Coating Comparison Table](/coatings-comparison/), [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/).
+**See also.**

@@ -16,7 +16,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'HSS vs carbide for industrial blades: hardness (HRC 62–67 vs HRA 89–92), toughness, cost-per-edge, edge retention and substrate fit. Side-by-side comparison with selection guidance from Industrial Knives engineering.'
-  canonical: 'https://www.industrial-knives.net/hss-vs-carbide/'
+  canonical: 'https://industrial-knives.net/blog/material-comparison/hss-vs-carbide/'
 image: '/images/og/hss-vs-carbide.webp'
 ---
 
@@ -125,7 +125,7 @@ We see four:
 
 ## How Industrial Knives specifies the material
 
-For every RFQ we receive, the sales engineer runs the same five-factor check (substrate, geometry, hardness target, edge prep, operating speed) before quoting a steel grade. The output is a material recommendation, not a part number. For a copy of the framework and worked examples, see [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/).
+For every RFQ we receive, the sales engineer runs the same five-factor check (substrate, geometry, hardness target, edge prep, operating speed) before quoting a steel grade. The output is a material recommendation, not a part number. For a copy of the framework and worked examples, see [The Industrial Knives 5-Factor Blade Selection Framework](/blog/engineering/5-factor-blade-selection-framework/).
 
 If you want help choosing between HSS and carbide for a specific line, send the substrate, line speed, current blade grade and service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). We will respond with a written specification within one business day, including the expected service life, re-grind cost and total cost per metre cut.
 

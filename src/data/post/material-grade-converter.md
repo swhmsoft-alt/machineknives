@@ -21,7 +21,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Cross-reference table for industrial blade steel and carbide grades. ASTM/AISI, JIS, DIN/EN/W.-Nr., GB, BS, AFNOR, UNI, SS and UNE equivalents for cold-work, HSS, stainless and tungsten carbide.'
-  canonical: 'https://www.industrial-knives.net/material-grade-converter/'
+  canonical: 'https://industrial-knives.net/blog/material-grade-converter/material-grade-converter/'
 image: '/images/og/material-grade-converter.webp'
 ---
 
@@ -52,7 +52,7 @@ The most-quoted family for industrial slitter, shear and granulator blades. Air-
 | DC53 (Daido proprietary) | — | DC53 | — | — | — | — | — | — | — | — |
 | K110 (Böhler) | — | — | X153CrMoV12 | 1.2379 | — | — | — | — | — | — |
 
-> **Notes.** D2 / SKD11 / 1.2379 / Cr12Mo1V1 / BD2 are all the same chemistry. SKD11 typically has a tighter V range (0.20–0.50 % vs D2's 0.50–1.10 %), which affects grindability — see the [D2 vs SKD11 comparison](/d2-vs-skd11/) for details. DC53 is a refinement with finer carbides and higher toughness at the same hardness. K110 is a Böhler trade name for 1.2379.
+> **Notes.** D2 / SKD11 / 1.2379 / Cr12Mo1V1 / BD2 are all the same chemistry. SKD11 typically has a tighter V range (0.20–0.50 % vs D2's 0.50–1.10 %), which affects grindability — see the [D2 vs SKD11 comparison](/blog/material-comparison/d2-vs-skd11/) for details. DC53 is a refinement with finer carbides and higher toughness at the same hardness. K110 is a Böhler trade name for 1.2379.
 
 ---
 
@@ -112,7 +112,7 @@ For food-contact, medical, washdown and corrosion-resistant industrial cutting. 
 | — | — | — | X38CrMo14 | 1.4419 | — | — | — | — | — |
 | — | — | — | X39CrMo17-1 | 1.4122 | — | — | — | — | — |
 
-> **Notes.** 440C and 9Cr18MoV are *close* but not identical. 9Cr18MoV (≈ 1.4112 / X90CrMoV18) carries 0.1–0.2 % V and 1.0–1.3 % Mo that 440C does not. The Mo improves pitting resistance in chloride environments; the V forms small MC carbides that improve toughness. For most industrial blade applications the two are interchangeable, but for medical / food-contact, the differences can matter — see the [9Cr18MoV vs 440C comparison](/9cr18mov-vs-440c/).
+> **Notes.** 440C and 9Cr18MoV are *close* but not identical. 9Cr18MoV (≈ 1.4112 / X90CrMoV18) carries 0.1–0.2 % V and 1.0–1.3 % Mo that 440C does not. The Mo improves pitting resistance in chloride environments; the V forms small MC carbides that improve toughness. For most industrial blade applications the two are interchangeable, but for medical / food-contact, the differences can matter — see the [9Cr18MoV vs 440C comparison](/blog/material-comparison/9cr18mov-vs-440c/).
 
 ---
 
@@ -134,7 +134,7 @@ For granulator, recycling, shear and high-abrasion slitter blades. Cobalt-bound 
 | K40 | YG20 | Primary shredders | 20 % | 2.0–3.0 µm | 86.0–87.5 | — |
 
 
-> **Notes on carbide grades.** The "X" suffix (YG6X, YG10X) denotes **fine grain** (0.8–1.2 µm), which gives higher hardness and better edge retention. YG6X is the workhorse for slitter blades; YG8 and YG10X are the workhorses for granulator rotors and shear inserts. Higher Co = tougher but less wear-resistant. The [YG6X vs YG8 comparison](/yg6x-vs-yg8-carbide/) covers the field guidance in detail.
+> **Notes on carbide grades.** The "X" suffix (YG6X, YG10X) denotes **fine grain** (0.8–1.2 µm), which gives higher hardness and better edge retention. YG6X is the workhorse for slitter blades; YG8 and YG10X are the workhorses for granulator rotors and shear inserts. Higher Co = tougher but less wear-resistant. The [YG6X vs YG8 comparison](/blog/material-comparison/yg6x-vs-yg8-carbide/) covers the field guidance in detail.
 
 ---
 
@@ -159,7 +159,7 @@ These pairs are *not* equivalent and should not be cross-referenced:
 - **D2 ↔ A2.** A2 has lower carbon and lower wear resistance; not a drop-in.
 - **M2 ↔ M35.** M35 has 5 % Co that M2 does not; the hot hardness is different.
 - **440C ↔ 304.** 304 is austenitic and cannot be hardened. 440C is martensitic. Substituting 304 for 440C on a food cutting line is a common and dangerous mistake.
-- **YG6X ↔ YG8.** Different Co content, different impact resistance. The choice is by application, not interchange. See [YG6X vs YG8](/yg6x-vs-yg8-carbide/) for the field decision.
+- **YG6X ↔ YG8.** Different Co content, different impact resistance. The choice is by application, not interchange. See [YG6X vs YG8](/blog/material-comparison/yg6x-vs-yg8-carbide/) for the field decision.
 - **YG6 ↔ YG6X.** Same Co content, but YG6X has finer grain. For a thin slitter blade, YG6X is the right call; for a thick wear part, YG6 may be acceptable.
 
 ---
@@ -200,7 +200,7 @@ If your supplier cannot show you a mill certificate, the cross-reference is mark
 | Corrugated slitter | YG6X (tipped) | M2 HSS | Abrasive liners |
 | Aluminium foil slitter | M2 + ta-C coating | SKD11 + DLC | Anti-weld, low friction |
 
-For deeper field guidance, see the individual material-family comparisons linked above and the broader [five-factor selection framework](/5-factor-blade-selection-framework/).
+For deeper field guidance, see the individual material-family comparisons linked above and the broader [five-factor selection framework](/blog/engineering/5-factor-blade-selection-framework/).
 
 ---
 

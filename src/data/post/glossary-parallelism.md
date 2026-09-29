@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of parallelism in industrial blade measurement: the difference between two parallel reference surfaces of a knife, and how parallelism affects cut quality on a slitter or shear.'
-  canonical: 'https://www.industrial-knives.net/glossary/parallelism/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-parallelism/'
 image: '/images/og/glossary-parallelism.webp'
 ---
 
@@ -30,4 +30,4 @@ image: '/images/og/glossary-parallelism.webp'
 - Traverse across the face
 - Read the TIR = max - min
 
-**See also:** [Runout](/glossary/runout/), [Flatness](/glossary/flatness/).
+**See also.**

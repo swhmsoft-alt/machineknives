@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of ta-C (tetrahedral amorphous carbon) PVD coating for industrial blades: a harder, lower-friction variant of DLC, ideal for aluminium foil and medical cutting.'
-  canonical: 'https://www.industrial-knives.net/glossary/ta-c-coating/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-ta-c-coating/'
 image: '/images/og/glossary-ta-c-coating.webp'
 ---
 
@@ -29,4 +29,4 @@ image: '/images/og/glossary-ta-c-coating.webp'
 - Impact-loaded parts (ta-C is brittle at thicknesses above 1.5 µm)
 - Where the cost premium (3× standard DLC) is not justified by the life gain
 
-**See also:** [PVD Coating Comparison Table](/coatings-comparison/), [DLC coating](/glossary/dlc-coating/).
+**See also.**

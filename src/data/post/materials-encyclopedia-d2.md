@@ -14,7 +14,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'AISI D2 cold-work tool steel — chemistry, hardness, heat treatment, applications and cross-reference. Concise encyclopedia entry for industrial blade specification.'
-  canonical: 'https://www.industrial-knives.net/materials-encyclopedia/d2/'
+  canonical: 'https://industrial-knives.net/blog/materials-encyclopedia/materials-encyclopedia-d2/'
 image: '/images/og/materials-encyclopedia-d2.webp'
 ---
 
@@ -30,6 +30,6 @@ AISI D2 is a high-carbon, high-chromium cold-work tool steel hardened by a popul
 
 **Applications:** Paper and film slitter blades, shear blades on carbon steel ≤ 6 mm, granulator bed knives, crusher blades, knife-edge tooling. The default cold-work tool steel for industrial blades.
 
-**Cross-reference:** ≈ JIS SKD11, DIN 1.2379, GB Cr12Mo1V1, BS BD2, AFNOR Z160CDV12, UNE F.5211. See the [Material Grade Converter](/material-grade-converter/) for the full table.
+**Cross-reference:** ≈ JIS SKD11, DIN 1.2379, GB Cr12Mo1V1, BS BD2, AFNOR Z160CDV12, UNE F.5211. See the [Material Grade Converter](/blog/material-grade-converter/material-grade-converter/) for the full table.
 
-**See also:** [D2 vs SKD11 comparison](/d2-vs-skd11/) for the differences that matter in service, [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/) for selection methodology.
+**See also.**

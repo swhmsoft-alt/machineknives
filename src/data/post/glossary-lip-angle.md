@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of lip angle in industrial cutting: the angle of the cutting edge of a granulator rotor knife, equivalent to the rake angle on a slitter.'
-  canonical: 'https://www.industrial-knives.net/glossary/lip-angle/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-lip-angle/'
 image: '/images/og/glossary-lip-angle.webp'
 ---
 
@@ -23,4 +23,4 @@ image: '/images/og/glossary-lip-angle.webp'
 - Glass-filled polymer granulator: 0° to +5°
 - ASR / heavy contamination: -5° to 0° (slightly negative for impact resistance)
 
-**See also:** [Rake angle](/glossary/rake-angle/), [Granulator geometry (selection guide)](/selection-guide-granulator-knife/).
+**See also.**

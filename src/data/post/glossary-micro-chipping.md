@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of micro-chipping in industrial cutting: loss of small fragments (0.1–2 mm) from the cutting edge, usually a precursor to gross chipping or a wear-rate problem.'
-  canonical: 'https://www.industrial-knives.net/glossary/micro-chipping/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-micro-chipping/'
 image: '/images/og/glossary-micro-chipping.webp'
 ---
 
@@ -26,4 +26,4 @@ image: '/images/og/glossary-micro-chipping.webp'
 
 A few micro-chips per meter of edge is normal wear. More than 1 chip per 10 mm of edge circumference is a sign of a problem. Either fix the root cause (hone, hardness, impact, heat-treat) or retire the knife.
 
-**See also:** [Chipping](/glossary/chipping/), [Hone (micro-hone)](/glossary/hone/), [Troubleshooting: edge chipping diagnosis](/troubleshooting-edge-chipping-paper-slitter/).
+**See also.**

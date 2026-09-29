@@ -15,7 +15,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'D2 vs SKD11 for industrial machine knives. Chemistry, hardenability, dimensional stability, edge retention and sourcing. The honest answer to whether they are interchangeable.'
-  canonical: 'https://www.industrial-knives.net/d2-vs-skd11/'
+  canonical: 'https://industrial-knives.net/blog/material-comparison/d2-vs-skd11/'
 image: '/images/og/d2-vs-skd11.webp'
 ---
 
@@ -116,7 +116,7 @@ Not the right steel for: high-temperature cutting above ~ 400 °C at the edge (M
 
 For an industrial machine knife at HRC 58–62, the choice between D2 and SKD11 is less important than the choice of mill, the heat treatment and the edge preparation. If the steel is from a reputable mill, vacuum heat-treated to a documented tempering chart, and honed to the substrate-appropriate radius, both grades will deliver the same life. For a tight-tolerance drawing, write the spec as "AISI D2 or JIS SKD11, mill-certified, vacuum heat-treated to HRC 60 ± 1, decarburisation ≤ 0.1 mm/side" — and let your supplier cross-reference the two.
 
-For a runnable cross-reference table, see [Material Grade Converter: ASTM / JIS / DIN / GB](/material-grade-converter/). For the broader five-factor methodology, see [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/).
+For a runnable cross-reference table, see [Material Grade Converter: ASTM / JIS / DIN / GB](/blog/material-grade-converter/material-grade-converter/). For the broader five-factor methodology, see [The Industrial Knives 5-Factor Blade Selection Framework](/blog/engineering/5-factor-blade-selection-framework/).
 
 For a written D2 / SKD11 quotation, send the part drawing to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and indicative lead time within one business day.
 

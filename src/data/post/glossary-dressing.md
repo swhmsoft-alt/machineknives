@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of dressing in industrial blade grinding: the process of re-sharpening or re-shaping a grinding wheel to expose fresh abrasive and restore geometry.'
-  canonical: 'https://www.industrial-knives.net/glossary/dressing/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-dressing/'
 image: '/images/og/glossary-dressing.webp'
 ---
 
@@ -30,4 +30,4 @@ image: '/images/og/glossary-dressing.webp'
 - Conventional dressing: 0.01–0.05 mm infeed per pass, 2–4 passes
 - Creep-feed dressing: 0.001 mm infeed, slower but more accurate
 
-**See also:** [Infeed](/glossary/infeed/), [Grit size](/glossary/grit-size/).
+**See also.**

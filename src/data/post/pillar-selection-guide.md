@@ -16,7 +16,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'The 5-Factor Blade Selection Framework — substrate, geometry, hardness target, edge preparation, operating speed. The methodology that drives material, grade, hardness and coating choices for industrial cutting blades.'
-  canonical: 'https://www.industrial-knives.net/pillar-selection-guide/'
+  canonical: 'https://industrial-knives.net/blog/selection-guide/pillar-selection-guide/'
 image: '/images/og/pillar-selection-guide.webp'
 ---
 # Industrial Blade Selection Framework
@@ -26,7 +26,7 @@ The 5-Factor Blade Selection Framework is a structured method to match a cutting
 
 The framework is not a material selection guide. Material selection (cold-work steel, martensitic stainless, HSS, hot-work steel, tungsten carbide) is downstream of the framework — once the 5 factors are specified, the material and grade follow naturally.
 
-For the underlying material reference, see the [5-Factor Blade Selection Framework original](/blog/selection-guide/5-factor-blade-selection-framework/) entry, plus the five material pillars ([cold-work](/blog/selection-guide/pillar-cold-work-tool-steel/), [martensitic stainless](/blog/selection-guide/pillar-martensitic-stainless/), [high-speed steel](/blog/selection-guide/pillar-high-speed-steel/), [hot-work tool steel](/blog/selection-guide/pillar-hot-work-tool-steel/), [tungsten carbide](/blog/selection-guide/pillar-tungsten-carbide/)).
+For the underlying material reference, see the 5-Factor Blade Selection Framework original entry, plus the five material pillars ([cold-work](/blog/selection-guide/pillar-cold-work-tool-steel/), [martensitic stainless](/blog/selection-guide/pillar-martensitic-stainless/), [high-speed steel](/blog/selection-guide/pillar-high-speed-steel/), [hot-work tool steel](/blog/selection-guide/pillar-hot-work-tool-steel/), [tungsten carbide](/blog/selection-guide/pillar-tungsten-carbide/)).
 
 
 

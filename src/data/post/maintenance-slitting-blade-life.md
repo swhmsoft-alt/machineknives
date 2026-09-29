@@ -16,7 +16,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'How to extend the service life of a slitting machine blade: seven variables from substrate to edge prep to in-process care. Field-tested guidance from Industrial Knives engineering.'
-  canonical: 'https://www.industrial-knives.net/maintenance-slitting-blade-life/'
+  canonical: 'https://industrial-knives.net/blog/maintenance/maintenance-slitting-blade-life/'
 image: '/images/og/maintenance-slitting-blade-life.webp'
 ---
 
@@ -65,7 +65,7 @@ Edge prep is the second-largest lever. Three numbers matter:
 
 A knife sharpened to a "razor edge" (hone < 2 µm) on a 1,200 m/min tissue line will see thermal fatigue micro-cracking inside 2 weeks. Add a 15 µm hone and the same knife lasts 8 weeks. The hone absorbs the thermal-mechanical shock that destroys a sharp edge.
 
-For the full edge-prep methodology, see the [edge-prep section of the selection guide](/selection-guide-stainless-steel/) (the principles apply to all substrates, not just stainless).
+For the full edge-prep methodology, see the [edge-prep section of the selection guide](/blog/selection-guide/selection-guide-stainless-steel/) (the principles apply to all substrates, not just stainless).
 
 ---
 
@@ -126,7 +126,7 @@ A PVD coating (TiN, TiCN, CrN, DLC) buys 20–50 % more life on abrasive substra
 
 For a high-volume slitter on abrasive non-woven or recycled polymer, the coating is a no-brainer. For a paper slitter on a 3-shift-a-day line, the ROI is marginal — focus on Variables 1–4 first.
 
-For a runnable coating comparison, see the [Coating Comparison Table](/coatings-comparison/).
+For a runnable coating comparison, see the [Coating Comparison Table](/blog/coatings-comparison/coatings-comparison/).
 
 ---
 
@@ -195,7 +195,7 @@ For a slitter knife in regular service:
 
 If you can tick all eight, your slitter knives will out-last your regrind shop's wildest expectations. If you cannot, the variable that is missing is the one that is costing you knife life.
 
-For the broader five-factor selection framework, see [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/). For a runnable coating comparison, see [Coating Comparison Table](/coatings-comparison/). For a head-to-head on the two most common HSS grades, see [M2 vs M4 HSS](/m2-vs-m4-hss/).
+For the broader five-factor selection framework, see [The Industrial Knives 5-Factor Blade Selection Framework](/blog/engineering/5-factor-blade-selection-framework/). For a runnable coating comparison, see [Coating Comparison Table](/blog/coatings-comparison/coatings-comparison/). For a head-to-head on the two most common HSS grades, see [M2 vs M4 HSS](/blog/material-comparison/m2-vs-m4-hss/).
 
 For a written specification, send the part drawing, the substrate, the line speed and the current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 

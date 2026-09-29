@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of secondary bevel in industrial cutting: a smaller angled face behind the primary bevel, used to add strength without sacrificing hone.'
-  canonical: 'https://www.industrial-knives.net/glossary/secondary-bevel/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-secondary-bevel/'
 image: '/images/og/glossary-secondary-bevel.webp'
 ---
 
@@ -26,4 +26,4 @@ image: '/images/og/glossary-secondary-bevel.webp'
 
 A secondary bevel reduces the effective clearance angle at the edge, which can increase drag and burr. Specify the secondary bevel only when the primary bevel alone is chipping, not for routine slitter blades.
 
-**See also:** [Primary bevel](/glossary/primary-bevel/), [Wedge angle](/glossary/wedge-angle/), [Chipping](/glossary/chipping/).
+**See also.**

@@ -108,27 +108,19 @@ export const buildRedirectMap = (): Record<string, string> => {
   const posts = readPostEntries();
   const redirects: Record<string, string> = {};
 
-  // 1) Per-post redirect: /<slug>/  →  /blog/<category>/<slug>/
-  for (const post of posts) {
-    redirects[`/${post.slug}/`] = `/blog/${post.category}/${post.slug}/`;
-  }
-
-  // 2) Per-category redirect: /category/<slug>/  →  /blog/<slug>/
-  const seenCategories = new Set<string>();
-  for (const post of posts) {
-    if (seenCategories.has(post.category)) continue;
-    seenCategories.add(post.category);
-    redirects[`/category/${post.category}/`] = `/blog/${post.category}/`;
-  }
+  // Per-post (/<slug>/) and per-category (/category/<slug>/) legacy redirects
+  // intentionally removed: industrial-knives.net is a brand-new site (rebrand
+  // + relaunch on 2026-09-27, commit 3edc968), no external links or indexed
+  // URLs reference the old flat paths, and 301s on internal links are an SEO
+  // trust penalty for new domains. Body content was rewritten to use the
+  // canonical /blog/<category>/<slug>/ form, so the page is reachable directly
+  // without any redirect chain. The /blog/<n>/ and /blog/topics/ entries
+  // below are kept because they are real entry paths from the old sitemap.
 
   // 3) Old home pagination: /blog/2/ .. /blog/9/  →  /blog/
   for (let n = 2; n <= OLD_HOME_PAGINATION_COUNT; n++) {
     redirects[`/blog/${n}/`] = '/blog/';
   }
-
-    // 5) KAIPU rename (Phase 2 cleanup): /kaipu-5-factor-blade-selection-framework/ → /blog/engineering/5-factor-blade-selection-framework/
-  redirects['/kaipu-5-factor-blade-selection-framework/'] = '/blog/engineering/5-factor-blade-selection-framework/';
-
 
   redirects['/blog/topics/'] = '/blog/';
 

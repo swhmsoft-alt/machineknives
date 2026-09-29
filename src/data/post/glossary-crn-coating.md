@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of CrN (Chromium Nitride) PVD coating for industrial blades: a corrosion-resistant silver-grey coating, the standard for food-contact and wet applications.'
-  canonical: 'https://www.industrial-knives.net/glossary/crn-coating/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-crn-coating/'
 image: '/images/og/glossary-crn-coating.webp'
 ---
 
@@ -30,4 +30,4 @@ image: '/images/og/glossary-crn-coating.webp'
 - Very abrasive substrates without a harder topcoat (TiCN)
 - Where the absolute lowest friction is needed (use DLC)
 
-**See also:** [PVD Coating Comparison Table](/coatings-comparison/), [TiN coating](/glossary/tin-coating/), [TiCN coating](/glossary/ticn-coating/).
+**See also.**

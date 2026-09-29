@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of DLC (Diamond-Like Carbon) PVD coating for industrial blades: the lowest-friction coating available, eliminates built-up edge on stainless, aluminium and sticky polymers.'
-  canonical: 'https://www.industrial-knives.net/glossary/dlc-coating/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-dlc-coating/'
 image: '/images/og/glossary-dlc-coating.webp'
 ---
 
@@ -35,4 +35,4 @@ image: '/images/og/glossary-dlc-coating.webp'
 - ta-C (tetrahedral amorphous carbon): harder, higher stress, 0.5–1.5 µm
 - a-C (amorphous carbon): standard
 
-**See also:** [PVD Coating Comparison Table](/coatings-comparison/), [ta-C coating](/glossary/ta-c-coating/).
+**See also.**

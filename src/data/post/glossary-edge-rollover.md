@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of edge rollover in industrial cutting: deformation of the edge where the substrate pushes the steel over instead of cutting it, common on a too-soft knife or a too-sharp edge.'
-  canonical: 'https://www.industrial-knives.net/glossary/edge-rollover/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-edge-rollover/'
 image: '/images/og/glossary-edge-rollover.webp'
 ---
 
@@ -30,4 +30,4 @@ image: '/images/og/glossary-edge-rollover.webp'
 - Add a hot-hardness coating (TiAlN, AlCrN)
 - Add active cooling to drop edge temperature below tempering point
 
-**See also:** [Chipping](/glossary/chipping/), [Thermal fatigue](/glossary/thermal-fatigue/), [Hone (micro-hone)](/glossary/hone/).
+**See also.**

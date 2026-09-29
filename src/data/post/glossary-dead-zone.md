@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of dead zone in industrial slitting: the area immediately around the cut where the substrate is unsupported and can wrinkle, tear, or lift.'
-  canonical: 'https://www.industrial-knives.net/glossary/dead-zone/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-dead-zone/'
 image: '/images/og/glossary-dead-zone.webp'
 ---
 
@@ -29,4 +29,4 @@ image: '/images/og/glossary-dead-zone.webp'
 - Add a lay-on roller or an anti-wrinkle bar before the slitter
 - Check that the substrate is within caliper and surface spec
 
-**See also:** [Web tension (selection guide)](/selection-guide-paper-converting/), [Burr](/glossary/burr/).
+**See also.**

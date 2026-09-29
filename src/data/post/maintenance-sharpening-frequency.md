@@ -13,7 +13,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'The right re-grinding frequency balances knife life, scrap rate, and re-grind cost. Re-grind too often wastes stock; re-grind too late produces scrap. This article gives the frequency rules per knife family and the cost model to pick the right interval.'
-  canonical: 'https://www.industrial-knives.net/maintenance-sharpening-frequency/'
+  canonical: 'https://industrial-knives.net/blog/maintenance/maintenance-sharpening-frequency/'
 image: '/images/og/maintenance-sharpening-frequency.webp'
 ---
 
@@ -118,7 +118,7 @@ Re-grind when **any one** is true:
 
 If none is true, do not re-grind. Wait for the next weekly check.
 
-For the broader re-grind framework, see [Maintenance: how to extend slitter life](/maintenance-slitting-blade-life/) and [Preventive maintenance schedule](/maintenance-preventive-schedule/).
+For the broader re-grind framework, see [Maintenance: how to extend slitter life](/blog/maintenance/maintenance-slitting-blade-life/) and [Preventive maintenance schedule](/blog/maintenance/maintenance-preventive-schedule/).
 
 For a written re-grind frequency study for your line, send the line layout, current re-grind interval, current scrap rate and current re-grind cost to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Frequency study, decision rules, and tracking sheet within one business day.
 

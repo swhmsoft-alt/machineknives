@@ -17,7 +17,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'The Industrial Knives 5-Factor Blade Selection Framework: a 30-minute method for specifying industrial machine knives — substrate, geometry, hardness, edge prep, operating speed. Backed by 25+ years of converting, recycling and metalworking line experience.'
-  canonical: 'https://www.industrial-knives.net/5-factor-blade-selection-framework/'
+  canonical: 'https://industrial-knives.net/blog/engineering/5-factor-blade-selection-framework/'
 image: '/images/og/5-factor-blade-selection-framework.webp'
 ---
 
@@ -157,7 +157,7 @@ The framework assumes a defined production line with measurable parameters. Ther
 
 If you have a drawing, a worn blade, or a competitor's part number, send it to [engineering](mailto:[email protected]) or use the [request-a-quote form](/contact). We will run the framework, return a specification within one business day, and ship against a written tolerance guarantee.
 
-For the broader material selection guide, see our [industry solutions overview](/solutions#materials). For a step-by-step walkthrough of how a drawing becomes a finished blade, see our [engagement process](/solutions#process).
+For the broader material selection guide, see our industry solutions overview. For a step-by-step walkthrough of how a drawing becomes a finished blade, see our engagement process.
 
 ---
 

@@ -13,7 +13,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Industrial cutting burr — definition, measurement, causes, and how edge prep and clearance angle affect burr height on slitter and shear blades.'
-  canonical: 'https://www.industrial-knives.net/glossary/burr/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-burr/'
 image: '/images/og/glossary-burr.webp'
 ---
 
@@ -46,4 +46,4 @@ image: '/images/og/glossary-burr.webp'
 - Adjust shear blade gap to 5–12 % of thickness.
 - Audit incoming substrate for hardness and finish drift.
 
-**See also:** [The Industrial Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/), [Maintenance: how to extend slitter life](/maintenance-slitting-blade-life/), [Hone (micro-hone)](/glossary/hone/).
+**See also.**

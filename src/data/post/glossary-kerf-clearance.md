@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of kerf clearance in industrial cutting: the lateral gap between the knife and the substrate after the cut, and why a positive kerf clearance is essential for clean cuts.'
-  canonical: 'https://www.industrial-knives.net/glossary/kerf-clearance/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-kerf-clearance/'
 image: '/images/og/glossary-kerf-clearance.webp'
 ---
 
@@ -29,4 +29,4 @@ image: '/images/og/glossary-kerf-clearance.webp'
 - Compare to the knife thickness
 - Difference = total kerf clearance (both sides)
 
-**See also:** [Kerf (glossary entry)](/glossary/kerf/), [Burr](/glossary/burr/), [Side clearance](/glossary/side-clearance/).
+**See also.**

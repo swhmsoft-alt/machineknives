@@ -14,7 +14,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Why a plate shear blade keeps cracking at the edge. Four root causes, the diagnostic flow, the fix for each, and field cases for stainless, mild steel and AR plate shearing.'
-  canonical: 'https://www.industrial-knives.net/troubleshooting-shear-blade-cracking/'
+  canonical: 'https://industrial-knives.net/blog/troubleshooting/troubleshooting-shear-blade-cracking/'
 image: '/images/og/troubleshooting-shear-blade-cracking.webp'
 ---
 
@@ -128,7 +128,7 @@ If visual, chamfer, hardness, gap and plate checks all pass, and the knife is st
 
 For a written diagnosis on a cracked shear blade, send the cracked blade, the line log, the plate batch records and the blade gap measurement to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Diagnosis within 24 hours, replacement blade within 3 weeks.
 
-For the broader shear blade selection guidance, see [How to choose a shear blade for plate steel](/selection-guide-shear-blade-plate-steel/) and [Troubleshooting: why is my blade wearing out too fast?](/troubleshooting-premature-wear/).
+For the broader shear blade selection guidance, see [How to choose a shear blade for plate steel](/blog/selection-guide/selection-guide-shear-blade-plate-steel/) and [Troubleshooting: why is my blade wearing out too fast?](/blog/troubleshooting/troubleshooting-premature-wear/).
 
 **About the author**
 

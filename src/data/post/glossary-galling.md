@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of galling in industrial cutting: severe adhesive wear where substrate material welds to the edge, tears off, and re-welds, common on stainless and aluminium cutting without lubrication.'
-  canonical: 'https://www.industrial-knives.net/glossary/galling/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-galling/'
 image: '/images/og/glossary-galling.webp'
 ---
 
@@ -31,4 +31,4 @@ image: '/images/og/glossary-galling.webp'
 - Drop the line speed to reduce heat generation
 - Switch to a hot-hardness steel (M2 HSS, M42) with a more positive clearance angle
 
-**See also:** [Built-up edge](/glossary/built-up-edge/), [DLC coating](/coatings-comparison/), [Hone (micro-hone)](/glossary/hone/).
+**See also.**

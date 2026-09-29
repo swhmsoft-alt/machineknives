@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of land in industrial cutting: the small flat behind the cutting edge that supports the hone, used on shear blades and heavy-duty slitter knives for edge strength.'
-  canonical: 'https://www.industrial-knives.net/glossary/land/'
+  canonical: 'https://industrial-knives.net/blog/glossary/glossary-land/'
 image: '/images/og/glossary-land.webp'
 ---
 
@@ -27,4 +27,4 @@ image: '/images/og/glossary-land.webp'
 
 A wider land adds strength but also adds friction at the cut, which can increase burr and thermal load. Specify a land only on heavy shear blades or thick slitters where edge strength matters more than low drag.
 
-**See also:** [Chamfer](/glossary/chamfer/), [Wedge angle](/glossary/wedge-angle/).
+**See also.**
