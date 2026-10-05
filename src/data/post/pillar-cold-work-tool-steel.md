@@ -17,7 +17,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Cold-work tool steel selection guide — AISI D-series, A-series, O1, DC53 chemistry, heat treatment and selection. Compare wear life, toughness and hardenability for industrial blades.'
-  canonical: 'https://industrial-knives.net/blog/selection-guide/pillar-cold-work-tool-steel/'
+  canonical: 'https://custommachineknives.com/blog/selection-guide/pillar-cold-work-tool-steel/'
 image: '/images/og/pillar-cold-work-tool-steel.webp'
 ---
 # Cold-Work Tool Steel Selection Guide

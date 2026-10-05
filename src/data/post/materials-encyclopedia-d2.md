@@ -14,7 +14,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'AISI D2 cold-work tool steel — chemistry, hardness, heat treatment, applications and cross-reference. Concise encyclopedia entry for industrial blade specification.'
-  canonical: 'https://industrial-knives.net/blog/materials-encyclopedia/materials-encyclopedia-d2/'
+  canonical: 'https://custommachineknives.com/blog/materials-encyclopedia/materials-encyclopedia-d2/'
 image: '/images/og/materials-encyclopedia-d2.webp'
 ---
 

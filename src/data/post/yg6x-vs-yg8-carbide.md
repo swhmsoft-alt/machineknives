@@ -18,7 +18,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'YG6X vs YG8 cemented tungsten carbide for industrial machine knives. Cobalt content, hardness, toughness, wear resistance, ISO 513 classification, substrate fit. Side-by-side comparison from Industrial Knives engineering.'
-  canonical: 'https://industrial-knives.net/blog/material-comparison/yg6x-vs-yg8-carbide/'
+  canonical: 'https://custommachineknives.com/blog/material-comparison/yg6x-vs-yg8-carbide/'
 image: '/images/og/yg6x-vs-yg8-carbide.webp'
 ---
 

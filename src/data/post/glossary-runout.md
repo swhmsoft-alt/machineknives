@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of runout in industrial blade measurement: the total indicated reading (TIR) of the knife as it rotates on a spindle, and how runout affects cut quality.'
-  canonical: 'https://industrial-knives.net/blog/glossary/glossary-runout/'
+  canonical: 'https://custommachineknives.com/blog/glossary/glossary-runout/'
 image: '/images/og/glossary-runout.webp'
 ---
 

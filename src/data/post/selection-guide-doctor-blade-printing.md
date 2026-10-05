@@ -13,7 +13,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Doctor blades see high-speed scraping, ink chemistry and metrology-grade edge geometry. The wrong steel grade produces streaking, ghosting, or a 20 % scrap rate. This guide walks through the substrate, the ink, the line speed, the steel grade and the edge prep for flexo, gravure and coating lines.'
-  canonical: 'https://industrial-knives.net/blog/selection-guide/selection-guide-doctor-blade-printing/'
+  canonical: 'https://custommachineknives.com/blog/selection-guide/selection-guide-doctor-blade-printing/'
 image: '/images/og/selection-guide-doctor-blade-printing.webp'
 ---
 

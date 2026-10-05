@@ -14,7 +14,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Cemented tungsten carbide (WC-Co) — composition, ISO 513 classification, hardness, applications, grades (YG6X, YG8, YG10X, YG15). The reference entry for carbide industrial blades.'
-  canonical: 'https://industrial-knives.net/blog/materials-encyclopedia/materials-encyclopedia-tungsten-carbide/'
+  canonical: 'https://custommachineknives.com/blog/materials-encyclopedia/materials-encyclopedia-tungsten-carbide/'
 image: '/images/og/materials-encyclopedia-tungsten-carbide.webp'
 ---
 

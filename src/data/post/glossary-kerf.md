@@ -13,7 +13,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Industrial cutting kerf — definition, how it is measured, the substrate-by-substrate range, and the relationship to slitter knife thickness and material yield.'
-  canonical: 'https://industrial-knives.net/blog/glossary/glossary-kerf/'
+  canonical: 'https://custommachineknives.com/blog/glossary/glossary-kerf/'
 image: '/images/og/glossary-kerf.webp'
 ---
 

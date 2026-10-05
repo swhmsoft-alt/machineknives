@@ -14,7 +14,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Foam and rubber substrates are gummy, abrasive and chemically variable. The wrong blade grade galls immediately, the wrong edge geometry produces a torn surface, and the wrong cooling makes the problem worse. This guide covers PU foam, PE foam, EPDM rubber, silicone rubber and natural rubber slitting and shearing.'
-  canonical: 'https://industrial-knives.net/blog/selection-guide/selection-guide-foam-rubber-cutting/'
+  canonical: 'https://custommachineknives.com/blog/selection-guide/selection-guide-foam-rubber-cutting/'
 image: '/images/og/selection-guide-foam-rubber-cutting.webp'
 ---
 

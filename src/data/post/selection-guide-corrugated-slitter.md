@@ -14,7 +14,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Corrugated slitting is one of the most abrasive industrial cutting applications. The substrate is a multi-layer composite of kraft paper + adhesive + flute geometry, running at 200–500 m/min. The wrong blade grade loses 50 % of life. This guide covers single-face, double-face and thin-board slitting, with grade maps and field cases.'
-  canonical: 'https://industrial-knives.net/blog/selection-guide/selection-guide-corrugated-slitter/'
+  canonical: 'https://custommachineknives.com/blog/selection-guide/selection-guide-corrugated-slitter/'
 image: '/images/og/selection-guide-corrugated-slitter.webp'
 ---
 

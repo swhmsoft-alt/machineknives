@@ -10,7 +10,7 @@ author: 'Industrial Knives Engineering'
 image: '/images/og/comparer-industrial-cutting-tools.webp'
 metadata:
   description: 'Compare industrial cutting tools to optimize manufacturing efficiency. Learn how to choose between high-speed steel, carbide, and coated blades today.'
-  canonical: 'https://industrial-knives.net/blog/selection-guide/comparer-industrial-cutting-tools/'
+  canonical: 'https://custommachineknives.com/blog/selection-guide/comparer-industrial-cutting-tools/'
 draft: false
 ---
 

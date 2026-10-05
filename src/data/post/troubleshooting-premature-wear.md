@@ -15,7 +15,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Why is your machine blade wearing out too fast? Diagnostic flow, five root causes, visual failure-mode tells, and field-tested fixes for industrial slitter, shear and granulator blades.'
-  canonical: 'https://industrial-knives.net/blog/troubleshooting/troubleshooting-premature-wear/'
+  canonical: 'https://custommachineknives.com/blog/troubleshooting/troubleshooting-premature-wear/'
 image: '/images/og/troubleshooting-premature-wear.webp'
 ---
 

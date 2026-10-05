@@ -67,7 +67,7 @@ const pageBreadcrumbLd = pageProps
         position: idx + 1,
         name: it.text,
         item: it.href
-          ? String(new URL(it.href, Astro.site ?? 'https://www.industrial-knives.net'))
+          ? String(new URL(it.href, Astro.site ?? 'https://custommachineknives.com'))
           : Astro.url.toString(),
       })),
     })
@@ -80,7 +80,7 @@ const pageMetadata = pageProps
   : null;
 
 // ─── kind === 'post' data ──────────────────────────────────────────────────
-const siteUrl = String(Astro.site ?? 'https://www.industrial-knives.net').replace(/\/$/, '');
+const siteUrl = String(Astro.site ?? 'https://custommachineknives.com').replace(/\/$/, '');
 const postUrl = postProps
   ? getCanonical(`/blog/${postProps.post.category?.slug ?? ''}/${postProps.post.slug}/`)
   : '';

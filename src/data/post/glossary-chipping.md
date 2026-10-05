@@ -13,7 +13,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Industrial blade chipping — definition, four root causes, the role of edge hone and hardness, and how to diagnose and fix chipping on slitter, shear and granulator blades.'
-  canonical: 'https://industrial-knives.net/blog/glossary/glossary-chipping/'
+  canonical: 'https://custommachineknives.com/blog/glossary/glossary-chipping/'
 image: '/images/og/glossary-chipping.webp'
 ---
 

@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of grit size in industrial blade grinding: the abrasive particle size of a grinding wheel, and how grit size affects surface finish, stock removal and thermal load on the workpiece.'
-  canonical: 'https://industrial-knives.net/blog/glossary/glossary-grit-size/'
+  canonical: 'https://custommachineknives.com/blog/glossary/glossary-grit-size/'
 image: '/images/og/glossary-grit-size.webp'
 ---
 

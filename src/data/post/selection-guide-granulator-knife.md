@@ -16,7 +16,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'How to choose a granulator knife for plastics recycling: rotor / bed / screen / wear-strip. Substrate by polymer family, grade, geometry, edge prep and field guidance.'
-  canonical: 'https://industrial-knives.net/blog/selection-guide/selection-guide-granulator-knife/'
+  canonical: 'https://custommachineknives.com/blog/selection-guide/selection-guide-granulator-knife/'
 image: '/images/og/selection-guide-granulator-knife.webp'
 ---
 

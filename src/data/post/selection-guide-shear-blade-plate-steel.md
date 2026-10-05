@@ -15,7 +15,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'How to choose a shear blade for plate steel in hot rolling mill and service centre applications. Substrate by family, grade and chamfer selection, blade gap, field cases.'
-  canonical: 'https://industrial-knives.net/blog/selection-guide/selection-guide-shear-blade-plate-steel/'
+  canonical: 'https://custommachineknives.com/blog/selection-guide/selection-guide-shear-blade-plate-steel/'
 image: '/images/og/selection-guide-shear-blade-plate-steel.webp'
 ---
 

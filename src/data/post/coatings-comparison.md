@@ -20,7 +20,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Side-by-side comparison of PVD coatings for industrial blades. Hardness, friction, max temperature, colour, typical thickness, substrate fit and field guidance for TiN, TiCN, CrN, AlCrN, TiAlN, DLC and CrAlN.'
-  canonical: 'https://industrial-knives.net/blog/coatings-comparison/coatings-comparison/'
+  canonical: 'https://custommachineknives.com/blog/coatings-comparison/coatings-comparison/'
 image: '/images/og/coatings-comparison.webp'
 ---
 

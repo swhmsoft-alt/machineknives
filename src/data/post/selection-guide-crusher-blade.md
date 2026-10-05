@@ -16,7 +16,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Crusher blades take the largest impact loads in industrial cutting. A 30 mm M16 nut in a granulator feed will shatter a D2 blade in 200 cycles. This guide covers jaw, hammer, rotary and impact crusher blades for stone, ore, scrap and ASR.'
-  canonical: 'https://industrial-knives.net/blog/selection-guide/selection-guide-crusher-blade/'
+  canonical: 'https://custommachineknives.com/blog/selection-guide/selection-guide-crusher-blade/'
 image: '/images/og/selection-guide-crusher-blade.webp'
 ---
 

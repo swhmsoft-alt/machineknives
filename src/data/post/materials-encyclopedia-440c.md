@@ -14,7 +14,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'AISI 440C martensitic stainless steel — chemistry, hardness, heat treatment, applications and cross-reference. The reference entry for food-contact and corrosion-resistant industrial blades.'
-  canonical: 'https://industrial-knives.net/blog/materials-encyclopedia/materials-encyclopedia-440c/'
+  canonical: 'https://custommachineknives.com/blog/materials-encyclopedia/materials-encyclopedia-440c/'
 image: '/images/og/materials-encyclopedia-440c.webp'
 ---
 

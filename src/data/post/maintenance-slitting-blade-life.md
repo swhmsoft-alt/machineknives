@@ -16,7 +16,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'How to extend the service life of a slitting machine blade: seven variables from substrate to edge prep to in-process care. Field-tested guidance from Industrial Knives engineering.'
-  canonical: 'https://industrial-knives.net/blog/maintenance/maintenance-slitting-blade-life/'
+  canonical: 'https://custommachineknives.com/blog/maintenance/maintenance-slitting-blade-life/'
 image: '/images/og/maintenance-slitting-blade-life.webp'
 ---
 

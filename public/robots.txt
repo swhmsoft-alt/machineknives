@@ -78,4 +78,4 @@ Allow: /
 # ─── Sitemap ─────────────────────────────────────────────────────────
 # Adjust the filename to match what @astrojs/sitemap actually emits
 # (sitemap-index.xml vs sitemap-N.xml vs sitemap.xml) for this build.
-Sitemap: https://www.machine-knives.net/sitemap-index.xml
+Sitemap: https://custommachineknives.com/sitemap-index.xml

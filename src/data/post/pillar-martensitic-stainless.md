@@ -16,7 +16,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Martensitic stainless selection guide — AISI 420, 440A, 440B, 440C, 17-4 PH. Compare corrosion resistance, hardness and toughness for food-contact and corrosion-resistant industrial blades.'
-  canonical: 'https://industrial-knives.net/blog/selection-guide/pillar-martensitic-stainless/'
+  canonical: 'https://custommachineknives.com/blog/selection-guide/pillar-martensitic-stainless/'
 image: '/images/og/pillar-martensitic-stainless.webp'
 ---
 # Martensitic Stainless Steel for Cutting Tools

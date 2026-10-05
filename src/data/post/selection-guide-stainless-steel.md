@@ -17,7 +17,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'How to choose an industrial machine knife for cutting stainless steel. Substrate family, steel grade, hardness target, edge prep, and operating speed — with grade recommendations for 304, 316, 430 and 17-4PH.'
-  canonical: 'https://industrial-knives.net/blog/selection-guide/selection-guide-stainless-steel/'
+  canonical: 'https://custommachineknives.com/blog/selection-guide/selection-guide-stainless-steel/'
 image: '/images/og/selection-guide-stainless-steel.webp'
 ---
 

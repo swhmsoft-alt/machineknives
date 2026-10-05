@@ -16,7 +16,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Tungsten carbide grades for industrial blades — GB YG6, YG10, YG15, ISO 513 K-series. Compare composition, hardness, impact resistance and selection for granulator, rock-crusher and high-impact wear parts.'
-  canonical: 'https://industrial-knives.net/blog/selection-guide/pillar-tungsten-carbide/'
+  canonical: 'https://custommachineknives.com/blog/selection-guide/pillar-tungsten-carbide/'
 image: '/images/og/pillar-tungsten-carbide.webp'
 ---
 # Tungsten Carbide Grades for Industrial Blades

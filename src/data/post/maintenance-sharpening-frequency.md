@@ -13,7 +13,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'The right re-grinding frequency balances knife life, scrap rate, and re-grind cost. Re-grind too often wastes stock; re-grind too late produces scrap. This article gives the frequency rules per knife family and the cost model to pick the right interval.'
-  canonical: 'https://industrial-knives.net/blog/maintenance/maintenance-sharpening-frequency/'
+  canonical: 'https://custommachineknives.com/blog/maintenance/maintenance-sharpening-frequency/'
 image: '/images/og/maintenance-sharpening-frequency.webp'
 ---
 

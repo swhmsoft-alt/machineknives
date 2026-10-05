@@ -14,7 +14,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Why a plate shear blade keeps cracking at the edge. Four root causes, the diagnostic flow, the fix for each, and field cases for stainless, mild steel and AR plate shearing.'
-  canonical: 'https://industrial-knives.net/blog/troubleshooting/troubleshooting-shear-blade-cracking/'
+  canonical: 'https://custommachineknives.com/blog/troubleshooting/troubleshooting-shear-blade-cracking/'
 image: '/images/og/troubleshooting-shear-blade-cracking.webp'
 ---
 

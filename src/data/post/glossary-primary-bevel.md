@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of primary bevel in industrial cutting: the first angled face behind the cutting edge, typically the largest relief face on a shear blade or slitter knife.'
-  canonical: 'https://industrial-knives.net/blog/glossary/glossary-primary-bevel/'
+  canonical: 'https://custommachineknives.com/blog/glossary/glossary-primary-bevel/'
 image: '/images/og/glossary-primary-bevel.webp'
 ---
 

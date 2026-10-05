@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of thermal fatigue in industrial cutting: failure by repeated thermal cycling at the edge, common on high-speed tissue and film slitting without active cooling.'
-  canonical: 'https://industrial-knives.net/blog/glossary/glossary-thermal-fatigue/'
+  canonical: 'https://custommachineknives.com/blog/glossary/glossary-thermal-fatigue/'
 image: '/images/og/glossary-thermal-fatigue.webp'
 ---
 

@@ -13,7 +13,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'JIS SKD11 cold-work tool steel — chemistry, hardness, heat treatment, applications and the practical differences vs AISI D2 for industrial blades.'
-  canonical: 'https://industrial-knives.net/blog/materials-encyclopedia/materials-encyclopedia-skd11/'
+  canonical: 'https://custommachineknives.com/blog/materials-encyclopedia/materials-encyclopedia-skd11/'
 image: '/images/og/materials-encyclopedia-skd11.webp'
 ---
 

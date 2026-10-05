@@ -17,7 +17,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'High-speed steel selection guide — AISI M-series, T-series and PM grades (ASP 2060). Compare hot hardness, wear life and selection for high-speed and high-temperature industrial blades.'
-  canonical: 'https://industrial-knives.net/blog/selection-guide/pillar-high-speed-steel/'
+  canonical: 'https://custommachineknives.com/blog/selection-guide/pillar-high-speed-steel/'
 image: '/images/og/pillar-high-speed-steel.webp'
 ---
 # High-Speed Steel Selection Guide

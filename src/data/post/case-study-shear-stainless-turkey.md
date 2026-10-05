@@ -16,7 +16,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Case study: shear blade for 6 mm 304 stainless plate at a Turkish service centre. From 1,200 strokes to 18,000 strokes — diagnostic, trial, ROI.'
-  canonical: 'https://industrial-knives.net/blog/case-studies/case-study-shear-stainless-turkey/'
+  canonical: 'https://custommachineknives.com/blog/case-studies/case-study-shear-stainless-turkey/'
 image: '/images/og/case-study-shear-stainless-turkey.webp'
 ---
 

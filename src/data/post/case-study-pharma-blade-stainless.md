@@ -17,7 +17,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'An Indian pharma converter cutting 50 µm 304 stainless foil at 80 m/min was getting 7 days from a D2 slitter. The fix was a 9Cr18MoV stainless slitter. 35 days. The case study walks through the audit, the trial, and the FDA / GMP compliance angle.'
-  canonical: 'https://industrial-knives.net/blog/case-studies/case-study-pharma-blade-stainless/'
+  canonical: 'https://custommachineknives.com/blog/case-studies/case-study-pharma-blade-stainless/'
 image: '/images/og/case-study-pharma-blade-stainless.webp'
 ---
 

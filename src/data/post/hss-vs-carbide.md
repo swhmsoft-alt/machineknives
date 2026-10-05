@@ -16,7 +16,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'HSS vs carbide for industrial blades: hardness (HRC 62–67 vs HRA 89–92), toughness, cost-per-edge, edge retention and substrate fit. Side-by-side comparison with selection guidance from Industrial Knives engineering.'
-  canonical: 'https://industrial-knives.net/blog/material-comparison/hss-vs-carbide/'
+  canonical: 'https://custommachineknives.com/blog/material-comparison/hss-vs-carbide/'
 image: '/images/og/hss-vs-carbide.webp'
 ---
 

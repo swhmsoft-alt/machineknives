@@ -16,7 +16,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Case study: granulator rotor knife upgrade for automotive plastic recycling in Germany. From 3 days to 22 days per rotor knife set. Diagnostic, trial, ROI, downstream impact on screen wear.'
-  canonical: 'https://industrial-knives.net/blog/case-studies/case-study-granulator-rotor-automotive/'
+  canonical: 'https://custommachineknives.com/blog/case-studies/case-study-granulator-rotor-automotive/'
 image: '/images/og/case-study-granulator-rotor-automotive.webp'
 ---
 

@@ -4,32 +4,32 @@
 
 ## Site Structure
 
-- Home: https://www.machine-knives.net/
-- Products: https://www.machine-knives.net/products/
-  - Circular Blades: https://www.machine-knives.net/products/circular/
-  - Straight Blades: https://www.machine-knives.net/products/straight/
-  - Serrated Blades: https://www.machine-knives.net/products/serrated/
-  - Shear Blades: https://www.machine-knives.net/products/shear/
-  - Granulator Blades: https://www.machine-knives.net/products/granulator/
-  - Custom Blades: https://www.machine-knives.net/products/custom/
-- Solutions: https://www.machine-knives.net/solutions/
-- Services: https://www.machine-knives.net/services/
+- Home: https://custommachineknives.com/
+- Products: https://custommachineknives.com/products/
+  - Circular Blades: https://custommachineknives.com/products/circular/
+  - Straight Blades: https://custommachineknives.com/products/straight/
+  - Serrated Blades: https://custommachineknives.com/products/serrated/
+  - Shear Blades: https://custommachineknives.com/products/shear/
+  - Granulator Blades: https://custommachineknives.com/products/granulator/
+  - Custom Blades: https://custommachineknives.com/products/custom/
+- Solutions: https://custommachineknives.com/solutions/
+- Services: https://custommachineknives.com/services/
 - Industries:
-  - Printing and Packaging: https://www.machine-knives.net/industries/printing-packaging/
-  - Paper and Tissue: https://www.machine-knives.net/industries/paper-tissue/
-  - Food Processing: https://www.machine-knives.net/industries/food-processing/
-  - Plastics Recycling: https://www.machine-knives.net/industries/plastics-recycling/
-  - Converting: https://www.machine-knives.net/industries/converting/
-  - Metalworking: https://www.machine-knives.net/industries/metalworking/
-- About: https://www.machine-knives.net/about/
-- Blog: https://www.machine-knives.net/blog/
+  - Printing and Packaging: https://custommachineknives.com/industries/printing-packaging/
+  - Paper and Tissue: https://custommachineknives.com/industries/paper-tissue/
+  - Food Processing: https://custommachineknives.com/industries/food-processing/
+  - Plastics Recycling: https://custommachineknives.com/industries/plastics-recycling/
+  - Converting: https://custommachineknives.com/industries/converting/
+  - Metalworking: https://custommachineknives.com/industries/metalworking/
+- About: https://custommachineknives.com/about/
+- Blog: https://custommachineknives.com/blog/
 
 ## Knowledge Nodes (GEO Facts Source)
 
 These pages contain machine-knife technical specifications grounded in production data. Each is a single source of truth, with no fabricated metrics, brands, or certifications.
 
-- D2 Bed Knife for Tissue Converting (HRC 60, 15 μm micro-hone, 18° clearance, 1200 m/min): https://www.machine-knives.net/products/straight/bed-knife-tissue/
-  - Node-level facts: https://www.machine-knives.net/llms/bed-knife-tissue.txt
+- D2 Bed Knife for Tissue Converting (HRC 60, 15 μm micro-hone, 18° clearance, 1200 m/min): https://custommachineknives.com/products/straight/bed-knife-tissue/
+  - Node-level facts: https://custommachineknives.com/llms/bed-knife-tissue.txt
 
 ## Editorial Principles
 
@@ -42,4 +42,4 @@ These pages contain machine-knife technical specifications grounded in productio
 ## Contact
 
 - Engineering: [email protected]
-- Quote requests: https://www.machine-knives.net/contact/
+- Quote requests: https://custommachineknives.com/contact/

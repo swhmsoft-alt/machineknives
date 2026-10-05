@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of rake angle (also called rake, top rake or cutting rake) in industrial cutting: the angle of the front face of the cutting edge measured from vertical, and how positive vs negative rake affects cutting force, chip flow and blade life.'
-  canonical: 'https://industrial-knives.net/blog/glossary/glossary-rake-angle/'
+  canonical: 'https://custommachineknives.com/blog/glossary/glossary-rake-angle/'
 image: '/images/og/glossary-rake-angle.webp'
 ---
 

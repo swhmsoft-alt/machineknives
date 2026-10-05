@@ -13,7 +13,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'GB YG6 (GB/T 30892, ISO K20) — 6 % Co coarse-grain tungsten carbide, HRA 91–92. Compare with YG10 and YG15 for granulator and wear parts.'
-  canonical: 'https://industrial-knives.net/blog/materials-encyclopedia/yg6/'
+  canonical: 'https://custommachineknives.com/blog/materials-encyclopedia/yg6/'
 image: '/images/og/yg6.webp'
 ---
 

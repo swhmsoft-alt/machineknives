@@ -13,7 +13,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'A knife that is past its design life is a chip waiting to happen. The four retirement criteria, the protocol for retiring and re-purposing, and how to avoid the most common retirement mistakes.'
-  canonical: 'https://industrial-knives.net/blog/maintenance/maintenance-end-of-life-replacement/'
+  canonical: 'https://custommachineknives.com/blog/maintenance/maintenance-end-of-life-replacement/'
 image: '/images/og/maintenance-end-of-life-replacement.webp'
 ---
 

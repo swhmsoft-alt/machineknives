@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of side clearance (also called side relief or lateral clearance) in industrial cutting: the angle that lets the substrate separate from the knife after the cut, on circular and rectangular slitter blades.'
-  canonical: 'https://industrial-knives.net/blog/glossary/glossary-side-clearance/'
+  canonical: 'https://custommachineknives.com/blog/glossary/glossary-side-clearance/'
 image: '/images/og/glossary-side-clearance.webp'
 ---
 

@@ -16,7 +16,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'A Vietnamese converter slitting 30 µm aluminium foil at 400 m/min was getting 5 days from a D2 slitter. The fix was a M2 HSS slitter with a ta-C coating. 18 days. The case study walks through the audit, the trial, the result, and the cost of welding.'
-  canonical: 'https://industrial-knives.net/blog/case-studies/case-study-aluminum-foil-slitter/'
+  canonical: 'https://custommachineknives.com/blog/case-studies/case-study-aluminum-foil-slitter/'
 image: '/images/og/case-study-aluminum-foil-slitter.webp'
 ---
 

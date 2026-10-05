@@ -17,7 +17,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'M2 vs M4 high-speed steel for industrial machine knives. Chemistry, hot hardness, wear resistance, grindability, cost. Side-by-side comparison with field guidance from Industrial Knives engineering.'
-  canonical: 'https://industrial-knives.net/blog/material-comparison/m2-vs-m4-hss/'
+  canonical: 'https://custommachineknives.com/blog/material-comparison/m2-vs-m4-hss/'
 image: '/images/og/m2-vs-m4-hss.webp'
 ---
 

@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of micro-chipping in industrial cutting: loss of small fragments (0.1–2 mm) from the cutting edge, usually a precursor to gross chipping or a wear-rate problem.'
-  canonical: 'https://industrial-knives.net/blog/glossary/glossary-micro-chipping/'
+  canonical: 'https://custommachineknives.com/blog/glossary/glossary-micro-chipping/'
 image: '/images/og/glossary-micro-chipping.webp'
 ---
 

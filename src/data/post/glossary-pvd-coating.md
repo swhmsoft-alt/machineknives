@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of PVD (Physical Vapour Deposition) coating for industrial blades: the family of vacuum-deposited ceramic coatings (TiN, TiCN, CrN, AlCrN, TiAlN, DLC) that extend knife life 20–50 %.'
-  canonical: 'https://industrial-knives.net/blog/glossary/glossary-pvd-coating/'
+  canonical: 'https://custommachineknives.com/blog/glossary/glossary-pvd-coating/'
 image: '/images/og/glossary-pvd-coating.webp'
 ---
 

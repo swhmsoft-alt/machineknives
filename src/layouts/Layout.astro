@@ -33,7 +33,7 @@ const { language, textDirection } = I18N;
 // BreadcrumbLists never produce HTML. This is the core fix for the GSC
 // "Missing field itemListElement" report — without it the homepage would emit
 // a `<script type="application/ld+json">` containing an empty BreadcrumbList.
-const siteUrl = String(Astro.site ?? 'https://www.industrial-knives.net').replace(/\/$/, '');
+const siteUrl = String(Astro.site ?? 'https://custommachineknives.com').replace(/\/$/, '');
 const breadcrumbLdItems = buildBreadcrumbItems(Astro.url.pathname).map((it, idx) => ({
   '@type': 'ListItem',
   position: idx + 1,

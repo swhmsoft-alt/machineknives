@@ -16,7 +16,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: '9Cr18MoV vs 440C for industrial stainless machine knives. Chemistry, corrosion resistance, achievable hardness, wear, edge retention. Side-by-side comparison from Industrial Knives engineering.'
-  canonical: 'https://industrial-knives.net/blog/material-comparison/9cr18mov-vs-440c/'
+  canonical: 'https://custommachineknives.com/blog/material-comparison/9cr18mov-vs-440c/'
 image: '/images/og/9cr18mov-vs-440c.webp'
 ---
 

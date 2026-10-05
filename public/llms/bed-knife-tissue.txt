@@ -1,7 +1,7 @@
 # Node: bed-knife-tissue
 
 > D2 Bed Knife for Tissue Converting — HRC 60, 15 μm micro-hone, 18° clearance angle.
-> Canonical page: https://www.machine-knives.net/products/straight/bed-knife-tissue/
+> Canonical page: https://custommachineknives.com/products/straight/bed-knife-tissue/
 > Facts source: src/data/facts/bed-knife-tissue.yaml
 
 ## Material

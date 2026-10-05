@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of wire edge in industrial cutting: a thin, fragile burr on the very tip of the edge caused by a re-grind with too fine a wheel or no spark-out.'
-  canonical: 'https://industrial-knives.net/blog/glossary/glossary-wire-edge/'
+  canonical: 'https://custommachineknives.com/blog/glossary/glossary-wire-edge/'
 image: '/images/og/glossary-wire-edge.webp'
 ---
 

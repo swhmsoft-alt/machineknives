@@ -13,7 +13,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'A knife that is dropped on a concrete floor is a knife with a chipped edge you cannot see until the line trips. Storage and handling SOPs cost almost nothing and prevent the most expensive failure modes — micro-chips, rust, geometry drift — before they reach the line.'
-  canonical: 'https://industrial-knives.net/blog/maintenance/maintenance-storage-handling/'
+  canonical: 'https://custommachineknives.com/blog/maintenance/maintenance-storage-handling/'
 image: '/images/og/maintenance-storage-handling.webp'
 ---
 

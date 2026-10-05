@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of flatness in industrial blade measurement: the deviation of a face from a perfect plane, and how flatness affects the contact area between knife and anvil.'
-  canonical: 'https://industrial-knives.net/blog/glossary/glossary-flatness/'
+  canonical: 'https://custommachineknives.com/blog/glossary/glossary-flatness/'
 image: '/images/og/glossary-flatness.webp'
 ---
 

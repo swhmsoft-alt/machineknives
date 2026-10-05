@@ -21,7 +21,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Cross-reference table for industrial blade steel and carbide grades. ASTM/AISI, JIS, DIN/EN/W.-Nr., GB, BS, AFNOR, UNI, SS and UNE equivalents for cold-work, HSS, stainless and tungsten carbide.'
-  canonical: 'https://industrial-knives.net/blog/material-grade-converter/material-grade-converter/'
+  canonical: 'https://custommachineknives.com/blog/material-grade-converter/material-grade-converter/'
 image: '/images/og/material-grade-converter.webp'
 ---
 

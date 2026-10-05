@@ -14,7 +14,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'How to outsource industrial blade re-sharpening: specification, deliverables, SLA, the four questions to ask a re-grind shop before you ship your first knife.'
-  canonical: 'https://industrial-knives.net/blog/maintenance/maintenance-resharpening-service/'
+  canonical: 'https://custommachineknives.com/blog/maintenance/maintenance-resharpening-service/'
 image: '/images/og/maintenance-resharpening-service.webp'
 ---
 

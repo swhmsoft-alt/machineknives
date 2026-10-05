@@ -13,7 +13,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Industrial cutting burr — definition, measurement, causes, and how edge prep and clearance angle affect burr height on slitter and shear blades.'
-  canonical: 'https://industrial-knives.net/blog/glossary/glossary-burr/'
+  canonical: 'https://custommachineknives.com/blog/glossary/glossary-burr/'
 image: '/images/og/glossary-burr.webp'
 ---
 

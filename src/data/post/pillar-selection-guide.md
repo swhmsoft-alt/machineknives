@@ -16,7 +16,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'The 5-Factor Blade Selection Framework — substrate, geometry, hardness target, edge preparation, operating speed. The methodology that drives material, grade, hardness and coating choices for industrial cutting blades.'
-  canonical: 'https://industrial-knives.net/blog/selection-guide/pillar-selection-guide/'
+  canonical: 'https://custommachineknives.com/blog/selection-guide/pillar-selection-guide/'
 image: '/images/og/pillar-selection-guide.webp'
 ---
 # Industrial Blade Selection Framework

@@ -13,7 +13,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Preventive maintenance schedule for industrial blades: daily / weekly / monthly / quarterly checks, inspection form, parts replacement plan, line-side measurements that drive knife life.'
-  canonical: 'https://industrial-knives.net/blog/maintenance/maintenance-preventive-schedule/'
+  canonical: 'https://custommachineknives.com/blog/maintenance/maintenance-preventive-schedule/'
 image: '/images/og/maintenance-preventive-schedule.webp'
 ---
 

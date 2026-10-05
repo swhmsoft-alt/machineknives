@@ -26,7 +26,7 @@ const SRC_DATA = path.join(ROOT, 'src/data');
 const DIST_DIR = path.join(ROOT, 'dist');
 const OKF_DIR = path.join(DIST_DIR, 'okf');
 
-const SITE_URL = 'https://www.machine-knives.net';
+const SITE_URL = 'https://custommachineknives.com';
 
 // ─── Helpers ────────────────────────────────────────────────────────────────
 

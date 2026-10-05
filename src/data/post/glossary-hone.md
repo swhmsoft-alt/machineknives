@@ -13,7 +13,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Industrial blade hone / micro-hone — definition, the substrate-by-substrate range, the relationship to coating thickness and burr, and how to set hone on slitter and shear blades.'
-  canonical: 'https://industrial-knives.net/blog/glossary/glossary-hone/'
+  canonical: 'https://custommachineknives.com/blog/glossary/glossary-hone/'
 image: '/images/og/glossary-hone.webp'
 ---
 

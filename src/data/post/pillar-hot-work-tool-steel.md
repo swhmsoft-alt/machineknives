@@ -15,7 +15,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Hot-work tool steel selection guide — AISI H11, H13, GB 6CrW2Si. Compare hot hardness, thermal fatigue resistance and selection for die casting, hot shear blades and extrusion tooling.'
-  canonical: 'https://industrial-knives.net/blog/selection-guide/pillar-hot-work-tool-steel/'
+  canonical: 'https://custommachineknives.com/blog/selection-guide/pillar-hot-work-tool-steel/'
 image: '/images/og/pillar-hot-work-tool-steel.webp'
 ---
 # Hot-Work Tool Steel for Die Casting and Hot Shear

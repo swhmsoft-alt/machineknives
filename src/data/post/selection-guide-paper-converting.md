@@ -14,7 +14,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'How to choose a slitting blade for a paper converting line. Substrate GSM and caliper, steel grade by rewind quality, edge prep, clearance and line-side conditions.'
-  canonical: 'https://industrial-knives.net/blog/selection-guide/selection-guide-paper-converting/'
+  canonical: 'https://custommachineknives.com/blog/selection-guide/selection-guide-paper-converting/'
 image: '/images/og/selection-guide-paper-converting.webp'
 ---
 

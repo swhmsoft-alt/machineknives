@@ -13,7 +13,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Industrial blade clearance angle — definition, the substrate-by-substrate range, the relationship to hone and burr, and how to set clearance on slitter, shear and granulator blades.'
-  canonical: 'https://industrial-knives.net/blog/glossary/glossary-clearance-angle/'
+  canonical: 'https://custommachineknives.com/blog/glossary/glossary-clearance-angle/'
 image: '/images/og/glossary-clearance-angle.webp'
 ---
 

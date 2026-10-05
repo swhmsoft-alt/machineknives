@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of nose radius in industrial cutting: the radius at the corner of a punch, drill, or specialised blade edge.'
-  canonical: 'https://industrial-knives.net/blog/glossary/glossary-nose-radius/'
+  canonical: 'https://custommachineknives.com/blog/glossary/glossary-nose-radius/'
 image: '/images/og/glossary-nose-radius.webp'
 ---
 

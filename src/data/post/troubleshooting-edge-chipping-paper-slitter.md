@@ -13,7 +13,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Edge chipping on a paper slitter: 10-minute field diagnostic flowchart. Visual inspection, dimensional check, hardness test, line-side audit, corrective action by root cause.'
-  canonical: 'https://industrial-knives.net/blog/troubleshooting/troubleshooting-edge-chipping-paper-slitter/'
+  canonical: 'https://custommachineknives.com/blog/troubleshooting/troubleshooting-edge-chipping-paper-slitter/'
 image: '/images/og/troubleshooting-edge-chipping-paper-slitter.webp'
 ---
 

@@ -13,7 +13,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'AISI M2 high-speed steel — chemistry, hardness, heat treatment, applications and cross-reference. The workhorse HSS grade for industrial slitter and shear blades.'
-  canonical: 'https://industrial-knives.net/blog/materials-encyclopedia/materials-encyclopedia-m2-hss/'
+  canonical: 'https://custommachineknives.com/blog/materials-encyclopedia/materials-encyclopedia-m2-hss/'
 image: '/images/og/materials-encyclopedia-m2-hss.webp'
 ---
 

@@ -15,7 +15,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'D2 vs SKD11 for industrial machine knives. Chemistry, hardenability, dimensional stability, edge retention and sourcing. The honest answer to whether they are interchangeable.'
-  canonical: 'https://industrial-knives.net/blog/material-comparison/d2-vs-skd11/'
+  canonical: 'https://custommachineknives.com/blog/material-comparison/d2-vs-skd11/'
 image: '/images/og/d2-vs-skd11.webp'
 ---
 

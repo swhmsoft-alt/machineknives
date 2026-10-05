@@ -14,7 +14,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'A slitter knife that turns blue, straw or purple is being annealed in service. The edge temperature has exceeded the tempering temperature. The fix is usually cooling, then grade upgrade, then coating.'
-  canonical: 'https://industrial-knives.net/blog/troubleshooting/troubleshooting-thermal-damage/'
+  canonical: 'https://custommachineknives.com/blog/troubleshooting/troubleshooting-thermal-damage/'
 image: '/images/og/troubleshooting-thermal-damage.webp'
 ---
 

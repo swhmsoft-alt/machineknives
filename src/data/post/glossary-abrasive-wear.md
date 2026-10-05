@@ -10,7 +10,7 @@ tags:
 author: 'Industrial Knives Engineering'
 metadata:
   description: 'Definition of abrasive wear in industrial cutting: loss of knife material by hard particles in the substrate ploughing or cutting into the edge.'
-  canonical: 'https://industrial-knives.net/blog/glossary/glossary-abrasive-wear/'
+  canonical: 'https://custommachineknives.com/blog/glossary/glossary-abrasive-wear/'
 image: '/images/og/glossary-abrasive-wear.webp'
 ---
 
