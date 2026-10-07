@@ -1,23 +1,23 @@
 # ============================================================
-# Industrial Knives Source KPI / Configuration (V1.0)
+# Custom Machine Knives Source KPI / Configuration (V1.0)
 # ============================================================
-# 列出 Industrial Knives 实际可触达的数据源 + 配置点.
+# 列出 Custom Machine Knives 实际可触达的数据源 + 配置点.
 # 字段反映"我们在哪里采集", 决定 source_type 取值的落地路径.
 # ============================================================
 
 sources:
   # --- L1: First-party Search ---
-  - id: kaipu-gsc
+  - id: cmk-gsc
     type: gsc
-    label: 'Industrial Knives Google Search Console'
-    target_property: 'https://www.industrial-knives.net'
+    label: 'Custom Machine Knives Google Search Console'
+    target_property: 'https://www.custommachineknives.com'
     status: 'available' # available | pending | blocked
     capture_method: 'human_export_csv'
     cadence: 'monthly'
     last_capture: null # ISO date, 人工回填
     notes: 'GSC 不开放 query 字符串 API, 仅 Performance Report 导出.'
 
-  - id: kaipu-gkp
+  - id: cmk-gkp
     type: gkp
     label: 'Google Keyword Planner (paid ads account)'
     target_seed: ['bed knife', 'granulator knife', 'shear blade', 'slitting blade', 'industrial knife']
@@ -56,18 +56,18 @@ sources:
     notes: '每个 entity 跑 5 角色, 每个角色产生 5-8 条 query.'
 
   # --- L4: First-party Buyer ---
-  - id: kaipu-rfq
+  - id: cmk-rfq
     type: rfq
-    label: 'Industrial Knives RFQ / Sales Inquiries'
+    label: 'Custom Machine Knives RFQ / Sales Inquiries'
     intake_email: '[email protected]'
     status: 'available'
     capture_method: 'sales_archive_anonymized'
     cadence: 'weekly'
     notes: 'PII 脱敏后才入库. customer name / email / phone 必须删除.'
 
-  - id: kaipu-linkedin
+  - id: cmk-linkedin
     type: linkedin_dm
-    label: 'Industrial Knives LinkedIn DMs'
+    label: 'Custom Machine Knives LinkedIn DMs'
     status: 'available'
     capture_method: 'sales_archive_anonymized'
     cadence: 'monthly'

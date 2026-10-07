@@ -11,7 +11,7 @@ tags:
   - '1.4125'
   - food contact blade
   - 9Cr18MoV
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'AISI 440C martensitic stainless steel — chemistry, hardness, heat treatment, applications and cross-reference. The reference entry for food-contact and corrosion-resistant industrial blades.'
   canonical: 'https://custommachineknives.com/blog/materials-encyclopedia/materials-encyclopedia-440c/'

@@ -13,7 +13,7 @@ tags:
   - YG15
   - YG10X
   - Germany
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Case study: granulator rotor knife upgrade for automotive plastic recycling in Germany. From 3 days to 22 days per rotor knife set. Diagnostic, trial, ROI, downstream impact on screen wear.'
   canonical: 'https://custommachineknives.com/blog/case-studies/case-study-granulator-rotor-automotive/'
@@ -174,10 +174,10 @@ If you have a granulator line and the knives are wearing too fast:
 7. **Specify the bolting.** Torque wrench, calibrated, specific value.
 8. **Specify the rotation.** Measured schedule, not visual.
 
-For a written granulator audit on your line, send the substrate, the throughput, the rotor speed, the current knife spec and the current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). A typical audit takes 1 day on site, returns a written diagnosis and a trial protocol, and ships the trial knives within 3 weeks. ROI is typically inside 6 months on lines with > €50k/year knife spend.
+For a written granulator audit on your line, send the substrate, the throughput, the rotor speed, the current knife spec and the current service life to [info@custommachineknives.com](mailto:info@custommachineknives.com) or use the [request-a-quote form](/contact). A typical audit takes 1 day on site, returns a written diagnosis and a trial protocol, and ships the trial knives within 3 weeks. ROI is typically inside 6 months on lines with > €50k/year knife spend.
 
-For the broader granulator selection guidance, see [How to choose a granulator knife](/blog/selection-guide/selection-guide-granulator-knife/) and the granulator section in [The Industrial Knives 5-Factor Blade Selection Framework](/blog/engineering/5-factor-blade-selection-framework/).
+For the broader granulator selection guidance, see [How to choose a granulator knife](/blog/selection-guide/selection-guide-granulator-knife/) and the granulator section in [The Custom Machine Knives 5-Factor Blade Selection Framework](/blog/engineering/5-factor-blade-selection-framework/).
 
 **About the author**
 
-*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. The team ships to converters, recyclers and OEMs across four continents, with active distribution in Germany, Poland, Italy, Turkey, India, Vietnam and Brazil, and a dedicated recycling-industry cell for ASR, WEEE and heavy-contamination applications.*
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. The team ships to converters, recyclers and OEMs across four continents, with active distribution in Germany, Poland, Italy, Turkey, India, Vietnam and Brazil, and a dedicated recycling-industry cell for ASR, WEEE and heavy-contamination applications.*

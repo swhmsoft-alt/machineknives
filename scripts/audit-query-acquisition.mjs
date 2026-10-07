@@ -2,7 +2,7 @@
 /**
  * audit-query-acquisition.mjs
  * ---------------------------------------------------------------
- * V1.0 audit script for KAIPU Query Acquisition System.
+ * V1.0 audit script for Custom Machine Knives Query Acquisition System.
  *
  * Checks:
  *   1. YAML files are well-formed (loaded via js-yaml).

@@ -117,6 +117,10 @@ export function splitSlug(slug: string | undefined): string[] {
  * for it (i.e. level 2 / level 3 subcategories defined only by products).
  */
 export function humanizeSlugSegment(segment: string): string {
+  // Special-case: the "industrial-knives" tag is a product category descriptor,
+  // not the brand name. Lower-case it so display stays consistent with the
+  // brand-stripped brand policy (config.yaml site.name = "Custom Machine Knives").
+  if (segment === 'industrial-knives') return 'industrial knives';
   return segment
     .split('-')
     .map((part) => (part.length === 0 ? part : part[0].toUpperCase() + part.slice(1)))

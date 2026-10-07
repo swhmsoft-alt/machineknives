@@ -7,7 +7,7 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'wedge angle'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Definition of wedge angle in industrial cutting: the included angle between the front and back faces of a cutting edge, and how it balances edge sharpness against edge strength.'
   canonical: 'https://custommachineknives.com/blog/glossary/glossary-wedge-angle/'

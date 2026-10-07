@@ -13,7 +13,7 @@ tags:
   - corrosion resistant
   - food contact blade
   - UNS S44004
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Martensitic stainless selection guide — AISI 420, 440A, 440B, 440C, 17-4 PH. Compare corrosion resistance, hardness and toughness for food-contact and corrosion-resistant industrial blades.'
   canonical: 'https://custommachineknives.com/blog/selection-guide/pillar-martensitic-stainless/'

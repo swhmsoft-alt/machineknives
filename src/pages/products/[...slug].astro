@@ -231,8 +231,8 @@ if (productEntry) {
           headline: entry.data.title,
           description: entry.data.excerpt ?? undefined,
           dateModified: statSync(entry.filePath ?? '').mtime.toISOString(),
-          author: { name: 'Industrial Knives Engineering', url: SITE_URL + '/about/' },
-          publisher: { name: 'Industrial Knives' },
+          author: { name: 'Custom Machine Knives Engineering', url: SITE_URL + '/about/' },
+          publisher: { name: 'Custom Machine Knives' },
           url: productUrl,
           about: {
             '@type': 'Product',
@@ -269,7 +269,7 @@ if (productEntry) {
 ---
 
 {props.kind === 'category' && categoryLevel1 ? (
-  <Layout metadata={{ title: `${categoryPageTitle} — Industrial Knives`, description: categoryPageSubtitle }} breadcrumb={categoryBreadcrumb}>
+  <Layout metadata={{ title: `${categoryPageTitle} — Custom Machine Knives`, description: categoryPageSubtitle }} breadcrumb={categoryBreadcrumb}>
   <Hero
     tagline={categoryPageTagline}
     title={`${categoryPageTitle} for Industrial Cutting`}
@@ -354,7 +354,7 @@ if (productEntry) {
   </CallToAction>
   </Layout>
 ) : props.kind === 'product' && productEntry && Content ? (
-  <Layout metadata={{ title: `${productEntry.data.title} — Industrial Knives`, description: appendCtaIfMissing(productEntry.data.excerpt ?? '') }} breadcrumb={productBreadcrumb}>
+  <Layout metadata={{ title: `${productEntry.data.title} — Custom Machine Knives`, description: appendCtaIfMissing(productEntry.data.excerpt ?? '') }} breadcrumb={productBreadcrumb}>
     <Hero
       tagline={getCategoryMeta(productEntry.data.category).label}
       title={productEntry.data.title}

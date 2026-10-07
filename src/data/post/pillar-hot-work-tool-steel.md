@@ -12,7 +12,7 @@ tags:
   - hot shear
   - thermal fatigue
   - JIS SKD61
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Hot-work tool steel selection guide — AISI H11, H13, GB 6CrW2Si. Compare hot hardness, thermal fatigue resistance and selection for die casting, hot shear blades and extrusion tooling.'
   canonical: 'https://custommachineknives.com/blog/selection-guide/pillar-hot-work-tool-steel/'

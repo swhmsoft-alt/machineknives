@@ -14,7 +14,7 @@ tags:
   - Poland
   - D2 tool steel
   - M2 high speed steel
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Field case study: high-precision circular blades for 12 µm BOPP film at a Polish converter. From 4 knives/week to 1 knife every 6 weeks — diagnostic, trial, and result.'
   canonical: 'https://custommachineknives.com/blog/case-studies/case-study-circular-blades-poland/'
@@ -157,8 +157,8 @@ If your line is running knives more often than the steel grade would suggest, yo
 
 ## Want us to audit your line?
 
-For a written field audit on a thin-film slitting line, send the substrate, the line speed, the current knife spec and the current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). A typical audit takes 1–2 days on site, returns a written diagnosis and a trial protocol, and ships the trial knives within 3 weeks. ROI is typically inside 6 months on lines with > €50k/year knife spend.
+For a written field audit on a thin-film slitting line, send the substrate, the line speed, the current knife spec and the current service life to [info@custommachineknives.com](mailto:info@custommachineknives.com) or use the [request-a-quote form](/contact). A typical audit takes 1–2 days on site, returns a written diagnosis and a trial protocol, and ships the trial knives within 3 weeks. ROI is typically inside 6 months on lines with > €50k/year knife spend.
 
 **About the author**
 
-*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. The team ships to converters, recyclers and OEMs across four continents, with active distribution in Poland, Germany, Italy, Turkey, India, Vietnam and Brazil.*
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. The team ships to converters, recyclers and OEMs across four continents, with active distribution in Poland, Germany, Italy, Turkey, India, Vietnam and Brazil.*

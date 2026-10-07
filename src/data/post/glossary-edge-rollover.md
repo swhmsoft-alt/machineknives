@@ -7,7 +7,7 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'edge rollover'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Definition of edge rollover in industrial cutting: deformation of the edge where the substrate pushes the steel over instead of cutting it, common on a too-soft knife or a too-sharp edge.'
   canonical: 'https://custommachineknives.com/blog/glossary/glossary-edge-rollover/'

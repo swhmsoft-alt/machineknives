@@ -7,7 +7,7 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'TiCN coating'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Definition of TiCN (Titanium Carbonitride) PVD coating for industrial blades: a harder and more wear-resistant variant of TiN, ideal for abrasive substrates.'
   canonical: 'https://custommachineknives.com/blog/glossary/glossary-ticn-coating/'

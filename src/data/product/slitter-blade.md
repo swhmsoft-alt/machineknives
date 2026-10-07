@@ -14,7 +14,7 @@ applications:
 image: '/images/products/product-detail.webp'
 draft: false
 metadata:
-  title: 'Circular Slitting Blade Ø250 mm OD | Industrial Knives'
+  title: 'Circular Slitting Blade Ø250 mm OD | Custom Machine Knives'
   description: 'D2 circular slitting knife for paper and film converting lines. 250 mm OD, HRC 58±2, optional TiN coating. ISO 9001:2015 mill certificate, CMM inspection report.'
 ---
 

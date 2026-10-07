@@ -113,6 +113,6 @@ export const footerData = {
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
   footNote: `
-    Industrial Knives · Manufacturer of precision machine knives for industrial converting, packaging and processing lines.
+    Custom Machine Knives · Manufacturer of precision machine knives for industrial converting, packaging and processing lines.
   `,
 };

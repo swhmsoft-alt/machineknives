@@ -5,7 +5,7 @@
  * Enforces the audit recommendations (v1 + v2):
  *   ERRORS (CI-blocking):
  *     - description / excerpt length: 80 ≤ len ≤ 160
- *     - canonical uses https://www.industrial-knives.net (not legacy domain)
+ *     - canonical uses https://www.custommachineknives.com (not legacy domain)
  *     - UTF-8 BOM in product frontmatter (v2 audit V2-P1c fix regression guard)
  *
  *   WARNINGS (informational, surfaced in PR review):
@@ -87,7 +87,7 @@ for (const f of postFiles) {
 
   // Title length (50-60 char target after brand suffix append).
   if (fm.title) {
-    const fullTitleLen = fm.title.length + ' \u2014 Industrial Knives'.length;
+    const fullTitleLen = fm.title.length + ' \u2014 Custom Machine Knives'.length;
     if (fullTitleLen < 50 || fullTitleLen > 60) {
       warnings.push(`${f}: title length ${fullTitleLen} outside [50,60] (raw title ${fm.title.length} chars)`);
     }
@@ -100,7 +100,7 @@ for (const f of postFiles) {
     //   ': Lower to'  — colon + dangling preposition
     //   'Hot-Work' / 'Cold-Work' / 'High-Speed'
     //     — missing trailing 'Tool Steel' or 'Steel'
-    //   'The Industrial Knives ...'  — over-name prefix
+    //   'The Custom Machine Knives ...'  — over-name prefix
     //     that masks a mid-phrase break
     const TRUNC_TITLE_PATTERNS = [
       /^.+:\s+[A-Z][a-z]{1,4}$/,        // colon + 3-5 letter capitalised fragment
@@ -108,7 +108,7 @@ for (const f of postFiles) {
       /\bHot-Work$/i,
       /\bCold-Work$/i,
       /\bHigh-Speed$/,
-      /^The Industrial Knives\b/,        // over-name prefix
+      /^The Custom Machine Knives\b/,        // over-name prefix
     ];
     for (const re of TRUNC_TITLE_PATTERNS) {
       if (re.test(fm.title)) {
@@ -148,7 +148,7 @@ for (const f of productFiles) {
   const fm = parseFrontmatter(raw);
   if (!fm) continue;
   if (fm.title) {
-    const fullTitleLen = fm.title.length + ' \u2014 Industrial Knives'.length;
+    const fullTitleLen = fm.title.length + ' \u2014 Custom Machine Knives'.length;
     if (fullTitleLen < 50 || fullTitleLen > 60) {
       warnings.push(`${f}: title length ${fullTitleLen} outside [50,60] (raw title ${fm.title.length} chars)`);
     }

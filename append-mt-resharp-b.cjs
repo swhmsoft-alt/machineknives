@@ -30,11 +30,11 @@ For a re-sharpening service:
 
 For the broader maintenance framework, see [Maintenance: how to extend slitter life](/maintenance-slitting-blade-life/). For a runnable coating comparison, see [Coating Comparison Table](/coatings-comparison/).
 
-For a written re-sharpening specification for your line, send the knife drawing, the current service life, the current re-grind cost and the current reject rate to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Specification, partner-shop recommendation and indicative cost within one business day.
+For a written re-sharpening specification for your line, send the knife drawing, the current service life, the current re-grind cost and the current reject rate to [[email protected]](mailto:[email protected]) or use the [request-a-quote form](/contact). Specification, partner-shop recommendation and indicative cost within one business day.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. Runs an in-house re-grind cell as a value-added service for the European market, with 5-day standard turnaround and 1 % measured reject rate.*
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. Runs an in-house re-grind cell as a value-added service for the European market, with 5-day standard turnaround and 1 % measured reject rate.*
 `;
 fs.appendFileSync(target, content, 'utf8');
 console.log('Appended: ' + Buffer.byteLength(content, 'utf8') + ' bytes');

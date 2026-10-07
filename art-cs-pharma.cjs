@@ -98,9 +98,9 @@ The customer was previously buying generic D2 with no traceability. The switch b
 
 If your line uses D2 in a washdown, the failure mode is corrosion, not wear. Move to stainless.
 
-For a written field audit on a pharma or medical-device cutting line, send the substrate, line speed, current blade spec, washdown chemistry and current service life to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). ROI is typically inside 6 months on lines with > USD 30k/year knife spend.
+For a written field audit on a pharma or medical-device cutting line, send the substrate, line speed, current blade spec, washdown chemistry and current service life to [[email protected]](mailto:[email protected]) or use the [request-a-quote form](/contact). ROI is typically inside 6 months on lines with > USD 30k/year knife spend.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. Mill certificates, FDA declarations and EU 1935/2004 compliance are standard.*`
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. Mill certificates, FDA declarations and EU 1935/2004 compliance are standard.*`
 };

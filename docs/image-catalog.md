@@ -60,5 +60,5 @@ If you changed the file extension, also update the matching `.astro` `const hero
 
 These predate the naming convention. Out of scope for this catalog:
 
-- `/homepage/kaipu-precision-industrial-blade-manufacturing.png` (landing hero)
+- `/homepage/precision-industrial-blade-manufacturing.png` (landing hero)
 - `/homepage/placeholder.svg` (4 case-study cards)

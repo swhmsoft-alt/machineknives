@@ -7,7 +7,7 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'spark out'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Definition of spark-out in industrial blade grinding: the final pass at zero infeed that removes residual stress and produces a stable surface finish.'
   canonical: 'https://custommachineknives.com/blog/glossary/glossary-spark-out/'

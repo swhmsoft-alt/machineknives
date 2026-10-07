@@ -86,9 +86,9 @@ The savings are dominated by the elimination of cleaning downtime. Even a 10 % r
 
 If your aluminium line requires blade cleaning more than once per shift, the answer is a low-friction coating, not a harder knife or a sharper hone.
 
-For a written field audit on an aluminium foil slitter, send the substrate thickness, line speed, current blade spec, current service life and the cleaning frequency to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). ROI is typically inside 6 months on lines with > USD 50k/year knife spend.
+For a written field audit on an aluminium foil slitter, send the substrate thickness, line speed, current blade spec, current service life and the cleaning frequency to [[email protected]](mailto:[email protected]) or use the [request-a-quote form](/contact). ROI is typically inside 6 months on lines with > USD 50k/year knife spend.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. In-house PVD coating line for TiN, TiCN, CrN, AlCrN, TiAlN, DLC and ta-C.*`
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. In-house PVD coating line for TiN, TiCN, CrN, AlCrN, TiAlN, DLC and ta-C.*`
 };

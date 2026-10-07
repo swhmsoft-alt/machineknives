@@ -87,9 +87,9 @@ The savings are real but not dramatic because the line was already operating wit
 
 If your non-woven line is wearing D2 knives faster than 10 days, the answer is usually a coating, not a harder steel.
 
-For a written field audit on a non-woven slitter, send the substrate (gsm, polymer, filler content), line speed, current blade spec and current service life to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). ROI is typically inside 12 months on lines with > EUR 30k/year knife spend.
+For a written field audit on a non-woven slitter, send the substrate (gsm, polymer, filler content), line speed, current blade spec and current service life to [[email protected]](mailto:[email protected]) or use the [request-a-quote form](/contact). ROI is typically inside 12 months on lines with > EUR 30k/year knife spend.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. Ships to non-woven, hygiene and medical-textile manufacturers across four continents.*`
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. Ships to non-woven, hygiene and medical-textile manufacturers across four continents.*`
 };

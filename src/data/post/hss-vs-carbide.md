@@ -13,14 +13,14 @@ tags:
   - YG6X
   - blade material selection
   - industrial knives
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
-  description: 'HSS vs carbide for industrial blades: hardness (HRC 62–67 vs HRA 89–92), toughness, cost-per-edge, edge retention and substrate fit. Side-by-side comparison with selection guidance from Industrial Knives engineering.'
+  description: 'HSS vs carbide for industrial blades: hardness (HRC 62–67 vs HRA 89–92), toughness, cost-per-edge, edge retention and substrate fit. Side-by-side comparison with selection guidance from Custom Machine Knives engineering.'
   canonical: 'https://custommachineknives.com/blog/material-comparison/hss-vs-carbide/'
 image: '/images/og/hss-vs-carbide.webp'
 ---
 
-If you have ever asked a blade supplier "HSS or carbide?" and received a one-line answer, you have been mis-served. The honest answer is a five-question decision: what are you cutting, how fast, what does failure look like, what is your change-over budget, and what is the knife worth to your line? This post walks through the material science, the cost maths and the field cases we use at Industrial Knives to make that call — including the three situations where the "carbide is always better" answer is plain wrong.
+If you have ever asked a blade supplier "HSS or carbide?" and received a one-line answer, you have been mis-served. The honest answer is a five-question decision: what are you cutting, how fast, what does failure look like, what is your change-over budget, and what is the knife worth to your line? This post walks through the material science, the cost maths and the field cases we use at Custom Machine Knives to make that call — including the three situations where the "carbide is always better" answer is plain wrong.
 
 > **One-line summary:** *Carbide wins on wear life; HSS wins on impact resistance, regrindability and unit cost. The right answer depends on your substrate, your line speed and how brittle your rig is.*
 
@@ -123,13 +123,13 @@ We see four:
 
 ---
 
-## How Industrial Knives specifies the material
+## How Custom Machine Knives specifies the material
 
-For every RFQ we receive, the sales engineer runs the same five-factor check (substrate, geometry, hardness target, edge prep, operating speed) before quoting a steel grade. The output is a material recommendation, not a part number. For a copy of the framework and worked examples, see [The Industrial Knives 5-Factor Blade Selection Framework](/blog/engineering/5-factor-blade-selection-framework/).
+For every RFQ we receive, the sales engineer runs the same five-factor check (substrate, geometry, hardness target, edge prep, operating speed) before quoting a steel grade. The output is a material recommendation, not a part number. For a copy of the framework and worked examples, see [The Custom Machine Knives 5-Factor Blade Selection Framework](/blog/engineering/5-factor-blade-selection-framework/).
 
-If you want help choosing between HSS and carbide for a specific line, send the substrate, line speed, current blade grade and service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). We will respond with a written specification within one business day, including the expected service life, re-grind cost and total cost per metre cut.
+If you want help choosing between HSS and carbide for a specific line, send the substrate, line speed, current blade grade and service life to [info@custommachineknives.com](mailto:info@custommachineknives.com) or use the [request-a-quote form](/contact). We will respond with a written specification within one business day, including the expected service life, re-grind cost and total cost per metre cut.
 
 **About the author**
 
-*Industrial Knives Engineering is the technical team at Industrial Knives, a precision machine knife manufacturer in operation since 1998. ISO 9001:2015 certified. The team ships to converters, recyclers and OEMs across four continents.*
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, a precision machine knife manufacturer in operation since 1998. ISO 9001:2015 certified. The team ships to converters, recyclers and OEMs across four continents.*
 

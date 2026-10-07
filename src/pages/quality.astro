@@ -18,10 +18,10 @@ import { faqs } from '~/data/quality-faqs';
 const metadata = {
   title: 'Quality & Certifications —ISO 9001:2015, CMM Inspection, EN 10204 3.1',
   description:
-    'Industrial Knives quality system: ISO 9001:2015 since 2001, 5-stage quality gate, HEXAGON Global S CMM, hardness mapping per Rockwell C, EN 10204 3.1 mill certificates, PPAP / ISIR on request, Cpk ≥ 1.33 audited quarterly.',
+    'Custom Machine Knives quality system: ISO 9001:2015 since 2001, 5-stage quality gate, HEXAGON Global S CMM, hardness mapping per Rockwell C, EN 10204 3.1 mill certificates, PPAP / ISIR on request, Cpk ≥ 1.33 audited quarterly.',
 };
 
-const heroImage = { src: "/images/quality/cmm-inspection-lab.webp", alt: "Industrial Knives CMM inspection lab and quality documentation" };
+const heroImage = { src: "/images/quality/cmm-inspection-lab.webp", alt: "Custom Machine Knives CMM inspection lab and quality documentation" };
 
 const inspectionLabImage = { src: "/images/quality/instrument-overview.svg", alt: "Inspection lab —CMM, optical comparator, hardness tester" };
 
@@ -173,15 +173,15 @@ const comparisonRows = [
 const articleLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Quality & Certifications at Industrial Knives',
+  headline: 'Quality & Certifications at Custom Machine Knives',
   description: metadata.description,
   datePublished: publishedDate,
   dateModified: lastUpdated,
   inLanguage: 'en',
-  author: { '@type': 'Organization', name: 'Industrial Knives', url: siteUrl + '/' },
+  author: { '@type': 'Organization', name: 'Custom Machine Knives', url: siteUrl + '/' },
   publisher: {
     '@type': 'Organization',
-    name: 'Industrial Knives',
+    name: 'Custom Machine Knives',
     logo: { '@type': 'ImageObject', url: siteUrl + '/assets/images/default.png' },
   },
   mainEntityOfPage: { '@type': 'WebPage', '@id': siteUrl + '/quality/' },
@@ -200,7 +200,7 @@ const serviceLd = {
   serviceType: 'ISO 9001:2015 quality assurance for industrial blades',
   provider: {
     '@type': 'Organization',
-    name: 'Industrial Knives',
+    name: 'Custom Machine Knives',
     url: siteUrl + '/',
     foundingDate: '1998',
     knowsAbout: [
@@ -223,7 +223,7 @@ const serviceLd = {
 const howToLd = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
-  name: 'How Industrial Knives inspects and releases a finished industrial blade',
+  name: 'How Custom Machine Knives inspects and releases a finished industrial blade',
   description:
     'Five-stage quality gate under ISO 9001:2015 §8.5, from incoming steel inspection (IQC) to final CMM (FQC) and shipment documentation (OQC).',
   totalTime: 'P6W',
@@ -262,7 +262,7 @@ const faqLd = {
   <Hero
     tagline="Quality & Certifications"
     title="Built on Documentation, Not Hope"
-    subtitle="Industrial Knives has run an ISO 9001:2015 quality system since 2001. Every blade we ship carries a documented chain from incoming steel to your dock —CMM report, mill certificate, hardness mapping and Cpk study on request."
+    subtitle="Custom Machine Knives has run an ISO 9001:2015 quality system since 2001. Every blade we ship carries a documented chain from incoming steel to your dock —CMM report, mill certificate, hardness mapping and Cpk study on request."
     actions={[
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:clipboard-text' },
       { text: 'View Services', href: '/services' },
@@ -309,7 +309,7 @@ const faqLd = {
     subtitle="Every quote, every certificate and every inspection report maps to one of these published standards. We do not invent our own specification language."
     content={`
       <p>
-        Six published standards define how Industrial Knives specifies, inspects and certifies every blade. They are referenced on every quote and on every dispatch note —not as marketing language but as the actual numbers behind every claim.
+        Six published standards define how Custom Machine Knives specifies, inspects and certifies every blade. They are referenced on every quote and on every dispatch note —not as marketing language but as the actual numbers behind every claim.
       </p>
       <p class="mt-4">
         Material grades cross-reference ASTM, DIN, JIS, GB and other national bodies. Surface finish and dimensional tolerances cite ISO 4287 / ISO 1101. Hardness testing follows ISO 6508. EN 10204 3.1 mill certificates ship with every production batch.
@@ -403,7 +403,7 @@ const faqLd = {
     <div class="mx-auto max-w-6xl">
       <div class="mb-8 text-center">
         <p class="text-sm font-semibold uppercase tracking-wide text-primary">Comparison</p>
-        <h2 class="mb-2 text-3xl font-bold md:text-4xl">Industrial Knives QA vs Typical Job Shop</h2>
+        <h2 class="mb-2 text-3xl font-bold md:text-4xl">Custom Machine Knives QA vs Typical Job Shop</h2>
         <p class="mx-auto max-w-3xl text-base md:text-lg">
           How our quality system compares to a typical CNC job shop. The differences show up in the paperwork that
           travels with every shipment.
@@ -414,7 +414,7 @@ const faqLd = {
           <thead class="bg-slate-50 text-slate-700 dark:bg-slate-800 dark:text-slate-200">
             <tr>
               <th class="px-4 py-3">KPI</th>
-              <th class="px-4 py-3">Industrial Knives</th>
+              <th class="px-4 py-3">Custom Machine Knives</th>
               <th class="px-4 py-3">Typical Job Shop</th>
             </tr>
           </thead>

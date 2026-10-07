@@ -119,11 +119,11 @@ If steps 1–5 all pass, the answer is one of:
 - **Knife design.** A knife that is too thin or has too aggressive a rake.
 - **Coating wear.** A worn PVD coating on a substrate that needed the coating.
 
-For a written burr growth diagnosis, send the worn knife, the line log, and the substrate batch records to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Diagnosis within 24 hours.
+For a written burr growth diagnosis, send the worn knife, the line log, and the substrate batch records to [[email protected]](mailto:[email protected]) or use the [request-a-quote form](/contact). Diagnosis within 24 hours.
 
 For the broader troubleshooting framework, see [Why is my blade wearing out too fast?](/troubleshooting-premature-wear/) and [Burr (glossary entry)](/glossary/burr/).
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified.*`
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified.*`
 };

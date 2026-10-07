@@ -7,7 +7,7 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'dressing'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Definition of dressing in industrial blade grinding: the process of re-sharpening or re-shaping a grinding wheel to expose fresh abrasive and restore geometry.'
   canonical: 'https://custommachineknives.com/blog/glossary/glossary-dressing/'

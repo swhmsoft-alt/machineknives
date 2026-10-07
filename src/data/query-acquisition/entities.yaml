@@ -1,5 +1,5 @@
 # ============================================================
-# Industrial Knives Entities (V1.0 Seed)
+# Custom Machine Knives Entities (V1.0 Seed)
 # ============================================================
 # 7 个 Entity. ID 与 src/data/facts/*.yaml 的 node.id 严格对齐.
 # 禁止孤儿 query: 每条 query 必须挂载一个 entity_id.
@@ -74,7 +74,7 @@ entities:
   - id: blade-selection-framework
     label: 5-Factor Blade Selection Framework
     type: capability
-    url_slug: /blog/kaipu-5-factor-blade-selection-framework/
+    url_slug: /blog/5-factor-blade-selection-framework/
     industry_segment: [cross_industry]
     primary_materials: [D2, HSS, carbide]
     certifications: [ISO 9001:2015]
@@ -84,7 +84,7 @@ entities:
       - '5 factors choosing machine knife'
       - 'blade material vs substrate'
       - 'machine knife selection guide'
-    notes: 'Derived from src/data/post/kaipu-5-factor-blade-selection-framework.md.'
+    notes: 'Derived from src/data/post/5-factor-blade-selection-framework.md.'
 
   # --- 6: Industrial Knife Supplier (Generic / Cross-product) ---
   - id: industrial-knife-supplier

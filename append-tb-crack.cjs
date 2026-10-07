@@ -39,13 +39,13 @@ If visual, chamfer, hardness, gap and plate checks all pass, and the knife is st
 - **Knife has been damaged in storage.** Drop, dent, or impact in the tool crib. Inspect every knife on receipt.
 - **Shear frame is misaligned.** The upper or lower blade rail is bent. Check with a dial indicator across the full frame.
 
-For a written diagnosis on a cracked shear blade, send the cracked blade, the line log, the plate batch records and the blade gap measurement to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Diagnosis within 24 hours, replacement blade within 3 weeks.
+For a written diagnosis on a cracked shear blade, send the cracked blade, the line log, the plate batch records and the blade gap measurement to [[email protected]](mailto:[email protected]) or use the [request-a-quote form](/contact). Diagnosis within 24 hours, replacement blade within 3 weeks.
 
 For the broader shear blade selection guidance, see [How to choose a shear blade for plate steel](/selection-guide-shear-blade-plate-steel/) and [Troubleshooting: why is my blade wearing out too fast?](/troubleshooting-premature-wear/).
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents, with a dedicated shear-blade cell for hot-rolling-mill and service-centre customers.*
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents, with a dedicated shear-blade cell for hot-rolling-mill and service-centre customers.*
 `;
 fs.appendFileSync(target, content, 'utf8');
 console.log('Appended: ' + Buffer.byteLength(content, 'utf8') + ' bytes');

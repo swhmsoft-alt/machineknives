@@ -9,7 +9,7 @@
 #
 # ─────────────────────────────────────────────────────────────────────────────
 
-# title: REQUIRED. Raw text only — brand suffix " — Industrial Knives" is
+# title: REQUIRED. Raw text only — brand suffix " — Custom Machine Knives" is
 #         appended automatically by Metadata.astro. Aim for 30–40 chars raw
 #         so total (raw + 20) lands in the SERP-safe [50, 60] window.
 title: 'New Post Title — Short Keyword Phrase'
@@ -43,8 +43,8 @@ tags:
   - 'blade selection'
   - 'material grade'
 
-# author: optional. Defaults to 'Industrial Knives Engineering'.
-author: 'Industrial Knives Engineering'
+# author: optional. Defaults to 'Custom Machine Knives Engineering'.
+author: 'Custom Machine Knives Engineering'
 
 # image: REQUIRED. Auto-populated by scripts/og-image-generator.mjs with the
 #         absolute path to /images/og/<slug>.webp. Leave blank on creation;
@@ -59,7 +59,7 @@ author: 'Industrial Knives Engineering'
 #           absolute URL (no trailing slash). Tags get joined into keywords.
 metadata:
   description: 'Plain-language summary of the article. Mention the main application, the key spec or comparison axis, and the reader takeaway. Aim for 120–160 characters.'
-  canonical: 'https://www.industrial-knives.net/<category>/<slug>/'
+  canonical: 'https://www.custommachineknives.com/<category>/<slug>/'
 ---
 
 # Article body — Markdown only. Start with H1, then H2/H3 subheads.

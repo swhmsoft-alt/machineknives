@@ -15,9 +15,9 @@ tags:
   - ISO 513
   - industrial knives
   - granulator knives
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
-  description: 'YG6X vs YG8 cemented tungsten carbide for industrial machine knives. Cobalt content, hardness, toughness, wear resistance, ISO 513 classification, substrate fit. Side-by-side comparison from Industrial Knives engineering.'
+  description: 'YG6X vs YG8 cemented tungsten carbide for industrial machine knives. Cobalt content, hardness, toughness, wear resistance, ISO 513 classification, substrate fit. Side-by-side comparison from Custom Machine Knives engineering.'
   canonical: 'https://custommachineknives.com/blog/material-comparison/yg6x-vs-yg8-carbide/'
 image: '/images/og/yg6x-vs-yg8-carbide.webp'
 ---
@@ -152,10 +152,10 @@ On a clean film line, YG6X is cheaper per hour. On a contaminated line where YG8
 
 For an industrial machine knife, pick the carbide grade by impact, not by substrate. If the line is clean (paper, film, foil, neat polymer), YG6X. If the line has any contamination risk (recycling, granulator, metalwork), start at YG8 and move up. The wear difference is 20 %; the impact difference is 2×. Get the impact right first, then optimise wear.
 
-For a copy of the full five-factor selection method, see [The Industrial Knives 5-Factor Blade Selection Framework](/blog/engineering/5-factor-blade-selection-framework/). For a coating comparison to extend carbide life further, see [Coating Comparison Table](/blog/coatings-comparison/coatings-comparison/). For a runnable carbide grade cross-reference, see [Material Grade Converter](/blog/material-grade-converter/material-grade-converter/).
+For a copy of the full five-factor selection method, see [The Custom Machine Knives 5-Factor Blade Selection Framework](/blog/engineering/5-factor-blade-selection-framework/). For a coating comparison to extend carbide life further, see [Coating Comparison Table](/blog/coatings-comparison/coatings-comparison/). For a runnable carbide grade cross-reference, see [Material Grade Converter](/blog/material-grade-converter/material-grade-converter/).
 
-For a written YG6X / YG8 quotation, send the part drawing, the substrate and the impact profile to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
+For a written YG6X / YG8 quotation, send the part drawing, the substrate and the impact profile to [info@custommachineknives.com](mailto:info@custommachineknives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 
 **About the author**
 
-*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.*
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.*

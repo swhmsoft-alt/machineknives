@@ -14,14 +14,14 @@ tags:
   - shear blades
   - slitter blades
   - blade material selection
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'How to choose an industrial machine knife for cutting stainless steel. Substrate family, steel grade, hardness target, edge prep, and operating speed — with grade recommendations for 304, 316, 430 and 17-4PH.'
   canonical: 'https://custommachineknives.com/blog/selection-guide/selection-guide-stainless-steel/'
 image: '/images/og/selection-guide-stainless-steel.webp'
 ---
 
-Stainless steel is the worst-case substrate for an industrial blade: it work-hardens at the cut, the austenitic grades gall to the tool, and the wrong blade grade loses its edge in a single shift. The good news is that the selection is a five-question decision, and once you have answered them you can write a specification that any competent supplier can quote. This guide walks through the five questions, the substrate-by-substrate grade map, and the field cases we have on file from the Industrial Knives shop.
+Stainless steel is the worst-case substrate for an industrial blade: it work-hardens at the cut, the austenitic grades gall to the tool, and the wrong blade grade loses its edge in a single shift. The good news is that the selection is a five-question decision, and once you have answered them you can write a specification that any competent supplier can quote. This guide walks through the five questions, the substrate-by-substrate grade map, and the field cases we have on file from the Custom Machine Knives shop.
 
 > **One-line summary:** *Stainless is a work-hardening substrate — match the blade steel to the austenite vs ferritic vs martensitic family, set the hardness target to HRC 60–62 for austenitic and 58–60 for ferritic, and hone the edge to a 0.05–0.10 mm radius. Skip the HSS vs D2 debate — for stainless plate shearing, you want a carbide shear or an M2 HSS at HRC 64.*
 
@@ -35,7 +35,7 @@ Stainless steel is the worst-case substrate for an industrial blade: it work-har
 4. **Line speed and edge temperature?** < 100 m/min is cold-cutting; 100–500 m/min is warm; > 500 m/min is hot. Hot cuts demand HSS or carbide.
 5. **Failure mode and tolerance?** Burr target, edge chipping tolerance, finish quality.
 
-If you can answer those five, the grade drops out. Below is the substrate-by-substrate map we use at Industrial Knives when an RFQ arrives with a stainless-steel substrate.
+If you can answer those five, the grade drops out. Below is the substrate-by-substrate map we use at Custom Machine Knives when an RFQ arrives with a stainless-steel substrate.
 
 ---
 
@@ -114,7 +114,7 @@ If your line has no cooling, derate the speed by 20 % or move up a hardness grad
 
 ---
 
-## Field cases from the Industrial Knives shop
+## Field cases from the Custom Machine Knives shop
 
 **Case 1: 304 strip slitter, 0.4 mm, 250 m/min, food-grade.** Customer used a "D2 knife, sharpened to razor edge" from another supplier. Edge rollover after 2 hours; burr 80 µm. We quoted M2 HSS at HRC 64, 5 µm hone, 30° clearance angle. Service life: 14 days. Burr: 18 µm. Cost per metre cut dropped 60 %.
 
@@ -143,10 +143,10 @@ For a stainless-cutting industrial blade, the spec should read:
 
 This phrasing locks the critical variables and leaves the supplier enough freedom to recommend an upgrade if needed.
 
-For a copy of the broader five-factor selection framework, see [The Industrial Knives 5-Factor Blade Selection Framework](/blog/engineering/5-factor-blade-selection-framework/). For a runnable cross-reference of the steel grades referenced here, see [Material Grade Converter](/blog/material-grade-converter/material-grade-converter/). For a head-to-head comparison of M2 vs M4 HSS, see [M2 vs M4 HSS](/blog/material-comparison/m2-vs-m4-hss/). For HSS vs carbide selection, see [HSS vs Carbide](/blog/material-comparison/hss-vs-carbide/).
+For a copy of the broader five-factor selection framework, see [The Custom Machine Knives 5-Factor Blade Selection Framework](/blog/engineering/5-factor-blade-selection-framework/). For a runnable cross-reference of the steel grades referenced here, see [Material Grade Converter](/blog/material-grade-converter/material-grade-converter/). For a head-to-head comparison of M2 vs M4 HSS, see [M2 vs M4 HSS](/blog/material-comparison/m2-vs-m4-hss/). For HSS vs carbide selection, see [HSS vs Carbide](/blog/material-comparison/hss-vs-carbide/).
 
-For a written stainless-cutting specification, send the part drawing, the substrate, the thickness and the line speed to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
+For a written stainless-cutting specification, send the part drawing, the substrate, the thickness and the line speed to [info@custommachineknives.com](mailto:info@custommachineknives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 
 **About the author**
 
-*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.

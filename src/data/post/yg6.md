@@ -10,7 +10,7 @@ tags:
   - 'cold work tool steel'
   - 'tool steel'
   - 'industrial knife'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'GB YG6 (GB/T 30892, ISO K20) — 6 % Co coarse-grain tungsten carbide, HRA 91–92. Compare with YG10 and YG15 for granulator and wear parts.'
   canonical: 'https://custommachineknives.com/blog/materials-encyclopedia/yg6/'

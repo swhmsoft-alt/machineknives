@@ -10,7 +10,7 @@ tags:
   - micro-hone
   - edge radius
   - edge prep
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Industrial blade hone / micro-hone — definition, the substrate-by-substrate range, the relationship to coating thickness and burr, and how to set hone on slitter and shear blades.'
   canonical: 'https://custommachineknives.com/blog/glossary/glossary-hone/'

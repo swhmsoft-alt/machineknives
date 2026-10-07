@@ -7,7 +7,7 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'point angle'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Definition of point angle in industrial cutting: the included angle at the tip of a drill bit, rarely used in slitter and shear blade specification.'
   canonical: 'https://custommachineknives.com/blog/glossary/glossary-point-angle/'

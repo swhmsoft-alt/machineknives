@@ -53,11 +53,11 @@ For a preventive maintenance SOP:
 
 For the broader re-grind SOP, see [Maintenance: how to extend slitter life](/maintenance-slitting-blade-life/). For the re-sharpening service article, see [Re-sharpening service: how to outsource](/maintenance-resharpening-service/).
 
-For a written PM schedule for your line, send the line layout, the current knife consumption, the current downtime and the current scrap rate to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Specification, template forms, and a quarterly audit protocol within one business day.
+For a written PM schedule for your line, send the line layout, the current knife consumption, the current downtime and the current scrap rate to [[email protected]](mailto:[email protected]) or use the [request-a-quote form](/contact). Specification, template forms, and a quarterly audit protocol within one business day.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. Provides PM schedule templates as a value-added service for customers who buy a 12-knife annual volume.*
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. Provides PM schedule templates as a value-added service for customers who buy a 12-knife annual volume.*
 `;
 fs.appendFileSync(target, content, 'utf8');
 console.log('Appended: ' + Buffer.byteLength(content, 'utf8') + ' bytes');

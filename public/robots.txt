@@ -1,5 +1,5 @@
 # ─────────────────────────────────────────────────────────────────────
-# robots.txt —KAIPU machine-knives
+# robots.txt — Custom Machine Knives
 # ─────────────────────────────────────────────────────────────────────
 # Policy summary:
 #   • Default behavior for all crawlers: ALLOW everything except

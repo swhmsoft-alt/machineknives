@@ -7,7 +7,7 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'AlCrN coating'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Definition of AlCrN (Aluminium Chromium Nitride) PVD coating for industrial blades: the hardest standard PVD coating, ideal for high-temperature and dry cutting applications.'
   canonical: 'https://custommachineknives.com/blog/glossary/glossary-alcrn-coating/'

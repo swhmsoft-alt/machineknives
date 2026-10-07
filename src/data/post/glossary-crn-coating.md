@@ -7,7 +7,7 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'CrN coating'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Definition of CrN (Chromium Nitride) PVD coating for industrial blades: a corrosion-resistant silver-grey coating, the standard for food-contact and wet applications.'
   canonical: 'https://custommachineknives.com/blog/glossary/glossary-crn-coating/'

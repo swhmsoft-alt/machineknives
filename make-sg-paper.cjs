@@ -15,10 +15,10 @@ tags:
   - D2
   - 'SKD11'
   - M2 HSS
-author: 'KAIPU Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'How to choose a slitting blade for a paper converting line. Substrate GSM and caliper, steel grade by rewind quality, edge prep, clearance and line-side conditions.'
-  canonical: 'https://www.machine-knives.net/selection-guide-paper-converting/'
+  canonical: 'https://www.custommachineknives.com/selection-guide-paper-converting/'
 ---
 
 Paper slitting is the highest-volume industrial knife application in the world, and it is also the application where the wrong steel grade is most often mis-specified. The decision is not "D2 or M2" — it is a four-axis question: substrate GSM and caliper, line speed, burr target, and re-grind cycle. Get those four right and the steel grade follows.

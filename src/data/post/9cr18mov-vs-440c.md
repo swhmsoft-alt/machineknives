@@ -13,9 +13,9 @@ tags:
   - corrosion-resistant knife
   - food processing blade
   - medical blade
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
-  description: '9Cr18MoV vs 440C for industrial stainless machine knives. Chemistry, corrosion resistance, achievable hardness, wear, edge retention. Side-by-side comparison from Industrial Knives engineering.'
+  description: '9Cr18MoV vs 440C for industrial stainless machine knives. Chemistry, corrosion resistance, achievable hardness, wear, edge retention. Side-by-side comparison from Custom Machine Knives engineering.'
   canonical: 'https://custommachineknives.com/blog/material-comparison/9cr18mov-vs-440c/'
 image: '/images/og/9cr18mov-vs-440c.webp'
 ---
@@ -121,10 +121,10 @@ For a corrosion-resistant industrial machine knife, write the spec as:
 
 Lock the sub-zero treatment to mandatory for 440C and recommended for 9Cr18MoV above HRC 58. For food-contact applications, request a declaration of compliance with regional food-safety codes (FDA 21 CFR, EU 1935/2004, GB 4806.1). *[MISSING SPECIFICATION — confirm regulatory version with your QA team]*
 
-For the broader 5-factor selection method, see [The Industrial Knives 5-Factor Blade Selection Framework](/blog/engineering/5-factor-blade-selection-framework/). For a runnable cross-reference table, see [Material Grade Converter](/blog/material-grade-converter/material-grade-converter/). For a runnable cross-reference of stainless blade grades, see 9Cr18MoV entry in the Materials Encyclopedia.
+For the broader 5-factor selection method, see [The Custom Machine Knives 5-Factor Blade Selection Framework](/blog/engineering/5-factor-blade-selection-framework/). For a runnable cross-reference table, see [Material Grade Converter](/blog/material-grade-converter/material-grade-converter/). For a runnable cross-reference of stainless blade grades, see 9Cr18MoV entry in the Materials Encyclopedia.
 
-For a written 9Cr18MoV / 440C quotation, send the part drawing and the food-contact / washdown spec to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
+For a written 9Cr18MoV / 440C quotation, send the part drawing and the food-contact / washdown spec to [info@custommachineknives.com](mailto:info@custommachineknives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 
 **About the author**
 
-*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.*
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.*

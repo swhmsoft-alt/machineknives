@@ -323,9 +323,9 @@ function buildSvg(post) {
 
   <line x1="${PAD_X}" y1="${bottomRuleY}" x2="${W - PAD_X}" y2="${bottomRuleY}" stroke="${COLOR_RULE}" stroke-width="1"/>
   <text x="${PAD_X}" y="${bottomY}" font-family="${FONT_STACK}" font-size="20" font-weight="700"
-        fill="${COLOR_TEXT}" letter-spacing="3">INDUSTRIAL KNIVES</text>
+        fill="${COLOR_TEXT}" letter-spacing="3">CUSTOM MACHINE KNIVES</text>
   <text x="${W - PAD_X}" y="${bottomY}" font-family="${FONT_STACK}" font-size="18" font-weight="500"
-        fill="${COLOR_TEXT_MUTED}" text-anchor="end">industrial-knives.net</text>
+        fill="${COLOR_TEXT_MUTED}" text-anchor="end">custommachineknives.com</text>
 </svg>`;
 }
 

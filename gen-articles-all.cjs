@@ -15,10 +15,10 @@ function buildArticle(e) {
   lines.push("type: 'article'");
   lines.push('tags:');
   lines.push(tagYaml);
-  lines.push("author: 'KAIPU Engineering'");
+  lines.push("author: 'Custom Machine Knives Engineering'");
   lines.push('metadata:');
   lines.push("  description: '" + esc(e.excerpt) + "'");
-  lines.push("  canonical: 'https://www.machine-knives.net/" + e.slug + "/'");
+  lines.push("  canonical: 'https://www.custommachineknives.com/" + e.slug + "/'");
   lines.push('---');
   lines.push('');
   lines.push(e.body);

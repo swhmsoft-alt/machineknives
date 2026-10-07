@@ -14,7 +14,7 @@ tags:
   - hot hardness
   - powder metallurgy
   - slitter blade
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'High-speed steel selection guide — AISI M-series, T-series and PM grades (ASP 2060). Compare hot hardness, wear life and selection for high-speed and high-temperature industrial blades.'
   canonical: 'https://custommachineknives.com/blog/selection-guide/pillar-high-speed-steel/'

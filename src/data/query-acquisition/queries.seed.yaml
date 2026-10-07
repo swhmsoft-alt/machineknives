@@ -1,5 +1,5 @@
 # ============================================================
-# Industrial Knives Query Seed (V1.0)
+# Custom Machine Knives Query Seed (V1.0)
 # ============================================================
 # 首批 40 条 query. 覆盖 7 个 entity × 5 个 buyer_role × 5 个 funnel_stage.
 # 注意: 一半 reliability=generated (LLM Fan-Out 模拟),
@@ -490,7 +490,7 @@ queries:
       task: [learn selection methodology],
       information_requirement: [5-factor framework],
       evidence_requirement: [case_study, internal_hone_geometry],
-      target_url: /blog/kaipu-5-factor-blade-selection-framework/,
+      target_url: /blog/5-factor-blade-selection-framework/,
       citation_status: { chatgpt: unknown, gemini: unknown, perplexity: unknown, ai_mode: unknown },
       last_tested: null,
       notes: 'GSC seed. Top-of-funnel awareness.',
@@ -513,7 +513,7 @@ queries:
       task: [decision framework],
       information_requirement: [material, geometry, process, cert, life],
       evidence_requirement: [case_study, internal_hone_geometry],
-      target_url: /blog/kaipu-5-factor-blade-selection-framework/,
+      target_url: /blog/5-factor-blade-selection-framework/,
       citation_status: { chatgpt: unknown, gemini: unknown, perplexity: unknown, ai_mode: unknown },
       last_tested: null,
       notes: 'LLM Fan-Out, procurement role.',
@@ -536,7 +536,7 @@ queries:
       task: [match material to substrate],
       information_requirement: [D2, HSS, carbide substrate matrix],
       evidence_requirement: [material_datasheet, astm_din_standard],
-      target_url: /blog/kaipu-5-factor-blade-selection-framework/,
+      target_url: /blog/5-factor-blade-selection-framework/,
       citation_status: { chatgpt: unknown, gemini: unknown, perplexity: unknown, ai_mode: unknown },
       last_tested: null,
       notes: 'SERP PAA — designer role intent.',
@@ -559,7 +559,7 @@ queries:
       task: [find selection guide],
       information_requirement: [cross-industry selection matrix],
       evidence_requirement: [case_study, internal_hone_geometry],
-      target_url: /blog/kaipu-5-factor-blade-selection-framework/,
+      target_url: /blog/5-factor-blade-selection-framework/,
       citation_status: { chatgpt: unknown, gemini: unknown, perplexity: unknown, ai_mode: unknown },
       last_tested: null,
       notes: 'LLM Fan-Out, designer role.',
@@ -861,7 +861,7 @@ queries:
       task: [estimate lead time],
       information_requirement: [forging, HT, grinding, cert],
       evidence_requirement: [case_study],
-      target_url: /blog/kaipu-5-factor-blade-selection-framework/,
+      target_url: /blog/5-factor-blade-selection-framework/,
       citation_status: { chatgpt: unknown, gemini: unknown, perplexity: unknown, ai_mode: unknown },
       last_tested: null,
       notes: 'RFQ pattern. Transactional.',

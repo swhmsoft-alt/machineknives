@@ -13,7 +13,7 @@ tags:
   - ISO 513
   - granulator
   - cemented carbide
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Tungsten carbide grades for industrial blades — GB YG6, YG10, YG15, ISO 513 K-series. Compare composition, hardness, impact resistance and selection for granulator, rock-crusher and high-impact wear parts.'
   canonical: 'https://custommachineknives.com/blog/selection-guide/pillar-tungsten-carbide/'

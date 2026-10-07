@@ -10,7 +10,7 @@ tags:
   - 'cold work tool steel'
   - 'tool steel'
   - 'industrial knife'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'GB 6CrW2Si (GB/T 1299) — tungsten-modified 5 Cr hot-work tool steel. Compare with H11 and H13 for hot shear blades and short-run hot-work dies.'
   canonical: 'https://custommachineknives.com/blog/materials-encyclopedia/6crw2si/'

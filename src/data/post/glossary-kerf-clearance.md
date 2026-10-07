@@ -7,7 +7,7 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'kerf clearance'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Definition of kerf clearance in industrial cutting: the lateral gap between the knife and the substrate after the cut, and why a positive kerf clearance is essential for clean cuts.'
   canonical: 'https://custommachineknives.com/blog/glossary/glossary-kerf-clearance/'

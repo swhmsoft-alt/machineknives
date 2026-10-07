@@ -11,7 +11,7 @@ tags:
   - 'silicone rubber'
   - 'polyurethane foam'
   - 'slitter blade'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Foam and rubber substrates are gummy, abrasive and chemically variable. The wrong blade grade galls immediately, the wrong edge geometry produces a torn surface, and the wrong cooling makes the problem worse. This guide covers PU foam, PE foam, EPDM rubber, silicone rubber and natural rubber slitting and shearing.'
   canonical: 'https://custommachineknives.com/blog/selection-guide/selection-guide-foam-rubber-cutting/'
@@ -97,10 +97,10 @@ The wrong lubricant can swell or degrade the substrate.
 
 > "Slitter / shear blade, [L] × [W] × [T] mm, [420 stainless / M2 HSS / DC53] per substrate, HRC [56–64] per grade, edge chamfer [0.10–0.40] mm, hone [5–25] µm, surface finish Ra ≤ 0.4 µm, polished bevel. Optional PVD coating: [TiN / TiCN / DLC]. Substrate: [foam / rubber family]. Line speed: [X] m/min. Lubricant: [type]. Mill certificate required."
 
-For broader selection guidance, see [How to choose a slitter blade for paper converting](/blog/selection-guide/selection-guide-paper-converting/) and [The Industrial Knives 5-Factor Blade Selection Framework](/blog/engineering/5-factor-blade-selection-framework/).
+For broader selection guidance, see [How to choose a slitter blade for paper converting](/blog/selection-guide/selection-guide-paper-converting/) and [The Custom Machine Knives 5-Factor Blade Selection Framework](/blog/engineering/5-factor-blade-selection-framework/).
 
-For a written foam or rubber cutting specification, send the substrate family, density, line speed, current blade spec and current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
+For a written foam or rubber cutting specification, send the substrate family, density, line speed, current blade spec and current service life to [info@custommachineknives.com](mailto:info@custommachineknives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 
 **About the author**
 
-*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Ships to foam, rubber and gasket manufacturers across four continents, with a dedicated elastomer cell for slitter and shear applications.*
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. Ships to foam, rubber and gasket manufacturers across four continents, with a dedicated elastomer cell for slitter and shear applications.*

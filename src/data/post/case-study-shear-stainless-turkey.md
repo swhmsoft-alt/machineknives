@@ -13,7 +13,7 @@ tags:
   - service centre
   - M2 HSS
   - TiN coating
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Case study: shear blade for 6 mm 304 stainless plate at a Turkish service centre. From 1,200 strokes to 18,000 strokes — diagnostic, trial, ROI.'
   canonical: 'https://custommachineknives.com/blog/case-studies/case-study-shear-stainless-turkey/'
@@ -159,8 +159,8 @@ If your line is chipping shear blades on stainless plate, the chamfer is almost 
 
 ## Want us to audit your line?
 
-For a written field audit on a plate shear line, send the substrate, the plate thickness, the current knife spec and the current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). A typical audit takes 1 day on site, returns a written diagnosis and a trial protocol, and ships the trial knives within 3 weeks. ROI is typically inside 6 months on lines with > USD 30k/year knife spend.
+For a written field audit on a plate shear line, send the substrate, the plate thickness, the current knife spec and the current service life to [info@custommachineknives.com](mailto:info@custommachineknives.com) or use the [request-a-quote form](/contact). A typical audit takes 1 day on site, returns a written diagnosis and a trial protocol, and ships the trial knives within 3 weeks. ROI is typically inside 6 months on lines with > USD 30k/year knife spend.
 
 **About the author**
 
-*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. The team ships to converters, recyclers and OEMs across four continents, with active distribution in Turkey, Poland, Germany, Italy, India, Vietnam and Brazil.*
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. The team ships to converters, recyclers and OEMs across four continents, with active distribution in Turkey, Poland, Germany, Italy, India, Vietnam and Brazil.*

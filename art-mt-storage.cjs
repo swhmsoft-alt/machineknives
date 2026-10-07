@@ -91,9 +91,9 @@ For industrial knife storage and handling:
 
 For the broader maintenance framework, see [Maintenance: how to extend slitter life](/maintenance-slitting-blade-life/) and [Preventive maintenance schedule](/maintenance-preventive-schedule/).
 
-For a written storage SOP for your line, send the line layout, the knife inventory, the current failure rate and the current storage room setup to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). SOP, inspection checklist, and storage room layout within one business day.
+For a written storage SOP for your line, send the line layout, the knife inventory, the current failure rate and the current storage room setup to [[email protected]](mailto:[email protected]) or use the [request-a-quote form](/contact). SOP, inspection checklist, and storage room layout within one business day.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified.*`
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified.*`
 };

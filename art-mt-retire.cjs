@@ -102,9 +102,9 @@ For industrial knife retirement:
 
 For the broader maintenance framework, see [Maintenance: how to extend slitter life](/maintenance-slitting-blade-life/) and [Preventive maintenance schedule](/maintenance-preventive-schedule/).
 
-For a written retirement protocol for your line, send the knife inventory, current chip event rate, current re-grind count distribution and current scrap rate to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Retirement protocol, decision tree, and tracking template within one business day.
+For a written retirement protocol for your line, send the knife inventory, current chip event rate, current re-grind count distribution and current scrap rate to [[email protected]](mailto:[email protected]) or use the [request-a-quote form](/contact). Retirement protocol, decision tree, and tracking template within one business day.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified.*`
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified.*`
 };

@@ -11,7 +11,7 @@ tags:
   - 'tungsten carbide tipped'
   - 'D2'
   - 'M2 HSS'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Corrugated slitting is one of the most abrasive industrial cutting applications. The substrate is a multi-layer composite of kraft paper + adhesive + flute geometry, running at 200–500 m/min. The wrong blade grade loses 50 % of life. This guide covers single-face, double-face and thin-board slitting, with grade maps and field cases.'
   canonical: 'https://custommachineknives.com/blog/selection-guide/selection-guide-corrugated-slitter/'
@@ -102,8 +102,8 @@ A slitter-scorer is precision-ground and must be re-ground as a set. Mixing worn
 
 For the broader substrate-by-substrate selection, see [How to choose a slitter blade for paper converting](/blog/selection-guide/selection-guide-paper-converting/) and [YG6X vs YG8](/blog/material-comparison/yg6x-vs-yg8-carbide/).
 
-For a written corrugated slitter specification, send the flute type, line speed, substrate batch and current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
+For a written corrugated slitter specification, send the flute type, line speed, substrate batch and current service life to [info@custommachineknives.com](mailto:info@custommachineknives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 
 **About the author**
 
-*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, packaging manufacturers and OEMs across four continents, with a dedicated corrugated and heavy-paper cell for slitter and slitter-scorer applications.*
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, packaging manufacturers and OEMs across four continents, with a dedicated corrugated and heavy-paper cell for slitter and slitter-scorer applications.*

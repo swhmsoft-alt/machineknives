@@ -46,7 +46,7 @@ const PATTERNS_TRUNC = [
   /\b5-Factor'$/,                          // truncated phrase
   /\b4-Factor'$/,
   /\b3-Factor'$/,
-  /\bThe Industrial Knives\b/,
+  /\bThe Custom Machine Knives\b/,
 ];
 
 const PATTERN_EXCERPT_DUP = /excerpt:\s*'([^']+?)\1/;

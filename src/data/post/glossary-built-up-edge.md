@@ -7,7 +7,7 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'built-up edge'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Definition of built-up edge (BUE) in industrial cutting: weld-like adhesion of substrate material to the cutting edge, a common cause of poor cut quality on stainless, aluminium and gummy plastics.'
   canonical: 'https://custommachineknives.com/blog/glossary/glossary-built-up-edge/'

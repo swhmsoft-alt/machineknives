@@ -14,7 +14,7 @@ tags:
   - '440C'
   - 'India'
   - 'FDA'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'An Indian pharma converter cutting 50 µm 304 stainless foil at 80 m/min was getting 7 days from a D2 slitter. The fix was a 9Cr18MoV stainless slitter. 35 days. The case study walks through the audit, the trial, and the FDA / GMP compliance angle.'
   canonical: 'https://custommachineknives.com/blog/case-studies/case-study-pharma-blade-stainless/'
@@ -115,8 +115,8 @@ The customer was previously buying generic D2 with no traceability. The switch b
 
 If your line uses D2 in a washdown, the failure mode is corrosion, not wear. Move to stainless.
 
-For a written field audit on a pharma or medical-device cutting line, send the substrate, line speed, current blade spec, washdown chemistry and current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). ROI is typically inside 6 months on lines with > USD 30k/year knife spend.
+For a written field audit on a pharma or medical-device cutting line, send the substrate, line speed, current blade spec, washdown chemistry and current service life to [info@custommachineknives.com](mailto:info@custommachineknives.com) or use the [request-a-quote form](/contact). ROI is typically inside 6 months on lines with > USD 30k/year knife spend.
 
 **About the author**
 
-*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Mill certificates, FDA declarations and EU 1935/2004 compliance are standard.*
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. Mill certificates, FDA declarations and EU 1935/2004 compliance are standard.*

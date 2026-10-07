@@ -91,9 +91,9 @@ The cheapest fix is the first one. Most thermal-damage events are fixed by step 
 
 For the broader troubleshooting framework, see [Why is my blade wearing out too fast?](/troubleshooting-premature-wear/) and [Chipping (glossary entry)](/glossary/chipping/).
 
-For a written thermal damage diagnosis, send the discoloured knife, the line log, the substrate spec and the current cooling configuration to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Diagnosis within 24 hours.
+For a written thermal damage diagnosis, send the discoloured knife, the line log, the substrate spec and the current cooling configuration to [[email protected]](mailto:[email protected]) or use the [request-a-quote form](/contact). Diagnosis within 24 hours.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified.*`
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified.*`
 };

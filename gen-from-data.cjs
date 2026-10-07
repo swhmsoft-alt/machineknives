@@ -12,8 +12,8 @@ function buildEntry(e, opts) {
   const category = o.category || 'materials-encyclopedia';
   const type = o.type || 'glossary';
   const entityType = o.entityType || 'material';
-  const canonical = o.canonicalBase || 'https://www.machine-knives.net/materials-encyclopedia/';
-  const seeAlso = o.seeAlso || 'See also: [D2 vs SKD11 comparison](/d2-vs-skd11/), [Material Grade Converter](/material-grade-converter/), [The KAIPU 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/).';
+  const canonical = o.canonicalBase || 'https://www.custommachineknives.com/materials-encyclopedia/';
+  const seeAlso = o.seeAlso || 'See also: [D2 vs SKD11 comparison](/d2-vs-skd11/), [Material Grade Converter](/material-grade-converter/), [The Custom Machine Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/).';
   const tags = o.tags || ['cold work tool steel', 'tool steel', 'industrial knife'];
   const tagYaml = tags.map(t => "  - '" + esc(t) + "'").join('\n');
 
@@ -32,7 +32,7 @@ function buildEntry(e, opts) {
   lines.push('tags:');
   lines.push("  - '" + esc(e.tag) + "'");
   lines.push(tagYaml);
-  lines.push("author: 'KAIPU Engineering'");
+  lines.push("author: 'Custom Machine Knives Engineering'");
   lines.push('metadata:');
   lines.push("  description: '" + description + "'");
   lines.push("  canonical: '" + canonical + e.slug + "/'");

@@ -115,12 +115,12 @@ export const PAIN_POINTS: ReadonlyArray<{ title: string; description: string; ic
   {
     title: 'No engineering support',
     description:
-      'A supplier that just ships a SKU. Every Industrial Knives order has a named engineer — from RFQ review through to the dispatch paperwork.',
+      'A supplier that just ships a SKU. Every Custom Machine Knives order has a named engineer — from RFQ review through to the dispatch paperwork.',
     icon: 'tabler:user-check',
   },
 ];
 
-/** Comparison block: Industrial Knives vs catalog-only suppliers. */
+/** Comparison block: Custom Machine Knives vs catalog-only suppliers. */
 export const COMPARISON: ReadonlyArray<{
   criterion: string;
   ours: string;

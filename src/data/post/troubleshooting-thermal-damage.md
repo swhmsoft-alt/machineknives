@@ -11,7 +11,7 @@ tags:
   - 'tissue slitter'
   - 'high-speed cutting'
   - 'cooling'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'A slitter knife that turns blue, straw or purple is being annealed in service. The edge temperature has exceeded the tempering temperature. The fix is usually cooling, then grade upgrade, then coating.'
   canonical: 'https://custommachineknives.com/blog/troubleshooting/troubleshooting-thermal-damage/'
@@ -105,8 +105,8 @@ The cheapest fix is the first one. Most thermal-damage events are fixed by step 
 
 For the broader troubleshooting framework, see [Why is my blade wearing out too fast?](/blog/troubleshooting/troubleshooting-premature-wear/) and Chipping (glossary entry).
 
-For a written thermal damage diagnosis, send the discoloured knife, the line log, the substrate spec and the current cooling configuration to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Diagnosis within 24 hours.
+For a written thermal damage diagnosis, send the discoloured knife, the line log, the substrate spec and the current cooling configuration to [info@custommachineknives.com](mailto:info@custommachineknives.com) or use the [request-a-quote form](/contact). Diagnosis within 24 hours.
 
 **About the author**
 
-*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified.*
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified.*

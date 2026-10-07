@@ -20,10 +20,10 @@ function buildEntry(e) {
   for (const t of (e.tags || [])) {
     lines.push("  - '" + esc(t) + "'");
   }
-  lines.push("author: 'KAIPU Engineering'");
+  lines.push("author: 'Custom Machine Knives Engineering'");
   lines.push('metadata:');
   lines.push("  description: '" + esc(e.excerpt) + "'");
-  lines.push("  canonical: 'https://www.machine-knives.net/glossary/" + e.slug + "/'");
+  lines.push("  canonical: 'https://www.custommachineknives.com/glossary/" + e.slug + "/'");
   lines.push('---');
   lines.push('');
 

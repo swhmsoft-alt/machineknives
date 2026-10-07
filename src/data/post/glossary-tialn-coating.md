@@ -7,7 +7,7 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'TiAlN coating'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Definition of TiAlN (Titanium Aluminium Nitride) PVD coating for industrial blades: a violet-black high-temperature coating for hot-work and foil slitting applications.'
   canonical: 'https://custommachineknives.com/blog/glossary/glossary-tialn-coating/'

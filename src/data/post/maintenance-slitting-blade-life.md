@@ -13,9 +13,9 @@ tags:
   - converting line
   - D2 tool steel
   - M2 high speed steel
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
-  description: 'How to extend the service life of a slitting machine blade: seven variables from substrate to edge prep to in-process care. Field-tested guidance from Industrial Knives engineering.'
+  description: 'How to extend the service life of a slitting machine blade: seven variables from substrate to edge prep to in-process care. Field-tested guidance from Custom Machine Knives engineering.'
   canonical: 'https://custommachineknives.com/blog/maintenance/maintenance-slitting-blade-life/'
 image: '/images/og/maintenance-slitting-blade-life.webp'
 ---
@@ -195,10 +195,10 @@ For a slitter knife in regular service:
 
 If you can tick all eight, your slitter knives will out-last your regrind shop's wildest expectations. If you cannot, the variable that is missing is the one that is costing you knife life.
 
-For the broader five-factor selection framework, see [The Industrial Knives 5-Factor Blade Selection Framework](/blog/engineering/5-factor-blade-selection-framework/). For a runnable coating comparison, see [Coating Comparison Table](/blog/coatings-comparison/coatings-comparison/). For a head-to-head on the two most common HSS grades, see [M2 vs M4 HSS](/blog/material-comparison/m2-vs-m4-hss/).
+For the broader five-factor selection framework, see [The Custom Machine Knives 5-Factor Blade Selection Framework](/blog/engineering/5-factor-blade-selection-framework/). For a runnable coating comparison, see [Coating Comparison Table](/blog/coatings-comparison/coatings-comparison/). For a head-to-head on the two most common HSS grades, see [M2 vs M4 HSS](/blog/material-comparison/m2-vs-m4-hss/).
 
-For a written specification, send the part drawing, the substrate, the line speed and the current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
+For a written specification, send the part drawing, the substrate, the line speed and the current service life to [info@custommachineknives.com](mailto:info@custommachineknives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 
 **About the author**
 
-*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.

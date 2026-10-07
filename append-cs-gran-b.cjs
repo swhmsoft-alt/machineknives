@@ -43,13 +43,13 @@ If you have a granulator line and the knives are wearing too fast:
 7. **Specify the bolting.** Torque wrench, calibrated, specific value.
 8. **Specify the rotation.** Measured schedule, not visual.
 
-For a written granulator audit on your line, send the substrate, the throughput, the rotor speed, the current knife spec and the current service life to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). A typical audit takes 1 day on site, returns a written diagnosis and a trial protocol, and ships the trial knives within 3 weeks. ROI is typically inside 6 months on lines with > €50k/year knife spend.
+For a written granulator audit on your line, send the substrate, the throughput, the rotor speed, the current knife spec and the current service life to [[email protected]](mailto:[email protected]) or use the [request-a-quote form](/contact). A typical audit takes 1 day on site, returns a written diagnosis and a trial protocol, and ships the trial knives within 3 weeks. ROI is typically inside 6 months on lines with > €50k/year knife spend.
 
-For the broader granulator selection guidance, see [How to choose a granulator knife](/selection-guide-granulator-knife/) and the granulator section in [The KAIPU 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/).
+For the broader granulator selection guidance, see [How to choose a granulator knife](/selection-guide-granulator-knife/) and the granulator section in [The Custom Machine Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/).
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. The team ships to converters, recyclers and OEMs across four continents, with active distribution in Germany, Poland, Italy, Turkey, India, Vietnam and Brazil, and a dedicated recycling-industry cell for ASR, WEEE and heavy-contamination applications.*
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. The team ships to converters, recyclers and OEMs across four continents, with active distribution in Germany, Poland, Italy, Turkey, India, Vietnam and Brazil, and a dedicated recycling-industry cell for ASR, WEEE and heavy-contamination applications.*
 `;
 fs.appendFileSync(target, content, 'utf8');
 console.log('Appended: ' + Buffer.byteLength(content, 'utf8') + ' bytes');

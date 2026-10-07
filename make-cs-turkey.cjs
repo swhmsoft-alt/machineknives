@@ -17,10 +17,10 @@ tags:
   - service centre
   - M2 HSS
   - TiN coating
-author: 'KAIPU Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Case study: shear blade for 6 mm 304 stainless plate at a Turkish service centre. From 1,200 strokes to 18,000 strokes — diagnostic, trial, ROI.'
-  canonical: 'https://www.machine-knives.net/case-study-shear-stainless-turkey/'
+  canonical: 'https://www.custommachineknives.com/case-study-shear-stainless-turkey/'
 ---
 
 In late 2024 our Istanbul distributor called about a service centre cutting 6 mm 304 stainless plate. The customer was burning through a D2 upper shear blade every 1,200 strokes, with frequent chipping on the leading edge. The line was a 1,200-tonne hydraulic guillotine running 8 hours per day, 5 days per week. Knife consumption was the second-largest cost on the line (after electricity), and the downtime for blade changes was hurting the on-time delivery KPI. This case study walks through the audit, the trial, the result and the ROI.

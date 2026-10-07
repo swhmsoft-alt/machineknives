@@ -11,7 +11,7 @@ tags:
   - blade service
   - outsource re-grind
   - CBN grinding
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'How to outsource industrial blade re-sharpening: specification, deliverables, SLA, the four questions to ask a re-grind shop before you ship your first knife.'
   canonical: 'https://custommachineknives.com/blog/maintenance/maintenance-resharpening-service/'
@@ -161,8 +161,8 @@ For a re-sharpening service:
 
 For the broader maintenance framework, see [Maintenance: how to extend slitter life](/blog/maintenance/maintenance-slitting-blade-life/). For a runnable coating comparison, see [Coating Comparison Table](/blog/coatings-comparison/coatings-comparison/).
 
-For a written re-sharpening specification for your line, send the knife drawing, the current service life, the current re-grind cost and the current reject rate to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, partner-shop recommendation and indicative cost within one business day.
+For a written re-sharpening specification for your line, send the knife drawing, the current service life, the current re-grind cost and the current reject rate to [info@custommachineknives.com](mailto:info@custommachineknives.com) or use the [request-a-quote form](/contact). Specification, partner-shop recommendation and indicative cost within one business day.
 
 **About the author**
 
-*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Runs an in-house re-grind cell as a value-added service for the European market, with 5-day standard turnaround and 1 % measured reject rate.*
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. Runs an in-house re-grind cell as a value-added service for the European market, with 5-day standard turnaround and 1 % measured reject rate.*

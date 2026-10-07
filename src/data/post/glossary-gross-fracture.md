@@ -7,7 +7,7 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'gross fracture'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Definition of gross fracture in industrial cutting: complete break of a knife, usually catastrophic and immediate. The rarest but most expensive failure mode.'
   canonical: 'https://custommachineknives.com/blog/glossary/glossary-gross-fracture/'

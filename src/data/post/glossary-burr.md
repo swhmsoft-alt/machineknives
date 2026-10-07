@@ -10,7 +10,7 @@ tags:
   - edge quality
   - slitter blade
   - shear blade
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Industrial cutting burr — definition, measurement, causes, and how edge prep and clearance angle affect burr height on slitter and shear blades.'
   canonical: 'https://custommachineknives.com/blog/glossary/glossary-burr/'

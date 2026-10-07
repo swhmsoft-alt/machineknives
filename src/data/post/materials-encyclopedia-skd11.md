@@ -10,7 +10,7 @@ tags:
   - JIS
   - cold work tool steel
   - D2 equivalent
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'JIS SKD11 cold-work tool steel — chemistry, hardness, heat treatment, applications and the practical differences vs AISI D2 for industrial blades.'
   canonical: 'https://custommachineknives.com/blog/materials-encyclopedia/materials-encyclopedia-skd11/'

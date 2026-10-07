@@ -60,7 +60,7 @@ const checks = {
   // ── Cross-cutting trust ──────────────────────────────────────
   headerPhone: html.includes('lp-header-phone'),
   footerContact: html.includes('lp-footer-contact'),
-  footerEmail: html.includes('engineering@kaipu-industrial.com'),
+  footerEmail: html.includes('[email protected]'),
 
   // ── Single CTA + nav isolation ────────────────────────────────
   rfqAnchors: (html.match(/href="#rfq"/g) || []).length >= 3,

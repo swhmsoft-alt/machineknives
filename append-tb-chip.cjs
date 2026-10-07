@@ -58,13 +58,13 @@ If the visual, dimensional, hardness, line-side and re-grind checks all pass, an
 - **Heat-treat that passed the file test but failed in service.** Request a metallographic check from the heat-treat supplier.
 - **Knife design.** A knife that is too thin for the substrate, or has too aggressive a rake angle, will chip. Send the drawing to the supplier for review.
 
-For a written chip diagnosis on a specific knife, send the chipped knife, the line log and the substrate batch records to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Diagnosis within 24 hours.
+For a written chip diagnosis on a specific knife, send the chipped knife, the line log and the substrate batch records to [[email protected]](mailto:[email protected]) or use the [request-a-quote form](/contact). Diagnosis within 24 hours.
 
 For the broader troubleshooting framework, see [Why is my blade wearing out too fast?](/troubleshooting-premature-wear/) and [Chipping (glossary entry)](/glossary/chipping/).
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.*
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.*
 `;
 fs.appendFileSync(target, content, 'utf8');
 console.log('Appended: ' + Buffer.byteLength(content, 'utf8') + ' bytes');

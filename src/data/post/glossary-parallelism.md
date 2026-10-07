@@ -7,7 +7,7 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'parallelism'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Definition of parallelism in industrial blade measurement: the difference between two parallel reference surfaces of a knife, and how parallelism affects cut quality on a slitter or shear.'
   canonical: 'https://custommachineknives.com/blog/glossary/glossary-parallelism/'

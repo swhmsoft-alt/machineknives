@@ -55,7 +55,7 @@ export function hasCta(s) {
  */
 export function appendCtaIfMissing(description, opts = {}) {
   const {
-    suffix = ' \u2192 industrial-knives.net/contact',
+    suffix = ' \u2192 custommachineknives.com/contact',
     shortSuffix = ' \u2192 /contact',
     maxLen = 160,
     enabled = true,

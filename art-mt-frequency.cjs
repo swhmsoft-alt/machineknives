@@ -107,9 +107,9 @@ If none is true, do not re-grind. Wait for the next weekly check.
 
 For the broader re-grind framework, see [Maintenance: how to extend slitter life](/maintenance-slitting-blade-life/) and [Preventive maintenance schedule](/maintenance-preventive-schedule/).
 
-For a written re-grind frequency study for your line, send the line layout, current re-grind interval, current scrap rate and current re-grind cost to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Frequency study, decision rules, and tracking sheet within one business day.
+For a written re-grind frequency study for your line, send the line layout, current re-grind interval, current scrap rate and current re-grind cost to [[email protected]](mailto:[email protected]) or use the [request-a-quote form](/contact). Frequency study, decision rules, and tracking sheet within one business day.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified.*`
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified.*`
 };

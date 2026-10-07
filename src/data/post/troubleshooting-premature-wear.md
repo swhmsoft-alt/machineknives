@@ -12,7 +12,7 @@ tags:
   - heat treat
   - regrind
   - converting line
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Why is your machine blade wearing out too fast? Diagnostic flow, five root causes, visual failure-mode tells, and field-tested fixes for industrial slitter, shear and granulator blades.'
   canonical: 'https://custommachineknives.com/blog/troubleshooting/troubleshooting-premature-wear/'
@@ -183,8 +183,8 @@ When a premature wear event shows up:
 
 If the diagnostic flow does not land on a single root cause in 30 minutes, or if the corrective action does not show a 30 %+ life gain in two re-grind cycles, call the knife supplier. A good supplier will ask for the worn knife, the line log, and the substrate batch records, and will have a hypothesis within 24 hours.
 
-For a written troubleshooting review, send the worn knife, the line parameters and the substrate spec to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). We will return a written diagnosis and a corrective spec within one business day.
+For a written troubleshooting review, send the worn knife, the line parameters and the substrate spec to [info@custommachineknives.com](mailto:info@custommachineknives.com) or use the [request-a-quote form](/contact). We will return a written diagnosis and a corrective spec within one business day.
 
 **About the author**
 
-*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.

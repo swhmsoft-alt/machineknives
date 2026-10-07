@@ -1,5 +1,5 @@
 /**
- * Cloudflare Worker entry for `machineknives` (industrial-knives.net).
+ * Cloudflare Worker entry for `machineknives` (custommachineknives.com).
  *
  * Routes:
  *   POST /api/inquiry  →  insert inquiry into D1 database "inquiry-db"

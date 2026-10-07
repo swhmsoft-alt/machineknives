@@ -1,8 +1,8 @@
-# Pricing — Industrial Knives
+# Pricing — Custom Machine Knives
 
 > Machine-readable pricing for AI agents and procurement systems.
 > For human browsing, see `/products/` (one page per SKU) and `/contact/`.
-> Canonical URL: `https://www.industrial-knives.net/pricing.md`
+> Canonical URL: `https://www.custommachineknives.com/pricing.md`
 
 ## How to read this file
 

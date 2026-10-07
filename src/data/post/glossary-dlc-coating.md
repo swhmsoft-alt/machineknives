@@ -7,7 +7,7 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'DLC coating'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Definition of DLC (Diamond-Like Carbon) PVD coating for industrial blades: the lowest-friction coating available, eliminates built-up edge on stainless, aluminium and sticky polymers.'
   canonical: 'https://custommachineknives.com/blog/glossary/glossary-dlc-coating/'

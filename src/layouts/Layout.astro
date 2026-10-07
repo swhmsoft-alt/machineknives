@@ -41,7 +41,7 @@ const breadcrumbLdItems = buildBreadcrumbItems(Astro.url.pathname).map((it, idx)
   item: it.href ? siteUrl + it.href : siteUrl + '/',
 }));
 const organizationLdJson = safeEmitSchema('Organization', {
-  name: 'Industrial Knives',
+  name: 'Custom Machine Knives',
   url: siteUrl + '/',
   logo: siteUrl + '/favicon.svg',
   description:
@@ -58,7 +58,7 @@ const organizationLdJson = safeEmitSchema('Organization', {
   },
 });
 const websiteLdJson = safeEmitSchema('WebSite', {
-  name: 'Industrial Knives',
+  name: 'Custom Machine Knives',
   url: siteUrl + '/',
 });
 const breadcrumbLdJson =
@@ -71,7 +71,7 @@ const serviceLdJson = isHome
       serviceType: 'Custom industrial blade manufacturing',
       provider: {
         '@type': 'Organization',
-        name: 'Industrial Knives',
+        name: 'Custom Machine Knives',
         url: siteUrl + '/',
       },
       areaServed: 'Worldwide',

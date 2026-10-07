@@ -7,7 +7,7 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'surface roughness'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Definition of surface roughness (Ra) in industrial blade measurement: the arithmetic average of the absolute deviations of the surface profile from the mean, and the typical Ra targets for slitter and shear blades.'
   canonical: 'https://custommachineknives.com/blog/glossary/glossary-surface-roughness/'

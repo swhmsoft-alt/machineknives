@@ -58,12 +58,12 @@ const FILE_EXT = /\.(md|mdx|astro)$/i;
 // [from, to]. Add new entries to the bottom and re-sort by `from.length`.
 const RULES = [
   // ── Ø / — (titles and metadata) — longest context first ───────────────
-  ["title: 'D2 Bed Knife for Tissue Converting �?HRC 60, 18° Clearance | KAIPU'",
-   "title: 'D2 Bed Knife for Tissue Converting — HRC 60, 18° Clearance | KAIPU'"],
+  ["title: 'D2 Bed Knife for Tissue Converting �?HRC 60, 18° Clearance | Custom Machine Knives'",
+   "title: 'D2 Bed Knife for Tissue Converting — HRC 60, 18° Clearance | Custom Machine Knives'"],
   ["title: 'D2 Bed Knife for Tissue Converting �?HRC 60, 18° Clearance Angle'",
    "title: 'D2 Bed Knife for Tissue Converting — HRC 60, 18° Clearance Angle'"],
-  ["title: 'Circular Slitting Blade �?250 mm OD | KAIPU Industrial Blades'",
-   "title: 'Circular Slitting Blade Ø250 mm OD | KAIPU Industrial Blades'"],
+  ["title: 'Circular Slitting Blade �?250 mm OD | Custom Machine Knives'",
+   "title: 'Circular Slitting Blade Ø250 mm OD | Custom Machine Knives'"],
   ["title: 'Serrated Blade �?Cut-to-Length 6�?2 TPI'",
    "title: 'Serrated Blade — Cut-to-Length 6–12 TPI'"],
   ["title: 'Straight Converting Blade �?300 × 80 mm'",
@@ -469,7 +469,7 @@ const RULES = [
   // (U+2717 + space) — PowerShell produces different fallback code points
   // for the same source character on different writes, hence two distinct
   // rep sequences for the same negative mark (鉂, 鈿).
-  ["鉁?4— weeks",    "✓ 4–6 weeks"],     // specific: lead time KAIPU row (eaten digit)
+  ["鉁?4— weeks",    "✓ 4–6 weeks"],     // specific: lead time Custom Machine Knives row (eaten digit)
   ["鈿?8—2 weeks",   "✗ 8–12 weeks"],    // specific: lead time Job Shop row (eaten digit)
   ["鉁?",            "✓ "],              // general: check mark
   ["鉂?",            "✗ "],              // general: ballot X (variant 1)

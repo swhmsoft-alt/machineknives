@@ -11,7 +11,7 @@ tags:
   - Cr12Mo1V1
   - '1.2379'
   - industrial knife
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'AISI D2 cold-work tool steel — chemistry, hardness, heat treatment, applications and cross-reference. Concise encyclopedia entry for industrial blade specification.'
   canonical: 'https://custommachineknives.com/blog/materials-encyclopedia/materials-encyclopedia-d2/'

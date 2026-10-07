@@ -13,7 +13,7 @@ node scripts/new-blog-post.mjs \
 
 That command:
 
-1. Validates the title (50–60 chars **including** the auto-appended brand suffix ` — Industrial Knives`)
+1. Validates the title (50–60 chars **including** the auto-appended brand suffix ` — Custom Machine Knives`)
 2. Validates the excerpt (120–160 chars)
 3. Validates the category and type against the schema
 4. Generates a kebab-case slug from the title
@@ -34,7 +34,7 @@ Use `--draft` to mark the post as noindex during review. Use `--skip-og` to defe
 | `type` | ✅ | `article` \| `glossary` \| `comparison` |
 | `publishDate` | ✅ | ISO date (YYYY-MM-DD) |
 | `tags` | optional | array of kebab-case strings |
-| `author` | optional | default `Industrial Knives Engineering` |
+| `author` | optional | default `Custom Machine Knives Engineering` |
 | `metadata.description` | optional | mirrors excerpt; can be tuned independently |
 | `metadata.canonical` | optional | absolute URL; auto-derived if absent |
 | `draft` | optional | `true` → noindex |

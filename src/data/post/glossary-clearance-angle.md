@@ -10,7 +10,7 @@ tags:
   - relief angle
   - blade geometry
   - edge prep
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Industrial blade clearance angle — definition, the substrate-by-substrate range, the relationship to hone and burr, and how to set clearance on slitter, shear and granulator blades.'
   canonical: 'https://custommachineknives.com/blog/glossary/glossary-clearance-angle/'

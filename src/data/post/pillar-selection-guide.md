@@ -13,7 +13,7 @@ tags:
   - edge prep
   - operating speed
   - industrial knife
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'The 5-Factor Blade Selection Framework — substrate, geometry, hardness target, edge preparation, operating speed. The methodology that drives material, grade, hardness and coating choices for industrial cutting blades.'
   canonical: 'https://custommachineknives.com/blog/selection-guide/pillar-selection-guide/'

@@ -7,7 +7,7 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'ta-C coating'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Definition of ta-C (tetrahedral amorphous carbon) PVD coating for industrial blades: a harder, lower-friction variant of DLC, ideal for aluminium foil and medical cutting.'
   canonical: 'https://custommachineknives.com/blog/glossary/glossary-ta-c-coating/'

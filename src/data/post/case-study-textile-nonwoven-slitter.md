@@ -12,7 +12,7 @@ tags:
   - 'M2 HSS'
   - 'TiCN coating'
   - 'hygiene'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'A European non-woven producer slitting 25 gsm spunbond at 600 m/min was getting 4 days from a D2 slitter. The fix was a M2 HSS slitter with TiCN coating. 18 days. The case study walks through the audit, the trial, and the role of abrasive fillers in non-woven wear.'
   canonical: 'https://custommachineknives.com/blog/case-studies/case-study-textile-nonwoven-slitter/'
@@ -102,8 +102,8 @@ The savings are real but not dramatic because the line was already operating wit
 
 If your non-woven line is wearing D2 knives faster than 10 days, the answer is usually a coating, not a harder steel.
 
-For a written field audit on a non-woven slitter, send the substrate (gsm, polymer, filler content), line speed, current blade spec and current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). ROI is typically inside 12 months on lines with > EUR 30k/year knife spend.
+For a written field audit on a non-woven slitter, send the substrate (gsm, polymer, filler content), line speed, current blade spec and current service life to [info@custommachineknives.com](mailto:info@custommachineknives.com) or use the [request-a-quote form](/contact). ROI is typically inside 12 months on lines with > EUR 30k/year knife spend.
 
 **About the author**
 
-*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Ships to non-woven, hygiene and medical-textile manufacturers across four continents.*
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. Ships to non-woven, hygiene and medical-textile manufacturers across four continents.*

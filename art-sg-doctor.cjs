@@ -90,11 +90,11 @@ Measure with a load cell, not by feel.
 
 > "Doctor blade, [L] × [W] × [T] mm, [AISI 420 stainless / spring steel / YG6X carbide], HRC [per table], wiping face Ra ≤ 0.05 µm, edge thickness [0.10–0.40] mm ± 2 µm at 5 points, edge radius [2–10] µm, edge angle [25–45]°, flatness ≤ 0.005 mm. Mill certificate required."
 
-For broader selection guidance, see [How to choose a slitter blade for paper converting](/selection-guide-paper-converting/) and [The KAIPU 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/).
+For broader selection guidance, see [How to choose a slitter blade for paper converting](/selection-guide-paper-converting/) and [The Custom Machine Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/).
 
-For a written doctor-blade specification, send the process, substrate, ink chemistry, line speed and current service life to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
+For a written doctor-blade specification, send the process, substrate, ink chemistry, line speed and current service life to [[email protected]](mailto:[email protected]) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. Ships to printers, coaters and OEMs across four continents, with active distribution in Europe and Asia.*`
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. Ships to printers, coaters and OEMs across four continents, with active distribution in Europe and Asia.*`
 };

@@ -1,7 +1,7 @@
 /**
  * Cloudflare Pages Function — /api/inquiry
  *
- * Receives the KAIPU industrial-blades RFQ form (src/pages/contact.astro) and
+ * Receives the Custom Machine Knives industrial-blades RFQ form (src/pages/contact.astro) and
  * persists the submission to the D1 database bound as `context.env.DB`.
  *
  * Field names mirror the `inputs[]`, `textarea` and `disclaimer` props passed

@@ -1,4 +1,4 @@
-# KAIPU Query Acquisition System (V1.0)
+# Custom Machine Knives Query Acquisition System (V1.0)
 
 > **The problem:** AI Search has no official "Keyword Planner". We cannot Google "all AI prompts". We must build our own Query Acquisition Stack — the missing infrastructure for AI-era SEO.
 
@@ -30,8 +30,8 @@ A data-layer pipeline that turns 5 categories of real-world queries into a **que
 | [`src/data/_templates/query-acquisition/schema.entity.yaml`](../src/data/_templates/query-acquisition/schema.entity.yaml)               | Entity schema (8 fields)                                      |
 | [`src/data/_templates/query-acquisition/taxonomy.source-type.yaml`](../src/data/_templates/query-acquisition/taxonomy.source-type.yaml) | source_type + reliability dictionary                          |
 | [`src/data/_templates/query-acquisition/taxonomy.buyer-role.yaml`](../src/data/_templates/query-acquisition/taxonomy.buyer-role.yaml)   | buyer_role / funnel_stage / intent / evidence_type dictionary |
-| [`src/data/query-acquisition/entities.yaml`](../src/data/query-acquisition/entities.yaml)                                               | KAIPU 7 entities (seed)                                       |
-| [`src/data/query-acquisition/sources.kpi.yaml`](../src/data/query-acquisition/sources.kpi.yaml)                                         | KAIPU source KPI / configuration                              |
+| [`src/data/query-acquisition/entities.yaml`](../src/data/query-acquisition/entities.yaml)                                               | Custom Machine Knives 7 entities (seed)                                       |
+| [`src/data/query-acquisition/sources.kpi.yaml`](../src/data/query-acquisition/sources.kpi.yaml)                                         | Custom Machine Knives source KPI / configuration                              |
 | [`src/data/query-acquisition/queries.seed.yaml`](../src/data/query-acquisition/queries.seed.yaml)                                       | 40 queries across 7 entities × 5 buyer_roles                  |
 | [`src/data/query-acquisition/prompts.seed.yaml`](../src/data/query-acquisition/prompts.seed.yaml)                                       | 14 prompts (5 buyer_roles × 7 entities subset)                |
 | [`src/data/query-acquisition/citations.log.yaml`](../src/data/query-acquisition/citations.log.yaml)                                     | V1.0 placeholder (empty)                                      |
@@ -73,4 +73,4 @@ The audit verifies:
 
 ## License
 
-Internal — KAIPU Industrial Blades. Not for redistribution.
+Internal — Custom Machine Knives. Not for redistribution.

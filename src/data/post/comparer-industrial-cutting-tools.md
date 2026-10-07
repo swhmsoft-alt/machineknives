@@ -6,7 +6,7 @@ category: 'selection-guide'
 type: 'article'
 tags:
   - 'industrial cutting'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 image: '/images/og/comparer-industrial-cutting-tools.webp'
 metadata:
   description: 'Compare industrial cutting tools to optimize manufacturing efficiency. Learn how to choose between high-speed steel, carbide, and coated blades today.'

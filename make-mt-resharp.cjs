@@ -15,10 +15,10 @@ tags:
   - blade service
   - outsource re-grind
   - CBN grinding
-author: 'KAIPU Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'How to outsource industrial blade re-sharpening: specification, deliverables, SLA, the four questions to ask a re-grind shop before you ship your first knife.'
-  canonical: 'https://www.machine-knives.net/maintenance-resharpening-service/'
+  canonical: 'https://www.custommachineknives.com/maintenance-resharpening-service/'
 ---
 
 Re-sharpening an industrial blade in-house requires a CNC grinder, a skilled operator, a controlled SOP, and a metrology station. For most converting and fabrication operations, the volume does not justify the overhead. Outsourcing to a specialised re-grind shop is the right answer — but only if you specify the deliverable correctly and audit the supplier on the first five knives.

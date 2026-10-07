@@ -7,7 +7,7 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'TiN coating'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Definition of TiN (Titanium Nitride) PVD coating for industrial blades: a gold-coloured ceramic coating that reduces friction and extends knife life 20–30 % on general-purpose slitting and shearing.'
   canonical: 'https://custommachineknives.com/blog/glossary/glossary-tin-coating/'

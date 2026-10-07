@@ -13,7 +13,7 @@ tags:
   - 'DC53'
   - 'tungsten carbide'
   - 'YG15'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Crusher blades take the largest impact loads in industrial cutting. A 30 mm M16 nut in a granulator feed will shatter a D2 blade in 200 cycles. This guide covers jaw, hammer, rotary and impact crusher blades for stone, ore, scrap and ASR.'
   canonical: 'https://custommachineknives.com/blog/selection-guide/selection-guide-crusher-blade/'
@@ -103,10 +103,10 @@ A measured rotation protocol typically doubles the effective life per blade. Cos
 
 > "[Rotor knife / hammer / anvil], [L] × [W] × [T] mm, [D2 / M2 HSS / DC53 / YG8 / YG10X / YG15] per substrate table, [vacuum heat-treated / sintered] to HRC [per grade table], 5-point hardness file test, edge chamfer [0.20–0.50] mm on cutting edge, [2-edge / 4-edge / 6-edge reversible]. Bolt pattern: [drawing], torque [120–700] Nm with calibrated wrench, Nord-Lock washers required. Mill certificate with cobalt content (carbide) or ladle chemistry (tool steel) required."
 
-For broader impact-loaded blade selection, see [How to choose a granulator knife](/blog/selection-guide/selection-guide-granulator-knife/) and [The Industrial Knives 5-Factor Blade Selection Framework](/blog/engineering/5-factor-blade-selection-framework/).
+For broader impact-loaded blade selection, see [How to choose a granulator knife](/blog/selection-guide/selection-guide-granulator-knife/) and [The Custom Machine Knives 5-Factor Blade Selection Framework](/blog/engineering/5-factor-blade-selection-framework/).
 
-For a written crusher blade specification, send the crusher type, substrate, throughput, current blade spec and current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
+For a written crusher blade specification, send the crusher type, substrate, throughput, current blade spec and current service life to [info@custommachineknives.com](mailto:info@custommachineknives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 
 **About the author**
 
-*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Ships to recyclers, quarries and OEMs across four continents.*
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. Ships to recyclers, quarries and OEMs across four continents.*

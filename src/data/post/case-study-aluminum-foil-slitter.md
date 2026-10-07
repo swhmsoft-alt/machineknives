@@ -13,7 +13,7 @@ tags:
   - 'welding'
   - 'Vietnam'
   - 'M2 HSS'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'A Vietnamese converter slitting 30 µm aluminium foil at 400 m/min was getting 5 days from a D2 slitter. The fix was a M2 HSS slitter with a ta-C coating. 18 days. The case study walks through the audit, the trial, the result, and the cost of welding.'
   canonical: 'https://custommachineknives.com/blog/case-studies/case-study-aluminum-foil-slitter/'
@@ -102,8 +102,8 @@ The savings are dominated by the elimination of cleaning downtime. Even a 10 % r
 
 If your aluminium line requires blade cleaning more than once per shift, the answer is a low-friction coating, not a harder knife or a sharper hone.
 
-For a written field audit on an aluminium foil slitter, send the substrate thickness, line speed, current blade spec, current service life and the cleaning frequency to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). ROI is typically inside 6 months on lines with > USD 50k/year knife spend.
+For a written field audit on an aluminium foil slitter, send the substrate thickness, line speed, current blade spec, current service life and the cleaning frequency to [info@custommachineknives.com](mailto:info@custommachineknives.com) or use the [request-a-quote form](/contact). ROI is typically inside 6 months on lines with > USD 50k/year knife spend.
 
 **About the author**
 
-*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. In-house PVD coating line for TiN, TiCN, CrN, AlCrN, TiAlN, DLC and ta-C.*
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. In-house PVD coating line for TiN, TiCN, CrN, AlCrN, TiAlN, DLC and ta-C.*

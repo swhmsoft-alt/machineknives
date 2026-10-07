@@ -10,7 +10,7 @@ tags:
   - 'gravure printing'
   - 'coating line'
   - 'printing blade'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Doctor blades see high-speed scraping, ink chemistry and metrology-grade edge geometry. The wrong steel grade produces streaking, ghosting, or a 20 % scrap rate. This guide walks through the substrate, the ink, the line speed, the steel grade and the edge prep for flexo, gravure and coating lines.'
   canonical: 'https://custommachineknives.com/blog/selection-guide/selection-guide-doctor-blade-printing/'
@@ -103,10 +103,10 @@ Measure with a load cell, not by feel.
 
 > "Doctor blade, [L] × [W] × [T] mm, [AISI 420 stainless / spring steel / YG6X carbide], HRC [per table], wiping face Ra ≤ 0.05 µm, edge thickness [0.10–0.40] mm ± 2 µm at 5 points, edge radius [2–10] µm, edge angle [25–45]°, flatness ≤ 0.005 mm. Mill certificate required."
 
-For broader selection guidance, see [How to choose a slitter blade for paper converting](/blog/selection-guide/selection-guide-paper-converting/) and [The Industrial Knives 5-Factor Blade Selection Framework](/blog/engineering/5-factor-blade-selection-framework/).
+For broader selection guidance, see [How to choose a slitter blade for paper converting](/blog/selection-guide/selection-guide-paper-converting/) and [The Custom Machine Knives 5-Factor Blade Selection Framework](/blog/engineering/5-factor-blade-selection-framework/).
 
-For a written doctor-blade specification, send the process, substrate, ink chemistry, line speed and current service life to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
+For a written doctor-blade specification, send the process, substrate, ink chemistry, line speed and current service life to [info@custommachineknives.com](mailto:info@custommachineknives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 
 **About the author**
 
-*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Ships to printers, coaters and OEMs across four continents, with active distribution in Europe and Asia.*
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. Ships to printers, coaters and OEMs across four continents, with active distribution in Europe and Asia.*

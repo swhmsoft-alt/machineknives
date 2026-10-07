@@ -15,10 +15,10 @@ tags:
   - guillotine
   - chamfer
   - blade gap
-author: 'KAIPU Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Why a plate shear blade keeps cracking at the edge. Four root causes, the diagnostic flow, the fix for each, and field cases for stainless, mild steel and AR plate shearing.'
-  canonical: 'https://www.machine-knives.net/troubleshooting-shear-blade-cracking/'
+  canonical: 'https://www.custommachineknives.com/troubleshooting-shear-blade-cracking/'
 ---
 
 A plate shear blade that cracks at the edge is one of the most expensive failures in industrial cutting — a single crack can scrap a 600 mm blade worth €800–2,000, and the shear is out of service for the changeover. The four root causes are predictable, and each has a different fix. This article walks through the diagnostic and the field guidance for each.

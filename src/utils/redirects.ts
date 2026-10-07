@@ -109,8 +109,8 @@ export const buildRedirectMap = (): Record<string, string> => {
   const redirects: Record<string, string> = {};
 
   // Per-post (/<slug>/) and per-category (/category/<slug>/) legacy redirects
-  // intentionally removed: industrial-knives.net is a brand-new site (rebrand
-  // + relaunch on 2026-09-27, commit 3edc968), no external links or indexed
+  // intentionally removed: rebrand + relaunch on 2026-09-27 (commit 3edc968)
+  // consolidated all paths to /blog/<category>/<slug>/; no external links or
   // URLs reference the old flat paths, and 301s on internal links are an SEO
   // trust penalty for new domains. Body content was rewritten to use the
   // canonical /blog/<category>/<slug>/ form, so the page is reachable directly

@@ -17,10 +17,10 @@ tags:
   - YG15
   - YG10X
   - Germany
-author: 'KAIPU Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Case study: granulator rotor knife upgrade for automotive plastic recycling in Germany. From 3 days to 22 days per rotor knife set. Diagnostic, trial, ROI, downstream impact on screen wear.'
-  canonical: 'https://www.machine-knives.net/case-study-granulator-rotor-automotive/'
+  canonical: 'https://www.custommachineknives.com/case-study-granulator-rotor-automotive/'
 ---
 
 In early 2025 our German distributor in Stuttgart called about a recycler processing automotive shredder residue (ASR) — the light fraction left after a car is shredded and the metals are recovered. The customer was getting 3 days from a D2 rotor knife and 5 days from a D2 bed knife, with frequent chipping on the rotor. The line was a 250 kW granulator running 24/7, throughput 1,800 kg/h. Downtime for knife changes was 25 minutes per event, twice per week, costing €900 per change in lost margin. This case study walks through the audit, the trial, the result, and a downstream effect on screen wear that we did not predict.

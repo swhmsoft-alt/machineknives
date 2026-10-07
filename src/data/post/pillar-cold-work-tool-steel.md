@@ -14,7 +14,7 @@ tags:
   - slitter blade
   - industrial knife
   - die steel
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Cold-work tool steel selection guide — AISI D-series, A-series, O1, DC53 chemistry, heat treatment and selection. Compare wear life, toughness and hardenability for industrial blades.'
   canonical: 'https://custommachineknives.com/blog/selection-guide/pillar-cold-work-tool-steel/'

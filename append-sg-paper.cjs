@@ -50,7 +50,7 @@ For the runnable coating comparison, see [Coating Comparison Table](/coatings-co
 
 ---
 
-## Field cases from the KAIPU shop
+## Field cases from the Custom Machine Knives shop
 
 **Case 1: Tissue slitter, 320 mm, 1,200 m/min, 18 gsm.** Customer was getting 11 days from a D2 slitter. Failure mode: thermal fatigue micro-cracking at the edge from day 3. We quoted M2 HSS, HRC 64, 15 µm hone, TiAlN coating. Service life: 31 days. The M2's hot hardness + the TiAlN coating dropped the edge temperature by ~ 80 °C.
 
@@ -66,13 +66,13 @@ For a paper slitting blade on a paper converting line:
 
 > "Slitter, [OD] × [ID] × [thickness] mm, AISI D2 or SKD11 (or AISI M2 HSS at > 500 m/min), vacuum heat-treated to HRC 60–64 ± 1, 5-point file test, parallel ≤ 0.005 mm, surface finish Ra ≤ 0.4 µm, edge hone [5–15] µm radius, clearance angle [18–30]° per substrate. Substrate: [paper family / GSM / caliper]. Line speed: [X] m/min. Re-grind SOP: aluminium-oxide or CBN, 25 m/s, 0.002 mm infeed, flood coolant. Mill certificate with ladle chemistry required."
 
-For the broader five-factor selection framework, see [The KAIPU 5-Factor Blade Selection Framework](/kaipu-5-factor-blade-selection-framework/). For a runnable steel grade cross-reference, see [Material Grade Converter](/material-grade-converter/). For a head-to-head on HSS, see [M2 vs M4 HSS](/m2-vs-m4-hss/).
+For the broader five-factor selection framework, see [The Custom Machine Knives 5-Factor Blade Selection Framework](/5-factor-blade-selection-framework/). For a runnable steel grade cross-reference, see [Material Grade Converter](/material-grade-converter/). For a head-to-head on HSS, see [M2 vs M4 HSS](/m2-vs-m4-hss/).
 
-For a written paper-converting specification, send the part drawing, the substrate, the line speed and the current service life to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
+For a written paper-converting specification, send the part drawing, the substrate, the line speed and the current service life to [[email protected]](mailto:[email protected]) or use the [request-a-quote form](/contact). Specification, FOB quote and lead time within one business day.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.*
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.*
 `;
 fs.appendFileSync(target, content, 'utf8');
 console.log('Appended: ' + Buffer.byteLength(content, 'utf8') + ' bytes');

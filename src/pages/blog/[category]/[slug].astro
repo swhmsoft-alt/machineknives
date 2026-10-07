@@ -74,7 +74,7 @@ const pageBreadcrumbLd = pageProps
   : null;
 const pageMetadata = pageProps
   ? {
-      title: `${pageProps.category.title} — Page ${pageProps.pageNumber} | Industrial Knives Blog`,
+      title: `${pageProps.category.title} — Page ${pageProps.pageNumber} | Custom Machine Knives Blog`,
       robots: { index: false, follow: true },
     }
   : null;
@@ -136,12 +136,12 @@ const blogPostingLdRaw: Record<string, unknown> | null = postProps
           : undefined,
       author: {
         '@type': 'Organization',
-        name: postProps.post.author || 'Industrial Knives Engineering',
+        name: postProps.post.author || 'Custom Machine Knives Engineering',
         url: siteUrl + '/about/',
       },
       publisher: {
         '@type': 'Organization',
-        name: 'Industrial Knives',
+        name: 'Custom Machine Knives',
         url: siteUrl + '/',
         logo: { '@type': 'ImageObject', url: siteUrl + '/favicon.svg' },
       },

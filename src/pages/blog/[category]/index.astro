@@ -76,13 +76,13 @@ const breadcrumbLd = {
 
 const pageDescription =
   topic?.contentType === 'glossary'
-    ? `Reference entries in the ${category.title} topic — concise, AI-citable definitions curated by Industrial Knives engineering.`
+    ? `Reference entries in the ${category.title} topic — concise, AI-citable definitions curated by Custom Machine Knives engineering.`
     : topic?.contentType === 'comparison'
-      ? `${category.title} — a side-by-side reference table for industrial blade specification. Curated and maintained by Industrial Knives engineering.`
+      ? `${category.title} — a side-by-side reference table for industrial blade specification. Curated and maintained by Custom Machine Knives engineering.`
       : `Articles in the ${category.title} topic — engineering content for industrial blade selection, application and performance.`;
 
 const metadata = {
-  title: `${category.title} | Industrial Knives Blog`,
+  title: `${category.title} | Custom Machine Knives Blog`,
   description: pageDescription,
   robots: {
     index: blogCategoryRobots?.index,
@@ -134,7 +134,7 @@ const metadata = {
   >
     <Fragment slot="title">Need help applying this to your line?</Fragment>
     <Fragment slot="subtitle">
-      Send a drawing, a worn sample, or a written specification. Industrial Knives engineering responds with material grade,
+      Send a drawing, a worn sample, or a written specification. Custom Machine Knives engineering responds with material grade,
       hardness, tolerance and lead time within one business day.
     </Fragment>
   </CallToAction>

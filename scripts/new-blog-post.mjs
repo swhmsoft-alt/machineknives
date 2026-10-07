@@ -28,7 +28,7 @@ const ROOT = process.cwd();
 const POSTS_DIR = path.join(ROOT, 'src', 'data', 'post');
 const OG_GENERATOR = path.join(ROOT, 'scripts', 'og-image-generator.mjs');
 
-const BRAND_SUFFIX = ' \u2014 Industrial Knives';
+const BRAND_SUFFIX = ' \u2014 Custom Machine Knives';
 const BRAND_SUFFIX_LEN = 20;
 const TITLE_MIN_FULL = 50;
 const TITLE_MAX_FULL = 60;
@@ -77,7 +77,7 @@ Optional flags:
   --type     "<article|glossary|comparison>"  default: article (auto-guessed from title)
   --excerpt  "<120–160 chars>"               if omitted, file is created with a TODO marker
   --slug     "<kebab-case>"                   default: derived from title
-  --author   "<name>"                          default: "Industrial Knives Engineering"
+  --author   "<name>"                          default: "Custom Machine Knives Engineering"
   --tags     "<comma,separated,tags>"          default: empty
   --draft                                    mark as draft (noindex)
   --skip-og                                  don't auto-trigger OG generator
@@ -341,8 +341,8 @@ async function runInteractive(opts) {
 
   // 5. Author — skip if already set
   if (!opts.author) {
-    const author = (await rl('? Author [Industrial Knives Engineering]: ')).trim();
-    opts.author = author || 'Industrial Knives Engineering';
+    const author = (await rl('? Author [Custom Machine Knives Engineering]: ')).trim();
+    opts.author = author || 'Custom Machine Knives Engineering';
   }
   console.log(`  Author:   ${opts.author}`);
 
@@ -371,7 +371,7 @@ function runNonInteractive(opts) {
   const excerpt = validateExcerpt(opts.excerpt);
   const slug = opts.slug ? slugify(opts.slug) : slugify(title);
   if (!slug) fail('Could not derive slug from title. Pass --slug "<kebab-case>".');
-  const author = opts.author || 'Industrial Knives Engineering';
+  const author = opts.author || 'Custom Machine Knives Engineering';
   const tags = opts.tags
     ? String(opts.tags).split(',').map((s) => s.trim()).filter(Boolean)
     : [];
@@ -389,7 +389,7 @@ function runNonInteractive(opts) {
     image: `/images/og/${slug}.webp`,
     metadata: {
       description: excerpt || '{{TODO: see excerpt}}',
-      canonical: `https://www.industrial-knives.net/${canonicalPath}`,
+      canonical: `https://www.custommachineknives.com/${canonicalPath}`,
     },
   };
   if (isDraft) fm.draft = true;

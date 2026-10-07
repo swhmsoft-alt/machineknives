@@ -10,7 +10,7 @@ tags:
   - high speed steel
   - W6Mo5Cr4V2
   - '1.3343'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'AISI M2 high-speed steel — chemistry, hardness, heat treatment, applications and cross-reference. The workhorse HSS grade for industrial slitter and shear blades.'
   canonical: 'https://custommachineknives.com/blog/materials-encyclopedia/materials-encyclopedia-m2-hss/'

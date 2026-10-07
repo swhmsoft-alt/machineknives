@@ -12,7 +12,7 @@ tags:
   - Cr12Mo1V1
   - cold work tool steel
   - industrial knives
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'D2 vs SKD11 for industrial machine knives. Chemistry, hardenability, dimensional stability, edge retention and sourcing. The honest answer to whether they are interchangeable.'
   canonical: 'https://custommachineknives.com/blog/material-comparison/d2-vs-skd11/'
@@ -88,7 +88,7 @@ If your heat-treat supplier cannot show you a tempering chart with a hardness re
 
 ---
 
-## Field cases from the Industrial Knives shop
+## Field cases from the Custom Machine Knives shop
 
 **Case 1: Tissue slitter, 320 × 25 × 4 mm.** Customer was getting 11 days of life from generic D2 bed knives. We quoted the same geometry in Japanese-mill SKD11 with vacuum heat treatment to HRC 60–61. Service life went to 34 days at the same line speed. The steel chemistry was within 0.1 % of the original D2 spec — the win came from cleaner stock and a more consistent heat-treat.
 
@@ -116,10 +116,10 @@ Not the right steel for: high-temperature cutting above ~ 400 °C at the edge (M
 
 For an industrial machine knife at HRC 58–62, the choice between D2 and SKD11 is less important than the choice of mill, the heat treatment and the edge preparation. If the steel is from a reputable mill, vacuum heat-treated to a documented tempering chart, and honed to the substrate-appropriate radius, both grades will deliver the same life. For a tight-tolerance drawing, write the spec as "AISI D2 or JIS SKD11, mill-certified, vacuum heat-treated to HRC 60 ± 1, decarburisation ≤ 0.1 mm/side" — and let your supplier cross-reference the two.
 
-For a runnable cross-reference table, see [Material Grade Converter: ASTM / JIS / DIN / GB](/blog/material-grade-converter/material-grade-converter/). For the broader five-factor methodology, see [The Industrial Knives 5-Factor Blade Selection Framework](/blog/engineering/5-factor-blade-selection-framework/).
+For a runnable cross-reference table, see [Material Grade Converter: ASTM / JIS / DIN / GB](/blog/material-grade-converter/material-grade-converter/). For the broader five-factor methodology, see [The Custom Machine Knives 5-Factor Blade Selection Framework](/blog/engineering/5-factor-blade-selection-framework/).
 
-For a written D2 / SKD11 quotation, send the part drawing to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and indicative lead time within one business day.
+For a written D2 / SKD11 quotation, send the part drawing to [info@custommachineknives.com](mailto:info@custommachineknives.com) or use the [request-a-quote form](/contact). Specification, FOB quote and indicative lead time within one business day.
 
 **About the author**
 
-*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.*
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.*

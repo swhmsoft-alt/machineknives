@@ -10,7 +10,7 @@ tags:
   - blade failure
   - diagnosis
   - troubleshooting
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Edge chipping on a paper slitter: 10-minute field diagnostic flowchart. Visual inspection, dimensional check, hardness test, line-side audit, corrective action by root cause.'
   canonical: 'https://custommachineknives.com/blog/troubleshooting/troubleshooting-edge-chipping-paper-slitter/'
@@ -126,10 +126,10 @@ If the visual, dimensional, hardness, line-side and re-grind checks all pass, an
 - **Heat-treat that passed the file test but failed in service.** Request a metallographic check from the heat-treat supplier.
 - **Knife design.** A knife that is too thin for the substrate, or has too aggressive a rake angle, will chip. Send the drawing to the supplier for review.
 
-For a written chip diagnosis on a specific knife, send the chipped knife, the line log and the substrate batch records to [info@industrial-knives.com](mailto:info@industrial-knives.com) or use the [request-a-quote form](/contact). Diagnosis within 24 hours.
+For a written chip diagnosis on a specific knife, send the chipped knife, the line log and the substrate batch records to [info@custommachineknives.com](mailto:info@custommachineknives.com) or use the [request-a-quote form](/contact). Diagnosis within 24 hours.
 
 For the broader troubleshooting framework, see [Why is my blade wearing out too fast?](/blog/troubleshooting/troubleshooting-premature-wear/) and Chipping (glossary entry).
 
 **About the author**
 
-*Industrial Knives Engineering is the technical team at Industrial Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.*
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. Ships to converters, recyclers and OEMs across four continents.*

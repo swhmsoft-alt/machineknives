@@ -7,7 +7,7 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'hardness file test'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Definition of the hardness file test in industrial blade quality control: a quick, portable method for verifying blade hardness using calibrated files, the 5-point convention, and the limits of the test.'
   canonical: 'https://custommachineknives.com/blog/glossary/glossary-hardness-file-test/'

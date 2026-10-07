@@ -7,7 +7,7 @@ type: 'glossary'
 entityType: 'term'
 tags:
   - 'relief'
-author: 'Industrial Knives Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'Definition of relief in industrial cutting: the surface behind the cutting edge that prevents the body of the knife from rubbing on the cut surface.'
   canonical: 'https://custommachineknives.com/blog/glossary/glossary-relief/'

@@ -17,10 +17,10 @@ tags:
   - DC53
   - M2 HSS
   - tungsten carbide
-author: 'KAIPU Engineering'
+author: 'Custom Machine Knives Engineering'
 metadata:
   description: 'How to choose a granulator knife for plastics recycling: rotor / bed / screen / wear-strip. Substrate by polymer family, grade, geometry, edge prep and field guidance.'
-  canonical: 'https://www.machine-knives.net/selection-guide-granulator-knife/'
+  canonical: 'https://www.custommachineknives.com/selection-guide-granulator-knife/'
 ---
 
 Granulator knives are the most-impact-loaded industrial blades in routine use. They see contamination (metal, sand, foreign polymer), abrasive fillers (glass fibre, mineral, carbon black), and rotor speeds of 400–800 rpm. Get the grade, the geometry or the gap wrong, and the knife chips in days. Get them right, and the same knife runs 3–6 months.

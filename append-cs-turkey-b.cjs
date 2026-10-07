@@ -65,11 +65,11 @@ If your line is chipping shear blades on stainless plate, the chamfer is almost 
 
 ## Want us to audit your line?
 
-For a written field audit on a plate shear line, send the substrate, the plate thickness, the current knife spec and the current service life to [engineering@kaipu-industrial.com](mailto:engineering@kaipu-industrial.com) or use the [request-a-quote form](/contact). A typical audit takes 1 day on site, returns a written diagnosis and a trial protocol, and ships the trial knives within 3 weeks. ROI is typically inside 6 months on lines with > USD 30k/year knife spend.
+For a written field audit on a plate shear line, send the substrate, the plate thickness, the current knife spec and the current service life to [[email protected]](mailto:[email protected]) or use the [request-a-quote form](/contact). A typical audit takes 1 day on site, returns a written diagnosis and a trial protocol, and ships the trial knives within 3 weeks. ROI is typically inside 6 months on lines with > USD 30k/year knife spend.
 
 **About the author**
 
-*KAIPU Engineering is the technical team at KAIPU Industrial Blades, in operation since 1998. ISO 9001:2015 certified. The team ships to converters, recyclers and OEMs across four continents, with active distribution in Turkey, Poland, Germany, Italy, India, Vietnam and Brazil.*
+*Custom Machine Knives Engineering is the technical team at Custom Machine Knives, in operation since 1998. ISO 9001:2015 certified. The team ships to converters, recyclers and OEMs across four continents, with active distribution in Turkey, Poland, Germany, Italy, India, Vietnam and Brazil.*
 `;
 fs.appendFileSync(target, content, 'utf8');
 console.log('Appended: ' + Buffer.byteLength(content, 'utf8') + ' bytes');
