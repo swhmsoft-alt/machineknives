@@ -1,0 +1,11 @@
+Result: PASS 9/9
+
+/products/ OK Industrial Machine Knives & Blades — Custom Machine Knives
+/products/circular/ OK Circular Slitter Blades — Custom Machine Knives
+/products/granulator/ OK Granulator Knives — Custom Machine Knives
+/products/custom/ OK Custom Industrial Blades — Custom Machine Knives
+/industries/ OK Industrial Machine Knives by Industry — Custom Machine Knives
+/industries/printing-packaging/ OK Printing & Packaging Blades — Custom Machine Knives
+/services/ OK Custom Blade Manufacturing Services — Custom Machine Knives
+/about/ OK About Custom Machine Knives
+/contact/ OK Contact Custom Machine Knives

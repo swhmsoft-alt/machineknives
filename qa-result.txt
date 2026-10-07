@@ -1,0 +1,12 @@
+Result: PASS fullPass=10/10 T=10 D=10 H=10
+
+/ T=OK D=OK H=OK
+/products/ T=OK D=OK H=OK
+/products/circular/ T=OK D=OK H=OK
+/products/granulator/ T=OK D=OK H=OK
+/products/custom/ T=OK D=OK H=OK
+/industries/ T=OK D=OK H=OK
+/industries/printing-packaging/ T=OK D=OK H=OK
+/services/ T=OK D=OK H=OK
+/about/ T=OK D=OK H=OK
+/contact/ T=OK D=OK H=OK

@@ -24,6 +24,56 @@ const CATEGORY_HERO_IMAGES: Record<Level1Category, string> = {
   granulator: '/images/products/granulator-knives.webp',
   custom: '/images/products/custom-blades.webp',
 };
+
+/**
+ * SEO metadata overrides for the six level-1 category landing pages.
+ *
+ * These three records drive the page-level `<title>` (via the Layout's
+ * `metadata.title`), the visible `<h1>` (via the Hero widget), and the
+ * `<meta name="description">`. They are intentionally decoupled from
+ * `getCategoryMeta()` in ~/utils/products.ts so that:
+ *
+ *   1. The on-page nav / category-pill labels can stay short
+ *      (e.g. "Granulator Knives").
+ *   2. The SEO title can target the exact-keyword pattern required by the
+ *      site-wide Entity architecture without polluting the registry.
+ *
+ * Level-2 / level-3 subcategory pages fall back to the existing
+ * `${categoryPageTitle} for Industrial Cutting` H1 pattern and
+ * `${categoryPageTitle} — Custom Machine Knives` title pattern.
+ */
+const LEVEL1_SEO_TITLE: Record<Level1Category, string> = {
+  circular: 'Circular Slitter Blades',
+  straight: 'Straight Machine Knives',
+  serrated: 'Serrated Industrial Blades',
+  shear: 'Industrial Shear Blades',
+  granulator: 'Granulator Knives',
+  custom: 'Custom Industrial Blades',
+};
+
+const LEVEL1_H1: Record<Level1Category, string> = {
+  circular: 'Circular Slitter Blades & Industrial Knives',
+  straight: 'Straight Machine Knives & Industrial Blades',
+  serrated: 'Serrated Industrial Blades & Machine Knives',
+  shear: 'Industrial Shear Blades & Guillotine Knives',
+  granulator: 'Granulator Knives & Rotor Blades',
+  custom: 'Custom Industrial Blades & Machine Knives',
+};
+
+const LEVEL1_SEO_DESCRIPTION: Record<Level1Category, string> = {
+  circular:
+    'Custom circular slitter blades for paper, film, foil and tape converting. Precision-ground D2, SKD11 and M2 HSS knives made to your size and specification.',
+  straight:
+    'Straight machine knives for slitting, sheeting, tissue and converting lines. Custom lengths, bevels, materials and tolerances manufactured to drawing.',
+  serrated:
+    'Serrated industrial blades for perforating, tear-strip and cut-to-length applications. Custom tooth profiles, 6–32 TPI, materials and dimensions made to specification.',
+  shear:
+    'Custom shear blades for guillotine, swing-beam and plate cutting. D2, H13 and 6CrW2Si options engineered for mild steel, stainless and aluminum plate up to 12 mm.',
+  granulator:
+    'Granulator knives with rotor and stator configurations. M2 HSS, D2 and tungsten carbide grades; reversible multi-edge designs. Custom geometry per your drawing.',
+  custom:
+    'Custom machine knives manufactured from your drawing, CAD file or worn sample. Specify geometry, material, hardness and tolerance for your application.',
+};
 import {
   buildProductCategoryBreadcrumb,
   buildProductDetailBreadcrumb,
@@ -138,6 +188,18 @@ let categoryPageTagline = '';
 let categoryPageIcon = '';
 let categoryBreadcrumb: BreadcrumbItem[] = [];
 let productBreadcrumb: BreadcrumbItem[] = [];
+// Hoisted to module scope so the category-page template can branch on
+// level-1 vs subcategory without re-deriving it. Only assigned inside the
+// `else { ... }` branch below; the default of `false` is never observed
+// because the template only renders for category pages.
+let isLevel1 = false;
+// Same hoisting rationale as `isLevel1`: `LEVEL1_SEO_TITLE[l1]` and
+// friends need to be reachable from the template, but the original code
+// declared `l1` inside the `else { ... }` branch. Declared as
+// `Level1Category` (non-nullable) because the template only renders for
+// category paths where `else` ran; the initial `circular` value is
+// overwritten before any read.
+let l1: Level1Category = 'circular';
 
 if (props.kind === 'product') {
   const rendered = await render(props.product);
@@ -151,9 +213,9 @@ if (props.kind === 'product') {
   );
 } else {
   const allProducts = await getCollection('product');
-  const l1: Level1Category = props.level1;
+  l1 = props.level1;
   const subs: string[] = props.subcategories;
-  const isLevel1 = subs.length === 0;
+  isLevel1 = subs.length === 0;
   const meta = getCategoryMeta(l1);
 
   categoryLevel1 = l1;
@@ -269,10 +331,16 @@ if (productEntry) {
 ---
 
 {props.kind === 'category' && categoryLevel1 ? (
-  <Layout metadata={{ title: `${categoryPageTitle} — Custom Machine Knives`, description: categoryPageSubtitle }} breadcrumb={categoryBreadcrumb}>
+  <Layout
+    metadata={{
+      title: isLevel1 ? LEVEL1_SEO_TITLE[l1] : `${categoryPageTitle} — Custom Machine Knives`,
+      description: isLevel1 ? LEVEL1_SEO_DESCRIPTION[l1] : categoryPageSubtitle,
+    }}
+    breadcrumb={categoryBreadcrumb}
+  >
   <Hero
     tagline={categoryPageTagline}
-    title={`${categoryPageTitle} for Industrial Cutting`}
+    title={isLevel1 ? LEVEL1_H1[l1] : `${categoryPageTitle} for Industrial Cutting`}
     subtitle={categoryPageSubtitle}
     actions={[
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:clipboard-text' },

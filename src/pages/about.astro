@@ -10,7 +10,8 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 const metadata = {
   title: 'About Custom Machine Knives',
   description:
-    'Custom Machine Knives —precision machine knife manufacturer since 1998. ISO 9001 certified factory, in-house heat treatment and PVD coating.',
+    'Company profile. ISO 9001:2015 certified manufacturer since 1998. 25+ years, 40+ countries served, 600+ standard SKUs, 120K parts annual capacity.',
+  ignoreTitleTemplate: true,
 };
 
 const heroImage = { src: "/images/about/manufacturing-facility-overview.webp", alt: "Custom Machine Knives manufacturing facility overview" };
@@ -19,7 +20,7 @@ const heroImage = { src: "/images/about/manufacturing-facility-overview.webp", a
 <Layout metadata={metadata}>
   <Hero
     tagline="About Custom Machine Knives"
-    title="Twenty-Five Years of Cutting Edge Engineering"
+    title="About Custom Machine Knives"
     subtitle="A focused manufacturer of industrial machine knives, exporting to converters, recyclers and OEMs across four continents. Privately held, ISO 9001 certified, and engineering-led."
     actions={[
       { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:mail' },

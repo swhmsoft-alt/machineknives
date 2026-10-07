@@ -1,0 +1,1224 @@
+可以。这个站现在已经不是“从零做 SEO Meta”，而是**已有一套比较完整的产品 / 行业 / 材料 / 工艺实体结构，需要把 Meta、H1、页面意图重新对齐**。
+
+我实际检查了当前首页、Products Hub、6 个产品分类以及 Solutions / Industries 页面。当前首页的核心定位已经比较明确：**custom machine knives + industrial cutting tools + manufacturer + RFQ**；Products 页则是 6 个 blade families。([定制刀具][1])
+
+另外，Google 当前明确强调：标题和 headings 本身属于帮助用户理解页面主题的主要内容；AI 生成内容、包括 title/meta/structured data，也需要人工审核准确性。([Google for Developers][2])
+
+下面这套可以直接作为 **Cline 执行规范**。
+
+---
+
+# 一、先确定整个网站的 SEO Entity 架构
+
+## 1. 网站 Primary Entity
+
+**Custom Machine Knives**
+
+核心实体：
+
+> **Custom Machine Knives = manufacturer of custom industrial machine knives and blades**
+
+不是：
+
+* generic knife supplier
+* kitchen knives
+* cutting tools broadly
+* CNC machining company
+* industrial blades marketplace
+
+---
+
+## 2. 一级关键词层级
+
+建议 Cline 严格按照下面的层级使用：
+
+| 层级        | 核心词                                       | 主要页面                  |
+| --------- | ----------------------------------------- | --------------------- |
+| Primary   | custom machine knives                     | Homepage              |
+| Primary   | industrial machine knives                 | Products Hub          |
+| Secondary | custom industrial blades                  | Custom Blades         |
+| Product   | circular blades / circular slitter blades | Circular              |
+| Product   | straight blades / straight machine knives | Straight              |
+| Product   | serrated blades                           | Serrated              |
+| Product   | shear blades / shear knives               | Shear                 |
+| Product   | granulator knives / granulator blades     | Granulator            |
+| Industry  | packaging blades                          | Printing & Packaging  |
+| Industry  | paper & tissue blades                     | Paper & Tissue        |
+| Industry  | food processing blades                    | Food Processing       |
+| Industry  | recycling blades                          | Plastics Recycling    |
+| Industry  | converting blades                         | Converting            |
+| Industry  | metalworking blades                       | Metalworking          |
+| Service   | custom blade manufacturing                | Custom / Services     |
+| Material  | D2, SKD11, M2 HSS, H13, carbide           | Material pages/guides |
+
+### 一个重要原则
+
+**不要让所有页面都同时优化：**
+
+> custom machine knives + industrial blades + industrial knives + custom blades + manufacturer
+
+否则 Google / AI 很难判断哪个页面是哪个实体的最佳代表。
+
+应该形成：
+
+```text
+Homepage
+   ↓
+Custom Machine Knives
+   ↓
+Products
+   ↓
+Blade Type
+   ↓
+Specific Product
+
+同时：
+
+Homepage
+   ↓
+Industrial Applications
+   ↓
+Industry
+   ↓
+Specific Application
+```
+
+---
+
+# 二、Meta Title 总规则
+
+## 推荐长度
+
+不要机械地执行“60 characters”。
+
+Cline 应采用：
+
+> **55–65 characters as a normal target, but optimize for meaning and SERP truncation rather than character count alone.**
+
+Google 并不是简单按照字符数截断 title；标题显示本身可能根据设备和页面内容动态生成。Google 官方也将 title links 作为 Search appearance 的独立部分。([Google for Developers][3])
+
+所以：
+
+### 优先级
+
+```text
+1. Search intent
+2. Entity clarity
+3. Keyword prominence
+4. Differentiation
+5. CTR value
+6. Length
+```
+
+而不是：
+
+```text
+60 characters > everything else
+```
+
+---
+
+# 三、Title 的统一模板
+
+## A. Homepage
+
+模板：
+
+```text
+[Primary Entity] | [Core Value Proposition] | [Brand]
+```
+
+推荐：
+
+```text
+Custom Machine Knives | Industrial Blades Manufacturer
+```
+
+如果品牌需要出现：
+
+```text
+Custom Machine Knives | Industrial Blades Manufacturer
+```
+
+**不建议：**
+
+```text
+Custom Machine Knives — Precision Machine Knives — Custom Machine Knives
+```
+
+你当前首页就是类似这种重复结构。当前页面 title 已出现品牌 / machine knives 的重复。([定制刀具][1])
+
+### 推荐最终版本
+
+**Title**
+
+> Custom Machine Knives | Industrial Blades Manufacturer
+
+**H1**
+
+> Custom Industrial Machine Knives & Blades
+
+**Meta Description**
+
+> Custom industrial machine knives and blades manufactured to your drawing or sample. D2, SKD11, M2 HSS and carbide options with precision grinding and QC.
+
+这里故意加入：
+
+* custom
+* industrial
+* machine knives
+* blades
+* drawing
+* sample
+* material
+* manufacturing
+
+因为这同时服务：
+
+**SEO + AI Entity understanding + RFQ intent**
+
+---
+
+# 四、Homepage H1 不要再用现在的
+
+当前：
+
+> Precision Engineered Machine Knives
+
+这个 H1 本身不错，但**SEO Entity 不够明确**。
+
+Google 当前强调页面标题和 headings 应帮助用户理解页面主题。([Google for Developers][4])
+
+推荐：
+
+# Custom Industrial Machine Knives & Blades
+
+下面副标题：
+
+> Precision-manufactured cutting tools built to your drawing, sample or application requirements.
+
+这样：
+
+```text
+H1 = Entity
+Subheadline = Value proposition
+```
+
+不要让 H1 承担所有关键词。
+
+---
+
+# 五、Products Hub
+
+当前：
+
+> Industrial Blades by Category
+
+这个方向正确，但可以进一步明确商业实体。
+
+## 推荐
+
+**URL**
+
+```text
+/products/
+```
+
+### Title
+
+> Industrial Machine Knives & Blades | Custom Product Catalog
+
+### H1
+
+> Industrial Machine Knives & Blades
+
+### Meta Description
+
+> Explore industrial machine knives and blades for slitting, shearing, converting and plastics recycling. Standard and custom designs manufactured to specification.
+
+---
+
+# 六、6 个产品分类页
+
+这是整个网站最需要做好的部分。
+
+因为这些页面应该形成**明确的 Product Entity Cluster**。
+
+---
+
+## 1. Circular Blades
+
+当前 H1：
+
+> Circular Blades for Industrial Cutting
+
+方向正确。([定制刀具][5])
+
+### 推荐
+
+**Title**
+
+> Circular Slitter Blades & Knives | Custom Industrial Blades
+
+**H1**
+
+> Circular Slitter Blades & Industrial Knives
+
+**Description**
+
+> Custom circular slitter blades for paper, film, foil and tape converting. Precision-ground D2, SKD11 and M2 HSS knives made to your size and specification.
+
+### Primary intent
+
+```text
+circular slitter blades
+```
+
+Secondary:
+
+```text
+circular blades
+circular knives
+industrial circular blades
+slitter knives
+```
+
+---
+
+# 2. Straight Blades
+
+### Title
+
+> Straight Machine Knives & Blades | Custom Industrial Cutting
+
+### H1
+
+> Straight Machine Knives & Industrial Blades
+
+### Meta Description
+
+> Straight machine knives for slitting, sheeting, tissue and converting lines. Custom lengths, bevels, materials and tolerances manufactured to drawing.
+
+当前页面已经有很明确的 converting / tissue / top blade 实体，因此不要把它做成泛化的“industrial blades”页面。([定制刀具][6])
+
+---
+
+# 3. Serrated Blades
+
+### Title
+
+> Serrated Industrial Blades & Knives | Custom Tooth Profiles
+
+### H1
+
+> Serrated Industrial Blades & Machine Knives
+
+### Meta Description
+
+> Serrated industrial blades for perforating, tear-strip and cut-to-length applications. Custom tooth profiles, TPI, materials and dimensions made to specification.
+
+这里特别推荐：
+
+> **custom tooth profiles**
+
+因为它是很好的 differentiation entity。
+
+当前页面已经有 6–10 TPI 等明确规格。([定制刀具][7])
+
+---
+
+# 4. Shear Blades
+
+### Title
+
+> Industrial Shear Blades & Guillotine Knives | Custom Made
+
+### H1
+
+> Industrial Shear Blades & Guillotine Knives
+
+### Meta Description
+
+> Custom shear blades for guillotine, swing-beam and plate cutting. D2, H13 and 6CrW2Si options engineered for mild steel, stainless and aluminum.
+
+这样可以同时覆盖：
+
+```text
+shear blades
+industrial shear blades
+guillotine blades
+guillotine knives
+plate cutting blades
+```
+
+当前页面已经明确 guillotine + swing-beam + plate cutting。([定制刀具][8])
+
+---
+
+# 5. Granulator Knives
+
+### Title
+
+> Granulator Knives & Blades | Custom Plastic Recycling Knives
+
+### H1
+
+> Granulator Knives & Blades for Plastic Recycling
+
+### Meta Description
+
+> Rotor and stator granulator knives for plastics recycling and size reduction. M2 HSS, D2 and carbide options engineered for abrasive and reinforced feedstock.
+
+这里不要只写：
+
+> Granulator Blades
+
+因为这个词本身太窄。
+
+应该建立：
+
+```text
+Granulator Knives
+↓
+Plastic Recycling
+↓
+Rotor Knives
+↓
+Stator Knives
+↓
+M2 HSS
+↓
+Glass-Filled Plastics
+```
+
+当前页面已经有 rotor/stator + plastics granulators。([定制刀具][9])
+
+---
+
+# 6. Custom Blades
+
+这个页面是非常重要的。
+
+因为整个网站真正的商业价值不是“卖 250 mm circular blade”，而是：
+
+> **客户拿 drawing / sample → 你制造 custom blade**
+
+当前页面已有 reverse-engineering positioning。([定制刀具][10])
+
+### Title
+
+> Custom Industrial Blades & Machine Knives | Made to Drawing
+
+### H1
+
+> Custom Industrial Blades & Machine Knives
+
+### Meta Description
+
+> Custom machine knives manufactured from your drawing, CAD file or worn sample. Specify geometry, material, hardness and tolerance for your application.
+
+这个页面承担：
+
+```text
+custom industrial blades
+custom machine knives
+custom blades
+machine knife manufacturer
+made to drawing
+reverse engineered blades
+OEM replacement blades
+```
+
+---
+
+# 七、Solutions Hub
+
+当前：
+
+> Blades Engineered for Your Production Line
+
+这个 H1 偏 marketing。
+
+Solutions 页面实际上承担的是：
+
+**Application / engineering solution entity**
+
+因此建议：
+
+### Title
+
+> Industrial Cutting Solutions | Machine Knives by Application
+
+### H1
+
+> Industrial Cutting Solutions by Application
+
+### Description
+
+> Machine knives engineered for printing, packaging, converting, paper, food processing, plastics recycling and metalworking applications.
+
+当前 Solutions 页面本身已经有六大行业结构，非常适合做 Application Entity Hub。([定制刀具][11])
+
+---
+
+# 八、Industries Hub
+
+### Title
+
+> Industrial Machine Knives by Industry | Cutting Applications
+
+### H1
+
+> Industrial Machine Knives by Industry
+
+### Meta Description
+
+> Find machine knives engineered for printing, packaging, paper, food processing, plastics recycling, converting and metalworking applications.
+
+---
+
+# 九、6 个 Industry 页面
+
+这里不要和 Product Category 抢关键词。
+
+这是整个网站非常重要的一条规则：
+
+> **Product pages answer “What is the blade?”**
+>
+> **Industry pages answer “Where is the blade used?”**
+
+---
+
+## Printing & Packaging
+
+### Title
+
+> Printing & Packaging Blades | Slitting & Converting Knives
+
+### H1
+
+> Machine Knives for Printing & Packaging
+
+---
+
+## Paper & Tissue
+
+### Title
+
+> Paper & Tissue Machine Knives | Bed & Top Blades
+
+### H1
+
+> Machine Knives for Paper & Tissue Converting
+
+---
+
+## Food Processing
+
+### Title
+
+> Food Processing Blades & Knives | Industrial Cutting
+
+### H1
+
+> Machine Knives for Food Processing
+
+---
+
+## Plastics Recycling
+
+### Title
+
+> Plastic Recycling Blades | Granulator & Shredder Knives
+
+### H1
+
+> Machine Knives for Plastics Recycling
+
+---
+
+## Converting
+
+### Title
+
+> Converting Machine Knives | Slitting, Trim & Score Blades
+
+### H1
+
+> Machine Knives for Converting Applications
+
+---
+
+## Metalworking
+
+### Title
+
+> Metalworking Shear Blades | Guillotine & Cutting Knives
+
+### H1
+
+> Machine Knives for Metalworking
+
+这些行业页当前已经具备很好的实体基础，例如 Printing & Packaging 页面明确涉及 slitting / sheeting / rewinding；Metalworking 页面明确涉及 guillotine / swing-beam。([定制刀具][12])
+
+---
+
+# 十、Services 页面
+
+Services 不应该和 Products 重复。
+
+它应该抢：
+
+```text
+custom blade manufacturing
+blade manufacturing
+industrial knife manufacturing
+blade grinding
+heat treatment
+PVD coating
+reverse engineering
+```
+
+### Title
+
+> Custom Blade Manufacturing Services | Machine Knife Production
+
+### H1
+
+> Custom Machine Knife Manufacturing Services
+
+### Description
+
+> From drawing review to heat treatment, CNC grinding, coating and inspection, we manufacture custom industrial blades to application and dimensional requirements.
+
+---
+
+# 十一、About 页面
+
+不要把 About 做成：
+
+> Custom Machine Knives | Industrial Blades Manufacturer
+
+这会和 Homepage 冲突。
+
+### Title
+
+> About Custom Machine Knives | Industrial Blade Manufacturer
+
+### H1
+
+> About Custom Machine Knives
+
+### Description
+
+重点放：
+
+```text
+manufacturer
+manufacturing experience
+quality
+engineering
+ISO
+production capabilities
+countries served
+```
+
+---
+
+# 十二、Request Quote 页面
+
+这个页面不应该抢产品关键词。
+
+它是：
+
+**Transaction / RFQ Entity**
+
+### Title
+
+> Request a Quote | Custom Industrial Machine Knives
+
+### H1
+
+> Request a Quote for Custom Machine Knives
+
+### Description
+
+> Send your drawing, CAD file, worn sample or blade specification. Get an engineering review and quotation for your custom industrial knife.
+
+---
+
+# 十三、Meta Description 的规则
+
+这是我建议 Cline 严格执行的规则。
+
+## 长度
+
+目标：
+
+> **140–165 characters**
+
+但不是死规则。
+
+核心是：
+
+```text
+[What]
++
+[For whom / application]
++
+[Technical differentiator]
++
+[Commercial action]
+```
+
+例如：
+
+> Custom machine knives manufactured from your drawing, CAD file or worn sample. Specify geometry, material, hardness and tolerance for your application.
+
+这个比：
+
+> We are a professional manufacturer of high-quality industrial blades with many years of experience...
+
+强很多。
+
+---
+
+# 十四、Meta Description 禁止使用的废话
+
+Cline 不得自动生成：
+
+```text
+high quality
+best quality
+professional manufacturer
+leading manufacturer
+trusted supplier
+competitive price
+one-stop solution
+world-class
+premium quality
+best service
+years of experience
+```
+
+除非后面有**具体证据**。
+
+Google 对自动生成内容的核心要求仍然是准确、相关、有实际价值；AI 生成的 metadata 同样需要人工核实。([Google for Developers][2])
+
+---
+
+# 十五、CTR 的真正提升方法
+
+不要依靠：
+
+> Best / Premium / Top / #1
+
+而采用 **Technical Specificity + Commercial Specificity**。
+
+例如：
+
+### 普通
+
+> Industrial Blades Manufacturer
+
+### 好
+
+> Custom Industrial Blades | Made to Drawing
+
+### 更好
+
+> Custom Industrial Blades | Made to Drawing & Sample
+
+因为第二个直接回答采购人员的问题：
+
+> Can you make mine?
+
+---
+
+# 十六、Title 的 CTR 公式
+
+Cline 可以使用：
+
+```text
+[Exact Entity] + [Differentiator] + [Commercial Signal]
+```
+
+例如：
+
+```text
+Custom Industrial Blades | Made to Drawing
+```
+
+```text
+Circular Slitter Blades | Precision Ground to Spec
+```
+
+```text
+Granulator Knives | M2 HSS & Custom Rotor Blades
+```
+
+```text
+Shear Blades | Guillotine & Swing-Beam Cutting
+```
+
+而不是：
+
+```text
+High Quality Industrial Blades Manufacturer Supplier
+```
+
+---
+
+# 十七、H1 规则
+
+每个 Indexable page：
+
+> **1 个 H1**
+
+H1 必须表达页面的：
+
+> **Primary Entity + qualifier**
+
+模板：
+
+```text
+[Primary Entity] + [Context]
+```
+
+例如：
+
+```text
+Custom Industrial Machine Knives & Blades
+```
+
+```text
+Circular Slitter Blades & Industrial Knives
+```
+
+```text
+Granulator Knives & Blades for Plastic Recycling
+```
+
+---
+
+# 十八、H1 和 Title 不要完全复制
+
+例如：
+
+### Title
+
+> Custom Industrial Blades & Machine Knives | Made to Drawing
+
+### H1
+
+> Custom Industrial Blades & Machine Knives
+
+这样：
+
+```text
+Title = Search result communication
+H1   = Page/entity identification
+```
+
+两者相关但不必完全一致。
+
+---
+
+# 十九、AI Search / GEO 的 Meta 策略
+
+这里有一个非常重要的认知：
+
+**不要把 Meta Description 当成 AI Search 的主要优化对象。**
+
+AI 搜索真正需要的是：
+
+```text
+Entity clarity
++
+Page purpose
++
+First-hand evidence
++
+Structured facts
++
+Consistent terminology
++
+Internal relationships
+```
+
+Google 当前的 Search guidance 也强调 people-first、first-hand expertise、原创信息和完整解决用户任务，而不是单纯为了搜索排名生产大量内容。([Google for Developers][4])
+
+因此：
+
+### Meta 只负责：
+
+```text
+Identify
+Differentiate
+Attract click
+```
+
+### Page body 负责：
+
+```text
+Explain
+Prove
+Compare
+Answer
+Support citation
+```
+
+---
+
+# 二十、AI Citation-Friendly 的 Title/H1 规则
+
+一个页面最好让 AI 在看到：
+
+```text
+Title
+H1
+Opening paragraph
+H2
+```
+
+之后就能够判断：
+
+> “这个页面到底是什么？”
+
+例如：
+
+```text
+Title:
+Custom Industrial Blades & Machine Knives | Made to Drawing
+
+H1:
+Custom Industrial Blades & Machine Knives
+
+Opening:
+Custom Machine Knives manufactures industrial blades to customer drawings,
+CAD files and worn samples...
+```
+
+这形成：
+
+```text
+Title
+ ↓
+H1
+ ↓
+Definition
+ ↓
+Evidence
+ ↓
+Specifications
+ ↓
+Applications
+```
+
+这是比单纯塞关键词更重要的 AI-readable structure。
+
+---
+
+# 二十一、给 Cline 的关键词使用规则
+
+每个页面建立：
+
+```yaml
+primary_entity:
+primary_keyword:
+secondary_keywords:
+supporting_entities:
+search_intent:
+commercial_intent:
+industry:
+material:
+application:
+```
+
+例如 Circular：
+
+```yaml
+primary_entity: Circular Slitter Blades
+primary_keyword: circular slitter blades
+
+secondary_keywords:
+  - circular blades
+  - circular knives
+  - slitter knives
+  - industrial circular blades
+
+supporting_entities:
+  - D2
+  - SKD11
+  - M2 HSS
+  - paper
+  - film
+  - foil
+  - tape
+  - slitter-rewinder
+
+search_intent: commercial investigation
+commercial_intent: RFQ
+```
+
+---
+
+# 二十二、禁止关键词堆砌
+
+例如不要让 Cline 自动写：
+
+> We manufacture custom industrial machine knives, custom machine knives, industrial knives, industrial blades, custom blades and machine blades...
+
+这是典型的 SEO-first 文案。
+
+应该自然表达：
+
+> We manufacture custom machine knives for industrial cutting applications, including circular slitters, straight knives, shear blades and granulator knives.
+
+一个句子解决实体关系。
+
+---
+
+# 二十三、整个网站的 Title 唯一性规则
+
+Cline 必须建立：
+
+```text
+URL → Primary Entity → Primary Keyword → Title → H1
+```
+
+并执行：
+
+### Rule 1
+
+**一个 URL 只能有一个 Primary Entity。**
+
+### Rule 2
+
+**一个 Primary Keyword 不允许成为两个不同页面的完全相同主目标。**
+
+### Rule 3
+
+Secondary keyword 可以重复，但必须服务不同 Search Intent。
+
+---
+
+# 二十四、建议建立这张 SEO Manifest
+
+直接让 Cline 建：
+
+```text
+src/data/seo-pages.json
+```
+
+结构：
+
+```json
+{
+  "/": {
+    "primaryEntity": "Custom Machine Knives",
+    "primaryKeyword": "custom machine knives",
+    "title": "Custom Machine Knives | Industrial Blades Manufacturer",
+    "h1": "Custom Industrial Machine Knives & Blades",
+    "intent": "commercial"
+  },
+  "/products/": {
+    "primaryEntity": "Industrial Machine Knives",
+    "primaryKeyword": "industrial machine knives",
+    "title": "Industrial Machine Knives & Blades | Custom Product Catalog",
+    "h1": "Industrial Machine Knives & Blades",
+    "intent": "commercial investigation"
+  }
+}
+```
+
+然后所有 Astro 页面从这个 manifest 获取：
+
+```text
+title
+description
+h1
+canonical
+primaryEntity
+primaryKeyword
+```
+
+这样以后 Cline 改页面时不会出现：
+
+> Title 改了，H1 没改
+> H1 改了，description 还是旧的
+> Product page 和 category page 抢同一个词
+
+---
+
+# 二十五、最终网站 Meta 架构
+
+我建议最后形成这个矩阵：
+
+| Page                              | Primary Entity                        | Title 主方向                             | H1                                               |
+| --------------------------------- | ------------------------------------- | ------------------------------------- | ------------------------------------------------ |
+| `/`                               | Custom Machine Knives                 | Custom Machine Knives                 | Custom Industrial Machine Knives & Blades        |
+| `/products/`                      | Industrial Machine Knives             | Industrial Machine Knives & Blades    | Industrial Machine Knives & Blades               |
+| `/products/circular/`             | Circular Slitter Blades               | Circular Slitter Blades               | Circular Slitter Blades & Industrial Knives      |
+| `/products/straight/`             | Straight Machine Knives               | Straight Machine Knives               | Straight Machine Knives & Industrial Blades      |
+| `/products/serrated/`             | Serrated Blades                       | Serrated Industrial Blades            | Serrated Industrial Blades & Machine Knives      |
+| `/products/shear/`                | Shear Blades                          | Industrial Shear Blades               | Industrial Shear Blades & Guillotine Knives      |
+| `/products/granulator/`           | Granulator Knives                     | Granulator Knives                     | Granulator Knives & Blades for Plastic Recycling |
+| `/products/custom/`               | Custom Industrial Blades              | Custom Industrial Blades              | Custom Industrial Blades & Machine Knives        |
+| `/solutions/`                     | Industrial Cutting Solutions          | Industrial Cutting Solutions          | Industrial Cutting Solutions by Application      |
+| `/industries/`                    | Industrial Machine Knives by Industry | Industrial Machine Knives by Industry | Industrial Machine Knives by Industry            |
+| `/industries/printing-packaging/` | Printing & Packaging Blades           | Printing & Packaging Blades           | Machine Knives for Printing & Packaging          |
+| `/industries/paper-tissue/`       | Paper & Tissue Blades                 | Paper & Tissue Machine Knives         | Machine Knives for Paper & Tissue Converting     |
+| `/industries/food-processing/`    | Food Processing Blades                | Food Processing Blades & Knives       | Machine Knives for Food Processing               |
+| `/industries/plastics-recycling/` | Recycling Blades                      | Plastic Recycling Blades              | Machine Knives for Plastics Recycling            |
+| `/industries/converting/`         | Converting Machine Knives             | Converting Machine Knives             | Machine Knives for Converting Applications       |
+| `/industries/metalworking/`       | Metalworking Blades                   | Metalworking Shear Blades             | Machine Knives for Metalworking                  |
+| `/services/`                      | Blade Manufacturing Services          | Custom Blade Manufacturing Services   | Custom Machine Knife Manufacturing Services      |
+| `/about/`                         | Custom Machine Knives Manufacturer    | About Custom Machine Knives           | About Custom Machine Knives                      |
+| `/contact/`                       | Contact                               | Contact Custom Machine Knives         | Contact Custom Machine Knives                    |
+| `/quote/`                         | RFQ                                   | Request a Quote                       | Request a Quote for Custom Machine Knives        |
+
+---
+
+# 二十六、最重要的 Cline 执行规则
+
+可以把下面直接给 Cline：
+
+```text
+SEO META OPTIMIZATION RULES
+
+1. Treat Custom Machine Knives as the primary site entity.
+
+2. Do not optimize every page for "custom machine knives".
+
+3. Each indexable URL must have exactly one primary entity
+   and one primary search intent.
+
+4. Homepage owns:
+   "custom machine knives"
+
+5. Products Hub owns:
+   "industrial machine knives"
+
+6. Product category pages own their specific blade entity:
+   circular / straight / serrated / shear / granulator / custom.
+
+7. Industry pages own application intent:
+   printing & packaging / paper & tissue / food processing /
+   plastics recycling / converting / metalworking.
+
+8. Product pages answer:
+   "What is this blade?"
+
+9. Industry pages answer:
+   "Where and why is this blade used?"
+
+10. Services pages answer:
+    "How is the blade manufactured / engineered?"
+
+11. Title target:
+    approximately 55–65 characters where practical.
+    Never sacrifice clarity just to meet a character limit.
+
+12. Put the primary entity near the beginning of the title.
+
+13. Use one meaningful differentiator:
+    application, material, manufacturing method, engineering capability,
+    or RFQ-related value.
+
+14. Never use generic CTR filler:
+    best, premium, high quality, leading, trusted, professional,
+    one-stop, world-class, competitive price.
+
+15. Meta descriptions should normally be approximately 140–165 characters.
+
+16. Meta descriptions must describe the actual page.
+    Do not repeat keyword lists.
+
+17. H1 must clearly identify the page's primary entity.
+
+18. H1 should normally contain the primary entity,
+    but must remain natural and readable.
+
+19. Title and H1 must be semantically aligned but do not need to be identical.
+
+20. Every title must be unique across the site.
+
+21. Every meta description must be unique across the site.
+
+22. Do not create keyword-stuffed titles such as:
+    "Industrial Blades Manufacturer Supplier Factory Custom Blades".
+
+23. Do not change factual specifications, certifications,
+    lead times, tolerances, materials or performance claims
+    without source verification.
+
+24. SEO metadata must be generated from the page's SEO manifest,
+    not independently hard-coded in multiple components.
+
+25. Preserve entity consistency across:
+    Title → H1 → introduction → schema → breadcrumbs → internal links.
+
+26. AI-search optimization must focus primarily on:
+    entity clarity,
+    factual specificity,
+    first-hand manufacturing evidence,
+    technical specifications,
+    application context,
+    internal entity relationships,
+    and clear page purpose.
+
+27. Do not assume that meta descriptions alone determine
+    AI citation or Google AI visibility.
+
+28. Before publishing any AI-generated metadata,
+    verify all factual claims manually.
+
+29. Do not generate multiple pages targeting the same search intent
+    merely by changing synonyms.
+
+30. When two pages have the same primary entity and intent,
+    consolidate them or assign different intents before publishing.
+```
+
+---
+
+## 最后一个关键判断
+
+这个网站现在**最大的 SEO 问题其实不是 Meta 不够好**。
+
+当前站的内容基础已经明显比普通工业刀具网站丰富：Products Hub 有材料、制造能力、订单流程、质量控制、应用匹配等信息；首页甚至已经有 failure diagnostics、TCO 和 case studies。([定制刀具][13])
+
+真正应该做的是：
+
+> **把现有的大量信息重新组织成“Entity → Product → Application → Material → Manufacturing → Evidence → RFQ”的关系。**
+
+这会比单纯把 Title 从：
+
+> `Industrial Blades`
+
+改成：
+
+> `Best Industrial Blades Manufacturer`
+
+价值大得多。
+
+而且你这个站特别适合走 **“Custom Industrial Blades / Made-to-Drawing / Engineering-led Manufacturer”** 这条路，而不是和几十个工业刀具目录站拼“industrial blades supplier”。竞品页面目前普遍也是围绕 blade type、application、material、custom geometry 等实体展开，但你的网站已经具备更完整的工程证据链。([Rowe Equipment][14])
+
+另外，Google 在 2026 年已经明确说明，`llms.txt` 并不是 Google Search 所必需，也不会直接提升或降低搜索可见性；所以这类 AI 优化不要把精力放在“给 AI 写特殊 Meta/llms.txt”上，而应放在**页面实体、证据、结构和可引用事实**上。([Google for Developers][15])
+
+[1]: https://custommachineknives.com/ "Custom Machine Knives — Precision Machine Knives — Custom Machine Knives"
+[2]: https://developers.google.com/search/docs/fundamentals/using-gen-ai-content?trk=public_post_comment-text&utm_source=chatgpt.com "Google Search's Guidance on Generative AI Content on Your Website | Google Search Central  |  Documentation  |  Google for Developers"
+[3]: https://developers.google.com/search/docs/appearance/?utm_source=chatgpt.com "Google Search Appearance | Google Search Central  |  Documentation  |  Google for Developers"
+[4]: https://developers.google.com/search/docs/fundamentals/creating-helpful-content?utm_source=chatgpt.com "Creating Helpful, Reliable, People-First Content | Google Search Central  |  Documentation  |  Google for Developers"
+[5]: https://custommachineknives.com/products/circular/ "Circular Blades — Custom Machine Knives"
+[6]: https://custommachineknives.com/products/straight/ "Straight Blades — Custom Machine Knives"
+[7]: https://custommachineknives.com/products/serrated/ "Serrated Blades — Custom Machine Knives"
+[8]: https://custommachineknives.com/products/shear/ "Shear Blades — Custom Machine Knives"
+[9]: https://custommachineknives.com/products/granulator/ "Granulator Knives — Custom Machine Knives"
+[10]: https://custommachineknives.com/products/custom/ "Custom Blades — Custom Machine Knives"
+[11]: https://custommachineknives.com/solutions/ "Industry Solutions — Machine Knives for Printing, Packaging, Food & Recycling — Custom Machine Knives"
+[12]: https://custommachineknives.com/industries/printing-packaging/ "Printing & Packaging Blades —Slitting, Sheeting and Rewinding Knives — Custom Machine Knives"
+[13]: https://custommachineknives.com/products/ "Industrial Blades by Category — Custom Machine Knives"
+[14]: https://www.roweequipment.com/products/spare-parts-pelletizer-blown-film-and-extrusion/?utm_source=chatgpt.com "Custom Industrial Blades | Machine Knives | Rowe Equipment"
+[15]: https://developers.google.com/search/updates?hl=en&utm_source=chatgpt.com "Latest Google Search Documentation Updates | Google Search Central  |  What's new  |  Google for Developers"
