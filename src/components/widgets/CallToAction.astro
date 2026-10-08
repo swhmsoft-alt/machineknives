@@ -25,7 +25,13 @@ const {
 } = Astro.props;
 
 // Default deep-blue gradient CTA — the page's conversion closer.
-const defaultBg = '<div class="absolute inset-0 cta-bg" aria-hidden="true"></div>';
+// Inline style is intentional: this div is injected via <Fragment set:html>
+// inside WidgetWrapper's bg slot, so it does NOT inherit this component's
+// scoped `data-astro-cid-*` attribute. A scoped `.cta-bg` class would
+// silently fail to apply and the CTA would fall through to the page
+// background, making the ghost button unreadable.
+const defaultBg =
+  '<div class="absolute inset-0" style="background: var(--aw-gradient-cta);" aria-hidden="true"></div>';
 const hasBgSlot = Astro.slots.has('bg');
 const effectiveBg = hasBgSlot ? bg : defaultBg;
 ---
@@ -69,10 +75,12 @@ const effectiveBg = hasBgSlot ? bg : defaultBg;
   /* === CallToAction: deep-blue gradient closer ===========================
    * Drops the prior shadow-bordered card-in-section pattern in favor of
    * a flat full-bleed dark gradient with a single bright CTA.
+   *
+   * The gradient background itself is applied via inline `style="..."` on
+   * the bg div injected through `set:html` (see `defaultBg` above), not
+   * via this scoped class — scoped Astro CSS does not reach across the
+   * set:html boundary, so any class-based rule here would silently no-op.
    */
-  .cta-bg {
-    background: var(--aw-gradient-cta);
-  }
 
   .cta-section {
     color: var(--aw-color-text-on-dark);
