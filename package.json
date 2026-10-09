@@ -27,7 +27,9 @@
     "fix:prettier": "prettier -w .",
     "fix:unicode": "node scripts/fix-unicode.mjs",
     "audit:fanout": "node scripts/audit-query-fanout.mjs",
-    "monitor:citations": "node scripts/monitor-citations.mjs"
+    "monitor:citations": "node scripts/monitor-citations.mjs",
+    "deploy:verify": "wrangler deploy && node --dns-result-order=ipv4first scripts/verify-inquiry-api.mjs",
+    "verify:inquiry": "node --dns-result-order=ipv4first scripts/verify-inquiry-api.mjs"
   },
   "dependencies": {
     "@astro-community/astro-embed-twitter": "^0.5.11",

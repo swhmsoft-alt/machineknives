@@ -135,3 +135,24 @@ When adding new product / post files, ensure they round-trip through `node -e "r
 - **Background color**: full-site background is unique and unified. No section/card may define its own background. Only `bg-page` is permitted. Details in `.agents/skills/styling.md` § "Background Color Discipline".
 - **UTF-8 only on Windows**: never write `.md` / `.astro` / `.ts` / `.json` files through PowerShell (`>`, `Out-File`, `Set-Content` without `-Encoding utf8`). On zh-CN Windows the default code page is CP936/GBK, and any character outside GBK's repertoire (`Ø`, `±`, `≤`, `≥`, `–`, `—`, `→`, `µ`, `×`, `°`) gets downgraded to `�?` (U+FFFD + ASCII `?`) and renders as garbage in production. Use Node.js `fs.writeFileSync(path, data, 'utf8')` or any editor that explicitly saves as UTF-8 (no BOM). The `scripts/check-unicode.mjs` lint fails `npm run check` / `npm run build` if any data file contains the signature; `npm run fix:unicode` repairs it.
 - **Adding components**: read `.agents/skills/styling.md` and `.clinerules` first. Reuse existing widgets when possible. Never invent custom backgrounds.
+
+## Contact Form Inquiry Pipeline (CRITICAL — DO NOT BREAK)
+
+The `/contact/` form's submit-to-D1 flow spans three files; touching any of them in isolation can break submissions. Treat the following as a hard contract.
+
+### Files in scope
+
+1. **`src/pages/contact.astro`** — defines the form's input `name` attributes (`fullName`, `company`, `email`, `phone`, `productType`, `quantity`, `materialSpec`, `requirements`, `disclaimer`). Field names are the contract.
+2. **`src/components/ui/Form.astro`** — wires `fetch('/api/inquiry', { method: 'POST', body: new FormData(form) })` and renders the success/error status banner.
+3. **`worker/index.ts`** — `handleInquiryPost()` calls `formData.get(<same name>)` for every field, then `env.DB.prepare(...).bind(...).run()`. Column order in the `INSERT` MUST match the `bind()` order.
+
+### Deployment invariants (verified by `npm run deploy:verify`)
+
+- `wrangler.toml` MUST contain `routes = [{ pattern = "custommachineknives.com/api/*", zone_name = "custommachineknives.com" }]`. Without this block, `wrangler deploy` re-deploys the Worker but the route on `custommachineknives.com` is dropped, and `GET /api/inquiry` returns 404. **This is the bug that caused the Oct 9 outage** — do not remove this block.
+- `wrangler.toml` MUST contain `[[d1_databases]] binding = "DB" database_id = "52db485c-8c75-4074-917b-2c9c137538de"`.
+- The `functions/` directory MUST NOT exist. It was a dead-code trap (a Pages Functions mirror of `worker/index.ts`). When both exist, Cloudflare Pages may route `/api/inquiry` to the Pages Function, which has no D1 binding, producing 500s. It is now deleted; keep it gone.
+- D1 table `inquiries` schema MUST match the 11 `bind()` columns in `worker/index.ts`: `full_name, company, email, phone, product_type, quantity, material_spec, requirements, disclaimer, user_agent, ip`.
+
+### Post-deploy verification
+
+After every deploy, run `npm run deploy:verify` (which runs `wrangler deploy` then `node scripts/verify-inquiry-api.mjs`). The script does a `GET https://custommachineknives.com/api/inquiry` and expects HTTP 200 + `{"success":true,"message":"inquiry API is working"}`. Any other response means the route was dropped — restore the `routes` block in `wrangler.toml` and redeploy before customers can submit. Run `npm run verify:inquiry` on its own to re-check the live endpoint at any time (e.g. from a monitoring cron).
