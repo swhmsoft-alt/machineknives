@@ -3,7 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import PrecisionCta from '~/components/widgets/PrecisionCta.astro';
 
 const metadata = {
   title: 'Printing & Packaging Blades',
@@ -110,12 +110,20 @@ const features = [
     defaultIcon="tabler:printer"
   />
 
-  <CallToAction
-    title="Have a printing or packaging cut that needs a knife?"
+  <!-- Precision-engineering CTA closer -->
+  <PrecisionCta
+    id="printing-packaging-cta"
+    eyebrow="Printing & Packaging Knives"
+    title={`<span class="block text-white">Have a printing or packaging cut</span><span class="mt-1 block bg-clip-text text-transparent" style="background-image: linear-gradient(90deg, #fb923c 0%, #f59e0b 50%, #fbbf24 100%);">that needs a knife?</span>`}
     subtitle="Send a drawing (DXF / STEP / PDF) or a worn sample. We will confirm material grade, hardness, tolerance and lead time within one business day."
-    actions={[
-      { variant: 'primary', text: 'Submit a drawing', href: '/contact', icon: 'tabler:clipboard-text' },
-      { text: 'Browse Solutions', href: '/solutions' },
+    primaryAction={{ text: 'Submit a drawing', href: '/contact' }}
+    secondaryAction={{ text: 'Browse Solutions', href: '/solutions', isMailto: false }}
+    trustItems={[
+      'DXF / STEP / PDF accepted',
+      'Worn sample reverse engineering',
+      'Lead time in 1 business day',
     ]}
+    cardEyebrow="Job #PP-2026"
+    cardCaption="drawing or sample → grade + hardness + tolerance + lead time"
   />
 </Layout>

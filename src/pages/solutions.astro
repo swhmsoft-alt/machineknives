@@ -5,7 +5,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import PrecisionCta from '~/components/widgets/PrecisionCta.astro';
 
 const metadata = {
   title: 'Industrial Cutting Solutions',
@@ -522,22 +522,20 @@ const blogPostingLd = {
     ]}
   />
 
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Send Us a Drawing',
-        href: '/contact',
-      },
-      { text: 'Email Engineering', href: 'mailto:[email protected]' },
+  <!-- Precision-engineering CTA closer -->
+  <PrecisionCta
+    id="solutions-cta"
+    eyebrow="Application Engineering"
+    title={`<span class="block text-white">Have a sample, drawing</span><span class="mt-1 block bg-clip-text text-transparent" style="background-image: linear-gradient(90deg, #fb923c 0%, #f59e0b 50%, #fbbf24 100%);">or worn blade to discuss?</span>`}
+    subtitle="Send us the part, the application notes, or just the symptoms. We will respond with a specification, a quote and a lead time — typically within one business day."
+    primaryAction={{ text: 'Send Us a Drawing', href: '/contact' }}
+    secondaryAction={{ text: 'Email Engineering', href: 'mailto:[email protected]', isMailto: true }}
+    trustItems={[
+      'Engineering responds in 1 business day',
+      'CMM-verified reverse engineering',
+      'NDA on first email',
     ]}
-  >
-    <Fragment slot="title">
-      Have a sample, drawing or worn blade to discuss?
-    </Fragment>
-    <Fragment slot="subtitle">
-      Send us the part, the application notes, or just the symptoms. We will respond with a specification, a quote and
-      a lead time — typically within one business day. Last reviewed: 2026.
-    </Fragment>
-  </CallToAction>
+    cardEyebrow="Job #SO-2026"
+    cardCaption="part or symptoms → specification → quote → lead time"
+  />
 </Layout>

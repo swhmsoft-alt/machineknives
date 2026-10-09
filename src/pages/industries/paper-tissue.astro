@@ -3,7 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import PrecisionCta from '~/components/widgets/PrecisionCta.astro';
 
 const metadata = {
   title: 'Paper & Tissue Machine Knives',
@@ -110,21 +110,37 @@ const features = [
     defaultIcon="tabler:toilet-paper"
   />
 
-  <CallToAction
-    title="Documented 1200 m/min 4-ply case study"
+  <!-- Precision-engineering CTA closer -->
+  <PrecisionCta
+    id="paper-tissue-cta-case"
+    eyebrow="Documented Case Study"
+    title={`<span class="block text-white">1200 m/min 4-ply tissue</span><span class="mt-1 block bg-clip-text text-transparent" style="background-image: linear-gradient(90deg, #fb923c 0%, #f59e0b 50%, #fbbf24 100%);">case study.</span>`}
     subtitle="See how a 15 µm micro-hone combined with an 18° clearance angle extended bed-knife service life from 11 days to 34 days at 1200 m/min on 4-ply tissue —with the D2 grade and HRC 60 unchanged."
-    actions={[
-      { variant: 'primary', text: 'Read the case study', href: '/products/straight/bed-knife-tissue/', icon: 'tabler:file-text' },
-      { text: 'Request a Quote', href: '/contact' },
+    primaryAction={{ text: 'Read the case study', href: '/products/straight/bed-knife-tissue/' }}
+    secondaryAction={{ text: 'Request a Quote', href: '/contact', isMailto: false }}
+    trustItems={[
+      '11 → 34 day service life',
+      'D2 grade · HRC 60 unchanged',
+      '15 µm micro-hone · 18° clearance',
     ]}
+    cardEyebrow="Job #PT-2026"
+    cardCaption="baseline 11 d → micro-hone + clearance → 34 d service life"
   />
 
-  <CallToAction
-    title="Need tissue bed-knife or top-blade tooling?"
+  <!-- Precision-engineering CTA closer -->
+  <PrecisionCta
+    id="paper-tissue-cta-tooling"
+    eyebrow="Tissue Bed-Knife Tooling"
+    title={`<span class="block text-white">Need tissue bed-knife</span><span class="mt-1 block bg-clip-text text-transparent" style="background-image: linear-gradient(90deg, #fb923c 0%, #f59e0b 50%, #fbbf24 100%);">or top-blade tooling?</span>`}
     subtitle="Send the OEM machine model, current knife geometry and target service interval. We will return a written quotation with material grade, hardness, tolerance and lead time within one business day."
-    actions={[
-      { variant: 'primary', text: 'Submit a drawing', href: '/contact', icon: 'tabler:clipboard-text' },
-      { text: 'Browse Solutions', href: '/solutions' },
+    primaryAction={{ text: 'Submit a drawing', href: '/contact' }}
+    secondaryAction={{ text: 'Browse Solutions', href: '/solutions', isMailto: false }}
+    trustItems={[
+      'OEM machine model quoting',
+      'Service-interval target analysis',
+      'Hardness + tolerance to spec',
     ]}
+    cardEyebrow="Job #PT-2026"
+    cardCaption="machine + geometry → grade + hardness + tolerance quote"
   />
 </Layout>

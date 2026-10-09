@@ -4,6 +4,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
 import Steps from '~/components/widgets/Steps.astro';
+import PrecisionCta from '~/components/widgets/PrecisionCta.astro';
 
 import { capabilities } from '~/data/services-capabilities';
 import { processSteps } from '~/data/services-steps';
@@ -169,228 +170,23 @@ const siteUrl = 'https://custommachineknives.com';
     </div>
   </section>
 
-  <!-- 8. CALL TO ACTION — Precision-engineering dark section, bespoke to /services/ -->
-  <section
+  <!-- Precision-engineering CTA closer -->
+  <PrecisionCta
     id="services-cta"
-    class="relative isolate overflow-hidden"
-    aria-labelledby="services-cta-heading"
-  >
-    <!-- Layer 1: deep steel-blue gradient (token-driven, dark + light mode aware) -->
-    <div
-      class="absolute inset-0 -z-30"
-      style="background: var(--aw-gradient-deep);"
-      aria-hidden="true"
-    ></div>
+    eyebrow="Re-Engineering Service"
+    title={`<span class="block text-white">No drawing?</span><span class="mt-1 block bg-clip-text text-transparent" style="background-image: linear-gradient(90deg, #fb923c 0%, #f59e0b 50%, #fbbf24 100%);">Send the broken blade.</span>`}
+    subtitle="For re-engineering work we can measure your worn blade and reproduce the original geometry —often improving on it based on what we see in the wear pattern."
+    primaryAction={{ text: 'Send Your Drawing', href: '/contact' }}
+    secondaryAction={{ text: 'Email Engineering', href: 'mailto:[email protected]', isMailto: true }}
+    trustItems={[
+      'CMM-measured reverse engineering',
+      'Geometry upgrade on request',
+      'NDA on first email',
+    ]}
+    cardEyebrow="Job #RE-2026"
+    cardCaption="worn blade → CMM scan → drawing → OEM-match or upgrade"
+  />
 
-    <!-- Layer 2: 40px CAD grid texture (faint white lines, only ~5% alpha — reads as substrate, not wallpaper) -->
-    <div
-      class="absolute inset-0 -z-20 opacity-[0.05]"
-      aria-hidden="true"
-      style="background-image: linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px); background-size: 40px 40px;"
-    ></div>
-
-    <!-- Layer 3: single warm radial accent (replaces the amateur outer-glow on the button) -->
-    <div
-      class="absolute -bottom-32 -right-24 -z-10 h-80 w-80 rounded-full opacity-40 blur-3xl"
-      style="background: radial-gradient(closest-side, var(--aw-color-accent) 0%, transparent 70%);"
-      aria-hidden="true"
-    ></div>
-
-    <div class="relative mx-auto max-w-7xl px-4 py-20 md:px-6 md:py-28">
-      <div class="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-10 lg:gap-14 md:items-center">
-        <!-- LEFT COLUMN — copy + CTAs (7/12) -->
-        <div class="md:col-span-7 text-left">
-          <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 font-mono text-[11px] uppercase tracking-[0.18em] text-orange-300 backdrop-blur-sm">
-            <span class="inline-block h-1.5 w-1.5 rounded-full bg-orange-400"></span>
-            Re-Engineering Service
-          </p>
-
-          <h2
-            id="services-cta-heading"
-            class="font-heading text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl lg:text-[3.75rem]"
-          >
-            <span class="block text-white">No drawing?</span>
-            <span
-              class="mt-1 block bg-clip-text text-transparent"
-              style="background-image: linear-gradient(90deg, #fb923c 0%, #f59e0b 50%, #fbbf24 100%);"
-            >
-              Send the broken blade.
-            </span>
-          </h2>
-
-          <p class="mt-6 max-w-xl text-base leading-relaxed text-slate-300 md:text-lg">
-            For re-engineering work we can measure your worn blade and reproduce the original geometry —often improving on it based on what we see in the wear pattern.
-          </p>
-
-          <div class="mt-9 flex flex-col gap-3 sm:flex-row sm:gap-4">
-            <!-- Primary CTA: solid orange, hard shadow, no outer glow, right arrow -->
-            <a
-              href="/contact"
-              class="group inline-flex items-center justify-center gap-2 rounded-lg px-7 py-3.5 text-base font-semibold text-white shadow-md shadow-orange-950/40 ring-1 ring-inset ring-orange-700/30 transition-all duration-200 hover:shadow-lg hover:shadow-orange-950/50 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
-              style="background-image: linear-gradient(180deg, #f97316 0%, #ea580c 100%);"
-            >
-              <span>Send Your Drawing</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14" />
-                <path d="M13 6l6 6-6 6" />
-              </svg>
-            </a>
-
-            <!-- Secondary CTA: ghost style, semi-transparent dark border -->
-            <a
-              href="mailto:[email protected]"
-              class="group inline-flex items-center justify-center gap-2 rounded-lg border border-white/15 bg-white/[0.03] px-7 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition-all duration-200 hover:border-white/30 hover:bg-white/[0.07] focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4 text-slate-300 transition-colors group-hover:text-white"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <rect x="3" y="5" width="18" height="14" rx="2" />
-                <path d="M3 7l9 6 9-6" />
-              </svg>
-              <span>Email Engineering</span>
-            </a>
-          </div>
-
-          <!-- Trust micro-row -->
-          <ul class="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-slate-400">
-            <li class="inline-flex items-center gap-1.5">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-orange-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
-              CMM-measured reverse engineering
-            </li>
-            <li class="inline-flex items-center gap-1.5">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-orange-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
-              Geometry upgrade on request
-            </li>
-            <li class="inline-flex items-center gap-1.5">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-orange-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
-              NDA on first email
-            </li>
-          </ul>
-        </div>
-        <!-- RIGHT COLUMN — glass card with CAD wireframe illustration (5/12) -->
-        <div class="md:col-span-5">
-          <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-5 shadow-2xl shadow-slate-950/60 backdrop-blur-md md:p-6">
-
-            <!-- CAD corner registration ticks (orange) -->
-            <span class="absolute left-3 top-3 h-3 w-3 border-l border-t border-orange-400/70" aria-hidden="true"></span>
-            <span class="absolute right-3 top-3 h-3 w-3 border-r border-t border-orange-400/70" aria-hidden="true"></span>
-            <span class="absolute left-3 bottom-3 h-3 w-3 border-l border-b border-orange-400/70" aria-hidden="true"></span>
-            <span class="absolute right-3 bottom-3 h-3 w-3 border-r border-b border-orange-400/70" aria-hidden="true"></span>
-
-            <!-- Card header — CAD inspector toolbar -->
-            <div class="mb-4 flex items-center justify-between">
-              <div class="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400">
-                <span class="inline-block h-1.5 w-1.5 rounded-full bg-orange-400"></span>
-                Job #RE-2026
-              </div>
-              <span class="rounded-sm border border-orange-400/30 bg-orange-500/10 px-1.5 py-0.5 font-mono text-[10px] uppercase tracking-[0.2em] text-orange-300">
-                scan mode
-              </span>
-            </div>
-
-            <!-- Wireframe illustration viewport -->
-            <div class="relative aspect-[4/3] overflow-hidden rounded-lg border border-white/5 bg-gradient-to-br from-slate-950/60 to-slate-900/30">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="absolute inset-0 h-full w-full"
-                viewBox="0 0 200 150"
-                fill="none"
-                aria-hidden="true"
-              >
-                <defs>
-                  <pattern id="cta-micro-grid" width="10" height="10" patternUnits="userSpaceOnUse">
-                    <path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="0.3" />
-                  </pattern>
-                </defs>
-
-                <!-- micro grid substrate -->
-                <rect width="200" height="150" fill="url(#cta-micro-grid)" />
-
-                <!-- center crosshairs (dashed) -->
-                <line x1="100" y1="0" x2="100" y2="150" stroke="rgba(255,255,255,0.18)" stroke-width="0.4" stroke-dasharray="2 3" />
-                <line x1="0" y1="75" x2="200" y2="75" stroke="rgba(255,255,255,0.18)" stroke-width="0.4" stroke-dasharray="2 3" />
-
-                <!-- outer blade wireframe -->
-                <circle cx="100" cy="75" r="44" stroke="rgba(251,146,60,0.95)" stroke-width="1.2" fill="none" />
-                <!-- mid dashed circle -->
-                <circle cx="100" cy="75" r="30" stroke="rgba(251,146,60,0.55)" stroke-width="0.7" fill="none" stroke-dasharray="3 2" />
-                <!-- inner bevel hint -->
-                <circle cx="100" cy="75" r="16" stroke="rgba(251,146,60,0.35)" stroke-width="0.6" fill="none" />
-
-                <!-- center bore -->
-                <circle cx="100" cy="75" r="6" stroke="rgba(255,255,255,0.75)" stroke-width="0.6" fill="none" />
-                <circle cx="100" cy="75" r="1.4" fill="rgba(255,255,255,0.85)" />
-
-                <!-- top dimension line + label -->
-                <line x1="56" y1="20" x2="144" y2="20" stroke="rgba(148,163,184,0.55)" stroke-width="0.4" />
-                <line x1="56" y1="17" x2="56" y2="23" stroke="rgba(148,163,184,0.55)" stroke-width="0.4" />
-                <line x1="144" y1="17" x2="144" y2="23" stroke="rgba(148,163,184,0.55)" stroke-width="0.4" />
-                <text x="100" y="14" font-family="ui-monospace, monospace" font-size="6" fill="rgba(203,213,225,0.95)" text-anchor="middle">&#216; 88.00 &#177; 0.02</text>
-
-                <!-- right radial arc + label -->
-                <path d="M 144 75 A 44 44 0 0 0 134.4 49.5" stroke="rgba(96,165,250,0.55)" stroke-width="0.4" fill="none" />
-                <text x="150" y="65" font-family="ui-monospace, monospace" font-size="5" fill="rgba(147,197,253,0.95)">R44</text>
-
-                <!-- scan beam -->
-                <line x1="22" y1="20" x2="62" y2="58" stroke="rgba(96,165,250,0.55)" stroke-width="0.5" stroke-dasharray="2 2" />
-                <circle cx="62" cy="58" r="1.6" fill="rgba(96,165,250,0.95)" />
-              </svg>
-
-              <!-- HUD overlay: top-left scanning indicator -->
-              <div class="absolute left-2 top-2 flex items-center gap-1 rounded border border-blue-400/20 bg-slate-950/70 px-1.5 py-0.5 font-mono text-[9px] text-blue-300 backdrop-blur-sm">
-                <span class="inline-block h-1 w-1 animate-pulse rounded-full bg-blue-400"></span>
-                SCANNING
-              </div>
-
-              <!-- HUD overlay: bottom-right measurement chip -->
-              <div class="absolute bottom-2 right-2 rounded border border-orange-400/20 bg-slate-950/70 px-2 py-0.5 font-mono text-[9px] text-orange-300 backdrop-blur-sm">
-                &#216; 88.00 &#177; 0.02 mm
-              </div>
-            </div>
-
-            <!-- Spec footer — three monospace data tiles -->
-            <div class="mt-5 grid grid-cols-3 gap-2 text-center">
-              <div class="rounded-md border border-white/5 bg-white/[0.02] px-2 py-2.5">
-                <div class="font-mono text-sm font-semibold text-white">0.01</div>
-                <div class="mt-0.5 font-mono text-[9px] uppercase tracking-wider text-slate-400">mm tol.</div>
-              </div>
-              <div class="rounded-md border border-white/5 bg-white/[0.02] px-2 py-2.5">
-                <div class="font-mono text-sm font-semibold text-white">CMM</div>
-                <div class="mt-0.5 font-mono text-[9px] uppercase tracking-wider text-slate-400">verified</div>
-              </div>
-              <div class="rounded-md border border-orange-400/20 bg-orange-500/[0.06] px-2 py-2.5">
-                <div class="font-mono text-sm font-semibold text-orange-300">5 wk</div>
-                <div class="mt-0.5 font-mono text-[9px] uppercase tracking-wider text-slate-400">lead</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- caption under the card -->
-          <p class="mt-3 text-center font-mono text-[11px] text-slate-500">
-            worn blade &rarr; CMM scan &rarr; drawing &rarr; OEM-match or upgrade
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- 9. LAST UPDATED FOOTER (freshnessDate) -->
   <div class="px-4 py-6 text-center text-xs text-slate-500 sm:px-6 dark:text-slate-400">

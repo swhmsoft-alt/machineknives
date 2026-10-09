@@ -3,7 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import PrecisionCta from '~/components/widgets/PrecisionCta.astro';
 
 const metadata = {
   title: 'Plastic Recycling Blades',
@@ -115,12 +115,20 @@ const features = [
     defaultIcon="tabler:recycle"
   />
 
-  <CallToAction
-    title="Specifying granulator or shredder knives?"
+  <!-- Precision-engineering CTA closer -->
+  <PrecisionCta
+    id="plastics-recycling-cta"
+    eyebrow="Granulator Knife Tooling"
+    title={`<span class="block text-white">Specifying granulator</span><span class="mt-1 block bg-clip-text text-transparent" style="background-image: linear-gradient(90deg, #fb923c 0%, #f59e0b 50%, #fbbf24 100%);">or shredder knives?</span>`}
     subtitle="Send the OEM model, rotor diameter, current knife grade and the typical feedstock mix. We will return a written quote with material, hardness, coating option and expected service interval within one business day."
-    actions={[
-      { variant: 'primary', text: 'Submit a drawing', href: '/contact', icon: 'tabler:clipboard-text' },
-      { text: 'Browse Solutions', href: '/solutions' },
+    primaryAction={{ text: 'Submit a drawing', href: '/contact' }}
+    secondaryAction={{ text: 'Browse Solutions', href: '/solutions', isMailto: false }}
+    trustItems={[
+      'Rotor + stator matching',
+      'Feedstock-specific grade recommendation',
+      'Service-interval forecast',
     ]}
+    cardEyebrow="Job #PR-2026"
+    cardCaption="OEM model + feedstock → grade + coating + service forecast"
   />
 </Layout>

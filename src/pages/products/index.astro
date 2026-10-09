@@ -7,7 +7,7 @@ import Stats from '~/components/widgets/Stats.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import PrecisionCta from '~/components/widgets/PrecisionCta.astro';
 
 import { Icon } from 'astro-icon/components';
 import { getCollection } from 'astro:content';
@@ -477,23 +477,22 @@ const jsonLd = JSON.stringify({
     </div>
   </section>
 
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Send a Drawing',
-        href: '/contact',
-        icon: 'tabler:clipboard-text',
-      },
-      { text: 'View Solutions', href: '/solutions' },
+  <!-- Precision-engineering CTA closer -->
+  <PrecisionCta
+    id="products-cta"
+    eyebrow="Custom Builds"
+    title={`<span class="block text-white">Don’t see your part</span><span class="mt-1 block bg-clip-text text-transparent" style="background-image: linear-gradient(90deg, #fb923c 0%, #f59e0b 50%, #fbbf24 100%);">in the catalog?</span>`}
+    subtitle="Most of our work is custom. Send a drawing, a worn sample, or a written specification and our engineering team will quote against your application rather than against a SKU."
+    primaryAction={{ text: 'Send a Drawing', href: '/contact' }}
+    secondaryAction={{ text: 'View Solutions', href: '/solutions', isMailto: false }}
+    trustItems={[
+      '600+ standard SKUs across 6 families',
+      'Custom geometry to your drawing',
+      'No MOQ on stocked sizes',
     ]}
-  >
-    <Fragment slot="title"> Don't see your part in the catalog? </Fragment>
-    <Fragment slot="subtitle">
-      Most of our work is custom. Send a drawing, a worn sample, or a written specification and our engineering team
-      will quote against your application rather than against a SKU.
-    </Fragment>
-  </CallToAction>
+    cardEyebrow="Job #PR-2026"
+    cardCaption="drawing or sample → engineering quote → custom build"
+  />
 
   <!-- Page-level JSON-LD: CollectionPage + ItemList of categories + HowTo.
        Organization / WebSite / BreadcrumbList are injected globally by

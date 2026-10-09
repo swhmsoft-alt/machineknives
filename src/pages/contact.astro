@@ -2,7 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Contact from '~/components/widgets/Contact.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import PrecisionCta from '~/components/widgets/PrecisionCta.astro';
 
 const metadata = {
   title: 'Contact Custom Machine Knives',
@@ -101,18 +101,20 @@ const heroImage = { src: "/images/contact/engineering-team-drawing.webp", alt: "
     </p>
   </div>
 
-  <CallToAction
-    actions={[
-      { variant: 'primary', text: 'Browse Product Catalog', href: '/products', icon: 'tabler:book' },
-      { text: 'View Manufacturing Services', href: '/services' },
+  <!-- Precision-engineering CTA closer -->
+  <PrecisionCta
+    id="contact-cta"
+    eyebrow="Technical Reference"
+    title={`<span class="block text-white">Looking for</span><span class="mt-1 block bg-clip-text text-transparent" style="background-image: linear-gradient(90deg, #fb923c 0%, #f59e0b 50%, #fbbf24 100%);">technical reference first?</span>`}
+    subtitle="Our product catalog lists standard SKUs by category. If your part is custom, send us a drawing and we will quote against the spec rather than against a SKU."
+    primaryAction={{ text: 'Browse Product Catalog', href: '/products' }}
+    secondaryAction={{ text: 'View Manufacturing Services', href: '/services', isMailto: false }}
+    trustItems={[
+      '600+ standard SKUs across 6 families',
+      'Drawings + wear-pattern guides',
+      'Custom engineering on request',
     ]}
-  >
-    <Fragment slot="title">
-      Looking for technical reference first?
-    </Fragment>
-    <Fragment slot="subtitle">
-      Our product catalog lists standard SKUs by category. If your part is custom, send us a drawing and we will quote
-      against the spec rather than against a SKU.
-    </Fragment>
-  </CallToAction>
+    cardEyebrow="Job #REF-2026"
+    cardCaption="browse catalog → find SKU or send drawing → engineering quote"
+  />
 </Layout>

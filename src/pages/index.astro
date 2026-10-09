@@ -7,7 +7,7 @@ import Features from '~/components/widgets/Features.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import PrecisionCta from '~/components/widgets/PrecisionCta.astro';
 
 const metadata = {
   title: 'Custom Machine Knives | Industrial Blades Manufacturer',
@@ -332,13 +332,20 @@ const heroImage = { src: "/homepage/precision-industrial-blade-manufacturing.web
     ]}
   />
 
-  <CallToAction
-    actions={[
-      { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:clipboard-text' },
-      { text: 'View Solutions', href: '/solutions' },
+  <!-- Precision-engineering CTA closer -->
+  <PrecisionCta
+    id="home-cta"
+    eyebrow="Engineering-Led Manufacturing"
+    title={`<span class="block text-white">Ready to put a real manufacturer</span><span class="mt-1 block bg-clip-text text-transparent" style="background-image: linear-gradient(90deg, #fb923c 0%, #f59e0b 50%, #fbbf24 100%);">on your RFQ list?</span>`}
+    subtitle="Send a drawing, a sample or a written specification. Engineering responds within one business day."
+    primaryAction={{ text: 'Request a Quote', href: '/contact' }}
+    secondaryAction={{ text: 'View Solutions', href: '/solutions', isMailto: false }}
+    trustItems={[
+      'Engineering responds in 1 business day',
+      'CMM-verified, mill-cert shipped',
+      'ISO 9001:2015 since 2001',
     ]}
-  >
-    <Fragment slot="title">Ready to put a real manufacturer on your RFQ list?</Fragment>
-    <Fragment slot="subtitle">Send a drawing, a sample or a written specification. Engineering responds within one business day.</Fragment>
-  </CallToAction>
+    cardEyebrow="Job #HQ-2026"
+    cardCaption="drawing → DFM review → quote → production → dispatch"
+  />
 </Layout>
