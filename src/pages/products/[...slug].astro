@@ -1,7 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import PrecisionCta from '~/components/widgets/PrecisionCta.astro';
 import { Icon } from 'astro-icon/components';
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 
@@ -89,7 +89,7 @@ import {
 } from '~/lib/schema';
 import { getProductFaqs } from '~/data/_product-faqs';
 import { statSync } from 'node:fs';
-import { appendCtaIfMissing } from '~/utils/seo-cta';
+import { appendCtaIfMissing } from '~/utils/seo-cta.mjs';
 
 export const prerender = true;
 
@@ -411,15 +411,21 @@ if (productEntry) {
     )}
   </section>
 
-  <CallToAction
-    actions={[
-      { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:clipboard-text' },
-      { text: 'View All Categories', href: '/products' },
+  <PrecisionCta
+    id="family-products-cta"
+    eyebrow="Custom Geometry & Grade"
+    title={`<span class="block text-white">Don't see the size or grade</span><span class="mt-1 block bg-clip-text text-transparent" style="background-image: linear-gradient(90deg, #fb923c 0%, #f59e0b 50%, #fbbf24 100%);">you need?</span>`}
+    subtitle="Every product on this page is also available in custom geometry, hardness and tolerance. Send a drawing or sample and we will quote against your application."
+    primaryAction={{ text: 'Request a Quote', href: '/contact' }}
+    secondaryAction={{ text: 'View All Categories', href: '/products', isMailto: false }}
+    trustItems={[
+      'D2 · SKD11 · M2 HSS · carbide',
+      '± 0.01 mm tolerance available',
+      'Engineering responds in 1 business day',
     ]}
-  >
-    <Fragment slot="title">Don't see the size or grade you need?</Fragment>
-    <Fragment slot="subtitle">Every product on this page is also available in custom geometry, hardness and tolerance. Send a drawing or sample and we will quote against your application.</Fragment>
-  </CallToAction>
+    cardEyebrow="Job #CT-2026"
+    cardCaption="drawing or sample → custom geometry + grade → quote"
+  />
   </Layout>
 ) : props.kind === 'product' && productEntry && Content ? (
   <Layout metadata={{ title: `${productEntry.data.title} — Custom Machine Knives`, description: appendCtaIfMissing(productEntry.data.excerpt ?? '') }} breadcrumb={productBreadcrumb}>
@@ -685,15 +691,21 @@ if (productEntry) {
       </script>
     </section>
 
-    <CallToAction
-      actions={[
-        { variant: 'primary', text: 'Request a Quote', href: '/contact', icon: 'tabler:clipboard-text' },
-        { text: 'Email Engineering', href: 'mailto:[email protected]' },
+    <PrecisionCta
+      id="product-detail-cta"
+      eyebrow="Order or Custom Version"
+      title={`<span class="block text-white">Ready to order</span><span class="mt-1 block bg-clip-text text-transparent" style="background-image: linear-gradient(90deg, #fb923c 0%, #f59e0b 50%, #fbbf24 100%);">or need a custom version?</span>`}
+      subtitle="Send your drawing, your worn blade, or a written spec. We will respond within one business day."
+      primaryAction={{ text: 'Request a Quote', href: '/contact' }}
+      secondaryAction={{ text: 'Email Engineering', href: 'mailto:[email protected]', isMailto: true }}
+      trustItems={[
+        'CMM-verified reverse engineering',
+        'Geometry upgrade on request',
+        'NDA on first email',
       ]}
-    >
-      <Fragment slot='title'>Ready to order or need a custom version?</Fragment>
-      <Fragment slot='subtitle'>Send your drawing, your worn blade, or a written spec. We will respond within one business day.</Fragment>
-    </CallToAction>
+      cardEyebrow="Job #PD-2026"
+      cardCaption="drawing or worn blade → spec → quote → lead time"
+    />
 
     {productSchemaJson && (
       <script type='application/ld+json' set:html={productSchemaJson} />
