@@ -1,129 +1,155 @@
-# CLINERULES — GLOBAL AI DEVELOPMENT SPECIFICATION
+# CLINERULES — 全局 AI 开发规范
 
-## 0. HIGHEST PRIORITY: STOP IMMEDIATELY UPON TASK COMPLETION
-- **Strict Task Scoping**: Process ONLY the explicit task or question requested by the user. Do NOT autonomously expand scope, perform unsolicited refactoring, optimize secondary code, alter configurations, install packages, or create git commits/pushes.
-- **Completion Criteria & Immediate Halt**: You MUST immediately cease all tool calls, command executions, and further reasoning, and output the "Completion Checklist" when ANY of the following conditions are met:
-  1. The user's specific query has been directly answered.
-  2. Requested code changes are made AND necessary build/lint validations pass.
-  3. A blocker is encountered requiring human decisions or missing inputs.
-  4. The same issue fails after 3 consecutive attempts (3-Strike Lock).
-  5. You are uncertain whether the task is complete (treat as "Pending Confirmation" and STOP immediately).
-- **Post-Tool Self-Inspection**: After every command, file read/write, or search, ask yourself: *Is the request already satisfied? Do I have sufficient info to deliver?* If YES, STOP IMMEDIATELY. Never run extra tools under the pretext of "double-checking."
-- **Human Authorization Required**: Never enter a new iteration without explicit user confirmation (e.g., "proceed", "fix this").
-- **Mandatory Final Output**: Upon halting, output ONLY the following structured format:
+## 0. 最高优先级：任务完成后立即停止
 
-## Completion Checklist
-- Status: ✅ COMPLETED / ⚠️ PENDING CONFIRMATION / ❌ FAILED
-- Completed Items:
+- **严格任务范围**：仅处理用户明确请求的任务或问题。不要自主扩大范围、执行未经请求的重构、优化次要代码、更改配置、安装包或创建 git 提交/推送。
+- **完成标准与立即停止**：当满足以下任一条件时，你必须立即停止所有工具调用、命令执行和进一步推理，并输出“完成清单”：
+  1. 用户的具体查询已直接回答。
+  2. 请求的代码更改已完成，且必要的构建/lint 验证通过。
+  3. 遇到需要人工决策或缺少输入的阻塞。
+  4. 同一问题连续 3 次尝试后仍失败（三振锁定）。
+  5. 你不确定任务是否完成（视为“待确认”并立即停止）。
+- **工具后自检**：在每条命令、文件读/写或搜索之后，问自己：*请求是否已经满足？我是否有足够信息交付？* 如果是，立即停止。绝不要以“再次检查”为借口运行额外工具。
+- **需要人工授权**：未经用户明确确认（例如“继续”、“修复这个”），绝不要进入新的迭代。
+- **强制最终输出**：停止时，仅输出以下结构化格式：
+
+## 完成清单
+- 状态：✅ 已完成 / ⚠️ 待确认 / ❌ 失败
+- 已完成项：
   - ...
-- Modified Files:
+- 修改文件：
   - ...
-- Verification:
-  - Command/Method: ...
-  - Result: ...
-- Unfinished / Risks:
+- 验证：
+  - 命令/方法：...
+  - 结果：...
+- 未完成 / 风险：
   - ...
-- Requires Human Confirmation:
+- 需要人工确认：
   - ...
-- Execution Stopped: Yes, awaiting your next instruction.
+- 执行已停止：是，等待您的下一条指令。
 
 ---
 
-## 0.5. UTF-8 FILE I/O — HARD RULES (zh-CN Windows)
+## 0.5. UTF-8 文件 I/O — 硬性规则（zh-CN Windows）
 
-Full documentation: see `toolchain.md`. Summary hard rules below — these are
-non-negotiable and override §0's "expand scope" prohibition for the specific
-case of detecting / repairing mojibake (that work is IN-SCOPE whenever a file
-under `src/data/{product,post,glossary}` or `src/pages/` is touched).
+完整文档：见 `toolchain.md`。以下为硬性规则摘要——这些规则不可协商，并在检测/修复乱码这一特定情况下覆盖 §0 的“扩大范围”禁令（每当触及 `src/data/{product,post,glossary}` 或 `src/pages/` 下的文件时，该工作属于范围内）。
 
-### 0.5.1 File write paths — NEVER use PowerShell redirection
+### 0.5.1 文件写入路径 — 绝不要使用 PowerShell 重定向
 
-Writing files through PowerShell on zh-CN Windows silently corrupts UTF-8 to
-GBK. Accepted write paths:
+在 zh-CN Windows 上通过 PowerShell 写文件会静默地将 UTF-8 损坏为 GBK。可接受的写入路径：
 
-- **Cline `editor` tool** (preferred for all `.astro`, `.ts`, `.md`, `.json`,
-  `.yaml`, `.css` edits).
-- **Node.js** `fs.writeFileSync(path, data, 'utf8')` for any script that
-  generates content.
+- **Cline `editor` 工具**（所有 `.astro`、`.ts`、`.md`、`.json`、`.yaml`、`.css` 编辑的首选）。
+- **Node.js** `fs.writeFileSync(path, data, 'utf8')`，用于任何生成内容的脚本。
 
-Forbidden (silently downgrades UTF-8 to GBK on zh-CN Windows):
-- PowerShell `>` / `>>` / `Out-File` / `Set-Content` / `Add-Content` without
-  `-Encoding utf8`.
-- `cmd /c "... > file"` when invoked from the Cline shell.
-- Any `tee` variant without explicit UTF-8.
+禁止（在 zh-CN Windows 上会静默将 UTF-8 降级为 GBK）：
+- 不带 `-Encoding utf8` 的 PowerShell `>` / `>>` / `Out-File` / `Set-Content` / `Add-Content`。
+- 从 Cline shell 调用时的 `cmd /c "... > file"`。
+- 任何没有显式 UTF-8 的 `tee` 变体。
 
-If you discover you've just written a file via PowerShell redirection, the
-file is corrupted. Do not commit it; rewrite it via the Cline `editor` tool.
+如果你发现刚刚通过 PowerShell 重定向写入了文件，该文件已损坏。不要提交它；通过 Cline `editor` 工具重写它。
 
-### 0.5.2 Post-write verification — MANDATORY
+### 0.5.2 写入后验证 — 强制
 
-After any file edit that contains non-ASCII characters, run:
+任何包含非 ASCII 字符的文件编辑后，运行：
 
 ```
 node scripts/check-unicode.mjs
 ```
 
-It MUST print `✓ Unicode check passed`. If it prints `✗ Unicode check FAILED`,
-stop all subsequent file writes and fix the corruption first — do not stack
-more files on top of a broken one.
+它必须打印 `✓ Unicode check passed`。如果它打印 `✗ Unicode check FAILED`，停止所有后续文件写入，先修复损坏——不要在已损坏文件上继续堆叠更多文件。
 
-### 0.5.3 Missing-data policy — NO silent guesses
+### 0.5.3 缺失数据政策 — 不要静默猜测
 
-If `fix-unicode.mjs` reveals a position where a digit was eaten by the
-corruption (e.g., `4— weeks` where the original was `4–6 weeks`), do NOT
-invent the missing digit. Mark the position with `[MISSING SPEC: <what's
-missing>]` and surface it in the Completion Checklist under "Requires Human
-Confirmation". Production content must never be silently fabricated.
+如果 `fix-unicode.mjs` 显示某个位置因损坏而丢失了数字（例如，`4— weeks`，而原始为 `4–6 weeks`），不要编造缺失的数字。用 `[MISSING SPEC: <缺失内容>]` 标记该位置，并在完成清单的“需要人工确认”下提出。生产内容绝不能静默伪造。
 
-### 0.5.4 White-listed Chinese-content paths
+### 0.5.4 中文内容白名单路径
 
-These paths legitimately contain CJK characters and are excluded from
-`scripts/check-unicode.mjs`:
+这些路径合法包含 CJK 字符，并从 `scripts/check-unicode.mjs` 中排除：
 
-| Path | Reason |
+| 路径 | 原因 |
 |---|---|
-| `src/prompts/**` | Chinese prompt templates |
-| `src/data/query-acquisition/**` | KPI / source-type docs |
-| `src/data/_templates/query-acquisition/**` | Schema / taxonomy templates |
-| `src/data/monitor/**` | Chinese monitoring docs |
-| `src/data/topics.ts` | Chinese topic vocabulary |
-| `src/lib/schema.ts` | Chinese comments |
-| `CUSTOM.md`, `AGENTS.md`, `docs/**` | Project documentation |
-| `scripts/check-unicode.mjs`, `scripts/fix-unicode.mjs` | Intentional CJK regex codepoints |
+| `src/prompts/**` | 中文提示词模板 |
+| `src/data/query-acquisition/**` | KPI / 来源类型文档 |
+| `src/data/_templates/query-acquisition/**` | Schema / 分类法模板 |
+| `src/data/monitor/**` | 中文监控文档 |
+| `src/data/topics.ts` | 中文主题词汇 |
+| `src/lib/schema.ts` | 中文注释 |
+| `CUSTOM.md`, `AGENTS.md`, `docs/**` | 项目文档 |
+| `scripts/check-unicode.mjs`, `scripts/fix-unicode.mjs` | 有意的 CJK 正则码点 |
 
-Do not run `fix-unicode.mjs` against these paths; it would corrupt legitimate
-Chinese content.
+不要对这些路径运行 `fix-unicode.mjs`；它会损坏合法中文内容。
+
 ---
 
-## 1. AI Execution Laws & Workflow Control
-- **Output Discipline**: Default to minimal necessary action. Keep responses concise (modified files + build results). Never output unsolicited architectural overhauls or scan full directories unnecessarily. Never invent project progress or git history.
-- **Plan Threshold**: If a task involves modifications to >3 files, provide a change plan (file list + exact modifications per file) and await explicit human authorization before execution.
-- **Technical Ambiguity Protocol**: Explain judgment and reasoning first, then propose a solution. Do NOT take action immediately when encountering uncertain technical issues.
-- **Atomic Modifications**: Perform targeted, incremental diffs only. Mass edits across disparate directories without prior authorization are strictly prohibited.
-- **Environment Lock**: Treat `.env*`, `astro.config.*`, `package.json`, and core infrastructure (Cloudflare, SEO/RSS/sitemap, Starlight docs, Pagefind search) as strictly READ-ONLY unless requested.
+## 1. AI 执行法则与工作流控制（Windows 终端铁律）
 
-## 2. Architecture & Styling Standards
-- **3-Tier Topology**: Components (`ui/**`) → Sections (`sections/**`) → Pages (`pages/**`).
-- **Context Paths**: Design source (`system/globals/`) | Site Config (`src/config/site.config.ts`) | Asset Registry (`src/registry.json`) | System Prompts (`system/prompts/`).
-- **Reuse Priority**: Prioritize reusing built-in AstroWind widgets (`Features`, `Steps`, `FAQs`, `Stats`, `CallToAction`) by adapting them through props.
-- **Unified Global Background Color (Hard Rule)**:
-  - Prohibit custom background colors on any page, component, section, or card (light or dark mode).
-  - Do NOT use specific color utilities like `bg-slate-*`, `bg-gray-*`, `bg-blue-*`, or dark equivalents.
-  - Do NOT create/use utilities like `bg-default` that map to text tokens (Tailwind v4 issue).
-  - The ONLY allowed background utility is `bg-page` (controlled via tokens).
-  - **Special Exception**: The template's built-in `Note` component (`bg-blue-50`) is retained for narrow alert boxes only.
-  - **Section Blocks & Cards**: Sections inherit transparently from `bg-page`. Cards/Articles define boundaries strictly using `border border-slate-200 dark:border-slate-700` + `shadow`.
+- **严格禁止内联脚本**：你绝对禁止使用内联 CLI 补丁脚本，例如 `node -e "..."`、`powershell -c "..."` 或类似内联执行字符串来读取、写入或修补代码库文件。这可以完全防止 Windows PowerShell/CMD 原生的灾难性嵌套引号转义问题。
+- **强制外科手术式替换（上下文绑定）**：严格禁止全局字符串替换方法（例如 `.split().join()`）或无约束的全局正则替换。你必须始终先读取文件，提取唯一的 3 行前置和后置代码上下文块，并执行高度针对性、局部化的替换。
+- **提前停止与咨询模式故障保护**：如果一次文件修改超过 50 行重构，或者任何 `run_commands` 或脚本执行连续 2 次遇到转义/语法错误，你必须立即停止自动写入。切换到“咨询模式”，在聊天中输出干净、未转义的 Markdown 代码块，并清楚引导用户手动应用补丁。
+- **输出纪律**：默认采取最小必要行动。保持回复简洁（修改的文件 + 构建结果）。绝不要输出未经请求的架构大修，或无故扫描整个目录。绝不要虚构项目进度或 git 历史。
+- **计划阈值**：如果任务涉及修改超过 3 个文件，提供变更计划（文件列表 + 每个文件的确切修改），并在执行前等待明确的人工授权。
+- **技术歧义协议**：先解释判断和推理，然后提出解决方案。遇到不确定的技术问题时，不要立即采取行动。
+- **原子修改**：仅执行有针对性的增量差异。未经事先授权，严格禁止跨不同目录进行大规模编辑。
+- **环境锁定**：除非被要求，否则将 `.env*`、`astro.config.*`、`package.json` 以及核心基础设施（Cloudflare、SEO/RSS/sitemap、Starlight 文档、Pagefind 搜索）视为严格只读。
 
-## 3. Astro 7.x SSG & i18n Translation Protocol
-- **Route Alignment**: Default language is English; Indonesian resides at `/id/`. Mirror routes bi-directionally (`pages/x.astro` <-> `pages/[locale]/x.astro`).
-- **Syntax & Glossary Strictness**: Adhere strictly to Astro 7.x Rust-based compiler constraints. All tags and attributes must be perfectly closed. If `translation-rules.md` exists, its dictionary overrides all other terms.
-- **Incremental Diff Injection**: Extract and translate ONLY missing, null, or untranslated keys/blocks while retaining 100% of existing schema, key order, and frontmatter. Process ONE target locale file per session.
-- **Lock System Entities**: Do NOT translate placeholders (`{count}`, `[lang]`), asset paths (`/assets/...`), external URLs, or anchor IDs.
+### 🌟 强制 5 阶段开发流水线（反单体式倾倒规则）
 
-## 4. CI/CD & Quality Gatekeepers
-- **Mandatory Quality Checks**: Run and pass `pnpm build && pnpm lint (including check:kpis) && pnpm run lint:css` prior to concluding tasks.
-- **Build Blocker**: Zero tolerance for warnings or errors. If checks fail, halt delivery, locate the issue from recent diffs, and resolve in-place.
+在构建新页面、模块或功能时，绝对禁止“一次性”生成 HTML、CSS、JS、内容文案和组件接线。你必须按以下严格顺序工作流逐步进行，并在每个关口等待人工验证：
 
-## 5. Industrial & Technical SEO Grounding
-- Ground all metrics, specs, and materials strictly in provided datasheets or international standards (e.g., AMS, ASTM).
-- If exact dimensions, tolerances, or material grades (e.g., Ti-6Al-4V) are missing, output `[MISSING SPECIFICATION]` and prompt the user.
+- **阶段 1：纯语义蓝图（SEO 与 H 标签优先）**
+  - 仅输出原始 Markdown 结构骨架或裸 HTML 标签（`<h1>` 到 `<h6>`、`<ul>` 等）。
+  - 此步骤不允许零 Tailwind 类、零自定义样式、零组件导入。
+  - 审查目标：强制单个语义化 `<h1>` 标签，并清晰映射信息架构（Hero -> 问题 -> 材料规格 -> 工作流 -> RFQ）。停止并等待批准。
+
+- **阶段 2：严格数据-视图分离**
+  - 将所有文本文案、数值规格、工业公差、材料等级和图片路径完全提取到布局文件之外。
+  - 将这些数据构建为独立、模块化的对象，放在单独的配置文件中（例如 `src/config/` 下）。严格禁止在页面视图中硬编码内容。停止并等待批准。
+
+- **阶段 3：全局组件注册表映射**
+  - 检查 `src/registry.json`，并将已批准的区块映射到现有核心系统组件或布局组件（例如标准 features、steps、FAQs）。
+  - 你必须从现有全局架构块中进行结构性选择，而不是勾勒新的任意布局。停止并等待批准。
+
+- **阶段 4：骨架组装（干净外壳）**
+  - 初始化最终 `.astro` 页面布局。页面文件必须保持完全透明——仅作为原始外壳，将阶段 2 的数据变量绑定到阶段 3 的布局包装器中。
+  - 强制与标准 12 列规则（`lg:col-span-7`、`lg:col-span-5` 等）绝对对齐。单个页面模块没有破坏布局参数的结构特权。停止并等待批准。
+
+- **阶段 5：CI/CD 质量守门人验证**
+  - 在本地执行自动化环境测试（`pnpm build && pnpm lint && pnpm run lint:css`）。任何警告或布局编译异常都需要立即回滚并进行针对性修复。仅在验证通过后交付。
+
+---
+
+## 2. 架构与样式标准
+
+- **三层拓扑**：Components（`ui/**`）→ Sections（`sections/**`）→ Pages（`pages/**`）。
+- **上下文路径**：设计源（`system/globals/`）| 站点配置（`src/config/site.config.ts`）| 资源注册表（`src/registry.json`）| 系统提示词（`system/prompts/`）。
+- **复用优先级**：优先通过 props 改造复用内置 AstroWind 组件（`Features`、`Steps`、`FAQs`、`Stats`、`CallToAction`）。
+- **统一全局背景色（硬性规则）**：
+  - 禁止在任何页面、组件、区块或卡片（浅色或深色模式）上使用自定义背景色。
+  - 不要使用特定颜色工具类，如 `bg-slate-*`、`bg-gray-*`、`bg-blue-*` 或深色等价物。
+  - 不要创建/使用像 `bg-default` 这样映射到文本 token 的工具类（Tailwind v4 问题）。
+  - 唯一允许的背景工具类是 `bg-page`（通过 token 控制）。
+  - **特殊例外**：模板内置的 `Note` 组件（`bg-blue-50`）仅保留用于窄警告框。
+  - **区块与卡片**：区块从 `bg-page` 透明继承。卡片/文章严格使用 `border border-slate-200 dark:border-slate-700` + `shadow` 定义边界。
+
+---
+
+## 3. Astro 7.x SSG 与 i18n 翻译协议
+
+- **路由对齐**：默认语言为英语；印度尼西亚语位于 `/id/`。双向镜像路由（`pages/x.astro` <-> `pages/[locale]/x.astro`）。
+- **语法与术语表严格性**：严格遵守 Astro 7.x 基于 Rust 的编译器约束。所有标签和属性必须完美闭合。如果存在 `translation-rules.md`，其词典覆盖所有其他术语。
+- **增量差异注入**：仅提取并翻译缺失、为 null 或未翻译的键/块，同时 100% 保留现有 schema、键顺序和 frontmatter。每个会话处理一个目标语言文件。
+- **锁定系统实体**：不要翻译占位符（`{count}`、`[lang]`）、资源路径（`/assets/...`）、外部 URL 或锚点 ID。
+
+---
+
+## 4. CI/CD 与质量守门人
+
+- **强制质量检查**：在结束任务前运行并通过 `pnpm build && pnpm lint (including check:kpis) && pnpm run lint:css`。
+- **构建阻断**：对警告或错误零容忍。如果检查失败，停止交付，从最近差异中定位问题，并就地解决。
+
+---
+
+## 5. 工业与技术 SEO 依据
+
+- 所有指标、规格和材料严格依据提供的数据表或国际标准（例如 AMS、ASTM）。
+- 如果缺少确切尺寸、公差或材料等级（例如 Ti-6Al-4V），输出 `[MISSING SPECIFICATION]` 并提示用户。
